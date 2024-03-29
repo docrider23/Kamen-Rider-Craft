@@ -255,11 +255,3 @@ public class RiderFormChangeItem extends BaseItem {
 
 	}
 }
-
-/**
-	public RiderFormChangeItem ShiftForm(Item ShiftItem) {
-		STIFT_ITEM = ShiftItem;
-		return this;
-	}
-
- **/

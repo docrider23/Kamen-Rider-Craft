@@ -78,6 +78,9 @@ public class Effect_core {
 	public static final RegistryObject<MobEffect> MUTEKI= EFFECT.register("muteki",
 			() -> new 	SaveEffect(MobEffectCategory.HARMFUL, 0xffce00));
 
+	public static final RegistryObject<MobEffect> SLEEP= EFFECT.register("sleep",
+			() -> new 	SleepEffect(MobEffectCategory.HARMFUL, 0xffce00));
+
 	//works but don't like it
 	/**
 	public static final RegistryObject<MobEffect> PAUSE= EFFECT.register("pause",

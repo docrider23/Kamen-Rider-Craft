@@ -2,6 +2,7 @@ package com.kelco.kamenridercraft.events;
 
 
 import com.kelco.kamenridercraft.Items.Kuuga_Rider_Items;
+import com.kelco.kamenridercraft.Items.rider_armor_base.BaseSwordItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 import com.kelco.kamenridercraft.client.renderer.AnkhRenderer;
 import com.kelco.kamenridercraft.client.renderer.BasicEntityRenderer;
@@ -30,6 +31,8 @@ public class ModClientEvents {
 
 	private static ResourceLocation BLOCKING_PROPERTY_RESLOC = new ResourceLocation(KamenRiderCraftCore.MODID, "blocking");
 
+	public static List<Item> CHANGE_SWORD_ITEM= new ArrayList<Item>();
+	
 	public static List<Item> SWORD_GUN_ITEM= new ArrayList<Item>();
 	
 	public static List<Item> KUUGA_CHANGING_ITEM= new ArrayList<Item>();
@@ -90,6 +93,14 @@ public class ModClientEvents {
 					} else {
 						return p_174637_.getUseItem() != p_174635_ ? 0.0F : (float)(p_174635_.getUseDuration() - p_174637_.getUseItemRemainingTicks()) / 1.0F;
 					}
+				});
+			}
+			
+			for (int i = 0; i < CHANGE_SWORD_ITEM.size(); i++)
+			{
+				ItemProperties.register(CHANGE_SWORD_ITEM.get(i), new ResourceLocation("pull"), (p_174635_, p_174636_, p_174637_, p_174638_) -> {
+						return BaseSwordItem.Get_Mode(p_174635_);
+
 				});
 			}
 		});

@@ -8,7 +8,7 @@
             "predicate": {
                 "pull": 1
             },
-            "model": "kamenridercraft4th:item/gashacon_breaker_ham"
+            "model": "kamenridercraft:item/gashacon_breaker_ham"
         }
     ]
 }
