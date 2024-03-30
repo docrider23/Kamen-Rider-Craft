@@ -5,7 +5,9 @@ import com.kelco.kamenridercraft.Blocks.MachineBlocks.GameCreator;
 import com.kelco.kamenridercraft.Effect.Effect_core;
 import com.kelco.kamenridercraft.Items.ex_aid.ExAidEnergyItem;
 import com.kelco.kamenridercraft.Items.ex_aid.GamerDriverItem;
+import com.kelco.kamenridercraft.Items.rider_armor_base.BaseBlasterItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseItem;
+import com.kelco.kamenridercraft.Items.rider_armor_base.BaseShieldItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseSwordItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderArmorItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderFormChangeItem;
@@ -15,6 +17,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ShieldItem;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -281,13 +284,22 @@ public class Ex_Aid_Rider_Items {
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false)).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 
 	
+	public static final RegistryObject<Item> KAMEN_RIDER_CHRONICLE_GASHAT_GEMEDEUS= ITEMS.register("kamen_rider_chronicle_gashat_gamedeus",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_gamedeus","chronos","gamer_driver_chronicle",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false)).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()));
+
+	
 	public static final RegistryObject<Item> KAMEN_RIDER_CHRONICLE_GASHAT= ITEMS.register("kamen_rider_chronicle_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_cronus","snipe","gamer_driver_chronicle",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
-					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false)).AddCompatibilityList(new String[] {"cronus"}).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_CHRONICLE_GASHAT, 20));
+					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false)).AddCompatibilityList(new String[] {"chronos"}).addAlternative(KAMEN_RIDER_CHRONICLE_GASHAT_GEMEDEUS.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_CHRONICLE_GASHAT, 20));
 
 	public static final RegistryObject<Item> TOKI_MEKI_CRISIS_GASHAT_RED_EYES= ITEMS.register("toki_meki_crisis_gashat_red_eyes",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_red","poppy","gashacon_bugvisor_ii_poppy",
@@ -778,7 +790,7 @@ public class Ex_Aid_Rider_Items {
 
 	public static final RegistryObject<Item> GASHACON_BUGVISOR_II_CHRONICLE_BUGTER = ITEMS.register("gashacon_bugvisor_ii_chronicle_bugster",
 			() -> new GamerDriverItem(ArmorMaterials.DIAMOND,"chronicle_bugster",KAMEN_RIDER_CHRONICLE_GASHAT ,EX_AIDHELMET, EX_AIDCHESTPLATE,EX_AIDLEGGINGS , new Item.Properties())
-			.Override_belt_text("gashacon_bugvisor_ii_lazer").AddToTabList(RiderTabs.EX_AID_TAB_ITEM).ChangeRepairItem(BLANK_GASHAT.get()));
+			.Override_belt_text("gashacon_bugvisor_ii_chronicle_bugster_belt").AddToTabList(RiderTabs.EX_AID_TAB_ITEM).ChangeRepairItem(BLANK_GASHAT.get()));
 
 	
 	public static final RegistryObject<Item> PARA_DX_BELT = ITEMS.register("paradoxbelt",
@@ -803,29 +815,85 @@ public class Ex_Aid_Rider_Items {
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).IsChangeSword().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
+	public static final RegistryObject<BaseBlasterItem> GASHACON_KEY_SLASHER = ITEMS.register("gashacon_key_slasher",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			.ChangeRepairItem(BLANK_GASHAT.get()));
+
 	public static final RegistryObject<SwordItem> GASHACON_SWORD = ITEMS.register("gashacon_sword",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).IsChangeSword().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
-	/**
-	gashacon_breaker
-	gashacon_key_slasher
-	gashacon_sword
-	gashacon_magnum_gun
-	gashacon_sparrow_sickle_a
-	gashacon_sparrow_sickle_b
-	gashacon_sparrow_arrow
-	gashacon_bugvisor
-	gashacon_bugvisor_ii
-	gashacon_bugvisor_g
-	parabragun_axe
-	ride_weapon
-	true_brave_sword
-	fuuma_sword
-	bugster_trident
-	deus_rusher
-	deus_rusher_red
-	**/
+	public static final RegistryObject<BaseBlasterItem> GASHACON_MAGNUM = ITEMS.register("gashacon_magnum_gun",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			.ChangeRepairItem(BLANK_GASHAT.get()));
+
+	public static final RegistryObject<SwordItem> GASHACON_SPARROW_SICKLE_A = ITEMS.register("gashacon_sparrow_sickle_a",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			.ChangeRepairItem(BLANK_GASHAT.get()));
+
+	public static final RegistryObject<SwordItem> GASHACON_SPARROW_SICKLE_B = ITEMS.register("gashacon_sparrow_sickle_b",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			.ChangeRepairItem(BLANK_GASHAT.get()));
+
+	public static final RegistryObject<BaseBlasterItem> GASHACON_SPARROW_ARROW = ITEMS.register("gashacon_sparrow_arrow",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			.ChangeRepairItem(BLANK_GASHAT.get()));
+
+	public static final RegistryObject<BaseBlasterItem> GASHACON_BUGVISOR = ITEMS.register("gashacon_bugvisor",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).IsSwordGun().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			.ChangeRepairItem(BLANK_GASHAT.get()));
+
+	public static final RegistryObject<BaseBlasterItem> GASHACON_BUGVISOR_II = ITEMS.register("gashacon_bugvisor_ii",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).IsSwordGun().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			.ChangeRepairItem(BLANK_GASHAT.get()));
+
+	public static final RegistryObject<BaseBlasterItem> GASHACON_BUGVISOR_G = ITEMS.register("gashacon_bugvisor_g",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).IsSwordGun().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			.ChangeRepairItem(BLANK_GASHAT.get()));
+
+	public static final RegistryObject<BaseBlasterItem> PARABRAGUN = ITEMS.register("parabragun_axe",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).IsSwordGun().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			.ChangeRepairItem(BLANK_GASHAT.get()));
+
+	public static final RegistryObject<BaseBlasterItem> RIDE_WEAPON = ITEMS.register("ride_weapon",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).IsSwordGun().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			.ChangeRepairItem(BLANK_GASHAT.get()));
+
+	// it's called "Flamber Saber"
+	public static final RegistryObject<SwordItem> TRUE_BRAVE_SWORD = ITEMS.register("true_brave_sword",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			.ChangeRepairItem(BLANK_GASHAT.get()));
+
+	// it's called "Fuma Sozanto"
+	public static final RegistryObject<SwordItem> FUUMA_SWORD = ITEMS.register("fuuma_sword",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			.ChangeRepairItem(BLANK_GASHAT.get()));
+	
+	public static final RegistryObject<SwordItem> GENIN_WEAPON = ITEMS.register("genin_weapon",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			.ChangeRepairItem(BLANK_GASHAT.get()));
+
+
+	public static final RegistryObject<SwordItem> BUGSTER_TRIDENT = ITEMS.register("bugster_trident",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			.ChangeRepairItem(BLANK_GASHAT.get()));
+
+	public static final RegistryObject<SwordItem> DEUS_RUSHER = ITEMS.register("deus_rusher",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			.ChangeRepairItem(BLANK_GASHAT.get()));
+	
+	public static final RegistryObject<ShieldItem> DEUS_RAMPART = ITEMS.register("deus_rampart",
+			() -> new BaseShieldItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			.ChangeRepairItem(BLANK_GASHAT.get()));
+
+	public static final RegistryObject<SwordItem> DEUS_RUSHER_RED = ITEMS.register("deus_rusher_red",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			.ChangeRepairItem(BLANK_GASHAT.get()));
+
+	public static final RegistryObject<ShieldItem> MACHINA_RAMPART = ITEMS.register("machina_rampart",
+			() -> new BaseShieldItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			.ChangeRepairItem(BLANK_GASHAT.get()));
+	
 	
 	public static final RegistryObject<Item> SPEED_ENERGY_ITEM = ITEMS.register("speed_energy_item",
 			() -> new ExAidEnergyItem(new Item.Properties(),new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 500, 20,true,false)).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));

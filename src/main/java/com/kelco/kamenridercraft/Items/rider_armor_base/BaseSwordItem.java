@@ -74,8 +74,9 @@ public class BaseSwordItem extends SwordItem {
 			if (Get_Mode(itemstack)==0) {
 				
 			}
+			
 		}	
-		return InteractionResultHolder.sidedSuccess(itemstack, level.isClientSide());
+		   return InteractionResultHolder.pass(player.getItemInHand( p_41130_));
 	}
 
 
