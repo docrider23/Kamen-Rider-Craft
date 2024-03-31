@@ -110,7 +110,19 @@ public class Rider_Blocks {
 			() -> new CellMedalProgramer(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
 					.strength(5.0F, 6.0F).sound(SoundType.METAL)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	
+	public static final RegistryObject<Block> MIGHTY_BLOCK = registerBlock("mighty_block",
+			() -> new BaseBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
+					.strength(2.0F, 6.0F).sound(SoundType.STONE)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	
+	public static final RegistryObject<Block> BANG_BANG_DRUM = registerBlock("bang_bang_drum",
+			() -> new BaseBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
+					.strength(2.0F, 6.0F).sound(SoundType.STONE)).AddToTabList(RiderTabs.RIDER_BLOCK));
+	
+	public static final RegistryObject<Block> BAKUSOU_TROPHY = registerBlock("bakusou_trophy",
+			() -> new BaseBlockNotCube(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
+					.strength(2.0F, 6.0F).sound(SoundType.STONE).dynamicShape(),Block.box(4, 0, 6, 12,16, 10)).AddToTabList(RiderTabs.RIDER_BLOCK));
+	
+
 	public static final RegistryObject<Block> GAME_CREATOR = registerBlock("gamecreator",
 			() -> new GameCreator(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
 					.strength(5.0F, 6.0F).sound(SoundType.METAL)).AddToTabList(RiderTabs.RIDER_BLOCK));
