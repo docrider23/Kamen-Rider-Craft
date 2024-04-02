@@ -495,19 +495,19 @@ public class MobsCore {
                   () -> EntityType.Builder.of(RideplayerEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":rideplayer_mob"));
  
           public static final RegistryObject<ForgeSpawnEggItem> RIDEPLAYER_SPAWN_EGG = ITEMS.register("rideplayer_spawn_egg",
-                  () -> new ForgeSpawnEggItem(RIDEPLAYER, 0xE0C819, 0xC865F3, new Item.Properties()));
+                  () -> new ForgeSpawnEggItem(RIDEPLAYER, 0xf1c192, 0x854303, new Item.Properties()));
           
           public static final RegistryObject<EntityType<ParaDxEntity>> PARADX = MOBLIST.register("para-dx",
                   () -> EntityType.Builder.of(ParaDxEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":paradx_mob"));
  
           public static final RegistryObject<ForgeSpawnEggItem> PARADX_SPAWN_EGG = ITEMS.register("paradx_spawn_egg",
-                  () -> new ForgeSpawnEggItem(PARADX, 0xE0C819, 0xC865F3, new Item.Properties()));
+                  () -> new ForgeSpawnEggItem(PARADX, 0xff0000, 0x2a00ff, new Item.Properties()));
           
           public static final RegistryObject<EntityType<CronusEntity>> CRONUS = MOBLIST.register("cronus",
                   () -> EntityType.Builder.of(CronusEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":cronus_mob"));
  
           public static final RegistryObject<ForgeSpawnEggItem> CRONUS_SPAWN_EGG = ITEMS.register("cronus_spawn_egg",
-                  () -> new ForgeSpawnEggItem(CRONUS, 0xE0C819, 0xC865F3, new Item.Properties()));
+                  () -> new ForgeSpawnEggItem(CRONUS, 0x000000, 0x44df00, new Item.Properties()));
           
           
           
