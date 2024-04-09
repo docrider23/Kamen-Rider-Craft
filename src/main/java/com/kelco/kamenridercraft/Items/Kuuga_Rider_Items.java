@@ -133,11 +133,11 @@ public class Kuuga_Rider_Items {
 
     
     public static final RegistryObject<SwordItem> DRAGON_ROD = ITEMS.register("dragon_rod",
-            () -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(ModClientEvents.KUUGA_CHANGING_ITEM).AddToTabList(RiderTabs.KUUGA_TAB_ITEM).ChangeRepairItem(KUUGA_GROWING.get()));
+            () -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(ModClientEvents.KUUGA_CHANGING_ITEM).AddToTabList(RiderTabs.KUUGA_TAB_ITEM).ChangeRepairItem(KUUGA_GROWING.get()));
 	public static final RegistryObject<BaseBlasterItem> PEGASUS_BOWGUN = ITEMS.register("pegasus_bowgun",
-	        () -> new BaseBlasterItem(Tiers.DIAMOND, 4, 3.5f, new Item.Properties()).AddToTabList(ModClientEvents.KUUGA_CHANGING_ITEM).AddToTabList(RiderTabs.KUUGA_TAB_ITEM).ChangeRepairItem(KUUGA_GROWING.get()));
+	        () -> new BaseBlasterItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(ModClientEvents.KUUGA_CHANGING_ITEM).AddToTabList(RiderTabs.KUUGA_TAB_ITEM).ChangeRepairItem(KUUGA_GROWING.get()));
 	public static final RegistryObject<SwordItem> TITAN_SWORD = ITEMS.register("titan_sword",
-	        () -> new BaseSwordItem(Tiers.DIAMOND, 7, 3.5f, new Item.Properties()).AddToTabList(ModClientEvents.KUUGA_CHANGING_ITEM).AddToTabList(RiderTabs.KUUGA_TAB_ITEM).ChangeRepairItem(KUUGA_GROWING.get()));
+	        () -> new BaseSwordItem(Tiers.DIAMOND, 7, -2.4F, new Item.Properties()).AddToTabList(ModClientEvents.KUUGA_CHANGING_ITEM).AddToTabList(RiderTabs.KUUGA_TAB_ITEM).ChangeRepairItem(KUUGA_GROWING.get()));
     
 	
 	public static void register(IEventBus eventBus) {

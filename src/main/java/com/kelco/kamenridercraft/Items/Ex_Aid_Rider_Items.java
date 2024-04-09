@@ -812,74 +812,74 @@ public class Ex_Aid_Rider_Items {
 	
 	
 	public static final RegistryObject<SwordItem> GASHACON_BREAKER = ITEMS.register("gashacon_breaker",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).IsChangeSword().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsChangeSword().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<BaseBlasterItem> GASHACON_KEY_SLASHER = ITEMS.register("gashacon_key_slasher",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<SwordItem> GASHACON_SWORD = ITEMS.register("gashacon_sword",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).IsChangeSword().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsChangeSword().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<BaseBlasterItem> GASHACON_MAGNUM = ITEMS.register("gashacon_magnum_gun",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<SwordItem> GASHACON_SPARROW_SICKLE_A = ITEMS.register("gashacon_sparrow_sickle_a",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<SwordItem> GASHACON_SPARROW_SICKLE_B = ITEMS.register("gashacon_sparrow_sickle_b",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<BaseBlasterItem> GASHACON_SPARROW_ARROW = ITEMS.register("gashacon_sparrow_arrow",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<BaseBlasterItem> GASHACON_BUGVISOR = ITEMS.register("gashacon_bugvisor",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).IsSwordGun().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsSwordGun().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<BaseBlasterItem> GASHACON_BUGVISOR_II = ITEMS.register("gashacon_bugvisor_ii",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).IsSwordGun().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsSwordGun().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<BaseBlasterItem> GASHACON_BUGVISOR_G = ITEMS.register("gashacon_bugvisor_g",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).IsSwordGun().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsSwordGun().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<BaseBlasterItem> PARABRAGUN = ITEMS.register("parabragun_axe",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).IsSwordGun().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsSwordGun().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<BaseBlasterItem> RIDE_WEAPON = ITEMS.register("ride_weapon",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).IsSwordGun().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsSwordGun().AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
 	// it's called "Flamber Saber"
 	public static final RegistryObject<SwordItem> TRUE_BRAVE_SWORD = ITEMS.register("true_brave_sword",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
 	// it's called "Fuma Sozanto"
 	public static final RegistryObject<SwordItem> FUUMA_SWORD = ITEMS.register("fuuma_sword",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 	
 	public static final RegistryObject<SwordItem> GENIN_WEAPON = ITEMS.register("genin_weapon",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
 
 	public static final RegistryObject<SwordItem> BUGSTER_TRIDENT = ITEMS.register("bugster_trident",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<SwordItem> DEUS_RUSHER = ITEMS.register("deus_rusher",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 	
 	public static final RegistryObject<ShieldItem> DEUS_RAMPART = ITEMS.register("deus_rampart",
@@ -887,7 +887,7 @@ public class Ex_Aid_Rider_Items {
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<SwordItem> DEUS_RUSHER_RED = ITEMS.register("deus_rusher_red",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 5, 3.5f, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<ShieldItem> MACHINA_RAMPART = ITEMS.register("machina_rampart",
