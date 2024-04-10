@@ -3,10 +3,11 @@ package com.kelco.kamenridercraft.Items.rider_armor_base;
 
 import java.util.List;
 
-
+import com.kelco.kamenridercraft.Blocks.Rider_Blocks;
 import com.kelco.kamenridercraft.Items.Modded_item_core;
 import com.kelco.kamenridercraft.events.ModClientEvents;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -73,8 +74,9 @@ public class BaseSwordItem extends SwordItem {
 
 			if (Get_Mode(itemstack)==0) {
 				
-			}
 			
+				
+			}
 		}	
 		   return InteractionResultHolder.pass(player.getItemInHand( p_41130_));
 	}

@@ -2,7 +2,6 @@ package com.kelco.kamenridercraft.client.models;
 
 
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
-import com.kelco.kamenridercraft.Entities.AnkhEntity;
 import com.kelco.kamenridercraft.Entities.Bikes.baseBikeEntity;
 
 import net.minecraft.resources.ResourceLocation;
