@@ -20,13 +20,10 @@ public class SaveEffect extends MobEffect {
 
 			pLivingEntity.removeEffect(MobEffects.POISON);
 			pLivingEntity.removeEffect(MobEffects.BLINDNESS);
-			pLivingEntity.removeEffect(MobEffects.CONFUSION);
 			pLivingEntity.removeEffect(MobEffects.DARKNESS);
 			pLivingEntity.removeEffect(MobEffects.DIG_SLOWDOWN);
 			pLivingEntity.removeEffect(MobEffects.HARM);
-			pLivingEntity.removeEffect(MobEffects.HUNGER);
 			pLivingEntity.removeEffect(MobEffects.MOVEMENT_SLOWDOWN);
-			pLivingEntity.removeEffect(MobEffects.UNLUCK);
 			pLivingEntity.removeEffect(MobEffects.WEAKNESS); 
 			pLivingEntity.removeEffect(MobEffects.WITHER);
 			pLivingEntity.removeEffect(Effect_core.EXPLODE.get());

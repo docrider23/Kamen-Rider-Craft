@@ -8,6 +8,20 @@
 "effect.kamenridercraft.small":"Shrink",
 "effect.kamenridercraft.flat":"Flatten",
 
+"effect.kamenridercraft.stretch":"Stretch",
+"effect.kamenridercraft.wide":"Wide",
+"effect.kamenridercraft.explode":"Explosion",
+"effect.kamenridercraft.fire_punch":"Fire Fist",
+"effect.kamenridercraft.explosion_punch":"Explosive Punch",
+"effect.kamenridercraft.fire_shot":"Flame Shot",
+"effect.kamenridercraft.explosion_shot":"Explosive Shot",
+"effect.kamenridercraft.fire_armor":"Flame Body",
+"effect.kamenridercraft.reflect":"Mirror",
+"effect.kamenridercraft.bug":"Bugster virus",
+"effect.kamenridercraft.reset":"Reset",
+"effect.kamenridercraft.muteki":"Save",
+"effect.kamenridercraft.sleep":"Sleep",
+
 "item.kamenridercraft.rider_circuit": "Rider Circuit",
 "item.kamenridercraft.sinister_pachinko_ball": "Sinister Pachinko Ball",
 
