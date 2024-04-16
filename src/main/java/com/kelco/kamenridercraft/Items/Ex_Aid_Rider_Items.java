@@ -32,6 +32,19 @@ public class Ex_Aid_Rider_Items {
 	public static final RegistryObject<Item> EX_AID_LOGO = ITEMS.register("ex_aid_logo",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 
+	public static final RegistryObject<Item> BUGSTER_VIRUS_DNA = ITEMS.register("bugster_virus_dna",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
+	
+	public static final RegistryObject<Item> XX_BUGSTER_VIRUS_DNA = ITEMS.register("xx_bugster_virus_dna",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
+	
+	public static final RegistryObject<Item> PARADX_BUGSTER_VIRUS_DNA = ITEMS.register("paradx_bugster_virus_dna",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
+	
+	public static final RegistryObject<Item> GAMEDEUS_BUGSTER_VIRUS_DNA = ITEMS.register("gamedeus_bugster_virus_dna",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
+	
+	
 	public static final RegistryObject<Item> BLANK_GASHAT = ITEMS.register("blank_gashat",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 

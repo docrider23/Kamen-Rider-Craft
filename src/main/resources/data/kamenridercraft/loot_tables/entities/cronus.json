@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "name": "kamenridercraft:kamen_rider_chronicle_gashat"
+		},
+		{
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "kamenridercraft:gashacon_bugvisor_ii_chronus"
+		}
+      ]
+    },
+    
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kamenridercraft:unfinished_kamen_rider_chronicle_gashat",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 2,
+                "max": 3
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
