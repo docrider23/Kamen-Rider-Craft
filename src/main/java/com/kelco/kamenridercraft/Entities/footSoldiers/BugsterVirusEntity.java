@@ -24,39 +24,8 @@ public class BugsterVirusEntity extends BaseHenchmenEntity {
     public void remove(Entity.RemovalReason p_149847_) {
 
 		if ( this.isDeadOrDying()) {
-			if (this.random.nextInt(10) == 1) {
-				BaseHenchmenEntity boss = MobsCore.GATTON_BUGSTER.get().create(this.level());
-				if (boss != null) {
-					boss.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
-					this.level().addFreshEntity(boss);
 			
-					
-				}
-			} else if (this.random.nextInt(9) == 1) {
-				BaseHenchmenEntity boss = MobsCore.VERNIER_BUGSTER.get().create(this.level());
-				if (boss != null) {
-					boss.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
-					this.level().addFreshEntity(boss);
-
-					
-				}
-			}else if (this.random.nextInt(8) == 1) {
-				BaseHenchmenEntity boss = MobsCore.KAIDEN_BUGSTER.get().create(this.level());
-				if (boss != null) {
-					boss.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
-					this.level().addFreshEntity(boss);
-
-					
-				}
-			}else if (this.random.nextInt(9) == 1) {
-				BaseHenchmenEntity boss = MobsCore.CHARLIE_BUGSTER.get().create(this.level());
-				if (boss != null) {
-					boss.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
-					this.level().addFreshEntity(boss);
-
-					
-				}
-			} else if (this.random.nextInt(10) == 1) {
+		if (this.random.nextInt(10) == 1) {
 					BaseHenchmenEntity boss = MobsCore.GENM.get().create(this.level());
 					if (boss != null) {
 						boss.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);

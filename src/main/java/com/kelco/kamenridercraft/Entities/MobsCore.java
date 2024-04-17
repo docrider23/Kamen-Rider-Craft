@@ -42,11 +42,9 @@ import com.kelco.kamenridercraft.Entities.bosses.ShockerRidersEntity;
 import com.kelco.kamenridercraft.Entities.bosses.SmilodonDopantEntity;
 import com.kelco.kamenridercraft.Entities.bosses.TerrorDopantEntity;
 import com.kelco.kamenridercraft.Entities.bosses.UvaEntity;
-import com.kelco.kamenridercraft.Entities.bosses.VernierBugsterEntity;
 import com.kelco.kamenridercraft.Entities.bosses.WeatherDopantEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.AnguisMasculusEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.AriCommandoEntity;
-import com.kelco.kamenridercraft.Entities.footSoldiers.BangBangBugsterEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.BlackSatanSoldierEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.BugsterVirusEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ChapEntity;
@@ -59,13 +57,11 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.GODWarfareAgentEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.KnightSoldierEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.LovelyBugsterEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.MasqueradeEntity;
-import com.kelco.kamenridercraft.Entities.footSoldiers.MightyBugsterEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.PantherasLuteusEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.RedFollowerEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.RideplayerEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.RiotrooperEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ShockerCombatmanEntity;
-import com.kelco.kamenridercraft.Entities.footSoldiers.TaddleBugsterEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.YummyEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ZuGumunBaEntity;
 
@@ -394,7 +390,8 @@ public class MobsCore {
           
           public static final RegistryObject<ForgeSpawnEggItem> BUGSTERVIRUS_SPAWN_EGG = ITEMS.register("bugstervirus_spawn_egg",
                   () -> new ForgeSpawnEggItem(BUGSTERVIRUS, 0xFF7400, 0x150E08, new Item.Properties()));
-       
+          
+       /**
           public static final RegistryObject<EntityType<MightyBugsterEntity>> MIGHTY_BUGSTER = MOBLIST.register("mighty_bugster_mob",
                   () -> EntityType.Builder.of(MightyBugsterEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":mighty_bugster_mob"));
  
@@ -412,13 +409,14 @@ public class MobsCore {
  
           public static final RegistryObject<ForgeSpawnEggItem> BANG_BANG_BUGSTER_SPAWN_EGG = ITEMS.register("bang_bang_bugster_spawn_egg",
                   () -> new ForgeSpawnEggItem(BANG_BANG_BUGSTER, 0xFF7400, 0x442AD5, new Item.Properties()));
-          
+          **/
           public static final RegistryObject<EntityType<LovelyBugsterEntity>> LOVELY_BUGSTER = MOBLIST.register("lovely_bugster_mob",
                   () -> EntityType.Builder.of(LovelyBugsterEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":lovely_bugster_mob"));
  
           public static final RegistryObject<ForgeSpawnEggItem> LOVELY_BUGSTER_SPAWN_EGG = ITEMS.register("lovely_bugster_spawn_egg",
                   () -> new ForgeSpawnEggItem(LOVELY_BUGSTER, 0xFF7400, 0xE479FA, new Item.Properties()));
           
+          /**
           public static final RegistryObject<EntityType<SaltyBugsterEntity>> SALTY_BUGSTER = MOBLIST.register("salty_bugster_mob",
                   () -> EntityType.Builder.of(SaltyBugsterEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":salty_bugster_mob"));
  
@@ -454,13 +452,14 @@ public class MobsCore {
  
           public static final RegistryObject<ForgeSpawnEggItem> VERNIER_BUGSTER_SPAWN_EGG = ITEMS.register("vernier_bugster_spawn_egg",
                   () -> new ForgeSpawnEggItem(VERNIER_BUGSTER, 0x1C15E5, 0xF58B0C, new Item.Properties()));
-          
+          **/
           public static final RegistryObject<EntityType<GraphiteBugsterEntity>> GRAPHITE_BUGSTER = MOBLIST.register("graphite_bugster_mob",
                   () -> EntityType.Builder.of(GraphiteBugsterEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":graphite_bugster_mob"));
  
           public static final RegistryObject<ForgeSpawnEggItem> GRAPHITE_BUGSTER_SPAWN_EGG = ITEMS.register("graphite_bugster_spawn_egg",
                   () -> new ForgeSpawnEggItem(GRAPHITE_BUGSTER, 0x1C15E5, 0x127120, new Item.Properties()));
           
+          /**
           public static final RegistryObject<EntityType<AranburaBugsterEntity>> ARANBURA_BUGSTER = MOBLIST.register("aranbura_bugster_mob",
                   () -> EntityType.Builder.of(AranburaBugsterEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":aranbura_bugster_mob"));
  
@@ -472,6 +471,7 @@ public class MobsCore {
  
           public static final RegistryObject<ForgeSpawnEggItem> REVOL_BUGSTER_SPAWN_EGG = ITEMS.register("revol_bugster_spawn_egg",
                   () -> new ForgeSpawnEggItem(REVOL_BUGSTER, 0x1C15E5, 0x8AB2E0, new Item.Properties()));
+          **/
           
           public static final RegistryObject<EntityType<LovelicaBugsterEntity>> LOVELICA_BUGSTER = MOBLIST.register("lovelica_bugster_mob",
                   () -> EntityType.Builder.of(LovelicaBugsterEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":lovelica_bugster_mob"));
