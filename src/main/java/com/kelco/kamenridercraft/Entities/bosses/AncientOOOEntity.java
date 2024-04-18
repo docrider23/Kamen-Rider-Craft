@@ -1,14 +1,18 @@
 package com.kelco.kamenridercraft.Entities.bosses;
 
 import java.util.EnumSet;
+import java.util.List;
 
 import com.kelco.kamenridercraft.Entities.footSoldiers.BaseHenchmenEntity;
 import com.kelco.kamenridercraft.Items.OOO_Rider_Items;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.util.Mth;
+import net.minecraft.world.Difficulty;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -31,6 +35,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.SmallFireball;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class AncientOOOEntity extends BaseHenchmenEntity {
 
@@ -47,6 +52,8 @@ public class AncientOOOEntity extends BaseHenchmenEntity {
 		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(OOO_Rider_Items.MEDAJALIBUR.get()));
 	}
 
+
+	
 	public void tick() {
 		if (this.getHealth()<100) {
 			if(getItemBySlot(EquipmentSlot.FEET).getItem()==OOO_Rider_Items.ANCIENT_OOODRIVER.get()){

@@ -20,6 +20,7 @@ public class YummyEntity extends BaseHenchmenEntity {
     public void remove(Entity.RemovalReason p_149847_) {
 
 		if ( this.isDeadOrDying()) {
+			
 			if (this.random.nextInt(10) == 1) {
 				BaseHenchmenEntity boss = MobsCore.KAZARI.get().create(this.level());
 				if (boss != null) {
