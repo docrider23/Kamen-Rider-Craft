@@ -731,6 +731,9 @@ public class Ex_Aid_Rider_Items {
 	public static final RegistryObject<Item> TOKI_MEKI_CRISIS_GASHA_TROPHY = ITEMS.register("toki_meki_crisis_gasha_trophy",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 
+	public static final RegistryObject<Item> CHRONUS_CLOCK = ITEMS.register("chronus_clock",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
+
 	
 
 	public static final RegistryObject<Item> EX_AIDHELMET = ITEMS.register("ex_aidhead",

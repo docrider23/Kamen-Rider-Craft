@@ -32,6 +32,10 @@ public class ModPaintings {
     public static final RegistryObject<PaintingVariant> FOURZE_CLUB = PAINTING_VARIANTS.register("fourze_club",
             () -> new PaintingVariant(64, 32));
     
+    public static final RegistryObject<PaintingVariant> MIGHTY = PAINTING_VARIANTS.register("mighty",
+            () -> new PaintingVariant(16, 16));
+    
+    
     public static void register(IEventBus eventBus) {
         PAINTING_VARIANTS.register(eventBus);
     }

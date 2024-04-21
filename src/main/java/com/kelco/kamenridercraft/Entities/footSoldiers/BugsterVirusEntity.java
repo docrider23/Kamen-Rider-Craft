@@ -1,16 +1,20 @@
 package com.kelco.kamenridercraft.Entities.footSoldiers;
 
 import com.kelco.kamenridercraft.Entities.MobsCore;
+import com.kelco.kamenridercraft.Items.Agito_Rider_Items;
+import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
 public class BugsterVirusEntity extends BaseHenchmenEntity {
@@ -18,6 +22,8 @@ public class BugsterVirusEntity extends BaseHenchmenEntity {
     public BugsterVirusEntity(EntityType<? extends Zombie> type, Level level) {
         super(type, level);
         NAME="bugstervirus";
+
+        this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Ex_Aid_Rider_Items.BUGSTER_TRIDENT.get()));
     }
 
 
