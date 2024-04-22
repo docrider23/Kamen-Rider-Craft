@@ -143,6 +143,11 @@ public class RiderFormChangeItem extends BaseItem {
 		RESET_FORM=true;
 		return this;
 	}
+	
+	public RiderFormChangeItem SetFormToArmor() {
+		RESET_FORM=true;
+		return this;
+	}
 
 	public RiderFormChangeItem addNeedForm(Item  item, int slot) {
 		if (slot==1)NEED_FORM_SLOT_1=((RiderFormChangeItem)item);
