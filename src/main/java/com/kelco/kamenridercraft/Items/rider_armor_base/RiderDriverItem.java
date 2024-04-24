@@ -21,6 +21,8 @@ import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.biome.Biomes;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.minecraftforge.registries.RegistryObject;
 public class RiderDriverItem extends RiderArmorItem{
@@ -164,6 +166,7 @@ public class RiderDriverItem extends RiderArmorItem{
 			set_Form_Item( itemstack,belt.Base_Form_Item,1);
 
 		}
+		Biomes.JUNGLE.getClass();
 
 	}
 

@@ -24,7 +24,8 @@ public class BugEffect extends MobEffect {
 		Random rand = new Random();
 
 
-		switch (rand.nextInt(500))
+		
+		switch  (pAmplifier<50? rand.nextInt(500-(pAmplifier*10)):0)
 		{
 		case 0:
 
