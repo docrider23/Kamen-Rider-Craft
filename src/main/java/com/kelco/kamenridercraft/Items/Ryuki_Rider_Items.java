@@ -141,7 +141,7 @@ public class Ryuki_Rider_Items {
 	            		,new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false)).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 
 	  public static final RegistryObject<Item> SURVIVE_MUGEN = ITEMS.register("survive_mugen",
-	            () -> new RiderFormChangeItem(new Item.Properties(),0,"_survive","ouja","v_buckle_belt_ouja_s",
+	            () -> new RiderFormChangeItem(new Item.Properties(),0,"_survive_mugen","ouja","v_buckle_belt_ouja_s",
 	            		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false)
 	            		,new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 5,true,false),new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)
 	            		,new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false)).addAlternative(SURVIVE_SHIPPU_RAIA.get()).addAlternative(SURVIVE_SHIPPU_OUJA.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
