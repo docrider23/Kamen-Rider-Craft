@@ -897,6 +897,11 @@ public class Ex_Aid_Rider_Items {
 	public static final RegistryObject<SwordItem> BUGSTER_TRIDENT = ITEMS.register("bugster_trident",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
+	
+	public static final RegistryObject<SwordItem> GRAPHITE_FANG = ITEMS.register("graphite_fang",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			.ChangeRepairItem(BLANK_GASHAT.get()));
+
 
 	public static final RegistryObject<SwordItem> DEUS_RUSHER = ITEMS.register("deus_rusher",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
