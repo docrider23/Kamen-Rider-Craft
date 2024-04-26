@@ -435,6 +435,8 @@ public class Ex_Aid_Rider_Items {
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)).AddCompatibilityList(new String[] {"para_dx_lv99"}).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_DOUBLE_GASHAT, 5));
 
+
+	
 	public static final RegistryObject<Item> TADDLE_FANTASY_GASHAT = ITEMS.register("taddle_fantasy_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"fantasy_gamer","brave","gamer_driver_taddle_fantasy",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),

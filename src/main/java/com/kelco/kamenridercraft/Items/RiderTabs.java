@@ -355,7 +355,9 @@ public class RiderTabs {
 			//event.accept(MobsCore.MIGHTY_BUGSTER_SPAWN_EGG);
 			//event.accept(MobsCore.TADDLE_BUGSTER_SPAWN_EGG);
 			//event.accept(MobsCore.BANG_BANG_BUGSTER_SPAWN_EGG);
+			event.accept(MobsCore.RIDEPLAYER_SPAWN_EGG);
 			event.accept(MobsCore.LOVELY_BUGSTER_SPAWN_EGG);
+			event.accept(MobsCore.LOVELICA_BUGSTER_SPAWN_EGG);
 			event.accept(MobsCore.GENM_SPAWN_EGG);
 			event.accept(MobsCore.GRAPHITE_BUGSTER_SPAWN_EGG);
 			event.accept(MobsCore.POPPY_RED_SPAWN_EGG);

@@ -3,10 +3,7 @@
   "group": "gashat",
   "ingredients": [
 	{ 
-      "item": "minecraft:iron_ingot"
-    },
-	{ 
-      "item": "minecraft:redstone"
+      "item": "kamenridercraft:rider_circuit"
     }, 
     {
       "item": "kamenridercraft:bugster_virus_dna"

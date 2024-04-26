@@ -1,9 +1,13 @@
 package com.kelco.kamenridercraft.Entities.footSoldiers;
 
+import java.util.Random;
+
+import com.kelco.kamenridercraft.Blocks.Rider_Blocks;
 import com.kelco.kamenridercraft.Entities.MobsCore;
 import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
 
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -15,6 +19,7 @@ import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 
 public class BugsterVirusEntity extends BaseHenchmenEntity {
 
@@ -36,6 +41,19 @@ public class BugsterVirusEntity extends BaseHenchmenEntity {
 					boss.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
 					this.level().addFreshEntity(boss);
 
+					for (int n = 0; n < 40; n++)
+					{
+						
+						Random generator = new Random();
+						
+						 int posX = (this.blockPosition().getX()-10)+generator.nextInt(20);
+						 int posY = this.blockPosition().getY()+generator.nextInt(6);
+						 int posZ = (this.blockPosition().getZ()-10)+generator.nextInt(20);
+						BlockPos pos1 = new BlockPos(posX,posY,posZ);
+						if (this.level().isEmptyBlock(pos1))this.level().setBlockAndUpdate(pos1, Rider_Blocks.MIGHTY_BLOCK.get().defaultBlockState());
+			 
+					}
+					
 					if (this.getLastAttacker()instanceof Player){
 						Player playerIn=	(Player) this.getLastAttacker();
 						playerIn.sendSystemMessage(Component.translatable("Gachan! Level up! Mighty jump! Mighty kick! Mighty Action X!").withStyle(ChatFormatting.DARK_PURPLE));

@@ -3,7 +3,7 @@
   "group": "gashat",
   "ingredients": [
 	{ 
-      "item": "kamenridercraft:xx_bugster_virus_dna"
+      "item": "kamenridercraft:mighty_brothers_xx_unfinished_gashat"
     },
 	{ 
       "item": "kamenridercraft:bakusou_bike_gashat"
@@ -18,8 +18,11 @@
       "item": "minecraft:iron_ingot"
     } , 
     {
-      "item": "minecraft:redstone"
-    } 
+      "item": "kamenridercraft:rider_circuit"
+    } , 
+    {
+      "item": "kamenridercraft:ju_ju_burger_gashat"
+    }
     ],
   "result": {
     "item": "kamenridercraft:unfinished_maximum_mighty_x_gashat"

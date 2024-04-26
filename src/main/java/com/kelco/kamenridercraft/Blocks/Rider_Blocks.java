@@ -111,7 +111,7 @@ public class Rider_Blocks {
 					.strength(5.0F, 6.0F).sound(SoundType.METAL)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	
 	public static final RegistryObject<Block> MIGHTY_BLOCK = registerBlock("mighty_block",
-			() -> new BaseBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
+			() -> new DespawnBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
 					.strength(2.0F, 6.0F).sound(SoundType.STONE)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	
 	public static final RegistryObject<Block> BANG_BANG_DRUM = registerBlock("bang_bang_drum",
