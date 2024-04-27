@@ -26,23 +26,47 @@ public class RideplayerEntity extends BaseHenchmenEntity {
         this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Ex_Aid_Rider_Items.EX_AIDCHESTPLATE.get()));
         this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Ex_Aid_Rider_Items.EX_AIDLEGGINGS.get()));
         this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Ex_Aid_Rider_Items.RIDE_PLAYER_BELT.get()));
+        
+        this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Ex_Aid_Rider_Items.RIDE_WEAPON.get()));
     }
     
 	public void remove(Entity.RemovalReason p_149847_) {
 
 		if ( this.isDeadOrDying()) {
+			
 			if (this.random.nextInt(10) == 1) {
 				BaseHenchmenEntity boss = MobsCore.PARADX.get().create(this.level());
 				if (boss != null) {
 					boss.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
 					this.level().addFreshEntity(boss);
-
 					if (this.getLastAttacker()instanceof Player){
 						Player playerIn=	(Player) this.getLastAttacker();
-						playerIn.sendSystemMessage(Component.translatable("<Para-DX>Max Dai Henshin").withStyle(ChatFormatting.BLUE));
+						playerIn.sendSystemMessage(Component.translatable("Gachan! Mazaru Up! Akai kobushi tsuyosa! Aoi puzzle rensa!").withStyle(ChatFormatting.BLUE));
+						playerIn.sendSystemMessage(Component.translatable("Aka to ao no kousa! Perfect Knock Out!").withStyle(ChatFormatting.RED));
 					}
 				}
-			}
+			}else if (this.random.nextInt(9) == 1) {
+				BaseHenchmenEntity boss = MobsCore.POPPY_RED.get().create(this.level());
+				if (boss != null) {
+					boss.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
+					this.level().addFreshEntity(boss);
+					if (this.getLastAttacker()instanceof Player){
+						Player playerIn=	(Player) this.getLastAttacker();
+						playerIn.sendSystemMessage(Component.translatable("Buggle Up! Dreaming girl! Koi no simulation!").withStyle(ChatFormatting.YELLOW));
+						playerIn.sendSystemMessage(Component.translatable("Otome wa itsumo Toki Meki Crisis!").withStyle(ChatFormatting.LIGHT_PURPLE));
+					}
+				}
+			}else if (this.random.nextInt(8) == 1) {
+				BaseHenchmenEntity boss = MobsCore.LOVELICA_BUGSTER.get().create(this.level());
+				if (boss != null) {
+					boss.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
+					this.level().addFreshEntity(boss);
+					if (this.getLastAttacker()instanceof Player){
+						Player playerIn=	(Player) this.getLastAttacker();
+						playerIn.sendSystemMessage(Component.translatable("Infection! Let's Game! Bad Game! Dead Game! What's your name? The Bugster").withStyle(ChatFormatting.LIGHT_PURPLE));
+					}
+				}
+				}
 		}
 		super.remove(p_149847_);
 	}

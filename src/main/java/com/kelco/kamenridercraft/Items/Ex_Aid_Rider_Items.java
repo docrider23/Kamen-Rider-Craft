@@ -35,9 +35,6 @@ public class Ex_Aid_Rider_Items {
 	public static final RegistryObject<Item> BUGSTER_VIRUS_DNA = ITEMS.register("bugster_virus_dna",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 	
-	public static final RegistryObject<Item> XX_BUGSTER_VIRUS_DNA = ITEMS.register("xx_bugster_virus_dna",
-			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
-	
 	public static final RegistryObject<Item> PARADX_BUGSTER_VIRUS_DNA = ITEMS.register("paradx_bugster_virus_dna",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 	
@@ -921,6 +918,10 @@ public class Ex_Aid_Rider_Items {
 			() -> new BaseShieldItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 	
+	
+	public static final RegistryObject<Item> ENERGY_ITEM_HOLDER = ITEMS.register("energy_item_holder",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
+
 	
 	public static final RegistryObject<Item> SPEED_ENERGY_ITEM = ITEMS.register("speed_energy_item",
 			() -> new ExAidEnergyItem(new Item.Properties(),new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 500, 20,true,false)).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));

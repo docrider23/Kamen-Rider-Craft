@@ -5,6 +5,7 @@ import java.util.Random;
 import com.kelco.kamenridercraft.Entities.footSoldiers.BaseHenchmenEntity;
 import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
 import com.kelco.kamenridercraft.Items.Ichigo_Rider_Items;
+import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -18,7 +19,6 @@ import net.minecraft.world.level.Level;
 
 public class PoppyRedEntity extends BaseHenchmenEntity {
 	
-	public static final Item[] belt = new Item[] {Ex_Aid_Rider_Items.GASHACON_BUGVISOR_II_POPPY.get()};
 
 	
     public PoppyRedEntity(EntityType<? extends Zombie> type, Level level) {
@@ -27,13 +27,23 @@ public class PoppyRedEntity extends BaseHenchmenEntity {
         this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Ex_Aid_Rider_Items.EX_AIDHELMET.get()));
         this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Ex_Aid_Rider_Items.EX_AIDCHESTPLATE.get()));
         this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Ex_Aid_Rider_Items.EX_AIDLEGGINGS.get()));
-        Random generator = new Random();
-		int rand = generator.nextInt(belt.length);
+
+		ItemStack belt = new ItemStack(Ex_Aid_Rider_Items.GASHACON_BUGVISOR_II_POPPY.get());
+		RiderDriverItem.set_Form_Item(belt, Ex_Aid_Rider_Items.TOKI_MEKI_CRISIS_GASHAT_RED_EYES.get(), 1);
 	
-        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(belt[rand]));
+        this.setItemSlot(EquipmentSlot.FEET,belt);
     }
 
  
+    public void tick() {
+		if (this.getHealth()<20) {
+			
+	        this.setItemSlot(EquipmentSlot.MAINHAND,new ItemStack(Ex_Aid_Rider_Items.GASHACON_BUGVISOR_II.get()));
+
+		}
+		super.tick();
+	}
+    
 
     public static AttributeSupplier setAttributes() {
 

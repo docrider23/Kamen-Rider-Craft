@@ -2,7 +2,7 @@
   "type": "minecraft:entity",
   "pools": [
     {
-      "rolls": 1,
+      "rolls": 2,
       "entries": [
         
         {
@@ -38,11 +38,6 @@
 		{
           "type": "minecraft:item",
           "weight": 1,
-          "name": "kamenridercraft:proto_drago_knight_hunter_z_gashat"
-		},
-		{
-          "type": "minecraft:item",
-          "weight": 1,
           "name": "kamenridercraft:proto_doremifa_beat_gashat"
 		},
 		{
@@ -54,6 +49,11 @@
           "type": "minecraft:item",
           "weight": 1,
           "name": "kamenridercraft:proto_giri_giri_chambara_gashat"
+		},
+		{
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "kamenridercraft:shakariki_sports_gasha_trophy"
 		}
       ]
     },

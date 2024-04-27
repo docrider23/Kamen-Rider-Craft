@@ -4,9 +4,11 @@ import java.util.List;
 
 import com.google.common.collect.Lists;
 import com.kelco.kamenridercraft.Effect.Effect_core;
+import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseItem;
 
-
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
@@ -25,22 +27,32 @@ public class ExAidEnergyItem extends BaseItem{
 	}
 
 
+	public void  useEnergyItem (ItemStack itemstack, Level world,Player playerIn) {
+		for (int i = 0; i < potionEffectList.size(); i++)
+		{
+			playerIn.addEffect(new MobEffectInstance(potionEffectList.get(i).getEffect(),potionEffectList.get(i).getDuration(),potionEffectList.get(i).getAmplifier(),true,false));
+		}
+		itemstack.shrink(1);	
+	}
 
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int num, boolean flag) {
 		if (entity instanceof Player ) {
 			Player playerIn = ((Player)entity);
-			
-			if (!playerIn.hasEffect(Effect_core.BUGSTER.get())) {
-			for (int i = 0; i < potionEffectList.size(); i++)
-			{
-				//player.setInvisible(true);
-				playerIn.addEffect(new MobEffectInstance(potionEffectList.get(i).getEffect(),potionEffectList.get(i).getDuration(),potionEffectList.get(i).getAmplifier(),true,false));
+			//&playerIn.getInventory().countItem(Ex_Aid_Rider_Items.ENERGY_ITEM_HOLDER.get())!=0
+			if (!playerIn.hasEffect(Effect_core.BUGSTER.get())&playerIn.getInventory().countItem(Ex_Aid_Rider_Items.ENERGY_ITEM_HOLDER.get())==0) {
+				this.useEnergyItem(itemstack,world, playerIn);
+				itemstack.shrink(1);	
 			}
-			itemstack.shrink(1);	
 			}
-			
 		}
-	}
 
-}
+	@Override
+		public InteractionResultHolder<ItemStack> use(Level world, Player playerIn, InteractionHand p_41434_) {
+			ItemStack itemstack = playerIn.getItemInHand(p_41434_);
+
+			this.useEnergyItem(itemstack,world, playerIn);
+			return InteractionResultHolder.consume(itemstack);
+		}
+
+	}

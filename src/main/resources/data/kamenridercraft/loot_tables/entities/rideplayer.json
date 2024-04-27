@@ -8,18 +8,28 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "kamenridercraft:kamen_rider_chronicle_gashat"
+          "name": "kamenridercraft:mighty_action_x_gasha_trophy"
+		} ,
+		{
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "kamenridercraft:taddle_quest_gasha_trophy"
+		} ,
+		{
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "kamenridercraft:bang_bang_shooting_gasha_trophy"
+		} ,
+		{
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "kamenridercraft:bakusou_bike_gasha_trophy"
 		},
+		
 		{
           "type": "minecraft:item",
           "weight": 2,
           "name": "kamenridercraft:unfinished_kamen_rider_chronicle_gashat"
-		},
-		{
-          "type": "minecraft:item",
-          "weight": 5,
-          "name": "kamenridercraft:xx_bugster_virus_dna"
-		
 		}
       ]
     },
@@ -28,13 +38,13 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "kamenridercraft:xx_bugster_virus_dna",
+          "name": "kamenridercraft:blank_gashat",
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 1,
-                "max": 3
+                "min": 3,
+                "max": 4
               }
             }
           ]
