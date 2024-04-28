@@ -56,16 +56,7 @@ public class RideplayerEntity extends BaseHenchmenEntity {
 						playerIn.sendSystemMessage(Component.translatable("Otome wa itsumo Toki Meki Crisis!").withStyle(ChatFormatting.LIGHT_PURPLE));
 					}
 				}
-			}else if (this.random.nextInt(8) == 1) {
-				BaseHenchmenEntity boss = MobsCore.LOVELICA_BUGSTER.get().create(this.level());
-				if (boss != null) {
-					boss.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
-					this.level().addFreshEntity(boss);
-					if (this.getLastAttacker()instanceof Player){
-						Player playerIn=	(Player) this.getLastAttacker();
-						playerIn.sendSystemMessage(Component.translatable("Infection! Let's Game! Bad Game! Dead Game! What's your name? The Bugster").withStyle(ChatFormatting.LIGHT_PURPLE));
-					}
-				}
+			
 				}
 		}
 		super.remove(p_149847_);

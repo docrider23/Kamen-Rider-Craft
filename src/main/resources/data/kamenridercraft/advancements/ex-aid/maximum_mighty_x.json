@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:maximum_mighty_x_gashat"
+    },
+    "title": "The greatest class of Powerful Body",
+    "description": "Obtain the Maximum Mighty X Gashat",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:ex-aid/mighty_brothers_xx",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [],
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:maximum_mighty_x_gashat"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

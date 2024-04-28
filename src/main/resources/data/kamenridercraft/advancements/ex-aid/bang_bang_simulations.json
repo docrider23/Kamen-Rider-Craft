@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:bang_bang_simulation_gashat"
+    },
+    "title": "Remember, No Bugsters.",
+    "description": "Obtain the Bang Bang Simulations Gashat",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:ex-aid/snipe",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [],
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:bang_bang_simulation_gashat"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

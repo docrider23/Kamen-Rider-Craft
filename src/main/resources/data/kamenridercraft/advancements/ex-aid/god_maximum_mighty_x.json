@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:god_maximum_mighty_x_gashat"
+    },
+    "title": "I. Am. IMMORTAL",
+    "description": "Obtain the God Maximum Mighty X Gashat",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:ex-aid/genm_zombie",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [],
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:god_maximum_mighty_x_gashat"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

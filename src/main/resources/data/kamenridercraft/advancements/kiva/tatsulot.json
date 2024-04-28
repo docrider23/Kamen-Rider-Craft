@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:tatsulot"
+    },
+    "title": "Supernova",
+    "description": "Obtain Tatsulot",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:kiva/dogga_hammer",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [],
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:tatsulot"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

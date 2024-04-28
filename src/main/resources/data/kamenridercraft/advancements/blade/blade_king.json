@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:evolution_caucasus"
+    },
+    "title": "Royal Straight Flush",
+    "description": "Obtain the Evolution Caucasus Rouze Card",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:blade/rouze_absorber",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [],
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:evolution_caucasus",
+              "kamenridercraft:silver_evolution_caucasus"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

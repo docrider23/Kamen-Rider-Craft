@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:fusion_peacock"
+    },
+    "title": "rebirth",
+    "description": "Obtain the Fusion Peacock Rouze Card",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:blade/rouze_absorber",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [],
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:fusion_peacock"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:cellmedal"
+    },
+    "title": "Happy Birthday!",
+    "description": "Obtain all the Birth Cell Medals",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:ooo/birth",
+  "criteria": {
+    "1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:birth_core_eyes"
+            ]
+          }
+        ]
+      }
+    },
+    "2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:birth_core_breast_cannon"
+            ]
+          }
+        ]
+      }
+    },
+    "3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:birth_core_crane_arm"
+            ]
+          }
+        ]
+      }
+    },
+    "4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:birth_core_shovel_arm"
+            ]
+          }
+        ]
+      }
+    },
+    "5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:birth_core_catepillar_leg"
+            ]
+          }
+        ]
+      }
+    },
+    "6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:birth_core_drill_arm"
+            ]
+          }
+        ]
+      }
+    },
+    "7": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:birth_core_cutter_wing"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

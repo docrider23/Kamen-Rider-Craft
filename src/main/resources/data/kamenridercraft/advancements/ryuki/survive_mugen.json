@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:survive_mugen"
+    },
+    "title": "You irritated me...",
+    "description": "Obtain the Survive Advent Card Mugen",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:ryuki/ouja",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:survive_mugen"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

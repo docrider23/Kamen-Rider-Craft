@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:faiz_blaster_mission_memory"
+    },
+    "title": "Eyes Glazing Over",
+    "description": "Obtain the Blaster Mission Memory",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:555/faiz_axel",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:faiz_blaster_mission_memory",
+              "kamenridercraft:faiz_gold_blaster_mission_memory"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

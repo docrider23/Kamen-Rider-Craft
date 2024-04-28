@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:hyper_muteki_gashat"
+    },
+    "title": "Time of Victory",
+    "description": "Obtain the Hyper Muteki Gashat",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:ex-aid/maximum_mighty_x",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [],
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:hyper_muteki_gashat"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

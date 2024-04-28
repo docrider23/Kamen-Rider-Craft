@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:accel_booster_memory"
+    },
+    "title": "Shake it Off",
+    "description": "Obtain the Accel Booster Memory",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:w/accel_trial",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:accel_booster_memory"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

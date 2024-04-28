@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:genm_musou_gashat"
+    },
+    "title": "The Jet Black Genius President",
+    "description": "Obtain the Genm Musou Gashat",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:ex-aid/god_maximum_mighty_x",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [],
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:genm_musou_gashat"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

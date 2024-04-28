@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:kuuga_rising_ultimate"
+    },
+    "title": "Ultimate Ultimate Darkness",
+    "description": "Obtain the Rising Ultimate Amadam",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "kamenridercraft:kuuga/kuuga_ultimate",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [],
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:kuuga_rising_ultimate"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:faiz_axel_mission_memory"
+    },
+    "title": "The people with no name",
+    "description": "Obtain the Axel Mission Memory",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:555/faiz",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:faiz_axel_mission_memory"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

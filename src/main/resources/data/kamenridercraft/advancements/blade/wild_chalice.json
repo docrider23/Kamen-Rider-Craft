@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:evolution_paradoxa"
+    },
+    "title": "take it a try",
+    "description": "Obtain the Evolution Paradoxa Rouze Card",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:blade/chalice",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [],
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:evolution_paradoxa"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

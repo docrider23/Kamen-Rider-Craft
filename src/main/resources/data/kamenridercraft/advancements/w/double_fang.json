@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:fang_memory"
+    },
+    "title": "Wild Skilled Warrior",
+    "description": "Obtain the Fang Memory",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:w/double_trigger",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:fang_memory"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:survive_rekka"
+    },
+    "title": "revolution",
+    "description": "Obtain the Survive Advent Card Rekka",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:ryuki/ryuki",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:survive_rekka"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

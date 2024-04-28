@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:survive_shippu"
+    },
+    "title": "Shippudan",
+    "description": "Obtain the Survive Advent Card Shippu",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:ryuki/knight",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:survive_shippu"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

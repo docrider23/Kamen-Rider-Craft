@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:agito_shining"
+    },
+    "title": "DEEP BREATH",
+    "description": "Obtain the Shining Philosopher's Stone",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:agito/agito_trinity",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [],
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:agito_shining"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

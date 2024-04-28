@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:trial_memory"
+    },
+    "title": "9.9 Seconds Until Your Despair",
+    "description": "Obtain the Trial Memory",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:w/accel",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:trial_memory"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

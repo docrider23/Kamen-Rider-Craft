@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:kuuga_amazing_mighty"
+    },
+    "title": "Black and Gold",
+    "description": "Obtain the Amazing Mighty Amadam",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:kuuga/kuuga_rising",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [],
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:kuuga_amazing_mighty"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

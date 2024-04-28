@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:taddle_legacy_gashat"
+    },
+    "title": "Skill Issue Level 100",
+    "description": "Obtain the Taddle Legacy Gashat",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:ex-aid/taddle_fantasy",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [],
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:taddle_legacy_gashat"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

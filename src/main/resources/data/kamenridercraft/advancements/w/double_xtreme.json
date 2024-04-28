@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:xtreme_memory"
+    },
+    "title": "The Ultimate W",
+    "description": "Obtain the Xtreme Memory",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:w/double_fang",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:xtreme_memory"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
