@@ -5,6 +5,7 @@ import java.util.Random;
 import com.kelco.kamenridercraft.Entities.footSoldiers.BaseHenchmenEntity;
 import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
 import com.kelco.kamenridercraft.Items.Ichigo_Rider_Items;
+import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -18,7 +19,6 @@ import net.minecraft.world.level.Level;
 
 public class ParaDxEntity extends BaseHenchmenEntity {
 	
-	public static final Item[] belt = new Item[] {Ex_Aid_Rider_Items.GAMER_DRIVER_PARA_DX.get()};
 
 	
     public ParaDxEntity(EntityType<? extends Zombie> type, Level level) {
@@ -27,13 +27,20 @@ public class ParaDxEntity extends BaseHenchmenEntity {
         this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Ex_Aid_Rider_Items.EX_AIDHELMET.get()));
         this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Ex_Aid_Rider_Items.EX_AIDCHESTPLATE.get()));
         this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Ex_Aid_Rider_Items.EX_AIDLEGGINGS.get()));
-        Random generator = new Random();
-		int rand = generator.nextInt(belt.length);
-	
-        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(belt[rand]));
+        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Ex_Aid_Rider_Items.PARA_DX_BELT.get()));
     }
 
- 
+    public void tick() {
+		if (this.getHealth()<20) {
+			if(getItemBySlot(EquipmentSlot.FEET).getItem()==Ex_Aid_Rider_Items.PARA_DX_BELT.get()){
+				ItemStack belt = getItemBySlot(EquipmentSlot.FEET);
+				if (RiderDriverItem.get_Form_Item(belt,1)!=Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_GASHAT.get()) {
+					RiderDriverItem.set_Form_Item(belt, Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_GASHAT.get(), 1);
+				}
+			}
+		}
+		super.tick();
+	}
 
     public static AttributeSupplier setAttributes() {
 

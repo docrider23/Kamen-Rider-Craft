@@ -27,6 +27,13 @@ public class GamerDriverItem extends RiderDriverItem{
 		Num_Base_Form_Item=2;
 	}
 
+	public GamerDriverItem (ArmorMaterial material, String rider,RegistryObject<Item> baseFormItem,RegistryObject<Item> armorFormItem,RegistryObject<Item> head,RegistryObject<Item>torso,RegistryObject<Item> legs, Properties properties)
+	{
+		super(material, rider, baseFormItem,armorFormItem, head, torso, legs, properties);
+
+		Extra_Base_Form_Item= Lists.newArrayList((RiderFormChangeItem)Modded_item_core.BLANK_FORM.get(),(RiderFormChangeItem)Modded_item_core.BLANK_FORM.get());
+		Num_Base_Form_Item=2;
+	}
 	@Override
 	public String GET_TEXT(ItemStack itemstack, EquipmentSlot equipmentSlot, LivingEntity rider,String riderName)
 	{

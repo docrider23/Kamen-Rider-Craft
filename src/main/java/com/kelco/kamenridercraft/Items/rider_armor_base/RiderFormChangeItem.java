@@ -36,6 +36,8 @@ public class RiderFormChangeItem extends BaseItem {
 	private Item SWITCH_ITEM;
 	private Boolean RESET_FORM = false;
 
+	private Boolean SET_TO_ARMOR_FORM = false;
+
 	private List<RiderFormChangeItem> alternative = new ArrayList<RiderFormChangeItem>();
 	private RiderFormChangeItem alsoChange1stSlot;
 	private RiderFormChangeItem alsoChange2ndSlot;
@@ -145,7 +147,7 @@ public class RiderFormChangeItem extends BaseItem {
 	}
 	
 	public RiderFormChangeItem SetFormToArmor() {
-		RESET_FORM=true;
+		SET_TO_ARMOR_FORM=true;
 		return this;
 	}
 
@@ -243,6 +245,7 @@ public class RiderFormChangeItem extends BaseItem {
 				if (alsoChange1stSlot !=null)RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),alsoChange1stSlot, 1);
 				if (alsoChange2ndSlot !=null)RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),alsoChange2ndSlot, 2);
 				if (RESET_FORM)RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),belt.Base_Form_Item, 1);
+				if (SET_TO_ARMOR_FORM)RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),belt.Armor_Form_Item, 1);
 
 				if (SWITCH_ITEM!=null&RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET), Slot)==this) RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),SWITCH_ITEM, Slot);
 					else RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),this, Slot);

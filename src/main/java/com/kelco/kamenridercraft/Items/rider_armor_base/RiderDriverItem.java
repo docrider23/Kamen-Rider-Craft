@@ -25,10 +25,12 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.minecraftforge.registries.RegistryObject;
+import software.bernie.example.registry.ItemRegistry;
 public class RiderDriverItem extends RiderArmorItem{
 
 	public String armorNamePrefix;
 	public RiderFormChangeItem Base_Form_Item;
+	public RiderFormChangeItem Armor_Form_Item;
 	protected ArrayList<RiderFormChangeItem> Extra_Base_Form_Item;
 	public String Rider;
 	public Item HEAD;
@@ -41,15 +43,27 @@ public class RiderDriverItem extends RiderArmorItem{
 	public RiderDriverItem (ArmorMaterial material, String rider,RegistryObject<Item> baseFormItem,RegistryObject<Item> head,RegistryObject<Item>torso,RegistryObject<Item> legs, Properties properties)
 	{
 		super(material, ArmorItem.Type.BOOTS, properties);
-
 		Rider=rider;
 		Base_Form_Item=((RiderFormChangeItem)baseFormItem.get());
+		Armor_Form_Item=((RiderFormChangeItem)baseFormItem.get());
 		HEAD=head.get();
 		TORSO=torso.get(); 
 		LEGS=legs.get();
 
 	}
 
+	public RiderDriverItem (ArmorMaterial material, String rider,RegistryObject<Item> baseFormItem,RegistryObject<Item> armorFormItem,RegistryObject<Item> head,RegistryObject<Item>torso,RegistryObject<Item> legs, Properties properties)
+	{
+		super(material, ArmorItem.Type.BOOTS, properties);
+
+		Rider=rider;
+		Base_Form_Item=((RiderFormChangeItem)baseFormItem.get());
+		Armor_Form_Item=((RiderFormChangeItem)armorFormItem.get());
+		HEAD=head.get();
+		TORSO=torso.get(); 
+		LEGS=legs.get();
+
+	}
 
 	@Override
 	public void onArmorTick(ItemStack stack, Level level, Player player)
@@ -178,7 +192,6 @@ public class RiderDriverItem extends RiderArmorItem{
 		}
 		if (itemstack.getItem() instanceof RiderDriverItem) {
 			((RiderDriverItem)itemstack.getItem()).Extra_set_Form_Item(itemstack, ITEM, SLOT);
-
 			itemstack.getTag().putInt("slot"+SLOT, Item.getId(ITEM));
 		}
 	}
@@ -229,7 +242,10 @@ public class RiderDriverItem extends RiderArmorItem{
 		{
 			return  Base_Form_Item;
 		}else if (Item.byId(itemstack.getTag().getInt("slot"+SLOT))instanceof RiderFormChangeItem){
+			
+			
 			return (RiderFormChangeItem) Item.byId(itemstack.getTag().getInt("slot"+SLOT));
+
 		}else{
 			return Base_Form_Item;
 		}
