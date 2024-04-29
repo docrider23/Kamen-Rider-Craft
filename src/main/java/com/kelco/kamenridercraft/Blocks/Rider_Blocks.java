@@ -34,6 +34,9 @@ import net.minecraftforge.registries.RegistryObject;
 public class Rider_Blocks {
 
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, KamenRiderCraftCore.MODID);
+	
+	public static final RegistryObject<Block> ICHIGO_CHAIR = registerBlock("ichigo_chair",
+			() -> new BaseFacingBlockNotCube(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GREEN).strength(2f).dynamicShape(),Block.box(2, 0, 1, 12,25, 14)).AddToTabList(RiderTabs.RIDER_BLOCK));
 
 	public static final RegistryObject<Block> SHOCKER_MONITOR = registerBlock("shocker_monitor",
 			() -> new BaseFacingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
