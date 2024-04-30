@@ -164,6 +164,11 @@ public class Ryuki_Rider_Items {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false),new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false))
 			.ChangeModel("geo/knight_wing_wall.geo.json").AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 	  
+	public static final RegistryObject<Item> GIGA_CANNON_VENT = ITEMS.register("giga_cannon_vent",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_giga_cannon","zolda","v_buckle_belt_zolda",
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0,true,false),new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false)
+					,new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false)).ChangeModel("geo/zolda_giga_cannon.geo.json").AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+	  
 	  
 	public static final RegistryObject<Item> RYUKIHELMET = ITEMS.register("ryukihead",
 			() -> new RiderArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
@@ -291,12 +296,10 @@ public class Ryuki_Rider_Items {
     public static final RegistryObject<BaseBlasterItem> GIGA_LAUNCHER = ITEMS.register("giga_launcher",
             () -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
 	
-    public static final RegistryObject<BaseBlasterItem> GIGA_ARMOR = ITEMS.register("torque_guard",
-            () -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+    public static final RegistryObject<ShieldItem> GIGA_ARMOR = ITEMS.register("giga_armor",
+            () -> new BaseShieldItem(new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
 	
     /**
-	magna_visor
-	torque_guard
 	evil_visor
 	metal_visor
 	hetal_horn
