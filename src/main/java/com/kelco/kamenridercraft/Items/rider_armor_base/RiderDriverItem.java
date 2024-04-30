@@ -16,6 +16,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.vehicle.Minecart;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
@@ -192,6 +193,7 @@ public class RiderDriverItem extends RiderArmorItem{
 		}
 		if (itemstack.getItem() instanceof RiderDriverItem) {
 			((RiderDriverItem)itemstack.getItem()).Extra_set_Form_Item(itemstack, ITEM, SLOT);
+			itemstack.getTag().putString("slot_tex"+SLOT, ITEM.toString());
 			itemstack.getTag().putInt("slot"+SLOT, Item.getId(ITEM));
 		}
 	}
