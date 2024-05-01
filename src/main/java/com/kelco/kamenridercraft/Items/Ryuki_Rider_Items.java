@@ -169,7 +169,11 @@ public class Ryuki_Rider_Items {
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0,true,false),new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false)
 					,new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false)).ChangeModel("geo/zolda_giga_cannon.geo.json").AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 	  
-	  
+	public static final RegistryObject<Item> GIGA_TECTOR = ITEMS.register("giga_tector_vent",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_giga_tector","zolda","v_buckle_belt_zolda",
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0,true,false),new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false)
+					,new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false),new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false)).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+	   
 	public static final RegistryObject<Item> RYUKIHELMET = ITEMS.register("ryukihead",
 			() -> new RiderArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
 	public static final RegistryObject<Item> RTUKICHESTPLATE = ITEMS.register("ryukitroso",
@@ -299,8 +303,16 @@ public class Ryuki_Rider_Items {
     public static final RegistryObject<ShieldItem> GIGA_ARMOR = ITEMS.register("giga_armor",
             () -> new BaseShieldItem(new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
 	
+    public static final RegistryObject<SwordItem> GIGA_HORN = ITEMS.register("giga_horn",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
+    public static final RegistryObject<Item> EVIL_VISOR = ITEMS.register("evil_visor",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+    
+    public static final RegistryObject<SwordItem> EVIL_WHIP = ITEMS.register("evil_whip",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
     /**
-	evil_visor
 	metal_visor
 	hetal_horn
 	veno_visor
