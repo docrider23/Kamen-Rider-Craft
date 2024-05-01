@@ -1,0 +1,11 @@
+{
+  "values": [
+    "kamenridercraft:amazon_cell_extractor",
+    "kamenridercraft:amazon_cell_mutator",
+    "kamenridercraft:kaijin_stone_generator",
+    "kamenridercraft:g_chip_programer",
+    "kamenridercraft:gaia_memory_refiner",
+    "kamenridercraft:cell_medal_programer",
+    "kamenridercraft:gamecreator"
+  ]
+}

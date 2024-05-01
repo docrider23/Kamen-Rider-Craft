@@ -8,8 +8,10 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -34,7 +36,7 @@ public class DespawnBlock extends BaseBlock {
 
 	public void randomTick(BlockState p_221379_, ServerLevel p_221380_, BlockPos p_221381_, RandomSource p_221382_) {
 		if (this.decaying(p_221379_)) {
-			dropResources(p_221379_, p_221380_, p_221381_);
+			//dropResources(p_221379_, p_221380_, p_221381_);
 			p_221380_.removeBlock(p_221381_, false);
 		}
 
@@ -71,11 +73,11 @@ public class DespawnBlock extends BaseBlock {
 	}
 
 	public static OptionalInt getOptionalDistanceAt(BlockState p_277868_) {
-			return p_277868_.hasProperty(DISTANCE) ? OptionalInt.of(p_277868_.getValue(DISTANCE)) : OptionalInt.empty();
+		return p_277868_.hasProperty(DISTANCE) ? OptionalInt.of(p_277868_.getValue(DISTANCE)) : OptionalInt.empty();
 	}
 
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_54447_) {
-	    p_54447_.add(DISTANCE, PERSISTENT);
+		p_54447_.add(DISTANCE, PERSISTENT);
 	}
 
 	public BlockState getStateForPlacement(BlockPlaceContext p_54424_) {

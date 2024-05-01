@@ -1,0 +1,11 @@
+{
+  "values": [
+    "#krc_core:gear/used_by/double",
+    "#krc_core:gear/used_by/accel",
+    "kamenridercraft:skull_memory",
+    "#krc_core:gear/used_by/eternal",
+    "#krc_core:gear/t2_gaia_memories",
+    "#krc_core:gear/dopant_memories",
+    "#krc_core:gear/gadget_memories"
+  ]
+}

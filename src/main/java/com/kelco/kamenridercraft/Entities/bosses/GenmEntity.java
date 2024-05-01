@@ -5,6 +5,7 @@ import java.util.Random;
 import com.kelco.kamenridercraft.Entities.footSoldiers.BaseHenchmenEntity;
 import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
 import com.kelco.kamenridercraft.Items.Ichigo_Rider_Items;
+import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -29,7 +30,10 @@ public class GenmEntity extends BaseHenchmenEntity {
         this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Ex_Aid_Rider_Items.EX_AIDLEGGINGS.get()));
         this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Ex_Aid_Rider_Items.GAMER_DRIVER_GENM.get()));
         
-        this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Ex_Aid_Rider_Items.GASHACON_BUGVISOR.get()));
+		ItemStack belt = new ItemStack(Ex_Aid_Rider_Items.GAMER_DRIVER_GENM.get());
+		RiderDriverItem.set_Form_Item(belt, Ex_Aid_Rider_Items.PROTO_MIGHTY_ACTION_X_GASHAT.get(), 1);
+	
+        this.setItemSlot(EquipmentSlot.FEET,belt);
     }
 
  
