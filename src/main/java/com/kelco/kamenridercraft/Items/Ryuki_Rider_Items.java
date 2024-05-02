@@ -62,7 +62,7 @@ public class Ryuki_Rider_Items {
 	  public static final RegistryObject<Item> METALGELAS_ADVENT = ITEMS.register("metalgelas_advent",
 	            () -> new RiderFormChangeItem(new Item.Properties(),0,"","gai","v_buckle_belt_gai",
 	            		new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 40, 0,true,false),
-	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false)).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false)).ChangeModel("geo/gai.geo.json").AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 	  
 	  public static final RegistryObject<Item> VENOSNAKER_ADVENT = ITEMS.register("venosnaker_advent",
 	            () -> new RiderFormChangeItem(new Item.Properties(),0,"","ouja","v_buckle_belt_ouja",
@@ -312,12 +312,22 @@ public class Ryuki_Rider_Items {
     public static final RegistryObject<SwordItem> EVIL_WHIP = ITEMS.register("evil_whip",
             () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
 	
+    public static final RegistryObject<Item> METAL_VISOR = ITEMS.register("metal_visor",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+    
+    public static final RegistryObject<SwordItem> METAL_HORN = ITEMS.register("metal_horn",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
+    public static final RegistryObject<SwordItem> VENO_VISOR = ITEMS.register("veno_visor",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
+    public static final RegistryObject<SwordItem> VENO_SABER = ITEMS.register("veno_saber",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
+    public static final RegistryObject<SwordItem> VENO_VISOR_ZWEI = ITEMS.register("veno_visor_zwei",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
     /**
-	metal_visor
-	hetal_horn
-	veno_visor
-	veno_saber
-	veno_visor_zwei
 	dest_visor
 	dest_claws
 	gazelle_visor
