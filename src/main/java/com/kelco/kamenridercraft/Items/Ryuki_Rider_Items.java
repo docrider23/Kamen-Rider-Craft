@@ -327,20 +327,32 @@ public class Ryuki_Rider_Items {
     public static final RegistryObject<SwordItem> VENO_VISOR_ZWEI = ITEMS.register("veno_visor_zwei",
             () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
 	
-    /**
+    public static final RegistryObject<SwordItem> GOLD_VISOR = ITEMS.register("gold_visor",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
+    public static final RegistryObject<SwordItem> GOLD_SABER = ITEMS.register("gold_saber",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
+    public static final RegistryObject<ShieldItem> GOLD_SHIELD = ITEMS.register("gold_shield",
+            () -> new BaseShieldItem(new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
+    public static final RegistryObject<SwordItem> BLANC_VISOR = ITEMS.register("blanc_visor",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
+    public static final RegistryObject<SwordItem> WING_SLASHER = ITEMS.register("wing_slasher",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
+    public static final RegistryObject<ShieldItem> WING_SHIELD = ITEMS.register("wing_shield",
+            () -> new BaseShieldItem(new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
+     /**
 	dest_visor
 	dest_claws
 	gazelle_visor
-	gold_visor
-	gold_sabers
-	gold_shield
-	wing_slasher
-	wing_shield
 	dark_drag_visor
 	drag_saber_ryuga
 	ryuga_drag_claw
 	ryuga_drag_shield
-	blanc_visor
 	bio_visor
 	abyss_visor
 	abyss_saber
