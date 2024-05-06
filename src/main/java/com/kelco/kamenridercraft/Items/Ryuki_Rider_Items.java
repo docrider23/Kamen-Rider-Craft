@@ -174,6 +174,13 @@ public class Ryuki_Rider_Items {
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0,true,false),new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false)
 					,new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false),new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false)).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 	   
+	public static final RegistryObject<Item> DRAG_SHIELD_VENT_RYUGA = ITEMS.register("drag_shield_vent_ryuga",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"_drag_shield","ryuga","v_buckle_belt_ryuga",
+            		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false)
+            		,new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false),new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false))
+            .ChangeModel("geo/ryuki_drag_shield.geo.json").AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+  
+
 	public static final RegistryObject<Item> RYUKIHELMET = ITEMS.register("ryukihead",
 			() -> new RiderArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
 	public static final RegistryObject<Item> RTUKICHESTPLATE = ITEMS.register("ryukitroso",
@@ -345,15 +352,31 @@ public class Ryuki_Rider_Items {
     public static final RegistryObject<ShieldItem> WING_SHIELD = ITEMS.register("wing_shield",
             () -> new BaseShieldItem(new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
 	
+    public static final RegistryObject<Item> BLACK_DRAG_VISOR = ITEMS.register("black_drag_visor",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+    
+    public static final RegistryObject<SwordItem> DRAG_SABER_RYUGA = ITEMS.register("drag_saber_ryuga",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
+    public static final RegistryObject<SwordItem> DRAG_CLAW_RYUGA = ITEMS.register("drag_claw_ryuga",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
+	public static final RegistryObject<ShieldItem> DRAG_SHIELD_RYUGA = ITEMS.register("drag_shield_ryuga",
+            () -> new BaseShieldItem(new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem( ADVENT_CARD.get()));
+    
+    public static final RegistryObject<BaseBlasterItem> BLACK_DRAG_VISOR_ZWEI = ITEMS.register("black_drag_visor_zwei",
+            () -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).setProjectileLargeFireball(1).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
+    public static final RegistryObject<Item> BIO_VISOR = ITEMS.register("bio_visor",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+    
+    public static final RegistryObject<SwordItem> BIO_WINDER = ITEMS.register("bio_winder",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
      /**
 	dest_visor
 	dest_claws
 	gazelle_visor
-	dark_drag_visor
-	drag_saber_ryuga
-	ryuga_drag_claw
-	ryuga_drag_shield
-	bio_visor
 	abyss_visor
 	abyss_saber
 	abyssmash
