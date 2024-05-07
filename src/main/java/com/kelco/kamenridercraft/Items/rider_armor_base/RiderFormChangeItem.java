@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.google.common.collect.Lists;
+import com.kelco.kamenridercraft.Effect.Effect_core;
 import com.kelco.kamenridercraft.Items.Modded_item_core;
 
 import net.minecraft.world.InteractionHand;
@@ -30,7 +31,7 @@ public class RiderFormChangeItem extends BaseItem {
 	private String UPDATED_MODEL;
 	private String FLYING_MODEL;
 	private String UPDATED_MODEL_ANIMATION;
-	
+
 	private Boolean FLYING_TEXT = false;
 	private Item STIFT_ITEM = Items.APPLE;
 	private Item SWITCH_ITEM;
@@ -49,7 +50,7 @@ public class RiderFormChangeItem extends BaseItem {
 	private RiderFormChangeItem NEED_FORM_SLOT_2;
 	private RiderFormChangeItem NEED_FORM_SLOT_3;
 	private RiderFormChangeItem NEED_FORM_SLOT_4;
-	
+
 	public RiderFormChangeItem( Properties properties,int belt,String formName,String ridername,String beltTex, MobEffectInstance... effects) {
 		super( properties);
 
@@ -82,7 +83,7 @@ public class RiderFormChangeItem extends BaseItem {
 		if (UPDATED_BELT_MODEL!=null) return UPDATED_BELT_MODEL;
 		return "geo/riderbelt.geo.json";
 	}
-	
+
 	public String get_Model() {
 		if (UPDATED_MODEL!=null) return UPDATED_MODEL;
 		return "geo/ichigo.geo.json";
@@ -93,7 +94,7 @@ public class RiderFormChangeItem extends BaseItem {
 		return "animations/ichigo.animation.json";
 	}
 
-	
+
 	public String get_FlyingModel() {
 		return FLYING_MODEL;
 	}
@@ -105,7 +106,7 @@ public class RiderFormChangeItem extends BaseItem {
 		alsoChange1stSlot=  (RiderFormChangeItem) item;
 		return this;
 	}
-	
+
 	public RiderFormChangeItem alsoChange2ndSlot(Item item) {
 		alsoChange2ndSlot=  (RiderFormChangeItem) item;
 		return this;
@@ -145,7 +146,7 @@ public class RiderFormChangeItem extends BaseItem {
 		RESET_FORM=true;
 		return this;
 	}
-	
+
 	public RiderFormChangeItem SetFormToArmor() {
 		SET_TO_ARMOR_FORM=true;
 		return this;
@@ -158,17 +159,17 @@ public class RiderFormChangeItem extends BaseItem {
 		else if (slot==4)NEED_FORM_SLOT_4=((RiderFormChangeItem)item);
 		return this;
 	}
-	
+
 	public RiderFormChangeItem addNeedItem( Item item) {
 		NEEDITEM.add(item);
 		return this;
 	}
-	
+
 	public RiderFormChangeItem addShiftForm(Item item) {
 		STIFT_ITEM=item;
 		return this;
 	}
-	
+
 	public RiderFormChangeItem addSwitchForm(Item item) {
 		SWITCH_ITEM=item;
 		return this;
@@ -179,25 +180,25 @@ public class RiderFormChangeItem extends BaseItem {
 		HAS_NEED_ITEM_LIST=true;
 		return this;
 	}
-	
+
 	public RiderFormChangeItem AddCompatibilityList(String[] List) {
-		 compatibilityList=List;
+		compatibilityList=List;
 		return this;
 	}
 
 	public Boolean iscompatible(String rider) {
-		
+
 		for (int i = 0; i < compatibilityList.length; i++)
 		{
 			if (compatibilityList[i]==rider){
 				return true;
 			}
 		}
-		
+
 		return false;
 	}
-	
-	
+
+
 	public Boolean CanChange(Player player,RiderDriverItem belt, ItemStack stack) {
 
 		if (this == Modded_item_core.BLANK_FORM.get()) {
@@ -218,7 +219,7 @@ public class RiderFormChangeItem extends BaseItem {
 		if (NEED_FORM_SLOT_2!=null )if (RiderDriverItem.get_Form_Item(stack, 2)!=NEED_FORM_SLOT_1)return false;
 		if (NEED_FORM_SLOT_3!=null )if (RiderDriverItem.get_Form_Item(stack, 3)!=NEED_FORM_SLOT_1)return false;
 		if (NEED_FORM_SLOT_4!=null )if (RiderDriverItem.get_Form_Item(stack, 4)!=NEED_FORM_SLOT_1)return false;
-		
+
 		if  (HAS_NEED_ITEM_LIST) {
 			for (int i = 0; i < needItemList.size(); i++)
 			{
@@ -236,26 +237,28 @@ public class RiderFormChangeItem extends BaseItem {
 
 		ItemStack BELT = p_41129_.getItemBySlot(EquipmentSlot.FEET);
 
-		if (BELT.getItem() instanceof RiderDriverItem belt) {
+		if(!p_41129_.hasEffect(Effect_core.FORM_LOCK.get())) {
+			if (BELT.getItem() instanceof RiderDriverItem belt) {
 
-			if (STIFT_ITEM instanceof RiderFormChangeItem& p_41129_.isShiftKeyDown()) {
-				((RiderFormChangeItem)STIFT_ITEM).use(p_41128_, p_41129_, p_41130_);
-			}
-			else if (CanChange(p_41129_,belt,BELT)) {
-				if (alsoChange1stSlot !=null)RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),alsoChange1stSlot, 1);
-				if (alsoChange2ndSlot !=null)RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),alsoChange2ndSlot, 2);
-				if (RESET_FORM)RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),belt.Base_Form_Item, 1);
-				if (SET_TO_ARMOR_FORM)RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),belt.Armor_Form_Item, 1);
+				if (STIFT_ITEM instanceof RiderFormChangeItem& p_41129_.isShiftKeyDown()) {
+					((RiderFormChangeItem)STIFT_ITEM).use(p_41128_, p_41129_, p_41130_);
+				}
+				else if (CanChange(p_41129_,belt,BELT)) {
+					if (alsoChange1stSlot !=null)RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),alsoChange1stSlot, 1);
+					if (alsoChange2ndSlot !=null)RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),alsoChange2ndSlot, 2);
+					if (RESET_FORM)RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),belt.Base_Form_Item, 1);
+					if (SET_TO_ARMOR_FORM)RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),belt.Armor_Form_Item, 1);
 
-				if (SWITCH_ITEM!=null&RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET), Slot)==this) RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),SWITCH_ITEM, Slot);
+					if (SWITCH_ITEM!=null&RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET), Slot)==this) RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),SWITCH_ITEM, Slot);
 					else RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),this, Slot);
-			
-			}else if(!alternative.isEmpty()){
 
-				for (int i = 0; i < alternative.size(); i++)
-				{
-					RiderFormChangeItem alternativeItem_form_change = alternative.get(i);
-					alternativeItem_form_change.use(p_41128_, p_41129_, p_41130_);
+				}else if(!alternative.isEmpty()){
+
+					for (int i = 0; i < alternative.size(); i++)
+					{
+						RiderFormChangeItem alternativeItem_form_change = alternative.get(i);
+						alternativeItem_form_change.use(p_41128_, p_41129_, p_41130_);
+					}
 				}
 			}
 		}

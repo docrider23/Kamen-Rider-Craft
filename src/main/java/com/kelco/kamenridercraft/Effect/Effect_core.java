@@ -48,7 +48,6 @@ public class Effect_core {
 
 	public static final RegistryObject<MobEffect> EXPLODE= EFFECT.register("explode",
 			() -> new 	ExplodeEffect(MobEffectCategory.HARMFUL, 0x565656));
-
 	
 	public static final RegistryObject<MobEffect> FIRE_PUNCH= EFFECT.register("fire_punch",
 			() -> new 	FirePunchEffect(MobEffectCategory.BENEFICIAL, 0xf7c208));
@@ -68,7 +67,12 @@ public class Effect_core {
 	public static final RegistryObject<MobEffect> REFLECT= EFFECT.register("reflect",
 			() -> new 	ReflectEffect(MobEffectCategory.BENEFICIAL, 0xd1d1d1));
 
+	public static final RegistryObject<MobEffect> SLEEP= EFFECT.register("sleep",
+			() -> new 	SleepEffect(MobEffectCategory.HARMFUL, 0xffce00));
 	
+	public static final RegistryObject<MobEffect> FORM_LOCK= EFFECT.register("form_lock",
+			() -> new 	FormLockEffect(MobEffectCategory.HARMFUL, 0xffffff));
+
 	public static final RegistryObject<MobEffect> BUGSTER= EFFECT.register("bug",
 			() -> new 	BugEffect(MobEffectCategory.HARMFUL, 0xe8842e));
 
@@ -78,8 +82,6 @@ public class Effect_core {
 	public static final RegistryObject<MobEffect> MUTEKI= EFFECT.register("muteki",
 			() -> new 	SaveEffect(MobEffectCategory.HARMFUL, 0xffce00));
 
-	public static final RegistryObject<MobEffect> SLEEP= EFFECT.register("sleep",
-			() -> new 	SleepEffect(MobEffectCategory.HARMFUL, 0xffce00));
 
 	//works but don't like it
 	/**
