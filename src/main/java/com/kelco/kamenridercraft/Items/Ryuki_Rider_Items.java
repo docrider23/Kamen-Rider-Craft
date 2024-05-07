@@ -319,6 +319,9 @@ public class Ryuki_Rider_Items {
     public static final RegistryObject<SwordItem> EVIL_WHIP = ITEMS.register("evil_whip",
             () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
 	
+    public static final RegistryObject<BaseBlasterItem> EVIL_VISOR_ZWEI = ITEMS.register("evil_visor_zwei",
+            () -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
     public static final RegistryObject<Item> METAL_VISOR = ITEMS.register("metal_visor",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
@@ -342,6 +345,21 @@ public class Ryuki_Rider_Items {
 	
     public static final RegistryObject<ShieldItem> GOLD_SHIELD = ITEMS.register("gold_shield",
             () -> new BaseShieldItem(new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
+    public static final RegistryObject<SwordItem> DEST_VISOR = ITEMS.register("dest_visor",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
+    public static final RegistryObject<SwordItem> DEST_CLAW = ITEMS.register("dest_claw",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
+    public static final RegistryObject<SwordItem> DEST_CLAW1 = ITEMS.register("dest_claw1",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
+    public static final RegistryObject<Item> GAZELLE_VISOR = ITEMS.register("gazelle_visor",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+    
+    public static final RegistryObject<SwordItem> GAZELLE_STAB = ITEMS.register("gazelle_stab",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
 	
     public static final RegistryObject<SwordItem> BLANC_VISOR = ITEMS.register("blanc_visor",
             () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
@@ -373,12 +391,13 @@ public class Ryuki_Rider_Items {
     public static final RegistryObject<SwordItem> BIO_WINDER = ITEMS.register("bio_winder",
             () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
 	
+    public static final RegistryObject<Item> SLASH_VISOR = ITEMS.register("slash_visor",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+    
+    public static final RegistryObject<SwordItem> SLASH_DAGGER = ITEMS.register("slash_dagger",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
      /**
-	dest_visor
-	dest_claws
-	gazelle_visor
-	abyss_visor
-	abyss_saber
 	abyssmash
 	slash_visor
 	alternative_sword
