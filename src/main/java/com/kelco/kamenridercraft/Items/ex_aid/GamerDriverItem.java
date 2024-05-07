@@ -52,7 +52,9 @@ public class GamerDriverItem extends RiderDriverItem{
 				}
 			
 			if(get_Form_Item(itemstack,1).get_Belt_Model()=="geo/lv_1_belt.geo.json") {
-				belt = get_Form_Item(itemstack,1).getBeltTex()+"_un";
+				if (rider.getItemBySlot(EquipmentSlot.HEAD).getItem()!=Ex_Aid_Rider_Items.EX_AIDHELMET.get()) {
+					belt = get_Form_Item(itemstack,1).getBeltTex()+"_un";
+				}
 			}
 			
 			return "belts/"+belt;
