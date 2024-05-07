@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "kamenridercraft:verde_v_buckle"
+      "item": "kamenridercraft:v_buckle_verde"
     },
     "title": "The Yoyo Master",
     "description": "Transform into Kamen Rider Verde",
@@ -34,7 +34,7 @@
             },
             "feet": {
               "items": [
-                "kamenridercraft:verde_v_buckle"
+                "kamenridercraft:v_buckle_verde"
               ]
             }
           }

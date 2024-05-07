@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "kamenridercraft:ryuga_v_buckle"
+      "item": "kamenridercraft:v_buckle_ryuga"
     },
     "title": "Man in the Mirror",
     "description": "Transform into Kamen Rider Ryuga",
@@ -34,7 +34,7 @@
             },
             "feet": {
               "items": [
-                "kamenridercraft:ryuga_v_buckle"
+                "kamenridercraft:v_buckle_ryuga"
               ]
             }
           }

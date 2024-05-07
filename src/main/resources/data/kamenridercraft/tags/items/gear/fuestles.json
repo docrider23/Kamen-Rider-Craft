@@ -1,7 +1,7 @@
 {
   "values": [
-    "#krc_core:gear/used_by/kiva",
-    "#krc_core:gear/used_by/ixa",
+    "#kamenridercraft:gear/used_by/kiva",
+    "#kamenridercraft:gear/used_by/ixa",
     "kamenridercraft:sagafuestle",
     "kamenridercraft:darkwakeupfuestle",
     "kamenridercraft:newwakeupfuestle",

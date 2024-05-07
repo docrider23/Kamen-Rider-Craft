@@ -40,8 +40,9 @@ public class GamerDriverItem extends RiderDriverItem{
 		if (equipmentSlot == EquipmentSlot.FEET) {
 			String belt = ((RiderDriverItem)itemstack.getItem()).BELT_TEXT;
 			if (((RiderDriverItem)itemstack.getItem()).BELT_TEXT==null) {
-				belt = get_Form_Item(itemstack,1).getBeltTex();
+			 belt = get_Form_Item(itemstack,1).getBeltTex();
 			}
+		
 			if (itemstack.getItem()==Ex_Aid_Rider_Items.GASHACON_BUGVISOR_GENM.get()) {
 				if(rider.getMainHandItem().getItem()==Ex_Aid_Rider_Items.GASHACON_BUGVISOR.get()||rider.getOffhandItem().getItem()==Ex_Aid_Rider_Items.GASHACON_BUGVISOR.get() ) belt="bugster_buckle";
 				}
@@ -49,6 +50,11 @@ public class GamerDriverItem extends RiderDriverItem{
 					||itemstack.getItem()==Ex_Aid_Rider_Items.GASHACON_BUGVISOR_II_POPPY.get()||itemstack.getItem()==Ex_Aid_Rider_Items.GASHACON_BUGVISOR_II_LAZER.get()) {
 				if(rider.getMainHandItem().getItem()==Ex_Aid_Rider_Items.GASHACON_BUGVISOR_II.get()||rider.getOffhandItem().getItem()==Ex_Aid_Rider_Items.GASHACON_BUGVISOR_II.get() ) belt="bugster_buckle";
 				}
+			
+			if(get_Form_Item(itemstack,1).get_Belt_Model()=="geo/lv_1_belt.geo.json") {
+				belt = get_Form_Item(itemstack,1).getBeltTex()+"_un";
+			}
+			
 			return "belts/"+belt;
 		}
 		else if (equipmentSlot == EquipmentSlot.CHEST) return get_Form_Item(itemstack,2).getFormName(false);

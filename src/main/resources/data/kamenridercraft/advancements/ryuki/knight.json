@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "kamenridercraft:knight_v_buckle"
+      "item": "kamenridercraft:v_buckle_knight"
     },
     "title": "I'm Batman",
     "description": "Transform into Kamen Rider Knight",
@@ -34,7 +34,7 @@
             },
             "feet": {
               "items": [
-                "kamenridercraft:knight_v_buckle"
+                "kamenridercraft:v_buckle_knight"
               ]
             }
           }

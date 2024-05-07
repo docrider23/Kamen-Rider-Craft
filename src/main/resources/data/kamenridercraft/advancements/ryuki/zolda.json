@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "kamenridercraft:zolda_v_buckle"
+      "item": "kamenridercraft:v_buckle_zolda"
     },
     "title": "Super-Lawyer",
     "description": "Transform into Kamen Rider Zolda",
@@ -34,7 +34,7 @@
             },
             "feet": {
               "items": [
-                "kamenridercraft:zolda_v_buckle"
+                "kamenridercraft:v_buckle_zolda"
               ]
             }
           }

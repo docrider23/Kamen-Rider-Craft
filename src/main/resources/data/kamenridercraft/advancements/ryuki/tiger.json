@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "kamenridercraft:tiger_v_buckle"
+      "item": "kamenridercraft:v_buckle_tiger"
     },
     "title": "Eye of the Tiger",
     "description": "Transform into Kamen Rider Tiger",
@@ -34,7 +34,7 @@
             },
             "feet": {
               "items": [
-                "kamenridercraft:tiger_v_buckle"
+                "kamenridercraft:v_buckle_tiger"
               ]
             }
           }

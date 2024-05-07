@@ -1,6 +1,6 @@
 {
   "values": [
-    "#krc_core:arsenal/all_swordguns",
+    "#kamenridercraft:arsenal/all_swordguns",
     "kamenridercraft:vortech_shooter",
     "kamenridercraft:pegasus_bowgun",
     "kamenridercraft:gm_01_scorpion",
@@ -11,6 +11,8 @@
     "kamenridercraft:v1_shot",
     "kamenridercraft:drag_visor_zwei",
     "kamenridercraft:dark_arrow",
+    "kamenridercraft:magna_visor",
+    "kamenridercraft:giga_launcher",
     "kamenridercraft:faiz_phone",
     "kamenridercraft:faiz_phone_pointer",
     "kamenridercraft:kaixa_phone",

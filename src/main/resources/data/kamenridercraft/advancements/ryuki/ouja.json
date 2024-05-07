@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "kamenridercraft:ouja_v_buckle"
+      "item": "kamenridercraft:v_buckle_ouja"
     },
     "title": "So this is where the festival is...",
     "description": "Transform into Kamen Rider Ouja",
@@ -34,7 +34,7 @@
             },
             "feet": {
               "items": [
-                "kamenridercraft:ouja_v_buckle"
+                "kamenridercraft:v_buckle_ouja"
               ]
             }
           }

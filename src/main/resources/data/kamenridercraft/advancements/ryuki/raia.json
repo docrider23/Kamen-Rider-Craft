@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "kamenridercraft:raia_v_buckle"
+      "item": "kamenridercraft:v_buckle_raia"
     },
     "title": "My predictions are never wrong.",
     "description": "Transform into Kamen Rider Raia",
@@ -34,7 +34,7 @@
             },
             "feet": {
               "items": [
-                "kamenridercraft:raia_v_buckle"
+                "kamenridercraft:v_buckle_raia"
               ]
             }
           }

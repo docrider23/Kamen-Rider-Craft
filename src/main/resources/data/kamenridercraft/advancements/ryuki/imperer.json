@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "kamenridercraft:imperer_v_buckle"
+      "item": "kamenridercraft:v_buckle_imperer"
     },
     "title": "Speeeeeen Vent",
     "description": "Transform into Kamen Rider Imperer",
@@ -34,7 +34,7 @@
             },
             "feet": {
               "items": [
-                "kamenridercraft:imperer_v_buckle"
+                "kamenridercraft:v_buckle_imperer"
               ]
             }
           }

@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "kamenridercraft:femme_v_buckle"
+      "item": "kamenridercraft:v_buckle_femme"
     },
     "title": "White Swan",
     "description": "Transform into Kamen Rider Femme",
@@ -34,7 +34,7 @@
             },
             "feet": {
               "items": [
-                "kamenridercraft:femme_v_buckle"
+                "kamenridercraft:v_buckle_femme"
               ]
             }
           }

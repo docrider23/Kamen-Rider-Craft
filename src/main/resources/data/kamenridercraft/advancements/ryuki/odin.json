@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "kamenridercraft:odin_v_buckle"
+      "item": "kamenridercraft:v_buckle_odin"
     },
     "title": "Wibbly Wobbly Timey Wimey",
     "description": "Transform into Kamen Rider Odin",
@@ -34,7 +34,7 @@
             },
             "feet": {
               "items": [
-                "kamenridercraft:odin_v_buckle"
+                "kamenridercraft:v_buckle_odin"
               ]
             }
           }

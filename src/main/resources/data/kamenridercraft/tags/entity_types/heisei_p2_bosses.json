@@ -1,6 +1,6 @@
 {
   "values": [
-    "#krc_core:block_bosses",
+    "#kamenridercraft:block_bosses",
     "kamenridercraft:ankh_complete_mob",
     "kamenridercraft:ankh_lost_mob",
     "kamenridercraft:claydoll_dopant",
@@ -13,7 +13,6 @@
     "kamenridercraft:goda",
     "kamenridercraft:graphite_bugster_mob",
     "kamenridercraft:kazari_mob",
-    "kamenridercraft:lovelica_bugster_mob",
     "kamenridercraft:mezool_mob",
     "kamenridercraft:muchiri_mob",
     "kamenridercraft:nazca_dopant",

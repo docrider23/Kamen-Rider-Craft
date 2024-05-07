@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "kamenridercraft:ryuki_v_buckle"
+      "item": "kamenridercraft:v_buckle_ryuki"
     },
     "title": "Those Who Don't Fight Won't Survive!",
     "description": "Transform into Kamen Rider Ryuki",
@@ -34,7 +34,7 @@
             },
             "feet": {
               "items": [
-                "kamenridercraft:ryuki_v_buckle"
+                "kamenridercraft:v_buckle_ryuki"
               ]
             }
           }

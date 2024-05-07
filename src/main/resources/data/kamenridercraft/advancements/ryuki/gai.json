@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "kamenridercraft:gai_v_buckle"
+      "item": "kamenridercraft:v_buckle_gai"
     },
     "title": "What a horny rhino",
     "description": "Transform into Kamen Rider Gai",
@@ -34,7 +34,7 @@
             },
             "feet": {
               "items": [
-                "kamenridercraft:gai_v_buckle"
+                "kamenridercraft:v_buckle_gai"
               ]
             }
           }
