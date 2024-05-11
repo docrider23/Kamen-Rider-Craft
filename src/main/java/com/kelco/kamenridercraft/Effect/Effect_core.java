@@ -82,13 +82,9 @@ public class Effect_core {
 	public static final RegistryObject<MobEffect> MUTEKI= EFFECT.register("muteki",
 			() -> new 	SaveEffect(MobEffectCategory.HARMFUL, 0xffce00));
 
-
-	//works but don't like it
-	/**
 	public static final RegistryObject<MobEffect> PAUSE= EFFECT.register("pause",
 			() -> new 	PauseEffect(MobEffectCategory.HARMFUL, 0x4eff00)
 			.addAttributeModifier(Attributes.MOVEMENT_SPEED, "91AEAA56-376B-4498-935B-2F7F68070639", (double)-100F, AttributeModifier.Operation.MULTIPLY_TOTAL));
-**/
 
 
 

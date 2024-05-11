@@ -2,6 +2,7 @@ package com.kelco.kamenridercraft.Entities.footSoldiers;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoField;
+import java.util.List;
 
 import javax.annotation.Nullable;
 
@@ -10,8 +11,10 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.Difficulty;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.EntitySelector;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.MobSpawnType;
@@ -27,16 +30,20 @@ import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.ZombieAttackGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.animal.Chicken;
 import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.monster.ZombifiedPiglin;
 import net.minecraft.world.entity.npc.AbstractVillager;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class BaseHenchmenEntity extends Zombie {
@@ -85,17 +92,19 @@ public class BaseHenchmenEntity extends Zombie {
         		.build();
      }
     
+
+     
     
     @Nullable
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor p_34297_, DifficultyInstance p_34298_, MobSpawnType p_34299_, @Nullable SpawnGroupData p_34300_, @Nullable CompoundTag p_34301_) {
      
     	RandomSource randomsource = p_34297_.getRandom();
-       p_34300_ = super.finalizeSpawn(p_34297_, p_34298_, p_34299_, p_34300_, p_34301_);
+    
        float f = p_34298_.getSpecialMultiplier();
        this.setCanPickUpLoot(randomsource.nextFloat() < 0.55F * f);
-       
+
        if (p_34300_ == null) {
-          p_34300_ = new Zombie.ZombieGroupData(false, false);
+          p_34300_ = new Zombie.ZombieGroupData(false, true);
        }
 
        if (p_34300_ instanceof Zombie.ZombieGroupData zombie$zombiegroupdata) {
@@ -103,6 +112,8 @@ public class BaseHenchmenEntity extends Zombie {
 
     }
 
+       p_34300_ = super.finalizeSpawn(p_34297_, p_34298_, p_34299_, p_34300_, p_34301_);
+       
     if (this.getItemBySlot(EquipmentSlot.OFFHAND).isEmpty()) {
        LocalDate localdate = LocalDate.now();
        int i = localdate.get(ChronoField.DAY_OF_MONTH);
@@ -116,6 +127,16 @@ public class BaseHenchmenEntity extends Zombie {
     this.handleAttributes(f);
     return p_34300_;
  }
+
+   
+    protected void populateDefaultEquipmentSlots(RandomSource p_219165_, DifficultyInstance p_219166_) {
+     }
+
+     protected void enchantSpawnedWeapon(RandomSource p_217049_, float p_217050_) {
+     }
+
+     protected void enchantSpawnedArmor(RandomSource p_217052_, float p_217053_, EquipmentSlot p_217054_) {
+     }
     
     
     public static boolean getSpawnAsBabyOdds(RandomSource p_219163_) {
