@@ -490,10 +490,10 @@ public class Ex_Aid_Rider_Items {
 					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
 					new MobEffectInstance(Effect_core.MUTEKI.get(), 40, 0,true,false)).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 
-	public static final RegistryObject<Item> UNFINISHED_MAXIMUN_MIGHTY_X_GASHAT = ITEMS.register("unfinished_maximum_mighty_x_gashat",
+	public static final RegistryObject<Item> UNFINISHED_MAXIMUM_MIGHTY_X_GASHAT = ITEMS.register("unfinished_maximum_mighty_x_gashat",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 	
-	public static final RegistryObject<Item> MAXIMUN_MIGHTY_X_GASHAT_lv2 = ITEMS.register("mighty_action_x_gashat_lv2",
+	public static final RegistryObject<Item> MAXIMUM_MIGHTY_X_GASHAT_lv2 = ITEMS.register("mighty_action_x_gashat_lv2",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","ex_aid","gamer_driver_maximum_mighty_x_lv2",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false),
@@ -501,16 +501,16 @@ public class Ex_Aid_Rider_Items {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false)).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()));
 
 	
-	public static final RegistryObject<Item> MAXIMUN_MIGHTY_X_GASHAT = ITEMS.register("maximum_mighty_x_gashat",
+	public static final RegistryObject<Item> MAXIMUM_MIGHTY_X_GASHAT = ITEMS.register("maximum_mighty_x_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_lv99","ex_aid","gamer_driver_maximum_mighty_x",
 					new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false)).addSwitchForm(MAXIMUN_MIGHTY_X_GASHAT_lv2.get())
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false)).addSwitchForm(MAXIMUM_MIGHTY_X_GASHAT_lv2.get())
 			.ChangeModel("geo/lv_max.geo.json").ChangeBeltModel("geo/lv_1_belt.geo.json").alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_MAXIMUM_GASHAT, 20));
 
 	
-	public static final RegistryObject<Item> GOD_MAXIMUN_MIGHTY_X_GASHAT_lv0 = ITEMS.register("god_mighty_action_x_gashat_lv0",
+	public static final RegistryObject<Item> GOD_MAXIMUM_MIGHTY_X_GASHAT_lv0 = ITEMS.register("god_mighty_action_x_gashat_lv0",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_lv0","genm","gamer_driver_god_maximum_mighty_x_lv0",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
@@ -522,7 +522,7 @@ public class Ex_Aid_Rider_Items {
 					new MobEffectInstance(MobEffects.SATURATION, 40, 2,true,false)).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()));
 
 	
-	public static final RegistryObject<Item> GOD_MAXIMUN_MIGHTY_X_GASHAT = ITEMS.register("god_maximum_mighty_x_gashat",
+	public static final RegistryObject<Item> GOD_MAXIMUM_MIGHTY_X_GASHAT = ITEMS.register("god_maximum_mighty_x_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_lv_billion","genm","gamer_driver_god_maximum_mighty_x",
 					new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false),
@@ -531,10 +531,10 @@ public class Ex_Aid_Rider_Items {
 					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
 					new MobEffectInstance(MobEffects.REGENERATION, 40, 4,true,false),
-					new MobEffectInstance(MobEffects.SATURATION, 40, 2,true,false)).addSwitchForm(MAXIMUN_MIGHTY_X_GASHAT_lv2.get())
+					new MobEffectInstance(MobEffects.SATURATION, 40, 2,true,false)).addSwitchForm(MAXIMUM_MIGHTY_X_GASHAT_lv2.get())
 			.ChangeModel("geo/lv_max.geo.json").ChangeBeltModel("geo/lv_1_belt.geo.json").alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_MAXIMUM_GASHAT, 5));
 
-	public static final RegistryObject<Item> MAXIMUN_ZOMBIE_GASHAT = ITEMS.register("maximum_zombie_gashat",
+	public static final RegistryObject<Item> MAXIMUM_ZOMBIE_GASHAT = ITEMS.register("maximum_zombie_gashat",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 	
 	
@@ -551,7 +551,7 @@ public class Ex_Aid_Rider_Items {
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
 					new MobEffectInstance(MobEffects.SATURATION, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
-					new MobEffectInstance(Effect_core.MUTEKI.get(), 40, 0,true,false)).addNeedForm(MAXIMUN_MIGHTY_X_GASHAT.get(), 1).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_HYPER_GASHAT, 20));
+					new MobEffectInstance(Effect_core.MUTEKI.get(), 40, 0,true,false)).addNeedForm(MAXIMUM_MIGHTY_X_GASHAT.get(), 1).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_HYPER_GASHAT, 20));
 
 	public static final RegistryObject<Item> GEMEDEUS_HYPER_MUTEKI_GASHAT = ITEMS.register("gamedeus_hyper_muteki_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","gamedeus_muteki","gamer_driver_gamedeus_hyper_muteki",
@@ -563,9 +563,9 @@ public class Ex_Aid_Rider_Items {
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
 					new MobEffectInstance(MobEffects.SATURATION, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
-					new MobEffectInstance(Effect_core.MUTEKI.get(), 40, 0,true,false)).addNeedForm(MAXIMUN_MIGHTY_X_GASHAT.get(), 1).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_HYPER_GASHAT, 5));
+					new MobEffectInstance(Effect_core.MUTEKI.get(), 40, 0,true,false)).addNeedForm(MAXIMUM_MIGHTY_X_GASHAT.get(), 1).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_HYPER_GASHAT, 5));
 
-	//hyper_fumetsu_gashat Still needs .addNeedForm(MAXIMUN_MIGHTY_X_GASHAT.get(), 1)
+	//hyper_fumetsu_gashat Still needs .addNeedForm(MAXIMUM_MIGHTY_X_GASHAT.get(), 1)
 	
 	public static final RegistryObject<Item> HYPER_FUMESTU_GASHAT = ITEMS.register("hyper_fumetsu_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_hyper_fumetsu","genm","gamer_driver_hyper_fumetsu",

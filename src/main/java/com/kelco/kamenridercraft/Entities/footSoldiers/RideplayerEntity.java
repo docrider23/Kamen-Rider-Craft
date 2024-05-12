@@ -41,8 +41,7 @@ public class RideplayerEntity extends BaseHenchmenEntity {
 					this.level().addFreshEntity(boss);
 					if (this.getLastAttacker()instanceof Player){
 						Player playerIn=	(Player) this.getLastAttacker();
-						playerIn.sendSystemMessage(Component.translatable("Gachan! Mazaru Up! Akai kobushi tsuyosa! Aoi puzzle rensa!").withStyle(ChatFormatting.BLUE));
-						playerIn.sendSystemMessage(Component.translatable("Aka to ao no kousa! Perfect Knock Out!").withStyle(ChatFormatting.RED));
+						playerIn.sendSystemMessage(Component.translatable("Dual Up! Get the glory in the chain! Perfect Puzzle!").withStyle(ChatFormatting.BLUE));
 					}
 				}
 			}else if (this.random.nextInt(9) == 1) {

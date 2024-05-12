@@ -7,12 +7,15 @@ import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
 import com.kelco.kamenridercraft.Items.Ichigo_Rider_Items;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.Zombie;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -36,6 +39,10 @@ public class ParaDxEntity extends BaseHenchmenEntity {
 				ItemStack belt = getItemBySlot(EquipmentSlot.FEET);
 				if (RiderDriverItem.get_Form_Item(belt,1)!=Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_GASHAT.get()) {
 					RiderDriverItem.set_Form_Item(belt, Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_GASHAT.get(), 1);
+					if (this.getTarget() instanceof Player playerIn){
+						playerIn.sendSystemMessage(Component.translatable("Dual Up! Explosion hit! Knock Out Fighter!").withStyle(ChatFormatting.RED));
+						
+					}
 				}
 			}
 		}

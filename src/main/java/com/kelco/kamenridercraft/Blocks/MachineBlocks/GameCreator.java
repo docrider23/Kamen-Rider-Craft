@@ -76,7 +76,7 @@ public class GameCreator extends MachineBlock {
     		Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
     	
         if (!pLevel.isClientSide()) {
-            if (pPlayer.getItemInHand(pHand).getItem() == Ex_Aid_Rider_Items.UNFINISHED_MAXIMUN_MIGHTY_X_GASHAT.get()) process(pPlayer, pLevel, pPos, pHand, getgashatDrop(0));
+            if (pPlayer.getItemInHand(pHand).getItem() == Ex_Aid_Rider_Items.UNFINISHED_MAXIMUM_MIGHTY_X_GASHAT.get()) process(pPlayer, pLevel, pPos, pHand, getgashatDrop(0));
 			else if (pPlayer.getItemInHand(pHand).getItem() == Ex_Aid_Rider_Items.BLANK_GASHAT.get()) process(pPlayer, pLevel, pPos, pHand, getgashatDrop(1));
 			else if (pPlayer.getItemInHand(pHand).getItem() == Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_UNFINISHED_GASHAT.get()) process(pPlayer, pLevel, pPos, pHand, getgashatDrop(2));
 			else if (pPlayer.getItemInHand(pHand).getItem() == Ex_Aid_Rider_Items.UNFINISHED_HYPER_MUTEKI_GASHAT.get()) process(pPlayer, pLevel, pPos, pHand, getgashatDrop(3));
