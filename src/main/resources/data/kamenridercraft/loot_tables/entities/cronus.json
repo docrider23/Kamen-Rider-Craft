@@ -4,35 +4,60 @@
     {
       "rolls": 1,
       "entries": [
-        
         {
           "type": "minecraft:item",
-          "weight": 10,
-          "name": "kamenridercraft:kamen_rider_chronicle_gashat"
-		},
-		{
+          "name": "kamenridercraft:blank_gashat",
+          "weight": 4
+        },
+        {
           "type": "minecraft:item",
-          "weight": 1,
-          "name": "kamenridercraft:gashacon_bugvisor_ii_chronus"
-		}
+          "name": "kamenridercraft:kamen_rider_chronicle_gashat_gamedeus",
+          "weight": 1
+        }
       ]
     },
-    
     {
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "kamenridercraft:unfinished_kamen_rider_chronicle_gashat",
+          "name": "kamenridercraft:blank_gashat",
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": {
                 "min": 2,
-                "max": 3
+                "max": 4
               }
             }
           ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kamenridercraft:mighty_brothers_xx_unfinished_gashat",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kamenridercraft:kamen_rider_chronicle_gashat"
         }
       ]
     }

@@ -848,6 +848,7 @@
 
 "item.kamenridercraft.dangerous_zombie_gashat": "Dangerous Zombie Gashat",
 "item.kamenridercraft.kamen_rider_chronicle_gashat": "Kamen Rider Chronicle Gashat",
+"item.kamenridercraft.kamen_rider_chronicle_gashat_gamedeus": "Kamen Rider Chronicle Gashat (Gamedeus)",
 "item.kamenridercraft.toki_meki_crisis_gashat": "Toki Meki Crisis Gashat",
 "item.kamenridercraft.mighty_creator_vrx_gashat": "Mighty Creator VRX Gashat",
 "item.kamenridercraft.mighty_novel_x_gashat": "Mighty Novel X Gashat",
@@ -1225,5 +1226,6 @@
 "block.kamenridercraft.goda_boss_block": "Goda Boss Block",
 "block.kamenridercraft.core_boss_block": "Core Boss Block",
 "block.kamenridercraft.powered_up_core_boss_block": "Powered Up Core Boss Block",
-"block.kamenridercraft.ancient_ooo_boss_block": "Ancient OOO Boss Block"
+"block.kamenridercraft.ancient_ooo_boss_block": "Ancient OOO Boss Block",
+"block.kamenridercraft.cronus_boss_block": "Cronus Boss Block"
 }

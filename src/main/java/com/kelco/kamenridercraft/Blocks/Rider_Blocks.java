@@ -118,11 +118,11 @@ public class Rider_Blocks {
 					.strength(2.0F, 6.0F).sound(SoundType.STONE)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	
 	public static final RegistryObject<Block> BANG_BANG_DRUM = registerBlock("bang_bang_drum",
-			() -> new BaseBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
+			() -> new DespawnBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
 					.strength(2.0F, 6.0F).sound(SoundType.STONE)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	
 	public static final RegistryObject<Block> BAKUSOU_TROPHY = registerBlock("bakusou_trophy",
-			() -> new BaseBlockNotCube(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
+			() -> new DespawnBlockNotCube(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
 					.strength(2.0F, 6.0F).sound(SoundType.STONE).dynamicShape(),Block.box(4, 0, 6, 12,16, 10)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	
 
@@ -267,13 +267,15 @@ public class Rider_Blocks {
 	public static final RegistryObject<Block> CORE_BOSS_BLOCK = registerBlock("core_boss_block",
 			() -> new BossBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(2f)
 					,MobsCore.CORE
-					,Component.translatable("Henshin!").withStyle(ChatFormatting.RED)).AddToTabList(RiderTabs.RIDER_BLOCK));
+					,Component.translatable("Henshin!").withStyle(ChatFormatting.RED)
+					,1,Blocks.FIRE).AddToTabList(RiderTabs.RIDER_BLOCK));
 	
 	
 	public static final RegistryObject<Block> POWERED_UP_CORE_BOSS_BLOCK = registerBlock("powered_up_core_boss_block",
 			() -> new BossBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(2f)
 					,MobsCore.POWERED_UP_CORE
-					,Component.translatable("Henshin!").withStyle(ChatFormatting.DARK_PURPLE)).AddToTabList(RiderTabs.RIDER_BLOCK));
+					,Component.translatable("Henshin!").withStyle(ChatFormatting.DARK_PURPLE)
+					,1,Blocks.FIRE).AddToTabList(RiderTabs.RIDER_BLOCK));
 
 	public static final RegistryObject<Block> ANCIENT_OOO_BOSS_BLOCK = registerBlock("ancient_ooo_boss_block",
 			() -> new BossBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(2f)
@@ -284,6 +286,13 @@ public class Rider_Blocks {
 			() -> new BossBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(2f)
 					,MobsCore.GODA
 					,Component.translatable("Mukade! Hachi! Ari!").withStyle(ChatFormatting.DARK_PURPLE)).AddToTabList(RiderTabs.RIDER_BLOCK));
+
+	
+	public static final RegistryObject<Block> CRONUS_BOSS_BLOCK = registerBlock("cronus_boss_block",
+			() -> new BossBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(2f)
+					,MobsCore.CRONUS
+					,Component.translatable("Buggle Up! Ten wo tsukame Rider! Kizame chronicle! Ima koso toki wa kiwamareri!").withStyle(ChatFormatting.GREEN)
+					,1,MIGHTY_BLOCK.get(),BANG_BANG_DRUM.get(),BAKUSOU_TROPHY.get()).AddToTabList(RiderTabs.RIDER_BLOCK));
 
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
 		RegistryObject<T> toReturn = BLOCKS.register(name, block);

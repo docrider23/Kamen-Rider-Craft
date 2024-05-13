@@ -3,13 +3,13 @@
   "group": "gashat",
   "ingredients": [
 	{ 
-      "item": "minecraft:iron_ingot"
+      "item": "kamenridercraft:proto_mighty_action_x_gashat_origin"
     },
 	{ 
-      "item": "minecraft:redstone"
+      "item": "kamenridercraft:unfinished_maximum_mighty_x_gashat"
     }, 
     {
-      "item": "kamenridercraft:paradx_bugster_virus_dna"
+      "item": "kamenridercraft:save_energy_item"
     } 
     ],
   "result": {

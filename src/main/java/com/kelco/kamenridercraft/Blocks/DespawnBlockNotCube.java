@@ -1,7 +1,6 @@
 package com.kelco.kamenridercraft.Blocks;
 
 
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -9,12 +8,12 @@ import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-public class BaseBlockNotCube extends BaseBlock {
+public class DespawnBlockNotCube extends DespawnBlock {
 
 
 	  public static VoxelShape SHAPE = Block.box(4, 0, 6, 12,16, 10);
 	  
-	public BaseBlockNotCube(Properties prop,VoxelShape shape ) {
+	public DespawnBlockNotCube(Properties prop,VoxelShape shape ) {
 		
 		super(prop);
 		SHAPE =shape;

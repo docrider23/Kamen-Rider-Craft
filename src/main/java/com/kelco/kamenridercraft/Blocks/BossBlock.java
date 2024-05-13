@@ -1,15 +1,18 @@
 package com.kelco.kamenridercraft.Blocks;
 
+import java.util.List;
 import java.util.Random;
 import java.util.function.Supplier;
 
 import javax.annotation.Nullable;
 
+import com.google.common.collect.Lists;
 import com.kelco.kamenridercraft.Entities.footSoldiers.BaseHenchmenEntity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.stats.Stats;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -22,11 +25,10 @@ public class BossBlock extends BaseBlock {
 
 	private Component TEXT;
 	private Supplier<? extends EntityType<? extends BaseHenchmenEntity>> BOSS;
-	private Block BLOCK;
+	private List<Block>  BLOCK;
 	private int NUM;
 	
 	//Component.translatable("<Shocker Rider>Henshin!").withStyle(ChatFormatting.YELLOW)
-	//MobsCore.SHOCKER_RIDER.get();
 	
 	public BossBlock(Properties prop,Supplier<? extends EntityType<? extends BaseHenchmenEntity>> boss,Component text) {
 		super(prop);
@@ -35,11 +37,11 @@ public class BossBlock extends BaseBlock {
 		
 	}
 
-	public BossBlock(Properties prop,Supplier<? extends EntityType<? extends BaseHenchmenEntity>> boss,Component text,Block block,int nun) {
+	public BossBlock(Properties prop,Supplier<? extends EntityType<? extends BaseHenchmenEntity>> boss,Component text,int nun,Block... block) {
 		super(prop);
 		TEXT=text;
 		BOSS =boss;
-		BLOCK = block;
+		BLOCK = Lists.newArrayList(block);
 		
 	}
 	
@@ -64,7 +66,7 @@ public class BossBlock extends BaseBlock {
 						 int posZ = (pos.getZ()-10)+generator.nextInt(20);
 						 
 						BlockPos pos1 = new BlockPos(posX,posY,posZ);
-						if (wolrd.isEmptyBlock(pos1))wolrd.setBlockAndUpdate(pos1, BLOCK.defaultBlockState());
+						if (wolrd.isEmptyBlock(pos1))wolrd.setBlockAndUpdate(pos1, BLOCK.get(generator.nextInt(BLOCK.size())).defaultBlockState());
 			 
 					}
 				}else {
@@ -79,8 +81,8 @@ public class BossBlock extends BaseBlock {
 						 int posZ = (pos.getZ()-10)+generator.nextInt(20);
 						 
 						BlockPos pos1 = new BlockPos(posX,posY,posZ);
-						BlockPos pos2 = new BlockPos(posX,posY-1,posZ);
-						if (!wolrd.isEmptyBlock(pos2))if (wolrd.isEmptyBlock(pos1))wolrd.setBlockAndUpdate(pos1, BLOCK.defaultBlockState());
+						//BlockPos pos2 = new BlockPos(posX,posY-1,posZ);
+						if (wolrd.isEmptyBlock(pos1))wolrd.setBlockAndUpdate(pos1, BLOCK.get(generator.nextInt(BLOCK.size())).defaultBlockState());
 						
 					}
 				}
