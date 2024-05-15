@@ -35,6 +35,9 @@ public class ModPaintings {
     public static final RegistryObject<PaintingVariant> MIGHTY = PAINTING_VARIANTS.register("mighty",
             () -> new PaintingVariant(16, 16));
     
+    public static final RegistryObject<PaintingVariant> BLOODY_ROSE = PAINTING_VARIANTS.register("bloody_rose",
+            () -> new PaintingVariant(16, 32));
+    
     
     public static void register(IEventBus eventBus) {
         PAINTING_VARIANTS.register(eventBus);

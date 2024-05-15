@@ -110,11 +110,18 @@ public class ModClientEvents {
 			for (int i = 0; i < DARK_SHIELD_ITEM.size(); i++)
 			{
 				ItemProperties.register(DARK_SHIELD_ITEM.get(i), new ResourceLocation("pull"), (p_174635_, p_174636_, p_174637_, p_174638_) -> {
-					if (p_174637_.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == Ryuki_Rider_Items.DARK_BLADE.get()){
-						return 1;
-					}else {
-						return 0;
+					if (p_174637_ == null) {
+						return 0.0F;
 					}
+					else if (p_174637_.getItemBySlot(EquipmentSlot.FEET)!= null){
+						if (p_174637_.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == Ryuki_Rider_Items.DARK_BLADE.get()){
+							return 1;
+						}else {
+							return 0;
+						}
+					}
+					return 0;
+					
 				});
 			}
 		});
