@@ -306,14 +306,14 @@ public class Ryuki_Rider_Items {
     public static final RegistryObject<BaseBlasterItem> MAGNA_VISOR = ITEMS.register("magna_visor",
             () -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
 	
+    public static final RegistryObject<SwordItem> GIGA_HORN = ITEMS.register("giga_horn",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
     public static final RegistryObject<BaseBlasterItem> GIGA_LAUNCHER = ITEMS.register("giga_launcher",
             () -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
 	
     public static final RegistryObject<ShieldItem> GIGA_ARMOR = ITEMS.register("giga_armor",
             () -> new BaseShieldItem(new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
-	
-    public static final RegistryObject<SwordItem> GIGA_HORN = ITEMS.register("giga_horn",
-            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
 	
     public static final RegistryObject<Item> EVIL_VISOR = ITEMS.register("evil_visor",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
@@ -409,6 +409,9 @@ public class Ryuki_Rider_Items {
 			() -> new AdventCardItem(new Item.Properties(), "ryuki", DRAG_CLAW.get(), DRAG_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> DRAG_SHIELD_VENT = ITEMS.register("drag_shield_vent",
+			() -> new AdventCardItem(new Item.Properties(), "ryuki", DRAG_SHIELD.get(), DRAG_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+    
+    public static final RegistryObject<Item> DRAG_SHIELD_VENT_FORM = ITEMS.register("drag_shield_vent_form",
     		() -> new RiderFormChangeItem(new Item.Properties(),0,"_drag_shield","ryuki","v_buckle_belt_ryuki",
     				new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
     				new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
@@ -509,8 +512,11 @@ public class Ryuki_Rider_Items {
     
     public static final RegistryObject<Item> DRAG_CLAW_VENT_RYUGA = ITEMS.register("drag_claw_vent_ryuga",
 			() -> new AdventCardItem(new Item.Properties(), "ryuga", DRAG_CLAW_RYUGA.get(), BLACK_DRAG_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+    
+    public static final RegistryObject<Item> DRAG_SHIELD_VENT_RYUGA = ITEMS.register("drag_shield_vent_ryuga",
+			() -> new AdventCardItem(new Item.Properties(), "ryuga", DRAG_SHIELD_RYUGA.get(), BLACK_DRAG_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 	   
-	public static final RegistryObject<Item> DRAG_SHIELD_VENT_RYUGA = ITEMS.register("drag_shield_vent_ryuga",
+	public static final RegistryObject<Item> DRAG_SHIELD_VENT_FORM_RYUGA = ITEMS.register("drag_shield_vent_form_ryuga",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_drag_shield","ryuga","v_buckle_belt_ryuga",
 					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
