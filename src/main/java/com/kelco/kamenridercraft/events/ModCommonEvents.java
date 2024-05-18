@@ -58,9 +58,13 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.ZuGumunBaEntity;
 import com.kelco.kamenridercraft.Items.Ichigo_Rider_Items;
 import com.kelco.kamenridercraft.Items.Kuuga_Rider_Items;
 import com.kelco.kamenridercraft.Items.Modded_item_core;
+import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
+
 import java.util.List;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import net.minecraft.client.model.EntityModel;
 import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.monster.Monster;
@@ -94,7 +98,15 @@ public class ModCommonEvents {
 	@Mod.EventBusSubscriber(modid = KamenRiderCraftCore.MODID)
 	public static class ForgeEvents {
 
-		@SuppressWarnings({ "removal", "deprecation" })
+		@SubscribeEvent
+		public static void addInvisibleCheck(RenderPlayerEvent.Pre event) {
+			
+			if (event.getEntity().getItemBySlot(EquipmentSlot.FEET).getItem()instanceof RiderDriverItem) {
+				if (RiderDriverItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_PalyerModelInvisible())event.getEntity().setInvisible(true);
+			}
+
+		}
+
 		@SubscribeEvent
 		public static void addChangeSize(EntityEvent.Size event) {
 
@@ -113,7 +125,6 @@ public class ModCommonEvents {
 				}
 			}
 		}
-
 
 
 		// /effect give @e kamenridercraft:big infinite 3

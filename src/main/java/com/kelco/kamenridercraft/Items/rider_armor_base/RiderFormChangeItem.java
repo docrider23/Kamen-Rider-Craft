@@ -31,6 +31,7 @@ public class RiderFormChangeItem extends BaseItem {
 	private String UPDATED_MODEL;
 	private String FLYING_MODEL;
 	private String UPDATED_MODEL_ANIMATION;
+	private Boolean SET_PLAYER_MODEL_INVISIBLE = false;
 
 	private Boolean FLYING_TEXT = false;
 	private Item STIFT_ITEM = Items.APPLE;
@@ -94,6 +95,9 @@ public class RiderFormChangeItem extends BaseItem {
 		return "animations/ichigo.animation.json";
 	}
 
+	public Boolean get_PalyerModelInvisible() {
+		return SET_PLAYER_MODEL_INVISIBLE;
+	}
 
 	public String get_FlyingModel() {
 		return FLYING_MODEL;
@@ -119,6 +123,10 @@ public class RiderFormChangeItem extends BaseItem {
 	public RiderFormChangeItem ChangeModel(String model,String animation) {
 		UPDATED_MODEL=model;
 		UPDATED_MODEL_ANIMATION=animation;
+		return this;
+	}
+	public RiderFormChangeItem SetPalyerModelInvisible() {
+		SET_PLAYER_MODEL_INVISIBLE = true;
 		return this;
 	}
 	public RiderFormChangeItem ChangeBeltModel(String model) {

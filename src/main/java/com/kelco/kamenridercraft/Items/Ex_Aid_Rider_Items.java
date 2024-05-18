@@ -86,7 +86,8 @@ public class Ex_Aid_Rider_Items {
 	public static final RegistryObject<Item> BAKUSOU_BIKE_GASHAT = ITEMS.register("bakusou_bike_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_lv2_bike","lazer","blank",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false)).addSwitchForm(BAKUSOU_BIKE_GASHAT_LV_1.get())
-			.ChangeModel("geo/lazer_lv2.geo.json","lazer_lv2.animation.json").alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 15));
+			.ChangeModel("geo/lazer_lv2.geo.json","lazer_lv2.animation.json").alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get())
+			.SetPalyerModelInvisible().AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 15));
 
 	public static final RegistryObject<Item> BAKUSOU_BIKE_GASHAT_TURBO = ITEMS.register("bakusou_bike_gashat_turbo",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_turbo","lazer","gamer_driver_bakusou_bike",
@@ -609,7 +610,6 @@ public class Ex_Aid_Rider_Items {
 					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
 					new MobEffectInstance(Effect_core.MUTEKI.get(), 40, 0,true,false)).addNeedForm(MAXIMUM_MIGHTY_X_GASHAT.get(), 1).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_HYPER_GASHAT, 5));
 
-	//hyper_fumetsu_gashat Still needs .addNeedForm(MAXIMUM_MIGHTY_X_GASHAT.get(), 1)
 
 	public static final RegistryObject<Item> HYPER_FUMESTU_GASHAT = ITEMS.register("hyper_fumetsu_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_hyper_fumetsu","genm","gamer_driver_hyper_fumetsu",
@@ -621,7 +621,8 @@ public class Ex_Aid_Rider_Items {
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
 					new MobEffectInstance(MobEffects.SATURATION, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
-					new MobEffectInstance(Effect_core.MUTEKI.get(), 40, 0,true,false)).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_HYPER_GASHAT, 20));
+					new MobEffectInstance(Effect_core.MUTEKI.get(), 40, 0,true,false))
+			.addNeedItem(MAXIMUM_ZOMBIE_GASHAT.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 
 
 	public static final RegistryObject<Item> THE_UNBEATABLE_GAME= ITEMS.register("the_unbeatable_game",
