@@ -337,9 +337,8 @@
 					"parent": "BikeBody",
 					"pivot": [4, 13, 0],
 					"rotation": [10.68893, 0, 0],
-					"mirror": true,
 					"cubes": [
-						{"origin": [2, 9, 0], "size": [1, 4, 7], "uv": [0, 20]}
+						{"origin": [2, 9, 0], "size": [1, 4, 7], "uv": [0, 20],"mirror": true}
 					]
 				},
 				{
