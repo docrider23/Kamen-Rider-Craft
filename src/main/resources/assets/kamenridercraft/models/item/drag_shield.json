@@ -474,10 +474,10 @@
 	],
 	"display": {
 		"thirdperson_righthand": {
-			"translation": [0, -6, 0]
+			"translation": [0, -6, -0.5]
 		},
 		"thirdperson_lefthand": {
-			"translation": [0, -6, 0]
+			"translation": [0, -6, -0.5]
 		},
 		"firstperson_righthand": {
 			"rotation": [-45, 0, 0],

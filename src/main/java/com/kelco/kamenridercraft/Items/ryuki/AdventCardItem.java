@@ -37,9 +37,18 @@ public class AdventCardItem extends BaseItem {
 				if (p_41129_.getItemBySlot(EquipmentSlot.CHEST).getItem() == Ryuki_Rider_Items.RYUKICHESTPLATE.get()){
 					if (p_41129_.getItemBySlot(EquipmentSlot.HEAD).getItem() == Ryuki_Rider_Items.RYUKIHELMET.get()){
 						if (p_41129_.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RiderDriverItem){
-							if (RIDER == ((RiderDriverItem)p_41129_.getItemBySlot(EquipmentSlot.FEET).getItem()).Rider) {
+							if (RIDER == ((RiderDriverItem)p_41129_.getItemBySlot(EquipmentSlot.FEET).getItem()).Rider | (p_41129_.getInventory().countItem(Ryuki_Rider_Items.SLASH_VISOR.get())!=0 && ((RiderDriverItem)p_41129_.getItemBySlot(EquipmentSlot.FEET).getItem()).Rider == "alternative_zero")) {
 								if (!p_41128_.isClientSide()) {
 									p_41129_.drop(new ItemStack(WEAPON), true);
+									
+									if (this == Ryuki_Rider_Items.DEST_CLAW_VENT.get())
+									{
+										p_41129_.drop(new ItemStack(Ryuki_Rider_Items.DEST_CLAW1.get()), true);
+									}
+									if (this == Ryuki_Rider_Items.DRAG_SHIELD_VENT.get() | this == Ryuki_Rider_Items.DRAG_SHIELD_VENT_RYUGA.get() | this == Ryuki_Rider_Items.GOLD_SABER_VENT.get())
+									{
+										p_41129_.drop(new ItemStack(WEAPON), true);
+									}
 									
 									if	(!p_41129_.isCreative()) {
 										itemstack.shrink(1);
