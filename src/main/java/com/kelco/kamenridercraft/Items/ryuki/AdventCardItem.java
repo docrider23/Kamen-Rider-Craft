@@ -45,7 +45,7 @@ public class AdventCardItem extends BaseItem {
 									{
 										p_41129_.drop(new ItemStack(Ryuki_Rider_Items.DEST_CLAW1.get()), true);
 									}
-									if (this == Ryuki_Rider_Items.DRAG_SHIELD_VENT.get() | this == Ryuki_Rider_Items.DRAG_SHIELD_VENT_RYUGA.get() | this == Ryuki_Rider_Items.GOLD_SABER_VENT.get())
+									if (this == Ryuki_Rider_Items.DRAG_SHIELD_VENT.get() | this == Ryuki_Rider_Items.DRAG_SHIELD_VENT_RYUGA.get() | this == Ryuki_Rider_Items.GOLD_SABER_VENT.get() | this == Ryuki_Rider_Items.ABYSS_SABER_VENT.get())
 									{
 										p_41129_.drop(new ItemStack(WEAPON), true);
 									}

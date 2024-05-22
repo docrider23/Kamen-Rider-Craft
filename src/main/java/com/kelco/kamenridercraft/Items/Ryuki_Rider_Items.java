@@ -399,6 +399,15 @@ public class Ryuki_Rider_Items {
     public static final RegistryObject<SwordItem> SLASH_DAGGER = ITEMS.register("slash_dagger",
             () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
 	
+    public static final RegistryObject<Item> ABYSS_VISOR = ITEMS.register("abyss_visor",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+    
+    public static final RegistryObject<SwordItem> ABYSS_SABER = ITEMS.register("abyss_saber",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+    
+    public static final RegistryObject<SwordItem> ABYSS_CLAW = ITEMS.register("abyss_claw",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+	
     public static final RegistryObject<Item> RIDE_SABER_VENT = ITEMS.register("ride_saber_vent",
 			() -> new AdventCardItem(new Item.Properties(), "ryuki", RIDE_SABER.get(), RIDE_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
@@ -532,6 +541,12 @@ public class Ryuki_Rider_Items {
     
     public static final RegistryObject<Item> SLASH_DAGGER_VENT = ITEMS.register("slash_dagger_vent",
 			() -> new AdventCardItem(new Item.Properties(), "alternative", SLASH_DAGGER.get(), SLASH_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+    
+    public static final RegistryObject<Item> ABYSS_SABER_VENT = ITEMS.register("abyss_saber_vent",
+			() -> new AdventCardItem(new Item.Properties(), "abyss", ABYSS_SABER.get(), ABYSS_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+    
+    public static final RegistryObject<Item> ABYSS_CLAW_VENT = ITEMS.register("abyss_claw_vent",
+			() -> new AdventCardItem(new Item.Properties(), "abyss", ABYSS_CLAW.get(), ABYSS_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 	
 	
      /**
