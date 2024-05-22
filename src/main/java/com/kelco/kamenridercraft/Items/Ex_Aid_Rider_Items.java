@@ -36,8 +36,8 @@ public class Ex_Aid_Rider_Items {
 	public static final RegistryObject<Item> BUGSTER_VIRUS_DNA = ITEMS.register("bugster_virus_dna",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 
-	public static final RegistryObject<Item> GAMEDEUS_BUGSTER_VIRUS_DNA = ITEMS.register("gamedeus_bugster_virus_dna",
-			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
+	//public static final RegistryObject<Item> GAMEDEUS_BUGSTER_VIRUS_DNA = ITEMS.register("gamedeus_bugster_virus_dna",
+	//		() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 
 
 	public static final RegistryObject<Item> BLANK_GASHAT = ITEMS.register("blank_gashat",
@@ -432,7 +432,7 @@ public class Ex_Aid_Rider_Items {
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 
 	public static final RegistryObject<Item> GANBERIZING_GASHAT = ITEMS.register("ganbarizing_gashat",
-			() -> new BaseItem(new Item.Properties()).AddToTabList(GanbarizingMachine.BLANK_GASHAT, 1).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
+			() -> new BaseItem(new Item.Properties()).AddToTabList(GameCreator.BLANK_GASHAT, 2).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 
 	public static final RegistryObject<Item> POPPY_DOREMIFA_BEAT_GASHAT_GASHAT = ITEMS.register("poppy_doremifa_beat_gashat",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
