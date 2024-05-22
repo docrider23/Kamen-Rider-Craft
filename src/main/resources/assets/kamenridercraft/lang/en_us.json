@@ -64,7 +64,7 @@
 "item.kamenridercraft.icepop1": "Ice Pop",
 "item.kamenridercraft.icepop2": "Ice Pop",
 "item.kamenridercraft.icepop3": "Ice Pop",
-
+"item.kamenridercraft.energy_item_holder": "Energy Item Holder",
 
 
 "item.kamenridercraft.kamen_rider_logo": "Kamen Rider Logo",
@@ -878,6 +878,9 @@
 "item.kamenridercraft.unfinished_maximum_mighty_x_gashat": "Unfinished Maximum Gashat",
 "item.kamenridercraft.unfinished_hyper_muteki_gashat": "Unfinished Hyper Gashat",
 "item.kamenridercraft.unfinished_kamen_rider_chronicle_gashat": "Unfinished Chronicle Gashat",
+"item.kamenridercraft.chronus_clock": "Chronus Clock",
+"item.kamenridercraft.bugster_virus_dna": "Bugster Virus DNA",
+"item.kamenridercraft.gamedeus_bugster_virus_dna": "Gamedeus Bugster Virus DNA",
 
 "item.kamenridercraft.gashacon_breaker": "Gashacon Breaker",
 "item.kamenridercraft.gashacon_key_slasher": "Gashacon Key Slasher",
@@ -899,6 +902,7 @@
 "item.kamenridercraft.deus_rusher_red": "Machina Slasher",
 "item.kamenridercraft.deus_rampart": "Deus Rampart",
 "item.kamenridercraft.machina_rampart": "Machina Rampart",
+"item.kamenridercraft.graphite_fang": "Graphite Fang",
 
 "item.kamenridercraft.mighty_action_x_gashat": "Mighty Action X Gashat",
 "item.kamenridercraft.taddle_quest_gashat": "Taddle Quest Gashat",
@@ -953,6 +957,7 @@
 "item.kamenridercraft.gashat_gear_dual_another": "Gashat Gear Dual Another",
 "item.kamenridercraft.genm_musou_gashat": "Genm Musou Gashat",
 "item.kamenridercraft.hyper_fumetsu_gashat": "Hyper Fumetsu Gashat",
+"item.kamenridercraft.maximum_zombie_gashat": "Maximum Zombie Gashat",
 "item.kamenridercraft.the_unbeatable_game": "The Unbeatable Game Gashat",
 
 "item.kamenridercraft.pac_adventure_gashat": "Pac Adventure Gashat",
@@ -1258,6 +1263,7 @@
 "block.kamenridercraft.white_wallplate": "White Wallplate",
 "block.kamenridercraft.wooden_panel": "Dark Wood Panel Block",
 "block.kamenridercraft.wooden_panel2": "Light Wood Panel Block",
+"block.kamenridercraft.ichigo_chair": "Ichigo Chair",
 
 "block.kamenridercraft.mighty_block": "Mighty Block",
 "block.kamenridercraft.bang_bang_drum": "Bang Bang Drum",
@@ -1299,7 +1305,7 @@
 "block.kamenridercraft.kaijin_stone_generator": "Kaijin Stone Generator",
 "block.kamenridercraft.cell_medal_programer": "Cell Medal Programmer",
 "block.kamenridercraft.gamecreator": "Game Creator",
-
+"block.kamenridercraft.ganbarizing_machine": "Ganbarizing Machine",
 
 "block.kamenridercraft.poseidon_boss_block": "Poseidon Boss Block",
 "block.kamenridercraft.goda_boss_block": "Goda Boss Block",
