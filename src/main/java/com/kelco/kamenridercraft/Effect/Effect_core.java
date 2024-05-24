@@ -6,6 +6,7 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -35,7 +36,10 @@ public class Effect_core {
 			() -> new 	SmallEffect(MobEffectCategory.NEUTRAL, 0x1d8519));
 
 	public static final RegistryObject<MobEffect> BIG= EFFECT.register("big",
-			() -> new 	BigEffect(MobEffectCategory.NEUTRAL, 0x1d8519));
+			() -> new 	BigEffect(MobEffectCategory.NEUTRAL, 0x1d8519).addAttributeModifier(ForgeMod.BLOCK_REACH.get(), "91AEAA56-376B-4498-935B-2F7F68070640", 1F, AttributeModifier.Operation.ADDITION)
+			.addAttributeModifier(ForgeMod.ENTITY_REACH.get(), "91AEAA56-376B-4498-935B-2F7F68070640", 1F, AttributeModifier.Operation.ADDITION)
+			.addAttributeModifier(ForgeMod.STEP_HEIGHT_ADDITION.get(), "91AEAA56-376B-4498-935B-2F7F68070640", 1F, AttributeModifier.Operation.ADDITION)
+			);
 
 	public static final RegistryObject<MobEffect> FLAT= EFFECT.register("flat",
 			() -> new 	FlatEffect(MobEffectCategory.NEUTRAL, 0xf7fada));
@@ -73,6 +77,9 @@ public class Effect_core {
 	public static final RegistryObject<MobEffect> FORM_LOCK= EFFECT.register("form_lock",
 			() -> new 	FormLockEffect(MobEffectCategory.HARMFUL, 0xffffff));
 
+	public static final RegistryObject<MobEffect> GREEED= EFFECT.register("greeed",
+			() -> new 	GreeedEffect(MobEffectCategory.HARMFUL, 0xc9c6c1));
+	
 	public static final RegistryObject<MobEffect> BUGSTER= EFFECT.register("bug",
 			() -> new 	BugEffect(MobEffectCategory.HARMFUL, 0xe8842e));
 
@@ -84,7 +91,9 @@ public class Effect_core {
 
 	public static final RegistryObject<MobEffect> PAUSE= EFFECT.register("pause",
 			() -> new 	PauseEffect(MobEffectCategory.HARMFUL, 0x4eff00)
-			.addAttributeModifier(Attributes.MOVEMENT_SPEED, "91AEAA56-376B-4498-935B-2F7F68070639", (double)-100F, AttributeModifier.Operation.MULTIPLY_TOTAL));
+			.addAttributeModifier(Attributes.MOVEMENT_SPEED, "91AEAA56-376B-4498-935B-2F7F68070639", (double)-100F, AttributeModifier.Operation.MULTIPLY_TOTAL)
+			.addAttributeModifier(ForgeMod.ENTITY_GRAVITY.get(), "91AEAA56-376B-4498-935B-2F7F68070640", (double)100F, AttributeModifier.Operation.MULTIPLY_TOTAL)
+			);
 
 
 

@@ -58,12 +58,14 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.ZuGumunBaEntity;
 import com.kelco.kamenridercraft.Items.Ichigo_Rider_Items;
 import com.kelco.kamenridercraft.Items.Kuuga_Rider_Items;
 import com.kelco.kamenridercraft.Items.Modded_item_core;
+import com.kelco.kamenridercraft.Items.OOO_Rider_Items;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 
 import java.util.List;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.SpawnPlacements;
@@ -83,6 +85,7 @@ import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.event.entity.SpawnPlacementRegisterEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent.ItemPickupEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -107,6 +110,22 @@ public class ModCommonEvents {
 
 		}
 
+		@SubscribeEvent
+		public static void addChangeSize(ItemPickupEvent event) {
+
+			if (event.getEntity() instanceof Player entity) {
+
+				int num = entity.getInventory().countItem(OOO_Rider_Items.CELL_MEDAL.get());
+				int num2 = (num/64)-1;
+				
+				entity.addEffect(new MobEffectInstance(Effect_core.GREEED.get(),300,num2));
+				
+
+					
+			}
+		}
+
+		
 		@SubscribeEvent
 		public static void addChangeSize(EntityEvent.Size event) {
 
