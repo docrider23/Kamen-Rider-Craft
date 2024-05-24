@@ -1,19 +1,13 @@
 package com.kelco.kamenridercraft.Entities.bosses;
 
 import java.util.EnumSet;
-import java.util.Random;
 
 import javax.annotation.Nullable;
 
 import com.kelco.kamenridercraft.Effect.Effect_core;
-import com.kelco.kamenridercraft.Entities.bosses.AncientOOOEntity.AncientOOOEntityAttackGoal;
-import com.kelco.kamenridercraft.Entities.bosses.CoreEntity.CoreEntityAttackGoal;
 import com.kelco.kamenridercraft.Entities.footSoldiers.BaseHenchmenEntity;
 import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
-import com.kelco.kamenridercraft.Items.OOO_Rider_Items;
-import com.kelco.kamenridercraft.Items.W_Rider_Items;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
-import com.kelco.kamenridercraft.Items.rider_armor_base.RiderFormChangeItem;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
@@ -44,15 +38,13 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.npc.AbstractVillager;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.projectile.SmallFireball;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
 public class CronusEntity extends BaseHenchmenEntity {
 
-	private final ServerBossEvent bossEvent = (ServerBossEvent)(new ServerBossEvent(this.getDisplayName(), BossEvent.BossBarColor.GREEN, BossEvent.BossBarOverlay.PROGRESS));
-	private static final EntityDataAccessor<Byte> DATA_FLAGS_ID = SynchedEntityData.defineId(CoreEntity.class, EntityDataSerializers.BYTE);
+	private final ServerBossEvent bossEvent = (ServerBossEvent)(new ServerBossEvent(getDisplayName(), BossEvent.BossBarColor.GREEN, BossEvent.BossBarOverlay.PROGRESS));
+	private static final EntityDataAccessor<Byte> DATA_FLAGS_ID = SynchedEntityData.defineId(CronusEntity.class, EntityDataSerializers.BYTE);
 
 
 	public CronusEntity(EntityType<? extends Zombie> type, Level level) {
@@ -105,6 +97,7 @@ public class CronusEntity extends BaseHenchmenEntity {
 			ItemStack belt = getItemBySlot(EquipmentSlot.FEET);
 			if (RiderDriverItem.get_Form_Item(belt,1)==Ex_Aid_Rider_Items.KAMEN_RIDER_CHRONICLE_GASHAT_GEMEDEUS.get()&this.bossEvent.getColor()!=BossEvent.BossBarColor.RED) {
 				this.bossEvent.setColor(BossEvent.BossBarColor.RED);
+				this.bossEvent.setName(Component.translatable(getDisplayName().getString()+"(Gamedeus)").withStyle(ChatFormatting.GOLD));;
 			}
 		}
 		this.bossEvent.setProgress(this.getHealth() / this.getMaxHealth());
@@ -164,20 +157,20 @@ public class CronusEntity extends BaseHenchmenEntity {
 	}
 
 	static class CronusEntityAttackGoal extends MeleeAttackGoal {
-		private final CronusEntity CoreEntity;
+		private final CronusEntity Cronus;
 		private int attackStep;
 		private int attackTime;
 		private int lastSeen;
 
 		public CronusEntityAttackGoal(CronusEntity p_26019_, double p_26020_, boolean p_26021_) {
 			super(p_26019_, p_26020_, p_26021_);
-			this.CoreEntity = p_26019_;
+			this.Cronus = p_26019_;
 			this.setFlags(EnumSet.of(Goal.Flag.MOVE, Goal.Flag.LOOK));
 		}
 
 		public boolean canUse() {
-			LivingEntity livingentity = this.CoreEntity.getTarget();
-			return livingentity != null && livingentity.isAlive() && this.CoreEntity.canAttack(livingentity);
+			LivingEntity livingentity = this.Cronus.getTarget();
+			return livingentity != null && livingentity.isAlive() && this.Cronus.canAttack(livingentity);
 		}
 
 		public void start() {
@@ -185,7 +178,7 @@ public class CronusEntity extends BaseHenchmenEntity {
 		}
 
 		public void stop() {
-			this.CoreEntity.setCharged(false);
+			this.Cronus.setCharged(false);
 			this.lastSeen = 0;
 		}
 
@@ -195,16 +188,16 @@ public class CronusEntity extends BaseHenchmenEntity {
 
 		public void tick() {
 			--this.attackTime;
-			LivingEntity livingentity = this.CoreEntity.getTarget();
+			LivingEntity livingentity = this.Cronus.getTarget();
 			if (livingentity != null) {
-				boolean flag = this.CoreEntity.getSensing().hasLineOfSight(livingentity);
+				boolean flag = this.Cronus.getSensing().hasLineOfSight(livingentity);
 				if (flag) {
 					this.lastSeen = 0;
 				} else {
 					++this.lastSeen;
 				}
 
-				double d0 = this.CoreEntity.distanceToSqr(livingentity);
+				double d0 = this.Cronus.distanceToSqr(livingentity);
 				if (d0 < 4.0D) {
 					if (!flag) {
 						return;
@@ -212,31 +205,31 @@ public class CronusEntity extends BaseHenchmenEntity {
 
 					if (this.attackTime <= 0) {
 						this.attackTime = 20;
-						this.CoreEntity.doHurtTarget(livingentity);
+						this.Cronus.doHurtTarget(livingentity);
 					}
 
-					this.CoreEntity.getMoveControl().setWantedPosition(livingentity.getX(), livingentity.getY(), livingentity.getZ(), 1.0D);
+					this.Cronus.getMoveControl().setWantedPosition(livingentity.getX(), livingentity.getY(), livingentity.getZ(), 1.0D);
 				} else if (d0 < this.getFollowDistance() * this.getFollowDistance() && flag) {
 					if (this.attackTime <= 0) {
 						++this.attackStep;
 						if (this.attackStep == 1) {
 							this.attackTime = 60;
-							this.CoreEntity.setCharged(true);
-						} else if (this.attackStep <= 4) {
+							this.Cronus.setCharged(true);
+						} else if (this.attackStep <= 2) {
 							this.attackTime = 6;
 						} else {
 							this.attackTime = 100;
 							this.attackStep = 0;
-							this.CoreEntity.setCharged(false);
+							this.Cronus.setCharged(false);
 						}
 
 						if (this.attackStep > 1) {
-							if (!this.CoreEntity.isSilent()) {
-								this.CoreEntity.level().levelEvent((Player)null, 1018, this.CoreEntity.blockPosition(), 0);
+							if (!this.Cronus.isSilent()) {
+								this.Cronus.level().levelEvent((Player)null, 1018, this.Cronus.blockPosition(), 0);
 							}
-								if (this.CoreEntity.getItemBySlot(EquipmentSlot.FEET).getItem()==Ex_Aid_Rider_Items.GASHACON_BUGVISOR_II_CHRONOS.get()) {
+								if (this.Cronus.getItemBySlot(EquipmentSlot.FEET).getItem()==Ex_Aid_Rider_Items.GASHACON_BUGVISOR_II_CHRONOS.get()) {
 
-									if (RiderDriverItem.get_Form_Item(this.CoreEntity.getItemBySlot(EquipmentSlot.FEET),1)!=Ex_Aid_Rider_Items.KAMEN_RIDER_CHRONICLE_GASHAT_GEMEDEUS.get()) {
+									if (RiderDriverItem.get_Form_Item(this.Cronus.getItemBySlot(EquipmentSlot.FEET),1)!=Ex_Aid_Rider_Items.KAMEN_RIDER_CHRONICLE_GASHAT_GEMEDEUS.get()) {
 										livingentity.addEffect(new MobEffectInstance(Effect_core.PAUSE.get(),150,0));
 										if (livingentity instanceof Player playerIn){
 											playerIn.sendSystemMessage(Component.translatable("Pause!").withStyle(ChatFormatting.GREEN));
@@ -254,9 +247,9 @@ public class CronusEntity extends BaseHenchmenEntity {
 						}
 					}
 
-					this.CoreEntity.getLookControl().setLookAt(livingentity, 10.0F, 10.0F);
+					this.Cronus.getLookControl().setLookAt(livingentity, 10.0F, 10.0F);
 				} else if (this.lastSeen < 5) {
-					this.CoreEntity.getMoveControl().setWantedPosition(livingentity.getX(), livingentity.getY(), livingentity.getZ(), 1.0D);
+					this.Cronus.getMoveControl().setWantedPosition(livingentity.getX(), livingentity.getY(), livingentity.getZ(), 1.0D);
 				}
 
 				super.tick();
@@ -264,7 +257,7 @@ public class CronusEntity extends BaseHenchmenEntity {
 		}
 
 		private double getFollowDistance() {
-			return this.CoreEntity.getAttributeValue(Attributes.FOLLOW_RANGE);
+			return this.Cronus.getAttributeValue(Attributes.FOLLOW_RANGE);
 		}
 	}
 }
