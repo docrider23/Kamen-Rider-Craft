@@ -113,15 +113,6 @@ public class ModCommonEvents {
 		
 		
 		@SubscribeEvent
-		public static void addItemPickupEvent(PlayerEvent.ItemPickupEvent  event) {
-
-				int num = event.getEntity().getInventory().countItem(OOO_Rider_Items.CELL_MEDAL.get());
-				int num2 = (num/64)-1;
-				event.getEntity().addEffect(new MobEffectInstance(Effect_core.GREEED.get(),300,num2));
-		}
-
-		
-		@SubscribeEvent
 		public static void addChangeSize(EntityEvent.Size event) {
 
 			if (event.getEntity() instanceof Player entity) {

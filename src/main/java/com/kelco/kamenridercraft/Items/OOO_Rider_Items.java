@@ -4,6 +4,7 @@ import com.kelco.kamenridercraft.KamenRiderCraftCore;
 import com.kelco.kamenridercraft.Blocks.MachineBlocks.CellMedalProgramer;
 import com.kelco.kamenridercraft.Effect.Effect_core;
 import com.kelco.kamenridercraft.Items.ooo.BirthDriverItem;
+import com.kelco.kamenridercraft.Items.ooo.CellMedalItem;
 import com.kelco.kamenridercraft.Items.ooo.Item_Purple_Medals;
 import com.kelco.kamenridercraft.Items.ooo.OOODriverItem;
 import com.kelco.kamenridercraft.Items.ooo.oScannerItem;
@@ -34,7 +35,7 @@ public class OOO_Rider_Items {
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.OOO_TAB_ITEM));
 
 	public static final RegistryObject<Item> CELL_MEDAL = ITEMS.register("cellmedal",
-			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.OOO_TAB_ITEM));
+			() -> new CellMedalItem(new Item.Properties()).AddToTabList(RiderTabs.OOO_TAB_ITEM));
 
 	public static final RegistryObject<Item> CELL_ALLOY_INGOT = ITEMS.register("cell_alloy_ingot",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.OOO_TAB_ITEM));
