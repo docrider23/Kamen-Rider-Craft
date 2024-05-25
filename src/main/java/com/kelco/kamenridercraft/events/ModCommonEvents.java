@@ -85,6 +85,7 @@ import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.event.entity.SpawnPlacementRegisterEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent.ItemPickupEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -109,20 +110,14 @@ public class ModCommonEvents {
 			}
 
 		}
-
+		
+		
 		@SubscribeEvent
-		public static void addChangeSize(ItemPickupEvent event) {
+		public static void addItemPickupEvent(PlayerEvent.ItemPickupEvent  event) {
 
-			if (event.getEntity() instanceof Player entity) {
-
-				int num = entity.getInventory().countItem(OOO_Rider_Items.CELL_MEDAL.get());
+				int num = event.getEntity().getInventory().countItem(OOO_Rider_Items.CELL_MEDAL.get());
 				int num2 = (num/64)-1;
-				
-				entity.addEffect(new MobEffectInstance(Effect_core.GREEED.get(),300,num2));
-				
-
-					
-			}
+				event.getEntity().addEffect(new MobEffectInstance(Effect_core.GREEED.get(),300,num2));
 		}
 
 		
