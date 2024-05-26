@@ -72,15 +72,11 @@ public class RiderDriverItem extends RiderArmorItem{
 			if (player.getItemBySlot(EquipmentSlot.CHEST).getItem() == TORSO){
 				if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() == HEAD){
 					if (player.getItemBySlot(EquipmentSlot.FEET).getItem() == this){
-
-						//NOPE dose not work well
-						//player.setInvisible(true);
 						for (int n = 0; n < Num_Base_Form_Item; n++)
 						{
 							List<MobEffectInstance> potionEffectList = get_Form_Item(player.getItemBySlot(EquipmentSlot.FEET),n+1).getPotionEffectList();
 							for (int i = 0; i < potionEffectList.size(); i++)
 							{
-								//player.setInvisible(true);
 								player.addEffect(new MobEffectInstance(potionEffectList.get(i).getEffect(),potionEffectList.get(i).getDuration(),potionEffectList.get(i).getAmplifier(),true,false));
 							}
 						}

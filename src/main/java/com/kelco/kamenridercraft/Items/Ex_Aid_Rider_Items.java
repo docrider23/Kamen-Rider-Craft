@@ -589,7 +589,7 @@ public class Ex_Aid_Rider_Items {
 					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
 					new MobEffectInstance(MobEffects.REGENERATION, 40, 4,true,false),
-					new MobEffectInstance(MobEffects.SATURATION, 40, 2,true,false)).addSwitchForm(MAXIMUM_MIGHTY_X_GASHAT_lv2.get())
+					new MobEffectInstance(MobEffects.SATURATION, 40, 2,true,false)).addSwitchForm(GOD_MAXIMUM_MIGHTY_X_GASHAT_lv0.get())
 			.ChangeModel("geo/lv_max.geo.json").ChangeBeltModel("geo/lv_1_belt.geo.json").alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_MAXIMUM_GASHAT, 5));
 
 	public static final RegistryObject<Item> MAXIMUM_ZOMBIE_GASHAT = ITEMS.register("maximum_zombie_gashat",

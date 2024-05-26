@@ -52,7 +52,10 @@ public class GamerDriverItem extends RiderDriverItem{
 				}
 			
 			if(get_Form_Item(itemstack,1).get_Belt_Model()=="geo/lv_1_belt.geo.json") {
-				if (rider.getItemBySlot(EquipmentSlot.HEAD).getItem()!=Ex_Aid_Rider_Items.EX_AIDHELMET.get()) {
+				if (rider.getItemBySlot(EquipmentSlot.HEAD).getItem()!=Ex_Aid_Rider_Items.EX_AIDHELMET.get()||
+						rider.getItemBySlot(EquipmentSlot.CHEST).getItem()!=Ex_Aid_Rider_Items.EX_AIDCHESTPLATE.get()||
+						rider.getItemBySlot(EquipmentSlot.LEGS).getItem()!=Ex_Aid_Rider_Items.EX_AIDLEGGINGS.get()) {
+					
 					belt = get_Form_Item(itemstack,1).getBeltTex()+"_un";
 				}
 			}
@@ -79,6 +82,18 @@ public class GamerDriverItem extends RiderDriverItem{
 
 	}
 
+	public ResourceLocation getBeltModelResource(ItemStack itemstack,RiderArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
+		
+		if(get_Form_Item(itemstack,1).get_Belt_Model()=="geo/lv_1_belt.geo.json") {
+			if (rider.getItemBySlot(EquipmentSlot.HEAD).getItem()!=Ex_Aid_Rider_Items.EX_AIDHELMET.get()||
+					rider.getItemBySlot(EquipmentSlot.CHEST).getItem()!=Ex_Aid_Rider_Items.EX_AIDCHESTPLATE.get()||
+					rider.getItemBySlot(EquipmentSlot.LEGS).getItem()!=Ex_Aid_Rider_Items.EX_AIDLEGGINGS.get()) {
+				return new ResourceLocation(KamenRiderCraftCore.MODID,"geo/riderbelt.geo.json");	
+			}
+		}
+		
+		return new ResourceLocation(KamenRiderCraftCore.MODID, get_Form_Item(itemstack, 1).get_Belt_Model());	
+	}
 
 
 	public ResourceLocation getModelResource(ItemStack itemstack,RiderArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
@@ -93,7 +108,7 @@ public class GamerDriverItem extends RiderDriverItem{
 			}else   
 				return new ResourceLocation(KamenRiderCraftCore.MODID, get_Form_Item(itemstack, 2).get_Model());
 		}
-
+		
 		default -> {}
 		}
 		return new ResourceLocation(KamenRiderCraftCore.MODID, get_Form_Item(itemstack, 1).get_Model());
