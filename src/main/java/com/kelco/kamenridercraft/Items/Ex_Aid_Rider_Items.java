@@ -75,7 +75,8 @@ public class Ex_Aid_Rider_Items {
 	public static final RegistryObject<Item> BANG_BANG_SHOOTING_GASHAT = ITEMS.register("bang_bang_shooting_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","snipe","gamer_driver_bang_bang_shooting",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
-					new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0,true,false)).addSwitchForm(BANG_BANG_SHOOTING_GASHAT_LV_1.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 15));
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0,true,false)).addSwitchForm(BANG_BANG_SHOOTING_GASHAT_LV_1.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get())
+			.AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 15));
 
 	public static final RegistryObject<Item> BAKUSOU_BIKE_GASHAT_LV_1 = ITEMS.register("bakusou_bike_gashat_lv_1",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_lv1","lazer","gamer_driver_bakusou_bike_lv_1",
@@ -713,19 +714,19 @@ public class Ex_Aid_Rider_Items {
 			.AddToTabList(GanbarizingMachine.BLANK_GASHAT, 1).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 
 	public static final RegistryObject<Item> TIME_EXPRESS_DEN_O_GASHAT = ITEMS.register("time_express_den_o_gashat",
-			() -> new RiderFormChangeItem(new Item.Properties(),0,"_den_o","genm","gamer_driver_time_express_den_o",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_den_o","genm","gamer_driver_mighty_novel_x",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false)).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get())
 			.AddToTabList(GanbarizingMachine.BLANK_GASHAT, 1).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 
 	public static final RegistryObject<Item> INSECT_WARS_KABUTO_GASHAT = ITEMS.register("insect_wars_kabuto_gashat",
-			() -> new RiderFormChangeItem(new Item.Properties(),0,"_kabuto","ex_aid","gamer_driver_insect_wars_kabuto",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_kabuto","ex_aid","gamer_driver_full_throttle_drive",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false)).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get())
 			.AddToTabList(GanbarizingMachine.BLANK_GASHAT, 1).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 
 	public static final RegistryObject<Item> TAIKO_MASTER_HIBIKI_GASHAT = ITEMS.register("taiko_master_hibiki_gashat",
-			() -> new RiderFormChangeItem(new Item.Properties(),0,"_hibiki","genm","gamer_driver_taiko_master_hibiki",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_hibiki","genm","gamer_driver_proto_mighty_action_x",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false)).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get())
 			.AddToTabList(GanbarizingMachine.BLANK_GASHAT, 1).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
@@ -743,7 +744,7 @@ public class Ex_Aid_Rider_Items {
 			.AddToTabList(GanbarizingMachine.BLANK_GASHAT, 1).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 
 	public static final RegistryObject<Item> MIRROR_LABRYINTH_RYUKI_GASHAT = ITEMS.register("mirror_labryinth_ryuki_gashat",
-			() -> new RiderFormChangeItem(new Item.Properties(),0,"_ryuki","ex_aid","gamer_driver_mirror_labryinth_ryuki",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_ryuki","ex_aid","gamer_driver_mirror_labyrinth_ryuki",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false)).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get())
 			.AddToTabList(GanbarizingMachine.BLANK_GASHAT, 1).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
