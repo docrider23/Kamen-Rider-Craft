@@ -1,8 +1,7 @@
 {
   "values": [
     "kamenridercraft:condorer_core_omega",
-    "kamenridercraft:condorer_core_alpha",
-    "kamenridercraft:condorer_core_alpha_blind",
+    "#kamenridercraft:gear/form_items/amazon_alpha",
     "kamenridercraft:condorer_core_sigma"
   ]
 }

@@ -1,11 +1,11 @@
 {
   "values": [
-    "#kamenridercraft:gear/used_by/kiva",
-    "#kamenridercraft:gear/used_by/ixa",
+    "#kamenridercraft:gear/form_items/kiva",
+    "#kamenridercraft:gear/form_items/ixa",
     "kamenridercraft:sagafuestle",
     "kamenridercraft:darkwakeupfuestle",
     "kamenridercraft:newwakeupfuestle",
-    "kamenridercraft:keyfuestle",
+    "#kamenridercraft:gear/form_items/arc",
     "kamenridercraft:kivalafuestle"
   ]
 }

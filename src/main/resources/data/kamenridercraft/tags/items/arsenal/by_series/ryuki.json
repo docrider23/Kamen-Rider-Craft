@@ -19,6 +19,7 @@
     "kamenridercraft:giga_armor",
     "kamenridercraft:giga_horn",
     "kamenridercraft:evil_whip",
+    "kamenridercraft:evil_visor_zwei",
     "kamenridercraft:metal_horn",
     "kamenridercraft:veno_visor",
     "kamenridercraft:veno_saber",
@@ -26,8 +27,20 @@
     "kamenridercraft:gold_visor",
     "kamenridercraft:gold_saber",
     "kamenridercraft:gold_shield",
+    "kamenridercraft:dest_visor",
+    "kamenridercraft:dest_claw",
+    "kamenridercraft:dest_claw1",
+    "kamenridercraft:gazelle_stab",
     "kamenridercraft:blanc_visor",
     "kamenridercraft:wing_slasher",
-    "kamenridercraft:wing_shield"
+    "kamenridercraft:wing_shield",
+    "kamenridercraft:drag_saber_ryuga",
+    "kamenridercraft:drag_claw_ryuga",
+    "kamenridercraft:drag_shield_ryuga",
+    "kamenridercraft:black_drag_visor_zwei",
+    "kamenridercraft:bio_winder",
+    "kamenridercraft:slash_dagger",
+    "kamenridercraft:abyss_saber",
+    "kamenridercraft:abyss_claw"
   ]
 }

@@ -1,6 +1,7 @@
 {
   "values": [
-    "#kamenridercraft:gear/used_by/v3",
+    "kamenridercraft:double_typhoon_core",
+    "kamenridercraft:blue_double_typhoon_core",
     "kamenridercraft:riderman_belt_core"
   ]
 }

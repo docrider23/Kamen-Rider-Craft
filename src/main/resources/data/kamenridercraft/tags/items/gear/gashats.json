@@ -1,11 +1,11 @@
 {
   "values": [
-    "#kamenridercraft:gear/used_by/ex-aid",
-    "#kamenridercraft:gear/used_by/brave",
-    "#kamenridercraft:gear/used_by/snipe",
-    "#kamenridercraft:gear/used_by/lazer",
-    "#kamenridercraft:gear/used_by/genm",
-    "#kamenridercraft:gear/used_by/para-dx",
+    "#kamenridercraft:gear/form_items/ex-aid",
+    "#kamenridercraft:gear/form_items/brave",
+    "#kamenridercraft:gear/form_items/snipe",
+    "#kamenridercraft:gear/form_items/lazer",
+    "#kamenridercraft:gear/form_items/genm",
+    "#kamenridercraft:gear/form_items/para-dx",
     "kamenridercraft:toki_meki_crisis_gashat",
     "kamenridercraft:hurricane_ninja_gashat",
     "kamenridercraft:gashat_gear_dual_another",
