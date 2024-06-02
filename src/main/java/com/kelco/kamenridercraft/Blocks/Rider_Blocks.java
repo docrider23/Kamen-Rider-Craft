@@ -4,6 +4,7 @@ package com.kelco.kamenridercraft.Blocks;
 import java.util.function.Supplier;
 
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
+import com.kelco.kamenridercraft.Blocks.Custom.ChairBlock;
 import com.kelco.kamenridercraft.Blocks.MachineBlocks.AmazonCellExtractor;
 import com.kelco.kamenridercraft.Blocks.MachineBlocks.AmazonCellMutator;
 import com.kelco.kamenridercraft.Blocks.MachineBlocks.CellMedalProgramer;
@@ -20,6 +21,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -37,7 +39,8 @@ public class Rider_Blocks {
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, KamenRiderCraftCore.MODID);
 	
 	public static final RegistryObject<Block> ICHIGO_CHAIR = registerBlock("ichigo_chair",
-			() -> new BaseFacingBlockNotCube(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GREEN).strength(2f).dynamicShape(),Block.box(2, 0, 1, 12,25, 14)).AddToTabList(RiderTabs.RIDER_BLOCK));
+			() -> new ChairBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GREEN).lightLevel((p_152632_) -> {
+			      return 1;}).strength(2f).dynamicShape(),Block.box(2, 0, 1, 14,10, 15)).AddToTabList(RiderTabs.RIDER_BLOCK));
 
 	public static final RegistryObject<Block> SHOCKER_MONITOR = registerBlock("shocker_monitor",
 			() -> new BaseFacingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
@@ -76,12 +79,12 @@ public class Rider_Blocks {
 					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	
 	public static final RegistryObject<Block> GLASS_RYUKI = registerBlock("glass_ryuki",
-			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.GLASS)
-					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F), UniformInt.of(2, 6)).AddToTabList(RiderTabs.RIDER_BLOCK));
+			() -> new GlassBaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.STONE)
+					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F), UniformInt.of(2, 6),DyeColor.RED).AddToTabList(RiderTabs.RIDER_BLOCK));
 
 	public static final RegistryObject<Block> DEEPSLATE_GLASS_RYUKI = registerBlock("deepslate_glass_ryuki",
-			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.GLASS)
-					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F), UniformInt.of(2, 6)).AddToTabList(RiderTabs.RIDER_BLOCK));
+			() -> new GlassBaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.GLASS)
+					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F), UniformInt.of(2, 6),DyeColor.BLACK).AddToTabList(RiderTabs.RIDER_BLOCK));
 
 	public static final RegistryObject<Block> BLADE_ORE = registerBlock("stone_blade",
 			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.STONE)
@@ -99,6 +102,10 @@ public class Rider_Blocks {
 			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.STONE)
 					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE), UniformInt.of(2, 6)).AddToTabList(RiderTabs.RIDER_BLOCK));
 
+	public static final RegistryObject<Block> FANGIRE_GLASS = registerBlock("fangire_glass",
+			() -> new GlassBaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.GLASS), UniformInt.of(0,0),DyeColor.YELLOW).AddToTabList(RiderTabs.RIDER_BLOCK));
+
+	
 	
 	public static final RegistryObject<Block> PURE_GAIA_MEMORY_BLOCK = registerBlock("pure_gaia_memory_block",
 			() -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE)

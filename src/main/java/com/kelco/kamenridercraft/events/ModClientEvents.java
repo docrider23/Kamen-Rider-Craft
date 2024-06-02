@@ -13,8 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
+import com.kelco.kamenridercraft.Blocks.Rider_Blocks;
 import com.kelco.kamenridercraft.Entities.MobsCore;
 
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -47,9 +50,11 @@ public class ModClientEvents {
 	@SubscribeEvent
 	public static void onClientSetup(final FMLClientSetupEvent event) {
 
+		ItemBlockRenderTypes.setRenderLayer(Rider_Blocks.GLASS_RYUKI.get(), RenderType.translucent());
+		ItemBlockRenderTypes.setRenderLayer(Rider_Blocks.DEEPSLATE_GLASS_RYUKI.get(), RenderType.translucent());
+		ItemBlockRenderTypes.setRenderLayer(Rider_Blocks.FANGIRE_GLASS.get(), RenderType.translucent());
+		
 		event.enqueueWork(() -> {
-
-
 		
 			
 			for (int i = 0; i < SHIELD_ITEM.size(); i++)

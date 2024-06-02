@@ -1,6 +1,7 @@
 package com.kelco.kamenridercraft.events;
 
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
+import com.kelco.kamenridercraft.Blocks.Rider_Blocks;
 import com.kelco.kamenridercraft.Effect.Effect_core;
 import com.kelco.kamenridercraft.Entities.AnkhEntity;
 import com.kelco.kamenridercraft.Entities.MobsCore;
@@ -277,6 +278,16 @@ public class ModCommonEvents {
 						stack,10,8,0.02F));
 			}
 
+			if(event.getType() == RiderVillagers.SHOCKER_VILLAGER.get()) {
+				Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+				ItemStack stack = new ItemStack(Rider_Blocks.ICHIGO_CHAIR.get(), 1);
+				int villagerLevel = 3;
+
+				trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+						new ItemStack(Items.EMERALD, 2),
+						stack,10,8,0.02F));
+			} 
+			
 			if(event.getType() == RiderVillagers.SHOCKER_VILLAGER.get()) {
 				Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 				ItemStack stack = new ItemStack(Ichigo_Rider_Items.SHIN_STONE.get(), 1);
