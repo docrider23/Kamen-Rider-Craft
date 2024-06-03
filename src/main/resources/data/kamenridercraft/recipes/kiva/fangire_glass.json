@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "g_system",
+  "ingredients": [
+ 
+    {
+      "item": "kamenridercraft:fuestle"
+    } , 
+    {
+      "item": "kamenridercraft:fuestle"
+    }, 
+    {
+      "item": "kamenridercraft:fuestle"
+    }, 
+    {
+      "item": "kamenridercraft:fuestle"
+    }
+    ],
+  "result": {
+    "item": "kamenridercraft:fangire_glass"
+  }
+}
