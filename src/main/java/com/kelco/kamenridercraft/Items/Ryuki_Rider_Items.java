@@ -267,9 +267,9 @@ public class Ryuki_Rider_Items {
     public static final RegistryObject<SwordItem> DRAG_SABER = ITEMS.register("drag_saber",
             () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
 	
-    public static final RegistryObject<SwordItem> DRAG_CLAW = ITEMS.register("drag_claw",
-            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
-	
+    public static final RegistryObject<BaseBlasterItem> DRAG_CLAW = ITEMS.register("drag_claw",
+            () -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).setProjectileFireball().AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+        	
 	public static final RegistryObject<ShieldItem> DRAG_SHIELD = ITEMS.register("drag_shield",
             () -> new BaseShieldItem(new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem( ADVENT_CARD.get()));
     
@@ -378,8 +378,8 @@ public class Ryuki_Rider_Items {
     public static final RegistryObject<SwordItem> DRAG_SABER_RYUGA = ITEMS.register("drag_saber_ryuga",
             () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
 	
-    public static final RegistryObject<SwordItem> DRAG_CLAW_RYUGA = ITEMS.register("drag_claw_ryuga",
-            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
+    public static final RegistryObject<BaseBlasterItem> DRAG_CLAW_RYUGA = ITEMS.register("drag_claw_ryuga",
+    	    () -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).setProjectileFireball().AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
 	
 	public static final RegistryObject<ShieldItem> DRAG_SHIELD_RYUGA = ITEMS.register("drag_shield_ryuga",
             () -> new BaseShieldItem(new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem( ADVENT_CARD.get()));
