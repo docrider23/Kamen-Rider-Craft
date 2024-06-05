@@ -12,13 +12,11 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.BaseHenchmenEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.stats.Stats;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 public class BossBlock extends BaseBlock {
@@ -28,7 +26,7 @@ public class BossBlock extends BaseBlock {
 	private List<Block>  BLOCK;
 	private int NUM;
 	
-	//Component.translatable("<Shocker Rider>Henshin!").withStyle(ChatFormatting.YELLOW)
+
 	
 	public BossBlock(Properties prop,Supplier<? extends EntityType<? extends BaseHenchmenEntity>> boss,Component text) {
 		super(prop);

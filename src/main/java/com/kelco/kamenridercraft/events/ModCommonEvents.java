@@ -58,6 +58,7 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.YummyEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ZuGumunBaEntity;
 import com.kelco.kamenridercraft.Items.Ichigo_Rider_Items;
 import com.kelco.kamenridercraft.Items.Kuuga_Rider_Items;
+import com.kelco.kamenridercraft.Items.Miscellaneous_Rider_Items;
 import com.kelco.kamenridercraft.Items.Modded_item_core;
 import com.kelco.kamenridercraft.Items.OOO_Rider_Items;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
@@ -277,6 +278,15 @@ public class ModCommonEvents {
 						new ItemStack(Items.EMERALD, 2),
 						stack,10,8,0.02F));
 			}
+			if(event.getType() == RiderVillagers.SHOCKER_VILLAGER.get()) {
+				Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+				ItemStack stack = new ItemStack(Miscellaneous_Rider_Items.GORO_WINE_BOTTLE.get(), 1);
+				int villagerLevel = 2;
+
+				trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+						new ItemStack(Items.EMERALD, 2),
+						stack,10,8,0.02F));
+			} 
 
 			if(event.getType() == RiderVillagers.SHOCKER_VILLAGER.get()) {
 				Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
