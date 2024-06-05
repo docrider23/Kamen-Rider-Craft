@@ -33,7 +33,7 @@ public class CellMedalItem extends BaseItem{
 		if (entity instanceof Player playerIn) {
 					int num1 = playerIn.getInventory().countItem(OOO_Rider_Items.CELL_MEDAL.get());
 					int num2 = (num1/64)-1;
-					playerIn.addEffect(new MobEffectInstance(Effect_core.GREEED.get(),300,num2));
+					if (num1>63) playerIn.addEffect(new MobEffectInstance(Effect_core.GREEED.get(),300,num2));
 			}
 		}
 
