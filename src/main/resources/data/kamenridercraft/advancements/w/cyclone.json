@@ -3,7 +3,7 @@
     "icon": {
       "item": "kamenridercraft:lostdriver_cyclone"
     },
-    "title": "This Town Has a Nice Wind Blowing Through It",
+    "title": "Cyclone Effect",
     "description": "Transform into Kamen Rider Cyclone",
     "frame": "task",
     "show_toast": true,

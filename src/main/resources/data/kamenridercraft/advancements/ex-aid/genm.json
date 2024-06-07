@@ -3,7 +3,7 @@
     "icon": {
       "item": "kamenridercraft:gamer_driver_genmu"
     },
-    "title": "I'll clear this, even by using Continues",
+    "title": "I'll clear even with continues!",
     "description": "Transform into Kamen Rider Genm",
     "frame": "task",
     "show_toast": true,
