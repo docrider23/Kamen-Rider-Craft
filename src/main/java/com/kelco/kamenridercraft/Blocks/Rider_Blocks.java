@@ -79,7 +79,7 @@ public class Rider_Blocks {
 					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	
 	public static final RegistryObject<Block> GLASS_RYUKI = registerBlock("glass_ryuki",
-			() -> new GlassBaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.STONE)
+			() -> new GlassBaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.GLASS)
 					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F), UniformInt.of(2, 6),DyeColor.RED).AddToTabList(RiderTabs.RIDER_BLOCK));
 
 	public static final RegistryObject<Block> DEEPSLATE_GLASS_RYUKI = registerBlock("deepslate_glass_ryuki",
