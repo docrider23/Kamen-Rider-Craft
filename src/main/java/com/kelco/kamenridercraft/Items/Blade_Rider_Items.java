@@ -175,11 +175,11 @@ public class Blade_Rider_Items {
     public static final RegistryObject<BaseBlasterItem> GARRENROUZER = ITEMS.register("garrenrouzer",
     		() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.BLADE_TAB_ITEM).ChangeRepairItem(BLADECARD.get()));
     public static final RegistryObject<SwordItem> LEANGLEROUZER = ITEMS.register("leanglerouzer",
-            () -> new BaseSwordItem(Tiers.DIAMOND, 6, 2.5f, new Item.Properties()).AddToTabList(RiderTabs.BLADE_TAB_ITEM).ChangeRepairItem(BLADECARD.get()));
+            () -> new BaseSwordItem(Tiers.DIAMOND, 6, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.BLADE_TAB_ITEM).ChangeRepairItem(BLADECARD.get()));
     public static final RegistryObject<SwordItem> GLAIVEROUZER = ITEMS.register("glaiverouzer",
             () -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.BLADE_TAB_ITEM).ChangeRepairItem(BLADECARD.get()));
     public static final RegistryObject<SwordItem> LANCEROUZER = ITEMS.register("lancerouzer",
-            () -> new BaseSwordItem(Tiers.DIAMOND, 7, 2.5f, new Item.Properties()).AddToTabList(RiderTabs.BLADE_TAB_ITEM).ChangeRepairItem(BLADECARD.get()));
+            () -> new BaseSwordItem(Tiers.DIAMOND, 7, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.BLADE_TAB_ITEM).ChangeRepairItem(BLADECARD.get()));
     public static final RegistryObject<BaseBlasterItem> LARCROUZER = ITEMS.register("larcrouzer",
     		() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.BLADE_TAB_ITEM).ChangeRepairItem(BLADECARD.get()));
     
