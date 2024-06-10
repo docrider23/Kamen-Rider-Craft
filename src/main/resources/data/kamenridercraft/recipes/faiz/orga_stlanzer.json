@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "armed_hibiki",
+  "group": "orga_gear",
   "pattern": [
     "XRX",
     "XMX",
@@ -8,16 +8,16 @@
   ],
   "key": {
     "X": {
-      "item": "kamenridercraft:oni_ore"
+      "item": "kamenridercraft:blank_mission_memory"
     },
     "M": {
       "item": "kamenridercraft:base_sword"
     },
     "R": {
-      "item": "kamenridercraft:unfinished_armed_saber"
-    }
+      "item": "kamenridercraft:orga_mission_memory"
+      }
   },
   "result": {
-    "item": "kamenridercraft:armed_saber"
+    "item": "kamenridercraft:orga_stlanzer"
   }    
 }

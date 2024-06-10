@@ -27,7 +27,7 @@ public class RiderTabs {
 	
     public static RegistryObject<CreativeModeTab> RiderMiscTab = CREATIVE_MODE_TABS.register("krc_998_misc_tab", () -> 
     		CreativeModeTab.builder().icon(() -> new ItemStack(Modded_item_core.RIDER_CIRCUIT.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_iichigo_items.png"))
-    		.title(Component.literal("Misc Rider Items")).build());
+    		.title(Component.literal("Misc. Rider Items")).build());
     public static RegistryObject<CreativeModeTab> RiderblockTab = CREATIVE_MODE_TABS.register("krc_999_blocks_tab", () -> 
 			CreativeModeTab.builder().icon(() -> new ItemStack(Rider_Blocks.PURE_GAIA_MEMORY_BLOCK.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_iichigo_items.png"))
 			.title(Component.literal("Rider Blocks")).build());
@@ -51,7 +51,7 @@ public class RiderTabs {
 			.title(Component.literal("Skyrider Rider Items")).build());
     public static RegistryObject<CreativeModeTab> SUPER1Tab = CREATIVE_MODE_TABS.register("krc_070_super_1_tab", () -> 
 			CreativeModeTab.builder().icon(() -> new ItemStack(Ichigo_Rider_Items.SUPER1HELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_iichigo_items.png"))
-			.title(Component.literal("Super 1 Rider Items")).build());
+			.title(Component.literal("Super-1 Rider Items")).build());
     public static RegistryObject<CreativeModeTab> ZXTab = CREATIVE_MODE_TABS.register("krc_090_zx_tab", () -> 
 			CreativeModeTab.builder().icon(() -> new ItemStack(Ichigo_Rider_Items.ZXHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_iichigo_items.png"))
 			.title(Component.literal("ZX Rider Items")).build());
@@ -106,6 +106,9 @@ public class RiderTabs {
     public static RegistryObject<CreativeModeTab> GTab = CREATIVE_MODE_TABS.register("krc_800_g_tab", () -> 
    	CreativeModeTab.builder().icon(() -> new ItemStack(Miscellaneous_Rider_Items.GHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_g_items.png"))
    	.title(Component.literal("G Rider Items")).build());
+    public static RegistryObject<CreativeModeTab> GoriderTab = CREATIVE_MODE_TABS.register("krc_810_gorider_tab", () -> 
+   	CreativeModeTab.builder().icon(() -> new ItemStack(Miscellaneous_Rider_Items.AKARIDERHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_gorider_items.png"))
+   	.title(Component.literal("Gorider Rider Items")).build());
 
     public static RegistryObject<CreativeModeTab> AMAZONSTab = CREATIVE_MODE_TABS.register("krc_041_amazons_tab", () -> 
 			CreativeModeTab.builder().icon(() -> new ItemStack(Reboot_Rider_Items.AMAZONSHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_amazons_items.png"))
@@ -140,6 +143,7 @@ public class RiderTabs {
     
     public static List<Item> EX_AID_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> G_TAB_ITEM= new ArrayList<Item>();
+    public static List<Item> GORIDER_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> AMAZONS_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> BLACK_SUN_TAB_ITEM= new ArrayList<Item>();
     
@@ -306,16 +310,19 @@ public class RiderTabs {
 				event.accept( RiderTabs.G_TAB_ITEM.get(i));
 			}
 
-		}
-		else if(event.getTab() == RiderTabs.RiderblockTab.get()) {
+		}else if(event.getTab() == RiderTabs.GoriderTab.get()) {
+			for (int i = 0; i < RiderTabs.GORIDER_TAB_ITEM.size(); i++)
+			{
+				event.accept( RiderTabs.GORIDER_TAB_ITEM.get(i));
+			}
+
+		}else if(event.getTab() == RiderTabs.RiderblockTab.get()) {
 			for (int i = 0; i < RiderTabs.RIDER_BLOCK.size(); i++)
 			{
 				event.accept( RiderTabs.RIDER_BLOCK.get(i));
 			}
 
-		}
-
-		else if(event.getTab() == RiderTabs.RiderMiscTab.get()) {
+		}else if(event.getTab() == RiderTabs.RiderMiscTab.get()) {
 
 			event.accept(MobsCore.SHOCKER_COMBATMAN_SPAWN_EGG);
 			event.accept(MobsCore.SHOCKER_RIDER_SPAWN_EGG);

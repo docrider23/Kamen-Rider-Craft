@@ -141,16 +141,14 @@ public class Hibiki_Rider_Items {
                 new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
                 new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
                 new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false),
-                new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
-                new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
+                new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
 
         public static final RegistryObject<Item> HENSHIN_ONIBUE_AMAKI = ITEMS.register("henshin_onibue_amaki",
         () -> new RiderFormChangeItem(new Item.Properties(),0,"","amaki","amakidriver_belt",
                 new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
                 new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
                 new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false),
-                new MobEffectInstance(MobEffects.WATER_BREATHING, 40, 0,true,false),
-                new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
+                new MobEffectInstance(MobEffects.WATER_BREATHING, 40, 0,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
 
         public static final RegistryObject<Item> HENSHIN_ONIBUE_FUBUKI = ITEMS.register("henshin_onibue_fubuki",
         () -> new RiderFormChangeItem(new Item.Properties(),0,"","fubuki","fubukidriver_belt",
@@ -159,8 +157,7 @@ public class Hibiki_Rider_Items {
                 new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false),
                 new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
                 new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
-                new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
-                new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
+                new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
         
 
         public static final RegistryObject<Item> HENSHIN_KIGEN_TODOROKI = ITEMS.register("henshin_kigen_todoroki",
@@ -172,8 +169,7 @@ public class Hibiki_Rider_Items {
         () -> new RiderFormChangeItem(new Item.Properties(),0,"","zanki","zankidriver_belt",
                 new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
                 new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
-                new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false),
-                new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
+                new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
 
         public static final RegistryObject<Item> HENSHIN_KIGEN_SHUKI = ITEMS.register("henshin_kigen_shuki",
         () -> new RiderFormChangeItem(new Item.Properties(),0,"","shuki","shukidriver_belt",
@@ -181,8 +177,7 @@ public class Hibiki_Rider_Items {
                 new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
                 new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false),
                 new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
-                new MobEffectInstance(MobEffects.REGENERATION, 40, 0,true,false),
-                new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
+                new MobEffectInstance(MobEffects.REGENERATION, 40, 0,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
 
         public static final RegistryObject<Item> HENSHIN_KIGEN_BANKI = ITEMS.register("henshin_kigen_banki",
         () -> new RiderFormChangeItem(new Item.Properties(),0,"","banki","bankidriver_belt",
