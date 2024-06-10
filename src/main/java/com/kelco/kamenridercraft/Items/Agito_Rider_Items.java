@@ -213,7 +213,7 @@ public class Agito_Rider_Items {
     public static final RegistryObject<SwordItem> FLAME_SABER = ITEMS.register("flame_saber",
             () -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.AGITO_TAB_ITEM).ChangeRepairItem(SEED_OF_AGITO.get()));
 	public static final RegistryObject<SwordItem> STORM_HALBERD = ITEMS.register("storm_halberd",
-	        () -> new BaseSwordItem(Tiers.DIAMOND, 3, 4.5f, new Item.Properties()).AddToTabList(RiderTabs.AGITO_TAB_ITEM).ChangeRepairItem(SEED_OF_AGITO.get()));
+	        () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.AGITO_TAB_ITEM).ChangeRepairItem(SEED_OF_AGITO.get()));
     
 	public static final RegistryObject<SwordItem> SHINING_CALIBER = ITEMS.register("shining_caliber_summoned",
             () -> new BaseSwordItem(Tiers.DIAMOND, 7, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.AGITO_TAB_ITEM).ChangeRepairItem(SEED_OF_AGITO.get()));
