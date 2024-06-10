@@ -93,7 +93,15 @@ public class Rider_Blocks {
 	public static final RegistryObject<Block> DEEPSLATE_BLADE_ORE = registerBlock("deepslate_stone_blade",
 			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.STONE)
 					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE), UniformInt.of(2, 6)).AddToTabList(RiderTabs.RIDER_BLOCK));
-
+	
+	public static final RegistryObject<Block> HIBIKI_ORE = registerBlock("stone_hibiki",
+			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.STONE)
+					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F), UniformInt.of(2, 6)).AddToTabList(RiderTabs.RIDER_BLOCK));
+		
+	public static final RegistryObject<Block> DEEPSLATE_HIBIKI_ORE = registerBlock("deepslate_stone_hibiki",
+			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.STONE)
+					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE), UniformInt.of(2, 6)).AddToTabList(RiderTabs.RIDER_BLOCK));
+		
 	public static final RegistryObject<Block> KIVA_ORE = registerBlock("stone_kiva",
 			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.STONE)
 					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F), UniformInt.of(2, 6)).AddToTabList(RiderTabs.RIDER_BLOCK));

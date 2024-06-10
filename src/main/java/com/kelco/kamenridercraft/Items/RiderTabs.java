@@ -64,12 +64,12 @@ public class RiderTabs {
     public static RegistryObject<CreativeModeTab> SHINTab = CREATIVE_MODE_TABS.register("krc_110_shin_tab", () -> 
 			CreativeModeTab.builder().icon(() -> new ItemStack(Ichigo_Rider_Items.SHINHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_iichigo_items.png"))
 			.title(Component.literal("Shin Rider Items")).build());
-    public static RegistryObject<CreativeModeTab> JTab = CREATIVE_MODE_TABS.register("krc_120_j_tab", () -> 
-			CreativeModeTab.builder().icon(() -> new ItemStack(Ichigo_Rider_Items.JHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_iichigo_items.png"))
-			.title(Component.literal("J Rider Items")).build());
-    public static RegistryObject<CreativeModeTab> ZOTab = CREATIVE_MODE_TABS.register("krc_130_zo_tab", () -> 
+	public static RegistryObject<CreativeModeTab> ZOTab = CREATIVE_MODE_TABS.register("krc_120_zo_tab", () -> 
 			CreativeModeTab.builder().icon(() -> new ItemStack(Ichigo_Rider_Items.ZOHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_iichigo_items.png"))
 			.title(Component.literal("ZO Rider Items")).build());
+    public static RegistryObject<CreativeModeTab> JTab = CREATIVE_MODE_TABS.register("krc_130_j_tab", () -> 
+			CreativeModeTab.builder().icon(() -> new ItemStack(Ichigo_Rider_Items.JHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_iichigo_items.png"))
+			.title(Component.literal("J Rider Items")).build());
     
     public static RegistryObject<CreativeModeTab> KuugaTab = CREATIVE_MODE_TABS.register("krc_210_kuuga_tab", () -> 
 			CreativeModeTab.builder().icon(() -> new ItemStack(Kuuga_Rider_Items.KUUGAHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_kuuga_items.png"))
@@ -86,6 +86,9 @@ public class RiderTabs {
     public static RegistryObject<CreativeModeTab> BladeTab = CREATIVE_MODE_TABS.register("krc_250_blade_tab", () -> 
 		CreativeModeTab.builder().icon(() -> new ItemStack(Blade_Rider_Items.BLADEHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_blade_items.png"))
 		.title(Component.literal("Blade Rider Items")).build());
+	public static RegistryObject<CreativeModeTab> HibikiTab = CREATIVE_MODE_TABS.register("krc_260_hibiki_tab", () -> 
+		CreativeModeTab.builder().icon(() -> new ItemStack(Hibiki_Rider_Items.HIBIKIHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_hibiki_items.png"))
+		.title(Component.literal("Hibiki Rider Items")).build());
     public static RegistryObject<CreativeModeTab> KivaTab = CREATIVE_MODE_TABS.register("krc_290_kiva_tab", () -> 
 		CreativeModeTab.builder().icon(() -> new ItemStack(Kiva_Rider_Items.KIVAHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_kiva_items.png"))
 		.title(Component.literal("Kiva Rider Items")).build());
@@ -122,14 +125,15 @@ public class RiderTabs {
     public static List<Item> BLACK_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> RX_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> SHIN_TAB_ITEM= new ArrayList<Item>();
-    public static List<Item> J_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> ZO_TAB_ITEM= new ArrayList<Item>();
+    public static List<Item> J_TAB_ITEM= new ArrayList<Item>();
     
     public static List<Item> KUUGA_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> AGITO_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> RYUKI_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> FAIZ_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> BLADE_TAB_ITEM= new ArrayList<Item>();
+    public static List<Item> HIBIKI_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> KIVA_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> W_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> OOO_TAB_ITEM= new ArrayList<Item>();
@@ -213,17 +217,17 @@ public class RiderTabs {
 			{
 				event.accept( RiderTabs.SHIN_TAB_ITEM.get(i));
 			}
-			
-		}else if(event.getTab() == RiderTabs.JTab.get()) {
-			for (int i = 0; i < RiderTabs.J_TAB_ITEM.size(); i++)
-			{
-				event.accept( RiderTabs.J_TAB_ITEM.get(i));
-			}
 
 		}else if(event.getTab() == RiderTabs.ZOTab.get()) {
 			for (int i = 0; i < RiderTabs.ZO_TAB_ITEM.size(); i++)
 			{
 				event.accept( RiderTabs.ZO_TAB_ITEM.get(i));
+			}
+			
+		}else if(event.getTab() == RiderTabs.JTab.get()) {
+			for (int i = 0; i < RiderTabs.J_TAB_ITEM.size(); i++)
+			{
+				event.accept( RiderTabs.J_TAB_ITEM.get(i));
 			}
 
 
@@ -255,6 +259,11 @@ public class RiderTabs {
 			for (int i = 0; i < RiderTabs.BLADE_TAB_ITEM.size(); i++)
 			{
 				event.accept( RiderTabs.BLADE_TAB_ITEM.get(i));
+			}
+		}else if(event.getTab() == RiderTabs.HibikiTab.get()) {
+			for (int i = 0; i < RiderTabs.HIBIKI_TAB_ITEM.size(); i++)
+			{
+				event.accept( RiderTabs.HIBIKI_TAB_ITEM.get(i));
 			}
 		}else if(event.getTab() == RiderTabs.KivaTab.get()) {
 			for (int i = 0; i < RiderTabs.KIVA_TAB_ITEM.size(); i++)

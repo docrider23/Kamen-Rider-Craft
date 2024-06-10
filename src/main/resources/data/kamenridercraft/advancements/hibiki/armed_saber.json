@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "kamenridercraft:armed_saber"
+    },
+    "title": "Hibiki Sōkō",
+    "description": "Obtain the Armed Saber",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "kamenridercraft:hibiki/henshin_onsa_kurenai",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [],
+        "items": [
+          {
+            "items": [
+              "kamenridercraft:armed_saber"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -9,6 +9,7 @@ import com.kelco.kamenridercraft.Items.Agito_Rider_Items;
 import com.kelco.kamenridercraft.Items.Blade_Rider_Items;
 import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
 import com.kelco.kamenridercraft.Items.Faiz_Rider_Items;
+import com.kelco.kamenridercraft.Items.Hibiki_Rider_Items;
 import com.kelco.kamenridercraft.Items.Ichigo_Rider_Items;
 import com.kelco.kamenridercraft.Items.Kiva_Rider_Items;
 import com.kelco.kamenridercraft.Items.Kuuga_Rider_Items;
@@ -48,6 +49,7 @@ public class KamenRiderCraftCore {
 		Ryuki_Rider_Items.register(modEventBus);
 		Faiz_Rider_Items.register(modEventBus);
 		Blade_Rider_Items.register(modEventBus);
+		Hibiki_Rider_Items.register(modEventBus);
 		Kiva_Rider_Items.register(modEventBus);
 		W_Rider_Items.register(modEventBus);
 		OOO_Rider_Items.register(modEventBus);
