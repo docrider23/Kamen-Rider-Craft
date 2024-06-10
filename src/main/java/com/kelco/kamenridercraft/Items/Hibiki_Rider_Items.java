@@ -95,7 +95,7 @@ public class Hibiki_Rider_Items {
                 new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
                 new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
                 new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false),
-                new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
+                new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
 
         public static final RegistryObject<Item> HENSHIN_ONSA_HABATAKI = ITEMS.register("henshin_onsa_habataki",
         () -> new RiderFormChangeItem(new Item.Properties(),0,"","habataki","habatakidriver_belt",
@@ -104,7 +104,7 @@ public class Hibiki_Rider_Items {
                 new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false),
                 new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
                 new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
-                new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
+                new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
 
         public static final RegistryObject<Item> HENSHIN_ONSA_KIRAMEKI = ITEMS.register("henshin_onsa_kirameki",
         () -> new RiderFormChangeItem(new Item.Properties(),0,"","kirameki","kiramekidriver_belt",
@@ -112,7 +112,7 @@ public class Hibiki_Rider_Items {
                 new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false),
                 new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
                 new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-                new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
+                new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
 
         public static final RegistryObject<Item> HENSHIN_ONSA_NISHIKI = ITEMS.register("henshin_onsa_nishiki",
         () -> new RiderFormChangeItem(new Item.Properties(),0,"","nishiki","nishikidriver_belt",
@@ -139,7 +139,7 @@ public class Hibiki_Rider_Items {
         public static final RegistryObject<Item> HENSHIN_ONIBUE_SHOUKI = ITEMS.register("henshin_onibue_shouki",
         () -> new RiderFormChangeItem(new Item.Properties(),0,"","shouki","shoukidriver_belt",
                 new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-                new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0,true,false),
+                new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
                 new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false),
                 new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
                 new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
@@ -159,7 +159,7 @@ public class Hibiki_Rider_Items {
                 new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false),
                 new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
                 new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
-                new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0,true,false),
+                new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
                 new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
         
 
@@ -186,13 +186,12 @@ public class Hibiki_Rider_Items {
 
         public static final RegistryObject<Item> HENSHIN_KIGEN_BANKI = ITEMS.register("henshin_kigen_banki",
         () -> new RiderFormChangeItem(new Item.Properties(),0,"","banki","bankidriver_belt",
-                new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0,true,false),
+                new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
                 new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false),
                 new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false),
                 new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
                 new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false),
-                new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
-                new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
+                new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)).AddToTabList(RiderTabs.HIBIKI_TAB_ITEM));
 
         public static final RegistryObject<Item> HENSHIN_KIGEN_SABAKI = ITEMS.register("henshin_kigen_sabaki",
         () -> new RiderFormChangeItem(new Item.Properties(),0,"","sabaki","sabakidriver_belt",
