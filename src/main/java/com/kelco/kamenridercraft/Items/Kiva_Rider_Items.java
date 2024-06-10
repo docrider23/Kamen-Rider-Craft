@@ -229,7 +229,7 @@ public class Kiva_Rider_Items {
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.KIVA_TAB_ITEM).ChangeRepairItem(FUESTLE.get()));
 
 	public static final RegistryObject<SwordItem> DOGGA_HAMMER = ITEMS.register("dogga_hammer",
-         	() -> new BaseSwordItem(Tiers.DIAMOND, 7, 1.5f, new Item.Properties()).AddToTabList(RiderTabs.KIVA_TAB_ITEM).ChangeRepairItem(FUESTLE.get()));
+         	() -> new BaseSwordItem(Tiers.DIAMOND, 7, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.KIVA_TAB_ITEM).ChangeRepairItem(FUESTLE.get()));
     
 	public static final RegistryObject<SwordItem> GARULU_SABER_TATSULOT = ITEMS.register("garulu_saber_tatsulot",
          	() -> new BaseSwordItem(Tiers.DIAMOND, 7, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.KIVA_TAB_ITEM).ChangeRepairItem(FUESTLE.get()));
@@ -238,7 +238,7 @@ public class Kiva_Rider_Items {
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 6, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.KIVA_TAB_ITEM).ChangeRepairItem(FUESTLE.get()));
 
 	public static final RegistryObject<SwordItem> DOGGA_HAMMER_TATSULOT = ITEMS.register("dogga_hammer_tatsulot",
-         	() -> new BaseSwordItem(Tiers.DIAMOND, 9, 1.5f, new Item.Properties()).AddToTabList(RiderTabs.KIVA_TAB_ITEM).ChangeRepairItem(FUESTLE.get()));
+         	() -> new BaseSwordItem(Tiers.DIAMOND, 9, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.KIVA_TAB_ITEM).ChangeRepairItem(FUESTLE.get()));
 
 	public static final RegistryObject<SwordItem> ZANVAT_SWORD = ITEMS.register("zanbatsword",
          	() -> new BaseSwordItem(Tiers.DIAMOND, 9, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.KIVA_TAB_ITEM).ChangeRepairItem(FUESTLE.get()));
@@ -247,7 +247,7 @@ public class Kiva_Rider_Items {
          	() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.KIVA_TAB_ITEM).ChangeRepairItem(FUESTLE.get()));
 	
 	public static final RegistryObject<SwordItem> IXA_KNUCKLE = ITEMS.register("ixa_knuckle",
-         	() -> new BaseSwordItem(Tiers.DIAMOND, 3, 4.5f, new Item.Properties()).AddToTabList(RiderTabs.KIVA_TAB_ITEM).ChangeRepairItem(FUESTLE.get()));
+         	() -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.KIVA_TAB_ITEM).ChangeRepairItem(FUESTLE.get()));
     
 	public static final RegistryObject<BaseBlasterItem> IXA_CALIBER = ITEMS.register("ixa_caliber",
          	() -> new BaseBlasterItem(Tiers.DIAMOND, 9, -2.4F, new Item.Properties()).IsSwordGun().AddToTabList(RiderTabs.KIVA_TAB_ITEM).ChangeRepairItem(FUESTLE.get()));
