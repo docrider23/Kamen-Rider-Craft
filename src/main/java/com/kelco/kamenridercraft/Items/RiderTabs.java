@@ -103,6 +103,10 @@ public class RiderTabs {
    	CreativeModeTab.builder().icon(() -> new ItemStack(Ex_Aid_Rider_Items.EX_AIDHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_ex_aid_items.png"))
    	.title(Component.literal("Ex-Aid Rider Items")).build());
 
+    public static RegistryObject<CreativeModeTab> GotchardTab = CREATIVE_MODE_TABS.register("krc_450_gotchard_tab", () -> 
+   	CreativeModeTab.builder().icon(() -> new ItemStack(Gotchard_Rider_Items.GOTCHARD_HELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_gotchard_items.png"))
+   	.title(Component.literal("Gotchard Rider Items")).build());
+
     public static RegistryObject<CreativeModeTab> GTab = CREATIVE_MODE_TABS.register("krc_800_g_tab", () -> 
    	CreativeModeTab.builder().icon(() -> new ItemStack(Miscellaneous_Rider_Items.GHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_g_items.png"))
    	.title(Component.literal("G Rider Items")).build());
@@ -142,6 +146,9 @@ public class RiderTabs {
     public static List<Item> OOO_TAB_ITEM= new ArrayList<Item>();
     
     public static List<Item> EX_AID_TAB_ITEM= new ArrayList<Item>();
+
+    public static List<Item> GOTCHARD_TAB_ITEM= new ArrayList<Item>();
+    
     public static List<Item> G_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> GORIDER_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> AMAZONS_TAB_ITEM= new ArrayList<Item>();
@@ -290,6 +297,12 @@ public class RiderTabs {
 			for (int i = 0; i < RiderTabs.EX_AID_TAB_ITEM.size(); i++)
 			{
 				event.accept( RiderTabs.EX_AID_TAB_ITEM.get(i));
+			}
+
+		}else if(event.getTab() == RiderTabs.GotchardTab.get()) {
+			for (int i = 0; i < RiderTabs.GOTCHARD_TAB_ITEM.size(); i++)
+			{
+				event.accept( RiderTabs.GOTCHARD_TAB_ITEM.get(i));
 			}
 
 		}else if(event.getTab() == RiderTabs.AMAZONSTab.get()) {
