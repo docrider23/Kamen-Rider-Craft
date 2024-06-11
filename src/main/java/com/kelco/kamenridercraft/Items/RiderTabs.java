@@ -113,6 +113,10 @@ public class RiderTabs {
     public static RegistryObject<CreativeModeTab> GoriderTab = CREATIVE_MODE_TABS.register("krc_810_gorider_tab", () -> 
    	CreativeModeTab.builder().icon(() -> new ItemStack(Miscellaneous_Rider_Items.AKARIDERHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_gorider_items.png"))
    	.title(Component.literal("Gorider Rider Items")).build());
+    
+    public static RegistryObject<CreativeModeTab> RideKamensTab = CREATIVE_MODE_TABS.register("krc_830_ride_kamens_tab", () -> 
+   	CreativeModeTab.builder().icon(() -> new ItemStack(Miscellaneous_Rider_Items.RIDE_KAMENS_HELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_iichigo_items.png"))
+   	.title(Component.literal("Gorider Rider Items")).build());
 
     public static RegistryObject<CreativeModeTab> AMAZONSTab = CREATIVE_MODE_TABS.register("krc_041_amazons_tab", () -> 
 			CreativeModeTab.builder().icon(() -> new ItemStack(Reboot_Rider_Items.AMAZONSHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_amazons_items.png"))
@@ -151,6 +155,7 @@ public class RiderTabs {
     
     public static List<Item> G_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> GORIDER_TAB_ITEM= new ArrayList<Item>();
+    public static List<Item> RIDE_KAMENS_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> AMAZONS_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> BLACK_SUN_TAB_ITEM= new ArrayList<Item>();
     
@@ -327,6 +332,12 @@ public class RiderTabs {
 			for (int i = 0; i < RiderTabs.GORIDER_TAB_ITEM.size(); i++)
 			{
 				event.accept( RiderTabs.GORIDER_TAB_ITEM.get(i));
+			}
+
+		}else if(event.getTab() == RiderTabs.RideKamensTab.get()) {
+			for (int i = 0; i < RiderTabs.RIDE_KAMENS_TAB_ITEM.size(); i++)
+			{
+				event.accept( RiderTabs.RIDE_KAMENS_TAB_ITEM.get(i));
 			}
 
 		}else if(event.getTab() == RiderTabs.RiderblockTab.get()) {

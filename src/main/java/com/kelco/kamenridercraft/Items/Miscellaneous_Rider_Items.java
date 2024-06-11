@@ -21,6 +21,7 @@ public class Miscellaneous_Rider_Items {
 	
 	  public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, KamenRiderCraftCore.MODID);
 	    	     
+	  //G
 	    public static final RegistryObject<Item> G_LOGO = ITEMS.register("g_logo",
 	    		() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.G_TAB_ITEM));
 
@@ -40,7 +41,7 @@ public class Miscellaneous_Rider_Items {
 	    public static final RegistryObject<Item> G_BELT = ITEMS.register("g_belt",
 		           () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"kamen_rider_g",GORO_WINE_BOTTLE ,GHELMET,GCHESTPLATE,GLEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.G_TAB_ITEM));
 
-
+//Gorider
 		public static final RegistryObject<Item> GORIDER_LOGO = ITEMS.register("gorider_logo",
 				() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.GORIDER_TAB_ITEM));
 
@@ -94,6 +95,43 @@ public class Miscellaneous_Rider_Items {
 		public static final RegistryObject<Item> TYPHOON_MIDORIDER = ITEMS.register("typhoon_midorider",
 				() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"mido_rider",MIDORIDER_CARD ,AKARIDERHELMET,AKARIDERCHESTPLATE,AKARIDERLEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.GORIDER_TAB_ITEM));
 			 
+		
+		//Ride Kamens
+		
+		  public static final RegistryObject<Item> CHAOS_RING_SAIGO = ITEMS.register("chaos_ring",
+		            () -> new RiderFormChangeItem(new Item.Properties(),0,"","saigo","chaos_driver_saigo_belt",
+		            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.DIG_SPEED,40, 0,true,false)
+		            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false)).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
+
+		  public static final RegistryObject<Item> CHAOS_RING_HARUMA = ITEMS.register("chaos_ring_haruma",
+		            () -> new RiderFormChangeItem(new Item.Properties(),0,"","haruma","chaos_driver_haruma_belt",
+		            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.DIG_SPEED,40, 0,true,false)
+		            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false)).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
+
+		  public static final RegistryObject<Item> CHAOS_RING_SHION = ITEMS.register("chaos_ring_shion",
+		            () -> new RiderFormChangeItem(new Item.Properties(),0,"","shion","chaos_driver_shion_belt",
+		            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.DIG_SPEED,40, 0,true,false)
+		            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false)).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
+
+		    
+		    public static final RegistryObject<Item> RIDE_KAMENS_HELMET = ITEMS.register("ride_kamens_head",
+		            () -> new RiderArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
+		    public static final RegistryObject<Item> RIDE_KAMENS_CHESTPLATE = ITEMS.register("ride_kamens_troso",
+		            () -> new RiderArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Properties()).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
+		    public static final RegistryObject<Item> RIDE_KAMENS_LEGGINGS = ITEMS.register("ride_kamens_legs",
+		            () -> new RiderArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.LEGGINGS, new Item.Properties()).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
+		    
+		    public static final RegistryObject<Item> CHAOS_DRIVER_SAIGO = ITEMS.register("chaos_driver_saigo",
+			           () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"saigo",CHAOS_RING_SAIGO ,RIDE_KAMENS_HELMET,RIDE_KAMENS_CHESTPLATE,RIDE_KAMENS_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
+
+		    public static final RegistryObject<Item> CHAOS_DRIVER_HARUMA = ITEMS.register("chaos_driver_haruma",
+			           () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"haruma",CHAOS_RING_HARUMA ,RIDE_KAMENS_HELMET,RIDE_KAMENS_CHESTPLATE,RIDE_KAMENS_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
+
+		    public static final RegistryObject<Item> CHAOS_DRIVER_SHION = ITEMS.register("chaos_driver_shion",
+			           () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"shion",CHAOS_RING_SHION ,RIDE_KAMENS_HELMET,RIDE_KAMENS_CHESTPLATE,RIDE_KAMENS_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
+
+
+		
 	    public static void register(IEventBus eventBus) {
 	        ITEMS.register(eventBus);
 	    }
