@@ -1,6 +1,27 @@
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 {
     "parent": "item/generated",
     "textures": {
         "layer0": "kamenridercraft:item/hibiki_logo"
     }
 }
+=======
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "kamenridercraft:item/hibiki_logo"
+    }
+}
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
