@@ -54,7 +54,7 @@ public class Ex_Aid_Rider_Items {
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","ex_aid","gamer_driver_mighty_action_x",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false)).addSwitchForm(MIGHTY_ACTION_X_GASHAT_LV_1.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get())
-			.AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 20));
+			.IsGlowing().AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 20));
 
 	public static final RegistryObject<Item> TADDLE_QUEST_GASHAT_LV_1 = ITEMS.register("taddle_quest_gashat_lv_1",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_lv1","brave","gamer_driver_taddle_quest_lv_1",

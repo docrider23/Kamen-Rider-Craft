@@ -101,7 +101,8 @@ public class Miscellaneous_Rider_Items {
 		  public static final RegistryObject<Item> CHAOS_RING_SAIGO = ITEMS.register("chaos_ring",
 		            () -> new RiderFormChangeItem(new Item.Properties(),0,"","saigo","chaos_driver_saigo_belt",
 		            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.DIG_SPEED,40, 0,true,false)
-		            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false)).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
+		            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false))
+		            .ChangeModel("geo/saigo.geo.json").IsGlowing().AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
 
 		  public static final RegistryObject<Item> CHAOS_RING_HARUMA = ITEMS.register("chaos_ring_haruma",
 		            () -> new RiderFormChangeItem(new Item.Properties(),0,"","haruma","chaos_driver_haruma_belt",
