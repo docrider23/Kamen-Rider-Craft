@@ -78,8 +78,15 @@ public class Gotchard_Rider_Items {
             .ChangeModel("geo/gotchard_appare_skebow.geo.json").AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
     /* hiikescue
-     * gekiocopter
-     * deepmariner
+     */
+    
+    public static final RegistryObject<Item> GEKIOCOPTER_RIDE_CHEMY_CARD = ITEMS.register("gekiocopter_ride_chemy_card",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"_gekiocopter","valvarad","valvaradraw_buckle_belt",
+            		new MobEffectInstance(Effect_core.FLYING.get(), 40, 1,true,false),
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false))
+            .ChangeModel("geo/valvarad_gekiocopter.geo.json").AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
+    
+     /* deepmariner
      */
     
     public static final RegistryObject<Item> MADWHEEL_RIDE_CHEMY_CARD = ITEMS.register("madwheel_ride_chemy_card",
