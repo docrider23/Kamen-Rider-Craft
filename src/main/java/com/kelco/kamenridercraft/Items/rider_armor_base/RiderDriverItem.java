@@ -165,7 +165,7 @@ public class RiderDriverItem extends RiderArmorItem{
 
 	public static void reset_Form_Item(ItemStack  itemstack)
 	{
-		
+
 		if(itemstack.getItem() instanceof RiderDriverItem belt){
 
 			if (belt.Num_Base_Form_Item!=1) {
@@ -196,6 +196,32 @@ public class RiderDriverItem extends RiderArmorItem{
 
 	public void Extra_set_Form_Item(ItemStack itemstack, Item ITEM,int SLOT)
 	{
+	}
+
+
+	public  boolean getGlowForSlot(ItemStack itemstack,EquipmentSlot currentSlot, LivingEntity livingEntity) {
+
+		if (livingEntity.getItemBySlot(EquipmentSlot.LEGS).getItem() == LEGS){
+			if (livingEntity.getItemBySlot(EquipmentSlot.CHEST).getItem() == TORSO){
+				if (livingEntity.getItemBySlot(EquipmentSlot.HEAD).getItem() == HEAD){
+					switch (currentSlot) {
+					case HEAD ->{ 
+						return get_Form_Item(itemstack, 1).get_Is_Glowing();
+					}
+					case CHEST -> {
+						return get_Form_Item(itemstack, 1).get_Is_Glowing();
+					}
+					case LEGS -> {
+						return get_Form_Item(itemstack, 1).get_Is_Glowing();
+					}
+					default -> {}
+					}
+					return false;
+				}
+			}
+
+		}
+		return false;
 	}
 
 	public  boolean getPartsForSlot(ItemStack itemstack,EquipmentSlot currentSlot,String  part) {
@@ -240,8 +266,8 @@ public class RiderDriverItem extends RiderArmorItem{
 		{
 			return  Base_Form_Item;
 		}else if (Item.byId(itemstack.getTag().getInt("slot"+SLOT))instanceof RiderFormChangeItem){
-			
-			
+
+
 			return (RiderFormChangeItem) Item.byId(itemstack.getTag().getInt("slot"+SLOT));
 
 		}else{

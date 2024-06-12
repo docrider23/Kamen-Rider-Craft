@@ -135,7 +135,7 @@ public class Reboot_Rider_Items {
 	    public static final RegistryObject<Item> GLOWING_KING_STONE_SUN = ITEMS.register("glowing_king_stone_sun",
 	            () -> new RiderFormChangeItem(new Item.Properties(),0,"_revived","black_sun","century_king_sun_driver_belt",
 	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.DIG_SPEED,40, 0,true,false)
-	            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false)).AddToTabList(RiderTabs.BLACK_SUN_TAB_ITEM).AddToTabList(KaijinStoneGenerator.KING_STONE, 1));
+	            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false)).IsGlowing().AddToTabList(RiderTabs.BLACK_SUN_TAB_ITEM).AddToTabList(KaijinStoneGenerator.KING_STONE, 1));
 
 	    public static final RegistryObject<Item> KING_STONE_MOON = ITEMS.register("king_stone_moon",
 	            () -> new RiderFormChangeItem(new Item.Properties(),0,"","shadowmoon","century_king_moon_driver_belt",
@@ -147,7 +147,7 @@ public class Reboot_Rider_Items {
 	            () -> new RiderFormChangeItem(new Item.Properties(),0,"_revived","shadowmoon","century_king_moon_driver_belt",
 	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.DIG_SPEED,40, 0,true,false)
 	            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false))
-	            .AddToTabList(RiderTabs.BLACK_SUN_TAB_ITEM).AddToTabList(KaijinStoneGenerator.KING_STONE, 1));
+	            .IsGlowing().AddToTabList(RiderTabs.BLACK_SUN_TAB_ITEM).AddToTabList(KaijinStoneGenerator.KING_STONE, 1));
 
 	    
 	    public static final RegistryObject<Item> BLACKSUNHELMET = ITEMS.register("blacksunhead",

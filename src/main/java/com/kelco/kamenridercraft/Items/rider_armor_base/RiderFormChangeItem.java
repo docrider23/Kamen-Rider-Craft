@@ -27,6 +27,7 @@ public class RiderFormChangeItem extends BaseItem {
 	private List<Item> NEEDITEM = new ArrayList<Item>();
 	protected String RIDER_NAME;
 	private String BELT_TEX;
+	private Boolean IS_GLOWING = false;
 	private String UPDATED_BELT_MODEL;
 	private String UPDATED_MODEL;
 	private String FLYING_MODEL;
@@ -99,6 +100,11 @@ public class RiderFormChangeItem extends BaseItem {
 		return SET_PLAYER_MODEL_INVISIBLE;
 	}
 
+	public Boolean get_Is_Glowing() {
+		return IS_GLOWING;
+	}
+
+	
 	public String get_FlyingModel() {
 		return FLYING_MODEL;
 	}
@@ -160,6 +166,11 @@ public class RiderFormChangeItem extends BaseItem {
 		return this;
 	}
 
+	public RiderFormChangeItem IsGlowing() {
+		IS_GLOWING=true;
+		return this;
+	}
+	
 	public RiderFormChangeItem addNeedForm(Item  item, int slot) {
 		if (slot==1)NEED_FORM_SLOT_1=((RiderFormChangeItem)item);
 		else if (slot==2)NEED_FORM_SLOT_2=((RiderFormChangeItem)item);

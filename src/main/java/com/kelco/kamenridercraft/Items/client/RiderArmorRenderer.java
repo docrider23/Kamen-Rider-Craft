@@ -6,6 +6,7 @@ import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
+import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer;
 
 public class RiderArmorRenderer extends GeoArmorRenderer<RiderArmorItem> {
 	 
@@ -14,6 +15,11 @@ public class RiderArmorRenderer extends GeoArmorRenderer<RiderArmorItem> {
     public RiderArmorRenderer(LivingEntity livingEntity, EquipmentSlot equipmentSlot) {
     
         super(new RiderArmorModel(livingEntity, equipmentSlot));
+        
+        if (livingEntity.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RiderDriverItem belt) {
+        	if (belt.getGlowForSlot(livingEntity.getItemBySlot(EquipmentSlot.FEET), equipmentSlot,livingEntity))addRenderLayer(new AutoGlowingGeoLayer<>(this));
+        }
+        
         RIDER =  livingEntity;
     }
     
