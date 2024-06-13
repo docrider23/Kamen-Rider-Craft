@@ -3,6 +3,7 @@ package com.kelco.kamenridercraft.Items;
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
 import com.kelco.kamenridercraft.Blocks.MachineBlocks.GSystemChipProgrammer;
 import com.kelco.kamenridercraft.Effect.Effect_core;
+import com.kelco.kamenridercraft.Items.gotchard.ValvaradItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseBlasterItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseShieldItem;
@@ -81,10 +82,10 @@ public class Gotchard_Rider_Items {
      */
     
     public static final RegistryObject<Item> GEKIOCOPTER_RIDE_CHEMY_CARD = ITEMS.register("gekiocopter_ride_chemy_card",
-            () -> new RiderFormChangeItem(new Item.Properties(),0,"_gekiocopter","valvarad","valvaradraw_buckle_belt",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"","valvarad","",
             		new MobEffectInstance(Effect_core.FLYING.get(), 40, 1,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false))
-            .ChangeModel("geo/valvarad_gekiocopter.geo.json").AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
+            .ChangeSlot(2).addSwitchForm(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
      /* deepmariner
      */
@@ -96,8 +97,12 @@ public class Gotchard_Rider_Items {
      
      /* 
      * golddash
-     * gutsshovel
      */
+    
+    public static final RegistryObject<Item> GUTSSHOVEL_RIDE_CHEMY_CARD = ITEMS.register("gutsshovel_ride_chemy_card",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"","valvarad","",
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false))
+            .ChangeSlot(3).addSwitchForm(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
     public static final RegistryObject<Item> STEAMLINER_RIDE_CHEMY_CARD = ITEMS.register("steamliner_ride_chemy_card",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","gotchard","gotchardriver_belt",
@@ -196,7 +201,8 @@ public class Gotchard_Rider_Items {
     		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"gotchard", HOPPER1_RIDE_CHEMY_CARD ,GOTCHARD_HELMET, GOTCHARD_CHESTPLATE,GOTCHARD_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM).ChangeRepairItem(BLANK_RIDE_CHEMY_CARD.get()));
     
     public static final RegistryObject<Item> VALVARADRAW_BUCKLE = ITEMS.register("valvaradraw_buckle",
-    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"valvarad", MADWHEEL_RIDE_CHEMY_CARD ,GOTCHARD_HELMET, GOTCHARD_CHESTPLATE,GOTCHARD_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM).ChangeRepairItem(BLANK_RIDE_CHEMY_CARD.get()));
+    		() -> new ValvaradItem(ArmorMaterials.DIAMOND,"valvarad", MADWHEEL_RIDE_CHEMY_CARD ,GOTCHARD_HELMET, GOTCHARD_CHESTPLATE,GOTCHARD_LEGGINGS , new Item.Properties())
+    		.AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM).ChangeRepairItem(BLANK_RIDE_CHEMY_CARD.get()));
 
     public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
