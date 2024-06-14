@@ -87,8 +87,10 @@ public class Gotchard_Rider_Items {
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false))
             .ChangeSlot(2).addSwitchForm(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
-     /* deepmariner
-     */
+    public static final RegistryObject<Item> DEEPMARINER_RIDE_CHEMY_CARD = ITEMS.register("deepmariner_ride_chemy_card",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"_venom_mariner","gotchard","gotchardriver_belt",
+            		new MobEffectInstance(MobEffects.WATER_BREATHING, 40, 1,true,false),
+            		new MobEffectInstance(Effect_core.ANTIPOISON.get(), 40, 1,true,false)).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
     public static final RegistryObject<Item> MADWHEEL_RIDE_CHEMY_CARD = ITEMS.register("madwheel_ride_chemy_card",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","valvarad","valvaradraw_buckle_belt",
@@ -137,8 +139,14 @@ public class Gotchard_Rider_Items {
      * burningnero
      * bambamboo
      * saboneedle
-     * venomdake
-     * utsubocchama
+     */
+    
+    public static final RegistryObject<Item> VENOMDAKE_RIDE_CHEMY_CARD = ITEMS.register("venomdake_ride_chemy_card",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"_venom_mariner","gotchard","gotchardriver_belt",
+            		new MobEffectInstance(MobEffects.WATER_BREATHING, 40, 1,true,false),
+            		new MobEffectInstance(Effect_core.ANTIPOISON.get(), 40, 1,true,false)).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
+    
+     /* utsubocchama
      * flayrose
      * buglesia
      * junglejan
