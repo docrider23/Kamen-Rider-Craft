@@ -98,7 +98,10 @@ public class Miscellaneous_Rider_Items {
 		
 		//Ride Kamens
 		
-		  public static final RegistryObject<Item> CHAOS_RING_SAIGO = ITEMS.register("chaos_ring",
+		public static final RegistryObject<Item> CONTRACT_CHAOSTONE = ITEMS.register("contract_chaostone",
+				() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
+		
+		  public static final RegistryObject<Item> CHAOS_RING_SAIGO = ITEMS.register("chaos_ring_saigo",
 		            () -> new RiderFormChangeItem(new Item.Properties(),0,"","saigo","chaos_driver_saigo_belt",
 		            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.DIG_SPEED,40, 0,true,false)
 		            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false))
