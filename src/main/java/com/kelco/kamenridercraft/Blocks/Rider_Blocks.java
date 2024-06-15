@@ -164,6 +164,11 @@ public class Rider_Blocks {
 			() -> new BaseFacingBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)
 					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	
+	public static final RegistryObject<Block> KAMEN_CAFE_COUNTER = registerBlock("kamen_cafe_counter",
+			() -> new BaseFacingBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)
+					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
+	
+	
 	public static final RegistryObject<Block> MONITOR = registerBlock("monitor",
 			() -> new BaseFacingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
 					.strength(5.0F, 6.0F).sound(SoundType.METAL)).AddToTabList(RiderTabs.RIDER_BLOCK));

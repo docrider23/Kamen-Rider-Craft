@@ -2,6 +2,7 @@ package com.kelco.kamenridercraft.Items;
 
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
 import com.kelco.kamenridercraft.Effect.Effect_core;
+import com.kelco.kamenridercraft.Items.ride_kamens.gasha_ticket;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderArmorItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
@@ -102,22 +103,25 @@ public class Miscellaneous_Rider_Items {
 		            () -> new RiderFormChangeItem(new Item.Properties(),0,"","saigo","chaos_driver_saigo_belt",
 		            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.DIG_SPEED,40, 0,true,false)
 		            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false))
-		            .ChangeModel("geo/saigo.geo.json").IsGlowing().AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
+		            .ChangeModel("geo/saigo.geo.json").IsGlowing().AddToTabList(gasha_ticket.CHAOS_RING).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
 
 		  public static final RegistryObject<Item> CHAOS_RING_HARUMA = ITEMS.register("chaos_ring_haruma",
 		            () -> new RiderFormChangeItem(new Item.Properties(),0,"","haruma","chaos_driver_haruma_belt",
 		            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.DIG_SPEED,40, 0,true,false)
-		            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false)).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
+		            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false))
+		            .AddToTabList(gasha_ticket.CHAOS_RING).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
 
 		  public static final RegistryObject<Item> CHAOS_RING_SHION = ITEMS.register("chaos_ring_shion",
 		            () -> new RiderFormChangeItem(new Item.Properties(),0,"","shion","chaos_driver_shion_belt",
 		            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.DIG_SPEED,40, 0,true,false)
-		            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false)).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
+		            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false))
+		            .AddToTabList(gasha_ticket.CHAOS_RING).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
 
 		  public static final RegistryObject<Item> CHAOS_RING_JIGEN = ITEMS.register("chaos_ring_jigen",
 		            () -> new RiderFormChangeItem(new Item.Properties(),0,"","jigen","chaos_driver_jigen_belt",
 		            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.DIG_SPEED,40, 0,true,false)
-		            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false)).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
+		            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false))
+		            .AddToTabList(gasha_ticket.CHAOS_RING).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
 
 		    
 		    public static final RegistryObject<Item> RIDE_KAMENS_HELMET = ITEMS.register("ride_kamens_head",
@@ -128,17 +132,25 @@ public class Miscellaneous_Rider_Items {
 		            () -> new RiderArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.LEGGINGS, new Item.Properties()).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
 		    
 		    public static final RegistryObject<Item> CHAOS_DRIVER_SAIGO = ITEMS.register("chaos_driver_saigo",
-			           () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"saigo",CHAOS_RING_SAIGO ,RIDE_KAMENS_HELMET,RIDE_KAMENS_CHESTPLATE,RIDE_KAMENS_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
+			           () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"saigo",CHAOS_RING_SAIGO ,RIDE_KAMENS_HELMET,RIDE_KAMENS_CHESTPLATE,RIDE_KAMENS_LEGGINGS , new Item.Properties())
+			           .AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
 
 		    public static final RegistryObject<Item> CHAOS_DRIVER_HARUMA = ITEMS.register("chaos_driver_haruma",
-			           () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"haruma",CHAOS_RING_HARUMA ,RIDE_KAMENS_HELMET,RIDE_KAMENS_CHESTPLATE,RIDE_KAMENS_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
+			           () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"haruma",CHAOS_RING_HARUMA ,RIDE_KAMENS_HELMET,RIDE_KAMENS_CHESTPLATE,RIDE_KAMENS_LEGGINGS , new Item.Properties())
+			           .AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
 
 		    public static final RegistryObject<Item> CHAOS_DRIVER_SHION = ITEMS.register("chaos_driver_shion",
-			           () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"shion",CHAOS_RING_SHION ,RIDE_KAMENS_HELMET,RIDE_KAMENS_CHESTPLATE,RIDE_KAMENS_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
+			           () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"shion",CHAOS_RING_SHION ,RIDE_KAMENS_HELMET,RIDE_KAMENS_CHESTPLATE,RIDE_KAMENS_LEGGINGS , new Item.Properties())
+			           .AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
 
 		    public static final RegistryObject<Item> CHAOS_DRIVER_JIGEN = ITEMS.register("chaos_driver_jigen",
-			           () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"jigen",CHAOS_RING_JIGEN ,RIDE_KAMENS_HELMET,RIDE_KAMENS_CHESTPLATE,RIDE_KAMENS_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
+			           () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"jigen",CHAOS_RING_JIGEN ,RIDE_KAMENS_HELMET,RIDE_KAMENS_CHESTPLATE,RIDE_KAMENS_LEGGINGS , new Item.Properties())
+			           .AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
 
+		    public static final RegistryObject<Item> GASHA_TICKET = ITEMS.register("gasha_ticket",
+		    		() -> new gasha_ticket(new Item.Properties()).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
+
+	
 
 		
 	    public static void register(IEventBus eventBus) {

@@ -32,11 +32,24 @@ public class RiderVillagers {
                     x -> x.get() == SHOCKER_MONITOR_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
                     SoundEvents.VILLAGER_WORK_ARMORER));
 
+    public static final RegistryObject<PoiType> KAMEN_CAFE_COUNTER_POI = POI_TYPES.register("kamen_cafe_counter_poi",
+            () -> new PoiType(ImmutableSet.copyOf(Rider_Blocks.KAMEN_CAFE_COUNTER.get().getStateDefinition().getPossibleStates()),
+                    1, 1));
+
+    public static final RegistryObject<VillagerProfession> KAMEN_CAFE_BUTLER = VILLAGER_PROFESSIONS.register("kamen_cafe_butler",
+            () -> new VillagerProfession("kamen_cafe_butler", x -> x.get() == KAMEN_CAFE_COUNTER_POI.get(),
+                    x -> x.get() == KAMEN_CAFE_COUNTER_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
+                    SoundEvents.VILLAGER_WORK_ARMORER));
+
+    
+    
 
     public static void registerPOIs() {
         try {
             ObfuscationReflectionHelper.findMethod(PoiType.class,
                     "registerBlockStates", PoiType.class).invoke(null, SHOCKER_MONITOR_POI.get());
+            ObfuscationReflectionHelper.findMethod(PoiType.class,
+                    "registerBlockStates", PoiType.class).invoke(null, KAMEN_CAFE_COUNTER_POI.get());
         } catch (InvocationTargetException | IllegalAccessException exception) {
             exception.printStackTrace();
         }
