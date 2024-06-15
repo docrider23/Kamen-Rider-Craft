@@ -3,8 +3,8 @@
     "icon": {
       "item": "kamenridercraft:survive_mugen"
     },
-    "title": "You irritated me...",
-    "description": "Obtain the Survive Advent Card Mugen",
+    "title": "You irritated me…",
+    "description": "Use the Survive Mugen card to access Ouja's Survive form",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
@@ -15,13 +15,31 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:survive_mugen"
-            ]
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "kamenridercraft:ryukihead"
+              ]
+            },
+            "chest": {
+              "items": [
+                "kamenridercraft:ryukitroso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "kamenridercraft:ryukilegs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "kamenridercraft:v_buckle_ouja"
+              ],
+              "nbt": "{slot_tex1:\"survive_mugen\"}"
+            }
           }
-        ]
+        }
       }
     }
   }

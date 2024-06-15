@@ -4,7 +4,7 @@
       "item": "kamenridercraft:xtreme_memory"
     },
     "title": "The Ultimate W",
-    "description": "Obtain the Xtreme Memory",
+    "description": "Transform into Double CycloneJokerXtreme",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
@@ -15,13 +15,31 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:xtreme_memory"
-            ]
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "kamenridercraft:whead"
+              ]
+            },
+            "chest": {
+              "items": [
+                "kamenridercraft:wtroso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "kamenridercraft:wlegs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "kamenridercraft:wdriver"
+              ],
+              "nbt": "{slot_tex1:\"xtreme_memory\"}"
+            }
           }
-        ]
+        }
       }
     }
   }

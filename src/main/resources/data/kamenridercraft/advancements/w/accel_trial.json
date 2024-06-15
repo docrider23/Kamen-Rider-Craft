@@ -4,7 +4,7 @@
       "item": "kamenridercraft:trial_memory"
     },
     "title": "9.9 Seconds Until Your Despair",
-    "description": "Obtain the Trial Memory",
+    "description": "Transform into Accel Trial",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
@@ -15,13 +15,31 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:trial_memory"
-            ]
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "kamenridercraft:whead"
+              ]
+            },
+            "chest": {
+              "items": [
+                "kamenridercraft:wtroso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "kamenridercraft:wlegs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "kamenridercraft:acceldriver"
+              ],
+              "nbt": "{slot_tex1:\"trial_memory\"}"
+            }
           }
-        ]
+        }
       }
     }
   }

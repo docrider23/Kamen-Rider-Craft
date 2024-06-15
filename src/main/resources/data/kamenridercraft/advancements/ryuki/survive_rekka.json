@@ -4,7 +4,7 @@
       "item": "kamenridercraft:survive_rekka"
     },
     "title": "revolution",
-    "description": "Obtain the Survive Advent Card Rekka",
+    "description": "Use the Survive Rekka card to access Ryuki or Ryuga's Survive form",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
@@ -15,11 +15,62 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "player": [
           {
-            "items": [
-              "kamenridercraft:survive_rekka"
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "feet": {
+                      "items": [
+                        "kamenridercraft:v_buckle_ryuki"
+                      ],
+                      "nbt": "{slot_tex1:\"survive_rekka\"}"
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "feet": {
+                      "items": [
+                        "kamenridercraft:v_buckle_ryuga"
+                      ],
+                      "nbt": "{slot_tex1:\"survive_rekka_ryuga\"}"
+                    }
+                  }
+                }
+              }
             ]
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "head": {
+                  "items": [
+                    "kamenridercraft:ryukihead"
+                  ]
+                },
+                "chest": {
+                  "items": [
+                    "kamenridercraft:ryukitroso"
+                  ]
+                },
+                "legs": {
+                  "items": [
+                    "kamenridercraft:ryukilegs"
+                  ]
+                }
+              }
+            }
           }
         ]
       }

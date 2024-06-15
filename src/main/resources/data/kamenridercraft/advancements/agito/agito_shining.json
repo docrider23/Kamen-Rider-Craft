@@ -4,7 +4,7 @@
       "item": "kamenridercraft:agito_shining"
     },
     "title": "DEEP BREATH",
-    "description": "Obtain the Shining Philosopher's Stone",
+    "description": "Transform into Agito Shining Form",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
@@ -15,14 +15,31 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "player": [],
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:agito_shining"
-            ]
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "kamenridercraft:agitohead"
+              ]
+            },
+            "chest": {
+              "items": [
+                "kamenridercraft:agitotroso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "kamenridercraft:agitolegs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "kamenridercraft:alter_ring"
+              ],
+              "nbt": "{slot_tex1:\"agito_shining\"}"
+            }
           }
-        ]
+        }
       }
     }
   }

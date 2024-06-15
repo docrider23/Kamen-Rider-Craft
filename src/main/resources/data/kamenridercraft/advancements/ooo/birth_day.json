@@ -4,7 +4,7 @@
       "item": "kamenridercraft:cellmedal"
     },
     "title": "Happy Birthday!",
-    "description": "Obtain all the Birth Cell Medals",
+    "description": "Use all the Birth CLAWs at once (Birth·Day)",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
@@ -12,88 +12,34 @@
   },
   "parent": "kamenridercraft:ooo/birth",
   "criteria": {
-    "1": {
+    "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:birth_core_eyes"
-            ]
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "kamenridercraft:ooohead"
+              ]
+            },
+            "chest": {
+              "items": [
+                "kamenridercraft:oootroso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "kamenridercraft:ooolegs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "kamenridercraft:birth_driver"
+              ],
+              "nbt": "{slot_tex2:\"birth_core_breast_cannon\",slot_tex3:\"birth_core_crane_arm\",slot_tex4:\"birth_core_shovel_arm\",slot_tex5:\"birth_core_catepillar_leg\",slot_tex6:\"birth_core_drill_arm\",slot_tex7:\"birth_core_cutter_wing\"}"
+            }
           }
-        ]
-      }
-    },
-    "2": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:birth_core_breast_cannon"
-            ]
-          }
-        ]
-      }
-    },
-    "3": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:birth_core_crane_arm"
-            ]
-          }
-        ]
-      }
-    },
-    "4": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:birth_core_shovel_arm"
-            ]
-          }
-        ]
-      }
-    },
-    "5": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:birth_core_catepillar_leg"
-            ]
-          }
-        ]
-      }
-    },
-    "6": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:birth_core_drill_arm"
-            ]
-          }
-        ]
-      }
-    },
-    "7": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:birth_core_cutter_wing"
-            ]
-          }
-        ]
+        }
       }
     }
   }

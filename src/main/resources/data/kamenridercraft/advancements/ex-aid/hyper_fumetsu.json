@@ -1,16 +1,16 @@
 {
   "display": {
     "icon": {
-      "item": "kamenridercraft:typhoon_ichigo"
+      "item": "kamenridercraft:hyper_fumetsu_gashat"
     },
-    "title": "If There Is No God or Buddha…",
-    "description": "Transform into Kamen Rider Nigo",
-    "frame": "task",
+    "title": "The Ultimate Cheat Game",
+    "description": "Transform into Genm Hyper Fumetsu Gamer",
+    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "kamenridercraft:showa/ichigo",
+  "parent": "kamenridercraft:ex-aid/genm_musou",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",
@@ -19,23 +19,24 @@
           "equipment": {
             "head": {
               "items": [
-                "kamenridercraft:ichigohead"
+                "kamenridercraft:ex_aidhead"
               ]
             },
             "chest": {
               "items": [
-                "kamenridercraft:ichigotroso"
+                "kamenridercraft:ex_aidtroso"
               ]
             },
             "legs": {
               "items": [
-                "kamenridercraft:ichigolegs"
+                "kamenridercraft:ex_aidlegs"
               ]
             },
             "feet": {
               "items": [
-                "kamenridercraft:typhoon_nigo"
-              ]
+                "kamenridercraft:gamer_driver_genmu"
+              ],
+              "nbt": "{slot_tex1:\"hyper_fumetsu_gashat\"}"
             }
           }
         }

@@ -4,7 +4,7 @@
       "item": "kamenridercraft:fusion_peacock"
     },
     "title": "rebirth",
-    "description": "Obtain the Fusion Peacock Rouze Card",
+    "description": "Transform into Garren Jack Form",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
@@ -15,14 +15,31 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "player": [],
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:fusion_peacock"
-            ]
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "kamenridercraft:bladehead"
+              ]
+            },
+            "chest": {
+              "items": [
+                "kamenridercraft:bladetroso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "kamenridercraft:bladelegs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "kamenridercraft:garren_buckle"
+              ],
+              "nbt": "{slot_tex1:\"fusion_peacock\"}"
+            }
           }
-        ]
+        }
       }
     }
   }

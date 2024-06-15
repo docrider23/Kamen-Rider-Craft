@@ -4,7 +4,7 @@
       "item": "kamenridercraft:gashacon_bugvisor_genmu"
     },
     "title": "Death the Crisis",
-    "description": "Obtain the Gashacon Bugvisor (Genm)",
+    "description": "Transform into Genm Zombie Gamer Level X",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
@@ -15,14 +15,30 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "player": [],
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:gashacon_bugvisor_genmu"
-            ]
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "kamenridercraft:ex_aidhead"
+              ]
+            },
+            "chest": {
+              "items": [
+                "kamenridercraft:ex_aidtroso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "kamenridercraft:ex_aidlegs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "kamenridercraft:gashacon_bugvisor_genmu"
+              ]
+            }
           }
-        ]
+        }
       }
     }
   }

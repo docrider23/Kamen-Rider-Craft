@@ -4,7 +4,7 @@
       "item": "kamenridercraft:kuuga_ultimate"
     },
     "title": "Ultimate Darkness",
-    "description": "Obtain the Ultimate Amadam",
+    "description": "Transform into Kuuga Ultimate",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
@@ -15,14 +15,31 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "player": [],
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:kuuga_ultimate"
-            ]
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "kamenridercraft:kuugahead"
+              ]
+            },
+            "chest": {
+              "items": [
+                "kamenridercraft:kuugatroso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "kamenridercraft:kuugalegs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "kamenridercraft:arcle"
+              ],
+              "nbt": "{slot_tex1:\"kuuga_ultimate\"}"
+            }
           }
-        ]
+        }
       }
     }
   }

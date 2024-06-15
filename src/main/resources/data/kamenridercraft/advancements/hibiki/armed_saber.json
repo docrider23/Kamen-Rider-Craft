@@ -3,8 +3,8 @@
     "icon": {
       "item": "kamenridercraft:armed_saber"
     },
-    "title": "Hibiki Sōkō",
-    "description": "Obtain the Armed Saber",
+    "title": "Hibiki Soukou",
+    "description": "Transform into Armed Hibiki",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
@@ -15,14 +15,31 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "player": [],
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:armed_saber"
-            ]
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "kamenridercraft:hibikihead"
+              ]
+            },
+            "chest": {
+              "items": [
+                "kamenridercraft:hibikitroso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "kamenridercraft:hibikilegs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "kamenridercraft:hibikidriver"
+              ],
+              "nbt": "{slot_tex1:\"henshin_onsa_armed\"}"
+            }
           }
-        ]
+        }
       }
     }
   }

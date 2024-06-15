@@ -4,7 +4,7 @@
       "item": "kamenridercraft:henshin_onsa_kurenai"
     },
     "title": "Burning Crimson",
-    "description": "Obtain the Henshin Onsa Onkaku (Kurenai)",
+    "description": "Transform into Hibiki Kurenai",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
@@ -15,14 +15,31 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "player": [],
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:henshin_onsa_kurenai"
-            ]
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "kamenridercraft:hibikihead"
+              ]
+            },
+            "chest": {
+              "items": [
+                "kamenridercraft:hibikitroso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "kamenridercraft:hibikilegs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "kamenridercraft:hibikidriver"
+              ],
+              "nbt": "{slot_tex1:\"henshin_onsa_kurenai\"}"
+            }
           }
-        ]
+        }
       }
     }
   }

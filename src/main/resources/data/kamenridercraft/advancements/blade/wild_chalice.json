@@ -4,7 +4,7 @@
       "item": "kamenridercraft:evolution_paradoxa"
     },
     "title": "take it a try",
-    "description": "Obtain the Evolution Paradoxa Rouze Card",
+    "description": "Transform into Wild Chalice",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
@@ -15,14 +15,31 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "player": [],
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:evolution_paradoxa"
-            ]
+        "player": {
+          "equipment": {
+            "head": {
+              "items": [
+                "kamenridercraft:bladehead"
+              ]
+            },
+            "chest": {
+              "items": [
+                "kamenridercraft:bladetroso"
+              ]
+            },
+            "legs": {
+              "items": [
+                "kamenridercraft:bladelegs"
+              ]
+            },
+            "feet": {
+              "items": [
+                "kamenridercraft:chalice_rouzer"
+              ],
+              "nbt": "{slot_tex1:\"evolution_paradoxa\"}"
+            }
           }
-        ]
+        }
       }
     }
   }
