@@ -42,9 +42,6 @@ public class Miscellaneous_Rider_Items {
 		           () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"kamen_rider_g",GORO_WINE_BOTTLE ,GHELMET,GCHESTPLATE,GLEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.G_TAB_ITEM));
 
 //Gorider
-		public static final RegistryObject<Item> GORIDER_LOGO = ITEMS.register("gorider_logo",
-				() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.GORIDER_TAB_ITEM));
-
 		public static final RegistryObject<Item> AKARIDER_CARD = ITEMS.register("akarider_card",
 	            () -> new RiderFormChangeItem(new Item.Properties(),0,"","aka_rider","typhoon_belt_akarider",
 	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),

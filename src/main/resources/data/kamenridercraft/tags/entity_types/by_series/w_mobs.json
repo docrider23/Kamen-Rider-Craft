@@ -1,13 +1,6 @@
 {
   "values": [
-    "kamenridercraft:foundation_x_masquerade",
-    "kamenridercraft:masquerade",
-    "kamenridercraft:claydoll_dopant",
-    "kamenridercraft:commander_dopant",
-    "kamenridercraft:eternal_mob",
-    "kamenridercraft:nazca_dopant",
-    "kamenridercraft:smilodon_dopant",
-    "kamenridercraft:terror_dopant",
-    "kamenridercraft:weather_dopant"
+    "#kamenridercraft:by_type/dopants",
+    "kamenridercraft:eternal_mob"
   ]
 }

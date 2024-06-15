@@ -1,11 +1,8 @@
 {
   "values": [
-    "kamenridercraft:bugstervirus_mob",
+    "#kamenridercraft:by_type/bugsters",
     "kamenridercraft:rideplayer",
     "kamenridercraft:cronus",
-    "kamenridercraft:genm_mob",
-    "kamenridercraft:graphite_bugster_mob",
-    "kamenridercraft:para-dx",
-    "kamenridercraft:poppy_red_mob"
+    "kamenridercraft:genm_mob"
   ]
 }

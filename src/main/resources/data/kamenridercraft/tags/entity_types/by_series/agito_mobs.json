@@ -1,8 +1,6 @@
 {
   "values": [
-    "kamenridercraft:anguis_masculus",
-    "kamenridercraft:pantheras_luteus",
-    "kamenridercraft:another_agito",
-    "kamenridercraft:el_of_the_water"
+    "#kamenridercraft:by_type/lords",
+    "kamenridercraft:another_agito"
   ]
 }
