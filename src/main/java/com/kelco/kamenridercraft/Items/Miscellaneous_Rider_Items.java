@@ -117,6 +117,11 @@ public class Miscellaneous_Rider_Items {
 		            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.DIG_SPEED,40, 0,true,false)
 		            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false)).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
 
+		  public static final RegistryObject<Item> CHAOS_RING_JIGEN = ITEMS.register("chaos_ring_jigen",
+		            () -> new RiderFormChangeItem(new Item.Properties(),0,"","jigen","chaos_driver_jigen_belt",
+		            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.DIG_SPEED,40, 0,true,false)
+		            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false)).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
+
 		    
 		    public static final RegistryObject<Item> RIDE_KAMENS_HELMET = ITEMS.register("ride_kamens_head",
 		            () -> new RiderArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
@@ -133,6 +138,9 @@ public class Miscellaneous_Rider_Items {
 
 		    public static final RegistryObject<Item> CHAOS_DRIVER_SHION = ITEMS.register("chaos_driver_shion",
 			           () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"shion",CHAOS_RING_SHION ,RIDE_KAMENS_HELMET,RIDE_KAMENS_CHESTPLATE,RIDE_KAMENS_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
+
+		    public static final RegistryObject<Item> CHAOS_DRIVER_JIGEN = ITEMS.register("chaos_driver_jigen",
+			           () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"jigen",CHAOS_RING_JIGEN ,RIDE_KAMENS_HELMET,RIDE_KAMENS_CHESTPLATE,RIDE_KAMENS_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
 
 
 		
