@@ -109,19 +109,19 @@ public class Miscellaneous_Rider_Items {
 		            () -> new RiderFormChangeItem(new Item.Properties(),0,"","haruma","chaos_driver_haruma_belt",
 		            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.DIG_SPEED,40, 0,true,false)
 		            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false))
-		            .AddToTabList(gasha_ticket.CHAOS_RING).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
+		            .ChangeModel("geo/haruma.geo.json").IsGlowing().AddToTabList(gasha_ticket.CHAOS_RING).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
 
 		  public static final RegistryObject<Item> CHAOS_RING_SHION = ITEMS.register("chaos_ring_shion",
 		            () -> new RiderFormChangeItem(new Item.Properties(),0,"","shion","chaos_driver_shion_belt",
 		            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.DIG_SPEED,40, 0,true,false)
 		            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false))
-		            .AddToTabList(gasha_ticket.CHAOS_RING).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
+		            .ChangeModel("geo/shion.geo.json").IsGlowing().AddToTabList(gasha_ticket.CHAOS_RING).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
 
 		  public static final RegistryObject<Item> CHAOS_RING_JIGEN = ITEMS.register("chaos_ring_jigen",
 		            () -> new RiderFormChangeItem(new Item.Properties(),0,"","jigen","chaos_driver_jigen_belt",
 		            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.DIG_SPEED,40, 0,true,false)
 		            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false))
-		            .AddToTabList(gasha_ticket.CHAOS_RING).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
+		            .ChangeModel("geo/haruma.geo.json").IsGlowing().AddToTabList(gasha_ticket.CHAOS_RING).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM).KeepItem());
 
 		    
 		    public static final RegistryObject<Item> RIDE_KAMENS_HELMET = ITEMS.register("ride_kamens_head",
