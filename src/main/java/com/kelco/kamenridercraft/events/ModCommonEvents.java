@@ -248,6 +248,15 @@ public class ModCommonEvents {
 						new ItemStack(Items.EMERALD, 2),
 						stack,10,8,0.02F));
 			}
+			if(event.getType() == VillagerProfession.LIBRARIAN) {
+				Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+				ItemStack stack = new ItemStack(Modded_item_core.CARD_WARRIOR_KAMEN_RIDER_MANGA.get(), 1);
+				int villagerLevel = 2;
+
+				trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+						new ItemStack(Items.EMERALD, 2),
+						stack,10,8,0.02F));
+			}
 			
 			if(event.getType() == RiderVillagers.SHOCKER_VILLAGER.get()) {
 				Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();

@@ -1326,10 +1326,15 @@
 "item.kamenridercraft.kaijin_stone": "Kaijin Stone",
 "item.kamenridercraft.creation_king_extract_vial": "Creation King Extract Vial",
 
+"item.kamenridercraft.card_warrior_kamen_rider_manga": "Card Warrior Kamen Rider Manga",
 "item.kamenridercraft.stagtornador": "Stagtornador Card Warrior Card",
 "item.kamenridercraft.grandgouram": "GrandGouram Card Warrior Card",
 "item.kamenridercraft.cyclonehopper": "Cyclonehopper Card Warrior Card",
 "item.kamenridercraft.flaresalamander": "Flaresalamander Card Warrior Card",
+"item.kamenridercraft.flaresalamander_sword": "Flaresalamander Sword",
+"item.kamenridercraft.grandgouram_rod": "GrandGouram Rod",
+"item.kamenridercraft.darkwing_sword": "Darkwing Sword",
+"item.kamenridercraft.herculespader_sword": "Herculespader Sword",
 
 "entity.kamenridercraft.shocker_combatman":"Shocker Combatman",
 "entity.minecraft.villager.kamenridercraft.shocker_villager":"Shocker",

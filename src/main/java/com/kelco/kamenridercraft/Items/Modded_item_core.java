@@ -3,6 +3,7 @@ package com.kelco.kamenridercraft.Items;
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
 import com.kelco.kamenridercraft.Effect.Effect_core;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseItem;
+import com.kelco.kamenridercraft.Items.rider_armor_base.BaseSwordItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderFormChangeItem;
 
 import net.minecraft.world.effect.MobEffectInstance;
@@ -24,6 +25,19 @@ public class Modded_item_core {
 	public static final RegistryObject<Item> RIDER_CIRCUIT = ITEMS.register("rider_circuit",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.Misc_TAB_ITEM));
 
+	public static final RegistryObject<Item> ICE_POP = ITEMS.register("icepop1",
+			() -> new BaseItem(new Item.Properties().food(Foods.BEEF)).AddToTabList(RiderTabs.Misc_TAB_ITEM));
+	
+	public static final RegistryObject<Item> ICE_POP2 = ITEMS.register("icepop2",
+			() -> new BaseItem(new Item.Properties().food(Foods.BEEF)).AddToTabList(RiderTabs.Misc_TAB_ITEM));
+	
+	public static final RegistryObject<Item> ICE_POP3 = ITEMS.register("icepop3",
+			() -> new BaseItem(new Item.Properties().food(Foods.BEEF)).AddToTabList(RiderTabs.Misc_TAB_ITEM));
+	
+	
+	public static final RegistryObject<Item> DONUT = ITEMS.register("donut",
+			() -> new BaseItem(new Item.Properties().food(Foods.BREAD)).AddToTabList(RiderTabs.Misc_TAB_ITEM));
+
 	public static final RegistryObject<Item> BASE_SWORD = ITEMS.register("base_sword",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.Misc_TAB_ITEM));
 
@@ -33,21 +47,11 @@ public class Modded_item_core {
 	public static final RegistryObject<Item> SHOCKER_EMBLEM = ITEMS.register("shocker_emblem",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.Misc_TAB_ITEM));
 
-	public static final RegistryObject<Item> ICE_POP = ITEMS.register("icepop1",
-			() -> new BaseItem(new Item.Properties().food(Foods.BEEF)).AddToTabList(RiderTabs.Misc_TAB_ITEM));
-
-	public static final RegistryObject<Item> ICE_POP2 = ITEMS.register("icepop2",
-			() -> new BaseItem(new Item.Properties().food(Foods.BEEF)).AddToTabList(RiderTabs.Misc_TAB_ITEM));
-
-	public static final RegistryObject<Item> ICE_POP3 = ITEMS.register("icepop3",
-			() -> new BaseItem(new Item.Properties().food(Foods.BEEF)).AddToTabList(RiderTabs.Misc_TAB_ITEM));
-
-	
-	public static final RegistryObject<Item> DONUT = ITEMS.register("donut",
-			() -> new BaseItem(new Item.Properties().food(Foods.BREAD)).AddToTabList(RiderTabs.Misc_TAB_ITEM));
-
 	public static final RegistryObject<Item> SINISTER_PACHINKO_BALL = ITEMS.register("sinister_pachinko_ball",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.Misc_TAB_ITEM));
+
+	public static final RegistryObject<Item> CARD_WARRIOR_KAMEN_RIDER_MANGA = ITEMS.register("card_warrior_kamen_rider_manga",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.Misc_TAB_ITEM).KeepItem());
 
 	//Dragreder
 	//Stagtornador
@@ -100,6 +104,22 @@ public class Modded_item_core {
 
 	//Bakuen no senshi
 	//Jinrai no senshi
+
+	public static final RegistryObject<SwordItem> GRANDGOURAM_ROD = ITEMS.register("grandgouram_rod",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.Misc_TAB_ITEM)
+			.ChangeRepairItem(RIDER_CIRCUIT.get()));
+
+	public static final RegistryObject<SwordItem> HERCULESPADER_SWORD = ITEMS.register("herculespader_sword",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.Misc_TAB_ITEM)
+			.ChangeRepairItem(RIDER_CIRCUIT.get()));
+
+	public static final RegistryObject<SwordItem> DARKWING_SWORD = ITEMS.register("darkwing_sword",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 9, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.Misc_TAB_ITEM)
+			.ChangeRepairItem(RIDER_CIRCUIT.get()));
+
+	public static final RegistryObject<SwordItem> FLARESALAMANDER_SWORD = ITEMS.register("flaresalamander_sword",
+			() -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.Misc_TAB_ITEM)
+			.ChangeRepairItem(RIDER_CIRCUIT.get()));
 	
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
