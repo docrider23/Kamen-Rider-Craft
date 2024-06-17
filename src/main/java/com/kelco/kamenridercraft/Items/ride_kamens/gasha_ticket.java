@@ -39,7 +39,9 @@ public class gasha_ticket extends BaseItem{
 		
 			playerIn.drop(new ItemStack(RingDrop(), 1), true);
 			
-		itemstack.shrink(1);	
+		if	(!playerIn.isCreative()) {
+			itemstack.shrink(1);
+		}
 	}
 
 
