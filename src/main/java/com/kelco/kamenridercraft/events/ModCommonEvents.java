@@ -335,6 +335,43 @@ public class ModCommonEvents {
 						new ItemStack(Items.EMERALD, 4),
 						stack,10,8,0.02F));
 			}
+			
+			if(event.getType() == RiderVillagers.KAMEN_CAFE_BUTLER.get()) {
+				Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+				ItemStack stack = new ItemStack(Miscellaneous_Rider_Items.CANDY.get(), 3);
+				int villagerLevel = 1;
+
+				trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+						new ItemStack(Items.EMERALD, 1),
+						stack,10,8,0.02F));
+			}
+			if(event.getType() == RiderVillagers.KAMEN_CAFE_BUTLER.get()) {
+				Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+				ItemStack stack = new ItemStack(Miscellaneous_Rider_Items.CONTRACT_CHAOSTONE.get(), 1);
+				int villagerLevel = 1;
+
+				trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+						new ItemStack(Items.EMERALD, 2),
+						stack,10,8,0.02F));
+			}
+			if(event.getType() == RiderVillagers.KAMEN_CAFE_BUTLER.get()) {
+				Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+				ItemStack stack = new ItemStack(Miscellaneous_Rider_Items.GASHA_TICKET.get(), 1);
+				int villagerLevel = 2;
+
+				trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+						new ItemStack(Items.EMERALD, 6),
+						stack,10,8,0.02F));
+			}
+			if(event.getType() == RiderVillagers.KAMEN_CAFE_BUTLER.get()) {
+				Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+				ItemStack stack = new ItemStack(Miscellaneous_Rider_Items.ENERGY_DRINK.get(), 1);
+				int villagerLevel = 2;
+
+				trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+						new ItemStack(Items.EMERALD, 2),
+						stack,10,8,0.02F));
+			}
 		}
 	}
 	@SubscribeEvent

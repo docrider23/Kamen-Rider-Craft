@@ -10,6 +10,8 @@ import com.kelco.kamenridercraft.Items.rider_armor_base.RiderFormChangeItem;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.Item;
@@ -149,6 +151,14 @@ public class Miscellaneous_Rider_Items {
 
 		    public static final RegistryObject<Item> GASHA_TICKET = ITEMS.register("gasha_ticket",
 		    		() -> new gasha_ticket(new Item.Properties()).AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
+
+		    public static final RegistryObject<Item> CANDY = ITEMS.register("candy",
+					() -> new BaseItem(new Item.Properties().food((new FoodProperties.Builder()).nutrition(1).fast().saturationMod(0.8F).alwaysEat().effect(new MobEffectInstance(MobEffects.DIG_SPEED, 500, 0), 1.0F).build()))
+					.AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
+		    
+		    public static final RegistryObject<Item> ENERGY_DRINK = ITEMS.register("energy_drink",
+					() -> new BaseItem(new Item.Properties().food((new FoodProperties.Builder()).nutrition(1).fast().saturationMod(0.8F).alwaysEat().effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 500, 2), 1.0F).build()))
+							.AddToTabList(RiderTabs.RIDE_KAMENS_TAB_ITEM));
 
 	
 
