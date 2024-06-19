@@ -7,6 +7,7 @@ import com.kelco.kamenridercraft.Items.rider_armor_base.BaseBlasterItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseShieldItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseSwordItem;
+import com.kelco.kamenridercraft.Items.rider_armor_base.CopyFormChangeItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderArmorItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderFormChangeItem;
@@ -213,10 +214,10 @@ public class W_Rider_Items {
 
 
 	public static final RegistryObject<Item> SHIPPU_MEMORY = ITEMS.register("shippu_memory",
-			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.W_TAB_ITEM));
+			() -> new CopyFormChangeItem(new Item.Properties(),CYCLONE_MEMORY.get()).AddToTabList(RiderTabs.W_TAB_ITEM));
 
 	public static final RegistryObject<Item> KIRIFUDA_MEMORY = ITEMS.register("kirifuda_memory",
-			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.W_TAB_ITEM));
+			() -> new CopyFormChangeItem(new Item.Properties(),JOKER_MEMORY.get()).AddToTabList(RiderTabs.W_TAB_ITEM));
 
 	
 	public static final RegistryObject<Item> ACCEL_T2_MEMORY = ITEMS.register("accel_t2_memory",
