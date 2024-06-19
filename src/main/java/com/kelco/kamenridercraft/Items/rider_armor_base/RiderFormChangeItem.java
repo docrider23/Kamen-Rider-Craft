@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.google.common.collect.Lists;
+import com.kelco.kamenridercraft.Blocks.MachineBlocks.GSystemChipProgrammer;
 import com.kelco.kamenridercraft.Effect.Effect_core;
 import com.kelco.kamenridercraft.Items.Modded_item_core;
 
@@ -194,8 +195,8 @@ public class RiderFormChangeItem extends BaseItem {
 		return this;
 	}
 
-	public BaseItem AddNeedItemList(List<Item> nEED_ITEM_DOGABAKI) {
-		needItemList=nEED_ITEM_DOGABAKI;
+	public BaseItem AddNeedItemList(List<Item> NEED_ITEM) {
+		needItemList=NEED_ITEM;
 		HAS_NEED_ITEM_LIST=true;
 		return this;
 	}
@@ -284,4 +285,6 @@ public class RiderFormChangeItem extends BaseItem {
 		return InteractionResultHolder.sidedSuccess(itemstack, p_41128_.isClientSide());
 
 	}
+
+	
 }
