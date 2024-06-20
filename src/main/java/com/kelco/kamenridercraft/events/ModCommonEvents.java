@@ -11,6 +11,7 @@ import com.kelco.kamenridercraft.Entities.bosses.AncientOOOEntity;
 import com.kelco.kamenridercraft.Entities.bosses.AnkhCompleteEntity;
 import com.kelco.kamenridercraft.Entities.bosses.AnkhLostEntity;
 import com.kelco.kamenridercraft.Entities.bosses.AnotherAgitoEntity;
+import com.kelco.kamenridercraft.Entities.bosses.CaucasusEntity;
 import com.kelco.kamenridercraft.Entities.bosses.ClayDollDopantEntity;
 import com.kelco.kamenridercraft.Entities.bosses.CommanderDopantEntity;
 import com.kelco.kamenridercraft.Entities.bosses.CoreEntity;
@@ -49,12 +50,15 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.FoundationXMasqueradeEnti
 import com.kelco.kamenridercraft.Entities.footSoldiers.GODWarfareAgentEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.KnightSoldierEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.MasqueradeEntity;
+import com.kelco.kamenridercraft.Entities.footSoldiers.NeotrooperEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.PantherasLuteusEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.RedFollowerEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.RideplayerEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.RiotrooperEntity;
+import com.kelco.kamenridercraft.Entities.footSoldiers.ShadowTrooperEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ShockerCombatmanEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.YummyEntity;
+import com.kelco.kamenridercraft.Entities.footSoldiers.ZectrooperEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ZuGumunBaEntity;
 import com.kelco.kamenridercraft.Items.Ichigo_Rider_Items;
 import com.kelco.kamenridercraft.Items.Kuuga_Rider_Items;
@@ -394,6 +398,10 @@ public class ModCommonEvents {
 
 		event.register(MobsCore.RIOTROOPER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
 
+		event.register(MobsCore.ZECTROOPER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
+		event.register(MobsCore.SHADOW_TROOPER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
+		event.register(MobsCore.NEOTROOPER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
+
 		event.register(MobsCore.MASQUERADE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
 		event.register(MobsCore.FOUNDATION_X_MASQUERADE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
 		event.register(MobsCore.YUMMY.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
@@ -431,6 +439,11 @@ public class ModCommonEvents {
 
 		event.put(MobsCore.RIOTROOPER.get(), RiotrooperEntity.setAttributes());
 		event.put(MobsCore.ORGA.get(), OrgaEntity.setAttributes());
+
+		event.put(MobsCore.ZECTROOPER.get(), ZectrooperEntity.setAttributes());
+		event.put(MobsCore.SHADOW_TROOPER.get(), ShadowTrooperEntity.setAttributes());
+		event.put(MobsCore.NEOTROOPER.get(), NeotrooperEntity.setAttributes());
+		event.put(MobsCore.CAUCASUS.get(), CaucasusEntity.setAttributes());
 
 		event.put(MobsCore.MASQUERADE.get(), MasqueradeEntity.setAttributes());
 		event.put(MobsCore.CLAYDOLL_DOPANT.get(), ClayDollDopantEntity.setAttributes());        

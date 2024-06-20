@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "sasword",
+  "pattern": [
+    "XXX",
+    "XZX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "kamenridercraft:mini_zecter"
+    },
+    "Z": {
+      "item": "kamenridercraft:sasword_zecter"
+    }
+  },
+  "result": {
+    "item": "kamenridercraft:sasword_rider_belt"
+  }
+}

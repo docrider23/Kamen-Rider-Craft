@@ -53,6 +53,8 @@ public class ModClientEvents {
 		ItemBlockRenderTypes.setRenderLayer(Rider_Blocks.GLASS_RYUKI.get(), RenderType.translucent());
 		ItemBlockRenderTypes.setRenderLayer(Rider_Blocks.DEEPSLATE_GLASS_RYUKI.get(), RenderType.translucent());
 		ItemBlockRenderTypes.setRenderLayer(Rider_Blocks.FANGIRE_GLASS.get(), RenderType.translucent());
+		ItemBlockRenderTypes.setRenderLayer(Rider_Blocks.BLUE_ROSE.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(Rider_Blocks.POTTED_BLUE_ROSE.get(), RenderType.cutout());
 		
 		event.enqueueWork(() -> {
 		
@@ -160,6 +162,11 @@ public class ModClientEvents {
 
 		event.registerEntityRenderer(MobsCore.RIOTROOPER.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.ORGA.get(), BasicEntityRenderer::new);
+
+		event.registerEntityRenderer(MobsCore.ZECTROOPER.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.SHADOW_TROOPER.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.NEOTROOPER.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.CAUCASUS.get(), BasicEntityRenderer::new);
 
 		event.registerEntityRenderer(MobsCore.MASQUERADE.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.WEATHER_DOPANT.get(), BasicEntityRenderer::new);

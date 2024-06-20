@@ -12,6 +12,7 @@ import com.kelco.kamenridercraft.Items.Faiz_Rider_Items;
 import com.kelco.kamenridercraft.Items.Gotchard_Rider_Items;
 import com.kelco.kamenridercraft.Items.Hibiki_Rider_Items;
 import com.kelco.kamenridercraft.Items.Ichigo_Rider_Items;
+import com.kelco.kamenridercraft.Items.Kabuto_Rider_Items;
 import com.kelco.kamenridercraft.Items.Kiva_Rider_Items;
 import com.kelco.kamenridercraft.Items.Kuuga_Rider_Items;
 import com.kelco.kamenridercraft.Items.Miscellaneous_Rider_Items;
@@ -30,8 +31,11 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 
 
 
@@ -51,6 +55,7 @@ public class KamenRiderCraftCore {
 		Faiz_Rider_Items.register(modEventBus);
 		Blade_Rider_Items.register(modEventBus);
 		Hibiki_Rider_Items.register(modEventBus);
+		Kabuto_Rider_Items.register(modEventBus);
 		Kiva_Rider_Items.register(modEventBus);
 		W_Rider_Items.register(modEventBus);
 		OOO_Rider_Items.register(modEventBus);
@@ -66,19 +71,18 @@ public class KamenRiderCraftCore {
 		ModLootModifiers.register(modEventBus);
 		Rider_Blocks.register(modEventBus);
 		ModPaintings.register(modEventBus);
+		modEventBus.addListener(this::commonSetup);
 		MinecraftForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::addCreative);
-		//modEventBus.addListener(this::commonSetup);
 	}
 
 
-	/** private void commonSetup(final FMLCommonSetupEvent event) {
-
-	        event.enqueueWork(() -> {
-	        	//((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(Rider_Blocks.BLUE_ROSE.getId(), Rider_Blocks.POTTED_BLUE_ROSE);
-	            RiderVillagers.registerPOIs();
-	        });
-	    }**/
+	private void commonSetup(final FMLCommonSetupEvent event) {
+	    event.enqueueWork(() -> {
+	    	((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(Rider_Blocks.BLUE_ROSE.getId(), Rider_Blocks.POTTED_BLUE_ROSE);
+	        // RiderVillagers.registerPOIs();
+	    });
+	}
 
 	private void addCreative(BuildCreativeModeTabContentsEvent event) {
 

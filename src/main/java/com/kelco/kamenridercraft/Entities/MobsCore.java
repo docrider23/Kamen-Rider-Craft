@@ -11,6 +11,7 @@ import com.kelco.kamenridercraft.Entities.bosses.AnkhCompleteEntity;
 import com.kelco.kamenridercraft.Entities.bosses.AnkhLostEntity;
 import com.kelco.kamenridercraft.Entities.bosses.AnotherAgitoEntity;
 import com.kelco.kamenridercraft.Entities.bosses.AranburaBugsterEntity;
+import com.kelco.kamenridercraft.Entities.bosses.CaucasusEntity;
 import com.kelco.kamenridercraft.Entities.bosses.CharlieBugsterEntity;
 import com.kelco.kamenridercraft.Entities.bosses.ClayDollDopantEntity;
 import com.kelco.kamenridercraft.Entities.bosses.CommanderDopantEntity;
@@ -55,12 +56,15 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.FoundationXMasqueradeEnti
 import com.kelco.kamenridercraft.Entities.footSoldiers.GODWarfareAgentEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.KnightSoldierEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.MasqueradeEntity;
+import com.kelco.kamenridercraft.Entities.footSoldiers.NeotrooperEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.PantherasLuteusEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.RedFollowerEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.RideplayerEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.RiotrooperEntity;
+import com.kelco.kamenridercraft.Entities.footSoldiers.ShadowTrooperEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ShockerCombatmanEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.YummyEntity;
+import com.kelco.kamenridercraft.Entities.footSoldiers.ZectrooperEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ZuGumunBaEntity;
 
 import net.minecraft.world.entity.EntityType;
@@ -210,6 +214,31 @@ public class MobsCore {
 
      public static final RegistryObject<ForgeSpawnEggItem> ORGA_SPAWN_EGG = ITEMS.register("orga_spawn_egg",
              () -> new ForgeSpawnEggItem(ORGA,  0x11110e,0xd5ba4c, new Item.Properties()));
+     
+
+     public static final RegistryObject<EntityType<ZectrooperEntity>> ZECTROOPER = MOBLIST.register("zectrooper",
+             () -> EntityType.Builder.of(ZectrooperEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":zectrooper"));
+
+     public static final RegistryObject<ForgeSpawnEggItem> ZECTROOPER_SPAWN_EGG = ITEMS.register("zectrooper_spawn_egg",
+             () -> new ForgeSpawnEggItem(ZECTROOPER,  0x1d1d1d,0x1d1d1d, new Item.Properties()));
+     
+     public static final RegistryObject<EntityType<ShadowTrooperEntity>> SHADOW_TROOPER = MOBLIST.register("shadow_trooper",
+             () -> EntityType.Builder.of(ShadowTrooperEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":shadow_trooper"));
+
+     public static final RegistryObject<ForgeSpawnEggItem> SHADOW_TROOPER_SPAWN_EGG = ITEMS.register("shadow_trooper_spawn_egg",
+             () -> new ForgeSpawnEggItem(SHADOW_TROOPER,  0x1d1d1d,0x1d1d1d, new Item.Properties()));
+     
+     public static final RegistryObject<EntityType<NeotrooperEntity>> NEOTROOPER = MOBLIST.register("neotrooper",
+             () -> EntityType.Builder.of(NeotrooperEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":neotrooper"));
+
+     public static final RegistryObject<ForgeSpawnEggItem> NEOTROOPER_SPAWN_EGG = ITEMS.register("neotrooper_spawn_egg",
+             () -> new ForgeSpawnEggItem(NEOTROOPER,  0x1d1d1d,0x1d1d1d, new Item.Properties()));
+     
+     public static final RegistryObject<EntityType<CaucasusEntity>> CAUCASUS = MOBLIST.register("caucasus",
+             () -> EntityType.Builder.of(CaucasusEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":caucasus"));
+
+     public static final RegistryObject<ForgeSpawnEggItem> CAUCASUS_SPAWN_EGG = ITEMS.register("caucasus_spawn_egg",
+             () -> new ForgeSpawnEggItem(CAUCASUS,  0x999999,0xf4c600, new Item.Properties()));
      
 
      public static final RegistryObject<EntityType<MasqueradeEntity>> MASQUERADE = MOBLIST.register("masquerade",

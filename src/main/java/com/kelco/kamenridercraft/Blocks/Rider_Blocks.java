@@ -20,11 +20,14 @@ import com.kelco.kamenridercraft.Items.RiderTabs;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -57,15 +60,15 @@ public class Rider_Blocks {
 	public static final RegistryObject<Block> KAIJIN_STONE_GENERATOR = registerBlock("kaijin_stone_generator",
 			() -> new KaijinStoneGenerator(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
 					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
-	/**
+
 	public static final RegistryObject<Block> BLUE_ROSE = registerBlock("blue_rose",
-			() -> new FlowerBlock(MobEffects.MOVEMENT_SPEED, 5, 
-					BlockBehavior.Properties.copy(Blocks.DANDELION)).AddToTabList(RiderTabs.RIDER_BLOCK));
-	
+			() -> new FlowerBlock(() -> MobEffects.MOVEMENT_SPEED, 5, 
+					BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion().noCollission()));
+
 	public static final RegistryObject<Block> POTTED_BLUE_ROSE = BLOCKS.register("potted_blue_rose",
-			() -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT). Rider_Blocks.BLUE_ROSE (
-					BlockBehavior.Properties.copy(blocks.DANDELION)));
-	**/
+			() -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), Rider_Blocks.BLUE_ROSE, 
+					BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION).noOcclusion()));
+
 	public static final RegistryObject<Block> KUUGA_ORE = registerBlock("stone_kuuga",
 			() -> new BaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.STONE)
 					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F), UniformInt.of(2, 6)).AddToTabList(RiderTabs.RIDER_BLOCK));
