@@ -32,7 +32,7 @@ public class ClockUpPadItem extends BaseItem {
 		if (p_41129_.getItemBySlot(EquipmentSlot.LEGS).getItem() == Kabuto_Rider_Items.KABUTOLEGGINGS.get()){
 			if (p_41129_.getItemBySlot(EquipmentSlot.CHEST).getItem() == Kabuto_Rider_Items.KABUTOCHESTPLATE.get()){
 				if (p_41129_.getItemBySlot(EquipmentSlot.HEAD).getItem() == Kabuto_Rider_Items.KABUTOHELMET.get()){
-					if (p_41129_.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RiderDriverItem && RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),1).getFormName(false)!="_mask"){
+					if (p_41129_.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RiderDriverItem && RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),1).getFormName(false)!="_masked"){
                         for (int i = 0; i < ClockUpUsers.length; i++) {
                             if (ClockUpUsers[i]==((RiderDriverItem)p_41129_.getItemBySlot(EquipmentSlot.FEET).getItem()).Rider){
                                 if (!p_41128_.isClientSide()) {
