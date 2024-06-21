@@ -54,7 +54,7 @@ public class Modded_item_core {
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.Misc_TAB_ITEM).KeepItem());
 
 	
-	public static final RegistryObject<Item> DRAGREDER = ITEMS.register("ragreder",
+	public static final RegistryObject<Item> DRAGREDER = ITEMS.register("dragreder",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_dragreder","ryuki","v_buckle_belt_ryuki",
 					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),

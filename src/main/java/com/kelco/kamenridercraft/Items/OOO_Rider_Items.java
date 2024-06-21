@@ -246,17 +246,17 @@ public class OOO_Rider_Items {
 	public static final RegistryObject<Item> SEIUCHI_MEDAL = ITEMS.register("seiuchi_medal",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_seiuchi","ooo","ooodriver_belt",
 					new MobEffectInstance(MobEffects.SATURATION, 40, 1,true,false))
-			.ChangeSlot(1).AddToTabList(RiderTabs.OOO_TAB_ITEM));
+			.ChangeSlot(1).AddToTabList(CellMedalProgramer.SEISHIROGIN).AddToTabList(RiderTabs.OOO_TAB_ITEM));
 
 	public static final RegistryObject<Item> SHIROKUMA_MEDAL = ITEMS.register("shirokuma_medal",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_shirokuma","ooo","ooodriver_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false))
-			.ChangeSlot(2).AddToTabList(RiderTabs.OOO_TAB_ITEM));
+			.ChangeSlot(2).AddToTabList(CellMedalProgramer.SEISHIROGIN).AddToTabList(RiderTabs.OOO_TAB_ITEM));
 
 	public static final RegistryObject<Item> PENGUIN_MEDAL = ITEMS.register("penguin_medal",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_penguin","ooo","ooodriver_belt",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
-			.ChangeSlot(3).AddToTabList(RiderTabs.OOO_TAB_ITEM));
+			.ChangeSlot(3).AddToTabList(CellMedalProgramer.SEISHIROGIN).AddToTabList(RiderTabs.OOO_TAB_ITEM));
 
 
 	public static final RegistryObject<Item> PANDA_MEDAL = ITEMS.register("panda_medal",

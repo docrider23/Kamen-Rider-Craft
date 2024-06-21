@@ -320,6 +320,16 @@ public class ModCommonEvents {
 						new ItemStack(Items.EMERALD, 2),
 						stack,10,8,0.02F));
 			} 
+
+			if(event.getType() == RiderVillagers.SHOCKER_VILLAGER.get()) {
+				Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+				ItemStack stack = new ItemStack(Ichigo_Rider_Items.NOPHOON_CORE.get(), 1);
+				int villagerLevel = 3;
+
+				trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+						new ItemStack(Items.EMERALD, 2),
+						stack,10,8,0.02F));
+			} 
 			
 			if(event.getType() == RiderVillagers.SHOCKER_VILLAGER.get()) {
 				Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();

@@ -6,7 +6,13 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "kamenridercraft:green_king_stone"
+          "name": "kamenridercraft:green_king_stone",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kamenridercraft:moon_rx_core",
+          "weight": 1
         }
       ]
     },

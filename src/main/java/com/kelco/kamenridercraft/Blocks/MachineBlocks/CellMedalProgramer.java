@@ -13,6 +13,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -25,7 +26,8 @@ import net.minecraft.world.phys.BlockHitResult;
 
 public class CellMedalProgramer extends MachineBlock {
 	
-	  public static List<Item> CELL_MEDAL= new ArrayList<Item>();
+    public static List<Item> CELL_MEDAL= new ArrayList<Item>();
+    public static List<Item> SEISHIROGIN= new ArrayList<Item>();
 		 
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
@@ -52,13 +54,23 @@ public class CellMedalProgramer extends MachineBlock {
  			int rand = generator.nextInt(CELL_MEDAL.size());
  			return CELL_MEDAL.get(rand);
  		}
+
+     private Item getSeishiroginDrop(int num) {
+         Random generator = new Random();
+             int rand = generator.nextInt(SEISHIROGIN.size());
+             return SEISHIROGIN.get(rand);
+         }
    
     @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos,
     		Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
     	
         if (!pLevel.isClientSide()) {
-            if (pPlayer.getItemInHand(pHand).getItem() == OOO_Rider_Items.CELL_MEDAL.get()) process(pPlayer, pLevel, pPos, pHand, getCellMedalDrop(0));
+            if (pPlayer.getItemInHand(pHand).getItem() == OOO_Rider_Items.CELL_MEDAL.get()) {
+                process(pPlayer, pLevel, pPos, pHand, getCellMedalDrop(0));
+            } else if (pPlayer.getItemInHand(pHand).getItem() == Items.PACKED_ICE) {
+                process(pPlayer, pLevel, pPos, pHand, getSeishiroginDrop(0));
+            }
             return  InteractionResult.sidedSuccess(true);
         }
         return InteractionResult.sidedSuccess(false);
