@@ -84,8 +84,15 @@ public class Modded_item_core {
 						new MobEffectInstance(Effect_core.FLYING.get(), 40, 1,true,false))
 						.ChangeModel("geo/cyclonehopper_wingsarmor.geo.json").AddToTabList(RiderTabs.Misc_TAB_ITEM));
 
-	//Greywolch
 
+
+		public static final RegistryObject<Item> GREYWOLCH = ITEMS.register("greywolch",
+				() -> new RiderFormChangeItem(new Item.Properties(),0,"_greywolch","faiz","faiz_driver_belt",
+						new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
+						new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false),
+						new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
+				.ChangeModel("geo/cyclonehopper_wingsarmor.geo.json").AddToTabList(RiderTabs.Misc_TAB_ITEM));
+		 
 	public static final RegistryObject<Item> GRANDGOURAM = ITEMS.register("grandgouram",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_grand_gouram","kuuga","arcle_belt_r",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
@@ -95,9 +102,28 @@ public class Modded_item_core {
 					new MobEffectInstance(Effect_core.PUNCH.get(), 40, 8,true,false))
 			.ChangeModel("geo/cyclonehopper_wingsarmor.geo.json").AddToTabList(RiderTabs.Misc_TAB_ITEM));
 
-	//Exbeeter
-	//Chaosdile
-	//Leatheraider
+    public static final RegistryObject<Item> EXBEETER = ITEMS.register("exbeeter",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"_exbeeter","kabuto","kabuto_rider_belt",
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false))
+        	.ChangeModel("geo/cyclonehopper_wingsarmor.geo.json").AddToTabList(RiderTabs.Misc_TAB_ITEM));
+    
+    public static final RegistryObject<Item> CHAOSDILE = ITEMS.register("chaosdile",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_chaosdile","kaixa","kaixa_driver_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)
+					).ChangeModel("geo/cyclonehopper_wingsarmor.geo.json").AddToTabList(RiderTabs.Misc_TAB_ITEM));
+
+    
+    public static final RegistryObject<Item> LEATHERAIDER = ITEMS.register("leatheraider",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"_leatheraider","gills","meta_factor_belt",
+            		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false),
+            		new MobEffectInstance(MobEffects.JUMP, 40, 0,true,false))
+            .ChangeModel("geo/cyclonehopper_wingsarmor.geo.json").AddToTabList(RiderTabs.Misc_TAB_ITEM));
+
+
 	public static final RegistryObject<Item> FLARESALAMANDER = ITEMS.register("flaresalamander",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_flaresalamander","v3","double_typhoon_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),

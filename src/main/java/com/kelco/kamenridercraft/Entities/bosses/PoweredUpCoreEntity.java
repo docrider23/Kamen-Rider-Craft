@@ -72,13 +72,6 @@ public class  PoweredUpCoreEntity extends BaseHenchmenEntity {
 
 	protected void customServerAiStep() {
 		super.customServerAiStep();
-		
-		if(getItemBySlot(EquipmentSlot.FEET).getItem()==Ex_Aid_Rider_Items.GASHACON_BUGVISOR_II_CHRONOS.get()){
-			ItemStack belt = getItemBySlot(EquipmentSlot.FEET);
-			if (RiderDriverItem.get_Form_Item(belt,1)==Ex_Aid_Rider_Items.KAMEN_RIDER_CHRONICLE_GASHAT_GEMEDEUS.get()&this.bossEvent.getColor()!=BossEvent.BossBarColor.RED) {
-				this.bossEvent.setColor(BossEvent.BossBarColor.RED);
-			}
-		}
 		this.bossEvent.setProgress(this.getHealth() / this.getMaxHealth());
 	}
 

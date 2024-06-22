@@ -167,6 +167,11 @@ public class Rider_Blocks {
 			() -> new BaseFacingBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)
 					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	
+	public static final RegistryObject<Block> GINGA_METEOR = registerBlock("ginga_meteor",
+			() -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN)
+					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
+	
+	
 	public static final RegistryObject<Block> KAMEN_CAFE_COUNTER = registerBlock("kamen_cafe_counter",
 			() -> new BaseFacingBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)
 					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));

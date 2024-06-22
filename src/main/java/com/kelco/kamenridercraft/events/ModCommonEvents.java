@@ -78,6 +78,7 @@ import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
+import net.minecraft.world.entity.npc.VillagerTrades.ItemListing;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -94,6 +95,7 @@ import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent.ItemPickupEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
+import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -231,6 +233,16 @@ public class ModCommonEvents {
 
 
 		}
+		
+		@SubscribeEvent
+		public static void addCustomWandererTrades(WandererTradesEvent event) {
+			List<ItemListing> trades = event.getGenericTrades();
+			ItemStack stack = new ItemStack(Rider_Blocks.GINGA_METEOR.get(), 1);
+			trades.add((trader, rand) -> new MerchantOffer(
+					new ItemStack(Items.EMERALD, 2),
+					stack,10,8,0.02F));
+		}
+		
 
 		@SubscribeEvent
 		public static void addCustomTrades(VillagerTradesEvent event) {
