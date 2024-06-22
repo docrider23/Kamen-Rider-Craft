@@ -134,10 +134,46 @@ public class Modded_item_core {
 					new MobEffectInstance(Effect_core.FLYING.get(), 40, 1,true,false)
 					).ChangeModel("geo/v3_flaresalamander.geo.json").AddToTabList(RiderTabs.Misc_TAB_ITEM));
 
-	//Dragranzer
-	//Scissorbeeter
-	//Akanetaka
-	//Shadowmantis
+	public static final RegistryObject<Item> DRAGRANZER = ITEMS.register("dragranzer",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_dragranzer","ryuki","v_buckle_belt_ryuki_s",
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(Effect_core.FLYING.get(), 40, 1,true,false))
+					.ChangeModel("geo/cyclonehopper_wingsarmor.geo.json").AddToTabList(RiderTabs.Misc_TAB_ITEM));
+
+
+	public static final RegistryObject<Item> SCISSORBEETER = ITEMS.register("scissorbeeter",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"_scissorbeeter","gatack","gatack_rider_belt",
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
+					new MobEffectInstance(Effect_core.FLYING.get(), 40, 1,true,false))
+					.ChangeModel("geo/cyclonehopper_wingsarmor.geo.json").AddToTabList(RiderTabs.Misc_TAB_ITEM));
+
+	
+    public static final RegistryObject<Item> AKANETAKA = ITEMS.register("akanetaka",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"_akanetaka","hibiki","hibikidriver_belt",
+                    new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
+                    new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
+					new MobEffectInstance(Effect_core.FLYING.get(), 40, 1,true,false))
+					.ChangeModel("geo/cyclonehopper_wingsarmor.geo.json").AddToTabList(RiderTabs.Misc_TAB_ITEM));
+
+
+    public static final RegistryObject<Item> SHADOWMANTIS = ITEMS.register("shadowmantis",
+    		() -> new RiderFormChangeItem(new Item.Properties(),0,"_shadowmantis","chalice","chalice_rouzer_belt",
+            		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
+            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false),
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
+					new MobEffectInstance(Effect_core.FLYING.get(), 40, 1,true,false))
+					.ChangeModel("geo/cyclonehopper_wingsarmor.geo.json").AddToTabList(RiderTabs.Misc_TAB_ITEM));
+    
+	
+    
 	public static final RegistryObject<Item> CYCLONEHOPPER = ITEMS.register("cyclonehopper",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_cyclonehopper","ichigo","typhoon_belt_original",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
@@ -149,7 +185,75 @@ public class Modded_item_core {
 					).ChangeModel("geo/cyclonehopper_wingsarmor.geo.json").AddToTabList(RiderTabs.Misc_TAB_ITEM));
 
 	//Bakuen no senshi
-	//Jinrai no senshi
+	
+
+	
+	public static final RegistryObject<Item> BAKUEN_NO_SENSHI_HIBIKI = ITEMS.register("bakuen_no_senshi_hibiki",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_bakuen_no_senshi","hibiki","hibikidriver_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(Effect_core.FLYING.get(), 40, 1,true,false)
+					).ChangeModel("geo/cyclonehopper_wingsarmor.geo.json"));
+
+	public static final RegistryObject<Item> BAKUEN_NO_SENSHI_RYUGA = ITEMS.register("bakuen_no_senshi_ryuga",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_bakuen_no_senshi","ryuga","v_buckle_belt_ryuga",
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(Effect_core.FLYING.get(), 40, 1,true,false)
+					).ChangeModel("geo/cyclonehopper_wingsarmor.geo.json").addAlternative(BAKUEN_NO_SENSHI_HIBIKI.get()));
+
+	public static final RegistryObject<Item> BAKUEN_NO_SENSHI = ITEMS.register("bakuen_no_senshi",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_bakuen_no_senshi","faiz","faiz_driver_belt_b",
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(Effect_core.FLYING.get(), 40, 1,true,false)
+					).ChangeModel("geo/cyclonehopper_wingsarmor.geo.json").addAlternative(BAKUEN_NO_SENSHI_RYUGA.get()).AddToTabList(RiderTabs.Misc_TAB_ITEM));
+
+
+    public static final RegistryObject<Item> JINRAI_NO_SENSHI_DARK_KABUTO = ITEMS.register("jinrai_no_senshi_dark_kabuto",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"_jinrai_no_senshi","dark_kabuto","dark_kabuto_rider_belt",
+            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+            		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 6,true,false),
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
+            		new MobEffectInstance(Effect_core.FLYING.get(), 400, 0,true,false)
+            		).ChangeModel("geo/cyclonehopper_wingsarmor.geo.json"));
+
+	
+    public static final RegistryObject<Item> JINRAI_NO_SENSHI_BLADE = ITEMS.register("jinrai_no_senshi_blade",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"_jinrai_no_senshi","blade","blay_buckle_belt",
+            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+            		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 3,true,false),
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
+            		new MobEffectInstance(Effect_core.FLYING.get(), 400, 0,true,false)
+            		).ChangeModel("geo/cyclonehopper_wingsarmor.geo.json").addAlternative(JINRAI_NO_SENSHI_DARK_KABUTO.get()));
+
+	
+    public static final RegistryObject<Item> JINRAI_NO_SENSHI = ITEMS.register("jinrai_no_senshi",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"_jinrai_no_senshi","kuuga","arcle_belt_r",
+            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false),
+                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+                    new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+            		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 3,true,false),
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
+            		new MobEffectInstance(Effect_core.FLYING.get(), 400, 0,true,false)
+            		).ChangeModel("geo/cyclonehopper_wingsarmor.geo.json").addAlternative(JINRAI_NO_SENSHI_BLADE.get()).AddToTabList(RiderTabs.Misc_TAB_ITEM));
+
 
 	public static final RegistryObject<SwordItem> GRANDGOURAM_ROD = ITEMS.register("grandgouram_rod",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.Misc_TAB_ITEM)

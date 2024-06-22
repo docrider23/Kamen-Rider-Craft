@@ -116,10 +116,12 @@ public class Kabuto_Rider_Items {
                 () -> new RiderFormChangeItem(new Item.Properties(),0,"_masked","dark_kabuto","dark_kabuto_rider_belt_m",
                         new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false),
                         new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 0,true,false)));
+        
         public static final RegistryObject<Item> DARK_KABUTO_ZECTER = ITEMS.register("dark_kabuto_zecter",
                 () -> new RiderFormChangeItem(new Item.Properties(),0,"","dark_kabuto","dark_kabuto_rider_belt",
                         new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
                         new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false)).addSwitchForm(DARK_KABUTO_ZECTER_MASK.get()).AddToTabList(RiderTabs.KABUTO_TAB_ITEM));
+        
         public static final RegistryObject<Item> DARK_HYPER_ZECTER = ITEMS.register("dark_hyper_zecter",
                 () -> new RiderFormChangeItem(new Item.Properties(),0,"_hyper","dark_kabuto","dark_kabuto_rider_belt",
                         new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
@@ -127,7 +129,7 @@ public class Kabuto_Rider_Items {
                         new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
                         new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
                         new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
-                        new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)));
+                        new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)).addAlternative(GATACK_HYPER_ZECTER.get()));
 
         public static final RegistryObject<Item> CAUCASUS_ZECTER_MASK = ITEMS.register("caucasus_zecter_mask",
                 () -> new RiderFormChangeItem(new Item.Properties(),0,"_masked","caucasus","zect_buckle_belt",
@@ -175,7 +177,7 @@ public class Kabuto_Rider_Items {
                         new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
                         new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
                         new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
-                        new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)).addAlternative(GATACK_HYPER_ZECTER.get()).addAlternative(DARK_HYPER_ZECTER.get()).AddToTabList(RiderTabs.KABUTO_TAB_ITEM));
+                        new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)).addAlternative(DARK_HYPER_ZECTER.get()).AddToTabList(RiderTabs.KABUTO_TAB_ITEM));
 
         public static final RegistryObject<Item> ZECTROOPER_ZECTER = ITEMS.register("zectrooper_zecter",
         () -> new RiderFormChangeItem(new Item.Properties(),0,"","zectrooper","zectrooper_belt",

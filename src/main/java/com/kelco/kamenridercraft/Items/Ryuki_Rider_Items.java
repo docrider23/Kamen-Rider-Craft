@@ -142,6 +142,7 @@ public class Ryuki_Rider_Items {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).addAlternative(SURVIVE_REKKA_RYUGA.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 
+
 	public static final RegistryObject<Item> SURVIVE_SHIPPU_RAIA = ITEMS.register("survive_shippu_raia",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_survive","raia","v_buckle_belt_raia_s",
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
