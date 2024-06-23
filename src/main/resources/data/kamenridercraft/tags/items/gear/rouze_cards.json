@@ -1,8 +1,13 @@
 {
   "values": [
-    "#kamenridercraft:gear/form_items/blade",
+    "kamenridercraft:change_beetle",
+    "kamenridercraft:fusion_eagle",
+    "kamenridercraft:absorb_capricorn",
+    "kamenridercraft:evolution_caucasus",
+    "kamenridercraft:silver_evolution_caucasus",
     "#kamenridercraft:gear/form_items/garren",
-    "#kamenridercraft:gear/form_items/chalice",
+    "kamenridercraft:change_mantis",
+    "kamenridercraft:evolution_paradoxa",
     "#kamenridercraft:gear/form_items/leangle",
     "kamenridercraft:change_kerberos_glaive",
     "kamenridercraft:change_kerberos_lance",

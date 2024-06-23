@@ -1,8 +1,12 @@
 {
   "values": [
-    "#kamenridercraft:gear/form_items/ryuki",
+    "kamenridercraft:dragreder_advent",
+    "kamenridercraft:drag_shield_vent_form",
+    "kamenridercraft:survive_rekka",
+    "kamenridercraft:survive_black",
     "#kamenridercraft:gear/ability_items/ryuki",
-    "#kamenridercraft:gear/form_items/knight",
+    "kamenridercraft:darkwing_advent",
+    "kamenridercraft:wing_wall_vent",
     "#kamenridercraft:gear/ability_items/knight",
     "kamenridercraft:volcancer_advent",
     "#kamenridercraft:gear/ability_items/scissors",
@@ -22,7 +26,7 @@
     "kamenridercraft:gazelle_stab_vent",
     "kamenridercraft:blancwing_advent",
     "#kamenridercraft:gear/ability_items/femme",
-    "#kamenridercraft:gear/form_items/ryuga",
+    "kamenridercraft:dragblacker_advent",
     "#kamenridercraft:gear/ability_items/ryuga",
     "kamenridercraft:biogreeza_advent",
     "kamenridercraft:bio_winder_vent",
