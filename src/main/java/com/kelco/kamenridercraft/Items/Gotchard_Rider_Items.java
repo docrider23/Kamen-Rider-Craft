@@ -39,18 +39,19 @@ public class Gotchard_Rider_Items {
     		() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     	    
 	
-	   public static List<Item> NEED_ITEM_Steamhopper= new ArrayList<Item>();
-	   public static List<Item> NEED_ITEM_Appareskebow= new ArrayList<Item>();
-	   public static List<Item> NEED_ITEM_Antwrestler= new ArrayList<Item>();
-	   public static List<Item> NEED_ITEM_Venommariner= new ArrayList<Item>();
-	   public static List<Item> NEED_ITEM_Burninggorilla= new ArrayList<Item>();
+	   public static List<Item> NEED_ITEM_SteamHopper= new ArrayList<Item>();
+	   public static List<Item> NEED_ITEM_AppareSkebow= new ArrayList<Item>();
+	   public static List<Item> NEED_ITEM_VenomMariner= new ArrayList<Item>();
+	   public static List<Item> NEED_ITEM_AntWrestler= new ArrayList<Item>();
+	   public static List<Item> NEED_ITEM_BurningGorilla= new ArrayList<Item>();
+	   public static List<Item> NEED_ITEM_NeedleHawk= new ArrayList<Item>();
 	   
     public static final RegistryObject<Item> HOPPER1_RIDE_CHEMY_CARD = ITEMS.register("hopper1_ride_chemy_card",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","gotchard","gotchardriver_belt",
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
-            		new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false)).AddNeedItemList(NEED_ITEM_Steamhopper)
-            .AddToTabList(NEED_ITEM_Steamhopper).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
+            		new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false)).AddNeedItemList(NEED_ITEM_SteamHopper)
+            .AddToTabList(NEED_ITEM_SteamHopper).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     /* pikahotaru
      * gengenchoucho
      * bakuonzemi
@@ -60,7 +61,7 @@ public class Gotchard_Rider_Items {
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_ant_wrestler","gotchard","gotchardriver_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
             		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 2,true,false))
-            .AddNeedItemList(NEED_ITEM_Antwrestler).AddToTabList(NEED_ITEM_Antwrestler).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
+            .AddNeedItemList(NEED_ITEM_AntWrestler).AddToTabList(NEED_ITEM_AntWrestler).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
     /* greatonbo
      * stagvine
@@ -75,7 +76,7 @@ public class Gotchard_Rider_Items {
      */
     
     public static final RegistryObject<Item> WRESTLER_G_RIDE_CHEMY_CARD = ITEMS.register("wrestler_g_ride_chemy_card",
-            () -> new CopyFormChangeItem(new Item.Properties(),ANTROOPER_RIDE_CHEMY_CARD.get()).AddToTabList(NEED_ITEM_Antwrestler)
+            () -> new CopyFormChangeItem(new Item.Properties(),ANTROOPER_RIDE_CHEMY_CARD.get()).AddToTabList(NEED_ITEM_AntWrestler)
             .AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
      /* sasukemaru
@@ -88,7 +89,7 @@ public class Gotchard_Rider_Items {
             		new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
             		new MobEffectInstance(Effect_core.SLASH.get(), 40, 2,true,false))
             .ChangeModel("geo/gotchard_appare_skebow.geo.json")
-            .AddNeedItemList(NEED_ITEM_Appareskebow).AddToTabList(NEED_ITEM_Appareskebow).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
+            .AddNeedItemList(NEED_ITEM_AppareSkebow).AddToTabList(NEED_ITEM_AppareSkebow).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
     /* karyudos
      * x wizard
@@ -97,7 +98,7 @@ public class Gotchard_Rider_Items {
      */
     
     public static final RegistryObject<Item> SKEBOWS_RIDE_CHEMY_CARD = ITEMS.register("skebows_ride_chemy_card",
-            () -> new CopyFormChangeItem(new Item.Properties(),APPAREBUSHIDO_RIDE_CHEMY_CARD.get()).AddToTabList(NEED_ITEM_Appareskebow)
+            () -> new CopyFormChangeItem(new Item.Properties(),APPAREBUSHIDO_RIDE_CHEMY_CARD.get()).AddToTabList(NEED_ITEM_AppareSkebow)
             .AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
     /* hiikescue
@@ -113,7 +114,7 @@ public class Gotchard_Rider_Items {
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_venom_mariner","gotchard","gotchardriver_belt",
             		new MobEffectInstance(MobEffects.WATER_BREATHING, 40, 1,true,false),
             		new MobEffectInstance(Effect_core.ANTIPOISON.get(), 40, 1,true,false))
-            .AddNeedItemList(NEED_ITEM_Venommariner).AddToTabList(NEED_ITEM_Venommariner).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
+            .AddNeedItemList(NEED_ITEM_VenomMariner).AddToTabList(NEED_ITEM_VenomMariner).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
     public static final RegistryObject<Item> MADWHEEL_RIDE_CHEMY_CARD = ITEMS.register("madwheel_ride_chemy_card",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","valvarad","valvaradraw_buckle_belt",
@@ -131,7 +132,7 @@ public class Gotchard_Rider_Items {
             .ChangeSlot(3).addSwitchForm(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
     public static final RegistryObject<Item> STEAMLINER_RIDE_CHEMY_CARD = ITEMS.register("steamliner_ride_chemy_card",
-            () -> new CopyFormChangeItem(new Item.Properties(),HOPPER1_RIDE_CHEMY_CARD.get()).AddToTabList(NEED_ITEM_Steamhopper)
+            () -> new CopyFormChangeItem(new Item.Properties(),HOPPER1_RIDE_CHEMY_CARD.get()).AddToTabList(NEED_ITEM_SteamHopper)
             .AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
 	
     /* exceedfighter
@@ -141,8 +142,16 @@ public class Gotchard_Rider_Items {
      * mechanichani
      * bussasorry
      * bountybunny
-     * hawkstar
-     * tsupparihebi
+     */
+	   
+    public static final RegistryObject<Item> HAWKSTAR_RIDE_CHEMY_CARD = ITEMS.register("hawkstar_ride_chemy_card",
+         () -> new RiderFormChangeItem(new Item.Properties(),0,"_needle_hawk","gotchard","gotchardriver_belt",
+         		new MobEffectInstance(Effect_core.FLYING.get(), 40, 1,true,false),
+         		new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 1,true,false))
+         .ifFlyingModelResource("geo/gotchard_needle_hawk.geo.json").AddNeedItemList(NEED_ITEM_NeedleHawk)
+         .AddToTabList(NEED_ITEM_NeedleHawk).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
+ 
+     /* tsupparihebi
      */
     
     public static final RegistryObject<Item> GORILLASENSEI_RIDE_CHEMY_CARD = ITEMS.register("gorillasensei_ride_chemy_card",
@@ -150,7 +159,7 @@ public class Gotchard_Rider_Items {
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
             		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false),
             		new MobEffectInstance(Effect_core.FIRE_PUNCH.get(), 40, 4,true,false))
-            .AddNeedItemList(NEED_ITEM_Burninggorilla).AddToTabList(NEED_ITEM_Burninggorilla).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
+            .AddNeedItemList(NEED_ITEM_BurningGorilla).AddToTabList(NEED_ITEM_BurningGorilla).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
     /* ganvhale
      * lixion
@@ -170,15 +179,18 @@ public class Gotchard_Rider_Items {
      */
     
     public static final RegistryObject<Item> BURNINGNERO_RIDE_CHEMY_CARD = ITEMS.register("burningnero_ride_chemy_card",
-            () -> new CopyFormChangeItem(new Item.Properties(),GORILLASENSEI_RIDE_CHEMY_CARD.get()).AddToTabList(NEED_ITEM_Burninggorilla)
+            () -> new CopyFormChangeItem(new Item.Properties(),GORILLASENSEI_RIDE_CHEMY_CARD.get()).AddToTabList(NEED_ITEM_BurningGorilla)
             .AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
     /* bambamboo
-     * saboneedle
      */
     
+    public static final RegistryObject<Item> SABONEEDLE_RIDE_CHEMY_CARD = ITEMS.register("saboneedle_ride_chemy_card",
+            () -> new CopyFormChangeItem(new Item.Properties(),HAWKSTAR_RIDE_CHEMY_CARD.get()).AddToTabList(NEED_ITEM_NeedleHawk)
+            .AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
+    
     public static final RegistryObject<Item> VENOMDAKE_RIDE_CHEMY_CARD = ITEMS.register("venomdake_ride_chemy_card",
-            () -> new CopyFormChangeItem(new Item.Properties(),DEEPMARINER_RIDE_CHEMY_CARD.get()).AddToTabList(NEED_ITEM_Venommariner)
+            () -> new CopyFormChangeItem(new Item.Properties(),DEEPMARINER_RIDE_CHEMY_CARD.get()).AddToTabList(NEED_ITEM_VenomMariner)
             .AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
      /* utsubocchama
