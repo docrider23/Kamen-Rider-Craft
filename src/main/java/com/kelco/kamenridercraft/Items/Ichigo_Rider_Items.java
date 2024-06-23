@@ -418,11 +418,6 @@ public class Ichigo_Rider_Items {
 	            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false))
 	            .AddToTabList(RiderTabs.BLACK_TAB_ITEM));
 	    	
-	    public static final RegistryObject<Item> GREEN_KING_STONE_HAJIME_SORAYAMA = ITEMS.register("green_king_stone_hajime_sorayama",
-	            () -> new RiderFormChangeItem(new Item.Properties(),0,"_hajime_sorayama","shadow_moon","shadow_charger_belt",
-	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.DIG_SPEED,40, 0,true,false)
-	            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false))
-	            .IsGlowing().AddToTabList(RiderTabs.BLACK_TAB_ITEM));
 	    
 	    
 	    public static final RegistryObject<Item> BLACKHELMET = ITEMS.register("blackhead",

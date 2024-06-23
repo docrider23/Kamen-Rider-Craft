@@ -126,8 +126,13 @@ public class Blade_Rider_Items {
     		() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.BLADE_TAB_ITEM));
     
 	public static final RegistryObject<Item> EVOLUTION_TARANTULA = ITEMS.register("evolution_tarantula",
-    		() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.BLADE_TAB_ITEM));
-	
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_king","leangle","leangle_buckle_belt",
+	            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+	            		new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
+	            		new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 0,true,false),
+	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false))
+	            .addNeedItem(ROUZE_ABSORBER.get()).addNeedItem(ABSORB_TIGER.get()).addNeedItem(FUSION_ELEPHANT.get()).AddToTabList(RiderTabs.BLADE_TAB_ITEM));
+	    
 	public static final RegistryObject<Item> CHANGE_KERBEROS_GLAIVE = ITEMS.register("change_kerberos_glaive",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","glaive","glaive_buckle_belt",
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false),
