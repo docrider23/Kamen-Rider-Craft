@@ -75,7 +75,7 @@ public class Ex_Aid_Rider_Items {
 	public static final RegistryObject<Item> BANG_BANG_SHOOTING_GASHAT = ITEMS.register("bang_bang_shooting_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","snipe","gamer_driver_bang_bang_shooting",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
-					new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0,true,false)).addSwitchForm(BANG_BANG_SHOOTING_GASHAT_LV_1.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get())
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)).addSwitchForm(BANG_BANG_SHOOTING_GASHAT_LV_1.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get())
 			.AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 15));
 
 	public static final RegistryObject<Item> BAKUSOU_BIKE_GASHAT_LV_1 = ITEMS.register("bakusou_bike_gashat_lv_1",
@@ -193,7 +193,7 @@ public class Ex_Aid_Rider_Items {
 	public static final RegistryObject<Item> PROTO_BANG_BANG_SHOOTING_GASHAT = ITEMS.register("proto_bang_bang_shooting_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_proto_snipe","snipe","gamer_driver_proto_bang_bang_shooting",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
-					new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
 					new MobEffectInstance(Effect_core.BUGSTER.get(), 40, 0,true,false)).addSwitchForm(PROTO_BANG_BANG_SHOOTING_GASHAT_LV_1.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get())
 			.AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 

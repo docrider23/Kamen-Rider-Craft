@@ -147,7 +147,7 @@ public class Gotchard_Rider_Items {
     public static final RegistryObject<Item> HAWKSTAR_RIDE_CHEMY_CARD = ITEMS.register("hawkstar_ride_chemy_card",
          () -> new RiderFormChangeItem(new Item.Properties(),0,"_needle_hawk","gotchard","gotchardriver_belt",
          		new MobEffectInstance(Effect_core.FLYING.get(), 40, 1,true,false),
-         		new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 1,true,false))
+         		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false))
          .ifFlyingModelResource("geo/gotchard_needle_hawk.geo.json").AddNeedItemList(NEED_ITEM_NeedleHawk)
          .AddToTabList(NEED_ITEM_NeedleHawk).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
  

@@ -55,7 +55,7 @@ public class Ryuki_Rider_Items {
 	  
 	public static final RegistryObject<Item> MAGNUGIGA_ADVENT = ITEMS.register("magnugiga_advent",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","zolda","v_buckle_belt_zolda",
-					new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false)).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 	  
@@ -469,7 +469,7 @@ public class Ryuki_Rider_Items {
     
     public static final RegistryObject<Item> GIGA_CANNON_VENT = ITEMS.register("giga_cannon_vent",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_giga_cannon","zolda","v_buckle_belt_zolda",
-					new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false))
 			.ChangeModel("geo/zolda_giga_cannon.geo.json").AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
@@ -479,7 +479,7 @@ public class Ryuki_Rider_Items {
 	  
 	public static final RegistryObject<Item> GIGA_TECTOR_VENT = ITEMS.register("giga_tector_vent",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_giga_tector","zolda","v_buckle_belt_zolda",
-					new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false)).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
