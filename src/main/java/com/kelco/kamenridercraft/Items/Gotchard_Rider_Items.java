@@ -45,6 +45,7 @@ public class Gotchard_Rider_Items {
 	   public static List<Item> NEED_ITEM_AntWrestler= new ArrayList<Item>();
 	   public static List<Item> NEED_ITEM_BurningGorilla= new ArrayList<Item>();
 	   public static List<Item> NEED_ITEM_NeedleHawk= new ArrayList<Item>();
+	   public static List<Item> NEED_ITEM_DokkiriShovel= new ArrayList<Item>();
 	   
     public static final RegistryObject<Item> HOPPER1_RIDE_CHEMY_CARD = ITEMS.register("hopper1_ride_chemy_card",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","gotchard","gotchardriver_belt",
@@ -70,8 +71,15 @@ public class Gotchard_Rider_Items {
      * beetlx
      * 
      * odorippa
-     * dokkirimajin
-     * doctorkozo
+     */
+    
+    public static final RegistryObject<Item> DOKKIRIMAJIN_RIDE_CHEMY_CARD = ITEMS.register("dokkirimajin_ride_chemy_card",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"_dokkiri_shovel","gotchard","gotchardriver_belt",
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
+            		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false))
+            .AddNeedItemList(NEED_ITEM_DokkiriShovel).AddToTabList(NEED_ITEM_DokkiriShovel).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
+    
+     /* doctorkozo
      * pilets
      */
     
@@ -129,7 +137,7 @@ public class Gotchard_Rider_Items {
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","valvarad","",
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
             		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 3,true,false))
-            .ChangeSlot(3).addSwitchForm(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
+            .ChangeSlot(3).addSwitchForm(Modded_item_core.BLANK_FORM.get()).AddToTabList(NEED_ITEM_DokkiriShovel).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
     public static final RegistryObject<Item> STEAMLINER_RIDE_CHEMY_CARD = ITEMS.register("steamliner_ride_chemy_card",
             () -> new CopyFormChangeItem(new Item.Properties(),HOPPER1_RIDE_CHEMY_CARD.get()).AddToTabList(NEED_ITEM_SteamHopper)
