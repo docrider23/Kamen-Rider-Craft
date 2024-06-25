@@ -2,22 +2,22 @@
   "type": "minecraft:crafting_shaped",
   "group": "gotchard",
   "pattern": [
-    "XXX",
-    "HXS",
-    "XXX"
+	"XXX",
+	"HXS",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:blank_ride_chemy_card"
-    },
-    "H": {
-      "item": "kamenridercraft:hopper1_ride_chemy_card"
-    },
-    "S": {
-      "item": "kamenridercraft:steamliner_ride_chemy_card"
-    }
+	"X": {
+	  "item": "kamenridercraft:blank_ride_chemy_card"
+	},
+	"H": {
+	  "item": "kamenridercraft:hopper1_ride_chemy_card"
+	},
+	"S": {
+	  "item": "kamenridercraft:steamliner_ride_chemy_card"
+	}
   },
   "result": {
-    "item": "kamenridercraft:gotchardriver"
+	"item": "kamenridercraft:gotchardriver"
   }
 }

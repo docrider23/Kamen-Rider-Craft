@@ -2,23 +2,23 @@
   "type": "minecraft:crafting_shaped",
   "group": "ex_aid",
   "pattern": [
-    "XMX",
-    "XSX",
-    "XXX"
+	"XMX",
+	"XSX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:blank_gashat"
-    },
-    "S": {
-      "item": "kamenridercraft:base_sword"
-    },
-    "M": {
-      "item": "kamenridercraft:mighty_action_x_gashat"
-    }
+	"X": {
+	  "item": "kamenridercraft:blank_gashat"
+	},
+	"S": {
+	  "item": "kamenridercraft:base_sword"
+	},
+	"M": {
+	  "item": "kamenridercraft:mighty_action_x_gashat"
+	}
   },
   "result": {
-    "item": "kamenridercraft:gashacon_breaker"
-  }    
+	"item": "kamenridercraft:gashacon_breaker"
+  }	
 }
 

@@ -3,14 +3,14 @@
   "group": "rider_logo",
   "ingredients": [
 {
-    
-      "item": "minecraft:paper"
-    }, 
-    {
-      "item": "kamenridercraft:mighty_action_x_gashat"
-    }
-    ],
+	
+	  "item": "minecraft:paper"
+	}, 
+	{
+	  "item": "kamenridercraft:mighty_action_x_gashat"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:ex_aid_logo"
+	"item": "kamenridercraft:ex_aid_logo"
   }
 }

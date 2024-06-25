@@ -3,14 +3,14 @@
   "group": "kr_super_1",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:ichigotroso"
-    }, 
-    {
-      "item": "kamenridercraft:cyclode_core"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:ichigotroso"
+	}, 
+	{
+	  "item": "kamenridercraft:cyclode_core"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:super_1troso"
+	"item": "kamenridercraft:super_1troso"
   }
 }

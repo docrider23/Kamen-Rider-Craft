@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "agito",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:agito_of_seed"
-    },
-    "M": {
-      "item": "kamenridercraft:agito_ground"
-    }
+	"X": {
+	  "item": "kamenridercraft:agito_of_seed"
+	},
+	"M": {
+	  "item": "kamenridercraft:agito_ground"
+	}
   },
   "result": {
-    "item": "kamenridercraft:alter_ring"
-  }    
+	"item": "kamenridercraft:alter_ring"
+  }	
 }

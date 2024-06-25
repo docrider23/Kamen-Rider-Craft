@@ -3,14 +3,14 @@
   "group": "kr_shin",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:ichigolegs"
-    }, 
-    {
-      "item": "kamenridercraft:shin_stone"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:ichigolegs"
+	}, 
+	{
+	  "item": "kamenridercraft:shin_stone"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:shinlegs"
+	"item": "kamenridercraft:shinlegs"
   }
 }

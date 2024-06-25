@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "another_agito",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:agito_of_seed"
-    },
-    "M": {
-      "item": "kamenridercraft:another_agito"
-    }
+	"X": {
+	  "item": "kamenridercraft:agito_of_seed"
+	},
+	"M": {
+	  "item": "kamenridercraft:another_agito"
+	}
   },
   "result": {
-    "item": "kamenridercraft:ank_point"
-  }    
+	"item": "kamenridercraft:ank_point"
+  }	
 }

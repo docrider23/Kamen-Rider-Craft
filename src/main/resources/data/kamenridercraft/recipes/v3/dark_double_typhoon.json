@@ -2,22 +2,22 @@
   "type": "minecraft:crafting_shaped",
   "group": "ichigo",
   "pattern": [
-    "XPX",
-    "XMX",
-    "XXX"
+	"XPX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-     "P": {
-      "item": "kamenridercraft:sinister_pachinko_ball"
-    },
-    "X": {
-      "item": "kamenridercraft:rider_circuit"
-    },
-    "M": {
-      "item": "kamenridercraft:double_typhoon_core"
-    }
+	 "P": {
+	  "item": "kamenridercraft:sinister_pachinko_ball"
+	},
+	"X": {
+	  "item": "kamenridercraft:rider_circuit"
+	},
+	"M": {
+	  "item": "kamenridercraft:double_typhoon_core"
+	}
   },
   "result": {
-    "item": "kamenridercraft:dark_double_typhoon"
-  }    
+	"item": "kamenridercraft:dark_double_typhoon"
+  }	
 }

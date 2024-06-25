@@ -3,13 +3,13 @@
   "group": "gashat",
   "ingredients": [
 	{ 
-      "item": "kamenridercraft:bakusou_bike_gashat"
-    }, 
-    {
-      "item": "kamenridercraft:bug_energy_item"
-    } 
-    ],
+	  "item": "kamenridercraft:bakusou_bike_gashat"
+	}, 
+	{
+	  "item": "kamenridercraft:bug_energy_item"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:bakusou_bike_gashat_turbo"
+	"item": "kamenridercraft:bakusou_bike_gashat_turbo"
   }
 }

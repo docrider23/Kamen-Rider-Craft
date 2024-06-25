@@ -2,24 +2,24 @@
   "type": "minecraft:crafting_shaped",
   "group": "g3_x",
   "pattern": [
-    "CRC",
-    "SGS",
-    "CIC"
+	"CRC",
+	"SGS",
+	"CIC"
   ],
   "key": {
-    "R": {
-      "item": "minecraft:iron_ingot"
-      }, "I": {
-      "item": "kamenridercraft:g3"
-    }, "G": {
-      "item": "kamenridercraft:base_sword"
-    }, "C": {
-      "item": "kamenridercraft:rider_circuit"
-    }, "S": {
-      "item": "minecraft:string"
-    }
+	"R": {
+	  "item": "minecraft:iron_ingot"
+	  }, "I": {
+	  "item": "kamenridercraft:g3"
+	}, "G": {
+	  "item": "kamenridercraft:base_sword"
+	}, "C": {
+	  "item": "kamenridercraft:rider_circuit"
+	}, "S": {
+	  "item": "minecraft:string"
+	}
   },
   "result": {
-    "item": "kamenridercraft:ga_04_antares"
+	"item": "kamenridercraft:ga_04_antares"
   }
 }

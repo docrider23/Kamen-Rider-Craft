@@ -3,14 +3,14 @@
   "group": "kr_v3",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:ichigolegs"
-    }, 
-    {
-      "item": "kamenridercraft:electrer_core"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:ichigolegs"
+	}, 
+	{
+	  "item": "kamenridercraft:electrer_core"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:strongerlegs"
+	"item": "kamenridercraft:strongerlegs"
   }
 }

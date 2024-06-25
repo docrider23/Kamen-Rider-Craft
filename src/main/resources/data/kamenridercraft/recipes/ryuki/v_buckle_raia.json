@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "raia",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:advent_card"
-    },
-    "M": {
-      "item": "kamenridercraft:evildiver_advent"
-    }
+	"X": {
+	  "item": "kamenridercraft:advent_card"
+	},
+	"M": {
+	  "item": "kamenridercraft:evildiver_advent"
+	}
   },
   "result": {
-    "item": "kamenridercraft:v_buckle_raia"
-  }    
+	"item": "kamenridercraft:v_buckle_raia"
+  }	
 }

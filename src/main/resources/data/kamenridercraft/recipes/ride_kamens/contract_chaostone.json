@@ -3,13 +3,13 @@
   "group": "contract_chaostone",
   "ingredients": [
 	{ 
-      "item": "kamenridercraft:rider_circuit"
-    }, 
-    {
-      "item": "minecraft:quartz"
-    } 
-    ],
+	  "item": "kamenridercraft:rider_circuit"
+	}, 
+	{
+	  "item": "minecraft:quartz"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:contract_chaostone"
+	"item": "kamenridercraft:contract_chaostone"
   }
 }

@@ -2,18 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "group": "glaive",
   "pattern": [
-    "XXX",
-    "XCX",
-    "XXX"
+	"XXX",
+	"XCX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:bladecard"
-    }, "C": {
-      "item": "kamenridercraft:change_kerberos_glaive"
-    }
+	"X": {
+	  "item": "kamenridercraft:bladecard"
+	}, "C": {
+	  "item": "kamenridercraft:change_kerberos_glaive"
+	}
   },
   "result": {
-    "item": "kamenridercraft:glaive_buckle"
+	"item": "kamenridercraft:glaive_buckle"
   }
 }

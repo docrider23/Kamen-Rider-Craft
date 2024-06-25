@@ -3,14 +3,14 @@
   "group": "rider_logo",
   "ingredients": [
 {
-    
-      "item": "minecraft:paper"
-    }, 
-    {
-      "item": "kamenridercraft:goro_wine_bottle"
-    }
-    ],
+	
+	  "item": "minecraft:paper"
+	}, 
+	{
+	  "item": "kamenridercraft:goro_wine_bottle"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:g_logo"
+	"item": "kamenridercraft:g_logo"
   }
 }

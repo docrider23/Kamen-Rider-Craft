@@ -2,22 +2,22 @@
   "type": "minecraft:crafting_shaped",
   "group": "chalice",
   "pattern": [
-    "XRX",
-    "XMX",
-    "XXX"
+	"XRX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:bladecard"
-    },
-    "M": {
-      "item": "kamenridercraft:base_sword"
-    },
-    "R": {
-      "item": "kamenridercraft:change_mantis"
-    }
+	"X": {
+	  "item": "kamenridercraft:bladecard"
+	},
+	"M": {
+	  "item": "kamenridercraft:base_sword"
+	},
+	"R": {
+	  "item": "kamenridercraft:change_mantis"
+	}
   },
   "result": {
-    "item": "kamenridercraft:chalice_arrow"
-  }    
+	"item": "kamenridercraft:chalice_arrow"
+  }	
 }

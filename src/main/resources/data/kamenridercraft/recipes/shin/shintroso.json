@@ -3,14 +3,14 @@
   "group": "kr_shin",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:ichigotroso"
-    }, 
-    {
-      "item": "kamenridercraft:shin_stone"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:ichigotroso"
+	}, 
+	{
+	  "item": "kamenridercraft:shin_stone"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:shintroso"
+	"item": "kamenridercraft:shintroso"
   }
 }

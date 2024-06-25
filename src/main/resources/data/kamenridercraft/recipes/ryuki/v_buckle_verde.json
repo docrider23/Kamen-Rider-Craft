@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "verde",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:advent_card"
-    },
-    "M": {
-      "item": "kamenridercraft:biogreeza_advent"
-    }
+	"X": {
+	  "item": "kamenridercraft:advent_card"
+	},
+	"M": {
+	  "item": "kamenridercraft:biogreeza_advent"
+	}
   },
   "result": {
-    "item": "kamenridercraft:v_buckle_verde"
-  }    
+	"item": "kamenridercraft:v_buckle_verde"
+  }	
 }

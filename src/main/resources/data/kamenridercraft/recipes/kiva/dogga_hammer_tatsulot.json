@@ -3,14 +3,14 @@
   "group": "dogga",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:dogga_hammer"
-    }, 
-    {
-      "item": "kamenridercraft:tatsulot"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:dogga_hammer"
+	}, 
+	{
+	  "item": "kamenridercraft:tatsulot"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:dogga_hammer_tatsulot"
+	"item": "kamenridercraft:dogga_hammer_tatsulot"
   }
 }

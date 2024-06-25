@@ -1,29 +1,29 @@
 {
   "display": {
-    "icon": {
-      "item": "kamenridercraft:garulu_saber"
-    },
-    "title": "Shout in the Moonlight",
-    "description": "Obtain the Garulu Saber",
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
+	"icon": {
+	  "item": "kamenridercraft:garulu_saber"
+	},
+	"title": "Shout in the Moonlight",
+	"description": "Obtain the Garulu Saber",
+	"frame": "task",
+	"show_toast": true,
+	"announce_to_chat": true,
+	"hidden": false
   },
   "parent": "kamenridercraft:kiva/kiva",
   "criteria": {
-    "requirement": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "player": [],
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:garulu_saber"
-            ]
-          }
-        ]
-      }
-    }
+	"requirement": {
+	  "trigger": "minecraft:inventory_changed",
+	  "conditions": {
+		"player": [],
+		"items": [
+		  {
+			"items": [
+			  "kamenridercraft:garulu_saber"
+			]
+		  }
+		]
+	  }
+	}
   }
 }

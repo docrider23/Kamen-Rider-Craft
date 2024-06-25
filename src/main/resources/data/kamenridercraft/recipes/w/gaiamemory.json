@@ -3,12 +3,12 @@
   "group": "w",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:pure_gaia_memory_block"
-    }
-    ],
+	
+	  "item": "kamenridercraft:pure_gaia_memory_block"
+	}
+	],
   "result": {
   "count": 9,
-    "item": "kamenridercraft:gaiamemory"
+	"item": "kamenridercraft:gaiamemory"
   }
 }

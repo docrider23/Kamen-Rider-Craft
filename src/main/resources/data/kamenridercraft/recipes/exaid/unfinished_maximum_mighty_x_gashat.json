@@ -3,28 +3,28 @@
   "group": "gashat",
   "ingredients": [
 	{ 
-      "item": "kamenridercraft:mighty_brothers_xx_unfinished_gashat"
-    },
+	  "item": "kamenridercraft:mighty_brothers_xx_unfinished_gashat"
+	},
 	{ 
-      "item": "kamenridercraft:bakusou_bike_gashat"
-    }, 
-    {
-      "item": "minecraft:iron_ingot"
-    } , 
-    {
-      "item": "minecraft:iron_ingot"
-    } , 
-    {
-      "item": "minecraft:iron_ingot"
-    } , 
-    {
-      "item": "kamenridercraft:rider_circuit"
-    } , 
-    {
-      "item": "kamenridercraft:ju_ju_burger_gashat"
-    }
-    ],
+	  "item": "kamenridercraft:bakusou_bike_gashat"
+	}, 
+	{
+	  "item": "minecraft:iron_ingot"
+	} , 
+	{
+	  "item": "minecraft:iron_ingot"
+	} , 
+	{
+	  "item": "minecraft:iron_ingot"
+	} , 
+	{
+	  "item": "kamenridercraft:rider_circuit"
+	} , 
+	{
+	  "item": "kamenridercraft:ju_ju_burger_gashat"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:unfinished_maximum_mighty_x_gashat"
+	"item": "kamenridercraft:unfinished_maximum_mighty_x_gashat"
   }
 }

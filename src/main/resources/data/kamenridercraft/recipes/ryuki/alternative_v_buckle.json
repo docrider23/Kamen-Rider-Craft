@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "alternative",
   "pattern": [
-    "XXX",
-    "XXX",
-    "XMX"
+	"XXX",
+	"XXX",
+	"XMX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:advent_card"
-    },
-    "M": {
-      "item": "kamenridercraft:psycorogue_advent"
-    }
+	"X": {
+	  "item": "kamenridercraft:advent_card"
+	},
+	"M": {
+	  "item": "kamenridercraft:psycorogue_advent"
+	}
   },
   "result": {
-    "item": "kamenridercraft:alternative_v_buckle"
-  }    
+	"item": "kamenridercraft:alternative_v_buckle"
+  }	
 }

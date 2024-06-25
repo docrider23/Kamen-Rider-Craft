@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "group": "kr_ex_aid",
   "pattern": [
-    "XXX",
-    "X X",
-    "X X"
+	"XXX",
+	"X X",
+	"X X"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:blank_gashat"
-    }
+	"X": {
+	  "item": "kamenridercraft:blank_gashat"
+	}
   },
   "result": {
-    "item": "kamenridercraft:ex_aidlegs"
+	"item": "kamenridercraft:ex_aidlegs"
   }
 }

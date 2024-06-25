@@ -3,14 +3,14 @@
   "group": "basshaa",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:basshaamagnum"
-    }, 
-    {
-      "item": "kamenridercraft:tatsulot"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:basshaamagnum"
+	}, 
+	{
+	  "item": "kamenridercraft:tatsulot"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:basshaa_magnum_tatsulot"
+	"item": "kamenridercraft:basshaa_magnum_tatsulot"
   }
 }

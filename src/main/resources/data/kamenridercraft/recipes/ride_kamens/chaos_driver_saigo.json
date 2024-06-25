@@ -2,18 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "group": "saigo",
   "pattern": [
-    "XXX",
-    "XCX",
-    "XXX"
+	"XXX",
+	"XCX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:contract_chaostone"
-    }, "C": {
-      "item": "kamenridercraft:chaos_ring_saigo"
-    }
+	"X": {
+	  "item": "kamenridercraft:contract_chaostone"
+	}, "C": {
+	  "item": "kamenridercraft:chaos_ring_saigo"
+	}
   },
   "result": {
-    "item": "kamenridercraft:chaos_driver_saigo"
+	"item": "kamenridercraft:chaos_driver_saigo"
   }
 }

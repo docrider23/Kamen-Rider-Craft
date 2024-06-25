@@ -3,14 +3,14 @@
   "group": "kr_j",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:ichigotroso"
-    }, 
-    {
-      "item": "kamenridercraft:j_stone"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:ichigotroso"
+	}, 
+	{
+	  "item": "kamenridercraft:j_stone"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:jtroso"
+	"item": "kamenridercraft:jtroso"
   }
 }

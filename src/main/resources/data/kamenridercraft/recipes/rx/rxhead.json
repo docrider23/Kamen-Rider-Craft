@@ -3,14 +3,14 @@
   "group": "kr_black_rx",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:blackhead"
-    }, 
-    {
-      "item": "kamenridercraft:split_king_stone"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:blackhead"
+	}, 
+	{
+	  "item": "kamenridercraft:split_king_stone"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:rxhead"
+	"item": "kamenridercraft:rxhead"
   }
 }

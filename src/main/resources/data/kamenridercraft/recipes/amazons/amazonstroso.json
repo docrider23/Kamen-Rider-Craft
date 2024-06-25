@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "group": "kr_amazons",
   "pattern": [
-    "X X",
-    "XXX",
-    "XXX"
+	"X X",
+	"XXX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:amazon_cell_vial"
-    }
+	"X": {
+	  "item": "kamenridercraft:amazon_cell_vial"
+	}
   },
   "result": {
-    "item": "kamenridercraft:amazonstroso"
+	"item": "kamenridercraft:amazonstroso"
   }
 }

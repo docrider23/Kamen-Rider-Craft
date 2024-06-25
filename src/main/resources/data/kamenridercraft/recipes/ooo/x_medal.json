@@ -3,14 +3,14 @@
   "group": "legend_medal",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:cellmedal"
-    }, 
-    {
-      "item": "kamenridercraft:ridol_core"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:cellmedal"
+	}, 
+	{
+	  "item": "kamenridercraft:ridol_core"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:x_medal"
+	"item": "kamenridercraft:x_medal"
   }
 }

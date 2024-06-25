@@ -3,14 +3,14 @@
   "group": "kr_zx",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:ichigolegs"
-    }, 
-    {
-      "item": "kamenridercraft:zx_belt_core"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:ichigolegs"
+	}, 
+	{
+	  "item": "kamenridercraft:zx_belt_core"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:zxlegs"
+	"item": "kamenridercraft:zxlegs"
   }
 }

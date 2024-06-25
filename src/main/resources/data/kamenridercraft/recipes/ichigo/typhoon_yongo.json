@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "ichigo",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:rider_circuit"
-    },
-    "M": {
-      "item": "kamenridercraft:typhoon_core_yongo"
-    }
+	"X": {
+	  "item": "kamenridercraft:rider_circuit"
+	},
+	"M": {
+	  "item": "kamenridercraft:typhoon_core_yongo"
+	}
   },
   "result": {
-    "item": "kamenridercraft:typhoon_yongo"
-  }    
+	"item": "kamenridercraft:typhoon_yongo"
+  }	
 }

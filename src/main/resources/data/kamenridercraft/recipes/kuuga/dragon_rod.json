@@ -2,22 +2,22 @@
   "type": "minecraft:crafting_shaped",
   "group": "kuuga_dragon",
   "pattern": [
-    "XDX",
-    "XSX",
-    "XXX"
+	"XDX",
+	"XSX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:kuuga_growing"
-    },
-    "D": {
-      "item": "kamenridercraft:kuuga_dragon"
-    },
-    "S": {
-      "item": "kamenridercraft:base_sword"
-    }
+	"X": {
+	  "item": "kamenridercraft:kuuga_growing"
+	},
+	"D": {
+	  "item": "kamenridercraft:kuuga_dragon"
+	},
+	"S": {
+	  "item": "kamenridercraft:base_sword"
+	}
   },
   "result": {
-    "item": "kamenridercraft:dragon_rod"
-  }    
+	"item": "kamenridercraft:dragon_rod"
+  }	
 }

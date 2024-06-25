@@ -3,14 +3,14 @@
   "group": "w",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:gaiamemory"
-    }, 
-    {
-      "item": "minecraft:diamond"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:gaiamemory"
+	}, 
+	{
+	  "item": "minecraft:diamond"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:unrefined_memory_t2"
+	"item": "kamenridercraft:unrefined_memory_t2"
   }
 }

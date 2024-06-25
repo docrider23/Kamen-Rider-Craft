@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "w",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:gaiamemory"
-    },
-    "M": {
-      "item": "kamenridercraft:accel_memory"
-    }
+	"X": {
+	  "item": "kamenridercraft:gaiamemory"
+	},
+	"M": {
+	  "item": "kamenridercraft:accel_memory"
+	}
   },
   "result": {
-    "item": "kamenridercraft:acceldriver"
-  }    
+	"item": "kamenridercraft:acceldriver"
+  }	
 }

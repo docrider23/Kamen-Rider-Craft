@@ -2,18 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "group": "todoroki",
   "pattern": [
-    "XXX",
-    "XCX",
-    "XXX"
+	"XXX",
+	"XCX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:oni_ore"
-    }, "C": {
-      "item": "kamenridercraft:henshin_kigen_todoroki"
-    }
+	"X": {
+	  "item": "kamenridercraft:oni_ore"
+	}, "C": {
+	  "item": "kamenridercraft:henshin_kigen_todoroki"
+	}
   },
   "result": {
-    "item": "kamenridercraft:todorokidriver"
+	"item": "kamenridercraft:todorokidriver"
   }
 }

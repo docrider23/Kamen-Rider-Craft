@@ -2,24 +2,24 @@
   "type": "minecraft:crafting_shaped",
   "group": "birth",
   "pattern": [
-    "XX1",
-    "XC2",
-    "XX3"
+	"XX1",
+	"XC2",
+	"XX3"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:cellmedal"
-    }, "C": {
-      "item": "kamenridercraft:birth_driver"
-    }, "1": {
-      "item": "kamenridercraft:sasori_new_medal"
-    }, "2": {
-      "item": "kamenridercraft:kani_new_medal"
-    }, "3": {
-      "item": "kamenridercraft:ebi_new_medal"
-    }
+	"X": {
+	  "item": "kamenridercraft:cellmedal"
+	}, "C": {
+	  "item": "kamenridercraft:birth_driver"
+	}, "1": {
+	  "item": "kamenridercraft:sasori_new_medal"
+	}, "2": {
+	  "item": "kamenridercraft:kani_new_medal"
+	}, "3": {
+	  "item": "kamenridercraft:ebi_new_medal"
+	}
   },
   "result": {
-    "item": "kamenridercraft:birth_driver_x"
+	"item": "kamenridercraft:birth_driver_x"
   }
 }

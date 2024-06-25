@@ -3,14 +3,14 @@
   "group": "rider_logo",
   "ingredients": [
 {
-    
-      "item": "minecraft:paper"
-    }, 
-    {
-      "item": "kamenridercraft:faiz_mission_memory"
-    }
-    ],
+	
+	  "item": "minecraft:paper"
+	}, 
+	{
+	  "item": "kamenridercraft:faiz_mission_memory"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:faiz_logo"
+	"item": "kamenridercraft:faiz_logo"
   }
 }

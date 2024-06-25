@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "group": "tiger",
   "pattern": [
-    "XCX",
-    "XZX",
-    "XXX"
+	"XCX",
+	"XZX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:advent_card"
-    }, "C": {
-      "item": "kamenridercraft:destwilder_advent"
-    }, "Z": {
-      "item": "kamenridercraft:base_sword"
-    }
+	"X": {
+	  "item": "kamenridercraft:advent_card"
+	}, "C": {
+	  "item": "kamenridercraft:destwilder_advent"
+	}, "Z": {
+	  "item": "kamenridercraft:base_sword"
+	}
   },
   "result": {
-    "item": "kamenridercraft:dest_visor"
+	"item": "kamenridercraft:dest_visor"
   }
 }

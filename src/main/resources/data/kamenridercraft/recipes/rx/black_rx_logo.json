@@ -3,14 +3,14 @@
   "group": "rider_logo",
   "ingredients": [
 {
-    
-      "item": "minecraft:paper"
-    }, 
-    {
-      "item": "kamenridercraft:rx_core"
-    }
-    ],
+	
+	  "item": "minecraft:paper"
+	}, 
+	{
+	  "item": "kamenridercraft:rx_core"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:black_rx_logo"
+	"item": "kamenridercraft:black_rx_logo"
   }
 }

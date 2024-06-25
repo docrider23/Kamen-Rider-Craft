@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "group": "kr_hibiki",
   "pattern": [
-    "XXX",
-    "X X",
-    "X X"
+	"XXX",
+	"X X",
+	"X X"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:oni_ore"
-    }
+	"X": {
+	  "item": "kamenridercraft:oni_ore"
+	}
   },
   "result": {
-    "item": "kamenridercraft:hibikilegs"
+	"item": "kamenridercraft:hibikilegs"
   }
 }

@@ -3,14 +3,14 @@
   "group": "rider_logo",
   "ingredients": [
 {
-    
-      "item": "minecraft:paper"
-    }, 
-    {
-      "item": "kamenridercraft:cyclode_core"
-    }
-    ],
+	
+	  "item": "minecraft:paper"
+	}, 
+	{
+	  "item": "kamenridercraft:cyclode_core"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:super_1_logo"
+	"item": "kamenridercraft:super_1_logo"
   }
 }

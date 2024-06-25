@@ -2,22 +2,22 @@
   "type": "minecraft:crafting_shaped",
   "group": "basshaa",
   "pattern": [
-    "XRX",
-    "XMX",
-    "XXX"
+	"XRX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:fuestle"
-    },
-    "M": {
-      "item": "kamenridercraft:base_sword"
-    },
-    "R": {
-      "item": "kamenridercraft:basshaafuestle"
-      }
+	"X": {
+	  "item": "kamenridercraft:fuestle"
+	},
+	"M": {
+	  "item": "kamenridercraft:base_sword"
+	},
+	"R": {
+	  "item": "kamenridercraft:basshaafuestle"
+	  }
   },
   "result": {
-    "item": "kamenridercraft:basshaamagnum"
-  }    
+	"item": "kamenridercraft:basshaamagnum"
+  }	
 }

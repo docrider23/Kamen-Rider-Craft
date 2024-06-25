@@ -2,18 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "group": "shouki",
   "pattern": [
-    "XXX",
-    "XCX",
-    "XXX"
+	"XXX",
+	"XCX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:oni_ore"
-    }, "C": {
-      "item": "kamenridercraft:henshin_onibue_shouki"
-    }
+	"X": {
+	  "item": "kamenridercraft:oni_ore"
+	}, "C": {
+	  "item": "kamenridercraft:henshin_onibue_shouki"
+	}
   },
   "result": {
-    "item": "kamenridercraft:shoukidriver"
+	"item": "kamenridercraft:shoukidriver"
   }
 }

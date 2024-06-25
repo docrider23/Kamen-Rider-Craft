@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "ichigo",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:rider_circuit"
-    },
-    "M": {
-      "item": "kamenridercraft:tackle_core"
-    }
+	"X": {
+	  "item": "kamenridercraft:rider_circuit"
+	},
+	"M": {
+	  "item": "kamenridercraft:tackle_core"
+	}
   },
   "result": {
-    "item": "kamenridercraft:tackle_belt"
-  }    
+	"item": "kamenridercraft:tackle_belt"
+  }	
 }

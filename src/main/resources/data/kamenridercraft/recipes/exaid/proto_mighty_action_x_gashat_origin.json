@@ -3,13 +3,13 @@
   "group": "gashat",
   "ingredients": [
 	{ 
-      "item": "kamenridercraft:proto_mighty_action_x_gashat"
-    }, 
-    {
-      "item": "kamenridercraft:bug_energy_item"
-    } 
-    ],
+	  "item": "kamenridercraft:proto_mighty_action_x_gashat"
+	}, 
+	{
+	  "item": "kamenridercraft:bug_energy_item"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:proto_mighty_action_x_gashat_origin"
+	"item": "kamenridercraft:proto_mighty_action_x_gashat_origin"
   }
 }

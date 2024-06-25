@@ -1,30 +1,30 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_item": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:kuuga_mighty"
-            ]
-          }
-        ]
-      }
-    }
+	"has_item": {
+	  "trigger": "minecraft:inventory_changed",
+	  "conditions": {
+		"items": [
+		  {
+			"items": [
+			  "kamenridercraft:kuuga_mighty"
+			]
+		  }
+		]
+	  }
+	}
   },
   "requirements": [
-    [
-      "has_item"
-    ]
+	[
+	  "has_item"
+	]
   ],
   "rewards": {
-    "recipes": [
-      "kamenridercraft:kuuga/arcle",
-      "kamenridercraft:kuuga/kuuga_rising_mighty",
-      "kamenridercraft:kuuga/kuuga_logo"
-    ]
+	"recipes": [
+	  "kamenridercraft:kuuga/arcle",
+	  "kamenridercraft:kuuga/kuuga_rising_mighty",
+	  "kamenridercraft:kuuga/kuuga_logo"
+	]
   },
   "sends_telemetry_event": false
 }

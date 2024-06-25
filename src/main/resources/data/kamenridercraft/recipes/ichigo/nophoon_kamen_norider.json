@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "kamen_norider",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:rider_circuit"
-    },
-    "M": {
-      "item": "kamenridercraft:nophoon_core"
-    }
+	"X": {
+	  "item": "kamenridercraft:rider_circuit"
+	},
+	"M": {
+	  "item": "kamenridercraft:nophoon_core"
+	}
   },
   "result": {
-    "item": "kamenridercraft:nophoon_kamen_norider"
-  }    
+	"item": "kamenridercraft:nophoon_kamen_norider"
+  }	
 }

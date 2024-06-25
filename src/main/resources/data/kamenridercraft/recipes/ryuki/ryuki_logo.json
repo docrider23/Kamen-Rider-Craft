@@ -3,14 +3,14 @@
   "group": "rider_logo",
   "ingredients": [
 {
-    
-      "item": "minecraft:paper"
-    }, 
-    {
-      "item": "kamenridercraft:dragreder_advent"
-    }
-    ],
+	
+	  "item": "minecraft:paper"
+	}, 
+	{
+	  "item": "kamenridercraft:dragreder_advent"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:ryuki_logo"
+	"item": "kamenridercraft:ryuki_logo"
   }
 }

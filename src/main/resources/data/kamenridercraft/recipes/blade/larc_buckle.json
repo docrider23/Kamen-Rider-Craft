@@ -2,18 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "group": "larc",
   "pattern": [
-    "XXX",
-    "XCX",
-    "XXX"
+	"XXX",
+	"XCX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:bladecard"
-    }, "C": {
-      "item": "kamenridercraft:change_kerberos_larc"
-    }
+	"X": {
+	  "item": "kamenridercraft:bladecard"
+	}, "C": {
+	  "item": "kamenridercraft:change_kerberos_larc"
+	}
   },
   "result": {
-    "item": "kamenridercraft:larc_buckle"
+	"item": "kamenridercraft:larc_buckle"
   }
 }

@@ -3,14 +3,14 @@
   "group": "card_warrior_kamen_rider_card",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:dragreder_advent"
-    }, 
-    {
-      "item": "kamenridercraft:card_warrior_kamen_rider_manga"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:dragreder_advent"
+	}, 
+	{
+	  "item": "kamenridercraft:card_warrior_kamen_rider_manga"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:dragreder"
+	"item": "kamenridercraft:dragreder"
   }
 }

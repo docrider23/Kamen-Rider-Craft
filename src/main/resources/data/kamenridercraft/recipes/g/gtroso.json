@@ -3,14 +3,14 @@
   "group": "kr_g",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:ichigotroso"
-    }, 
-    {
-      "item": "kamenridercraft:goro_wine_bottle"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:ichigotroso"
+	}, 
+	{
+	  "item": "kamenridercraft:goro_wine_bottle"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:gtroso"
+	"item": "kamenridercraft:gtroso"
   }
 }

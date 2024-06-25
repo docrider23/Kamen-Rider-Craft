@@ -1,19 +1,19 @@
 {
   "values": [
-    "kamenridercraft:faiz_blaster",
-    "kamenridercraft:kaixa_blaygun",
-    "kamenridercraft:axel_ray_gun",
+	"kamenridercraft:faiz_blaster",
+	"kamenridercraft:kaixa_blaygun",
+	"kamenridercraft:axel_ray_gun",
 	  "kamenridercraft:kabuto_kunai",
 	  "kamenridercraft:zect_kunai",
 	  "kamenridercraft:machinegun_blade",
-    "kamenridercraft:ixa_caliber",
-    "kamenridercraft:tajaspinner",
-    "kamenridercraft:medagaburyu",
-    "kamenridercraft:tajaspinner_eternity",
-    "kamenridercraft:gashacon_bugvisor",
-    "kamenridercraft:gashacon_bugvisor_ii",
-    "kamenridercraft:gashacon_bugvisor_g",
-    "kamenridercraft:parabragun_axe",
-    "kamenridercraft:ride_weapon"
+	"kamenridercraft:ixa_caliber",
+	"kamenridercraft:tajaspinner",
+	"kamenridercraft:medagaburyu",
+	"kamenridercraft:tajaspinner_eternity",
+	"kamenridercraft:gashacon_bugvisor",
+	"kamenridercraft:gashacon_bugvisor_ii",
+	"kamenridercraft:gashacon_bugvisor_g",
+	"kamenridercraft:parabragun_axe",
+	"kamenridercraft:ride_weapon"
   ]
 }

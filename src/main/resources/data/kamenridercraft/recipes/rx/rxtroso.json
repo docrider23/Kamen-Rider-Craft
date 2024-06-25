@@ -3,14 +3,14 @@
   "group": "kr_black_rx",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:blacktorso"
-    }, 
-    {
-      "item": "kamenridercraft:split_king_stone"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:blacktorso"
+	}, 
+	{
+	  "item": "kamenridercraft:split_king_stone"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:rxtroso"
+	"item": "kamenridercraft:rxtroso"
   }
 }

@@ -1,32 +1,32 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_item": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:zo_stone"
-            ]
-          }
-        ]
-      }
-    }
+	"has_item": {
+	  "trigger": "minecraft:inventory_changed",
+	  "conditions": {
+		"items": [
+		  {
+			"items": [
+			  "kamenridercraft:zo_stone"
+			]
+		  }
+		]
+	  }
+	}
   },
   "requirements": [
-    [
-      "has_item"
-    ]
+	[
+	  "has_item"
+	]
   ],
   "rewards": {
-    "recipes": [
-      "kamenridercraft:zo/zohead",
-      "kamenridercraft:zo/zotroso",
-      "kamenridercraft:zo/zolegs",
-      "kamenridercraft:zo/zo_core",
-      "kamenridercraft:zo/zo_logo"
-    ]
+	"recipes": [
+	  "kamenridercraft:zo/zohead",
+	  "kamenridercraft:zo/zotroso",
+	  "kamenridercraft:zo/zolegs",
+	  "kamenridercraft:zo/zo_core",
+	  "kamenridercraft:zo/zo_logo"
+	]
   },
   "sends_telemetry_event": false
 }

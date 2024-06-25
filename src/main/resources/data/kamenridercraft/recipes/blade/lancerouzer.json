@@ -2,22 +2,22 @@
   "type": "minecraft:crafting_shaped",
   "group": "lance",
   "pattern": [
-    "XRX",
-    "XMX",
-    "XXX"
+	"XRX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:bladecard"
-    },
-    "M": {
-      "item": "kamenridercraft:base_sword"
-    },
-    "R": {
-      "item": "kamenridercraft:change_kerberos_lance"
-    }
+	"X": {
+	  "item": "kamenridercraft:bladecard"
+	},
+	"M": {
+	  "item": "kamenridercraft:base_sword"
+	},
+	"R": {
+	  "item": "kamenridercraft:change_kerberos_lance"
+	}
   },
   "result": {
-    "item": "kamenridercraft:lancerouzer"
-  }    
+	"item": "kamenridercraft:lancerouzer"
+  }	
 }

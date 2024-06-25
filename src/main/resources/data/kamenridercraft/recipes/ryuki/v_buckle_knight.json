@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "knight",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:advent_card"
-    },
-    "M": {
-      "item": "kamenridercraft:darkwing_advent"
-    }
+	"X": {
+	  "item": "kamenridercraft:advent_card"
+	},
+	"M": {
+	  "item": "kamenridercraft:darkwing_advent"
+	}
   },
   "result": {
-    "item": "kamenridercraft:v_buckle_knight"
-  }    
+	"item": "kamenridercraft:v_buckle_knight"
+  }	
 }

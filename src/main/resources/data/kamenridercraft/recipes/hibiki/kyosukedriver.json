@@ -2,18 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "group": "kyoki",
   "pattern": [
-    "XXX",
-    "XCX",
-    "XXX"
+	"XXX",
+	"XCX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:oni_ore"
-    }, "C": {
-      "item": "kamenridercraft:henshin_onsa_kyoki"
-    }
+	"X": {
+	  "item": "kamenridercraft:oni_ore"
+	}, "C": {
+	  "item": "kamenridercraft:henshin_onsa_kyoki"
+	}
   },
   "result": {
-    "item": "kamenridercraft:kyosukedriver"
+	"item": "kamenridercraft:kyosukedriver"
   }
 }

@@ -3,14 +3,14 @@
   "group": "kr_x",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:ichigotroso"
-    }, 
-    {
-      "item": "kamenridercraft:ridol_core"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:ichigotroso"
+	}, 
+	{
+	  "item": "kamenridercraft:ridol_core"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:xtroso"
+	"item": "kamenridercraft:xtroso"
   }
 }

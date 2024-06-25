@@ -1,29 +1,29 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_item": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:rx_core"
-            ]
-          }
-        ]
-      }
-    }
+	"has_item": {
+	  "trigger": "minecraft:inventory_changed",
+	  "conditions": {
+		"items": [
+		  {
+			"items": [
+			  "kamenridercraft:rx_core"
+			]
+		  }
+		]
+	  }
+	}
   },
   "requirements": [
-    [
-      "has_item"
-    ]
+	[
+	  "has_item"
+	]
   ],
   "rewards": {
-    "recipes": [
-      "kamenridercraft:rx/black_rx_logo",
-      "kamenridercraft:rx/revolcane"
-    ]
+	"recipes": [
+	  "kamenridercraft:rx/black_rx_logo",
+	  "kamenridercraft:rx/revolcane"
+	]
   },
   "sends_telemetry_event": false
 }

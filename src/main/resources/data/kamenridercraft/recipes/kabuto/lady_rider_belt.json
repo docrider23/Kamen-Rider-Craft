@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "lady",
   "pattern": [
-    "XXX",
-    "XZX",
-    "XXX"
+	"XXX",
+	"XZX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:mini_zecter"
-    },
-    "Z": {
-      "item": "kamenridercraft:lady_zecter"
-    }
+	"X": {
+	  "item": "kamenridercraft:mini_zecter"
+	},
+	"Z": {
+	  "item": "kamenridercraft:lady_zecter"
+	}
   },
   "result": {
-    "item": "kamenridercraft:lady_rider_belt"
+	"item": "kamenridercraft:lady_rider_belt"
   }
 }

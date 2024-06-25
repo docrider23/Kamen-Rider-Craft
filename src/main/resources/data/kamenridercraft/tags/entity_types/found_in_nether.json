@@ -1,17 +1,17 @@
 {
   "values": [
-    "kamenridercraft:anguis_masculus",
-    "kamenridercraft:foundation_x_masquerade",
-    "kamenridercraft:rideplayer",
-    "kamenridercraft:another_agito",
-    "kamenridercraft:commander_dopant",
-    "kamenridercraft:core",
-    "kamenridercraft:eternal_mob",
-    "kamenridercraft:muchiri_mob",
-    "#kamenridercraft:by_series/555_mobs",
-    "#kamenridercraft:by_series/kabuto_mobs",
-    "kamenridercraft:para-dx",
-    "kamenridercraft:poppy_red_mob",
-    "kamenridercraft:powered_up_core"
+	"kamenridercraft:anguis_masculus",
+	"kamenridercraft:foundation_x_masquerade",
+	"kamenridercraft:rideplayer",
+	"kamenridercraft:another_agito",
+	"kamenridercraft:commander_dopant",
+	"kamenridercraft:core",
+	"kamenridercraft:eternal_mob",
+	"kamenridercraft:muchiri_mob",
+	"#kamenridercraft:by_series/555_mobs",
+	"#kamenridercraft:by_series/kabuto_mobs",
+	"kamenridercraft:para-dx",
+	"kamenridercraft:poppy_red_mob",
+	"kamenridercraft:powered_up_core"
   ]
 }

@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "ryuki",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:advent_card"
-    },
-    "M": {
-      "item": "kamenridercraft:dragreder_advent"
-    }
+	"X": {
+	  "item": "kamenridercraft:advent_card"
+	},
+	"M": {
+	  "item": "kamenridercraft:dragreder_advent"
+	}
   },
   "result": {
-    "item": "kamenridercraft:v_buckle_ryuki"
-  }    
+	"item": "kamenridercraft:v_buckle_ryuki"
+  }	
 }

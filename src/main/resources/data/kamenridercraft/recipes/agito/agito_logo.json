@@ -3,14 +3,14 @@
   "group": "rider_logo",
   "ingredients": [
 {
-    
-      "item": "minecraft:paper"
-    }, 
-    {
-      "item": "kamenridercraft:agito_ground"
-    }
-    ],
+	
+	  "item": "minecraft:paper"
+	}, 
+	{
+	  "item": "kamenridercraft:agito_ground"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:agito_logo"
+	"item": "kamenridercraft:agito_logo"
   }
 }

@@ -3,19 +3,19 @@
   "group": "gasha_ticket",
   "ingredients": [
 	{ 
-      "item": "kamenridercraft:contract_chaostone"
-    }, 
-    {
-      "item": "kamenridercraft:contract_chaostone"
-    } , 
-    {
-      "item": "kamenridercraft:contract_chaostone"
-    }, 
-    {
-      "item": "kamenridercraft:contract_chaostone"
-    }
-    ],
+	  "item": "kamenridercraft:contract_chaostone"
+	}, 
+	{
+	  "item": "kamenridercraft:contract_chaostone"
+	} , 
+	{
+	  "item": "kamenridercraft:contract_chaostone"
+	}, 
+	{
+	  "item": "kamenridercraft:contract_chaostone"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:gasha_ticket"
+	"item": "kamenridercraft:gasha_ticket"
   }
 }

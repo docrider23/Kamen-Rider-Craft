@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "group": "kr_gotchard",
   "pattern": [
-    "XXX",
-    "X X",
-    "X X"
+	"XXX",
+	"X X",
+	"X X"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:blank_ride_chemy_card"
-    }
+	"X": {
+	  "item": "kamenridercraft:blank_ride_chemy_card"
+	}
   },
   "result": {
-    "item": "kamenridercraft:gotchard_legs"
+	"item": "kamenridercraft:gotchard_legs"
   }
 }

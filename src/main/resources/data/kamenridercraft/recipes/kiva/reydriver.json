@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "rey",
   "pattern": [
-    "XXX",
-    "MXX",
-    "XXX"
+	"XXX",
+	"MXX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:fuestle"
-    },
-    "M": {
-      "item": "kamenridercraft:keyfuestle"
-    }
+	"X": {
+	  "item": "kamenridercraft:fuestle"
+	},
+	"M": {
+	  "item": "kamenridercraft:keyfuestle"
+	}
   },
   "result": {
-    "item": "kamenridercraft:reydriver"
-  }    
+	"item": "kamenridercraft:reydriver"
+  }	
 }

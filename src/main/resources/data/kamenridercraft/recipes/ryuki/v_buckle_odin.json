@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "odin",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:advent_card"
-    },
-    "M": {
-      "item": "kamenridercraft:goldphoenix_advent"
-    }
+	"X": {
+	  "item": "kamenridercraft:advent_card"
+	},
+	"M": {
+	  "item": "kamenridercraft:goldphoenix_advent"
+	}
   },
   "result": {
-    "item": "kamenridercraft:v_buckle_odin"
-  }    
+	"item": "kamenridercraft:v_buckle_odin"
+  }	
 }

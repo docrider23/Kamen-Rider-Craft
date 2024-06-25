@@ -3,17 +3,17 @@
   "group": "rider_logo",
   "ingredients": [
 {
-    
-      "item": "minecraft:paper"
-    }, 
-    {
-      "item": "kamenridercraft:cyclone_memory"
-    }, 
-    {
-      "item": "kamenridercraft:joker_memory"
-    }
-    ],
+	
+	  "item": "minecraft:paper"
+	}, 
+	{
+	  "item": "kamenridercraft:cyclone_memory"
+	}, 
+	{
+	  "item": "kamenridercraft:joker_memory"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:w_logo"
+	"item": "kamenridercraft:w_logo"
   }
 }

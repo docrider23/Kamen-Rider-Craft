@@ -3,14 +3,14 @@
   "group": "rider_logo",
   "ingredients": [
 {
-    
-      "item": "minecraft:paper"
-    }, 
-    {
-      "item": "kamenridercraft:hopper1_ride_chemy_card"
-    }
-    ],
+	
+	  "item": "minecraft:paper"
+	}, 
+	{
+	  "item": "kamenridercraft:hopper1_ride_chemy_card"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:gotchard_logo"
+	"item": "kamenridercraft:gotchard_logo"
   }
 }

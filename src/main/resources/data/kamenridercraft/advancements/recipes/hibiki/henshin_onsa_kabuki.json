@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+	"has_item": {
+	  "trigger": "minecraft:inventory_changed",
+	  "conditions": {
+		"items": [
+		  {
+			"items": [
+			  "kamenridercraft:henshin_onsa_kabuki"
+			]
+		  }
+		]
+	  }
+	}
+  },
+  "requirements": [
+	[
+	  "has_item"
+	]
+  ],
+  "rewards": {
+	"recipes": [
+	  "kamenridercraft:hibiki/kabukidriver",
+	  "kamenridercraft:hibiki/ongekibo_ressui",
+	  "kamenridercraft:hibiki/echo_sword_onsaken"
+	]
+  },
+  "sends_telemetry_event": false
+}

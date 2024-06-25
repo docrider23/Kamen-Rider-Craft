@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "group": "knight",
   "pattern": [
-    "XCX",
-    "XZX",
-    "XXX"
+	"XCX",
+	"XZX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:advent_card"
-    }, "C": {
-      "item": "kamenridercraft:darkwing_advent"
-    }, "Z": {
-      "item": "kamenridercraft:base_sword"
-    }
+	"X": {
+	  "item": "kamenridercraft:advent_card"
+	}, "C": {
+	  "item": "kamenridercraft:darkwing_advent"
+	}, "Z": {
+	  "item": "kamenridercraft:base_sword"
+	}
   },
   "result": {
-    "item": "kamenridercraft:dark_visor"
+	"item": "kamenridercraft:dark_visor"
   }
 }

@@ -3,14 +3,14 @@
   "group": "rider_logo",
   "ingredients": [
 {
-    
-      "item": "minecraft:paper"
-    }, 
-    {
-      "item": "kamenridercraft:wakeupfuestle"
-    }
-    ],
+	
+	  "item": "minecraft:paper"
+	}, 
+	{
+	  "item": "kamenridercraft:wakeupfuestle"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:kiva_logo"
+	"item": "kamenridercraft:kiva_logo"
   }
 }

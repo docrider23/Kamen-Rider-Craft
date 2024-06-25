@@ -3,14 +3,14 @@
   "group": "legend_medal",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:destwilder_advent"
-    }, 
-    {
-      "item": "kamenridercraft:cellmedal"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:destwilder_advent"
+	}, 
+	{
+	  "item": "kamenridercraft:cellmedal"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:taiga_medal"
+	"item": "kamenridercraft:taiga_medal"
   }
 }

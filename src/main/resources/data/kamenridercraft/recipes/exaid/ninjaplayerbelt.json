@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "group": "ninja_player",
   "pattern": [
-    "a"
+	"a"
   ],
   "key": {
 	"a": {
-      "item": "kamenridercraft:hurricane_ninja_gashat"
-    }
+	  "item": "kamenridercraft:hurricane_ninja_gashat"
+	}
   },
   "result": {
-    "item": "kamenridercraft:ninjaplayerbelt"
+	"item": "kamenridercraft:ninjaplayerbelt"
   }
 }

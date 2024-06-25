@@ -1,32 +1,32 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_item": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:double_typhoon_core"
-            ]
-          }
-        ]
-      }
-    }
+	"has_item": {
+	  "trigger": "minecraft:inventory_changed",
+	  "conditions": {
+		"items": [
+		  {
+			"items": [
+			  "kamenridercraft:double_typhoon_core"
+			]
+		  }
+		]
+	  }
+	}
   },
   "requirements": [
-    [
-      "has_item"
-    ]
+	[
+	  "has_item"
+	]
   ],
   "rewards": {
-    "recipes": [
-      "kamenridercraft:v3/v3head",
-      "kamenridercraft:v3/v3troso",
-      "kamenridercraft:v3/v3legs",
-      "kamenridercraft:v3/double_typhoon",
-      "kamenridercraft:v3/v3_logo"
-    ]
+	"recipes": [
+	  "kamenridercraft:v3/v3head",
+	  "kamenridercraft:v3/v3troso",
+	  "kamenridercraft:v3/v3legs",
+	  "kamenridercraft:v3/double_typhoon",
+	  "kamenridercraft:v3/v3_logo"
+	]
   },
   "sends_telemetry_event": false
 }

@@ -3,14 +3,14 @@
   "group": "kr_v3",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:ichigotroso"
-    }, 
-    {
-      "item": "kamenridercraft:electrer_core"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:ichigotroso"
+	}, 
+	{
+	  "item": "kamenridercraft:electrer_core"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:strongertroso"
+	"item": "kamenridercraft:strongertroso"
   }
 }

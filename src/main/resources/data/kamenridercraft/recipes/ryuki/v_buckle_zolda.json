@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "zolda",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:advent_card"
-    },
-    "M": {
-      "item": "kamenridercraft:magnugiga_advent"
-    }
+	"X": {
+	  "item": "kamenridercraft:advent_card"
+	},
+	"M": {
+	  "item": "kamenridercraft:magnugiga_advent"
+	}
   },
   "result": {
-    "item": "kamenridercraft:v_buckle_zolda"
-  }    
+	"item": "kamenridercraft:v_buckle_zolda"
+  }	
 }

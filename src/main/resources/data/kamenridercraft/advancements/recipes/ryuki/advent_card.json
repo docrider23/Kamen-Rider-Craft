@@ -1,30 +1,30 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_item": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "kamenridercraft:advent_card"
-            ]
-          }
-        ]
-      }
-    }
+	"has_item": {
+	  "trigger": "minecraft:inventory_changed",
+	  "conditions": {
+		"items": [
+		  {
+			"items": [
+			  "kamenridercraft:advent_card"
+			]
+		  }
+		]
+	  }
+	}
   },
   "requirements": [
-    [
-      "has_item"
-    ]
+	[
+	  "has_item"
+	]
   ],
   "rewards": {
-    "recipes": [
-      "kamenridercraft:ryuki/ryukihead",
-      "kamenridercraft:ryuki/ryukitroso",
-      "kamenridercraft:ryuki/ryukilegs"
-    ]
+	"recipes": [
+	  "kamenridercraft:ryuki/ryukihead",
+	  "kamenridercraft:ryuki/ryukitroso",
+	  "kamenridercraft:ryuki/ryukilegs"
+	]
   },
   "sends_telemetry_event": false
 }

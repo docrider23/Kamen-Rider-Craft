@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "scissors",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:advent_card"
-    },
-    "M": {
-      "item": "kamenridercraft:volcancer_advent"
-    }
+	"X": {
+	  "item": "kamenridercraft:advent_card"
+	},
+	"M": {
+	  "item": "kamenridercraft:volcancer_advent"
+	}
   },
   "result": {
-    "item": "kamenridercraft:v_buckle_scissors"
-  }    
+	"item": "kamenridercraft:v_buckle_scissors"
+  }	
 }

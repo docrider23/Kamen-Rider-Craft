@@ -3,14 +3,14 @@
   "group": "kr_g",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:ichigolegs"
-    }, 
-    {
-      "item": "kamenridercraft:goro_wine_bottle"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:ichigolegs"
+	}, 
+	{
+	  "item": "kamenridercraft:goro_wine_bottle"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:glegs"
+	"item": "kamenridercraft:glegs"
   }
 }

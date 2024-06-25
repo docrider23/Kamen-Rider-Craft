@@ -3,14 +3,14 @@
   "group": "amazon_alpha",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:alpha_amazon_cell_vial"
-    }, 
-    {
-      "item": "kamenridercraft:condorer_wheel"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:alpha_amazon_cell_vial"
+	}, 
+	{
+	  "item": "kamenridercraft:condorer_wheel"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:condorer_core_alpha"
+	"item": "kamenridercraft:condorer_core_alpha"
   }
 }

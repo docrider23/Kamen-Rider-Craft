@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "eternity_medal",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:taka_medal"
-    },
-    "M": {
-      "item": "kamenridercraft:taka_ankh_medal"
-    }
+	"X": {
+	  "item": "kamenridercraft:taka_medal"
+	},
+	"M": {
+	  "item": "kamenridercraft:taka_ankh_medal"
+	}
   },
   "result": {
-    "item": "kamenridercraft:taka_eternity_medal"
-  }    
+	"item": "kamenridercraft:taka_eternity_medal"
+  }	
 }

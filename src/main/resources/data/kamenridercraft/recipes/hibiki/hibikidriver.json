@@ -2,18 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "group": "hibiki",
   "pattern": [
-    "XXX",
-    "XCX",
-    "XXX"
+	"XXX",
+	"XCX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:oni_ore"
-    }, "C": {
-      "item": "kamenridercraft:henshin_onsa"
-    }
+	"X": {
+	  "item": "kamenridercraft:oni_ore"
+	}, "C": {
+	  "item": "kamenridercraft:henshin_onsa"
+	}
   },
   "result": {
-    "item": "kamenridercraft:hibikidriver"
+	"item": "kamenridercraft:hibikidriver"
   }
 }

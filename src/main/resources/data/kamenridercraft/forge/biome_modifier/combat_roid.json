@@ -2,9 +2,9 @@
   "type": "forge:add_spawns",
   "biomes": "#kamenridercraft:combat_roid",
   "spawners": {
-    "type": "kamenridercraft:combat_roid",
-    "weight": 15,
-    "minCount": 1,
-    "maxCount": 4
+	"type": "kamenridercraft:combat_roid",
+	"weight": 15,
+	"minCount": 1,
+	"maxCount": 4
   }
 }

@@ -3,14 +3,14 @@
   "group": "rider_logo",
   "ingredients": [
 {
-    
-      "item": "minecraft:paper"
-    }, 
-    {
-      "item": "kamenridercraft:kabuto_zecter"
-    }
-    ],
+	
+	  "item": "minecraft:paper"
+	}, 
+	{
+	  "item": "kamenridercraft:kabuto_zecter"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:kabuto_logo"
+	"item": "kamenridercraft:kabuto_logo"
   }
 }

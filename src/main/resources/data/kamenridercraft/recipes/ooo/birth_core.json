@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "group": "birth",
   "pattern": [
-    "ABA",
-    "BCB",
-    "ABA"
+	"ABA",
+	"BCB",
+	"ABA"
   ],
   "key": {
-    "B": {
-      "item": "minecraft:redstone"
-    }, "A": {
-      "item": "kamenridercraft:cell_alloy_ingot"
-    }, "C": {
-      "item": "kamenridercraft:rider_circuit"
-    }
+	"B": {
+	  "item": "minecraft:redstone"
+	}, "A": {
+	  "item": "kamenridercraft:cell_alloy_ingot"
+	}, "C": {
+	  "item": "kamenridercraft:rider_circuit"
+	}
   },
   "result": {
-    "item": "kamenridercraft:birth_core"
+	"item": "kamenridercraft:birth_core"
   }
 }

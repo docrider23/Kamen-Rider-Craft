@@ -2,18 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "group": "gouki",
   "pattern": [
-    "XXX",
-    "XCX",
-    "XXX"
+	"XXX",
+	"XCX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:oni_orehell"
-    }, "C": {
-      "item": "kamenridercraft:henshin_onsa_gouki"
-    }
+	"X": {
+	  "item": "kamenridercraft:oni_orehell"
+	}, "C": {
+	  "item": "kamenridercraft:henshin_onsa_gouki"
+	}
   },
   "result": {
-    "item": "kamenridercraft:goukidriver"
+	"item": "kamenridercraft:goukidriver"
   }
 }

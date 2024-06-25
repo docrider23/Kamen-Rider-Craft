@@ -3,14 +3,14 @@
   "group": "kr_zo",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:ichigohead"
-    }, 
-    {
-      "item": "kamenridercraft:zo_stone"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:ichigohead"
+	}, 
+	{
+	  "item": "kamenridercraft:zo_stone"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:zohead"
+	"item": "kamenridercraft:zohead"
   }
 }

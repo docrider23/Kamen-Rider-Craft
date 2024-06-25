@@ -3,14 +3,14 @@
   "group": "amazon",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:ichigohead"
-    }, 
-    {
-      "item": "kamenridercraft:condorer_wheel"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:ichigohead"
+	}, 
+	{
+	  "item": "kamenridercraft:condorer_wheel"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:amazonhead"
+	"item": "kamenridercraft:amazonhead"
   }
 }

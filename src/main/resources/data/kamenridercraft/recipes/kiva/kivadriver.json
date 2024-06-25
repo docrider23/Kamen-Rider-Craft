@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "kiva",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:fuestle"
-    },
-    "M": {
-      "item": "kamenridercraft:wakeupfuestle"
-    }
+	"X": {
+	  "item": "kamenridercraft:fuestle"
+	},
+	"M": {
+	  "item": "kamenridercraft:wakeupfuestle"
+	}
   },
   "result": {
-    "item": "kamenridercraft:kivadriver"
-  }    
+	"item": "kamenridercraft:kivadriver"
+  }	
 }

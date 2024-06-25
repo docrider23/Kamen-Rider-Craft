@@ -3,14 +3,14 @@
   "group": "garulu",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:garulu_saber"
-    }, 
-    {
-      "item": "kamenridercraft:tatsulot"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:garulu_saber"
+	}, 
+	{
+	  "item": "kamenridercraft:tatsulot"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:garulu_saber_tatsulot"
+	"item": "kamenridercraft:garulu_saber_tatsulot"
   }
 }

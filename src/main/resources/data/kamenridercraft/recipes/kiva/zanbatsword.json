@@ -3,20 +3,20 @@
   "group": "emperor",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:zanbatsword_core"
-    }, 
-    {
-      "item": "kamenridercraft:garulufuestle"
-    } , 
-    {
-      "item": "kamenridercraft:basshaafuestle"
-    }, 
-    {
-      "item": "kamenridercraft:doggafuestle"
-    }
-    ],
+	
+	  "item": "kamenridercraft:zanbatsword_core"
+	}, 
+	{
+	  "item": "kamenridercraft:garulufuestle"
+	} , 
+	{
+	  "item": "kamenridercraft:basshaafuestle"
+	}, 
+	{
+	  "item": "kamenridercraft:doggafuestle"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:zanbatsword"
+	"item": "kamenridercraft:zanbatsword"
   }
 }

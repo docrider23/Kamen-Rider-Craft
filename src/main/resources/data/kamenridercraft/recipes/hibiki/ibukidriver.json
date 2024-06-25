@@ -2,18 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "group": "ibuki",
   "pattern": [
-    "XXX",
-    "XCX",
-    "XXX"
+	"XXX",
+	"XCX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:oni_ore"
-    }, "C": {
-      "item": "kamenridercraft:henshin_onibue_ibuki"
-    }
+	"X": {
+	  "item": "kamenridercraft:oni_ore"
+	}, "C": {
+	  "item": "kamenridercraft:henshin_onibue_ibuki"
+	}
   },
   "result": {
-    "item": "kamenridercraft:ibukidriver"
+	"item": "kamenridercraft:ibukidriver"
   }
 }

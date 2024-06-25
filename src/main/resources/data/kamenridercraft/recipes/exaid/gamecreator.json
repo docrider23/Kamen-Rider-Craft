@@ -2,18 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "group": "gashat",
   "pattern": [
-    "XXX",
-    "XCX",
-    "XXX"
+	"XXX",
+	"XCX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "minecraft:iron_ingot"
-    }, "C": {
-      "item": "kamenridercraft:blank_gashat"
-    }
+	"X": {
+	  "item": "minecraft:iron_ingot"
+	}, "C": {
+	  "item": "kamenridercraft:blank_gashat"
+	}
   },
   "result": {
-    "item": "kamenridercraft:gamecreator"
+	"item": "kamenridercraft:gamecreator"
   }
 }

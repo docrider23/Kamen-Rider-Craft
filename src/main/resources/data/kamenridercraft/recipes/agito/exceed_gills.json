@@ -3,14 +3,14 @@
   "group": "exceed_gills",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:gills"
-    }, 
-    {
-      "item": "kamenridercraft:agito_burning"
-    }
-    ],
+	
+	  "item": "kamenridercraft:gills"
+	}, 
+	{
+	  "item": "kamenridercraft:agito_burning"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:exceed_gills"
+	"item": "kamenridercraft:exceed_gills"
   }
 }

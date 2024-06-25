@@ -2,22 +2,22 @@
   "type": "minecraft:crafting_shaped",
   "group": "amazons",
   "pattern": [
-    "IXI",
-    "XCX",
-    "IMI"
+	"IXI",
+	"XCX",
+	"IMI"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:empty_vial"
-    },"I": {
-      "item": "minecraft:iron_ingot"
-    },"M": {
-      "item": "kamenridercraft:monitor"
-    }, "C": {
-      "item": "kamenridercraft:condorer_wheel"
-    }
+	"X": {
+	  "item": "kamenridercraft:empty_vial"
+	},"I": {
+	  "item": "minecraft:iron_ingot"
+	},"M": {
+	  "item": "kamenridercraft:monitor"
+	}, "C": {
+	  "item": "kamenridercraft:condorer_wheel"
+	}
   },
   "result": {
-    "item": "kamenridercraft:amazon_cell_extractor"
+	"item": "kamenridercraft:amazon_cell_extractor"
   }
 }

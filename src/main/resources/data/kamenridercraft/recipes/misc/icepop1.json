@@ -2,18 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "group": "rider_food",
   "pattern": [
-    "X",
-    "X",
-    "Z"
+	"X",
+	"X",
+	"Z"
   ],
   "key": {
-    "X": {
-      "item": "minecraft:snowball"
-    }, "Z": {
-      "item": "minecraft:stick"
-    }
+	"X": {
+	  "item": "minecraft:snowball"
+	}, "Z": {
+	  "item": "minecraft:stick"
+	}
   },
   "result": {
-    "item": "kamenridercraft:icepop1"
+	"item": "kamenridercraft:icepop1"
   }
 }

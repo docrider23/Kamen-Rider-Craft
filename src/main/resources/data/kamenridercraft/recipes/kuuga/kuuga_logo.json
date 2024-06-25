@@ -3,14 +3,14 @@
   "group": "rider_logo",
   "ingredients": [
 {
-    
-      "item": "minecraft:paper"
-    }, 
-    {
-      "item": "kamenridercraft:kuuga_mighty"
-    }
-    ],
+	
+	  "item": "minecraft:paper"
+	}, 
+	{
+	  "item": "kamenridercraft:kuuga_mighty"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:kuuga_logo"
+	"item": "kamenridercraft:kuuga_logo"
   }
 }

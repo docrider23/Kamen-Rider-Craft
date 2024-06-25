@@ -3,14 +3,14 @@
   "group": "kr_black_rx",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:blacklegs"
-    }, 
-    {
-      "item": "kamenridercraft:split_king_stone"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:blacklegs"
+	}, 
+	{
+	  "item": "kamenridercraft:split_king_stone"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:rxlegs"
+	"item": "kamenridercraft:rxlegs"
   }
 }

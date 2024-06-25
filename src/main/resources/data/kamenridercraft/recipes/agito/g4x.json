@@ -3,14 +3,14 @@
   "group": "g4_x",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:g4"
-    }, 
-    {
-      "item": "kamenridercraft:g3x"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:g4"
+	}, 
+	{
+	  "item": "kamenridercraft:g3x"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:g4x"
+	"item": "kamenridercraft:g4x"
   }
 }

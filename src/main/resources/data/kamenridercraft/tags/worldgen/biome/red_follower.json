@@ -1,11 +1,11 @@
 {
   "values": [
-    "minecraft:desert",
-    "minecraft:jungle",
-    "minecraft:savanna",
-    "minecraft:savanna_plateau",
-    "minecraft:beach",
-    "minecraft:badlands",
-    "minecraft:wooded_badlands"
+	"minecraft:desert",
+	"minecraft:jungle",
+	"minecraft:savanna",
+	"minecraft:savanna_plateau",
+	"minecraft:beach",
+	"minecraft:badlands",
+	"minecraft:wooded_badlands"
   ]
 }

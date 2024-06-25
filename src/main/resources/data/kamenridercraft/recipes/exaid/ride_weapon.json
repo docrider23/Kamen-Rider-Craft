@@ -2,23 +2,23 @@
   "type": "minecraft:crafting_shaped",
   "group": "ride_player",
   "pattern": [
-    "XXX",
-    "XSX",
-    "XMX"
+	"XXX",
+	"XSX",
+	"XMX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:blank_gashat"
-    },
-    "S": {
-      "item": "kamenridercraft:base_sword"
-    },
-    "M": {
-      "item": "kamenridercraft:kamen_rider_chronicle_gashat"
-    }
+	"X": {
+	  "item": "kamenridercraft:blank_gashat"
+	},
+	"S": {
+	  "item": "kamenridercraft:base_sword"
+	},
+	"M": {
+	  "item": "kamenridercraft:kamen_rider_chronicle_gashat"
+	}
   },
   "result": {
-    "item": "kamenridercraft:ride_weapon"
-  }    
+	"item": "kamenridercraft:ride_weapon"
+  }	
 }
 

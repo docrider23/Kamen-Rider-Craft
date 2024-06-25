@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "ixa",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:fuestlefake"
-    },
-    "M": {
-      "item": "kamenridercraft:knucklefuestle"
-    }
+	"X": {
+	  "item": "kamenridercraft:fuestlefake"
+	},
+	"M": {
+	  "item": "kamenridercraft:knucklefuestle"
+	}
   },
   "result": {
-    "item": "kamenridercraft:ixa_belt"
-  }    
+	"item": "kamenridercraft:ixa_belt"
+  }	
 }

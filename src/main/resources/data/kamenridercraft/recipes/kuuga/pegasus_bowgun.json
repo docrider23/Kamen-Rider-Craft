@@ -2,22 +2,22 @@
   "type": "minecraft:crafting_shaped",
   "group": "kuuga_pegasus",
   "pattern": [
-    "XPX",
-    "XSX",
-    "XXX"
+	"XPX",
+	"XSX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:kuuga_growing"
-    },
-    "P": {
-      "item": "kamenridercraft:kuuga_pegasus"
-    },
-    "S": {
-      "item": "kamenridercraft:base_sword"
-    }
+	"X": {
+	  "item": "kamenridercraft:kuuga_growing"
+	},
+	"P": {
+	  "item": "kamenridercraft:kuuga_pegasus"
+	},
+	"S": {
+	  "item": "kamenridercraft:base_sword"
+	}
   },
   "result": {
-    "item": "kamenridercraft:pegasus_bowgun"
-  }    
+	"item": "kamenridercraft:pegasus_bowgun"
+  }	
 } 

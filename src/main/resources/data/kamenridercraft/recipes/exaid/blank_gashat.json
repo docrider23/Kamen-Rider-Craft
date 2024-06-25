@@ -3,13 +3,13 @@
   "group": "gashat",
   "ingredients": [
 	{ 
-      "item": "kamenridercraft:rider_circuit"
-    }, 
-    {
-      "item": "kamenridercraft:bugster_virus_dna"
-    } 
-    ],
+	  "item": "kamenridercraft:rider_circuit"
+	}, 
+	{
+	  "item": "kamenridercraft:bugster_virus_dna"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:blank_gashat"
+	"item": "kamenridercraft:blank_gashat"
   }
 }

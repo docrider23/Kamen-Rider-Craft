@@ -1,7 +1,7 @@
 {
   "values": [
-    "minecraft:plains",
-    "minecraft:birch_forest",
-    "minecraft:windswept_forest"
+	"minecraft:plains",
+	"minecraft:birch_forest",
+	"minecraft:windswept_forest"
   ]
 }

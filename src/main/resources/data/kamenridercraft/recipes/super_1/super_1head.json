@@ -3,14 +3,14 @@
   "group": "kr_super_1",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:ichigohead"
-    }, 
-    {
-      "item": "kamenridercraft:cyclode_core"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:ichigohead"
+	}, 
+	{
+	  "item": "kamenridercraft:cyclode_core"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:super_1head"
+	"item": "kamenridercraft:super_1head"
   }
 }

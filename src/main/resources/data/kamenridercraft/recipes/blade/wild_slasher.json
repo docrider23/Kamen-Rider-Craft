@@ -2,22 +2,22 @@
   "type": "minecraft:crafting_shaped",
   "group": "chalice",
   "pattern": [
-    "XRX",
-    "XMX",
-    "XXX"
+	"XRX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:bladecard"
-    },
-    "M": {
-      "item": "kamenridercraft:base_sword"
-    },
-    "R": {
-      "item": "kamenridercraft:evolution_paradoxa"
-    }
+	"X": {
+	  "item": "kamenridercraft:bladecard"
+	},
+	"M": {
+	  "item": "kamenridercraft:base_sword"
+	},
+	"R": {
+	  "item": "kamenridercraft:evolution_paradoxa"
+	}
   },
   "result": {
-    "item": "kamenridercraft:wild_slasher"
-  }    
+	"item": "kamenridercraft:wild_slasher"
+  }	
 }

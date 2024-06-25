@@ -4,19 +4,19 @@
   "group": "heat_heaven",
   "ingredients": [
 	{ 
-      "item": "minecraft:rotten_flesh"
-    },
+	  "item": "minecraft:rotten_flesh"
+	},
 	{ 
-      "item": "minecraft:rotten_flesh"
-    },
-    { 
-      "item": "minecraft:rotten_flesh"
-    }, 
-    {
-      "item": "kamenridercraft:creation_king_extract_vial"
-    } 
-    ],
+	  "item": "minecraft:rotten_flesh"
+	},
+	{ 
+	  "item": "minecraft:rotten_flesh"
+	}, 
+	{
+	  "item": "kamenridercraft:creation_king_extract_vial"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:heat_heaven"
+	"item": "kamenridercraft:heat_heaven"
   }
 }

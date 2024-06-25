@@ -2,22 +2,22 @@
   "type": "minecraft:crafting_shaped",
   "group": "kabuki",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XRX"
+	"XXX",
+	"XMX",
+	"XRX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:oni_ore"
-    },
-    "M": {
-      "item": "kamenridercraft:base_sword"
-    },
-    "R": {
-      "item": "kamenridercraft:henshin_onsa_kabuki"
-    }
+	"X": {
+	  "item": "kamenridercraft:oni_ore"
+	},
+	"M": {
+	  "item": "kamenridercraft:base_sword"
+	},
+	"R": {
+	  "item": "kamenridercraft:henshin_onsa_kabuki"
+	}
   },
   "result": {
-    "item": "kamenridercraft:echo_sword_onsaken"
-  }    
+	"item": "kamenridercraft:echo_sword_onsaken"
+  }	
 }

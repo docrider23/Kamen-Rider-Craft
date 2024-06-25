@@ -2,18 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "group": "banki",
   "pattern": [
-    "XXX",
-    "XCX",
-    "XXX"
+	"XXX",
+	"XCX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:oni_orehell"
-    }, "C": {
-      "item": "kamenridercraft:henshin_kigen_banki"
-    }
+	"X": {
+	  "item": "kamenridercraft:oni_orehell"
+	}, "C": {
+	  "item": "kamenridercraft:henshin_kigen_banki"
+	}
   },
   "result": {
-    "item": "kamenridercraft:bankidriver"
+	"item": "kamenridercraft:bankidriver"
   }
 }

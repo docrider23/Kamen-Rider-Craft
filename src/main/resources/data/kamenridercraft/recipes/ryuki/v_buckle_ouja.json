@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "ouja",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:advent_card"
-    },
-    "M": {
-      "item": "kamenridercraft:venosnaker_advent"
-    }
+	"X": {
+	  "item": "kamenridercraft:advent_card"
+	},
+	"M": {
+	  "item": "kamenridercraft:venosnaker_advent"
+	}
   },
   "result": {
-    "item": "kamenridercraft:v_buckle_ouja"
-  }    
+	"item": "kamenridercraft:v_buckle_ouja"
+  }	
 }

@@ -2,18 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "group": "kabuki",
   "pattern": [
-    "XXX",
-    "XCX",
-    "XXX"
+	"XXX",
+	"XCX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:oni_orehell"
-    }, "C": {
-      "item": "kamenridercraft:henshin_onsa_kabuki"
-    }
+	"X": {
+	  "item": "kamenridercraft:oni_orehell"
+	}, "C": {
+	  "item": "kamenridercraft:henshin_onsa_kabuki"
+	}
   },
   "result": {
-    "item": "kamenridercraft:kabukidriver"
+	"item": "kamenridercraft:kabukidriver"
   }
 }

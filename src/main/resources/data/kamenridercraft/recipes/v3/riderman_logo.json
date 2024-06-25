@@ -3,14 +3,14 @@
   "group": "rider_logo",
   "ingredients": [
 {
-    
-      "item": "minecraft:paper"
-    }, 
-    {
-      "item": "kamenridercraft:riderman_belt_core"
-    }
-    ],
+	
+	  "item": "minecraft:paper"
+	}, 
+	{
+	  "item": "kamenridercraft:riderman_belt_core"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:riderman_logo"
+	"item": "kamenridercraft:riderman_logo"
   }
 }

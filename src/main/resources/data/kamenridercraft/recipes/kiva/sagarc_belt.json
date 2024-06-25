@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "saga",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:fuestle"
-    },
-    "M": {
-      "item": "kamenridercraft:sagafuestle"
-    }
+	"X": {
+	  "item": "kamenridercraft:fuestle"
+	},
+	"M": {
+	  "item": "kamenridercraft:sagafuestle"
+	}
   },
   "result": {
-    "item": "kamenridercraft:sagarc_belt"
-  }    
+	"item": "kamenridercraft:sagarc_belt"
+  }	
 }

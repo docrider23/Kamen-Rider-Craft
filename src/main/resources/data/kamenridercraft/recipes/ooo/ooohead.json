@@ -2,15 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "group": "kr_ooo",
   "pattern": [
-    "XXX",
-    "X X"
+	"XXX",
+	"X X"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:cellmedal"
-    }
+	"X": {
+	  "item": "kamenridercraft:cellmedal"
+	}
   },
   "result": {
-    "item": "kamenridercraft:ooohead"
+	"item": "kamenridercraft:ooohead"
   }
 }

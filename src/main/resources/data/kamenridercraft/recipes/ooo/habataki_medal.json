@@ -3,14 +3,14 @@
   "group": "legend_medal",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:henshin_onsa_habataki"
-    }, 
-    {
-      "item": "kamenridercraft:cellmedal"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:henshin_onsa_habataki"
+	}, 
+	{
+	  "item": "kamenridercraft:cellmedal"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:habataki_medal"
+	"item": "kamenridercraft:habataki_medal"
   }
 }

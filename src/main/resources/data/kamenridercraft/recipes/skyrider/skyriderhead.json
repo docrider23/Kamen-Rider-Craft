@@ -3,14 +3,14 @@
   "group": "kr_v3",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:ichigohead"
-    }, 
-    {
-      "item": "kamenridercraft:tornado_core"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:ichigohead"
+	}, 
+	{
+	  "item": "kamenridercraft:tornado_core"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:skyriderhead"
+	"item": "kamenridercraft:skyriderhead"
   }
 }

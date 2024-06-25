@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "group": "ride_player",
   "pattern": [
-    "a"
+	"a"
   ],
   "key": {
 	"a": {
-      "item": "kamenridercraft:kamen_rider_chronicle_gashat"
-    }
+	  "item": "kamenridercraft:kamen_rider_chronicle_gashat"
+	}
   },
   "result": {
-    "item": "kamenridercraft:rideplayerbelt"
+	"item": "kamenridercraft:rideplayerbelt"
   }
 }

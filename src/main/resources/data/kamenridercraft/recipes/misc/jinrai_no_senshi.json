@@ -3,20 +3,20 @@
   "group": "card_warrior_kamen_rider_card",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:dark_kabuto_zecter"
-    }, 
-    {
-      "item": "kamenridercraft:kuuga_rising_mighty"
-    } , 
-    {
-      "item": "kamenridercraft:fusion_eagle"
-    } , 
-    {
-      "item": "kamenridercraft:card_warrior_kamen_rider_manga"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:dark_kabuto_zecter"
+	}, 
+	{
+	  "item": "kamenridercraft:kuuga_rising_mighty"
+	} , 
+	{
+	  "item": "kamenridercraft:fusion_eagle"
+	} , 
+	{
+	  "item": "kamenridercraft:card_warrior_kamen_rider_manga"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:jinrai_no_senshi"
+	"item": "kamenridercraft:jinrai_no_senshi"
   }
 }

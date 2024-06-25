@@ -3,14 +3,14 @@
   "group": "rider_logo",
   "ingredients": [
 {
-    
-      "item": "minecraft:paper"
-    }, 
-    {
-      "item": "kamenridercraft:typhoon_core"
-    }
-    ],
+	
+	  "item": "minecraft:paper"
+	}, 
+	{
+	  "item": "kamenridercraft:typhoon_core"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:kamen_rider_logo"
+	"item": "kamenridercraft:kamen_rider_logo"
   }
 }

@@ -2,22 +2,22 @@
   "type": "minecraft:crafting_shaped",
   "group": "g3",
   "pattern": [
-    "RRR",
-    "CGI",
-    "RRR"
+	"RRR",
+	"CGI",
+	"RRR"
   ],
   "key": {
-    "R": {
-      "item": "minecraft:iron_ingot"
-      }, "I": {
-      "item": "kamenridercraft:g3"
-    }, "G": {
-      "item": "kamenridercraft:base_sword"
-    }, "C": {
-      "item": "minecraft:gunpowder"
-    }
+	"R": {
+	  "item": "minecraft:iron_ingot"
+	  }, "I": {
+	  "item": "kamenridercraft:g3"
+	}, "G": {
+	  "item": "kamenridercraft:base_sword"
+	}, "C": {
+	  "item": "minecraft:gunpowder"
+	}
   },
   "result": {
-    "item": "kamenridercraft:gm_01_scorpion"
+	"item": "kamenridercraft:gm_01_scorpion"
   }
 }

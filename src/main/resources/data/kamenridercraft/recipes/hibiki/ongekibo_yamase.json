@@ -2,22 +2,22 @@
   "type": "minecraft:crafting_shaped",
   "group": "ibuki",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XRX"
+	"XXX",
+	"XMX",
+	"XRX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:oni_ore"
-    },
-    "M": {
-      "item": "kamenridercraft:base_sword"
-    },
-    "R": {
-      "item": "kamenridercraft:henshin_onibue_ibuki"
-    }
+	"X": {
+	  "item": "kamenridercraft:oni_ore"
+	},
+	"M": {
+	  "item": "kamenridercraft:base_sword"
+	},
+	"R": {
+	  "item": "kamenridercraft:henshin_onibue_ibuki"
+	}
   },
   "result": {
-    "item": "kamenridercraft:ongekibo_yamase"
-  }    
+	"item": "kamenridercraft:ongekibo_yamase"
+  }	
 }

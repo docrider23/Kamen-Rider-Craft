@@ -3,14 +3,14 @@
   "group": "rider_logo",
   "ingredients": [
 {
-    
-      "item": "minecraft:paper"
-    }, 
-    {
-      "item": "kamenridercraft:condorer_wheel"
-    }
-    ],
+	
+	  "item": "minecraft:paper"
+	}, 
+	{
+	  "item": "kamenridercraft:condorer_wheel"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:amazon_logo"
+	"item": "kamenridercraft:amazon_logo"
   }
 }

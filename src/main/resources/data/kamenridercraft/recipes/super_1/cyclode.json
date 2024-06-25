@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "super_1",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:rider_circuit"
-    },
-    "M": {
-      "item": "kamenridercraft:cyclode_core"
-    }
+	"X": {
+	  "item": "kamenridercraft:rider_circuit"
+	},
+	"M": {
+	  "item": "kamenridercraft:cyclode_core"
+	}
   },
   "result": {
-    "item": "kamenridercraft:cyclode"
-  }    
+	"item": "kamenridercraft:cyclode"
+  }	
 }

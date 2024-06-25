@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "ketaros",
   "pattern": [
-    "XXX",
-    "XZX",
-    "XXX"
+	"XXX",
+	"XZX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:unfinished_kabutick_zecter"
-    },
-    "Z": {
-      "item": "kamenridercraft:ketaros_zecter"
-    }
+	"X": {
+	  "item": "kamenridercraft:unfinished_kabutick_zecter"
+	},
+	"Z": {
+	  "item": "kamenridercraft:ketaros_zecter"
+	}
   },
   "result": {
-    "item": "kamenridercraft:ketaros_rider_belt"
+	"item": "kamenridercraft:ketaros_rider_belt"
   }
 }

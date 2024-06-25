@@ -3,13 +3,13 @@
   "group": "chalice",
   "ingredients": [
 	{ 
-      "item": "kamenridercraft:wild_slasher"
-    },
-    {
-      "item": "kamenridercraft:chalice_arrow"
-    } 
-    ],
+	  "item": "kamenridercraft:wild_slasher"
+	},
+	{
+	  "item": "kamenridercraft:chalice_arrow"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:wild_chalice_arrow"
+	"item": "kamenridercraft:wild_chalice_arrow"
   }
 }

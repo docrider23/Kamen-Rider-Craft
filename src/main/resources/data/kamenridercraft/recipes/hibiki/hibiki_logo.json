@@ -3,14 +3,14 @@
   "group": "rider_logo",
   "ingredients": [
 {
-    
-      "item": "minecraft:paper"
-    }, 
-    {
-      "item": "kamenridercraft:henshin_onsa"
-    }
-    ],
+	
+	  "item": "minecraft:paper"
+	}, 
+	{
+	  "item": "kamenridercraft:henshin_onsa"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:hibiki_logo"
+	"item": "kamenridercraft:hibiki_logo"
   }
 }

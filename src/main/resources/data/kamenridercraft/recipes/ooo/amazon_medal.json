@@ -3,14 +3,14 @@
   "group": "legend_medal",
   "ingredients": [
 {
-    
-      "item": "kamenridercraft:cellmedal"
-    }, 
-    {
-      "item": "kamenridercraft:condorer_wheel"
-    } 
-    ],
+	
+	  "item": "kamenridercraft:cellmedal"
+	}, 
+	{
+	  "item": "kamenridercraft:condorer_wheel"
+	} 
+	],
   "result": {
-    "item": "kamenridercraft:amazon_medal"
+	"item": "kamenridercraft:amazon_medal"
   }
 }

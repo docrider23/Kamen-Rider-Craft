@@ -3,14 +3,14 @@
   "group": "rider_logo",
   "ingredients": [
 {
-    
-      "item": "minecraft:paper"
-    }, 
-    {
-      "item": "kamenridercraft:change_beetle"
-    }
-    ],
+	
+	  "item": "minecraft:paper"
+	}, 
+	{
+	  "item": "kamenridercraft:change_beetle"
+	}
+	],
   "result": {
-    "item": "kamenridercraft:blade_logo"
+	"item": "kamenridercraft:blade_logo"
   }
 }

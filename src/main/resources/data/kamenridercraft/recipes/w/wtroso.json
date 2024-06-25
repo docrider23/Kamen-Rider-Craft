@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "group": "kr_w",
   "pattern": [
-    "X X",
-    "XXX",
-    "XXX"
+	"X X",
+	"XXX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:gaiamemory"
-    }
+	"X": {
+	  "item": "kamenridercraft:gaiamemory"
+	}
   },
   "result": {
-    "item": "kamenridercraft:wtroso"
+	"item": "kamenridercraft:wtroso"
   }
 }

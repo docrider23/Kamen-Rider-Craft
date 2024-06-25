@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "group": "kamen_rider",
   "pattern": [
-    "ZXZ",
-    "XGX",
-    "ZXZ"
+	"ZXZ",
+	"XGX",
+	"ZXZ"
   ],
   "key": {
-    "X": {
-      "item": "minecraft:redstone"
-    }, "Z": {
-      "item": "minecraft:iron_ingot"
-    }, "G": {
-      "item": "kamenridercraft:rider_circuit"
-    }
+	"X": {
+	  "item": "minecraft:redstone"
+	}, "Z": {
+	  "item": "minecraft:iron_ingot"
+	}, "G": {
+	  "item": "kamenridercraft:rider_circuit"
+	}
   },
   "result": {
-    "item": "kamenridercraft:monitor"
+	"item": "kamenridercraft:monitor"
   }
 }

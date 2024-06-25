@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "group": "kr_j",
   "pattern": [
-    "XXX",
-    "XMX",
-    "XXX"
+	"XXX",
+	"XMX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:rider_circuit"
-    },
-    "M": {
-      "item": "kamenridercraft:j_stone"
-    }
+	"X": {
+	  "item": "kamenridercraft:rider_circuit"
+	},
+	"M": {
+	  "item": "kamenridercraft:j_stone"
+	}
   },
   "result": {
-    "item": "kamenridercraft:j_spirit"
-  }    
+	"item": "kamenridercraft:j_spirit"
+  }	
 }

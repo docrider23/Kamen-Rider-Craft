@@ -2,18 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "group": "genm",
   "pattern": [
-    "XXX",
-    "XCX",
-    "XXX"
+	"XXX",
+	"XCX",
+	"XXX"
   ],
   "key": {
-    "X": {
-      "item": "kamenridercraft:unfinished_kamen_rider_chronicle_gashat"
-    }, "C": {
-      "item": "kamenridercraft:dangerous_zombie_gashat"
-    }
+	"X": {
+	  "item": "kamenridercraft:unfinished_kamen_rider_chronicle_gashat"
+	}, "C": {
+	  "item": "kamenridercraft:dangerous_zombie_gashat"
+	}
   },
   "result": {
-    "item": "kamenridercraft:gashacon_bugvisor_genmu"
+	"item": "kamenridercraft:gashacon_bugvisor_genmu"
   }
 }
