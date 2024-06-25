@@ -46,6 +46,7 @@ public class Gotchard_Rider_Items {
 	   public static List<Item> NEED_ITEM_BurningGorilla= new ArrayList<Item>();
 	   public static List<Item> NEED_ITEM_NeedleHawk= new ArrayList<Item>();
 	   public static List<Item> NEED_ITEM_DokkiriShovel= new ArrayList<Item>();
+	   public static List<Item> NEED_ITEM_GoldMechanichor= new ArrayList<Item>();
 	   
     public static final RegistryObject<Item> HOPPER1_RIDE_CHEMY_CARD = ITEMS.register("hopper1_ride_chemy_card",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","gotchard","gotchardriver_belt",
@@ -128,10 +129,14 @@ public class Gotchard_Rider_Items {
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","valvarad","valvaradraw_buckle_belt",
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false)).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
-     
-     /* 
-     * golddash
-     */
+    
+    public static final RegistryObject<Item> GOLDDASH_RIDE_CHEMY_CARD = ITEMS.register("golddash_ride_chemy_card",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"_gold_mechanichor","gotchard","gotchardriver_belt_big",
+            		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
+            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false))
+            .ChangeModel("geo/gotchard_gold_mechanichor.geo.json").ChangeBeltModel("geo/lv_1_belt.geo.json")
+            .AddNeedItemList(NEED_ITEM_GoldMechanichor).AddToTabList(NEED_ITEM_GoldMechanichor).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
     public static final RegistryObject<Item> GUTSSHOVEL_RIDE_CHEMY_CARD = ITEMS.register("gutsshovel_ride_chemy_card",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","valvarad","",
@@ -147,8 +152,13 @@ public class Gotchard_Rider_Items {
      * 
      * yamibat
      * catchula
-     * mechanichani
-     * bussasorry
+     */
+    
+    public static final RegistryObject<Item> MECHANICHANI_RIDE_CHEMY_CARD = ITEMS.register("mechanichani_ride_chemy_card",
+            () -> new CopyFormChangeItem(new Item.Properties(),GOLDDASH_RIDE_CHEMY_CARD.get()).AddToTabList(NEED_ITEM_GoldMechanichor)
+            .AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
+    
+     /* bussasorry
      * bountybunny
      */
 	   
