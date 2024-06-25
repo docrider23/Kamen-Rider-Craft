@@ -7,7 +7,7 @@
         "items": [
           {
             "items": [
-              "kamenridercraft:kuuga_mighty"
+              "kamenridercraft:kaijin_stone"
             ]
           }
         ]
@@ -21,9 +21,9 @@
   ],
   "rewards": {
     "recipes": [
-      "kamenridercraft:kuuga/arcle",
-      "kamenridercraft:kuuga/kuuga_rising_mighty",
-      "kamenridercraft:kuuga/kuuga_logo"
+      "kamenridercraft:black_sun/black_sun_head",
+      "kamenridercraft:black_sun/black_sun_troso",
+      "kamenridercraft:black_sun/black_sun_legs"
     ]
   },
   "sends_telemetry_event": false

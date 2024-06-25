@@ -7,7 +7,7 @@
         "items": [
           {
             "items": [
-              "kamenridercraft:kuuga_mighty"
+              "kamenridercraft:advent_card"
             ]
           }
         ]
@@ -21,9 +21,9 @@
   ],
   "rewards": {
     "recipes": [
-      "kamenridercraft:kuuga/arcle",
-      "kamenridercraft:kuuga/kuuga_rising_mighty",
-      "kamenridercraft:kuuga/kuuga_logo"
+      "kamenridercraft:ryuki/ryukihead",
+      "kamenridercraft:ryuki/ryukitroso",
+      "kamenridercraft:ryuki/ryukilegs"
     ]
   },
   "sends_telemetry_event": false

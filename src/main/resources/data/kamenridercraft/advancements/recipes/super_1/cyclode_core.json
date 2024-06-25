@@ -7,7 +7,7 @@
         "items": [
           {
             "items": [
-              "kamenridercraft:kuuga_mighty"
+              "kamenridercraft:cyclode_core"
             ]
           }
         ]
@@ -21,9 +21,11 @@
   ],
   "rewards": {
     "recipes": [
-      "kamenridercraft:kuuga/arcle",
-      "kamenridercraft:kuuga/kuuga_rising_mighty",
-      "kamenridercraft:kuuga/kuuga_logo"
+      "kamenridercraft:super_1/super_1head",
+      "kamenridercraft:super_1/super_1troso",
+      "kamenridercraft:super_1/super_1legs",
+      "kamenridercraft:super_1/cyclode",
+      "kamenridercraft:super_1/super1_logo"
     ]
   },
   "sends_telemetry_event": false

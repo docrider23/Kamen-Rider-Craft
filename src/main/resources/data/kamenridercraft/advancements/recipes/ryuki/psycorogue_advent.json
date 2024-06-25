@@ -7,7 +7,7 @@
         "items": [
           {
             "items": [
-              "kamenridercraft:kuuga_mighty"
+              "kamenridercraft:psycorogue_advent"
             ]
           }
         ]
@@ -21,9 +21,9 @@
   ],
   "rewards": {
     "recipes": [
-      "kamenridercraft:kuuga/arcle",
-      "kamenridercraft:kuuga/kuuga_rising_mighty",
-      "kamenridercraft:kuuga/kuuga_logo"
+      "kamenridercraft:ryuki/alternative_v_buckle",
+      "kamenridercraft:ryuki/alternative_zero_v_buckle",
+      "kamenridercraft:ryuki/slash_visor"
     ]
   },
   "sends_telemetry_event": false

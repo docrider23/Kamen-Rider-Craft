@@ -7,7 +7,7 @@
         "items": [
           {
             "items": [
-              "kamenridercraft:kuuga_mighty"
+              "kamenridercraft:change_beetle"
             ]
           }
         ]
@@ -21,9 +21,9 @@
   ],
   "rewards": {
     "recipes": [
-      "kamenridercraft:kuuga/arcle",
-      "kamenridercraft:kuuga/kuuga_rising_mighty",
-      "kamenridercraft:kuuga/kuuga_logo"
+      "kamenridercraft:blade/blay_buckle",
+      "kamenridercraft:blade/blade_rouzer",
+      "kamenridercraft:blade/blade_logo"
     ]
   },
   "sends_telemetry_event": false

@@ -7,7 +7,7 @@
         "items": [
           {
             "items": [
-              "kamenridercraft:kuuga_mighty"
+              "kamenridercraft:split_king_stone"
             ]
           }
         ]
@@ -21,9 +21,10 @@
   ],
   "rewards": {
     "recipes": [
-      "kamenridercraft:kuuga/arcle",
-      "kamenridercraft:kuuga/kuuga_rising_mighty",
-      "kamenridercraft:kuuga/kuuga_logo"
+      "kamenridercraft:rx/rxhead",
+      "kamenridercraft:rx/rxtroso",
+      "kamenridercraft:rx/rxlegs",
+      "kamenridercraft:rx/sun_riser"
     ]
   },
   "sends_telemetry_event": false

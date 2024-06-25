@@ -23,8 +23,7 @@
     "recipes": [
       "kamenridercraft:agito/agitohead",
       "kamenridercraft:agito/agitotroso",
-      "kamenridercraft:agito/agitolegs",
-      "kamenridercraft:agito/agito_logo"
+      "kamenridercraft:agito/agitolegs"
     ]
   },
   "sends_telemetry_event": false

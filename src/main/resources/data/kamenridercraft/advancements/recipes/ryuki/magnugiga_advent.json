@@ -7,7 +7,7 @@
         "items": [
           {
             "items": [
-              "kamenridercraft:kuuga_mighty"
+              "kamenridercraft:magnugiga_advent"
             ]
           }
         ]
@@ -21,9 +21,8 @@
   ],
   "rewards": {
     "recipes": [
-      "kamenridercraft:kuuga/arcle",
-      "kamenridercraft:kuuga/kuuga_rising_mighty",
-      "kamenridercraft:kuuga/kuuga_logo"
+      "kamenridercraft:ryuki/v_buckle_zolda",
+      "kamenridercraft:ryuki/magna_visor"
     ]
   },
   "sends_telemetry_event": false

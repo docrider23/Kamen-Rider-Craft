@@ -7,7 +7,7 @@
         "items": [
           {
             "items": [
-              "kamenridercraft:kuuga_mighty"
+              "kamenridercraft:zo_stone"
             ]
           }
         ]
@@ -21,9 +21,11 @@
   ],
   "rewards": {
     "recipes": [
-      "kamenridercraft:kuuga/arcle",
-      "kamenridercraft:kuuga/kuuga_rising_mighty",
-      "kamenridercraft:kuuga/kuuga_logo"
+      "kamenridercraft:zo/zohead",
+      "kamenridercraft:zo/zotroso",
+      "kamenridercraft:zo/zolegs",
+      "kamenridercraft:zo/zo_core",
+      "kamenridercraft:zo/zo_logo"
     ]
   },
   "sends_telemetry_event": false

@@ -7,7 +7,7 @@
         "items": [
           {
             "items": [
-              "kamenridercraft:kuuga_mighty"
+              "kamenridercraft:double_typhoon_core"
             ]
           }
         ]
@@ -21,9 +21,11 @@
   ],
   "rewards": {
     "recipes": [
-      "kamenridercraft:kuuga/arcle",
-      "kamenridercraft:kuuga/kuuga_rising_mighty",
-      "kamenridercraft:kuuga/kuuga_logo"
+      "kamenridercraft:v3/v3head",
+      "kamenridercraft:v3/v3troso",
+      "kamenridercraft:v3/v3legs",
+      "kamenridercraft:v3/double_typhoon",
+      "kamenridercraft:v3/v3_logo"
     ]
   },
   "sends_telemetry_event": false

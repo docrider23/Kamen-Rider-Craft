@@ -7,7 +7,7 @@
         "items": [
           {
             "items": [
-              "kamenridercraft:kuuga_mighty"
+              "kamenridercraft:red_king_stone"
             ]
           }
         ]
@@ -21,9 +21,11 @@
   ],
   "rewards": {
     "recipes": [
-      "kamenridercraft:kuuga/arcle",
-      "kamenridercraft:kuuga/kuuga_rising_mighty",
-      "kamenridercraft:kuuga/kuuga_logo"
+      "kamenridercraft:black/blackhead",
+      "kamenridercraft:black/blacktroso",
+      "kamenridercraft:black/blacklegs",
+      "kamenridercraft:black/vital_charger",
+      "kamenridercraft:black/black_logo"
     ]
   },
   "sends_telemetry_event": false

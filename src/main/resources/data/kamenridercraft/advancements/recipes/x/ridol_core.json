@@ -7,7 +7,7 @@
         "items": [
           {
             "items": [
-              "kamenridercraft:kuuga_mighty"
+              "kamenridercraft:ridol_core"
             ]
           }
         ]
@@ -21,9 +21,12 @@
   ],
   "rewards": {
     "recipes": [
-      "kamenridercraft:kuuga/arcle",
-      "kamenridercraft:kuuga/kuuga_rising_mighty",
-      "kamenridercraft:kuuga/kuuga_logo"
+      "kamenridercraft:x/xhead",
+      "kamenridercraft:x/xtroso",
+      "kamenridercraft:x/xlegs",
+      "kamenridercraft:x/ridol",
+      "kamenridercraft:x/ridol_stick",
+      "kamenridercraft:x/x_logo"
     ]
   },
   "sends_telemetry_event": false

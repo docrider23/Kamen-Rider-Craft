@@ -7,7 +7,7 @@
         "items": [
           {
             "items": [
-              "kamenridercraft:kuuga_mighty"
+              "kamenridercraft:neo_amazon_cell_vial"
             ]
           }
         ]
@@ -21,9 +21,9 @@
   ],
   "rewards": {
     "recipes": [
-      "kamenridercraft:kuuga/arcle",
-      "kamenridercraft:kuuga/kuuga_rising_mighty",
-      "kamenridercraft:kuuga/kuuga_logo"
+      "kamenridercraft:amazons/amazon_injector_neo",
+      "kamenridercraft:amazons/amazon_injector_new_omega",
+      "kamenridercraft:amazons/amazon_injector_neo_alpha"
     ]
   },
   "sends_telemetry_event": false
