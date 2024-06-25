@@ -11,7 +11,6 @@ import com.kelco.kamenridercraft.Items.rider_armor_base.RiderFormChangeItem;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.Item;
@@ -31,7 +30,8 @@ public class Miscellaneous_Rider_Items {
 	    public static final RegistryObject<Item> GORO_WINE_BOTTLE = ITEMS.register("goro_wine_bottle",
 	            () -> new RiderFormChangeItem(new Item.Properties(),0,"","kamen_rider_g","g_belt",
 	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.DIG_SPEED,40, 0,true,false)
-	            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false)).AddToTabList(RiderTabs.G_TAB_ITEM).KeepItem());
+	            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false))
+	            .IsGlowing().AddToTabList(RiderTabs.G_TAB_ITEM).KeepItem());
 
 	    
 	    public static final RegistryObject<Item> GHELMET = ITEMS.register("ghead",
@@ -50,31 +50,40 @@ public class Miscellaneous_Rider_Items {
 	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
 						new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40, 1,true,false),
 						new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
-						new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false)).AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
+						new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false))
+	            .IsGlowing().AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
+		
 		public static final RegistryObject<Item> AORIDER_CARD = ITEMS.register("aorider_card",
 	            () -> new RiderFormChangeItem(new Item.Properties(),0,"","ao_rider","typhoon_belt_aorider",
 	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
 						new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40, 1,true,false),
 						new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
-						new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false)).AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
+						new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false))
+	            .IsGlowing().AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
+		
 		public static final RegistryObject<Item> KIRIDER_CARD = ITEMS.register("kirider_card",
 	            () -> new RiderFormChangeItem(new Item.Properties(),0,"","ki_rider","typhoon_belt_kirider",
 	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
 						new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40, 1,true,false),
 						new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
-						new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false)).AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
+						new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false))
+	            .IsGlowing().AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
+		
 		public static final RegistryObject<Item> MOMORIDER_CARD = ITEMS.register("momorider_card",
 	            () -> new RiderFormChangeItem(new Item.Properties(),0,"","momo_rider","typhoon_belt_momorider",
 	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
 						new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40, 1,true,false),
 						new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
-						new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false)).AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
+						new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false))
+	            .IsGlowing().AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
+		
 		public static final RegistryObject<Item> MIDORIDER_CARD = ITEMS.register("midorider_card",
 	            () -> new RiderFormChangeItem(new Item.Properties(),0,"","mido_rider","typhoon_belt_midorider",
 	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
 						new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40, 1,true,false),
 						new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
-						new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false)).AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
+						new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false))
+	            .IsGlowing().AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
 
 
 		public static final RegistryObject<Item> AKARIDERHELMET = ITEMS.register("akariderhead",

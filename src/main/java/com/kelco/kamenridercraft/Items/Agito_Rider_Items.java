@@ -35,24 +35,28 @@ public class Agito_Rider_Items {
     public static final RegistryObject<Item> AGITO_GROUND = ITEMS.register("agito_ground",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","agito","alter_ring_belt",
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
-            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false)).AddToTabList(RiderTabs.AGITO_TAB_ITEM));
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false))
+            .IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM));
 
     public static final RegistryObject<Item> AGITO_STORM = ITEMS.register("agito_storm",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_storm","agito","alter_ring_belt_s",
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
-            		new MobEffectInstance(MobEffects.JUMP, 40, 0,true,false)).AddToTabList(RiderTabs.AGITO_TAB_ITEM));
+            		new MobEffectInstance(MobEffects.JUMP, 40, 0,true,false))
+            .IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM));
 
     public static final RegistryObject<Item> AGITO_FLAME = ITEMS.register("agito_flame",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_flame","agito","alter_ring_belt_f",
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
-            		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)).AddToTabList(RiderTabs.AGITO_TAB_ITEM));
+            		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false))
+            .IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM));
 
     public static final RegistryObject<Item> AGITO_TRINITY = ITEMS.register("agito_trinity",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_trinity","agito","alter_ring_belt",
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
             		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false),
-            		new MobEffectInstance(MobEffects.JUMP, 40, 0,true,false)).AddToTabList(RiderTabs.AGITO_TAB_ITEM));
+            		new MobEffectInstance(MobEffects.JUMP, 40, 0,true,false))
+            .IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM));
 
     public static final RegistryObject<Item> AGITO_BURNING = ITEMS.register("agito_burning",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_burning","agito","alter_ring_belt_b",
@@ -60,7 +64,8 @@ public class Agito_Rider_Items {
             		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).AddToTabList(RiderTabs.AGITO_TAB_ITEM));
+            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false))
+            .IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM));
 
     public static final RegistryObject<Item> AGITO_SHINING = ITEMS.register("agito_shining",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_shining","agito","alter_ring_belt_b",
@@ -68,13 +73,15 @@ public class Agito_Rider_Items {
             		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
-            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false)).AddToTabList(RiderTabs.AGITO_TAB_ITEM));
+            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false))
+            .IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM));
 
     public static final RegistryObject<Item> GILLS = ITEMS.register("gills",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","gills","meta_factor_belt",
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false),
-            		new MobEffectInstance(MobEffects.JUMP, 40, 0,true,false)).AddToTabList(RiderTabs.AGITO_TAB_ITEM));
+            		new MobEffectInstance(MobEffects.JUMP, 40, 0,true,false))
+            .IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM));
 
     public static final RegistryObject<Item> EXCEED_GILLS = ITEMS.register("exceed_gills",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_exceed","gills","meta_factor_belt_e",
@@ -82,7 +89,7 @@ public class Agito_Rider_Items {
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false))
-            .ChangeModel("geo/gills_exceed.geo.json").AddToTabList(RiderTabs.AGITO_TAB_ITEM));
+            .ChangeModel("geo/gills_exceed.geo.json").IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM));
 
     public static final RegistryObject<Item> GOLD_EXCEED_GILLS = ITEMS.register("gold_exceed_gills",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_gold_exceed","gills","meta_factor_belt_g",
@@ -90,14 +97,14 @@ public class Agito_Rider_Items {
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false))
-            .ChangeModel("geo/gills_exceed.geo.json").AddToTabList(RiderTabs.AGITO_TAB_ITEM));
+            .ChangeModel("geo/gills_exceed.geo.json").IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM));
 
     
     public static final RegistryObject<Item> ANOTHER_AGITO = ITEMS.register("another_agito",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","another_agito","ank_point_belt",
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
-            		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false)).AddToTabList(RiderTabs.AGITO_TAB_ITEM));
+            		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false)).IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM));
     
     public static final RegistryObject<Item> MIRAGE_AGITO = ITEMS.register("agito_miracle",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","mirage_agito","alter_ring_mirage_belt",
@@ -105,21 +112,24 @@ public class Agito_Rider_Items {
             		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(RiderTabs.AGITO_TAB_ITEM));
+            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false))
+            .IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM));
 
     
     public static final RegistryObject<Item> ANOTHER_AGITO_KOJI = ITEMS.register("another_agito_koji",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","another_agito_koji","ank_point_belt",
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
-            		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false)).AddToTabList(RiderTabs.AGITO_TAB_ITEM));
+            		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false))
+            .IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM));
  
     public static final RegistryObject<Item> ANOTHER_AGITO_BURNING = ITEMS.register("another_agito_burning_form",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_burning","another_agito_koji","ank_point_belt_b",
             		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 5,true,false),
-            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(RiderTabs.AGITO_TAB_ITEM));
+            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false))
+            .IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM));
 
     
     public static final RegistryObject<Item> BLANK_G_SYSTEM_CHIP = ITEMS.register("g3core",
@@ -128,33 +138,39 @@ public class Agito_Rider_Items {
 	public static final RegistryObject<Item> G3_CHIP = ITEMS.register("g3",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","g3","g_buckle_belt",
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
-            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false)).AddToTabList(RiderTabs.AGITO_TAB_ITEM).AddToTabList(GSystemChipProgrammer.G_CHIP, 10));
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false))
+            .IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM).AddToTabList(GSystemChipProgrammer.G_CHIP, 10));
     
     public static final RegistryObject<Item> G3_X_CHIP = ITEMS.register("g3x",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","g3_x","g_buckle_belt",
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false)).AddToTabList(RiderTabs.AGITO_TAB_ITEM).AddToTabList(GSystemChipProgrammer.G_CHIP, 3));
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false))
+            .IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM).AddToTabList(GSystemChipProgrammer.G_CHIP, 3));
     
     public static final RegistryObject<Item> G3_MILD_CHIP = ITEMS.register("g3mild",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","g3_mild","g_buckle_belt",
-            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false)).AddToTabList(RiderTabs.AGITO_TAB_ITEM).AddToTabList(GSystemChipProgrammer.G_CHIP, 2));
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false))
+            .IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM).AddToTabList(GSystemChipProgrammer.G_CHIP, 2));
     
     public static final RegistryObject<Item> G4_CHIP = ITEMS.register("g4",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","g4","g_buckle_belt",
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false),
-            		new MobEffectInstance(MobEffects.POISON, 40, 0,true,false)).AddToTabList(RiderTabs.AGITO_TAB_ITEM).AddToTabList(GSystemChipProgrammer.G_CHIP, 1));
+            		new MobEffectInstance(MobEffects.POISON, 40, 0,true,false))
+            .IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM).AddToTabList(GSystemChipProgrammer.G_CHIP, 1));
   
     public static final RegistryObject<Item> G4_X_CHIP = ITEMS.register("g4x",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","g4_x","g_buckle_belt",
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false)).AddToTabList(RiderTabs.AGITO_TAB_ITEM));
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false))
+            .IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM));
     
     public static final RegistryObject<Item> G1_CHIP = ITEMS.register("g1",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","g1","g_buckle_belt_1",
-            		new MobEffectInstance(MobEffects.WEAKNESS, 40, 0,true,false)).AddToTabList(RiderTabs.AGITO_TAB_ITEM).AddToTabList(GSystemChipProgrammer.G_CHIP, 10));
+            		new MobEffectInstance(MobEffects.WEAKNESS, 40, 0,true,false))
+            .IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM).AddToTabList(GSystemChipProgrammer.G_CHIP, 10));
    
     public static final RegistryObject<Item> V1_CHIP = ITEMS.register("v1",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","v1","blank",
