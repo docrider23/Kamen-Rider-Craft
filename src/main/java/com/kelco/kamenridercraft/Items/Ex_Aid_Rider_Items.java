@@ -48,7 +48,8 @@ public class Ex_Aid_Rider_Items {
 	public static final RegistryObject<Item> MIGHTY_ACTION_X_GASHAT_LV_1 = ITEMS.register("mighty_action_x_gashat_lv_1",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_lv1","ex_aid","gamer_driver_mighty_action_x_lv_1",
 					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
-					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false)).ChangeModel("geo/lv_1.geo.json").ChangeBeltModel("geo/lv_1_belt.geo.json").alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()));
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false)).ChangeModel("geo/lv_1.geo.json").ChangeBeltModel("geo/lv_1_belt.geo.json")
+			.IsGlowing().alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()));
 
 	public static final RegistryObject<Item> MIGHTY_ACTION_X_GASHAT = ITEMS.register("mighty_action_x_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","ex_aid","gamer_driver_mighty_action_x",
@@ -59,39 +60,42 @@ public class Ex_Aid_Rider_Items {
 	public static final RegistryObject<Item> TADDLE_QUEST_GASHAT_LV_1 = ITEMS.register("taddle_quest_gashat_lv_1",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_lv1","brave","gamer_driver_taddle_quest_lv_1",
 					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
-					new MobEffectInstance(Effect_core.SLASH.get(), 40, 0,true,false)).ChangeModel("geo/lv_1.geo.json").ChangeBeltModel("geo/lv_1_belt.geo.json").alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()));
+					new MobEffectInstance(Effect_core.SLASH.get(), 40, 0,true,false)).ChangeModel("geo/lv_1.geo.json").ChangeBeltModel("geo/lv_1_belt.geo.json")
+			.IsGlowing().alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()));
 
 	public static final RegistryObject<Item> TADDLE_QUEST_X_GASHAT = ITEMS.register("taddle_quest_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","brave","gamer_driver_taddle_quest",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
 					new MobEffectInstance(Effect_core.SLASH.get(), 40, 0,true,false)).addSwitchForm(TADDLE_QUEST_GASHAT_LV_1.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get())
-			.AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 15));
+			.IsGlowing().AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 15));
 
 	public static final RegistryObject<Item> BANG_BANG_SHOOTING_GASHAT_LV_1 = ITEMS.register("bang_bang_shooting_gashat_lv_1",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_lv1","snipe","gamer_driver_bang_bang_shooting_lv_1",
 					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
-					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)).ChangeModel("geo/lv_1.geo.json").ChangeBeltModel("geo/lv_1_belt.geo.json").alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()));
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)).ChangeModel("geo/lv_1.geo.json").ChangeBeltModel("geo/lv_1_belt.geo.json")
+			.IsGlowing().alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()));
 
 	public static final RegistryObject<Item> BANG_BANG_SHOOTING_GASHAT = ITEMS.register("bang_bang_shooting_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","snipe","gamer_driver_bang_bang_shooting",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)).addSwitchForm(BANG_BANG_SHOOTING_GASHAT_LV_1.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get())
-			.AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 15));
+			.IsGlowing().AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 15));
 
 	public static final RegistryObject<Item> BAKUSOU_BIKE_GASHAT_LV_1 = ITEMS.register("bakusou_bike_gashat_lv_1",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_lv1","lazer","gamer_driver_bakusou_bike_lv_1",
 					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
-					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false)).ChangeModel("geo/lv_1.geo.json").ChangeBeltModel("geo/lv_1_belt.geo.json").alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()));
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false)).ChangeModel("geo/lv_1.geo.json").ChangeBeltModel("geo/lv_1_belt.geo.json")
+			.IsGlowing().alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()));
 
 	public static final RegistryObject<Item> BAKUSOU_BIKE_GASHAT_UNDER = ITEMS.register("bakusou_bike_gashat_under",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","lazer","gamer_driver_bakusou_bike",
-					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false)));
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false)).IsGlowing());
 
 	public static final RegistryObject<Item> BAKUSOU_BIKE_GASHAT = ITEMS.register("bakusou_bike_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_lv2_bike","lazer","blank",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false)).addSwitchForm(BAKUSOU_BIKE_GASHAT_LV_1.get())
 			.ChangeModel("geo/lazer_lv2.geo.json","lazer_lv2.animation.json").alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get())
-			.SetPalyerModelInvisible().AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 15));
+			.SetPalyerModelInvisible().IsGlowing().AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 15));
 
 	public static final RegistryObject<Item> BAKUSOU_BIKE_GASHAT_TURBO = ITEMS.register("bakusou_bike_gashat_turbo",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_turbo","lazer","gamer_driver_bakusou_bike",
@@ -100,7 +104,7 @@ public class Ex_Aid_Rider_Items {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false)).addSwitchForm(BAKUSOU_BIKE_GASHAT_LV_1.get())
-			.alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
+			.alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).IsGlowing().AddToTabList(RiderTabs.EX_AID_TAB_ITEM));
 
 
 
@@ -113,11 +117,13 @@ public class Ex_Aid_Rider_Items {
 
 	public static final RegistryObject<Item> DOREMIFA_BEAT_GASHAT = ITEMS.register("doremifa_beat_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"beat_gamer","ex_aid","gamer_driver_mighty_action_x",
-					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false)).SetFormToArmor().AddCompatibilityList(BaseGamerDriverUsers).ChangeSlot(2).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 10));
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false)).SetFormToArmor().AddCompatibilityList(BaseGamerDriverUsers).ChangeSlot(2)
+			.IsGlowing().AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 10));
 
 	public static final RegistryObject<Item> JET_COMBAT_GASHAT = ITEMS.register("jet_combat_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"combat_gamer","ex_aid","gamer_driver_mighty_action_x",
-					new MobEffectInstance(Effect_core.BOOST.get(), 40, 1,true,false)).SetFormToArmor().AddCompatibilityList(BaseGamerDriverUsers).ChangeSlot(2).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 10));
+					new MobEffectInstance(Effect_core.BOOST.get(), 40, 1,true,false)).SetFormToArmor().AddCompatibilityList(BaseGamerDriverUsers).ChangeSlot(2)
+			.IsGlowing().AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 10));
 
 	public static final RegistryObject<Item> GIRI_GIRI_CHAMBARA_GASHAT = ITEMS.register("giri_giri_chambara_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"chambara_gamer","lazer","gamer_driver_bakusou_bike",

@@ -53,7 +53,7 @@ public class Gotchard_Rider_Items {
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","gotchard","gotchardriver_belt",
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
-            		new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false)).AddNeedItemList(NEED_ITEM_SteamHopper)
+            		new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false)).IsGlowing().AddNeedItemList(NEED_ITEM_SteamHopper)
             .AddToTabList(NEED_ITEM_SteamHopper).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     /* pikahotaru
      * gengenchoucho
