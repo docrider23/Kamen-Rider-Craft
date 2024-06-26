@@ -23,6 +23,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class RiderDriverItem extends RiderArmorItem{
@@ -250,7 +251,7 @@ public class RiderDriverItem extends RiderArmorItem{
 
 	public static RiderFormChangeItem get_Form_Item(ItemStack itemstack,int SLOT)
 	{
-
+		ResourceLocation Used_Form_Item = new ResourceLocation("kamenridercraft", itemstack.getTag().getString("slot_tex"+SLOT));
 		RiderDriverItem belt = (RiderDriverItem)itemstack.getItem();
 		RiderFormChangeItem Base_Form_Item = belt.Base_Form_Item;
 
@@ -265,11 +266,8 @@ public class RiderDriverItem extends RiderArmorItem{
 		if (!itemstack.hasTag())
 		{
 			return  Base_Form_Item;
-		}else if (Item.byId(itemstack.getTag().getInt("slot"+SLOT))instanceof RiderFormChangeItem){
-
-
-			return (RiderFormChangeItem) Item.byId(itemstack.getTag().getInt("slot"+SLOT));
-
+		}else if (ForgeRegistries.ITEMS.getValue(Used_Form_Item) instanceof RiderFormChangeItem){
+			return (RiderFormChangeItem) ForgeRegistries.ITEMS.getValue(Used_Form_Item);
 		}else{
 			return Base_Form_Item;
 		}

@@ -97,6 +97,7 @@ public class WDriverItem extends RiderDriverItem{
 	public void Extra_set_Form_Item(ItemStack itemstack, Item ITEM,int SLOT)
 	{
 	if (get_Form_Item(itemstack, 1)==W_Rider_Items.XTREME_MEMORY.get()||get_Form_Item(itemstack, 1)==W_Rider_Items.XTREME_GOLD_MEMORY.get()||get_Form_Item(itemstack, 1)==W_Rider_Items.XTREME_ACCEL_MEMORY.get()) {
+		itemstack.getTag().putString("slot_tex"+1, (W_Rider_Items.CYCLONE_MEMORY.get()).toString());
 		itemstack.getTag().putInt("slot"+1, Item.getId(W_Rider_Items.CYCLONE_MEMORY.get()));
 	}
 	}

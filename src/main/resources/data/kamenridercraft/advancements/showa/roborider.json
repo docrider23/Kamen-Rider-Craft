@@ -36,7 +36,7 @@
 			  "items": [
 				"kamenridercraft:sun_riser"
 			  ],
-			  "nbt": "{slot1:1371}"
+			  "nbt": "{slot_tex1:\"robo_core\"}"
 			}
 		  }
 		}
