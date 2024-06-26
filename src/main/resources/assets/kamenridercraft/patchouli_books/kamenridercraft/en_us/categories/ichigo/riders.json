@@ -1,0 +1,7 @@
+{
+	"parent": "kamenridercraft:ichigo/main",
+    "name": "Ichigo Riders",
+    "description": "Every Rider from or relating to the original Kamen Rider series.",
+    "icon": "kamenridercraft:kamen_rider_logo",
+    "sortnum": 0
+}
