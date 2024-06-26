@@ -47,6 +47,7 @@ public class Gotchard_Rider_Items {
 	   public static List<Item> NEED_ITEM_NeedleHawk= new ArrayList<Item>();
 	   public static List<Item> NEED_ITEM_DokkiriShovel= new ArrayList<Item>();
 	   public static List<Item> NEED_ITEM_GoldMechanichor= new ArrayList<Item>();
+	   public static List<Item> NEED_ITEM_HiikesuRose= new ArrayList<Item>();
 	   
     public static final RegistryObject<Item> HOPPER1_RIDE_CHEMY_CARD = ITEMS.register("hopper1_ride_chemy_card",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","gotchard","gotchardriver_belt",
@@ -110,8 +111,11 @@ public class Gotchard_Rider_Items {
             () -> new CopyFormChangeItem(new Item.Properties(),APPAREBUSHIDO_RIDE_CHEMY_CARD.get()).AddToTabList(NEED_ITEM_AppareSkebow)
             .AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
-    /* hiikescue
-     */
+    public static final RegistryObject<Item> HIIKESCUE_RIDE_CHEMY_CARD = ITEMS.register("hiikescue_ride_chemy_card",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"_hiikesu_rose","gotchard","gotchardriver_belt",
+            		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 1,true,false),
+            		new MobEffectInstance(Effect_core.REFLECT.get(), 40, 1,true,false))
+            .AddNeedItemList(NEED_ITEM_HiikesuRose).AddToTabList(NEED_ITEM_HiikesuRose).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
     public static final RegistryObject<Item> GEKIOCOPTER_RIDE_CHEMY_CARD = ITEMS.register("gekiocopter_ride_chemy_card",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","valvarad","",
@@ -212,8 +216,13 @@ public class Gotchard_Rider_Items {
             .AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
      /* utsubocchama
-     * flayrose
-     * buglesia
+     */
+    
+    public static final RegistryObject<Item> FLAYROSE_RIDE_CHEMY_CARD = ITEMS.register("flayrose_ride_chemy_card",
+            () -> new CopyFormChangeItem(new Item.Properties(),HIIKESCUE_RIDE_CHEMY_CARD.get()).AddToTabList(NEED_ITEM_HiikesuRose)
+            .AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
+    
+     /* buglesia
      * junglejan
      * xeggdrasil
      * 
