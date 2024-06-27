@@ -61,7 +61,7 @@ public class Kabuto_Rider_Items {
                         new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
                         new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
                         new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false))
-                .addSwitchForm(THEBEE_ZECTER_MASK.get()).AddToTabList(RiderTabs.KABUTO_TAB_ITEM));
+                .IsGlowing().addSwitchForm(THEBEE_ZECTER_MASK.get()).AddToTabList(RiderTabs.KABUTO_TAB_ITEM));
 
         public static final RegistryObject<Item> DRAKE_ZECTER_MASK = ITEMS.register("drake_zecter_mask",
                 () -> new RiderFormChangeItem(new Item.Properties(),0,"_masked","drake","zect_buckle_belt",

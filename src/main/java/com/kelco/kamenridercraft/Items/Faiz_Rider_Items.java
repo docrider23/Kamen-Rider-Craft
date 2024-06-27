@@ -39,7 +39,8 @@ public class Faiz_Rider_Items {
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","faiz","faiz_driver_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false),
-					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)).IsGlowing().AddToTabList(RiderTabs.FAIZ_TAB_ITEM));
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
+			.AddToTabList(RiderTabs.FAIZ_TAB_ITEM));
 	    
 	public static final RegistryObject<Item> FAIZ_AXEL_MISSION_MEMORY = ITEMS.register("faiz_axel_mission_memory",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_axel","faiz","faiz_driver_belt_a",

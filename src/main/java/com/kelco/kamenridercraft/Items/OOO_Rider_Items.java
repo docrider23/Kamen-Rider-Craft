@@ -44,7 +44,7 @@ public class OOO_Rider_Items {
 	public static final RegistryObject<Item> TAKA_MEDAL = ITEMS.register("taka_medal",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_taka","ooo","ooodriver_belt",
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false))
-			.AddToTabList(RiderTabs.OOO_TAB_ITEM));
+			.IsGlowing().AddToTabList(RiderTabs.OOO_TAB_ITEM));
 
 	public static final RegistryObject<Item> KUJAKU_MEDAL = ITEMS.register("kujaku_medal",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_kujaku","ooo","ooodriver_belt",

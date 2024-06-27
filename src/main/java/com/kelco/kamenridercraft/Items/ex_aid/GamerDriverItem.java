@@ -97,6 +97,9 @@ public class GamerDriverItem extends RiderDriverItem{
 
 	public  boolean getGlowForSlot(ItemStack itemstack,EquipmentSlot currentSlot, LivingEntity livingEntity) {
 
+		if (currentSlot== EquipmentSlot.FEET) {
+			return get_Form_Item(itemstack, 1).get_Is_Belt_Glowing();
+		}
 		if (livingEntity.getItemBySlot(EquipmentSlot.LEGS).getItem() == LEGS){
 			if (livingEntity.getItemBySlot(EquipmentSlot.CHEST).getItem() == TORSO){
 				if (livingEntity.getItemBySlot(EquipmentSlot.HEAD).getItem() == HEAD){
