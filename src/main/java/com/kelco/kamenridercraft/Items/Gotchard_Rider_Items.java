@@ -48,6 +48,7 @@ public class Gotchard_Rider_Items {
 	   public static List<Item> NEED_ITEM_DokkiriShovel= new ArrayList<Item>();
 	   public static List<Item> NEED_ITEM_GoldMechanichor= new ArrayList<Item>();
 	   public static List<Item> NEED_ITEM_HiikesuRose= new ArrayList<Item>();
+	   public static List<Item> NEED_ITEM_LightningJungle= new ArrayList<Item>();
 	   
     public static final RegistryObject<Item> HOPPER1_RIDE_CHEMY_CARD = ITEMS.register("hopper1_ride_chemy_card",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","gotchard","gotchardriver_belt",
@@ -185,9 +186,15 @@ public class Gotchard_Rider_Items {
     
     /* ganvhale
      * lixion
-     * 
-     * raidenji
-     * kesuzo
+     */
+    
+   public static final RegistryObject<Item> RAIDENJI_RIDE_CHEMY_CARD = ITEMS.register("raidenji_ride_chemy_card",
+           () -> new RiderFormChangeItem(new Item.Properties(),0,"_lightning_jungle","gotchard","gotchardriver_belt_big",
+           		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false))
+           .ChangeModel("geo/gotchard_lightning_jungle.geo.json").ChangeBeltModel("geo/lv_1_belt.geo.json")
+           .AddNeedItemList(NEED_ITEM_LightningJungle).AddToTabList(NEED_ITEM_LightningJungle).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
+    
+     /* kesuzo
      * mitemirror
      * energyl
      * panpakaparka
@@ -223,8 +230,13 @@ public class Gotchard_Rider_Items {
             .AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
      /* buglesia
-     * junglejan
-     * xeggdrasil
+     */
+    
+    public static final RegistryObject<Item> JUNGLEJAN_RIDE_CHEMY_CARD = ITEMS.register("junglejan_ride_chemy_card",
+            () -> new CopyFormChangeItem(new Item.Properties(),RAIDENJI_RIDE_CHEMY_CARD.get()).AddToTabList(NEED_ITEM_LightningJungle)
+            .AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
+    
+     /* xeggdrasil
      * 
      * carery
      * berosol
