@@ -1,0 +1,6 @@
+{
+    "name": "Misc. Rider Items",
+    "description": "Every item that is unrelated to any particular Rider series.",
+    "icon": "kamenridercraft:card_warrior_kamen_rider_manga",
+    "sortnum": 999
+}

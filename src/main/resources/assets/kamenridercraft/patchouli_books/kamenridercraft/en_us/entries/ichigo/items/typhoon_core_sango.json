@@ -2,7 +2,7 @@
     "name": "Typhoon Core (Sango)",
     "icon": "kamenridercraft:typhoon_core_sango",
     "category": "kamenridercraft:ichigo/items",
-    "sortnum": 6,
+    "sortnum": 7,
     "pages": [
         {
             "type": "patchouli:text",
