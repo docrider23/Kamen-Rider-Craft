@@ -1,6 +1,8 @@
 package com.kelco.kamenridercraft.Items.geats;
 
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
+import com.kelco.kamenridercraft.Items.Geats_Rider_Items;
+import com.kelco.kamenridercraft.Items.Modded_item_core;
 import com.kelco.kamenridercraft.Items.OOO_Rider_Items;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderArmorItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
@@ -39,6 +41,7 @@ public class DesireDriverItem  extends RiderDriverItem{
 	
 
 		else if (equipmentSlot == EquipmentSlot.HEAD) return riderName+"_base_over"+ get_Form_Item(itemstack,1).getFormName(fly);
+		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,2)==Modded_item_core.BLANK_FORM.get()&&get_Form_Item(itemstack,3).getFormName(fly)=="_jyamato") return "geats_rider_jyamato_no_belt";
 		else if (equipmentSlot == EquipmentSlot.CHEST) return "geats_rider"+get_Form_Item(itemstack,2).getFormName(fly);
 		else return "geats_rider"+get_Form_Item(itemstack,3).getFormName(fly);
 
@@ -54,11 +57,17 @@ public class DesireDriverItem  extends RiderDriverItem{
 		if (slot == EquipmentSlot.LEGS)num=3;
 		
 		 if (slot == EquipmentSlot.CHEST) {
-			return new ResourceLocation(KamenRiderCraftCore.MODID, "geo/geats_rider_plusbelt.geo.json");
+			 if (get_Form_Item(itemstack, num).get_Model()=="geo/ichigo.geo.json")return new ResourceLocation(KamenRiderCraftCore.MODID, "geo/geats_rider_plusbelt.geo.json");
+			 else return new ResourceLocation(KamenRiderCraftCore.MODID, "geo/"+get_Form_Item(itemstack, num).get_Model()); 
+			
 		 }else if (slot == EquipmentSlot.LEGS) {
-				return new ResourceLocation(KamenRiderCraftCore.MODID, "geo/geats_rider_plusbelt_revo.geo.json");
+			 if (get_Form_Item(itemstack, num).get_Model()=="geo/ichigo.geo.json")return new ResourceLocation(KamenRiderCraftCore.MODID, "geo/revo_geats_rider_plusbelt.geo.json");
+			 else return new ResourceLocation(KamenRiderCraftCore.MODID, "geo/revo_"+get_Form_Item(itemstack, num).get_Model()); 
+
 			 }else 
-			 return new ResourceLocation(KamenRiderCraftCore.MODID, get_Form_Item(itemstack, num).get_Model());
+				 if (get_Form_Item(itemstack, num).get_Model()=="geo/ichigo.geo.json")return new ResourceLocation(KamenRiderCraftCore.MODID, "geo/geats.geo.json");
+				 else return new ResourceLocation(KamenRiderCraftCore.MODID, "geo/"+get_Form_Item(itemstack, num).get_Model()); 
+				
 
 	}
 	
@@ -83,7 +92,11 @@ public class DesireDriverItem  extends RiderDriverItem{
 			
 		}
 		case LEGS -> {
+
+			if (part =="head") return true;
 			if (part =="body") return true;
+			if (part =="rightArm") return true;
+			if (part =="leftArm") return true;
 			if (part =="leftLeg") return true;
 			if (part =="rightLeg") return true;
 			
