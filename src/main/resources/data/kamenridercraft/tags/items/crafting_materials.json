@@ -17,6 +17,7 @@
 	"kamenridercraft:bladecard",
 	"kamenridercraft:oni_ore",
 	"kamenridercraft:oni_orehell",
+	"kamenridercraft:unfinished_armed_saber",
 	"kamenridercraft:mini_zecter",
 	"kamenridercraft:unfinished_kabutick_zecter",
 	"kamenridercraft:perfectthebee_zecter",
@@ -28,6 +29,8 @@
 	"kamenridercraft:unrefined_memory_g",
 	"kamenridercraft:unrefined_memory_s",
 	"kamenridercraft:unrefined_memory_t2",
+	"kamenridercraft:trial_memory_un",
+	"kamenridercraft:fang_memory_un",
 	"kamenridercraft:cellmedal",
 	"kamenridercraft:cell_alloy_ingot",
 	"kamenridercraft:birth_core",
@@ -35,6 +38,7 @@
 	"kamenridercraft:blank_gashat",
 	"kamenridercraft:unfinished_kamen_rider_chronicle_gashat",
 	"kamenridercraft:chronus_clock",
+	"kamenridercraft:blank_rider_core_id",
 	"kamenridercraft:blank_ride_chemy_card",
 	"kamenridercraft:contract_chaostone"
   ]
