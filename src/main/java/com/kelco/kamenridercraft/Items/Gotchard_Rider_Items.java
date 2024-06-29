@@ -298,6 +298,22 @@ public class Gotchard_Rider_Items {
     		() -> new ValvaradItem(ArmorMaterials.DIAMOND,"valvarad", MADWHEEL_RIDE_CHEMY_CARD ,GOTCHARD_HELMET, GOTCHARD_CHESTPLATE,GOTCHARD_LEGGINGS , new Item.Properties())
     		.AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM).ChangeRepairItem(BLANK_RIDE_CHEMY_CARD.get()));
 
+    
+	public static final RegistryObject<BaseBlasterItem> GOTCHARGE_GUN = ITEMS.register("gotcharge_gun",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM).ChangeRepairItem(BLANK_RIDE_CHEMY_CARD.get()));
+	
+	public static final RegistryObject<BaseBlasterItem> GOTCHAR_TORNADO = ITEMS.register("gotchar_tornado",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM).ChangeRepairItem(BLANK_RIDE_CHEMY_CARD.get()));
+	
+	public static final RegistryObject<BaseBlasterItem> VALVARUSHER = ITEMS.register("valvarusher",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).IsSwordGun().AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM).ChangeRepairItem(BLANK_RIDE_CHEMY_CARD.get()));
+	
+	public static final RegistryObject<BaseBlasterItem> CHEMY_RISER = ITEMS.register("chemy_riser",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM).ChangeRepairItem(BLANK_RIDE_CHEMY_CARD.get()));
+	
+	public static final RegistryObject<BaseBlasterItem> CHEMY_RISER_SUPANA = ITEMS.register("chemy_riser_supana",
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM).ChangeRepairItem(BLANK_RIDE_CHEMY_CARD.get()));
+
     public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
 	}
