@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.google.common.collect.Lists;
-import com.kelco.kamenridercraft.Blocks.MachineBlocks.GSystemChipProgrammer;
 import com.kelco.kamenridercraft.Effect.Effect_core;
 import com.kelco.kamenridercraft.Items.Modded_item_core;
 
@@ -23,6 +22,9 @@ public class RiderFormChangeItem extends BaseItem {
 
 	private String FORM_NAME;
 	private int Slot =1;
+	private int OffhandSlot=10;
+	private Boolean Offhand = false;
+	
 	private List<MobEffectInstance> potionEffectList;
 	private int BELT;
 	private List<Item> NEEDITEM = new ArrayList<Item>();
@@ -46,6 +48,8 @@ public class RiderFormChangeItem extends BaseItem {
 	private List<RiderFormChangeItem> alternative = new ArrayList<RiderFormChangeItem>();
 	private RiderFormChangeItem alsoChange1stSlot;
 	private RiderFormChangeItem alsoChange2ndSlot;
+	private RiderFormChangeItem alsoChange3rdSlot;
+	
 	public String[] compatibilityList= new String[] {""};
 	private Boolean HAS_NEED_ITEM_LIST = false;
 	public List<Item> needItemList;
@@ -126,6 +130,11 @@ public class RiderFormChangeItem extends BaseItem {
 		alsoChange2ndSlot=  (RiderFormChangeItem) item;
 		return this;
 	}
+	
+	public RiderFormChangeItem alsoChange3rdSlot(Item item) {
+		alsoChange3rdSlot=  (RiderFormChangeItem) item;
+		return this;
+	}
 
 	public RiderFormChangeItem ChangeModel(String model) {
 		UPDATED_MODEL=model;
@@ -147,6 +156,11 @@ public class RiderFormChangeItem extends BaseItem {
 
 	public RiderFormChangeItem ChangeSlot(int slot) {
 		Slot=slot;
+		return this;
+	}
+	public RiderFormChangeItem SetOffhandSlot(int slot) {
+		OffhandSlot=slot;
+		Offhand=true;
 		return this;
 	}
 
@@ -276,11 +290,15 @@ public class RiderFormChangeItem extends BaseItem {
 				else if (CanChange(p_41129_,belt,BELT)) {
 					if (alsoChange1stSlot !=null)RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),alsoChange1stSlot, 1);
 					if (alsoChange2ndSlot !=null)RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),alsoChange2ndSlot, 2);
+					if (alsoChange3rdSlot !=null)RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),alsoChange3rdSlot, 3);
 					if (RESET_FORM)RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),belt.Base_Form_Item, 1);
 					if (SET_TO_ARMOR_FORM)RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),belt.Armor_Form_Item, 1);
 
-					if (SWITCH_ITEM!=null&RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET), Slot)==this) RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),SWITCH_ITEM, Slot);
-					else RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),this, Slot);
+					int SLOT = Slot;
+					if (p_41130_==InteractionHand.OFF_HAND&Offhand)SLOT = OffhandSlot;
+					
+					if (SWITCH_ITEM!=null&RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET), SLOT)==this) RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),SWITCH_ITEM, SLOT);
+					else RiderDriverItem.set_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),this, SLOT);
 
 				}else if(!alternative.isEmpty()){
 
