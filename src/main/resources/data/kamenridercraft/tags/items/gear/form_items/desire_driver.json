@@ -1,11 +1,23 @@
 {
     "values": [
-      "#kamenridercraft:gear/id_cores",
       "kamenridercraft:magnum_raise_buckle",
+      "kamenridercraft:boost_raise_buckle",
       "kamenridercraft:zombie_raise_buckle",
       "kamenridercraft:ninja_raise_buckle",
+      "kamenridercraft:monster_raise_buckle",
       "kamenridercraft:beat_raise_buckle",
-      "kamenridercraft:boost_raise_buckle"
+      "kamenridercraft:powered_builder_raise_buckle",
+      "kamenridercraft:fantasy_raise_buckle",
+      "kamenridercraft:fever_slot_raise_buckle",
+      "kamenridercraft:arrow_raise_buckle",
+      "kamenridercraft:water_raise_buckle",
+      "kamenridercraft:hammer_raise_buckle",
+      "kamenridercraft:shield_raise_buckle",
+      "kamenridercraft:chain_array_raise_buckle",
+      "kamenridercraft:claw_raise_buckle",
+      "kamenridercraft:drill_raise_buckle",
+      "kamenridercraft:propeller_raise_buckle",
+      "kamenridercraft:gigant_container_buckle"
     ]
   }
   

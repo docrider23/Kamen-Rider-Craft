@@ -24,11 +24,11 @@
 	"kamenridercraft:wild_chalice_arrow",
 	"kamenridercraft:larcrouzer",
 	"kamenridercraft:ongekikan_reppuu",
-	  "kamenridercraft:kabuto_kunai",
-	  "kamenridercraft:zect_mizer",
-	  "kamenridercraft:drake_grip",
-	  "kamenridercraft:zect_kunai",
-	  "kamenridercraft:machinegun_blade",
+	"kamenridercraft:kabuto_kunai",
+	"kamenridercraft:zect_mizer",
+	"kamenridercraft:drake_grip",
+	"kamenridercraft:zect_kunai",
+	"kamenridercraft:machinegun_blade",
 	"kamenridercraft:basshaamagnum",
 	"kamenridercraft:basshaa_magnum_tatsulot",
 	"kamenridercraft:ixariser",
@@ -39,6 +39,9 @@
 	"kamenridercraft:birth_buster",
 	"kamenridercraft:gashacon_key_slasher",
 	"kamenridercraft:gashacon_magnum_gun",
-	"kamenridercraft:gashacon_sparrow_arrow"
+	"kamenridercraft:gashacon_sparrow_arrow",
+	"kamenridercraft:gotcharge_gun",
+	"kamenridercraft:chemy_riser",
+	"kamenridercraft:chemy_riser_supana"
   ]
 }

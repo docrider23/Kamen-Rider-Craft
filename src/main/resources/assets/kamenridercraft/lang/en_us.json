@@ -1225,6 +1225,8 @@
 "item.kamenridercraft.desire_driver_jyamato": "Desire Driver (Jyamato)",
 "item.kamenridercraft.desire_driver_gm": "Desire Driver (GM)",
 "item.kamenridercraft.desire_driver_gm_chirami": "Desire Driver (GM)",
+"item.kamenridercraft.desire_driver_keibi_riders": "Desire Driver (Keibi Riders)",
+"item.kamenridercraft.desire_driver_the_end_riders": "Desire Driver (The End Riders)",
 "item.kamenridercraft.vision_driver": "Vision Driver (Glare)",
 "item.kamenridercraft.vision_driver_gazer": "Vision Driver (Gazer)",
 "item.kamenridercraft.vision_driver_chirami": "Vision Driver (Glare2)",
@@ -1258,6 +1260,7 @@
 "item.kamenridercraft.ninja_raise_buckle": "Ninja Buckle",
 "item.kamenridercraft.monster_raise_buckle": "Monster Buckle",
 "item.kamenridercraft.beat_raise_buckle": "Beat Buckle",
+"item.kamenridercraft.fantasy_raise_buckle": "Fantasy Buckle",
 
 "item.kamenridercraft.command_twin_buckle_jet": "Command Jet Buckle",
 "item.kamenridercraft.command_twin_buckle_cannon": "Command Cannon Buckle",
@@ -1284,6 +1287,7 @@
 "item.kamenridercraft.propeller_raise_buckle": "Propeller Buckle",
 
 "item.kamenridercraft.jyamato_buckle": "Jyamato Buckle",
+"item.kamenridercraft.jyamashin_wish_card": "Jyamashin Desire Card",
 
 "item.kamenridercraft.christmas_buckle": "Christmas Buckle",
 "item.kamenridercraft.beat_raise_buckle_theme": "Beat Buckle (Theme Song ver)",
@@ -1368,6 +1372,15 @@
 "item.kamenridercraft.gotchard_head": "Gotchard Helmet",
 "item.kamenridercraft.gotchard_torso": "Gotchard Chestplate",
 "item.kamenridercraft.gotchard_legs": "Gotchard Leggings",
+"item.kamenridercraft.gotchardriver": "Gotchardriver",
+"item.kamenridercraft.valvaradraw_buckle": "Valvaradraw Buckle",
+
+"item.kamenridercraft.gotcharge_gun": "Gotcharge Gun",
+"item.kamenridercraft.gotchar_tornado": "Gotchartornado",
+"item.kamenridercraft.valvarusher": "Valvarusher",
+"item.kamenridercraft.chemy_riser": "Chemy Riser",
+"item.kamenridercraft.chemy_riser_supana": "Chemy Riser (Supana Kurogane Ver.)",
+
 "item.kamenridercraft.blank_ride_chemy_card": "Blank Ride Chemy Card",
 "item.kamenridercraft.hopper1_ride_chemy_card": "Hopper1 Ride Chemy Card",
 "item.kamenridercraft.pikahotaru_ride_chemy_card": "Pikahotaru Ride Chemy Card",
@@ -1470,8 +1483,6 @@
 "item.kamenridercraft.donposeidon_ride_chemy_card": "Donposeidon Ride Chemy Card",
 "item.kamenridercraft.dragonalos_ride_chemy_card": "Dragonalos Ride Chemy Card",
 "item.kamenridercraft.x_assemble_ride_chemy_card": "X Assemble Ride Chemy Card",
-"item.kamenridercraft.gotchardriver": "Gotchardriver",
-"item.kamenridercraft.valvaradraw_buckle": "Valvaradraw Buckle",
 
 "item.kamenridercraft.g_logo": "G Logo",
 "item.kamenridercraft.ghead": "G Helmet",
