@@ -38,8 +38,10 @@ public class DesireDriverItem  extends RiderDriverItem{
 				return "belts/"+belt;
 			
 		}
-	
 
+
+		else if (equipmentSlot == EquipmentSlot.HEAD&isFever(itemstack,riderName)) return riderName+"_base_over_fever"+ get_Form_Item(itemstack,1).getFormName(fly);
+		
 		else if (equipmentSlot == EquipmentSlot.HEAD) return riderName+"_base_over"+ get_Form_Item(itemstack,1).getFormName(fly);
 		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,2)==Modded_item_core.BLANK_FORM.get()&&get_Form_Item(itemstack,3).getFormName(fly)=="_jyamato") return "geats_rider_jyamato_no_belt";
 		else if (equipmentSlot == EquipmentSlot.CHEST) return "geats_rider"+get_Form_Item(itemstack,2).getFormName(fly);
@@ -47,6 +49,39 @@ public class DesireDriverItem  extends RiderDriverItem{
 
 	}
 
+	public  boolean isFever(ItemStack itemstack,String riderName) {
+		
+		if (CanFever(riderName)) {
+			if (get_Form_Item(itemstack,2)==Geats_Rider_Items.BOOST_RAISE_BUCKLE_FEVER.get()&get_Form_Item(itemstack,3)==Geats_Rider_Items.BOOST_RAISE_BUCKLE.get()) return true;
+			if (get_Form_Item(itemstack,2)==Geats_Rider_Items.MAGNUM_RAISE_BUCKLE_FEVER.get()&get_Form_Item(itemstack,3)==Geats_Rider_Items.MAGNUM_RAISE_BUCKLE.get()) return true;
+			if (get_Form_Item(itemstack,2)==Geats_Rider_Items.ZOMBIE_RAISE_BUCKLE_FEVER.get()&get_Form_Item(itemstack,3)==Geats_Rider_Items.ZOMBIE_RAISE_BUCKLE.get()) return true;
+			if (get_Form_Item(itemstack,2)==Geats_Rider_Items.NINJA_RAISE_BUCKLE_FEVER.get()&get_Form_Item(itemstack,3)==Geats_Rider_Items.NINJA_RAISE_BUCKLE.get()) return true;
+			if (get_Form_Item(itemstack,2)==Geats_Rider_Items.BEAT_RAISE_BUCKLE_FEVER.get()&get_Form_Item(itemstack,3)==Geats_Rider_Items.BEAT_RAISE_BUCKLE.get()) return true;
+			if (get_Form_Item(itemstack,2)==Geats_Rider_Items.MONSTER_RAISE_BUCKLE_FEVER.get()&get_Form_Item(itemstack,3)==Geats_Rider_Items.MONSTER_RAISE_BUCKLE.get()) return true;
+			
+			if (get_Form_Item(itemstack,2)==Geats_Rider_Items.BOOST_RAISE_BUCKLE.get()&get_Form_Item(itemstack,3)==Geats_Rider_Items.BOOST_RAISE_BUCKLE_FEVER.get()) return true;
+			if (get_Form_Item(itemstack,2)==Geats_Rider_Items.MAGNUM_RAISE_BUCKLE.get()&get_Form_Item(itemstack,3)==Geats_Rider_Items.MAGNUM_RAISE_BUCKLE_FEVER.get()) return true;
+			if (get_Form_Item(itemstack,2)==Geats_Rider_Items.ZOMBIE_RAISE_BUCKLE.get()&get_Form_Item(itemstack,3)==Geats_Rider_Items.ZOMBIE_RAISE_BUCKLE_FEVER.get()) return true;
+			if (get_Form_Item(itemstack,2)==Geats_Rider_Items.NINJA_RAISE_BUCKLE.get()&get_Form_Item(itemstack,3)==Geats_Rider_Items.NINJA_RAISE_BUCKLE_FEVER.get()) return true;
+			if (get_Form_Item(itemstack,2)==Geats_Rider_Items.BEAT_RAISE_BUCKLE.get()&get_Form_Item(itemstack,3)==Geats_Rider_Items.BEAT_RAISE_BUCKLE_FEVER.get()) return true;
+			if (get_Form_Item(itemstack,2)==Geats_Rider_Items.MONSTER_RAISE_BUCKLE.get()&get_Form_Item(itemstack,3)==Geats_Rider_Items.MONSTER_RAISE_BUCKLE_FEVER.get()) return true;
+			
+		}
+		return false;
+	}
+	
+	public Boolean CanFever(String rider) {
+		String[] feverRiderList = Geats_Rider_Items.FeverUsers;
+		for (int i = 0; i < feverRiderList.length; i++)
+		{
+			if (feverRiderList[i]==rider){
+				return true;
+			}
+		}
+
+		return false;
+	}
+	
 	public  boolean getGlowForSlot(ItemStack itemstack,EquipmentSlot currentSlot, LivingEntity livingEntity) {
 		return false;
 	}
