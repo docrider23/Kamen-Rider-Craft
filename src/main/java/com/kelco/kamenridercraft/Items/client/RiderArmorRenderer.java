@@ -18,6 +18,7 @@ public class RiderArmorRenderer extends GeoArmorRenderer<RiderArmorItem> {
         
         if (livingEntity.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RiderDriverItem belt) {
         	if (belt.getGlowForSlot(livingEntity.getItemBySlot(EquipmentSlot.FEET), equipmentSlot,livingEntity))addRenderLayer(new AutoGlowingGeoLayer<>(this));
+        
         }
         
         RIDER =  livingEntity;

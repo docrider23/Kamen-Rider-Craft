@@ -215,7 +215,7 @@ public class Geats_Rider_Items {
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false))
 			.ChangeSlot(2).SetOffhandSlot(3).addAlternative(POWERED_BUILDER_RAISE_BUCKLE_GEATS.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
-	public static final RegistryObject<Item> FANTASY_RAISE_BUCKLE_GYA_GO = ITEMS.register("powered_builder_raise_buckle_gya_go",
+	public static final RegistryObject<Item> FANTASY_RAISE_BUCKLE_GYA_GO = ITEMS.register("fantasy_raise_buckle_gya_go",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_fantasy_gya_go","geats","desire_driver_belt_geats",
 					new MobEffectInstance(Effect_core.BOOST.get(), 40, 1,true,false))
 			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers));
