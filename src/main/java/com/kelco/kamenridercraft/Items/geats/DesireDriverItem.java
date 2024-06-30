@@ -102,7 +102,7 @@ public class DesireDriverItem  extends RiderDriverItem{
 							for (int i = 0; i < potionEffectList.size(); i++)
 							{
 								boolean Fever=  isFever(player.getItemBySlot(EquipmentSlot.FEET),this.Rider);
-								int Amplifier = Fever? (potionEffectList.get(i).getAmplifier()*2):(potionEffectList.get(i).getAmplifier());
+								int Amplifier = Fever? (potionEffectList.get(i).getAmplifier()+2):(potionEffectList.get(i).getAmplifier());
 								player.addEffect(new MobEffectInstance(potionEffectList.get(i).getEffect(),potionEffectList.get(i).getDuration(),Amplifier,true,false));
 							}
 						}
