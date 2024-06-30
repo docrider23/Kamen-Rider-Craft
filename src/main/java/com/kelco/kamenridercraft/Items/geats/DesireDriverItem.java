@@ -1,5 +1,7 @@
 package com.kelco.kamenridercraft.Items.geats;
 
+import java.util.List;
+
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
 import com.kelco.kamenridercraft.Items.Geats_Rider_Items;
 import com.kelco.kamenridercraft.Items.Modded_item_core;
@@ -8,11 +10,14 @@ import com.kelco.kamenridercraft.Items.rider_armor_base.RiderArmorItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.registries.RegistryObject;
 
 public class DesireDriverItem  extends RiderDriverItem{
@@ -70,6 +75,7 @@ public class DesireDriverItem  extends RiderDriverItem{
 		return false;
 	}
 	
+	
 	public Boolean CanFever(String rider) {
 		String[] feverRiderList = Geats_Rider_Items.FeverUsers;
 		for (int i = 0; i < feverRiderList.length; i++)
@@ -82,6 +88,30 @@ public class DesireDriverItem  extends RiderDriverItem{
 		return false;
 	}
 	
+	@Override
+	public void onArmorTick(ItemStack stack, Level level, Player player)
+	{
+
+		if (player.getItemBySlot(EquipmentSlot.LEGS).getItem() == LEGS){
+			if (player.getItemBySlot(EquipmentSlot.CHEST).getItem() == TORSO){
+				if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() == HEAD){
+					if (player.getItemBySlot(EquipmentSlot.FEET).getItem() == this){
+						for (int n = 0; n < Num_Base_Form_Item; n++)
+						{
+							List<MobEffectInstance> potionEffectList = get_Form_Item(player.getItemBySlot(EquipmentSlot.FEET),n+1).getPotionEffectList();
+							for (int i = 0; i < potionEffectList.size(); i++)
+							{
+								boolean Fever=  isFever(player.getItemBySlot(EquipmentSlot.FEET),this.Rider);
+								int Amplifier = Fever? (potionEffectList.get(i).getAmplifier()*2):(potionEffectList.get(i).getAmplifier());
+								player.addEffect(new MobEffectInstance(potionEffectList.get(i).getEffect(),potionEffectList.get(i).getDuration(),Amplifier,true,false));
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
 	public  boolean getGlowForSlot(ItemStack itemstack,EquipmentSlot currentSlot, LivingEntity livingEntity) {
 		return false;
 	}
