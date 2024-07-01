@@ -131,6 +131,12 @@ public class Ex_Aid_Rider_Items {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false)).ChangeSlot(2)
 			.alsoChange1stSlot(BAKUSOU_BIKE_GASHAT_UNDER.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 10));
 
+	public static final RegistryObject<Item> GIRI_GIRI_CHAMBARA_GASHAT_X = ITEMS.register("giri_giri_chambara_gashat_x",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"chambara_gamer","lazer","gamer_driver_bakusou_bike",
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false)).ChangeSlot(2)
+			.IsGlowing().alsoChange1stSlot(BAKUSOU_BIKE_GASHAT_UNDER.get()));
+
 	public static final RegistryObject<Item> SHAKARIKI_SPORTS_GASHAT = ITEMS.register("shakariki_sports_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"sports_gamer","ex_aid","gamer_driver_mighty_action_x",
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false),
@@ -429,6 +435,15 @@ public class Ex_Aid_Rider_Items {
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"tank_gamer","ex_aid","gamer_driver_mighty_action_x",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false)).SetFormToArmor().AddCompatibilityList(BaseGamerDriverUsers).ChangeSlot(2)
 			.IsGlowing().AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 2));
+
+	
+	public static final RegistryObject<Item> TADDLE_LEGACY_GASHAT_TRUE = ITEMS.register("taddle_legacy_gashat_true",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"legacy_gamer","brave","gamer_driver_taddle_legacy",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 5,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false))
+			.IsGlowing().SetFormToArmor().ChangeSlot(2));
 
 	public static final RegistryObject<Item> TADDLE_LEGACY_GASHAT = ITEMS.register("taddle_legacy_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"legacy_gamer","brave","gamer_driver_taddle_legacy",
@@ -888,7 +903,7 @@ public class Ex_Aid_Rider_Items {
 			.AddToTabList(RiderTabs.EX_AID_TAB_ITEM).ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<Item> GAMER_DRIVER_TRUE_BRAVE = ITEMS.register("gamer_driver_truebrave",
-			() -> new GamerDriverItem(ArmorMaterials.DIAMOND,"truebrave",TADDLE_LEGACY_GASHAT ,EX_AIDHELMET, EX_AIDCHESTPLATE,EX_AIDLEGGINGS , new Item.Properties())
+			() -> new GamerDriverItem(ArmorMaterials.DIAMOND,"truebrave",TADDLE_LEGACY_GASHAT_TRUE ,EX_AIDHELMET, EX_AIDCHESTPLATE,EX_AIDLEGGINGS , new Item.Properties())
 			.AddToTabList(RiderTabs.EX_AID_TAB_ITEM).ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<Item> GAMER_DRIVER_FUMA = ITEMS.register("gamer_driver_fuuma",
@@ -921,7 +936,7 @@ public class Ex_Aid_Rider_Items {
 			.AddToTabList(RiderTabs.EX_AID_TAB_ITEM).ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<Item> GASHACON_BUGVISOR_II_LAZER = ITEMS.register("gashacon_bugvisor_ii_lazer",
-			() -> new GamerDriverItem(ArmorMaterials.DIAMOND,"lazer_lvx_",GIRI_GIRI_CHAMBARA_GASHAT ,EX_AIDHELMET, EX_AIDCHESTPLATE,EX_AIDLEGGINGS , new Item.Properties())
+			() -> new GamerDriverItem(ArmorMaterials.DIAMOND,"lazer_lvx_",GIRI_GIRI_CHAMBARA_GASHAT_X ,EX_AIDHELMET, EX_AIDCHESTPLATE,EX_AIDLEGGINGS , new Item.Properties())
 			.Override_belt_text("gashacon_bugvisor_ii_lazer").AddToTabList(RiderTabs.EX_AID_TAB_ITEM).ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<Item> GASHACON_BUGVISOR_II_CHRONICLE_BUGTER = ITEMS.register("gashacon_bugvisor_ii_chronicle_bugster",
