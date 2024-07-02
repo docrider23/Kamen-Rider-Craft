@@ -26,7 +26,7 @@ public class ShockerRidersEntity extends BaseHenchmenEntity {
 	
     public ShockerRidersEntity(EntityType<? extends Zombie> type, Level level) {
         super(type, level);
-        NAME="shocker_combatman";
+        NAME="shocker_rider";
         this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Ichigo_Rider_Items.ICHIGOHELMET.get()));
         this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Ichigo_Rider_Items.ICHIGOCHESTPLATE.get()));
         this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Ichigo_Rider_Items.ICHIGOLEGGINGS.get()));

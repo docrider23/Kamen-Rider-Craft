@@ -24,7 +24,7 @@ public class EternalEntity extends BaseHenchmenEntity {
 	
     public EternalEntity(EntityType<? extends Zombie> type, Level level) {
         super(type, level);
-        NAME="";
+        NAME="eternal";
         this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(W_Rider_Items.WHELMET.get()));
         this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(W_Rider_Items.WCHESTPLATE.get()));
         this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(W_Rider_Items.WLEGGINGS.get()));

@@ -20,7 +20,7 @@ public class RiotrooperEntity extends BaseHenchmenEntity {
 	
     public RiotrooperEntity(EntityType<? extends Zombie> type, Level level) {
         super(type, level);
-        NAME="horse_orpnoch";
+        NAME="riotrooper";
         this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Faiz_Rider_Items.FAIZHELMET.get()));
         this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Faiz_Rider_Items.FAIZCHESTPLATE.get()));
         this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Faiz_Rider_Items.FAIZLEGGINGS.get()));

@@ -16,7 +16,7 @@ public class AnotherAgitoEntity extends BaseHenchmenEntity {
 	
     public AnotherAgitoEntity(EntityType<? extends Zombie> type, Level level) {
         super(type, level);
-        NAME="";
+        NAME="another_agito";
         this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Agito_Rider_Items.AGITOHELMET.get()));
         this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Agito_Rider_Items.AGITOCHESTPLATE.get()));
         this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Agito_Rider_Items.AGITOLEGGINGS.get()));
