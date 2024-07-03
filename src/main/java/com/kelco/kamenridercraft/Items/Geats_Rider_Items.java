@@ -1,5 +1,8 @@
 package com.kelco.kamenridercraft.Items;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
 import com.kelco.kamenridercraft.Effect.Effect_core;
 import com.kelco.kamenridercraft.Items.geats.DesireDriverItem;
@@ -227,12 +230,16 @@ public class Geats_Rider_Items {
 
 	public static final RegistryObject<Item> FANTASY_RAISE_BUCKLE_GYA_GO = ITEMS.register("fantasy_raise_buckle_gya_go",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_fantasy_gya_go","geats","desire_driver_belt_geats",
-					new MobEffectInstance(Effect_core.BOOST.get(), 40, 1,true,false))
+					new MobEffectInstance(Effect_core.REFLECT.get(), 40, 1,true,false),
+					new MobEffectInstance(Effect_core.SLASH.get(), 40, 1,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false))
 			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers));
 
 	public static final RegistryObject<Item> FANTASY_RAISE_BUCKLE = ITEMS.register("fantasy_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_fantasy","na_go","desire_driver_belt_geats",
-					new MobEffectInstance(Effect_core.BOOST.get(), 40, 1,true,false))
+					new MobEffectInstance(Effect_core.REFLECT.get(), 40, 1,true,false),
+					new MobEffectInstance(Effect_core.SLASH.get(), 40, 1,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false))
 			.ChangeSlot(2).SetOffhandSlot(3).addAlternative(FANTASY_RAISE_BUCKLE_GYA_GO.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	
@@ -320,15 +327,66 @@ public class Geats_Rider_Items {
 	public static final RegistryObject<Item> FEVER_SLOT_RAISE_BUCKLE = ITEMS.register("fever_slot_raise_buckle",
 			() -> new FeverSlotItem(new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
+	
+	  public static List<Item> NEED_ITEM_COMMAND_TWIN= new ArrayList<Item>();
+	  
+	public static final RegistryObject<Item> COMMAND_TWIN_BUCKLE_JET = ITEMS.register("command_twin_buckle_jet",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_raising","geats","desire_driver_belt_geats",
+					new MobEffectInstance(Effect_core.SLASH.get(), 40, 2,true,false))
+			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(new String[] {"buffa","tycoon"}
+					).AddToTabList(NEED_ITEM_COMMAND_TWIN).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
+	public static final RegistryObject<Item> COMMAND_TWIN_BUCKLE_CANNON_l = ITEMS.register("command_twin_buckle_cannon_l",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_cannon","geats","desire_driver_belt_geats",
+					new MobEffectInstance(Effect_core.FLYING.get(), 40, 0,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false))
+			.ChangeSlot(3).AddCompatibilityList(new String[] {"buffa","tycoon"}
+					).addNeedForm(COMMAND_TWIN_BUCKLE_JET.get(), 2));
+
+	public static final RegistryObject<Item> COMMAND_TWIN_BUCKLE_CANNON = ITEMS.register("command_twin_buckle_cannon",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_cannon","geats","desire_driver_belt_geats",
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false))
+			.ChangeSlot(2).AddCompatibilityList(new String[] {"buffa","tycoon"})
+			.addNeedForm(COMMAND_TWIN_BUCKLE_JET.get(), 3).addAlternative(COMMAND_TWIN_BUCKLE_CANNON_l.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
+	
+	public static final RegistryObject<Item> BOOST_MKII_RAISE_BUCKLE = ITEMS.register("boost_mkii_raise_buckle",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_boost_mkii","geats","desire_driver_belt_geats",
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
+					new MobEffectInstance(Effect_core.FIRE_PUNCH.get(), 40, 3,true,false),
+					new MobEffectInstance(Effect_core.BOOST.get(), 40, 2,true,false))
+			.ChangeSlot(2).AddCompatibilityList(new String[] {"tycoon"}).alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
+	public static final RegistryObject<Item> UNITE_GRIP = ITEMS.register("unite_grip",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_laser_boost","geats","desire_driver_belt_geats",
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
+					new MobEffectInstance(Effect_core.FIRE_SHOT.get(), 40, 3,true,false),
+					new MobEffectInstance(Effect_core.FLYING.get(), 40, 3,true,false))
+			.ChangeSlot(2).addNeedForm(BOOST_MKII_RAISE_BUCKLE.get(), 2).alsoChange3rdSlot(BOOST_MKII_RAISE_BUCKLE.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
+	public static final RegistryObject<Item> BOOST_MKIII_RAISE_BUCKLE = ITEMS.register("boost_mkiii_raise_buckle",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_boost_mkiii","geats","desire_driver_belt_geats",
+					new MobEffectInstance(Effect_core.BOOST.get(), 40, 4,true,false))
+			.ChangeSlot(2).SetOffhandSlot(3).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
 	/**
 	boost_markii_raise_buckle
 	unite_grip
 	boost_markiii_raise_buckle
-
-	fever_slot_raise_buckle
-
-	command_twin_buckle_jet
-	command_twin_buckle_cannon
 	 **/
 
 	public static final RegistryObject<Item> JYAMATO_BUCKLE_BUFFA = ITEMS.register("jyamato_buckle_buffa",

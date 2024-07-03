@@ -260,9 +260,9 @@ public class RiderFormChangeItem extends BaseItem {
 			}
 		}
 		if (NEED_FORM_SLOT_1!=null )if (RiderDriverItem.get_Form_Item(stack, 1)!=NEED_FORM_SLOT_1)return false;
-		if (NEED_FORM_SLOT_2!=null )if (RiderDriverItem.get_Form_Item(stack, 2)!=NEED_FORM_SLOT_1)return false;
-		if (NEED_FORM_SLOT_3!=null )if (RiderDriverItem.get_Form_Item(stack, 3)!=NEED_FORM_SLOT_1)return false;
-		if (NEED_FORM_SLOT_4!=null )if (RiderDriverItem.get_Form_Item(stack, 4)!=NEED_FORM_SLOT_1)return false;
+		if (NEED_FORM_SLOT_2!=null )if (RiderDriverItem.get_Form_Item(stack, 2)!=NEED_FORM_SLOT_2)return false;
+		if (NEED_FORM_SLOT_3!=null )if (RiderDriverItem.get_Form_Item(stack, 3)!=NEED_FORM_SLOT_3)return false;
+		if (NEED_FORM_SLOT_4!=null )if (RiderDriverItem.get_Form_Item(stack, 4)!=NEED_FORM_SLOT_4)return false;
 
 		if  (HAS_NEED_ITEM_LIST) {
 			for (int i = 0; i < needItemList.size(); i++)
