@@ -32,9 +32,9 @@ public class Geats_Rider_Items {
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> BLANK_CORE_ID = ITEMS.register("blank_rider_core_id",
-			() -> new RiderFormChangeItem(new Item.Properties(),0,"","keibi","desire_driver_belt_keibi",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"","keibi_riders","desire_driver_belt_keibi",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false))
-			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddCompatibilityList(new String[] {"the_end_riders"}).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> GEATS_CORE_ID = ITEMS.register("geats_rider_core_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","geats","desire_driver_belt_geats",
@@ -152,6 +152,16 @@ public class Geats_Rider_Items {
 
 	public static final RegistryObject<Item> VICE_CORE_ID = ITEMS.register("vice_rider_core_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","geats_vice","desire_driver_belt_vice",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false))
+			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
+	public static final RegistryObject<Item> CHUTA_CORE_ID = ITEMS.register("chuta_rider_core_id",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"","gm","desire_driver_belt_keibi",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false))
+			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
+	public static final RegistryObject<Item> GESSY_CORE_ID = ITEMS.register("gesshi_rider_core_id",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"","gm_chirami","desire_driver_belt_keibi",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false))
 			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 

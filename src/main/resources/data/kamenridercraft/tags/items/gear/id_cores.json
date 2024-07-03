@@ -1,5 +1,6 @@
 {
   "values": [
+    "kamenridercraft:blank_rider_core_id",
     "kamenridercraft:geats_rider_core_id",
     "kamenridercraft:tycoon_rider_core_id",
     "kamenridercraft:na_go_rider_core_id",
@@ -24,6 +25,8 @@
     "kamenridercraft:revi_rider_core_id",
     "kamenridercraft:vice_rider_core_id",
     "kamenridercraft:discore_id",
-    "kamenridercraft:jyamashin_wish_card"
+    "kamenridercraft:jyamashin_wish_card",
+    "kamenridercraft:chuta_rider_core_id",
+    "kamenridercraft:gesshi_rider_core_id"
   ]
 }
