@@ -1,6 +1,11 @@
 {
   "values": [
     "#kamenridercraft:gear/form_items/desire_driver",
+    "kamenridercraft:command_twin_buckle_jet",
+    "kamenridercraft:command_twin_buckle_cannon",
+    "kamenridercraft:boost_mkii_raise_buckle",
+    "kamenridercraft:unite_grip",
+    "kamenridercraft:boost_mkiii_raise_buckle",
     "kamenridercraft:jyamato_buckle",
     "kamenridercraft:gigant_sword_buckle",
     "kamenridercraft:gigant_hammer_buckle",
