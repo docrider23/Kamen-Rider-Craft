@@ -40,6 +40,8 @@ public class ModClientEvents {
 	public static List<Item> SWORD_GUN_ITEM= new ArrayList<Item>();
 	
 	public static List<Item> KUUGA_CHANGING_ITEM= new ArrayList<Item>();
+	
+	// public static List<Item> RAISE_RISER_ITEM= new ArrayList<Item>();
 
 	public static List<Item> SHIELD_ITEM= new ArrayList<Item>();
 	
@@ -92,6 +94,35 @@ public class ModClientEvents {
 					}
 				);
 			}
+
+
+
+			// for (int i = 0; i < RAISE_RISER_ITEM.size(); i++)
+			// {
+			// 	ItemProperties.register(RAISE_RISER_ITEM.get(i), new ResourceLocation("pull"), (p_174635_, p_174636_, p_174637_, p_174638_) -> {
+			// 		if (p_174637_ == null) {
+			// 			return 0.0F;
+			// 		}
+			// 			else if (p_174637_.getItemBySlot(EquipmentSlot.FEET)!= null){
+			//
+			// 				switch(p_174637_.getItemBySlot(EquipmentSlot.FEET).getItem()) {
+			// 					case (Geats_Rider_Items.RAISE_RISER_BELT_ZIIN.get()):
+			// 						return 1;
+			// 					case (Geats_Rider_Items.RAISE_RISER_BELT_KEKERA.get()):
+			// 						return 2;
+			// 					case (Geats_Rider_Items.RAISE_RISER_BELT_KYUUN.get()):
+			// 						return 3;
+			// 					case (Geats_Rider_Items.RAISE_RISER_BELT_BEROBA.get()):
+			// 						return 4;
+			// 					default:
+			// 						return 0;
+			// 				}
+			// 				return 0;
+			// 			}
+			// 			return 0;
+			// 		}
+			// 	);
+			// } Untested - have fun!
 	
 	
 
