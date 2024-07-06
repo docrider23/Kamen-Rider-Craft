@@ -15,6 +15,7 @@ import com.kelco.kamenridercraft.Items.rider_armor_base.BaseItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseShieldItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseSwordItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderArmorItem;
+import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderFormChangeItem;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -552,6 +553,38 @@ public class Geats_Rider_Items {
 	public static final RegistryObject<Item> KING_OHGER_RAISE_BUCKLE = ITEMS.register("king_ohger_raise_buckle",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
+	
+	public static final RegistryObject<Item> PROVIDENCE_CARD_GLARE = ITEMS.register("providence_card_glare",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"","glare","vision_driver_belt",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.SLOW_FALLING, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 5,true,false))
+			.AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
+	public static final RegistryObject<Item> PROVIDENCE_CARD_GLARE2 = ITEMS.register("providence_card_glare2",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"","glare2","vision_driver_belt",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.SLOW_FALLING, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 5,true,false))
+			.AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
+	public static final RegistryObject<Item> PROVIDENCE_CARD_GAZER = ITEMS.register("providence_card_gazer",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"","gazer","vision_driver_belt_gazer",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.SLOW_FALLING, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 5,true,false))
+			.AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
+	
 	public static final RegistryObject<Item> GEATS_HELMET = ITEMS.register("geatshead",
 			() -> new RiderArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM).ChangeRepairItem(BLANK_CORE_ID.get()));
 	public static final RegistryObject<Item> GEATS_CHESTPLATE = ITEMS.register("geatstroso",
@@ -672,14 +705,27 @@ public class Geats_Rider_Items {
 			() -> new  DesireDriverItem(ArmorMaterials.DIAMOND,"x_geats",X_GEATS_CORE_ID ,GEATS_HELMET, GEATS_CHESTPLATE,GEATS_LEGGINGS , new Item.Properties())
 			.Add_Extra_Base_Form_Items(XGEATS_RAISE_BUCKLE,XGEATS_RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM).ChangeRepairItem(BLANK_CORE_ID.get()));
 
+	 public static final RegistryObject<Item> VISION_DRIVER_GLARE = ITEMS.register("vision_driver_glare",
+             () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"glare",PROVIDENCE_CARD_GLARE ,GEATS_HELMET, GEATS_CHESTPLATE,GEATS_LEGGINGS, 
+           		  new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+ 
+	 public static final RegistryObject<Item> VISION_DRIVER_GLARE2 = ITEMS.register("vision_driver_glare2",
+             () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"glare2",PROVIDENCE_CARD_GLARE ,GEATS_HELMET, GEATS_CHESTPLATE,GEATS_LEGGINGS, 
+           		  new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+ 
+	 public static final RegistryObject<Item> VISION_DRIVER_GAZER = ITEMS.register("vision_driver_gazer",
+             () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"gazer",PROVIDENCE_CARD_GAZER ,GEATS_HELMET, GEATS_CHESTPLATE,GEATS_LEGGINGS, 
+           		  new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+ 
+	 public static final RegistryObject<Item> VISION_DRIVER_GAZER_SUEL = ITEMS.register("vision_driver_gazer_suel",
+             () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"gazer_suel",PROVIDENCE_CARD_GAZER ,GEATS_HELMET, GEATS_CHESTPLATE,GEATS_LEGGINGS, 
+           		  new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+ 
+	 public static final RegistryObject<Item> VISION_DRIVER_JYAMATO_GAZER = ITEMS.register("vision_driver_jyamato_glare",
+             () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"jyamato_glare",PROVIDENCE_CARD_GAZER ,GEATS_HELMET, GEATS_CHESTPLATE,GEATS_LEGGINGS, 
+           		  new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+ 
 	
-	public static final RegistryObject<Item> JYAMASHIN_WISH_CARD = ITEMS.register("jyamashin_wish_card",
-			() -> new RiderFormChangeItem(new Item.Properties(),0,"_jyamashin","buffa","desire_driver_belt_geats",
-					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
-					new MobEffectInstance(MobEffects.JUMP, 40, 0,true,false))
-			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
-	
-
 	public static final RegistryObject<BaseBlasterItem> MAGNUM_SHOOTER_40X = ITEMS.register("magnum_shooter_40x",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM)
 			.ChangeRepairItem(BLANK_CORE_ID.get()));
@@ -768,6 +814,13 @@ public class Geats_Rider_Items {
 			.ChangeRepairItem(BLANK_CORE_ID.get()));
 			// .AddToTabList(ModClientEvents.RAISE_RISER_ITEM) - Can't let those extra textures go to waste :Lovekov:
 
+
+	public static final RegistryObject<Item> JYAMASHIN_WISH_CARD = ITEMS.register("jyamashin_wish_card",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_jyamashin","buffa","desire_driver_belt_geats",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 0,true,false))
+			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+	
 
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
