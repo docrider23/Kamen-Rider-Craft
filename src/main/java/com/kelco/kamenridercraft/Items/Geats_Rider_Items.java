@@ -187,7 +187,6 @@ public class Geats_Rider_Items {
 	public static final RegistryObject<Item> X_GEATS_CORE_ID = ITEMS.register("x_geats_rider_core_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","x_geats","desire_driver_belt_geats",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false))
-			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get())
 			.ChangeModel("cyclonehopper_wingsarmor.geo.json").AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> DISCORE_ID = ITEMS.register("discore_id",
