@@ -47,6 +47,8 @@ public class DesireDriverItem  extends RiderDriverItem{
 		else if (equipmentSlot == EquipmentSlot.HEAD&isRaising(itemstack,riderName)) return riderName+"_base_over_raising"+ get_Form_Item(itemstack,1).getFormName(fly);
 		else if (equipmentSlot == EquipmentSlot.HEAD&isFever(itemstack,riderName)) return riderName+"_base_over_fever"+ get_Form_Item(itemstack,1).getFormName(fly);
 		
+		else if (equipmentSlot == EquipmentSlot.HEAD&get_Form_Item(itemstack,2)==Geats_Rider_Items.ONENESS_RAISE_BUCKLE.get()) return riderName+"_base_over_oneness";
+		
 		else if (equipmentSlot == EquipmentSlot.HEAD&get_Form_Item(itemstack,2)==Geats_Rider_Items.BOOST_MKII_RAISE_BUCKLE.get()) return riderName+"_base_over_boost_mkii";
 		else if (equipmentSlot == EquipmentSlot.HEAD&get_Form_Item(itemstack,2)==Geats_Rider_Items.UNITE_GRIP.get()) return "geats_base_over_laser_boost";
 		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,2)==Modded_item_core.BLANK_FORM.get()&&get_Form_Item(itemstack,3).getFormName(fly)=="_jyamato") return "geats_rider_jyamato_no_belt";

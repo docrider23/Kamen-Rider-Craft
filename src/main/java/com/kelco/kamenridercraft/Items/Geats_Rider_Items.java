@@ -60,6 +60,9 @@ public class Geats_Rider_Items {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false))
 			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(BikkuriBoxItem.CORE_ID).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
+	public static final RegistryObject<Item> GEATS_ONENESS_CORE_ID = ITEMS.register("geats_oneness_rider_core_id",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
 	public static final RegistryObject<Item> TYCOON_CORE_ID = ITEMS.register("tycoon_rider_core_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","tycoon","desire_driver_belt_tycoon",
 					new MobEffectInstance(MobEffects.LUCK, 40, 0,true,false))
@@ -403,17 +406,17 @@ public class Geats_Rider_Items {
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_boost_mkiii","geats","desire_driver_belt_geats",
 					new MobEffectInstance(Effect_core.BOOST.get(), 40, 4,true,false))
 			.ChangeSlot(2).SetOffhandSlot(3).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+	
+	public static final RegistryObject<Item> ONENESS_RAISE_BUCKLE = ITEMS.register("oneness_raise_buckle",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_oneness","geats","desire_driver_belt_geats",
+					new MobEffectInstance(Effect_core.BOOST.get(), 40, 4,true,false))
+			.ChangeSlot(2).addNeedItem(GEATS_ONENESS_CORE_ID.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> XGEATS_RAISE_BUCKLE = ITEMS.register("x_geats_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_x_geats","x_geats","desire_driver_belt_geats",
 					new MobEffectInstance(Effect_core.BOOST.get(), 40, 4,true,false))
 			.ChangeSlot(2).SetOffhandSlot(3).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
-	/**
-	boost_markii_raise_buckle
-	unite_grip
-	boost_markiii_raise_buckle
-	 **/
 
 	public static final RegistryObject<Item> JYAMATO_BUCKLE_BUFFA = ITEMS.register("jyamato_buckle_buffa",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_jyamato","buffa","desire_driver_belt_geats",
