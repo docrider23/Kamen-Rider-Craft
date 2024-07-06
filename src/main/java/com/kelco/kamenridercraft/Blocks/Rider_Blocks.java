@@ -26,6 +26,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SandBlock;
 import net.minecraft.world.level.block.FlowerBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -216,6 +217,10 @@ public class Rider_Blocks {
 	public static final RegistryObject<Block> SPRUCE_FLOORING = registerBlock("spruce_flooring",
 			() -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)
 					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
+
+	public static final RegistryObject<Block> IMAGIN_SAND = registerBlock("imagin_sand",
+			() -> new SandBlock(13224123, BlockBehaviour.Properties.copy(Blocks.SAND)
+					.strength(0.5f)));
 	
 	public static final RegistryObject<Block> STONE_FLOORING = registerBlock("stone_flooring",
 			() -> new BaseBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)

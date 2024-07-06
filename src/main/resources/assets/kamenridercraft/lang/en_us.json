@@ -1,5 +1,7 @@
 {
 
+"travelerstitles.kamenridercraft.sands_of_time": "Sands of Time",
+
 "painting.kamenridercraft.mighty.title":"Mighty",
 "painting.kamenridercraft.mighty.author":"Kelco",
 
@@ -1780,6 +1782,7 @@
 
 "block.kamenridercraft.blue_rose": "Blue Rose",
 "block.kamenridercraft.potted_blue_rose": "Potted Blue Rose",
+"block.kamenridercraft.imagin_sand": "Imagin Sand",
 "block.kamenridercraft.counter_95do": "95Do Display Counter",
 "block.kamenridercraft.overlord_oopart": "Overlord OOPArt Block",
 "block.kamenridercraft.overlord_oopart2": "Overlord OOPArt Block",

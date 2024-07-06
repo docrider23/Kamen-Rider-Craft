@@ -378,6 +378,7 @@ public class RiderTabs {
 				event.accept( RiderTabs.RIDER_BLOCK.get(i));
 			}
 			event.accept(Rider_Blocks.BLUE_ROSE.get());
+			event.accept(Rider_Blocks.IMAGIN_SAND.get());
 
 		}else if(event.getTab() == RiderTabs.RiderMiscTab.get()) {
 
