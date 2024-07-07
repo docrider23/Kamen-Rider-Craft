@@ -553,6 +553,24 @@ public class Geats_Rider_Items {
 	public static final RegistryObject<Item> KING_OHGER_RAISE_BUCKLE = ITEMS.register("king_ohger_raise_buckle",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
+	public static final RegistryObject<Item> ZIIN_RAISE_RISER_CARD = ITEMS.register("ziin_raise_riser_card",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"","ziin","raise_riser_belt",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.SLOW_FALLING, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 5,true,false))
+			.ChangeModel("geo/ziin.geo.json").AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
+	public static final RegistryObject<Item> BEROBA_RAISE_RISER_CARD = ITEMS.register("beroba_raise_riser_card",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"","beroba","raise_riser_belt",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(Effect_core.BIG.get(), 40, 2,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 5,true,false))
+			.ChangeModel("geo/beroba.geo.json").SetPalyerModelInvisible().AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
 	
 	public static final RegistryObject<Item> PROVIDENCE_CARD_GLARE = ITEMS.register("providence_card_glare",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","glare","vision_driver_belt",
@@ -735,6 +753,15 @@ public class Geats_Rider_Items {
 			() -> new  DesireDriverItem(ArmorMaterials.DIAMOND,"x_geats",X_GEATS_CORE_ID ,GEATS_HELMET, GEATS_CHESTPLATE,GEATS_LEGGINGS , new Item.Properties())
 			.Add_Extra_Base_Form_Items(XGEATS_RAISE_BUCKLE,XGEATS_RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM).ChangeRepairItem(BLANK_CORE_ID.get()));
 
+	public static final RegistryObject<Item> RAISE_RISER_BELT_ZIIN = ITEMS.register("raise_riser_belt_ziin",
+            () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"ziin",ZIIN_RAISE_RISER_CARD ,GEATS_HELMET, GEATS_CHESTPLATE,GEATS_LEGGINGS, 
+          		  new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
+	public static final RegistryObject<Item> RAISE_RISER_BELT_BEROBA = ITEMS.register("raise_riser_belt_beroba",
+            () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"beroba",BEROBA_RAISE_RISER_CARD ,GEATS_HELMET, GEATS_CHESTPLATE,GEATS_LEGGINGS, 
+          		  new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
+	
 	 public static final RegistryObject<Item> VISION_DRIVER_GLARE = ITEMS.register("vision_driver_glare",
              () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"glare",PROVIDENCE_CARD_GLARE ,GEATS_HELMET, GEATS_CHESTPLATE,GEATS_LEGGINGS, 
            		  new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
