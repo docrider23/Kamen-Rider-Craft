@@ -411,7 +411,7 @@ public class Geats_Rider_Items {
 	public static final RegistryObject<Item> ONENESS_RAISE_BUCKLE = ITEMS.register("oneness_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_oneness","geats","desire_driver_belt_geats",
 					new MobEffectInstance(Effect_core.BOOST.get(), 40, 4,true,false))
-			.ChangeSlot(2).addNeedItem(GEATS_ONENESS_CORE_ID.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.ChangeSlot(2).addNeedItem(GEATS_ONENESS_CORE_ID.get()).addNeedForm(BOOST_MKIII_RAISE_BUCKLE.get(), 3).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> XGEATS_RAISE_BUCKLE = ITEMS.register("x_geats_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_x_geats","x_geats","desire_driver_belt_geats",
@@ -583,8 +583,38 @@ public class Geats_Rider_Items {
 					new MobEffectInstance(MobEffects.SLOW_FALLING, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 5,true,false))
 			.AddToTabList(RiderTabs.GEATS_TAB_ITEM));
-
 	
+	public static final RegistryObject<Item> SIRIUS_CARD_OMEGA = ITEMS.register("sirius_card_omega",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_omega","regad","zillion_driver_omega_belt",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.SLOW_FALLING, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 5,true,false)));
+	
+	public static final RegistryObject<Item> SIRIUS_CARD = ITEMS.register("sirius_card",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"","regad","zillion_driver_belt",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.SLOW_FALLING, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 5,true,false))
+			.addSwitchForm(SIRIUS_CARD_OMEGA.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
+	public static final RegistryObject<Item> SIRIUS_CARD_GAZER_ZERO = ITEMS.register("sirius_card_gazer_zero",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"","gazer_zero","zillion_driver_gazer_zero_belt",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.SLOW_FALLING, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 5,true,false))
+			.AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
+
+
 	public static final RegistryObject<Item> GEATS_HELMET = ITEMS.register("geatshead",
 			() -> new RiderArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM).ChangeRepairItem(BLANK_CORE_ID.get()));
 	public static final RegistryObject<Item> GEATS_CHESTPLATE = ITEMS.register("geatstroso",
@@ -724,6 +754,15 @@ public class Geats_Rider_Items {
 	 public static final RegistryObject<Item> VISION_DRIVER_JYAMATO_GAZER = ITEMS.register("vision_driver_jyamato_glare",
              () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"jyamato_glare",PROVIDENCE_CARD_GAZER ,GEATS_HELMET, GEATS_CHESTPLATE,GEATS_LEGGINGS, 
            		  new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+ 
+	 public static final RegistryObject<Item> ZILLION_DRIVER = ITEMS.register("zillion_driver",
+             () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"regad",SIRIUS_CARD ,GEATS_HELMET, GEATS_CHESTPLATE,GEATS_LEGGINGS, 
+           		  new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+ 
+	 public static final RegistryObject<Item> ZILLION_DRIVER_GAZER_ZERO = ITEMS.register("zillion_driver_gazer_zero",
+             () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"gazer_zero",SIRIUS_CARD_GAZER_ZERO ,GEATS_HELMET, GEATS_CHESTPLATE,GEATS_LEGGINGS, 
+           		  new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+ 
  
 	
 	public static final RegistryObject<BaseBlasterItem> MAGNUM_SHOOTER_40X = ITEMS.register("magnum_shooter_40x",

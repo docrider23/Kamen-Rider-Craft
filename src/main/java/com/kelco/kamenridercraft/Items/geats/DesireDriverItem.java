@@ -130,6 +130,8 @@ public class DesireDriverItem  extends RiderDriverItem{
 							if (get_Form_Item(belt,3)==Geats_Rider_Items.BOOST_MKII_RAISE_BUCKLE.get()&get_Form_Item(belt,2)!=Geats_Rider_Items.UNITE_GRIP.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 3);
 							if (get_Form_Item(belt,2)==Geats_Rider_Items.UNITE_GRIP.get()&get_Form_Item(belt,3)!=Geats_Rider_Items.BOOST_MKII_RAISE_BUCKLE.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 2);
 							
+							if (get_Form_Item(belt,2)==Geats_Rider_Items.ONENESS_RAISE_BUCKLE.get()&get_Form_Item(belt,3)!=Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 2);
+							
 							
 							List<MobEffectInstance> potionEffectList = get_Form_Item(belt,n+1).getPotionEffectList();
 							for (int i = 0; i < potionEffectList.size(); i++)
