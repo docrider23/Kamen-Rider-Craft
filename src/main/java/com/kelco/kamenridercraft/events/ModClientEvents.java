@@ -52,9 +52,6 @@ public class ModClientEvents {
 	@SubscribeEvent
 	public static void onClientSetup(final FMLClientSetupEvent event) {
 
-		ItemBlockRenderTypes.setRenderLayer(Rider_Blocks.GLASS_RYUKI.get(), RenderType.translucent());
-		ItemBlockRenderTypes.setRenderLayer(Rider_Blocks.DEEPSLATE_GLASS_RYUKI.get(), RenderType.translucent());
-		ItemBlockRenderTypes.setRenderLayer(Rider_Blocks.FANGIRE_GLASS.get(), RenderType.translucent());
 		ItemBlockRenderTypes.setRenderLayer(Rider_Blocks.BLUE_ROSE.get(), RenderType.cutout());
 		ItemBlockRenderTypes.setRenderLayer(Rider_Blocks.POTTED_BLUE_ROSE.get(), RenderType.cutout());
 		
