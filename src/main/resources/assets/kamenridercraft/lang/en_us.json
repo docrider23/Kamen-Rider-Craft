@@ -1231,9 +1231,11 @@
 "item.kamenridercraft.desire_driver_gm_chirami": "Desire Driver (GM)",
 "item.kamenridercraft.desire_driver_keibi_riders": "Desire Driver (Keibi Riders)",
 "item.kamenridercraft.desire_driver_the_end_riders": "Desire Driver (The End Riders)",
-"item.kamenridercraft.vision_driver": "Vision Driver (Glare)",
+"item.kamenridercraft.vision_driver_glare": "Vision Driver (Glare)",
 "item.kamenridercraft.vision_driver_gazer": "Vision Driver (Gazer)",
-"item.kamenridercraft.vision_driver_chirami": "Vision Driver (Glare2)",
+"item.kamenridercraft.vision_driver_glare2": "Vision Driver (Glare2)",
+"item.kamenridercraft.vision_driver_gazer_suel": "Vision Driver (Suel Gazer)",
+"item.kamenridercraft.vision_driver_jyamato_glare": "Vision Driver (Jyamato Gazer)",
 
 "item.kamenridercraft.magnum_shooter_40x": "Magnum Shooter 40X",
 "item.kamenridercraft.magnum_shooter_40x_rifle": "Magnum Shooter 40X (Rifle)",
@@ -1264,8 +1266,9 @@
 "item.kamenridercraft.magnum_raise_buckle": "Magnum Buckle",
 "item.kamenridercraft.boost_raise_buckle": "Boost Buckle",
 "item.kamenridercraft.boost_mkii_raise_buckle": "Boost MarkII Buckle",
-"item.kamenridercraft.boost_mkiii_raise_buckle": "Boost MarkIII Buckle",
 "item.kamenridercraft.unite_grip": "Unite Grip",
+"item.kamenridercraft.boost_mkiii_raise_buckle": "Boost MarkIII Buckle",
+"item.kamenridercraft.oneness_raise_buckle": "Oneness Buckle",
 
 "item.kamenridercraft.x_geats_raise_buckle": "XGeats Raise Buckle",
 "item.kamenridercraft.dooms_geats_raise_buckle": "Dooms Geats Raise Buckle",
@@ -1344,6 +1347,7 @@
 
 "item.kamenridercraft.blank_rider_core_id": "Blank Rider Core ID",
 "item.kamenridercraft.geats_rider_core_id": "Kamen Rider Geats Core ID",
+"item.kamenridercraft.geats_oneness_rider_core_id": "Kamen Rider Geats Oneness Core ID",
 "item.kamenridercraft.tycoon_rider_core_id": "Kamen Rider Tycoon Core ID",
 "item.kamenridercraft.na_go_rider_core_id": "Kamen Rider Na-Go Core ID",
 "item.kamenridercraft.buffa_rider_core_id": "Kamen Rider Buffa Core ID",
@@ -1374,8 +1378,8 @@
 "item.kamenridercraft.chuta_rider_core_id": "Kamen Rider Chuta Core ID",
 "item.kamenridercraft.gesshi_rider_core_id": "Kamen Rider Gessy Core ID",
 
-"item.kamenridercraft.providence_card": "Providence Card (Gazer)",
 "item.kamenridercraft.providence_card_glare": "Providence Card (Glare)",
+"item.kamenridercraft.providence_card_gazer": "Providence Card (Gazer)",
 "item.kamenridercraft.providence_card_glare2": "Providence Card (Glare2)",
 
 "item.kamenridercraft.ziin_raise_riser_card": "Raise Riser Card (Ziin)",
