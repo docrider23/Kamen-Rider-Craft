@@ -43,7 +43,7 @@
             "predicate": {
                 "blocking": 1
             },
-            "model": "kamenridercraft4th:item/raise_shield_blocking"
+            "model": "kamenridercraft:item/raise_shield_blocking"
         }
     ]
 }
