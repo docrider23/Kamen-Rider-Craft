@@ -1236,6 +1236,8 @@
 "item.kamenridercraft.vision_driver_glare2": "Vision Driver (Glare2)",
 "item.kamenridercraft.vision_driver_gazer_suel": "Vision Driver (Suel Gazer)",
 "item.kamenridercraft.vision_driver_jyamato_glare": "Vision Driver (Jyamato Gazer)",
+"item.kamenridercraft.zillion_driver": "Zillion Driver",
+"item.kamenridercraft.zillion_driver_gazer_zero": "Zillion Driver (Gazer Zero)",
 
 "item.kamenridercraft.magnum_shooter_40x": "Magnum Shooter 40X",
 "item.kamenridercraft.magnum_shooter_40x_rifle": "Magnum Shooter 40X (Rifle)",
@@ -1386,6 +1388,9 @@
 "item.kamenridercraft.beroba_raise_riser_card": "Raise Riser Card (Beroba)",
 "item.kamenridercraft.kekera_raise_riser_card": "Raise Riser Card (Kekera)",
 "item.kamenridercraft.kyuun_raise_riser_card": "Raise Riser Card (Kyuun)",
+
+"item.kamenridercraft.sirius_card": "Sirius Card",
+"item.kamenridercraft.sirius_card_gazer_zero": "Sirius Card (Gazer Zero)",
 
 "item.kamenridercraft.bikkuri_mission_box": "Bikkuri Mission Box",
 "item.kamenridercraft.hatena_mission_box": "Hatena Mission Box",

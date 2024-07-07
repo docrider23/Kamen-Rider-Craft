@@ -3,6 +3,7 @@ package com.kelco.kamenridercraft.events;
 
 import com.kelco.kamenridercraft.Items.Kuuga_Rider_Items;
 import com.kelco.kamenridercraft.Items.Ryuki_Rider_Items;
+import com.kelco.kamenridercraft.Items.Geats_Rider_Items;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseSwordItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 import com.kelco.kamenridercraft.client.renderer.AnkhRenderer;
@@ -13,11 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
-import com.kelco.kamenridercraft.Blocks.Rider_Blocks;
 import com.kelco.kamenridercraft.Entities.MobsCore;
 
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -41,7 +39,7 @@ public class ModClientEvents {
 	
 	public static List<Item> KUUGA_CHANGING_ITEM= new ArrayList<Item>();
 	
-	// public static List<Item> RAISE_RISER_ITEM= new ArrayList<Item>();
+	public static List<Item> RAISE_RISER_ITEM= new ArrayList<Item>();
 
 	public static List<Item> SHIELD_ITEM= new ArrayList<Item>();
 	
@@ -51,9 +49,6 @@ public class ModClientEvents {
 	
 	@SubscribeEvent
 	public static void onClientSetup(final FMLClientSetupEvent event) {
-
-		ItemBlockRenderTypes.setRenderLayer(Rider_Blocks.BLUE_ROSE.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(Rider_Blocks.POTTED_BLUE_ROSE.get(), RenderType.cutout());
 		
 		event.enqueueWork(() -> {
 		
@@ -94,32 +89,28 @@ public class ModClientEvents {
 
 
 
-			// for (int i = 0; i < RAISE_RISER_ITEM.size(); i++)
-			// {
-			// 	ItemProperties.register(RAISE_RISER_ITEM.get(i), new ResourceLocation("pull"), (p_174635_, p_174636_, p_174637_, p_174638_) -> {
-			// 		if (p_174637_ == null) {
-			// 			return 0.0F;
-			// 		}
-			// 			else if (p_174637_.getItemBySlot(EquipmentSlot.FEET)!= null){
-			//
-			// 				switch(p_174637_.getItemBySlot(EquipmentSlot.FEET).getItem()) {
-			// 					case (Geats_Rider_Items.RAISE_RISER_BELT_ZIIN.get()):
-			// 						return 1;
-			// 					case (Geats_Rider_Items.RAISE_RISER_BELT_KEKERA.get()):
-			// 						return 2;
-			// 					case (Geats_Rider_Items.RAISE_RISER_BELT_KYUUN.get()):
-			// 						return 3;
-			// 					case (Geats_Rider_Items.RAISE_RISER_BELT_BEROBA.get()):
-			// 						return 4;
-			// 					default:
-			// 						return 0;
-			// 				}
-			// 				return 0;
-			// 			}
-			// 			return 0;
-			// 		}
-			// 	);
-			// } Untested - have fun!
+			for (int i = 0; i < RAISE_RISER_ITEM.size(); i++)
+			{
+				ItemProperties.register(RAISE_RISER_ITEM.get(i), new ResourceLocation("pull"), (p_174635_, p_174636_, p_174637_, p_174638_) -> {
+					if (p_174637_ == null) {
+						return 0.0F;
+					}
+						else if (p_174637_.getItemBySlot(EquipmentSlot.FEET)!= null){
+							if (p_174637_.getItemBySlot(EquipmentSlot.FEET).getItem() == Geats_Rider_Items.RAISE_RISER_BELT_ZIIN.get()) {
+								return 1;
+							// } else if (p_174637_.getItemBySlot(EquipmentSlot.FEET).getItem() == Geats_Rider_Items.RAISE_RISER_BELT_KEKERA.get()) {
+							// 	return 2;
+							// } else if (p_174637_.getItemBySlot(EquipmentSlot.FEET).getItem() == Geats_Rider_Items.RAISE_RISER_BELT_KYUUN.get()) {
+							// 	return 3;
+							} else if (p_174637_.getItemBySlot(EquipmentSlot.FEET).getItem() == Geats_Rider_Items.RAISE_RISER_BELT_BEROBA.get()) {
+								return 4;
+							}
+							return 0;
+						}
+						return 0;
+					}
+				);
+			}
 	
 	
 

@@ -17,6 +17,7 @@ import com.kelco.kamenridercraft.Items.rider_armor_base.BaseSwordItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderArmorItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderFormChangeItem;
+import com.kelco.kamenridercraft.events.ModClientEvents;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.ArmorItem;
@@ -877,8 +878,7 @@ public class Geats_Rider_Items {
 
 	public static final RegistryObject<BaseBlasterItem> LASER_RAISE_RISER = ITEMS.register("laser_raise_riser",
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM)
-			.ChangeRepairItem(BLANK_CORE_ID.get()));
-			// .AddToTabList(ModClientEvents.RAISE_RISER_ITEM) - Can't let those extra textures go to waste :Lovekov:
+			.AddToTabList(ModClientEvents.RAISE_RISER_ITEM).ChangeRepairItem(BLANK_CORE_ID.get()));
 
 
 	public static final RegistryObject<Item> JYAMASHIN_WISH_CARD = ITEMS.register("jyamashin_wish_card",
