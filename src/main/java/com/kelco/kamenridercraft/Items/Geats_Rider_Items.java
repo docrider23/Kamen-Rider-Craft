@@ -199,6 +199,31 @@ public class Geats_Rider_Items {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false))
 			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
+	public static final RegistryObject<Item> TOGECHI_CORE_ID = ITEMS.register("togechi_rider_core_id",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+	
+	public static final RegistryObject<Item> LANCER_CORE_ID = ITEMS.register("lancer_rider_core_id",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+	
+	public static final RegistryObject<Item> GARUN_CORE_ID = ITEMS.register("garun_rider_core_id",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+	
+	
+	public static final RegistryObject<Item> TOGECHI_CORE_ID_CRACKED = ITEMS.register("togechi_rider_core_id_cracked",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+	
+	public static final RegistryObject<Item> LETTER_CORE_ID_CRACKED = ITEMS.register("letter_rider_core_id_cracked",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+	
+	public static final RegistryObject<Item> GINPEN_CORE_ID_CRACKED = ITEMS.register("ginpen_rider_core_id_cracked",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+	
+	public static final RegistryObject<Item> SHIROWE_CORE_ID_CRACKED = ITEMS.register("shirowe_rider_core_id_cracked",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+	
+	public static final RegistryObject<Item> NUDGESPARROW_CORE_ID_CRACKED = ITEMS.register("nudge_sparrow_rider_core_id_cracked",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+	
 
 	public static final RegistryObject<Item> MAGNUM_RAISE_BUCKLE = ITEMS.register("magnum_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_magnum","geats","desire_driver_belt_geats",

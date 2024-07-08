@@ -24,6 +24,7 @@ import com.kelco.kamenridercraft.Entities.bosses.GattonBugsterEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GenmEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GodaEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GraphiteBugsterEntity;
+import com.kelco.kamenridercraft.Entities.bosses.JyamatoRiderEntity;
 import com.kelco.kamenridercraft.Entities.bosses.KaidenBugsterEntity;
 import com.kelco.kamenridercraft.Entities.bosses.KazariEntity;
 import com.kelco.kamenridercraft.Entities.bosses.MezoolEntity;
@@ -54,10 +55,12 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.DestronCombatmanEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.DogmaFighterEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.FoundationXMasqueradeEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.GODWarfareAgentEntity;
+import com.kelco.kamenridercraft.Entities.footSoldiers.GmRiderEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.KnightSoldierEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.MasqueradeEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.NeotrooperEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.PantherasLuteusEntity;
+import com.kelco.kamenridercraft.Entities.footSoldiers.PawnJyamatoEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.RedFollowerEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.RideplayerEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.RiotrooperEntity;
@@ -537,6 +540,24 @@ public class MobsCore {
           public static final RegistryObject<ForgeSpawnEggItem> CRONUS_SPAWN_EGG = ITEMS.register("cronus_spawn_egg",
                   () -> new ForgeSpawnEggItem(CRONUS, 0x000000, 0x44df00, new Item.Properties()));
           
+          
+          public static final RegistryObject<EntityType<PawnJyamatoEntity>> PAWN_JYAMATO = MOBLIST.register("pawnjyamato_mob",
+                  () -> EntityType.Builder.of(PawnJyamatoEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":pawnjyamato_mob"));
+          
+          public static final RegistryObject<ForgeSpawnEggItem> PAWN_JYAMATO_SPAWN_EGG = ITEMS.register("pawnjyamato_spawn_egg",
+                  () -> new ForgeSpawnEggItem(PAWN_JYAMATO, 0xDBD39B, 0x22A215, new Item.Properties()));
+          
+          public static final RegistryObject<EntityType<JyamatoRiderEntity>> JYAMATO_RIDER = MOBLIST.register("jyamatorider",
+                  () -> EntityType.Builder.of(JyamatoRiderEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":jyamatorider"));
+ 
+          public static final RegistryObject<ForgeSpawnEggItem> JYAMATO_RIDER_SPAWN_EGG = ITEMS.register("jyamatorider_spawn_egg",
+                  () -> new ForgeSpawnEggItem(JYAMATO_RIDER, 0x0F100F, 0x22A215, new Item.Properties()));
+          
+          public static final RegistryObject<EntityType<GmRiderEntity>> GM_RIDER = MOBLIST.register("gmrider",
+                  () -> EntityType.Builder.of(GmRiderEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":jyamatorider"));
+ 
+          public static final RegistryObject<ForgeSpawnEggItem> GM_RIDER_SPAWN_EGG = ITEMS.register("gmrider_spawn_egg",
+                  () -> new ForgeSpawnEggItem(GM_RIDER, 0x0F100F, 0x9B0E52, new Item.Properties()));
           
           
           public static final RegistryObject<EntityType<MachineTornadorEntity>> MACEHINE_TORADOR = MOBLIST.register("machine_tornador",

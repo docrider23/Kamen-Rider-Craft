@@ -236,6 +236,10 @@ public class ModClientEvents {
 		event.registerEntityRenderer(MobsCore.PARADX.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.CRONUS.get(), BasicEntityRenderer::new);
 		
+		event.registerEntityRenderer(MobsCore.PAWN_JYAMATO.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.JYAMATO_RIDER.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.GM_RIDER.get(), BasicEntityRenderer::new);
+		
 		event.registerEntityRenderer(MobsCore.MACEHINE_TORADOR.get(), BikeRenderer::new);
 		event.registerEntityRenderer(MobsCore.HARDBOILER.get(), BikeRenderer::new);
 		event.registerEntityRenderer(MobsCore.SKULLBOILER.get(), BikeRenderer::new);

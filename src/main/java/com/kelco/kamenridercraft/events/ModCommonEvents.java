@@ -22,6 +22,7 @@ import com.kelco.kamenridercraft.Entities.bosses.GamelEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GenmEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GodaEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GraphiteBugsterEntity;
+import com.kelco.kamenridercraft.Entities.bosses.JyamatoRiderEntity;
 import com.kelco.kamenridercraft.Entities.bosses.KazariEntity;
 import com.kelco.kamenridercraft.Entities.bosses.MezoolEntity;
 import com.kelco.kamenridercraft.Entities.bosses.MuchiriEntity;
@@ -48,10 +49,12 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.DestronCombatmanEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.DogmaFighterEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.FoundationXMasqueradeEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.GODWarfareAgentEntity;
+import com.kelco.kamenridercraft.Entities.footSoldiers.GmRiderEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.KnightSoldierEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.MasqueradeEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.NeotrooperEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.PantherasLuteusEntity;
+import com.kelco.kamenridercraft.Entities.footSoldiers.PawnJyamatoEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.RedFollowerEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.RideplayerEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.RiotrooperEntity;
@@ -432,6 +435,11 @@ public class ModCommonEvents {
 	//	event.register(MobsCore.LOVELY_BUGSTER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
 		event.register(MobsCore.RIDEPLAYER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
 
+		event.register(MobsCore.PAWN_JYAMATO.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
+		event.register(MobsCore.JYAMATO_RIDER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
+		event.register(MobsCore.GM_RIDER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
+
+		
 		event.register(MobsCore.ANKH.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, AnkhEntity::checkAnkhSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
 
 	}
@@ -515,6 +523,10 @@ public class ModCommonEvents {
 		event.put(MobsCore.RIDEPLAYER.get(), RideplayerEntity.setAttributes());
 		event.put(MobsCore.PARADX.get(), ParaDxEntity.setAttributes());
 		event.put(MobsCore.CRONUS.get(), CronusEntity.setAttributes());
+		
+		event.put(MobsCore.PAWN_JYAMATO.get(), PawnJyamatoEntity.setAttributes());
+		event.put(MobsCore.JYAMATO_RIDER.get(), JyamatoRiderEntity.setAttributes());
+		event.put(MobsCore.GM_RIDER.get(), GmRiderEntity.setAttributes());
 
 		event.put(MobsCore.MACEHINE_TORADOR.get(), baseBikeEntity.setAttributes());
 		event.put(MobsCore.HARDBOILER.get(), baseBikeEntity.setAttributes());
