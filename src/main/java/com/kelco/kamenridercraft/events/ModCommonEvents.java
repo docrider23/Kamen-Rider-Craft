@@ -27,6 +27,7 @@ import com.kelco.kamenridercraft.Entities.bosses.KazariEntity;
 import com.kelco.kamenridercraft.Entities.bosses.MezoolEntity;
 import com.kelco.kamenridercraft.Entities.bosses.MuchiriEntity;
 import com.kelco.kamenridercraft.Entities.bosses.NazcaDopantEntity;
+import com.kelco.kamenridercraft.Entities.bosses.NewMoleImaginEntity;
 import com.kelco.kamenridercraft.Entities.bosses.OrgaEntity;
 import com.kelco.kamenridercraft.Entities.bosses.ParaDxEntity;
 import com.kelco.kamenridercraft.Entities.bosses.PoppyRedEntity;
@@ -53,6 +54,7 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.GmRiderEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.KnightSoldierEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.MasqueradeEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.NeotrooperEntity;
+import com.kelco.kamenridercraft.Entities.footSoldiers.NewMoleImaginSandEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.PantherasLuteusEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.PawnJyamatoEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.RedFollowerEntity;
@@ -427,6 +429,8 @@ public class ModCommonEvents {
 		event.register(MobsCore.SHADOW_TROOPER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
 		event.register(MobsCore.NEOTROOPER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
 
+		event.register(MobsCore.NEW_MOLE_IMAGIN_SAND.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
+
 		event.register(MobsCore.MASQUERADE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
 		event.register(MobsCore.FOUNDATION_X_MASQUERADE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
 		event.register(MobsCore.YUMMY.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
@@ -474,6 +478,9 @@ public class ModCommonEvents {
 		event.put(MobsCore.SHADOW_TROOPER.get(), ShadowTrooperEntity.setAttributes());
 		event.put(MobsCore.NEOTROOPER.get(), NeotrooperEntity.setAttributes());
 		event.put(MobsCore.CAUCASUS.get(), CaucasusEntity.setAttributes());
+
+		event.put(MobsCore.NEW_MOLE_IMAGIN.get(), NewMoleImaginEntity.setAttributes());
+		event.put(MobsCore.NEW_MOLE_IMAGIN_SAND.get(), NewMoleImaginSandEntity.setAttributes());
 
 		event.put(MobsCore.MASQUERADE.get(), MasqueradeEntity.setAttributes());
 		event.put(MobsCore.CLAYDOLL_DOPANT.get(), ClayDollDopantEntity.setAttributes());        

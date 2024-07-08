@@ -31,6 +31,7 @@ import com.kelco.kamenridercraft.Entities.bosses.MezoolEntity;
 import com.kelco.kamenridercraft.Entities.bosses.MotorsBugsterEntity;
 import com.kelco.kamenridercraft.Entities.bosses.MuchiriEntity;
 import com.kelco.kamenridercraft.Entities.bosses.NazcaDopantEntity;
+import com.kelco.kamenridercraft.Entities.bosses.NewMoleImaginEntity;
 import com.kelco.kamenridercraft.Entities.bosses.OrgaEntity;
 import com.kelco.kamenridercraft.Entities.bosses.ParaDxEntity;
 import com.kelco.kamenridercraft.Entities.bosses.PoppyRedEntity;
@@ -59,6 +60,7 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.GmRiderEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.KnightSoldierEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.MasqueradeEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.NeotrooperEntity;
+import com.kelco.kamenridercraft.Entities.footSoldiers.NewMoleImaginSandEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.PantherasLuteusEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.PawnJyamatoEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.RedFollowerEntity;
@@ -242,7 +244,20 @@ public class MobsCore {
 
      public static final RegistryObject<ForgeSpawnEggItem> CAUCASUS_SPAWN_EGG = ITEMS.register("caucasus_spawn_egg",
              () -> new ForgeSpawnEggItem(CAUCASUS,  0x999999,0xf4c600, new Item.Properties()));
-     
+
+
+     public static final RegistryObject<EntityType<NewMoleImaginEntity>> NEW_MOLE_IMAGIN = MOBLIST.register("new_mole_imagin",
+             () -> EntityType.Builder.of(NewMoleImaginEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":new_mole_imagin"));
+
+     public static final RegistryObject<ForgeSpawnEggItem> NEW_MOLE_IMAGIN_SPAWN_EGG = ITEMS.register("new_mole_imagin_spawn_egg",
+             () -> new ForgeSpawnEggItem(NEW_MOLE_IMAGIN,  0xb7b7b1,0x92908b, new Item.Properties()));
+
+     public static final RegistryObject<EntityType<NewMoleImaginSandEntity>> NEW_MOLE_IMAGIN_SAND = MOBLIST.register("new_mole_imagin_sand",
+             () -> EntityType.Builder.of(NewMoleImaginSandEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":new_mole_imagin_sand"));
+
+     public static final RegistryObject<ForgeSpawnEggItem> NEW_MOLE_IMAGIN_SAND_SPAWN_EGG = ITEMS.register("new_mole_imagin_sand_spawn_egg",
+             () -> new ForgeSpawnEggItem(NEW_MOLE_IMAGIN_SAND,  0xb7b7b1,0x92908b, new Item.Properties()));
+
 
      public static final RegistryObject<EntityType<MasqueradeEntity>> MASQUERADE = MOBLIST.register("masquerade",
              () -> EntityType.Builder.of(MasqueradeEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":masquerade"));
