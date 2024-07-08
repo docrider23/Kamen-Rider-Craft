@@ -541,6 +541,14 @@ public class Geats_Rider_Items {
 	public static final RegistryObject<Item> BEAT_RAISE_BUCKLE_THEME = ITEMS.register("beat_raise_buckle_theme",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(HatenaBoxItem.RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
+	public static final RegistryObject<Item> SHINOBI_RAISE_BUCKLE = ITEMS.register("shinobi_raise_buckle",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_shinobi","geats","desire_driver_belt_geats",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false))
+			.ChangeSlot(2).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
+	
 	/**
 	revice_driver_raise_buckle
 	two_si_driver_raise_buckle
