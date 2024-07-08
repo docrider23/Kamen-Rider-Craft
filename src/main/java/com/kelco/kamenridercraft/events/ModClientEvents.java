@@ -9,6 +9,7 @@ import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 import com.kelco.kamenridercraft.client.renderer.AnkhRenderer;
 import com.kelco.kamenridercraft.client.renderer.BasicEntityRenderer;
 import com.kelco.kamenridercraft.client.renderer.BikeRenderer;
+import com.kelco.kamenridercraft.client.renderer.NewMoleImaginSandRenderer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -186,6 +187,9 @@ public class ModClientEvents {
 		event.registerEntityRenderer(MobsCore.SHADOW_TROOPER.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.NEOTROOPER.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.CAUCASUS.get(), BasicEntityRenderer::new);
+
+		event.registerEntityRenderer(MobsCore.NEW_MOLE_IMAGIN.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.NEW_MOLE_IMAGIN_SAND.get(), NewMoleImaginSandRenderer::new);
 
 		event.registerEntityRenderer(MobsCore.MASQUERADE.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.WEATHER_DOPANT.get(), BasicEntityRenderer::new);
