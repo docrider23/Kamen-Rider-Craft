@@ -98,6 +98,10 @@ public class RiderTabs {
     public static RegistryObject<CreativeModeTab> KivaTab = CREATIVE_MODE_TABS.register("krc_290_kiva_tab", () -> 
 		CreativeModeTab.builder().icon(() -> new ItemStack(Kiva_Rider_Items.KIVAHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_kiva_items.png"))
 		.title(Component.literal("Kiva Rider Items")).build());
+    public static RegistryObject<CreativeModeTab> DecadeTab = CREATIVE_MODE_TABS.register("krc_300_decade_tab", () -> 
+	CreativeModeTab.builder().icon(() -> new ItemStack(Decade_Rider_Items.DECADEHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_decade_items.png"))
+	.title(Component.literal("Decade Rider Items")).build());
+
     public static RegistryObject<CreativeModeTab> WTab = CREATIVE_MODE_TABS.register("krc_310_w_tab", () -> 
 			CreativeModeTab.builder().icon(() -> new ItemStack(W_Rider_Items.WHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_w_items.png"))
 			.title(Component.literal("W Rider Items")).build());
@@ -163,6 +167,7 @@ public class RiderTabs {
     public static List<Item> KABUTO_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> DEN_O_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> KIVA_TAB_ITEM= new ArrayList<Item>();
+    public static List<Item> DECADE_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> W_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> OOO_TAB_ITEM= new ArrayList<Item>();
     
@@ -314,6 +319,11 @@ public class RiderTabs {
 			for (int i = 0; i < RiderTabs.KIVA_TAB_ITEM.size(); i++)
 			{
 				event.accept( RiderTabs.KIVA_TAB_ITEM.get(i));
+			}
+		}else if(event.getTab() == RiderTabs.DecadeTab.get()) {
+			for (int i = 0; i < RiderTabs.DECADE_TAB_ITEM.size(); i++)
+			{
+				event.accept( RiderTabs.DECADE_TAB_ITEM.get(i));
 			}
 		}else if(event.getTab() == RiderTabs.WTab.get()) {
 			for (int i = 0; i < RiderTabs.W_TAB_ITEM.size(); i++)

@@ -100,4 +100,10 @@ public class RiderArmorItem extends ArmorItem implements GeoItem {
 	public AnimatableInstanceCache getAnimatableInstanceCache() {
 		return cache;
 	}
+
+
+
+
+
+
 }

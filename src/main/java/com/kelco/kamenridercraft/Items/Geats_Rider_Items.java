@@ -444,6 +444,11 @@ public class Geats_Rider_Items {
 					new MobEffectInstance(Effect_core.BOOST.get(), 40, 4,true,false))
 			.ChangeSlot(2).SetOffhandSlot(3).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
+	public static final RegistryObject<Item> BUJIN_SWORD_BUCKLE = ITEMS.register("bujin_sword_raise_buckle",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_bujin_sword","tycoon","desire_driver_belt_geats",
+					new MobEffectInstance(Effect_core.BOOST.get(), 40, 4,true,false))
+			.ChangeSlot(3).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
 
 	public static final RegistryObject<Item> JYAMATO_BUCKLE_BUFFA = ITEMS.register("jyamato_buckle_buffa",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_jyamato","buffa","desire_driver_belt_geats",

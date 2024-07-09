@@ -29,6 +29,8 @@ public class RiderFormChangeItem extends BaseItem {
 	private int BELT;
 	private List<Item> NEEDITEM = new ArrayList<Item>();
 	protected String RIDER_NAME;
+	protected String OVERRIDE_RIDER_NAME;
+	
 	private String BELT_TEX;
 	private Boolean IS_GLOWING = false;
 	private Boolean IS_BELT_GLOWING = false;
@@ -80,6 +82,11 @@ public class RiderFormChangeItem extends BaseItem {
 	public String getFormName(Boolean isFlaying) {
 		if (isFlaying&FLYING_TEXT) return FORM_NAME+"_wing";
 		else return FORM_NAME;
+	}
+
+	public String getRiderName(String name) {
+		if (OVERRIDE_RIDER_NAME!=null) return OVERRIDE_RIDER_NAME;
+		else return name;
 	}
 
 
@@ -138,6 +145,11 @@ public class RiderFormChangeItem extends BaseItem {
 
 	public RiderFormChangeItem ChangeModel(String model) {
 		UPDATED_MODEL=model;
+		return this;
+	}
+	
+	public RiderFormChangeItem ChangeRiderName(String name) {
+		OVERRIDE_RIDER_NAME=name;
 		return this;
 	}
 	public RiderFormChangeItem ChangeModel(String model,String animation) {

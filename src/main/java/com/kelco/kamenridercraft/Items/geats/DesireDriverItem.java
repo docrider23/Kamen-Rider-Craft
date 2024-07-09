@@ -32,6 +32,11 @@ public class DesireDriverItem  extends RiderDriverItem{
 	public String GET_TEXT(ItemStack itemstack, EquipmentSlot equipmentSlot, LivingEntity rider,String riderName)
 	{
 		boolean fly = !rider.onGround();
+		
+		Boolean isBujin= false;
+		if (get_Form_Item(itemstack,2)==Geats_Rider_Items.BOOST_RAISE_BUCKLE.get())  isBujin = true;
+			else if (get_Form_Item(itemstack,2)==Modded_item_core.BLANK_FORM.get())  isBujin = true;
+		
 		if (equipmentSlot == EquipmentSlot.FEET) {
 			
 			
@@ -49,6 +54,8 @@ public class DesireDriverItem  extends RiderDriverItem{
 		
 		else if (equipmentSlot == EquipmentSlot.HEAD&get_Form_Item(itemstack,2)==Geats_Rider_Items.ONENESS_RAISE_BUCKLE.get()) return riderName+"_base_over_oneness";
 		
+		else if (equipmentSlot == EquipmentSlot.HEAD&get_Form_Item(itemstack,3)==Geats_Rider_Items.BUJIN_SWORD_BUCKLE.get()) return riderName+"_base_over_bujin";
+		
 		else if (equipmentSlot == EquipmentSlot.HEAD&get_Form_Item(itemstack,2)==Geats_Rider_Items.BOOST_MKII_RAISE_BUCKLE.get()) return riderName+"_base_over_boost_mkii";
 		else if (equipmentSlot == EquipmentSlot.HEAD&get_Form_Item(itemstack,2)==Geats_Rider_Items.UNITE_GRIP.get()) return "geats_base_over_laser_boost";
 		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,2)==Modded_item_core.BLANK_FORM.get()&&get_Form_Item(itemstack,3).getFormName(fly)=="_jyamato") return "geats_rider_jyamato_no_belt";
@@ -56,7 +63,10 @@ public class DesireDriverItem  extends RiderDriverItem{
 		else if (equipmentSlot == EquipmentSlot.HEAD&get_Form_Item(itemstack,3)==Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get()&&get_Form_Item(itemstack,2)==Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get()) return riderName+"_ix_base_over";
 		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,2)==Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get()&&get_Form_Item(itemstack,3)==Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get()) return "geats_rider_geats_ix";
 		else if (equipmentSlot == EquipmentSlot.LEGS&get_Form_Item(itemstack,3)==Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get()&&get_Form_Item(itemstack,2)==Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get()) return "geats_rider_geats_ix_2";
-	
+		
+		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,2)==Modded_item_core.BLANK_FORM.get()&&get_Form_Item(itemstack,3)==Geats_Rider_Items.BUJIN_SWORD_BUCKLE.get())  return "geats_rider_bujin_sword_top";
+		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,3)==Geats_Rider_Items.BUJIN_SWORD_BUCKLE.get()&isBujin)  return "geats_rider"+get_Form_Item(itemstack,2).getFormName(fly)+"_bujin_sword";
+		
 		else if (equipmentSlot == EquipmentSlot.LEGS&get_Form_Item(itemstack,3)==Geats_Rider_Items.XGEATS_RAISE_BUCKLE.get()&&get_Form_Item(itemstack,2)==Geats_Rider_Items.XGEATS_RAISE_BUCKLE.get()) return "geats_rider_x_geats_2";
 		
 		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,2)==Geats_Rider_Items.COMMAND_TWIN_BUCKLE_JET.get()&&get_Form_Item(itemstack,3)==Geats_Rider_Items.COMMAND_TWIN_BUCKLE_CANNON_l.get()) return "geats_rider_jet";
@@ -109,6 +119,33 @@ public class DesireDriverItem  extends RiderDriverItem{
 	}
 	
 	@Override
+	public void OnformChange(ItemStack belt) {
+		
+		if (get_Form_Item(belt,2)==Geats_Rider_Items.COMMAND_TWIN_BUCKLE_CANNON.get()&get_Form_Item(belt,3)!=Geats_Rider_Items.COMMAND_TWIN_BUCKLE_JET.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 2);
+		if (get_Form_Item(belt,3)==Geats_Rider_Items.COMMAND_TWIN_BUCKLE_CANNON_l.get()&get_Form_Item(belt,2)!=Geats_Rider_Items.COMMAND_TWIN_BUCKLE_JET.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 3);
+		
+		if (get_Form_Item(belt,1)==Geats_Rider_Items.JYAMASHIN_WISH_CARD.get()&get_Form_Item(belt,2)==Geats_Rider_Items.COMMAND_TWIN_BUCKLE_JET.get())set_Form_Item(belt, Geats_Rider_Items.BUFFA_CORE_ID.get(), 1);
+		if (get_Form_Item(belt,1)==Geats_Rider_Items.JYAMASHIN_WISH_CARD.get()&get_Form_Item(belt,3)==Geats_Rider_Items.COMMAND_TWIN_BUCKLE_JET.get())set_Form_Item(belt, Geats_Rider_Items.BUFFA_CORE_ID.get(), 1);
+			
+		if (get_Form_Item(belt,2)==Geats_Rider_Items.BOOST_MKII_RAISE_BUCKLE.get()&get_Form_Item(belt,3)!=Modded_item_core.BLANK_FORM.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 2);
+		
+		if (get_Form_Item(belt,3)==Geats_Rider_Items.BOOST_MKII_RAISE_BUCKLE.get()&get_Form_Item(belt,2)!=Geats_Rider_Items.UNITE_GRIP.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 3);
+		if (get_Form_Item(belt,2)==Geats_Rider_Items.UNITE_GRIP.get()&get_Form_Item(belt,3)!=Geats_Rider_Items.BOOST_MKII_RAISE_BUCKLE.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 2);
+		
+		if (get_Form_Item(belt,2)==Geats_Rider_Items.ONENESS_RAISE_BUCKLE.get()&get_Form_Item(belt,3)!=Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 2);
+		
+		Boolean isBujin= true;
+		if (get_Form_Item(belt,2)==Geats_Rider_Items.BOOST_RAISE_BUCKLE.get()) isBujin = false;
+		else if (get_Form_Item(belt,2)==Geats_Rider_Items.BOOST_RAISE_BUCKLE.get())  isBujin = false;
+		else if (get_Form_Item(belt,2)==Modded_item_core.BLANK_FORM.get())  isBujin = false;
+				
+		if (get_Form_Item(belt,3)==Geats_Rider_Items.BUJIN_SWORD_BUCKLE.get()&isBujin)set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 3);
+		
+		
+		belt.getTag().putBoolean("Update_form", false);
+	}
+	
+	@Override
 	public void onArmorTick(ItemStack stack, Level level, Player player)
 	{
 
@@ -119,20 +156,9 @@ public class DesireDriverItem  extends RiderDriverItem{
 						for (int n = 0; n < Num_Base_Form_Item; n++)
 						{
 							ItemStack belt = player.getItemBySlot(EquipmentSlot.FEET);
-							if (get_Form_Item(belt,2)==Geats_Rider_Items.COMMAND_TWIN_BUCKLE_CANNON.get()&get_Form_Item(belt,3)!=Geats_Rider_Items.COMMAND_TWIN_BUCKLE_JET.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 2);
-							if (get_Form_Item(belt,3)==Geats_Rider_Items.COMMAND_TWIN_BUCKLE_CANNON_l.get()&get_Form_Item(belt,2)!=Geats_Rider_Items.COMMAND_TWIN_BUCKLE_JET.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 3);
 							
-							if (get_Form_Item(belt,1)==Geats_Rider_Items.JYAMASHIN_WISH_CARD.get()&get_Form_Item(belt,2)==Geats_Rider_Items.COMMAND_TWIN_BUCKLE_JET.get())set_Form_Item(belt, Geats_Rider_Items.BUFFA_CORE_ID.get(), 1);
-							if (get_Form_Item(belt,1)==Geats_Rider_Items.JYAMASHIN_WISH_CARD.get()&get_Form_Item(belt,3)==Geats_Rider_Items.COMMAND_TWIN_BUCKLE_JET.get())set_Form_Item(belt, Geats_Rider_Items.BUFFA_CORE_ID.get(), 1);
-								
-							if (get_Form_Item(belt,2)==Geats_Rider_Items.BOOST_MKII_RAISE_BUCKLE.get()&get_Form_Item(belt,3)!=Modded_item_core.BLANK_FORM.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 2);
-							
-							if (get_Form_Item(belt,3)==Geats_Rider_Items.BOOST_MKII_RAISE_BUCKLE.get()&get_Form_Item(belt,2)!=Geats_Rider_Items.UNITE_GRIP.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 3);
-							if (get_Form_Item(belt,2)==Geats_Rider_Items.UNITE_GRIP.get()&get_Form_Item(belt,3)!=Geats_Rider_Items.BOOST_MKII_RAISE_BUCKLE.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 2);
-							
-							if (get_Form_Item(belt,2)==Geats_Rider_Items.ONENESS_RAISE_BUCKLE.get()&get_Form_Item(belt,3)!=Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 2);
-							
-							
+							if (stack.getTag().getBoolean("Update_form"))OnformChange(stack);
+			
 							List<MobEffectInstance> potionEffectList = get_Form_Item(belt,n+1).getPotionEffectList();
 							for (int i = 0; i < potionEffectList.size(); i++)
 							{

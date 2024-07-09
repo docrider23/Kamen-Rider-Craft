@@ -69,6 +69,8 @@ public class RiderDriverItem extends RiderArmorItem{
 	public void onArmorTick(ItemStack stack, Level level, Player player)
 	{
 
+		if (stack.getTag().getBoolean("Update_form"))OnformChange(stack);
+
 		if (player.getItemBySlot(EquipmentSlot.LEGS).getItem() == LEGS){
 			if (player.getItemBySlot(EquipmentSlot.CHEST).getItem() == TORSO){
 				if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() == HEAD){
@@ -86,6 +88,10 @@ public class RiderDriverItem extends RiderArmorItem{
 			}
 		}
 
+	}
+
+	public void OnformChange(ItemStack itemstack) {
+		itemstack.getTag().putBoolean("Update_form", false);
 	}
 
 
@@ -141,7 +147,8 @@ public class RiderDriverItem extends RiderArmorItem{
 			}
 			return "belts/"+belt;
 		}
-		else return riderName+get_Form_Item(itemstack,1).getFormName(fly);
+		
+		else return get_Form_Item(itemstack,1).getRiderName(riderName)+get_Form_Item(itemstack,1).getFormName(fly);
 
 	}
 
@@ -182,6 +189,8 @@ public class RiderDriverItem extends RiderArmorItem{
 
 	}
 
+
+
 	public static void set_Form_Item(ItemStack itemstack, Item ITEM,int SLOT)
 	{
 		if (!itemstack.hasTag())
@@ -192,8 +201,12 @@ public class RiderDriverItem extends RiderArmorItem{
 			((RiderDriverItem)itemstack.getItem()).Extra_set_Form_Item(itemstack, ITEM, SLOT);
 			itemstack.getTag().putString("slot_tex"+SLOT, ITEM.toString());
 			itemstack.getTag().putInt("slot"+SLOT, Item.getId(ITEM));
+			itemstack.getTag().putBoolean("Update_form", true);
 		}
 	}
+
+
+
 
 	public void Extra_set_Form_Item(ItemStack itemstack, Item ITEM,int SLOT)
 	{
