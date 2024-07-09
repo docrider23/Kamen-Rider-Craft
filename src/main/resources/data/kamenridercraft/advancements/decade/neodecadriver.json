@@ -1,16 +1,16 @@
 {
   "display": {
 	"icon": {
-	  "item": "kamenridercraft:rider_ticket_wing"
+	  "item": "kamenridercraft:neo_decadriver"
 	},
-	"title": "Advent, to the top...",
-	"description": "Transform into Den-O Wing Form",
+	"title": "It's not Pink, it's Magenta!",
+	"description": "Transform into Kamen Rider Decade using the NeoDecadriver",
 	"frame": "task",
 	"show_toast": true,
 	"announce_to_chat": true,
 	"hidden": false
   },
-  "parent": "kamenridercraft:den-o/gun_form",
+  "parent": "kamenridercraft:decade/complete",
   "criteria": {
 	"requirement": {
 	  "trigger": "minecraft:inventory_changed",
@@ -19,24 +19,23 @@
 		  "equipment": {
 			"head": {
 			  "items": [
-				"kamenridercraft:den_ohead"
+				"kamenridercraft:decadehead"
 			  ]
 			},
 			"chest": {
 			  "items": [
-				"kamenridercraft:den_otroso"
+				"kamenridercraft:decadetroso"
 			  ]
 			},
 			"legs": {
 			  "items": [
-				"kamenridercraft:den_olegs"
+				"kamenridercraft:decadelegs"
 			  ]
 			},
 			"feet": {
 			  "items": [
-				"kamenridercraft:den_o_belt"
-			  ],
-			  "nbt": "{slot_tex1:\"rider_ticket_wing\"}"
+				"kamenridercraft:neo_decadriver"
+			  ]
 			}
 		  }
 		}

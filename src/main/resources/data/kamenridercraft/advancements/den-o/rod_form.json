@@ -4,7 +4,7 @@
 	  "item": "kamenridercraft:rider_ticket_rod"
 	},
 	"title": "Mind if I reel you in?",
-	"description": "Transform into Kamen Rider Den-O Rod Form",
+	"description": "Transform into Den-O Rod Form",
 	"frame": "task",
 	"show_toast": true,
 	"announce_to_chat": true,

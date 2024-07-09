@@ -4,7 +4,7 @@
 		"item": "kamenridercraft:command_twin_buckle_jet"
 	  },
 	  "title": "A Soaring Upgrade",
-	  "description": "Transform into Kamen Rider Geats Command Form",
+	  "description": "Transform into Geats Command Form",
 	  "frame": "task",
 	  "show_toast": true,
 	  "announce_to_chat": true,

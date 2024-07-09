@@ -1,16 +1,16 @@
 {
   "display": {
 	"icon": {
-	  "item": "kamenridercraft:rider_ticket_wing"
+	  "item": "kamenridercraft:faiz_axel_card"
 	},
-	"title": "Advent, to the top...",
-	"description": "Transform into Den-O Wing Form",
+	"title": "I'll keep up with you, but just for 10 seconds.",
+	"description": "Transform into Decade Faiz Axel Form",
 	"frame": "task",
 	"show_toast": true,
 	"announce_to_chat": true,
 	"hidden": false
   },
-  "parent": "kamenridercraft:den-o/gun_form",
+  "parent": "kamenridercraft:decade/decade",
   "criteria": {
 	"requirement": {
 	  "trigger": "minecraft:inventory_changed",
@@ -19,24 +19,24 @@
 		  "equipment": {
 			"head": {
 			  "items": [
-				"kamenridercraft:den_ohead"
+				"kamenridercraft:decadehead"
 			  ]
 			},
 			"chest": {
 			  "items": [
-				"kamenridercraft:den_otroso"
+				"kamenridercraft:decadetroso"
 			  ]
 			},
 			"legs": {
 			  "items": [
-				"kamenridercraft:den_olegs"
+				"kamenridercraft:decadelegs"
 			  ]
 			},
 			"feet": {
 			  "items": [
-				"kamenridercraft:den_o_belt"
+				"kamenridercraft:decadriver"
 			  ],
-			  "nbt": "{slot_tex1:\"rider_ticket_wing\"}"
+			  "nbt": "{slot_tex1:\"faiz_axel_card\"}"
 			}
 		  }
 		}

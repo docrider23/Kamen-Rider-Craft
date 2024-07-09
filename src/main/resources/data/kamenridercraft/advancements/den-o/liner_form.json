@@ -4,7 +4,7 @@
 	  "item": "kamenridercraft:denkamen_sword"
 	},
 	"title": "Real-Action",
-	"description": "Transform into Kamen Rider Den-O Liner Form",
+	"description": "Transform into Den-O Liner Form",
 	"frame": "goal",
 	"show_toast": true,
 	"announce_to_chat": true,

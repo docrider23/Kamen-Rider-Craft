@@ -4,7 +4,7 @@
 	  "item": "kamenridercraft:zeronos_zero_card"
 	},
 	"title": "Charge and Up",
-	"description": "Transform into Kamen Rider Zeronos Zero Form",
+	"description": "Transform into Zeronos Zero Form",
 	"frame": "goal",
 	"show_toast": true,
 	"announce_to_chat": true,

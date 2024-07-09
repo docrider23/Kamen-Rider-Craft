@@ -4,7 +4,7 @@
 	  "item": "kamenridercraft:zeronos_vega_card"
 	},
 	"title": "Have some Deneb Candy",
-	"description": "Transform into Kamen Rider Zeronos Vega Form",
+	"description": "Transform into Zeronos Vega Form",
 	"frame": "task",
 	"show_toast": true,
 	"announce_to_chat": true,

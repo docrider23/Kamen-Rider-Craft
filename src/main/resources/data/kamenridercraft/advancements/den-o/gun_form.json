@@ -4,7 +4,7 @@
 	  "item": "kamenridercraft:rider_ticket_gun"
 	},
 	"title": "I can't hear your answer!",
-	"description": "Transform into Kamen Rider Den-O Gun Form",
+	"description": "Transform into Den-O Gun Form",
 	"frame": "task",
 	"show_toast": true,
 	"announce_to_chat": true,
