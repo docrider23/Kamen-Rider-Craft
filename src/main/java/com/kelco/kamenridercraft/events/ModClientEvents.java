@@ -190,6 +190,7 @@ public class ModClientEvents {
 
 		event.registerEntityRenderer(MobsCore.NEW_MOLE_IMAGIN.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.NEW_MOLE_IMAGIN_SAND.get(), NewMoleImaginSandRenderer::new);
+		event.registerEntityRenderer(MobsCore.GAOH.get(), BasicEntityRenderer::new);
 
 		event.registerEntityRenderer(MobsCore.MASQUERADE.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.WEATHER_DOPANT.get(), BasicEntityRenderer::new);

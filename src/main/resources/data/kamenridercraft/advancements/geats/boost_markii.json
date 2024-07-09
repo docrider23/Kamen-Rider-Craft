@@ -10,7 +10,7 @@
 	"announce_to_chat": true,
 	"hidden": false
   },
-  "parent": "kamenridercraft:geats/feverslot",
+  "parent": "kamenridercraft:geats/command",
   "criteria": {
 	"requirement": {
 	  "trigger": "minecraft:inventory_changed",

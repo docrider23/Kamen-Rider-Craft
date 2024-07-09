@@ -218,7 +218,7 @@ public class Rider_Blocks {
 			() -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)
 					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
 
-	public static final RegistryObject<Block> IMAGIN_SAND = registerBlock("imagin_sand",
+	public static final RegistryObject<Block> IMAGIN_SAND_BLOCK = registerBlock("imagin_sand_block",
 			() -> new SandBlock(13224123, BlockBehaviour.Properties.copy(Blocks.SAND)
 					.strength(0.5f)));
 	
@@ -346,7 +346,7 @@ public class Rider_Blocks {
 			() -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
 					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
 				
-	public static final RegistryObject<Block> KING_LINER_WINDOW = registerBlock("king_liner__windo",
+	public static final RegistryObject<Block> KING_LINER_WINDOW = registerBlock("king_liner_windo",
 			() -> new GlassBaseFacingBlock(BlockBehaviour.Properties.copy(Blocks.GLASS)
 					.strength(2f),DyeColor.BLUE).AddToTabList(RiderTabs.RIDER_BLOCK));
 					
@@ -448,6 +448,11 @@ public class Rider_Blocks {
 			() -> new BaseFacingBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)
 					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	
+
+	public static final RegistryObject<Block> GAOH_BOSS_BLOCK = registerBlock("gaoh_boss_block",
+			() -> new BossBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(2f)
+					,MobsCore.GAOH
+					,Component.translatable("Gaoh Form!").withStyle(ChatFormatting.GOLD)).AddToTabList(RiderTabs.RIDER_BLOCK));
 
 	public static final RegistryObject<Block> POSEIDON_BOSS_BLOCK = registerBlock("poseidon_boss_block",
 			() -> new BossBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(2f)

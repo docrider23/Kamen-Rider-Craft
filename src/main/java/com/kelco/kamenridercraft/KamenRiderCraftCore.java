@@ -7,6 +7,7 @@ import com.kelco.kamenridercraft.Entities.MobsCore;
 import com.kelco.kamenridercraft.Entities.Villager.RiderVillagers;
 import com.kelco.kamenridercraft.Items.Agito_Rider_Items;
 import com.kelco.kamenridercraft.Items.Blade_Rider_Items;
+import com.kelco.kamenridercraft.Items.Den_O_Rider_Items;
 import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
 import com.kelco.kamenridercraft.Items.Faiz_Rider_Items;
 import com.kelco.kamenridercraft.Items.Geats_Rider_Items;
@@ -57,6 +58,7 @@ public class KamenRiderCraftCore {
 		Blade_Rider_Items.register(modEventBus);
 		Hibiki_Rider_Items.register(modEventBus);
 		Kabuto_Rider_Items.register(modEventBus);
+		Den_O_Rider_Items.register(modEventBus);
 		Kiva_Rider_Items.register(modEventBus);
 		W_Rider_Items.register(modEventBus);
 		OOO_Rider_Items.register(modEventBus);

@@ -20,6 +20,7 @@ import com.kelco.kamenridercraft.Entities.bosses.CronusEntity;
 import com.kelco.kamenridercraft.Entities.bosses.ElOfTheWaterEntity;
 import com.kelco.kamenridercraft.Entities.bosses.EternalEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GamelEntity;
+import com.kelco.kamenridercraft.Entities.bosses.GaohEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GattonBugsterEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GenmEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GodaEntity;
@@ -257,6 +258,12 @@ public class MobsCore {
 
      public static final RegistryObject<ForgeSpawnEggItem> NEW_MOLE_IMAGIN_SAND_SPAWN_EGG = ITEMS.register("new_mole_imagin_sand_spawn_egg",
              () -> new ForgeSpawnEggItem(NEW_MOLE_IMAGIN_SAND,  0xb7b7b1,0x92908b, new Item.Properties()));
+
+     public static final RegistryObject<EntityType<GaohEntity>> GAOH = MOBLIST.register("gaoh",
+             () -> EntityType.Builder.of(GaohEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":gaoh"));
+
+     public static final RegistryObject<ForgeSpawnEggItem> GAOH_SPAWN_EGG = ITEMS.register("gaoh_spawn_egg",
+             () -> new ForgeSpawnEggItem(GAOH,  0x1d1d1d,0xdea302, new Item.Properties()));
 
 
      public static final RegistryObject<EntityType<MasqueradeEntity>> MASQUERADE = MOBLIST.register("masquerade",

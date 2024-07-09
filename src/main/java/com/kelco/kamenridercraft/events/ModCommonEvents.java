@@ -19,6 +19,7 @@ import com.kelco.kamenridercraft.Entities.bosses.CronusEntity;
 import com.kelco.kamenridercraft.Entities.bosses.ElOfTheWaterEntity;
 import com.kelco.kamenridercraft.Entities.bosses.EternalEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GamelEntity;
+import com.kelco.kamenridercraft.Entities.bosses.GaohEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GenmEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GodaEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GraphiteBugsterEntity;
@@ -481,6 +482,7 @@ public class ModCommonEvents {
 
 		event.put(MobsCore.NEW_MOLE_IMAGIN.get(), NewMoleImaginEntity.setAttributes());
 		event.put(MobsCore.NEW_MOLE_IMAGIN_SAND.get(), NewMoleImaginSandEntity.setAttributes());
+		event.put(MobsCore.GAOH.get(), GaohEntity.setAttributes());
 
 		event.put(MobsCore.MASQUERADE.get(), MasqueradeEntity.setAttributes());
 		event.put(MobsCore.CLAYDOLL_DOPANT.get(), ClayDollDopantEntity.setAttributes());        

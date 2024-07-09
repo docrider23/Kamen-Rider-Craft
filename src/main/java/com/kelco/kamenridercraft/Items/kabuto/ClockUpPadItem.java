@@ -16,8 +16,6 @@ import net.minecraft.world.level.Level;
 
 public class ClockUpPadItem extends BaseItem {
 
-	public String RIDER;
-
 	public ClockUpPadItem (Properties properties)
 	{
 		super(properties);

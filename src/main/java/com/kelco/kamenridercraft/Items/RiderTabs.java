@@ -92,6 +92,9 @@ public class RiderTabs {
 	public static RegistryObject<CreativeModeTab> KabutoTab = CREATIVE_MODE_TABS.register("krc_270_kabuto_tab", () -> 
 		CreativeModeTab.builder().icon(() -> new ItemStack(Kabuto_Rider_Items.KABUTOHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_kabuto_items.png"))
 		.title(Component.literal("Kabuto Rider Items")).build());
+	public static RegistryObject<CreativeModeTab> DenOTab = CREATIVE_MODE_TABS.register("krc_280_den_o_tab", () -> 
+		CreativeModeTab.builder().icon(() -> new ItemStack(Den_O_Rider_Items.DEN_OHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_den_o_items.png"))
+		.title(Component.literal("Den-O Rider Items")).build());
     public static RegistryObject<CreativeModeTab> KivaTab = CREATIVE_MODE_TABS.register("krc_290_kiva_tab", () -> 
 		CreativeModeTab.builder().icon(() -> new ItemStack(Kiva_Rider_Items.KIVAHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_kiva_items.png"))
 		.title(Component.literal("Kiva Rider Items")).build());
@@ -158,6 +161,7 @@ public class RiderTabs {
     public static List<Item> BLADE_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> HIBIKI_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> KABUTO_TAB_ITEM= new ArrayList<Item>();
+    public static List<Item> DEN_O_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> KIVA_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> W_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> OOO_TAB_ITEM= new ArrayList<Item>();
@@ -301,6 +305,11 @@ public class RiderTabs {
 			{
 				event.accept( RiderTabs.KABUTO_TAB_ITEM.get(i));
 			}
+		}else if(event.getTab() == RiderTabs.DenOTab.get()) {
+			for (int i = 0; i < RiderTabs.DEN_O_TAB_ITEM.size(); i++)
+			{
+				event.accept( RiderTabs.DEN_O_TAB_ITEM.get(i));
+			}
 		}else if(event.getTab() == RiderTabs.KivaTab.get()) {
 			for (int i = 0; i < RiderTabs.KIVA_TAB_ITEM.size(); i++)
 			{
@@ -378,7 +387,7 @@ public class RiderTabs {
 				event.accept( RiderTabs.RIDER_BLOCK.get(i));
 			}
 			event.accept(Rider_Blocks.BLUE_ROSE.get());
-			event.accept(Rider_Blocks.IMAGIN_SAND.get());
+			event.accept(Rider_Blocks.IMAGIN_SAND_BLOCK.get());
 
 		}else if(event.getTab() == RiderTabs.RiderMiscTab.get()) {
 
@@ -413,6 +422,7 @@ public class RiderTabs {
 
 			event.accept(MobsCore.NEW_MOLE_IMAGIN_SPAWN_EGG);
 			event.accept(MobsCore.NEW_MOLE_IMAGIN_SAND_SPAWN_EGG);
+			event.accept(MobsCore.GAOH_SPAWN_EGG);
 			
 			event.accept(MobsCore.MASQUERADE_SPAWN_EGG);
 			event.accept(MobsCore.CLAYDOLL_DOPANT_SPAWN_EGG);

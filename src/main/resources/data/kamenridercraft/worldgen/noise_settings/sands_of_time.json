@@ -96,7 +96,7 @@
         "then_run": {
           "type": "minecraft:block",
           "result_state": {
-            "Name": "kamenridercraft:imagin_sand"
+            "Name": "kamenridercraft:imagin_sand_block"
           }
         }
       }

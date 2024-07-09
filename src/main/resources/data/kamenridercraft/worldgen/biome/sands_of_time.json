@@ -25,7 +25,7 @@
   "spawners": {
     "creature": [
       {
-        "type": "kamenridercraft:shocker_combatman",
+        "type": "kamenridercraft:new_mole_imagin_sand",
         "weight": 1,
         "minCount": 1,
         "maxCount": 3
@@ -33,7 +33,7 @@
     ],
     "monster": [
       {
-        "type": "kamenridercraft:shocker_combatman",
+        "type": "kamenridercraft:new_mole_imagin_sand",
         "weight": 1,
         "minCount": 2,
         "maxCount": 4
