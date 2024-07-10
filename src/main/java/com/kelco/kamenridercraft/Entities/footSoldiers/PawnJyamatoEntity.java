@@ -37,13 +37,10 @@ public class PawnJyamatoEntity extends BaseHenchmenEntity {
 				BaseHenchmenEntity boss = MobsCore.JYAMATO_RIDER.get().create(this.level());
 				if (boss != null) {
 					boss.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
-					this.level().addFreshEntity(boss);
-
-					for (int n = 0; n < 40; n++)
-					
+					this.level().addFreshEntity(boss);					
 					if (this.getLastAttacker()instanceof Player){
 						Player playerIn=	(Player) this.getLastAttacker();
-						playerIn.sendSystemMessage(Component.translatable("Durapira, Henshin!").withStyle(ChatFormatting.DARK_GREEN));
+						playerIn.sendSystemMessage(Component.translatable("Jurapira, Henshin!").withStyle(ChatFormatting.DARK_GREEN));
 					}
 				}
 			}
