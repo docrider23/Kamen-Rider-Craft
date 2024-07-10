@@ -8,9 +8,10 @@
   ],
   "key": {
     "X": {
-      "item": "kamenridercraft:imaginsand"
-    }, "C": {
-      "item": "minecraft:wooden_door"
+      "item": "kamenridercraft:imagin_sand"
+    },
+    "C": {
+      "tag": "minecraft:doors"
     }
   },
   "result": {

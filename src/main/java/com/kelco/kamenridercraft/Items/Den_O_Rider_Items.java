@@ -209,8 +209,12 @@ public class Den_O_Rider_Items {
 			() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"pretty_den_o",RIDER_TICKET_PRETTY_DEN_O ,DEN_OHELMET, DEN_OCHESTPLATE,DEN_OLEGGINGS , new Item.Properties())
 			.AddToTabList(RiderTabs.DEN_O_TAB_ITEM).ChangeRepairItem(IMAGIN_SAND.get()));
 
-    // public static final RegistryObject<Item> RIDER_PASS = ITEMS.register("rider_pass",
-    //         () -> new RiderPassItem(new Item.Properties().durability(20)).AddToTabList(RiderTabs.DEN_O_TAB_ITEM));
+    public static final RegistryObject<Item> RIDER_PASS = ITEMS.register("rider_pass",
+            () -> new RiderPassItem(new Item.Properties().durability(20)).AddToTabList(RiderTabs.DEN_O_TAB_ITEM));
+    public static final RegistryObject<Item> MASTER_PASS = ITEMS.register("master_pass",
+            () -> new RiderPassItem(new Item.Properties()).AddToTabList(RiderTabs.DEN_O_TAB_ITEM));
+    public static final RegistryObject<Item> G_DEN_O_RIDER_PASS = ITEMS.register("g_den_o_rider_pass",
+            () -> new RiderPassItem(new Item.Properties()).AddToTabList(RiderTabs.DEN_O_TAB_ITEM));
 
     public static final RegistryObject<SwordItem> DEN_GASHER_SWORD = ITEMS.register("den_gasher_sword",
             () -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.DEN_O_TAB_ITEM).ChangeRepairItem(IMAGIN_SAND.get()));

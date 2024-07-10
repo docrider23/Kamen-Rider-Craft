@@ -51,6 +51,15 @@
 		"entries": [
 		  {
 			"type": "minecraft:item",
+			"name": "kamenridercraft:master_pass"
+		  }
+		]
+	  },
+	  {
+		"rolls": 1,
+		"entries": [
+		  {
+			"type": "minecraft:item",
 			"name": "kamenridercraft:rider_ticket_wing"
 		  }
 		],

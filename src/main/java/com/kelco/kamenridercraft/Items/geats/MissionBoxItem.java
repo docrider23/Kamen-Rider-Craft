@@ -4,35 +4,40 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import com.google.common.collect.Lists;
-import com.kelco.kamenridercraft.Effect.Effect_core;
-import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
-import com.kelco.kamenridercraft.Items.OOO_Rider_Items;
+import com.kelco.kamenridercraft.Items.Geats_Rider_Items;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseItem;
 
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
 
-public class HatenaBoxItem extends BaseItem{
+public class MissionBoxItem extends BaseItem{
 
+	  public static List<Item> CORE_ID= new ArrayList<Item>();
 	  public static List<Item> RAISE_BUCKLE= new ArrayList<Item>();
+	  public static List<Item> GIGANT_BUCKLE= new ArrayList<Item>();
 
-	public HatenaBoxItem (Properties properties)
+	public MissionBoxItem (Properties properties)
 	{
 		super(properties);
 	}
 
 	 private Item ItemDrop() {
 	 		Random generator = new Random();
-	 			int rand = generator.nextInt(RAISE_BUCKLE.size());
-	 			return RAISE_BUCKLE.get(rand);
+	 		if (this==Geats_Rider_Items.BIKKURI_MISSION_BOX.get()) {
+				int rand = generator.nextInt(CORE_ID.size());
+				return CORE_ID.get(rand);
+			} else if (this==Geats_Rider_Items.HATENA_MISSION_BOX.get()) {
+				int rand = generator.nextInt(RAISE_BUCKLE.size());
+				return RAISE_BUCKLE.get(rand);
+			} else {
+				int rand = generator.nextInt(GIGANT_BUCKLE.size());
+				return GIGANT_BUCKLE.get(rand);
+			}
 	 	}
 
 	public void  useEnergyItem (ItemStack itemstack, Level world,Player playerIn) {
