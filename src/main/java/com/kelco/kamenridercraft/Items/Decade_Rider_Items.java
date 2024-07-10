@@ -49,7 +49,7 @@ public class Decade_Rider_Items {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 400, 2,true,false)).addAlternative(DIEND_GREEN_CRAD.get()).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
 
     public static final RegistryObject<Item> K_TOUCH = ITEMS.register("k_touch",
-			() -> new RiderFormChangeItem(new Item.Properties(),0,"_complete","decade","decadriver_belt",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_complete","decade","decadriver_belt_k_touch",
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
@@ -75,7 +75,7 @@ public class Decade_Rider_Items {
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false)).addAlternative(DECADE_CYAN_CRAD.get()).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
 
     public static final RegistryObject<Item> K_TOUCH_DIEND = ITEMS.register("k_touch_diend",
-			() -> new RiderFormChangeItem(new Item.Properties(),0,"_complete","diend","diend_belt",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_complete","diend","diend_belt_k_touch",
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
