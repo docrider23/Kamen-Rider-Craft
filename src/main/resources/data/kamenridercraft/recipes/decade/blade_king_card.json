@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "final_form_ride_card",
+  "ingredients": [
+{
+	
+	  "item": "kamenridercraft:blade_ace_card"
+	}, 
+	{
+	  "item": "kamenridercraft:evolution_caucasus"
+	}
+	],
+  "result": {
+	"item": "kamenridercraft:blade_king_card"
+  }
+}

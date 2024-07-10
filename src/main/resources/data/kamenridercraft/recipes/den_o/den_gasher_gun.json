@@ -1,19 +1,24 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "den_o",
+  "group": "den_o_gun",
   "pattern": [
-    "XXX",
-    "XCX",
+    "XMX",
+    "XSX",
     "XXX"
   ],
   "key": {
     "X": {
-      "item": "kamenridercraft:imaginsand"
-    }, "C": {
-      "item": "minecraft:wooden_door"
+      "item": "kamenridercraft:imagin_sand"
+    },
+    "S": {
+      "item": "kamenridercraft:base_sword"
+    },
+    "M": {
+      "item": "kamenridercraft:rider_ticket_gun"
     }
   },
   "result": {
-    "item": "kamenridercraft:rider_pass"
-  }
+    "item": "kamenridercraft:den_gasher_gun"
+  }    
 }
+

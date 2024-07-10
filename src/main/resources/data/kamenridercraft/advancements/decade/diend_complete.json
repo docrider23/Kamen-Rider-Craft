@@ -10,7 +10,7 @@
 	"announce_to_chat": true,
 	"hidden": false
   },
-  "parent": "kamenridercraft:decade/decade",
+  "parent": "kamenridercraft:decade/diend",
   "criteria": {
 	"requirement": {
 	  "trigger": "minecraft:inventory_changed",
