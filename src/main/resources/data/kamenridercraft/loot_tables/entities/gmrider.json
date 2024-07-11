@@ -1,0 +1,53 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+	{
+	  "rolls": 1,
+	  "entries": [
+		{
+		  "type": "minecraft:item",
+		  "weight": 5,
+		  "name": "kamenridercraft:command_twin_buckle_jet"
+		},
+		{
+		  "type": "minecraft:item",
+		  "weight": 5,
+		  "name": "kamenridercraft:command_twin_buckle_cannon"
+		},
+		{
+		  "type": "minecraft:item",
+		  "weight": 2,
+		  "name": "kamenridercraft:desire_driver_gm"
+		},
+		{
+		  "type": "minecraft:item",
+		  "weight": 3,
+		  "name": "kamenridercraft:gigant_mission_box"
+		},
+		{
+		  "type": "minecraft:item",
+		  "weight": 5,
+		  "name": "kamenridercraft:hatena_mission_box"
+		}
+	  ]
+	},
+	{
+	  "rolls": 1,
+	  "entries": [
+		{
+		  "type": "minecraft:item",
+		  "name": "kamenridercraft:blank_rider_core_id",
+		  "functions": [
+			{
+			  "function": "minecraft:set_count",
+			  "count": {
+				"min": 2,
+				"max": 4
+			  }
+			}
+		  ]
+		}
+	  ]
+	}
+  ]
+}

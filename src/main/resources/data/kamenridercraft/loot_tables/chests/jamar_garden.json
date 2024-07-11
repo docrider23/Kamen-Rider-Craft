@@ -35,51 +35,79 @@
             }
           ],
           "name": "minecraft:bone",
-          "weight": 20
+          "weight": 5
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_hoe"
+          "name": "minecraft:iron_hoe",
+          "weight": 4
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_hoe"
+          "name": "minecraft:golden_hoe",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond_hoe"
+          "name": "minecraft:diamond_hoe",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "kamenridercraft:togechi_rider_core_id"
+          "name": "kamenridercraft:togechi_rider_core_id",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "kamenridercraft:lancer_rider_core_id"
+          "name": "kamenridercraft:lancer_rider_core_id",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "kamenridercraft:garun_rider_core_id"
+          "name": "kamenridercraft:garun_rider_core_id",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "kamenridercraft:togechi_rider_core_id_cracked"
+          "name": "kamenridercraft:togechi_rider_core_id_cracked",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
-          "name": "kamenridercraft:letter_rider_core_id_cracked"
+          "name": "kamenridercraft:letter_rider_core_id_cracked",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
-          "name": "kamenridercraft:nudge_sparrow_rider_core_id_cracked"
+          "name": "kamenridercraft:nudge_sparrow_rider_core_id_cracked",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
-          "name": "kamenridercraft:ginpen_rider_core_id_cracked"
+          "name": "kamenridercraft:ginpen_rider_core_id_cracked",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
-          "name": "kamenridercraft:shirowe_rider_core_id_cracked"
+          "name": "kamenridercraft:ziin_raise_riser_card"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kamenridercraft:beroba_raise_riser_card"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kamenridercraft:kekera_raise_riser_card"
+        },
+   
+        {
+          "type": "minecraft:item",
+          "name": "kamenridercraft:jyamato_buckle"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kamenridercraft:shirowe_rider_core_id_cracked",
+          "weight": 3
         }
       ],
       "rolls": {
