@@ -64,10 +64,14 @@ public class DesireDriverItem  extends RiderDriverItem{
 		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,2)==Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get()&&get_Form_Item(itemstack,3)==Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get()) return "geats_rider_geats_ix";
 		else if (equipmentSlot == EquipmentSlot.LEGS&get_Form_Item(itemstack,3)==Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get()&&get_Form_Item(itemstack,2)==Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get()) return "geats_rider_geats_ix_2";
 		
+		else if (equipmentSlot == EquipmentSlot.LEGS&get_Form_Item(itemstack,3)==Geats_Rider_Items.BOOST_MKII_RAISE_BUCKLE.get()&&get_Form_Item(itemstack,2)==Geats_Rider_Items.UNITE_GRIP.get()) return "geats_rider_laser_boost_2";
+		
 		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,2)==Modded_item_core.BLANK_FORM.get()&&get_Form_Item(itemstack,3)==Geats_Rider_Items.BUJIN_SWORD_BUCKLE.get())  return "geats_rider_bujin_sword_top";
 		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,3)==Geats_Rider_Items.BUJIN_SWORD_BUCKLE.get()&isBujin)  return "geats_rider"+get_Form_Item(itemstack,2).getFormName(fly)+"_bujin_sword";
+		else if (equipmentSlot == EquipmentSlot.LEGS&get_Form_Item(itemstack,2)!=Modded_item_core.BLANK_FORM.get()&&get_Form_Item(itemstack,3)==Geats_Rider_Items.BUJIN_SWORD_BUCKLE.get())  return "geats_rider_bujin_sword_combo";
 		
 		else if (equipmentSlot == EquipmentSlot.LEGS&get_Form_Item(itemstack,3)==Geats_Rider_Items.XGEATS_RAISE_BUCKLE.get()&&get_Form_Item(itemstack,2)==Geats_Rider_Items.XGEATS_RAISE_BUCKLE.get()) return "geats_rider_x_geats_2";
+		else if (equipmentSlot == EquipmentSlot.LEGS&get_Form_Item(itemstack,3)==Geats_Rider_Items.DOOMS_GEATS_RAISE_BUCKLE.get()&&get_Form_Item(itemstack,2)==Geats_Rider_Items.DOOMS_GEATS_RAISE_BUCKLE.get()) return "geats_rider_dooms_geats_2";
 		
 		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,2)==Geats_Rider_Items.COMMAND_TWIN_BUCKLE_JET.get()&&get_Form_Item(itemstack,3)==Geats_Rider_Items.COMMAND_TWIN_BUCKLE_CANNON_l.get()) return "geats_rider_jet";
 		else if (equipmentSlot == EquipmentSlot.LEGS&get_Form_Item(itemstack,3)==Geats_Rider_Items.COMMAND_TWIN_BUCKLE_JET.get()&&get_Form_Item(itemstack,2)==Geats_Rider_Items.COMMAND_TWIN_BUCKLE_CANNON.get()) return "geats_rider_jet";

@@ -192,6 +192,11 @@ public class Geats_Rider_Items {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false))
 			.ChangeModel("cyclonehopper_wingsarmor.geo.json").AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
+	public static final RegistryObject<Item> DOOMS_GEATS_CORE_ID = ITEMS.register("dooms_geats_rider_core_id",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"","dooms_geats","desire_driver_belt_geats",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false))
+			.ChangeModel("cyclonehopper_wingsarmor.geo.json").AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
 	public static final RegistryObject<Item> DISCORE_ID = ITEMS.register("discore_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","jyamato","desire_driver_belt_jyamato",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false))
@@ -442,6 +447,11 @@ public class Geats_Rider_Items {
 					new MobEffectInstance(Effect_core.BOOST.get(), 40, 4,true,false))
 			.ChangeSlot(2).SetOffhandSlot(3).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
+	public static final RegistryObject<Item> DOOMS_GEATS_RAISE_BUCKLE = ITEMS.register("dooms_geats_raise_buckle",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_dooms_geats","dooms_geats","desire_driver_belt_geats",
+					new MobEffectInstance(Effect_core.BOOST.get(), 40, 4,true,false))
+			.ChangeSlot(2).SetOffhandSlot(3).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
 	public static final RegistryObject<Item> BUJIN_SWORD_BUCKLE = ITEMS.register("bujin_sword_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_bujin_sword","tycoon","desire_driver_belt_geats",
 					new MobEffectInstance(Effect_core.BOOST.get(), 40, 4,true,false))
@@ -601,12 +611,37 @@ public class Geats_Rider_Items {
 
 	public static final RegistryObject<Item> BEROBA_RAISE_RISER_CARD = ITEMS.register("beroba_raise_riser_card",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","beroba","raise_riser_belt",
-					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
 					new MobEffectInstance(Effect_core.BIG.get(), 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 5,true,false))
 			.ChangeModel("geo/beroba.geo.json").SetPalyerModelInvisible().AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
+	public static final RegistryObject<Item> BEROBA_BLACK_RAISE_RISER_CARD = ITEMS.register("beroba_black_raise_riser_card",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_premium","beroba","raise_riser_belt_premium",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 5,true,false))
+			.AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
+	public static final RegistryObject<Item> KEKERA_RAISE_RISER_CARD = ITEMS.register("kekera_raise_riser_card",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"","kekera","blank",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(Effect_core.BIG.get(), 40, 1,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 8,true,false))
+			.ChangeModel("geo/kekera.geo.json").SetPalyerModelInvisible().AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
+	public static final RegistryObject<Item> KEKERA_BLACK_RAISE_RISER_CARD = ITEMS.register("kekera_black_raise_riser_card",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_premium","kekera","raise_riser_belt_premium",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 8,true,false))
+			.AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	
 	public static final RegistryObject<Item> PROVIDENCE_CARD_GLARE = ITEMS.register("providence_card_glare",
@@ -790,12 +825,21 @@ public class Geats_Rider_Items {
 			() -> new  DesireDriverItem(ArmorMaterials.DIAMOND,"x_geats",X_GEATS_CORE_ID ,GEATS_HELMET, GEATS_CHESTPLATE,GEATS_LEGGINGS , new Item.Properties())
 			.Add_Extra_Base_Form_Items(XGEATS_RAISE_BUCKLE,XGEATS_RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM).ChangeRepairItem(BLANK_CORE_ID.get()));
 
+	public static final RegistryObject<Item> DESIRE_DRIVER_DOOMS_GEATS = ITEMS.register("desire_driver_dooms_geats",
+			() -> new  DesireDriverItem(ArmorMaterials.DIAMOND,"dooms_geats",DOOMS_GEATS_CORE_ID ,GEATS_HELMET, GEATS_CHESTPLATE,GEATS_LEGGINGS , new Item.Properties())
+			.Add_Extra_Base_Form_Items(DOOMS_GEATS_RAISE_BUCKLE,DOOMS_GEATS_RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM).ChangeRepairItem(BLANK_CORE_ID.get()));
+
+	
 	public static final RegistryObject<Item> RAISE_RISER_BELT_ZIIN = ITEMS.register("raise_riser_belt_ziin",
             () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"ziin",ZIIN_RAISE_RISER_CARD ,GEATS_HELMET, GEATS_CHESTPLATE,GEATS_LEGGINGS, 
           		  new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> RAISE_RISER_BELT_BEROBA = ITEMS.register("raise_riser_belt_beroba",
             () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"beroba",BEROBA_RAISE_RISER_CARD ,GEATS_HELMET, GEATS_CHESTPLATE,GEATS_LEGGINGS, 
+          		  new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
+	public static final RegistryObject<Item> RAISE_RISER_BELT_KEKERA = ITEMS.register("raise_riser_belt_kekera",
+            () -> new RiderDriverItem(ArmorMaterials.DIAMOND,"kekera",KEKERA_RAISE_RISER_CARD ,GEATS_HELMET, GEATS_CHESTPLATE,GEATS_LEGGINGS, 
           		  new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	
