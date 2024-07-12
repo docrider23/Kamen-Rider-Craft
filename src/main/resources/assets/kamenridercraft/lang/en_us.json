@@ -1456,6 +1456,10 @@
 "item.kamenridercraft.bujin_sword_raise_buckle": "Bujin Sword Buckle",
 
 "item.kamenridercraft.zombie_raise_buckle": "Zombie Buckle",
+"item.kamenridercraft.jyamato_buckle": "Jyamato Buckle",
+"item.kamenridercraft.jyamashin_wish_card": "Jyamashin Desire Card",
+"item.kamenridercraft.plosion_rage_raise_buckle": "Plosion Rage Buckle",
+
 "item.kamenridercraft.monster_raise_buckle": "Monster Buckle",
 "item.kamenridercraft.beat_raise_buckle": "Beat Buckle",
 "item.kamenridercraft.fantasy_raise_buckle": "Fantasy Buckle",
@@ -1485,9 +1489,6 @@
 "item.kamenridercraft.claw_raise_buckle": "Claw Buckle",
 "item.kamenridercraft.drill_raise_buckle": "Drill Buckle",
 "item.kamenridercraft.propeller_raise_buckle": "Propeller Buckle",
-
-"item.kamenridercraft.jyamato_buckle": "Jyamato Buckle",
-"item.kamenridercraft.jyamashin_wish_card": "Jyamashin Desire Card",
 
 "item.kamenridercraft.christmas_buckle": "Christmas Buckle",
 "item.kamenridercraft.beat_raise_buckle_theme": "Beat Buckle (Theme Song ver)",
@@ -1531,6 +1532,10 @@
 "item.kamenridercraft.blank_rider_core_id": "Blank Rider Core ID",
 "item.kamenridercraft.geats_rider_core_id": "Kamen Rider Geats Core ID",
 "item.kamenridercraft.geats_oneness_rider_core_id": "Kamen Rider Geats Oneness Core ID",
+"item.kamenridercraft.geats_rider_core_id_osaka": "Kamen Rider Osaka Geats Core ID",
+"item.kamenridercraft.geats_rider_core_id_fukuoka": "Kamen Rider Fukuoka Geats Core ID",
+"item.kamenridercraft.geats_rider_core_id_nagoya": "Kamen Rider Nagoya Geats Core ID",
+"item.kamenridercraft.geats_rider_core_id_tokyo": "Kamen Rider Tokyo Geats Core ID",
 "item.kamenridercraft.tycoon_rider_core_id": "Kamen Rider Tycoon Core ID",
 "item.kamenridercraft.na_go_rider_core_id": "Kamen Rider Na-Go Core ID",
 "item.kamenridercraft.buffa_rider_core_id": "Kamen Rider Buffa Core ID",
