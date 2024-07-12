@@ -62,6 +62,7 @@ public class Geats_Rider_Items {
 
 	public static final RegistryObject<Item> GEATS_ONENESS_CORE_ID = ITEMS.register("geats_oneness_rider_core_id",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+	
 
 	public static final RegistryObject<Item> TYCOON_CORE_ID = ITEMS.register("tycoon_rider_core_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","tycoon","desire_driver_belt_tycoon",
@@ -976,6 +977,12 @@ public class Geats_Rider_Items {
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM)
 			.AddToTabList(ModClientEvents.RAISE_RISER_ITEM).ChangeRepairItem(BLANK_CORE_ID.get()));
 
+
+	public static final RegistryObject<Item> GEATS_CORE_ID_OSAKA = ITEMS.register("geats_rider_core_id_osaka",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_osaka","geats","desire_driver_belt_geats",
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.SATURATION, 40, 0,true,false))
+			.addNeedForm(MAGNUM_RAISE_BUCKLE.get(), 2).AddToTabList(MissionBoxItem.CORE_ID).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> JYAMASHIN_WISH_CARD = ITEMS.register("jyamashin_wish_card",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_jyamashin","buffa","desire_driver_belt_geats",

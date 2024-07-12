@@ -61,6 +61,9 @@ public class DesireDriverItem  extends RiderDriverItem{
 		else if (equipmentSlot == EquipmentSlot.HEAD&get_Form_Item(itemstack,2)==Geats_Rider_Items.UNITE_GRIP.get()) return "geats_base_over_laser_boost";
 		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,2)==Modded_item_core.BLANK_FORM.get()&&get_Form_Item(itemstack,3).getFormName(fly)=="_jyamato") return "geats_rider_jyamato_no_belt";
 		
+		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,2)==Geats_Rider_Items.MAGNUM_RAISE_BUCKLE.get()&&get_Form_Item(itemstack,1)==Geats_Rider_Items.GEATS_CORE_ID_OSAKA.get()) return "geats_rider_magnum_osaka";
+		
+		
 		else if (equipmentSlot == EquipmentSlot.HEAD&get_Form_Item(itemstack,3)==Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get()&&get_Form_Item(itemstack,2)==Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get()) return riderName+"_ix_base_over";
 		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,2)==Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get()&&get_Form_Item(itemstack,3)==Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get()) return "geats_rider_geats_ix";
 		else if (equipmentSlot == EquipmentSlot.LEGS&get_Form_Item(itemstack,3)==Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get()&&get_Form_Item(itemstack,2)==Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get()) return "geats_rider_geats_ix_2";
@@ -101,7 +104,7 @@ public class DesireDriverItem  extends RiderDriverItem{
 			if (get_Form_Item(itemstack,2)==Geats_Rider_Items.NINJA_RAISE_BUCKLE.get()&get_Form_Item(itemstack,3)==Geats_Rider_Items.NINJA_RAISE_BUCKLE_FEVER.get()) return true;
 			if (get_Form_Item(itemstack,2)==Geats_Rider_Items.BEAT_RAISE_BUCKLE.get()&get_Form_Item(itemstack,3)==Geats_Rider_Items.BEAT_RAISE_BUCKLE_FEVER.get()) return true;
 			if (get_Form_Item(itemstack,2)==Geats_Rider_Items.MONSTER_RAISE_BUCKLE.get()&get_Form_Item(itemstack,3)==Geats_Rider_Items.MONSTER_RAISE_BUCKLE_FEVER.get()) return true;
-			
+
 		}
 		return false;
 	}
@@ -140,13 +143,15 @@ public class DesireDriverItem  extends RiderDriverItem{
 		
 		if (get_Form_Item(belt,2)==Geats_Rider_Items.ONENESS_RAISE_BUCKLE.get()&get_Form_Item(belt,3)!=Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 2);
 		
+		if (get_Form_Item(belt,1)==Geats_Rider_Items.GEATS_CORE_ID_OSAKA.get()&get_Form_Item(belt,2)!=Geats_Rider_Items.MAGNUM_RAISE_BUCKLE.get())set_Form_Item(belt, Geats_Rider_Items.GEATS_CORE_ID.get(), 1);
+		
 		Boolean isBujin= true;
 		if (get_Form_Item(belt,2)==Geats_Rider_Items.BOOST_RAISE_BUCKLE.get()) isBujin = false;
 		else if (get_Form_Item(belt,2)==Geats_Rider_Items.BOOST_RAISE_BUCKLE.get())  isBujin = false;
 		else if (get_Form_Item(belt,2)==Modded_item_core.BLANK_FORM.get())  isBujin = false;
 				
 		if (get_Form_Item(belt,3)==Geats_Rider_Items.BUJIN_SWORD_RAISE_BUCKLE.get()&isBujin)set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 3);
-		
+		if (get_Form_Item(belt,3)==Geats_Rider_Items.BUJIN_SWORD_RAISE_BUCKLE.get()&get_Form_Item(belt,2)!=Modded_item_core.BLANK_FORM.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 3);
 		
 		belt.getTag().putBoolean("Update_form", false);
 	}
