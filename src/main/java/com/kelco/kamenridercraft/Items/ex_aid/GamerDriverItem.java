@@ -11,6 +11,7 @@ import com.kelco.kamenridercraft.Items.rider_armor_base.RiderFormChangeItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -128,7 +129,7 @@ public class GamerDriverItem extends RiderDriverItem{
 		switch (slot) {
 
 		case CHEST -> {
-			if (get_Form_Item(itemstack, 2).HasWingsIfFlying() & !rider.onGround()){
+			if (get_Form_Item(itemstack, 2).HasWingsIfFlying() && rider instanceof Player player && player.getAbilities().flying == true){
 				return new ResourceLocation(KamenRiderCraftCore.MODID, get_Form_Item(itemstack, 2).get_FlyingModel());
 			}else if (get_Form_Item(itemstack, 2).get_Model()=="geo/ichigo.geo.json") {
 				return new ResourceLocation(KamenRiderCraftCore.MODID, "geo/bigger_rider_plusbelt.geo.json");
