@@ -71,6 +71,7 @@ import com.kelco.kamenridercraft.Items.Kuuga_Rider_Items;
 import com.kelco.kamenridercraft.Items.Miscellaneous_Rider_Items;
 import com.kelco.kamenridercraft.Items.Modded_item_core;
 import com.kelco.kamenridercraft.Items.OOO_Rider_Items;
+import com.kelco.kamenridercraft.Items.rider_armor_base.RiderArmorItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 
 import java.util.List;
@@ -117,10 +118,16 @@ public class ModCommonEvents {
 	public static class ForgeEvents {
 
 		@SubscribeEvent
-		public static void addInvisibleCheck(RenderPlayerEvent.Pre event) {
+		public static void addInvisibleCheck(RenderLivingEvent.Pre event) {
 			
-			if (event.getEntity().getItemBySlot(EquipmentSlot.FEET).getItem()instanceof RiderDriverItem) {
-				if (RiderDriverItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_PalyerModelInvisible())event.getEntity().setInvisible(true);
+			if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof RiderArmorItem) {
+				if (event.getEntity().getItemBySlot(EquipmentSlot.CHEST).getItem() instanceof RiderArmorItem) {
+					if (event.getEntity().getItemBySlot(EquipmentSlot.LEGS).getItem() instanceof RiderArmorItem) {
+						if (event.getEntity().getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RiderDriverItem) {
+							if (RiderDriverItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_PalyerModelInvisible())event.getEntity().setInvisible(true);
+						}
+					}
+				}
 			}
 
 		}

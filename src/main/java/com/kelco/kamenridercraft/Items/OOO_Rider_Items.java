@@ -168,9 +168,8 @@ public class OOO_Rider_Items {
 
 	public static final RegistryObject<Item> SASORI_MEDAL = ITEMS.register("sasori_medal",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","core","core_driver_belt",
-					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false),
-					new MobEffectInstance(MobEffects.INVISIBILITY, 40, 0,true,false))
-			.ChangeSlot(1).AddToTabList(RiderTabs.OOO_TAB_ITEM));
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false))
+			.ChangeSlot(3).AddToTabList(RiderTabs.OOO_TAB_ITEM));
 
 	public static final RegistryObject<Item> KANI_MEDAL = ITEMS.register("kani_medal",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","core","core_driver_belt",
@@ -180,12 +179,12 @@ public class OOO_Rider_Items {
 	public static final RegistryObject<Item> EBI_MEDAL = ITEMS.register("ebi_medal",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","core","core_driver_belt",
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
-			.IsGlowing().ChangeSlot(3).AddToTabList(RiderTabs.OOO_TAB_ITEM));
+			.IsGlowing().ChangeSlot(1).SetPalyerModelInvisible().AddToTabList(RiderTabs.OOO_TAB_ITEM));
 
 
 	public static final RegistryObject<Item> MUKADE_MEDAL = ITEMS.register("mukade_medal",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_mukade","ooo","ooodriver_belt",
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false),new MobEffectInstance(MobEffects.INVISIBILITY, 40, 0,true,false))
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false))
 			.ChangeSlot(1).AddToTabList(RiderTabs.OOO_TAB_ITEM));
 
 	public static final RegistryObject<Item> HACHI_MEDAL = ITEMS.register("hachi_medal",

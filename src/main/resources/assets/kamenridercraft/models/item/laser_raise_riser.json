@@ -7,8 +7,8 @@
 	"overrides": [
 		{"predicate": {"pull": 1}, "model": "kamenridercraft:item/laser_raise_riser_ziin"},
 		{"predicate": {"pull": 2}, "model": "kamenridercraft:item/laser_raise_riser_kekera"},
-		{"predicate": {"pull": 2}, "model": "kamenridercraft:item/laser_raise_riser_kyuun"},
-		{"predicate": {"pull": 2}, "model": "kamenridercraft:item/laser_raise_riser_beroba"}
+		{"predicate": {"pull": 3}, "model": "kamenridercraft:item/laser_raise_riser_kyuun"},
+		{"predicate": {"pull": 4}, "model": "kamenridercraft:item/laser_raise_riser_beroba"}
 	],
 	"display": {
 		"thirdperson_righthand": {
