@@ -79,8 +79,8 @@ public class Rider_Blocks {
 					.strength(2f).requiresCorrectToolForDrops().strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE), UniformInt.of(2, 6)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	
 	public static final RegistryObject<Block> G_SYSTEM_CHIP_PROGRAMMER = registerBlock("g_chip_programer",
-			() -> new GSystemChipProgrammer(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
-					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
+			() -> new GSystemChipProgrammer(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+					.strength(5.0F, 6.0F).sound(SoundType.METAL)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	
 	public static final RegistryObject<Block> GLASS_RYUKI = registerBlock("glass_ryuki",
 			() -> new GlassBaseBlockDropExperience(BlockBehaviour.Properties.copy(Blocks.GLASS)
