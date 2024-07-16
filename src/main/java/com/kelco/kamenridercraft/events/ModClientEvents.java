@@ -10,6 +10,7 @@ import com.kelco.kamenridercraft.client.renderer.AnkhRenderer;
 import com.kelco.kamenridercraft.client.renderer.BasicEntityRenderer;
 import com.kelco.kamenridercraft.client.renderer.BikeRenderer;
 import com.kelco.kamenridercraft.client.renderer.NewMoleImaginSandRenderer;
+import com.kelco.kamenridercraft.client.renderer.SummonedEntityRenderer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -248,6 +249,8 @@ public class ModClientEvents {
 		event.registerEntityRenderer(MobsCore.MACEHINE_TORADOR.get(), BikeRenderer::new);
 		event.registerEntityRenderer(MobsCore.HARDBOILER.get(), BikeRenderer::new);
 		event.registerEntityRenderer(MobsCore.SKULLBOILER.get(), BikeRenderer::new);
+
+		event.registerEntityRenderer(MobsCore.DECADE_ILLUSION.get(), SummonedEntityRenderer::new);
 	}
 
 

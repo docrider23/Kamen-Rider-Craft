@@ -1936,6 +1936,7 @@
 "entity.kamenridercraft.pawnjyamato": "Pawn Jyamato",
 "entity.kamenridercraft.jyamatorider": "Jyamato Rider",
 "entity.kamenridercraft.gmrider": "GM Rider",
+"entity.kamenridercraft.decade_illusion": "Decade Illusion",
 
 "item.kamenridercraft.shocker_combatman_spawn_egg": "Shocker Combatman Spawn Egg",
 "item.kamenridercraft.shocker_riders_spawn_egg": "Shocker Rider Spawn Egg",
@@ -2019,6 +2020,8 @@
 "item.kamenridercraft.machine_tornador_spawn_egg": "Machine Tornador Spawn Egg",
 "item.kamenridercraft.hardboilder_spawn_egg": "Hardboilder Spawn Egg",
 "item.kamenridercraft.skullboilder_spawn_egg": "Skullboilder Spawn Egg",
+
+"item.kamenridercraft.decade_illusion_spawn_egg": "Decade Illusion Spawn Egg",
 
 "block.kamenridercraft.monitor": "Monitor",
 "block.kamenridercraft.stone_kuuga": "Kuuga Ore",

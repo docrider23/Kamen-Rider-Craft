@@ -3,6 +3,8 @@ package com.kelco.kamenridercraft.Items.decade;
 import java.util.List;
 
 import com.google.common.collect.Lists;
+import com.kelco.kamenridercraft.Entities.MobsCore;
+import com.kelco.kamenridercraft.Entities.summons.BaseSummonEntity;
 import com.kelco.kamenridercraft.Items.Decade_Rider_Items;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
@@ -70,46 +72,80 @@ public class AttackRideCardItem extends BaseItem {
 							}
 						}
 
-						if (matchFound) {
-							if (!p_41128_.isClientSide()) {
-								if (EFFECTS != null) {
-									for (int i = 0; i < EFFECTS.size(); i++)
-									{
-										p_41129_.addEffect(new MobEffectInstance(EFFECTS.get(i).getEffect(),EFFECTS.get(i).getDuration(),EFFECTS.get(i).getAmplifier(),true,false));
-									}
-								} else if (ITEM != null) {
-									ItemStack item = new ItemStack(ITEM, 1);
-									if (DAMAGE > 0) {
-										item.setDamageValue(DAMAGE);
-										item.setRepairCost(Integer.MAX_VALUE); // No cheating with anvils, sorry not sorry
-									}
-
-									ItemEntity entity = new ItemEntity(p_41128_, p_41129_.getX(), p_41129_.getY(), p_41129_.getZ(), item, 0, 0, 0);
-									entity.setPickUpDelay(3);
-									p_41128_.addFreshEntity(entity);
-								} else {
-									switch (SPECIAL) {
-										case "ore_sanjou":
-											p_41129_.sendSystemMessage(Component.translatable("I... have arrived!").withStyle(ChatFormatting.RED));
-											break;
-										case "bokuni_tsurarete_miru":
-											p_41129_.sendSystemMessage(Component.translatable("Mind if I reel you in?").withStyle(ChatFormatting.BLUE));
-											break;
-										case "nakerude":
-											p_41129_.sendSystemMessage(Component.translatable("You cried!").withStyle(ChatFormatting.YELLOW));
-											break;
-										case "kotaewa_kiite_nai":
-											p_41129_.sendSystemMessage(Component.translatable("I can't hear your answer!").withStyle(ChatFormatting.DARK_PURPLE));
-											break;
-										default:
-											break;
-									}
+						if (matchFound && !p_41128_.isClientSide()) {
+							if (EFFECTS != null) {
+								for (int i = 0; i < EFFECTS.size(); i++)
+								{
+									p_41129_.addEffect(new MobEffectInstance(EFFECTS.get(i).getEffect(),EFFECTS.get(i).getDuration(),EFFECTS.get(i).getAmplifier(),true,false));
+								}
+							} else if (ITEM != null) {
+								ItemStack item = new ItemStack(ITEM, 1);
+								if (DAMAGE > 0) {
+									item.setDamageValue(DAMAGE);
+									item.setRepairCost(Integer.MAX_VALUE); // No cheating with anvils, sorry not sorry
 								}
 
-								if	(!p_41129_.isCreative()) {
-									itemstack.shrink(1);
+								ItemEntity entity = new ItemEntity(p_41128_, p_41129_.getX(), p_41129_.getY(), p_41129_.getZ(), item, 0, 0, 0);
+								entity.setPickUpDelay(3);
+								p_41128_.addFreshEntity(entity);
+							} else {
+								switch (SPECIAL) {
+									case "illusion":
+										for (int i = 0; i < 4; i++)
+										{
+											BaseSummonEntity illusion = MobsCore.DECADE_ILLUSION.get().create(p_41128_);
+											if (illusion != null) {
+												illusion.moveTo(p_41129_.getX(), p_41129_.getY(), p_41129_.getZ(), p_41129_.getYRot(), p_41129_.getXRot());
+												illusion.tame(p_41129_);
+												if (RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),1)==Decade_Rider_Items.DECADE_VIOLENT_EMOTION_CARD.get()) {
+													RiderDriverItem.set_Form_Item(illusion.getItemBySlot(EquipmentSlot.FEET), Decade_Rider_Items.DECADE_VIOLENT_EMOTION_CARD.get(), 1);
+												} else if (RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),1)==Decade_Rider_Items.DECADE_CYAN_CRAD.get()) {
+													RiderDriverItem.set_Form_Item(illusion.getItemBySlot(EquipmentSlot.FEET), Decade_Rider_Items.DECADE_CYAN_CRAD.get(), 1);
+												} else if (p_41129_.getItemBySlot(EquipmentSlot.FEET).getItem()==Decade_Rider_Items.DARK_DECADRIVER.get()) {
+													illusion.setItemSlot(EquipmentSlot.FEET, new ItemStack(Decade_Rider_Items.DARK_DECADRIVER.get()));
+												}
+												p_41128_.addFreshEntity(illusion);
+											}
+										}
+										break;
+									case "diend_illusion": // Please don't touch this, I'm gonna change it when I get the chance
+										for (int i = 0; i < 4; i++)
+										{
+											BaseSummonEntity illusion = MobsCore.DECADE_ILLUSION.get().create(p_41128_);
+											// BaseSummonEntity illusion = MobsCore.DIEND_ILLUSION.get().create(p_41128_);
+											if (illusion != null) {
+												illusion.moveTo(p_41129_.getX(), p_41129_.getY(), p_41129_.getZ(), p_41129_.getYRot(), p_41129_.getXRot());
+												illusion.tame(p_41129_);
+												illusion.setItemSlot(EquipmentSlot.FEET, new ItemStack(Decade_Rider_Items.DIEND_BELT.get()));
+												illusion.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Decade_Rider_Items.DIENDRIVER.get()));
+												if (RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),1)==Decade_Rider_Items.DIEND_GREEN_CRAD.get()) {
+													RiderDriverItem.set_Form_Item(illusion.getItemBySlot(EquipmentSlot.FEET), Decade_Rider_Items.DIEND_GREEN_CRAD.get(), 1);
+												} 
+												p_41128_.addFreshEntity(illusion);
+											}
+										}
+										break;
+									case "ore_sanjou":
+										p_41129_.sendSystemMessage(Component.translatable("I... have arrived!").withStyle(ChatFormatting.RED));
+										break;
+									case "bokuni_tsurarete_miru":
+										p_41129_.sendSystemMessage(Component.translatable("Mind if I reel you in?").withStyle(ChatFormatting.BLUE));
+										break;
+									case "nakerude":
+										p_41129_.sendSystemMessage(Component.translatable("You cried!").withStyle(ChatFormatting.YELLOW));
+										break;
+									case "kotaewa_kiite_nai":
+										p_41129_.sendSystemMessage(Component.translatable("I can't hear your answer!").withStyle(ChatFormatting.DARK_PURPLE));
+										break;
+									default:
+										break;
 								}
 							}
+
+							if	(!p_41129_.isCreative()) {
+								itemstack.shrink(1);
+							}
+							p_41129_.getCooldowns().addCooldown(this, 500);
 						}
 					}
 				}

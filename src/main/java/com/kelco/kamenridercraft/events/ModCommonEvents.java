@@ -66,6 +66,7 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.ShockerCombatmanEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.YummyEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ZectrooperEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ZuGumunBaEntity;
+import com.kelco.kamenridercraft.Entities.summons.DecadeIllusionEntity;
 import com.kelco.kamenridercraft.Items.Ichigo_Rider_Items;
 import com.kelco.kamenridercraft.Items.Kuuga_Rider_Items;
 import com.kelco.kamenridercraft.Items.Miscellaneous_Rider_Items;
@@ -554,6 +555,8 @@ public class ModCommonEvents {
 		event.put(MobsCore.MACEHINE_TORADOR.get(), baseBikeEntity.setAttributes());
 		event.put(MobsCore.HARDBOILER.get(), baseBikeEntity.setAttributes());
 		event.put(MobsCore.SKULLBOILER.get(), baseBikeEntity.setAttributes());
+
+		event.put(MobsCore.DECADE_ILLUSION.get(), DecadeIllusionEntity.setAttributes());
 
 	}
 
