@@ -4,9 +4,13 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.ShockerCombatmanEntity;
 import com.kelco.kamenridercraft.Items.Decade_Rider_Items;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageType;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -35,23 +39,23 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class DecadeIllusionEntity extends BaseSummonEntity {
-	
-    public DecadeIllusionEntity(EntityType<? extends BaseSummonEntity> type, Level level) {
-        super(type, level);
-        NAME="decade_illusion";
-        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Decade_Rider_Items.DECADEHELMET.get()));
-        this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Decade_Rider_Items.DECADECHESTPLATE.get()));
-        this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Decade_Rider_Items.DECADELEGGINGS.get()));
-        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Decade_Rider_Items.DECADRIVER.get()));
-        this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Decade_Rider_Items.RIDE_BOOKER.get()));
-    }
 
-    public static AttributeSupplier setAttributes() {
-        return Mob.createMobAttributes().add(Attributes.MOVEMENT_SPEED, (double)0.3F).add(Attributes.MAX_HEALTH, 20.0D).add(Attributes.ARMOR, -10.0D).add(Attributes.ATTACK_DAMAGE, 2.0D).build();
-     }
+	public DecadeIllusionEntity(EntityType<? extends BaseSummonEntity> type, Level level) {
+		super(type, level);
+		NAME="decade_illusion";
+		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Decade_Rider_Items.DECADEHELMET.get()));
+		this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Decade_Rider_Items.DECADECHESTPLATE.get()));
+		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Decade_Rider_Items.DECADELEGGINGS.get()));
+		this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Decade_Rider_Items.DECADRIVER.get()));
+		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Decade_Rider_Items.RIDE_BOOKER.get()));
+	}
+
+	public static AttributeSupplier setAttributes() {
+		return Mob.createMobAttributes().add(Attributes.MOVEMENT_SPEED, (double)0.3F).add(Attributes.MAX_HEALTH, 20.0D).add(Attributes.ARMOR, -10.0D).add(Attributes.ATTACK_DAMAGE, 2.0D).build();
+	}
 
 
-	 protected void registerGoals() {
+	protected void registerGoals() {
 		this.goalSelector.addGoal(1, new FloatGoal(this));
 		this.goalSelector.addGoal(1, new PanicGoal(this, 1.4D));
 		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.0D, true));
@@ -59,30 +63,41 @@ public class DecadeIllusionEntity extends BaseSummonEntity {
 		this.goalSelector.addGoal(8, new WaterAvoidingRandomStrollGoal(this, 1.0D));
 		this.goalSelector.addGoal(10, new LookAtPlayerGoal(this, Player.class, 8.0F));
 		this.goalSelector.addGoal(10, new RandomLookAroundGoal(this));
-		 this.targetSelector.addGoal(1, new OwnerHurtByTargetGoal(this));
-		 this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
-		 this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Monster.class, 5, false, false, (p_28879_) -> {
-			 if (isTame()) {
-				 return p_28879_ instanceof Enemy;
-			 }else return false;
-		 }));
+		this.targetSelector.addGoal(1, new OwnerHurtByTargetGoal(this));
+		this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
+		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Monster.class, 5, false, false, (p_28879_) -> {
+			if (isTame()) {
+				return p_28879_ instanceof Enemy;
+			}else return false;
+		}));
 		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal<>(this, ShockerCombatmanEntity.class, false));
- 
-	 }
 
-	 @Override
-	 public void setTame(boolean p_30443_) {
+	}
+
+	public void aiStep() {
+
+		if ( this.getOwner() instanceof Player owner) {
+			if(owner.getItemBySlot(EquipmentSlot.FEET).getItem()!=Decade_Rider_Items.DECADRIVER.get()) this.setHealth(0);
+		}    	
+		else this.setHealth(0);
+
+		super.aiStep();
+	}
+
+
+	@Override
+	public void setTame(boolean p_30443_) {
 		super.setTame(p_30443_);
 		this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(10.0D);
 		this.setHealth(10.0F);
-	 }
-	 
-	   protected SoundEvent getAmbientSound() {
-		         return SoundEvents.VILLAGER_AMBIENT;
-		   }
-	
+	}
+
+	protected SoundEvent getAmbientSound() {
+		return SoundEvents.VILLAGER_AMBIENT;
+	}
+
 	protected void playStepSound(BlockPos p_30415_, BlockState p_30416_) {
-		
+
 	}
 
 	protected SoundEvent getHurtSound(DamageSource p_30424_) {
@@ -93,28 +108,28 @@ public class DecadeIllusionEntity extends BaseSummonEntity {
 		return SoundEvents.VILLAGER_HURT;
 	}
 
-   public boolean wantsToAttack(LivingEntity p_30389_, LivingEntity p_30390_) {
-      if (!(p_30389_ instanceof Ghast)) {
-         if (p_30389_ instanceof DecadeIllusionEntity) {
-            DecadeIllusionEntity illusion = (DecadeIllusionEntity)p_30389_;
-            return !illusion.isTame() || illusion.getOwner() != p_30390_;
-         } else if (p_30389_ instanceof Player && p_30390_ instanceof Player && !((Player)p_30390_).canHarmPlayer((Player)p_30389_)) {
-            return false;
-         } else if (p_30389_ instanceof AbstractHorse && ((AbstractHorse)p_30389_).isTamed()) {
-            return false;
-         } else {
-            return !(p_30389_ instanceof TamableAnimal) || !((TamableAnimal)p_30389_).isTame();
-         }
-      } else {
-         return false;
-      }
-   }
+	public boolean wantsToAttack(LivingEntity p_30389_, LivingEntity p_30390_) {
+		if (!(p_30389_ instanceof Ghast)) {
+			if (p_30389_ instanceof DecadeIllusionEntity) {
+				DecadeIllusionEntity illusion = (DecadeIllusionEntity)p_30389_;
+				return !illusion.isTame() || illusion.getOwner() != p_30390_;
+			} else if (p_30389_ instanceof Player && p_30390_ instanceof Player && !((Player)p_30390_).canHarmPlayer((Player)p_30389_)) {
+				return false;
+			} else if (p_30389_ instanceof AbstractHorse && ((AbstractHorse)p_30389_).isTamed()) {
+				return false;
+			} else {
+				return !(p_30389_ instanceof TamableAnimal) || !((TamableAnimal)p_30389_).isTame();
+			}
+		} else {
+			return false;
+		}
+	}
 
-	   public boolean isBaby() {
-		      return false;
-		   }
-	   
+	public boolean isBaby() {
+		return false;
+	}
+
 	public boolean canMate(Animal p_30392_) {
-	            return false;
-	   }
+		return false;
+	}
 }
