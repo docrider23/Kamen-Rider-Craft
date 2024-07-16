@@ -26,6 +26,9 @@ public class Effect_core {
 	public static final RegistryObject<MobEffect> SLASH= EFFECT.register("slash",
 			() -> new 	SlashEffect(MobEffectCategory.BENEFICIAL, 0x21daff));
 
+	public static final RegistryObject<MobEffect> SHOT_BOOST= EFFECT.register("shot_boost",
+			() -> new 	ShotBoostEffect(MobEffectCategory.BENEFICIAL, 0x21daff));
+
 	public static final RegistryObject<MobEffect> PUNCH= EFFECT.register("punch",
 			() -> new 	PunchEffect(MobEffectCategory.BENEFICIAL, 0x1d8519));
 

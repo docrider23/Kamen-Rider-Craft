@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import com.kelco.kamenridercraft.Effect.Effect_core;
 import com.kelco.kamenridercraft.Items.Faiz_Rider_Items;
 import com.kelco.kamenridercraft.Items.Modded_item_core;
 import com.kelco.kamenridercraft.events.ModClientEvents;
@@ -144,6 +145,10 @@ public class BaseBlasterItem extends BowItem {
 						int k = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.PUNCH_ARROWS, p_40667_);
 						if (k > 0) {
 							abstractarrow.setKnockback(k);
+						}
+
+						if (player.hasEffect(Effect_core.SHOT_BOOST.get())) {
+							abstractarrow.setKnockback(3);
 						}
 
 						if (EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FLAMING_ARROWS, p_40667_) > 0) {

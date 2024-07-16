@@ -2,6 +2,7 @@ package com.kelco.kamenridercraft.Items;
 
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
 import com.kelco.kamenridercraft.Effect.Effect_core;
+import com.kelco.kamenridercraft.Items.decade.AttackRideCardItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseBlasterItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseSwordItem;
@@ -552,7 +553,60 @@ public class Decade_Rider_Items {
             () -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.DECADE_TAB_ITEM).ChangeRepairItem(BLANK_CRAD.get()));
     public static final RegistryObject<SwordItem> ONGEKIBO_REKKA_DIEND = ITEMS.register("ongekibo_rekka_diend",
             () -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.DECADE_TAB_ITEM).ChangeRepairItem(BLANK_CRAD.get()));
-		
+
+    public static final RegistryObject<Item> DECADE_BLAST_CARD = ITEMS.register("decade_blast_card",
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"decade","decade_violent_emotion","decade_cyan","dark_decade"}, new MobEffectInstance(Effect_core.SHOT_BOOST.get(), 300,2,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+    public static final RegistryObject<Item> DECADE_SLASH_CARD = ITEMS.register("decade_slash_card",
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"decade","decade_violent_emotion","decade_cyan","dark_decade"}, new MobEffectInstance(Effect_core.SLASH.get(), 300,2,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+    // public static final RegistryObject<Item> DECADE_ILLUSION_CARD = ITEMS.register("decade_illusion_card",
+	// 		() -> new AttackRideCardItem(new Item.Properties(), new String[]{"decade","decade_violent_emotion","decade_cyan","dark_decade"}, "illusion").AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+    public static final RegistryObject<Item> DECADE_INVISIBLE_CARD = ITEMS.register("decade_invisible_card",
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"decade","decade_violent_emotion","decade_cyan","dark_decade"}, new MobEffectInstance(MobEffects.INVISIBILITY, 300,0,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+    public static final RegistryObject<Item> DIEND_BLAST_CARD = ITEMS.register("diend_blast_card",
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"diend","diend_green"}, new MobEffectInstance(Effect_core.SHOT_BOOST.get(), 300,2,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+    public static final RegistryObject<Item> DIEND_INVISIBLE_CARD = ITEMS.register("diend_invisible_card",
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"diend","diend_green"}, new MobEffectInstance(MobEffects.INVISIBILITY, 300,0,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+    // public static final RegistryObject<Item> DIEND_CROSSATTACK_CARD = ITEMS.register("diend_crossattack_card",
+	// 		() -> new AttackRideCardItem(new Item.Properties(), new String[]{"diend","diend_green"}, "crossattack").AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+    // public static final RegistryObject<Item> DIEND_BARRIER_CARD = ITEMS.register("diend_barrier_card",
+	// 		() -> new AttackRideCardItem(new Item.Properties(), new String[]{"diend","diend_green"}, "barrier").AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+    // public static final RegistryObject<Item> DIEND_ILLUSION_CARD = ITEMS.register("diend_illusion_card",
+	// 		() -> new AttackRideCardItem(new Item.Properties(), new String[]{"diend","diend_green"}, "diend_illusion").AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+    // public static final RegistryObject<Item> REKKA_DAIZANTOU_CARD = ITEMS.register("rekka_daizantou_card",
+	// 		() -> new AttackRideCardItem(new Item.Properties(), new String[]{"decade","decade_violent_emotion","decade_cyan"}, "rekka_daizantou").AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+    public static final RegistryObject<Item> G4_GIGANT_CARD = ITEMS.register("g4_gigant_card",
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"decade_violent_emotion"}, Agito_Rider_Items.G4_GIGANT.get(), 1531).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+    public static final RegistryObject<Item> RYUKI_STRIKE_VENT_CARD = ITEMS.register("ryuki_strike_vent_card",
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"ryuki","decade_violent_emotion"}, Ryuki_Rider_Items.DRAG_CLAW.get(), 0).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+    public static final RegistryObject<Item> RYUKI_GUARD_VENT_CARD = ITEMS.register("ryuki_guard_vent_card",
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"ryuki","decade_violent_emotion"}, Ryuki_Rider_Items.DRAG_SHIELD.get(), 0).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+    public static final RegistryObject<Item> BLADE_METAL_CARD = ITEMS.register("blade_metal_card",
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"blade","decade_violent_emotion"}, new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300,1,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+	public static final RegistryObject<Item> BLADE_MACH_CARD = ITEMS.register("blade_mach_card",
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"blade","decade_violent_emotion"},
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 300,3,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 300,3,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+    public static final RegistryObject<Item> HIBIKI_ONGEKIBOU_REKKA_CARD = ITEMS.register("hibiki_ongekibou_rekka_card",
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"hibiki","decade_violent_emotion"}, Hibiki_Rider_Items.ONGEKIBO_REKKA.get(), 1511).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+    // public static final RegistryObject<Item> HIBIKI_ONIBI_CARD = ITEMS.register("hibiki_onibi_card",
+	// 		() -> new AttackRideCardItem(new Item.Properties(), new String[]{"hibiki","decade_violent_emotion"}, "onibi").AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+	public static final RegistryObject<Item> KABUTO_CLOCK_UP_CARD = ITEMS.register("kabuto_clock_up_card",
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"kabuto","decade_violent_emotion"}, new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 250,20,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+	public static final RegistryObject<Item> DEN_O_ORE_SANJOU_CARD = ITEMS.register("den_o_ore_sanjou_card",
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"den_o","decade_violent_emotion"}, "ore_sanjou").AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+	public static final RegistryObject<Item> DEN_O_BOKU_NI_TSURARETE_MIRU_CARD = ITEMS.register("den_o_bokuni_tsurarete_miru_card",
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"den_o_rod","decade_violent_emotion"}, "bokuni_tsurarete_miru").AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+	public static final RegistryObject<Item> DEN_O_NAKERUDE_CARD = ITEMS.register("den_o_nakerude_card",
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"den_o_axe","decade_violent_emotion"}, "nakerude").AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+	public static final RegistryObject<Item> DEN_O_KOTAE_WA_KIITENAI_CARD = ITEMS.register("den_o_kotaewa_kiite_nai_card",
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"den_o_gun","decade_violent_emotion"}, "kotaewa_kiite_nai").AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+    public static final RegistryObject<Item> DEN_O_TSUPPARI_CARD = ITEMS.register("den_o_tsuppari_card",
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"den_o_axe","decade_violent_emotion"}, new MobEffectInstance(Effect_core.PUNCH.get(), 300,1,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+    public static final RegistryObject<Item> DEN_O_UTCHARI_CARD = ITEMS.register("den_o_utchari_card",
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"den_o_axe","decade_violent_emotion"}, new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300,3,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+    public static final RegistryObject<Item> AMAZON_GAGA_NO_UDEWA_CARD = ITEMS.register("amazon_gaga_no_udewa_card",
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"amazon","decade_violent_emotion"}, Ichigo_Rider_Items.GAGA_ARMLET.get(), 0).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
 	}
