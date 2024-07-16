@@ -78,6 +78,9 @@ public class DecadeIllusionEntity extends BaseSummonEntity {
 
 		if ( this.getOwner() instanceof Player owner) {
 			if(owner.getItemBySlot(EquipmentSlot.FEET).getItem()!=Decade_Rider_Items.DECADRIVER.get()) this.setHealth(0);
+			if(owner.getItemBySlot(EquipmentSlot.HEAD).getItem()!=Decade_Rider_Items.DECADEHELMET.get()) this.setHealth(0);
+			if(owner.getItemBySlot(EquipmentSlot.CHEST).getItem()!=Decade_Rider_Items.DECADECHESTPLATE.get()) this.setHealth(0);
+			if(owner.getItemBySlot(EquipmentSlot.LEGS).getItem()!=Decade_Rider_Items.DECADELEGGINGS.get()) this.setHealth(0);
 		}    	
 		else this.setHealth(0);
 
