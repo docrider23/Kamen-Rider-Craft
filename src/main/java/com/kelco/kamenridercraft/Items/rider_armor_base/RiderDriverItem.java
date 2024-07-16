@@ -69,7 +69,7 @@ public class RiderDriverItem extends RiderArmorItem{
 	public void onArmorTick(ItemStack stack, Level level, Player player)
 	{
 
-		if (stack.getTag().getBoolean("Update_form"))OnformChange(stack);
+		if (stack.getTag().getBoolean("Update_form"))OnformChange(stack,player);
 
 		if (player.getItemBySlot(EquipmentSlot.LEGS).getItem() == LEGS){
 			if (player.getItemBySlot(EquipmentSlot.CHEST).getItem() == TORSO){
@@ -90,7 +90,8 @@ public class RiderDriverItem extends RiderArmorItem{
 
 	}
 
-	public void OnformChange(ItemStack itemstack) {
+	public void OnformChange(ItemStack itemstack, Player player) {
+		player.setInvisible(false);
 		itemstack.getTag().putBoolean("Update_form", false);
 	}
 

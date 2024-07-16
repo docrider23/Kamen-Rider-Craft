@@ -99,6 +99,7 @@ import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.event.entity.SpawnPlacementRegisterEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
+import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent.ItemPickupEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
@@ -120,19 +121,25 @@ public class ModCommonEvents {
 		@SubscribeEvent
 		public static void addInvisibleCheck(RenderLivingEvent.Pre event) {
 			
-			if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof RiderArmorItem) {
-				if (event.getEntity().getItemBySlot(EquipmentSlot.CHEST).getItem() instanceof RiderArmorItem) {
-					if (event.getEntity().getItemBySlot(EquipmentSlot.LEGS).getItem() instanceof RiderArmorItem) {
-						if (event.getEntity().getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RiderDriverItem) {
+			if (event.getEntity().getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RiderDriverItem belt) {
+				
+		
+			if (event.getEntity().getItemBySlot(EquipmentSlot.HEAD).getItem() ==  belt.HEAD) {
+				if (event.getEntity().getItemBySlot(EquipmentSlot.CHEST).getItem() ==  belt.TORSO) {
+					if (event.getEntity().getItemBySlot(EquipmentSlot.LEGS).getItem() ==  belt.LEGS) {
 							if (RiderDriverItem.get_Form_Item(event.getEntity().getItemBySlot(EquipmentSlot.FEET), 1).get_PalyerModelInvisible())event.getEntity().setInvisible(true);
 						}
 					}
 				}
 			}
-
+			
 		}
 		
-		
+		@SubscribeEvent
+		public static void EquipmentChange(LivingEquipmentChangeEvent event) {
+			event.getEntity().setInvisible(false);
+		}
+
 		@SubscribeEvent
 		public static void addChangeSize(EntityEvent.Size event) {
 

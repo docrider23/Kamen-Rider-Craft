@@ -128,7 +128,7 @@ public class DesireDriverItem  extends RiderDriverItem{
 	}
 	
 	@Override
-	public void OnformChange(ItemStack belt) {
+	public void OnformChange(ItemStack belt, Player player) {
 		
 		if (get_Form_Item(belt,2)==Geats_Rider_Items.COMMAND_TWIN_BUCKLE_CANNON.get()&get_Form_Item(belt,3)!=Geats_Rider_Items.COMMAND_TWIN_BUCKLE_JET.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 2);
 		if (get_Form_Item(belt,3)==Geats_Rider_Items.COMMAND_TWIN_BUCKLE_CANNON_l.get()&get_Form_Item(belt,2)!=Geats_Rider_Items.COMMAND_TWIN_BUCKLE_JET.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 3);
@@ -168,7 +168,7 @@ public class DesireDriverItem  extends RiderDriverItem{
 						{
 							ItemStack belt = player.getItemBySlot(EquipmentSlot.FEET);
 							
-							if (stack.getTag().getBoolean("Update_form"))OnformChange(stack);
+							if (stack.getTag().getBoolean("Update_form"))OnformChange(stack, player);
 			
 							List<MobEffectInstance> potionEffectList = get_Form_Item(belt,n+1).getPotionEffectList();
 							for (int i = 0; i < potionEffectList.size(); i++)
