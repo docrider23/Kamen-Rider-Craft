@@ -251,6 +251,7 @@ public class ModClientEvents {
 		event.registerEntityRenderer(MobsCore.SKULLBOILER.get(), BikeRenderer::new);
 
 		event.registerEntityRenderer(MobsCore.DECADE_ILLUSION.get(), SummonedEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.DIEND_ILLUSION.get(), SummonedEntityRenderer::new);
 	}
 
 

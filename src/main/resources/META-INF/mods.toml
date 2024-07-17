@@ -37,6 +37,12 @@ Collect items, assemble an arsenal of armors and weapons, and fight a variety of
     versionRange="[4.2.4,)" #mandatory
     ordering="NONE"
     side="BOTH"
+[[dependencies.kamenridercraft]] #optional
+    modId="supersentaicraft" #mandatory
+    mandatory=false #mandatory
+    versionRange="[1.0,)" #mandatory
+    ordering="AFTER"
+    side="BOTH"
 # Here's another dependency
 [[dependencies.kamenridercraft]]
     modId="minecraft"

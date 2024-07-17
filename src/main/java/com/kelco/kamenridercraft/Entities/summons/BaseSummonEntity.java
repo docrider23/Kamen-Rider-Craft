@@ -10,15 +10,14 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.TimeUtil;
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.damagesource.CombatTracker;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.NeutralMob;
 import net.minecraft.world.entity.TamableAnimal;
@@ -37,7 +36,6 @@ import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -45,6 +43,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class BaseSummonEntity extends TamableAnimal implements NeutralMob {
    private static final EntityDataAccessor<Integer> DATA_REMAINING_ANGER_TIME = SynchedEntityData.defineId(BaseSummonEntity.class, EntityDataSerializers.INT);
    private static final UniformInt PERSISTENT_ANGER_TIME = TimeUtil.rangeOfSeconds(20, 39);
+
    @Nullable
    private UUID persistentAngerTarget;
 	
@@ -55,6 +54,11 @@ public class BaseSummonEntity extends TamableAnimal implements NeutralMob {
 	public BaseSummonEntity(EntityType<? extends TamableAnimal> entityType, Level level) {
 		super(entityType, level);
 		this.setTame(false);
+		this.setDropChance(EquipmentSlot.HEAD, 0.0f);
+		this.setDropChance(EquipmentSlot.CHEST, 0.0f);
+		this.setDropChance(EquipmentSlot.LEGS, 0.0f);
+		this.setDropChance(EquipmentSlot.FEET, 0.0f);
+		this.setDropChance(EquipmentSlot.MAINHAND, 0.0f);
 		
 		}
 

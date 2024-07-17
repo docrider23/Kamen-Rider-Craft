@@ -73,6 +73,7 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.YummyEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ZectrooperEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ZuGumunBaEntity;
 import com.kelco.kamenridercraft.Entities.summons.DecadeIllusionEntity;
+import com.kelco.kamenridercraft.Entities.summons.DiendIllusionEntity;
 
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -601,11 +602,13 @@ public class MobsCore {
           public static final RegistryObject<ForgeSpawnEggItem> SKULLBOILER_SPAWN_EGG = ITEMS.register("skullboilder_spawn_egg",
                   () -> new ForgeSpawnEggItem(SKULLBOILER, 0xffffff, 0x151515, new Item.Properties()));
       
+                  
           public static final RegistryObject<EntityType<DecadeIllusionEntity>> DECADE_ILLUSION = MOBLIST.register("decade_illusion",
                   () -> EntityType.Builder.of(DecadeIllusionEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":decade_illusion"));
-    
-           public static final RegistryObject<ForgeSpawnEggItem> DECADE_ILLUSION_SPAWN_EGG = ITEMS.register("decade_illusion_spawn_egg",
-                    () -> new ForgeSpawnEggItem(DECADE_ILLUSION, 0xEC008C, 0x222222, new Item.Properties()));
+
+          public static final RegistryObject<EntityType<DiendIllusionEntity>> DIEND_ILLUSION = MOBLIST.register("diend_illusion",
+                  () -> EntityType.Builder.of(DiendIllusionEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":diend_illusion"));
+
       
           
     public static void register(IEventBus eventBus) {

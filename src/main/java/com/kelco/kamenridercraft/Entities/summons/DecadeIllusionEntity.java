@@ -4,13 +4,9 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.ShockerCombatmanEntity;
 import com.kelco.kamenridercraft.Items.Decade_Rider_Items;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.damagesource.DamageType;
-import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -18,18 +14,20 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.FollowOwnerGoal;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.ResetUniversalAngerTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.horse.AbstractHorse;
+import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.monster.Ghast;
 import net.minecraft.world.entity.monster.Monster;
@@ -51,18 +49,18 @@ public class DecadeIllusionEntity extends BaseSummonEntity {
 	}
 
 	public static AttributeSupplier setAttributes() {
-		return Mob.createMobAttributes().add(Attributes.MOVEMENT_SPEED, (double)0.3F).add(Attributes.MAX_HEALTH, 20.0D).add(Attributes.ARMOR, -10.0D).add(Attributes.ATTACK_DAMAGE, 2.0D).build();
+		return Mob.createMobAttributes().add(Attributes.MOVEMENT_SPEED, (double)0.3F).add(Attributes.MAX_HEALTH, 20.0D).add(Attributes.ARMOR, -10.0D).add(Attributes.ATTACK_DAMAGE, 4.0D).build();
 	}
 
 
 	protected void registerGoals() {
 		this.goalSelector.addGoal(1, new FloatGoal(this));
-		this.goalSelector.addGoal(1, new PanicGoal(this, 1.4D));
-		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.0D, true));
-		this.goalSelector.addGoal(6, new FollowOwnerGoal(this, 1.0D, 10.0F, 2.0F, false));
-		this.goalSelector.addGoal(8, new WaterAvoidingRandomStrollGoal(this, 1.0D));
-		this.goalSelector.addGoal(10, new LookAtPlayerGoal(this, Player.class, 8.0F));
-		this.goalSelector.addGoal(10, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(2, new AvoidEntityGoal<>(this, Creeper.class, 24.0F, 1.5D, 1.5D));
+		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.0D, true));
+		this.goalSelector.addGoal(4, new FollowOwnerGoal(this, 1.0D, 10.0F, 2.0F, false));
+		this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0D));
+		this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 8.0F));
+		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
 		this.targetSelector.addGoal(1, new OwnerHurtByTargetGoal(this));
 		this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Monster.class, 5, false, false, (p_28879_) -> {
@@ -70,14 +68,15 @@ public class DecadeIllusionEntity extends BaseSummonEntity {
 				return p_28879_ instanceof Enemy;
 			}else return false;
 		}));
-		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal<>(this, ShockerCombatmanEntity.class, false));
+		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, ShockerCombatmanEntity.class, false));
+      	this.targetSelector.addGoal(5, new ResetUniversalAngerTargetGoal<>(this, true));
 
 	}
 
 	public void aiStep() {
 
 		if ( this.getOwner() instanceof Player owner) {
-			if(owner.getItemBySlot(EquipmentSlot.FEET).getItem()!=Decade_Rider_Items.DECADRIVER.get()) this.setHealth(0);
+			if(owner.getItemBySlot(EquipmentSlot.FEET).getItem()!=Decade_Rider_Items.DECADRIVER.get()&&owner.getItemBySlot(EquipmentSlot.FEET).getItem()!=Decade_Rider_Items.DARK_DECADRIVER.get()) this.setHealth(0);
 			if(owner.getItemBySlot(EquipmentSlot.HEAD).getItem()!=Decade_Rider_Items.DECADEHELMET.get()) this.setHealth(0);
 			if(owner.getItemBySlot(EquipmentSlot.CHEST).getItem()!=Decade_Rider_Items.DECADECHESTPLATE.get()) this.setHealth(0);
 			if(owner.getItemBySlot(EquipmentSlot.LEGS).getItem()!=Decade_Rider_Items.DECADELEGGINGS.get()) this.setHealth(0);
@@ -112,7 +111,7 @@ public class DecadeIllusionEntity extends BaseSummonEntity {
 	}
 
 	public boolean wantsToAttack(LivingEntity p_30389_, LivingEntity p_30390_) {
-		if (!(p_30389_ instanceof Ghast)) {
+		if (!(p_30389_ instanceof Creeper)&&!(p_30389_ instanceof Ghast)) {
 			if (p_30389_ instanceof DecadeIllusionEntity) {
 				DecadeIllusionEntity illusion = (DecadeIllusionEntity)p_30389_;
 				return !illusion.isTame() || illusion.getOwner() != p_30390_;

@@ -154,16 +154,15 @@ public class BaseBlasterItem extends BowItem {
 						if (EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FLAMING_ARROWS, p_40667_) > 0) {
 							abstractarrow.setSecondsOnFire(100);
 						}
-
-						p_40667_.hurtAndBreak(1, player, (p_276007_) -> {
-							p_276007_.broadcastBreakEvent(player.getUsedItemHand());
-						});
 						abstractarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
 
 
 						p_40668_.addFreshEntity(abstractarrow);
 					}
 
+					p_40667_.hurtAndBreak(1, player, (p_276007_) -> {
+						p_276007_.broadcastBreakEvent(player.getUsedItemHand());
+					});
 
 				}
 
