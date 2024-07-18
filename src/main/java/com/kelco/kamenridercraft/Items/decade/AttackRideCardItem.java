@@ -85,6 +85,7 @@ public class AttackRideCardItem extends BaseItem {
 						for (int i = 0; i < FORMS.length; i++) {
 							if (((RiderDriverItem) belt.getItem()).GET_TEXT(belt, null, p_41129_, ((RiderDriverItem) belt.getItem()).Rider).equals(FORMS[i])){
 								matchFound = !matchFound;
+								break;
 							}
 						}
 
@@ -160,9 +161,9 @@ public class AttackRideCardItem extends BaseItem {
 										break;
 									case "onibi":
 										ServerLevel level = ServerLifecycleHooks.getCurrentServer().getLevel(p_41128_.dimension());
-        								Vec3 lookVector = p_41129_.getViewVector(1.0f);
+        								Vec3 look = p_41129_.getViewVector(1.0f);
         								Vec3 playerPos = p_41129_.getEyePosition(1.0f);
-        								Vec3 endPos = playerPos.add(lookVector.x * 4.0, lookVector.y * 4.0, lookVector.z * 4.0);
+        								Vec3 endPos = playerPos.add(look.x * 4.0, look.y * 4.0, look.z * 4.0);
 
 										List<Entity> nearbyTargets = p_41128_.getEntities(p_41129_, new AABB(playerPos.x, playerPos.y, playerPos.z, endPos.x, endPos.y, endPos.z).inflate(0.5), entity ->
 																						  entity instanceof LivingEntity && entity != p_41129_
@@ -171,7 +172,7 @@ public class AttackRideCardItem extends BaseItem {
 										
 										for (double distX = 0; distX < 8; distX += 0.5) {
 											double distY = -(Math.pow(distX, 2) / 50) - 0.3;
-											level.sendParticles(ParticleTypes.FLAME, playerPos.x + (lookVector.x * distX), (playerPos.y + distY) + (lookVector.y * distX), playerPos.z + (lookVector.z * distX), 3, 0.0, 0.0, 0.0, 0.01);
+											level.sendParticles(ParticleTypes.FLAME, playerPos.x + (look.x * distX), (playerPos.y + distY) + (look.y * distX), playerPos.z + (look.z * distX), 3, 0.0, 0.0, 0.0, 0.01);
 										}
 										p_41128_.playSound((Player)null, new BlockPos((int) p_41129_.getX(), (int) p_41129_.getY(), (int) p_41129_.getZ()), SoundEvents.FIRECHARGE_USE, SoundSource.PLAYERS, 1.0F, (p_41128_.getRandom().nextFloat() - p_41128_.getRandom().nextFloat()) * 0.2F + 1.0F);
 										break;
@@ -197,7 +198,7 @@ public class AttackRideCardItem extends BaseItem {
 							}
 
 							if (!p_41129_.isCreative()) itemstack.shrink(1);
-							p_41129_.awardStat(Stats.ITEM_USED.get(itemstack.getItem()), 1);
+							p_41129_.awardStat(Stats.ITEM_USED.get(this));
 							p_41129_.getCooldowns().addCooldown(this, 500);
 						}
 					}

@@ -47,10 +47,12 @@ public class DiendIllusionEntity extends BaseSummonEntity implements RangedAttac
          super.stop();
          DiendIllusionEntity.this.stopBeingAngry();
          DiendIllusionEntity.this.startPersistentAngerTimer();
+		 DiendIllusionEntity.this.setAggressive(false);
       }
 
       public void start() {
          super.start();
+		 DiendIllusionEntity.this.setAggressive(true);
       }
    };
 
@@ -105,8 +107,8 @@ public class DiendIllusionEntity extends BaseSummonEntity implements RangedAttac
 	@Override
 	public void setTame(boolean p_30443_) {
 		super.setTame(p_30443_);
-		this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(10.0D);
-		this.setHealth(10.0F);
+		this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(20.0D);
+		this.setHealth(20.0F);
 	}
 
 	protected SoundEvent getAmbientSound() {

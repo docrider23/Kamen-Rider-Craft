@@ -90,8 +90,8 @@ public class DecadeIllusionEntity extends BaseSummonEntity {
 	@Override
 	public void setTame(boolean p_30443_) {
 		super.setTame(p_30443_);
-		this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(10.0D);
-		this.setHealth(10.0F);
+		this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(20.0D);
+		this.setHealth(20.0F);
 	}
 
 	protected SoundEvent getAmbientSound() {
