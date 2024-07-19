@@ -68,6 +68,7 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.ZectrooperEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ZuGumunBaEntity;
 import com.kelco.kamenridercraft.Entities.summons.DecadeIllusionEntity;
 import com.kelco.kamenridercraft.Entities.summons.DiendIllusionEntity;
+import com.kelco.kamenridercraft.Entities.summons.ParaDXSummonEntity;
 import com.kelco.kamenridercraft.Items.Ichigo_Rider_Items;
 import com.kelco.kamenridercraft.Items.Kuuga_Rider_Items;
 import com.kelco.kamenridercraft.Items.Miscellaneous_Rider_Items;
@@ -559,6 +560,7 @@ public class ModCommonEvents {
 
 		event.put(MobsCore.DECADE_ILLUSION.get(), DecadeIllusionEntity.setAttributes());
 		event.put(MobsCore.DIEND_ILLUSION.get(), DiendIllusionEntity.setAttributes());
+		event.put(MobsCore.PARADX_SUMMON.get(), ParaDXSummonEntity.setAttributes());
 
 	}
 

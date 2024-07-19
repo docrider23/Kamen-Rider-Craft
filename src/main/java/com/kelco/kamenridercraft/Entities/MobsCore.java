@@ -74,6 +74,7 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.ZectrooperEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ZuGumunBaEntity;
 import com.kelco.kamenridercraft.Entities.summons.DecadeIllusionEntity;
 import com.kelco.kamenridercraft.Entities.summons.DiendIllusionEntity;
+import com.kelco.kamenridercraft.Entities.summons.ParaDXSummonEntity;
 
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -614,6 +615,12 @@ public class MobsCore {
 
           public static final RegistryObject<ForgeSpawnEggItem> DIEND_ILLUSION_SPAWN_EGG = ITEMS.register("diend_illusion_spawn_egg",
                   () -> new ForgeSpawnEggItem(DIEND_ILLUSION, 0x0168b9, 0x1d1d1d, new Item.Properties()));
+      
+          public static final RegistryObject<EntityType<ParaDXSummonEntity>> PARADX_SUMMON = MOBLIST.register("paradx_summon",
+                  () -> EntityType.Builder.of(ParaDXSummonEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":diend_illusion"));
+
+          public static final RegistryObject<ForgeSpawnEggItem> PARADX_SUMMON_SPAWN_EGG = ITEMS.register("paradx_summon_spawn_egg",
+                  () -> new ForgeSpawnEggItem(PARADX_SUMMON, 0xff0000, 0x2a00ff, new Item.Properties()));
       
           
     public static void register(IEventBus eventBus) {
