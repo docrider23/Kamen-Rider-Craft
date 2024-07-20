@@ -503,8 +503,7 @@ public class Ex_Aid_Rider_Items {
 			.IsGlowing().alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()));
 
 	public static final RegistryObject<Item>  MIGHTY_BROTHERS_XX_GASHAT_R = ITEMS.register("mighty_brothers_xx_gashat_r",
-			() -> new RiderFormChangeItem(new Item.Properties(),0,"_lvxxr","ex_aid","gamer_driver_mighty_brothers_xx",
-			// () -> new ParaDXSummonItem(new Item.Properties(),0,"_lvxxr","ex_aid","gamer_driver_mighty_brothers_xx",
+			() -> new ParaDXSummonItem(new Item.Properties(),0,"_lvxxr","ex_aid","gamer_driver_mighty_brothers_xx",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
@@ -525,8 +524,7 @@ public class Ex_Aid_Rider_Items {
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_DOUBLE_GASHAT, 5));
 
 	public static final RegistryObject<Item> KNOCK_OUT_FIGHTER_2_GASHAT = ITEMS.register("knock_out_fighter_2_gashat",
-			() -> new RiderFormChangeItem(new Item.Properties(),0,"_lv39","ex_aid","gamer_driver_knock_out_fighter_2",
-			// () -> new ParaDXSummonItem(new Item.Properties(),0,"_lv39","ex_aid","gamer_driver_knock_out_fighter_2",
+			() -> new ParaDXSummonItem(new Item.Properties(),0,"_lv39","ex_aid","gamer_driver_knock_out_fighter_2",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
