@@ -2,7 +2,7 @@ package com.kelco.kamenridercraft.Entities.summons;
 
 import com.kelco.kamenridercraft.Entities.footSoldiers.BugsterVirusEntity;
 import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
-import com.kelco.kamenridercraft.Items.ex_aid.ParaDXSummonItem;
+import com.kelco.kamenridercraft.Items.Modded_item_core;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 
 import net.minecraft.core.BlockPos;
@@ -48,6 +48,7 @@ public class ParaDXSummonEntity extends BaseSummonEntity {
 		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Ex_Aid_Rider_Items.EX_AIDLEGGINGS.get()));
 		this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Ex_Aid_Rider_Items.GAMER_DRIVER_EX_AID.get()));
 		RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_L.get(), 1);
+		RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Modded_item_core.BLANK_FORM.get(), 2);
 	}
 
 	public static AttributeSupplier setAttributes() {
@@ -82,36 +83,32 @@ public class ParaDXSummonEntity extends BaseSummonEntity {
 			|| owner.getItemBySlot(EquipmentSlot.CHEST).getItem()!=Ex_Aid_Rider_Items.EX_AIDCHESTPLATE.get()
 			|| owner.getItemBySlot(EquipmentSlot.LEGS).getItem()!=Ex_Aid_Rider_Items.EX_AIDLEGGINGS.get()) {
 				this.setHealth(0);
-				ParaDXSummonItem.ParaDXSummoned = false;
 			}
 			
 			if (owner.getItemBySlot(EquipmentSlot.FEET).getItem()==Ex_Aid_Rider_Items.GAMER_DRIVER_EX_AID.get()) {
 				if (RiderDriverItem.get_Form_Item(owner.getItemBySlot(EquipmentSlot.FEET), 1)==Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get()) {
-					if (this.getItemBySlot(EquipmentSlot.FEET).getItem()==Ex_Aid_Rider_Items.GAMER_DRIVER_EX_AID.get()) {
+					if (RiderDriverItem.get_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), 1)!=Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get()) {
 						this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Ex_Aid_Rider_Items.GAMER_DRIVER_PARA_DX.get()));
 						RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get(), 1);
 					}
 				} else if(RiderDriverItem.get_Form_Item(owner.getItemBySlot(EquipmentSlot.FEET), 1)==Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_L.get()) {
-					if (RiderDriverItem.get_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), 1)==Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_L.get()) {
+					if (RiderDriverItem.get_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), 1)!=Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_R.get()) {
 						this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Ex_Aid_Rider_Items.GAMER_DRIVER_EX_AID.get()));
 						RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_R.get(), 1);
 					}
 				} else if(RiderDriverItem.get_Form_Item(owner.getItemBySlot(EquipmentSlot.FEET), 1)==Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_R.get()) {
-					if (RiderDriverItem.get_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), 1)==Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_R.get()) {
+					if (RiderDriverItem.get_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), 1)!=Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_L.get()) {
 						this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Ex_Aid_Rider_Items.GAMER_DRIVER_EX_AID.get()));
 						RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_L.get(), 1);
 					}
 				} else {
 					this.setHealth(0);
-					ParaDXSummonItem.ParaDXSummoned = false;
 				}
 			} else {
 				this.setHealth(0);
-				ParaDXSummonItem.ParaDXSummoned = false;
 			}
 		} else {
 			this.setHealth(0);
-			ParaDXSummonItem.ParaDXSummoned = false;
 		}
 
 		super.aiStep();

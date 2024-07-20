@@ -25,6 +25,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.OwnableEntity;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
@@ -140,7 +141,7 @@ public class AttackRideCardItem extends BaseItem {
 									case "crossattack":
 										List<Entity> nearbyAllies = p_41128_.getEntities(p_41129_, p_41129_.getBoundingBox().inflate(10), entity ->
 																						(entity instanceof Player && entity != p_41129_)
-																						|| (entity instanceof TamableAnimal && ((TamableAnimal) entity).getOwnerUUID() == p_41129_.getUUID()));
+																						|| (entity instanceof OwnableEntity && ((OwnableEntity) entity).getOwner() == p_41129_));
 										for (Entity ally : nearbyAllies) {
 											if (((LivingEntity) ally).getItemBySlot(EquipmentSlot.MAINHAND).getItem() instanceof BowItem) {
 												((LivingEntity) ally).addEffect(new MobEffectInstance(Effect_core.SHOT_BOOST.get(), 250, 3,true,true));
@@ -167,7 +168,7 @@ public class AttackRideCardItem extends BaseItem {
 
 										List<Entity> nearbyTargets = p_41128_.getEntities(p_41129_, new AABB(playerPos.x, playerPos.y, playerPos.z, endPos.x, endPos.y, endPos.z).inflate(0.5), entity ->
 																						  entity instanceof LivingEntity && entity != p_41129_
-																						  && !(entity instanceof TamableAnimal && ((TamableAnimal) entity).getOwnerUUID() == p_41129_.getUUID()));
+																						  && !(entity instanceof OwnableEntity && ((OwnableEntity) entity).getOwner() == p_41129_));
 										for (Entity toIgnite : nearbyTargets) ((LivingEntity) toIgnite).setSecondsOnFire(10);
 										
 										for (double distX = 0; distX < 8; distX += 0.5) {

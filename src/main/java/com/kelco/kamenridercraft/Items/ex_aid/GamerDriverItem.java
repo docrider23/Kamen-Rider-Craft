@@ -2,6 +2,9 @@ package com.kelco.kamenridercraft.Items.ex_aid;
 
 import com.google.common.collect.Lists;
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
+import com.kelco.kamenridercraft.Entities.MobsCore;
+import com.kelco.kamenridercraft.Entities.summons.BaseSummonEntity;
+import com.kelco.kamenridercraft.Entities.summons.ParaDXSummonEntity;
 import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
 import com.kelco.kamenridercraft.Items.Modded_item_core;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderArmorItem;
@@ -11,16 +14,17 @@ import com.kelco.kamenridercraft.Items.rider_armor_base.RiderFormChangeItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.OwnableEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.registries.RegistryObject;
 
 public class GamerDriverItem extends RiderDriverItem{
 
-
-	public GamerDriverItem (ArmorMaterial material, String rider,RegistryObject<Item> baseFormItem,RegistryObject<Item> head,RegistryObject<Item>torso,RegistryObject<Item> legs, Properties properties)
+    public GamerDriverItem (ArmorMaterial material, String rider,RegistryObject<Item> baseFormItem,RegistryObject<Item> head,RegistryObject<Item>torso,RegistryObject<Item> legs, Properties properties)
 	{
 		super(material, rider, baseFormItem, head, torso, legs, properties);
 
@@ -35,6 +39,37 @@ public class GamerDriverItem extends RiderDriverItem{
 		Extra_Base_Form_Item= Lists.newArrayList((RiderFormChangeItem)Modded_item_core.BLANK_FORM.get(),(RiderFormChangeItem)Modded_item_core.BLANK_FORM.get());
 		Num_Base_Form_Item=2;
 	}
+
+    public static boolean paradxSummoned(Player player) {
+		for (ParaDXSummonEntity entity : player.getCommandSenderWorld().getEntitiesOfClass(ParaDXSummonEntity.class,
+						player.getBoundingBox().inflate(30), entity -> ((OwnableEntity) entity).getOwner() == player)) {
+			if (entity != null) return true;
+		}
+        return false;
+    }
+
+	public void OnformChange(ItemStack itemstack, Player player) {
+		super.OnformChange(itemstack, player);
+
+		Level level = player.level();
+
+		if (!paradxSummoned(player) && itemstack.getItem() == Ex_Aid_Rider_Items.GAMER_DRIVER_EX_AID.get()) {
+			if (RiderDriverItem.get_Form_Item(itemstack, 1)==Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_R.get() || RiderDriverItem.get_Form_Item(itemstack, 1)==Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get()) {
+				BaseSummonEntity paradx = MobsCore.PARADX_SUMMON.get().create(level);
+				if (paradx != null) {
+					paradx.moveTo(player.getX(), player.getY()+1, player.getZ(), player.getYRot(), player.getXRot());
+					paradx.setTame(true);
+					paradx.setOwnerUUID(player.getUUID());
+					if (RiderDriverItem.get_Form_Item(itemstack, 1)==Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get()) {
+						paradx.setItemSlot(EquipmentSlot.FEET, new ItemStack(Ex_Aid_Rider_Items.GAMER_DRIVER_PARA_DX.get()));
+						RiderDriverItem.set_Form_Item(paradx.getItemBySlot(EquipmentSlot.FEET), Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get(), 1);
+					}
+					level.addFreshEntity(paradx);
+				}
+			}
+		}
+	}
+
 	@Override
 	public String GET_TEXT(ItemStack itemstack, EquipmentSlot equipmentSlot, LivingEntity rider,String riderName)
 	{

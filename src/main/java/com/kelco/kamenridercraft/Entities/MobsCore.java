@@ -620,7 +620,7 @@ public class MobsCore {
                   () -> EntityType.Builder.of(ParaDXSummonEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":paradx_summon"));
 
           public static final RegistryObject<ForgeSpawnEggItem> PARADX_SUMMON_SPAWN_EGG = ITEMS.register("paradx_summon_spawn_egg",
-                  () -> new ForgeSpawnEggItem(PARADX_SUMMON, 0xff0000, 0x2a00ff, new Item.Properties()));
+                  () -> new ForgeSpawnEggItem(PARADX_SUMMON, 0xffa500, 0x00bccf, new Item.Properties()));
       
           
     public static void register(IEventBus eventBus) {
