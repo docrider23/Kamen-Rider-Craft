@@ -82,10 +82,11 @@ public class MomotarosEntity extends BaseAllyEntity {
         }
 	}
 	
-	public final InteractionResult mobInteract(Level p_30411_, Player p_30412_, InteractionHand p_30413_) {
+	public final InteractionResult mobInteract(Player p_30412_, InteractionHand p_30413_) {
 	      ItemStack itemstack = p_30412_.getItemInHand(p_30413_);
-	      if (p_30411_.isClientSide) {
-	         boolean flag = this.isOwnedBy(p_30412_) || this.isTame() || itemstack.is(Items.PUMPKIN_PIE) && !this.isTame() && !this.isAngry();
+		  Level level = this.level();
+		  if (level.isClientSide) {
+	         boolean flag = this.isOwnedBy(p_30412_) || this.isTame() || (itemstack.is(Items.PUMPKIN_PIE) && !this.isTame() && !this.isAngry());
 	         return flag ? InteractionResult.CONSUME : InteractionResult.PASS;
 	      } else if (this.isTame()) {
 	         if (this.isFood(itemstack) && this.getHealth() < this.getMaxHealth()) {

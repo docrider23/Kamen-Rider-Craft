@@ -2,6 +2,8 @@ package com.kelco.kamenridercraft.client.models;
 
 
 
+import java.util.Random;
+
 import com.mojang.blaze3d.vertex.PoseStack;
 
 import net.minecraft.client.model.AnimationUtils;
@@ -9,9 +11,12 @@ import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.PlayerModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
+import net.minecraft.core.BlockPos;
+import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.ItemStack;
@@ -31,7 +36,7 @@ public class BasicMobModel<T extends Mob> extends PlayerModel<T> {
 	   super(p_171090_, false);
    }
 
-   public void prepareMobModel(T p_103793_, float p_103794_, float p_103795_, float p_103796_) {
+   public void prepareMobModel(T p_103793_, float p_103367_, float p_103795_, float p_103796_) {
       this.rightArmPose = HumanoidModel.ArmPose.EMPTY;
       this.leftArmPose = HumanoidModel.ArmPose.EMPTY;
       ItemStack itemstack = p_103793_.getItemInHand(InteractionHand.MAIN_HAND);
@@ -43,11 +48,11 @@ public class BasicMobModel<T extends Mob> extends PlayerModel<T> {
          }
       }
 
-      super.prepareMobModel(p_103793_, p_103794_, p_103795_, p_103796_);
+      super.prepareMobModel(p_103793_, p_103795_, p_103795_, p_103796_);
    }
    
    public void setupAnim(T p_103366_, float p_103367_, float p_103368_, float p_103369_, float p_103370_, float p_103371_) {
-	      this.body.loadPose(this.bodyDefault);
+		  this.body.loadPose(this.bodyDefault);
 	      this.head.loadPose(this.headDefault);
 		  this.leftArm.loadPose(this.leftArmDefault);
 		  this.rightArm.loadPose(this.rightArmDefault);
@@ -56,6 +61,21 @@ public class BasicMobModel<T extends Mob> extends PlayerModel<T> {
 	          if (p_103366_.isAggressive() && p_103366_.getMainHandItem().getItem() instanceof TieredItem) {
 	            this.holdWeaponHigh(p_103366_);
 	         }
+
+		  if (p_103366_ instanceof TamableAnimal && ((TamableAnimal) p_103366_).isInSittingPose()) {
+		  	this.rightArm.xRot += (-(float)Math.PI / 5F);
+		  	this.leftArm.xRot += (-(float)Math.PI / 5F);
+		  	this.rightLeg.xRot = -1.4137167F;
+		  	this.rightLeg.yRot = ((float)Math.PI / 10F);
+		  	this.rightLeg.zRot = 0.07853982F;
+		  	this.leftLeg.xRot = -1.4137167F;
+		  	this.leftLeg.yRot = (-(float)Math.PI / 10F);
+		  	this.leftLeg.zRot = -0.07853982F;
+			this.head.y -= -10.0F;
+			for( ModelPart part : this.bodyParts() ){ 
+				part.y -= -10.0F;
+			}
+		  }
 
 	      this.leftPants.copyFrom(this.leftLeg);
 	      this.rightPants.copyFrom(this.rightLeg);

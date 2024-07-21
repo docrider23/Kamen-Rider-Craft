@@ -89,9 +89,10 @@ public class AnkhEntity extends BaseAllyEntity implements GeoEntity {
 
 
 	
-	public InteractionResult mobInteract(Level p_30411_, Player p_30412_, InteractionHand p_30413_) {
+	public InteractionResult mobInteract(Player p_30412_, InteractionHand p_30413_) {
 	      ItemStack itemstack = p_30412_.getItemInHand(p_30413_);
-	      if (p_30411_.isClientSide) {
+		  Level level = this.level();
+		  if (level.isClientSide) {
 	         boolean flag = this.isOwnedBy(p_30412_) || this.isTame() || (itemstack.is(OOO_Rider_Items.GREEED_BLET_ANKH_LOST.get())
 			 				|| itemstack.is(Modded_item_core.ICE_POP.get()) || itemstack.is(Modded_item_core.ICE_POP2.get()) || itemstack.is(Modded_item_core.ICE_POP3.get()))
 			 				&& !this.isTame()&& !this.isAngry();

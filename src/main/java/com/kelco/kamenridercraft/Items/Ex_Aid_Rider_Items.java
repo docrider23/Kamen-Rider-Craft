@@ -987,7 +987,7 @@ public class Ex_Aid_Rider_Items {
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<BaseBlasterItem> GASHACON_SPARROW_ARROW = ITEMS.register("gashacon_sparrow_arrow",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
+			() -> new BaseBlasterItem(Tiers.DIAMOND, 10, -2.4F, new Item.Properties().craftRemainder(GASHACON_SPARROW_SICKLE_A.get())).AddToTabList(RiderTabs.EX_AID_TAB_ITEM)
 			.ChangeRepairItem(BLANK_GASHAT.get()));
 
 	public static final RegistryObject<BaseBlasterItem> GASHACON_BUGVISOR = ITEMS.register("gashacon_bugvisor",
