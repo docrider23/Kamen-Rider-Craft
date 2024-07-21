@@ -1,4 +1,4 @@
-package com.kelco.kamenridercraft.Entities.summons;
+package com.kelco.kamenridercraft.Entities.allies;
 
 
 import java.util.UUID;
@@ -6,6 +6,7 @@ import java.util.UUID;
 import javax.annotation.Nullable;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -17,7 +18,6 @@ import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.NeutralMob;
 import net.minecraft.world.entity.TamableAnimal;
@@ -29,6 +29,7 @@ import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.SitWhenOrderedToGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
@@ -40,25 +41,20 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
 
-public class BaseSummonEntity extends TamableAnimal implements NeutralMob {
-   private static final EntityDataAccessor<Integer> DATA_REMAINING_ANGER_TIME = SynchedEntityData.defineId(BaseSummonEntity.class, EntityDataSerializers.INT);
+public class BaseAllyEntity extends TamableAnimal implements NeutralMob {
+   private static final EntityDataAccessor<Integer> DATA_REMAINING_ANGER_TIME = SynchedEntityData.defineId(BaseAllyEntity.class, EntityDataSerializers.INT);
    private static final UniformInt PERSISTENT_ANGER_TIME = TimeUtil.rangeOfSeconds(20, 39);
 
    @Nullable
    private UUID persistentAngerTarget;
 	
-	public String NAME = "decade_illusion";
+	public String NAME = "momotaros";
 
 	public int Scale=1;
 
-	public BaseSummonEntity(EntityType<? extends BaseSummonEntity> entityType, Level level) {
+	public BaseAllyEntity(EntityType<? extends BaseAllyEntity> entityType, Level level) {
 		super(entityType, level);
 		this.setTame(false);
-		this.setDropChance(EquipmentSlot.HEAD, 0.0f);
-		this.setDropChance(EquipmentSlot.CHEST, 0.0f);
-		this.setDropChance(EquipmentSlot.LEGS, 0.0f);
-		this.setDropChance(EquipmentSlot.FEET, 0.0f);
-		this.setDropChance(EquipmentSlot.MAINHAND, 0.0f);
 		
 		}
 
@@ -66,16 +62,22 @@ public class BaseSummonEntity extends TamableAnimal implements NeutralMob {
 		return Mob.createMobAttributes().add(Attributes.MOVEMENT_SPEED, (double)0.3F).add(Attributes.MAX_HEALTH, 40.0D).add(Attributes.ATTACK_DAMAGE, 2.0D).build();
 	}
 
+   protected void defineSynchedData() {
+      super.defineSynchedData();
+      this.entityData.define(DATA_REMAINING_ANGER_TIME, 0);
+   }
+
 	
 
 	protected void registerGoals() {
 		this.goalSelector.addGoal(1, new FloatGoal(this));
 		this.goalSelector.addGoal(1, new PanicGoal(this, 1.4D));
-		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.0D, true));
-		this.goalSelector.addGoal(3, new FollowOwnerGoal(this, 1.0D, 10.0F, 2.0F, false));
-		this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
-		this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 8.0F));
-		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(2, new SitWhenOrderedToGoal(this));
+		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.0D, true));
+		this.goalSelector.addGoal(4, new FollowOwnerGoal(this, 1.0D, 10.0F, 2.0F, false));
+		this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0D));
+		this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 8.0F));
+		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
 		this.targetSelector.addGoal(1, new OwnerHurtByTargetGoal(this));
 		this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, 5, false, false, (p_28879_) -> {
@@ -85,15 +87,6 @@ public class BaseSummonEntity extends TamableAnimal implements NeutralMob {
 		}));
 
 	}
-
-	@Override
-	public void die(DamageSource p_21809_) {
-		  this.setOwnerUUID(null);
-      super.die(p_21809_);
- 
-	}
-
-	
 	   
 	   protected SoundEvent getAmbientSound() {
 		         return SoundEvents.VILLAGER_AMBIENT;
@@ -102,6 +95,26 @@ public class BaseSummonEntity extends TamableAnimal implements NeutralMob {
 	protected void playStepSound(BlockPos p_30415_, BlockState p_30416_) {
 		
 	}
+
+	public void aiStep() {
+	   super.aiStep();
+	   Level level = this.level();
+	   
+	   if (!level.isClientSide) {
+		  this.updatePersistentAnger((ServerLevel)this.level(), true);
+	   }
+ 
+	}
+
+   public void addAdditionalSaveData(CompoundTag p_30418_) {
+      super.addAdditionalSaveData(p_30418_);
+      this.addPersistentAngerSaveData(p_30418_);
+   }
+
+   public void readAdditionalSaveData(CompoundTag p_30402_) {
+      super.readAdditionalSaveData(p_30402_);
+      this.readPersistentAngerSaveData(this.level(), p_30402_);
+   }
 
 	protected SoundEvent getHurtSound(DamageSource p_30424_) {
 		return SoundEvents.VILLAGER_HURT;

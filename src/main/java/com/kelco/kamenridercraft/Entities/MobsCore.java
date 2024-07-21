@@ -6,6 +6,11 @@ import com.kelco.kamenridercraft.Entities.Bikes.HardboilderEntity;
 import com.kelco.kamenridercraft.Entities.Bikes.MachineTornadorEntity;
 import com.kelco.kamenridercraft.Entities.Bikes.SkullboilderEntity;
 import com.kelco.kamenridercraft.Entities.Bikes.baseBikeEntity;
+import com.kelco.kamenridercraft.Entities.allies.AnkhEntity;
+import com.kelco.kamenridercraft.Entities.allies.MomotarosEntity;
+import com.kelco.kamenridercraft.Entities.allies.UratarosEntity;
+import com.kelco.kamenridercraft.Entities.allies.KintarosEntity;
+import com.kelco.kamenridercraft.Entities.allies.RyutarosEntity;
 import com.kelco.kamenridercraft.Entities.bosses.AncientOOOEntity;
 import com.kelco.kamenridercraft.Entities.bosses.AnkhCompleteEntity;
 import com.kelco.kamenridercraft.Entities.bosses.AnkhLostEntity;
@@ -267,6 +272,30 @@ public class MobsCore {
 
      public static final RegistryObject<ForgeSpawnEggItem> GAOH_SPAWN_EGG = ITEMS.register("gaoh_spawn_egg",
              () -> new ForgeSpawnEggItem(GAOH,  0x1d1d1d,0xdea302, new Item.Properties()));
+
+     public static final RegistryObject<EntityType<MomotarosEntity>> MOMOTAROS = MOBLIST.register("momotaros",
+             () -> EntityType.Builder.of(MomotarosEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":momotaros"));
+
+     public static final RegistryObject<ForgeSpawnEggItem> MOMOTAROS_SPAWN_EGG = ITEMS.register("momotaros_spawn_egg",
+             () -> new ForgeSpawnEggItem(MOMOTAROS,  0x790000,0xef0000, new Item.Properties()));
+
+     public static final RegistryObject<EntityType<UratarosEntity>> URATAROS = MOBLIST.register("urataros",
+             () -> EntityType.Builder.of(UratarosEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":urataros"));
+
+     public static final RegistryObject<ForgeSpawnEggItem> URATAROS_SPAWN_EGG = ITEMS.register("urataros_spawn_egg",
+             () -> new ForgeSpawnEggItem(URATAROS,  0x0075ec,0x003d7d, new Item.Properties()));
+
+     public static final RegistryObject<EntityType<KintarosEntity>> KINTAROS = MOBLIST.register("kintaros",
+             () -> EntityType.Builder.of(KintarosEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":kintaros"));
+
+     public static final RegistryObject<ForgeSpawnEggItem> KINTAROS_SPAWN_EGG = ITEMS.register("kintaros_spawn_egg",
+             () -> new ForgeSpawnEggItem(KINTAROS,  0x212121,0xd2a900, new Item.Properties()));
+
+     public static final RegistryObject<EntityType<RyutarosEntity>> RYUTAROS = MOBLIST.register("ryutaros",
+             () -> EntityType.Builder.of(RyutarosEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":ryutaros"));
+
+     public static final RegistryObject<ForgeSpawnEggItem> RYUTAROS_SPAWN_EGG = ITEMS.register("ryutaros_spawn_egg",
+             () -> new ForgeSpawnEggItem(RYUTAROS,  0x3b114e,0x2a0b38, new Item.Properties()));
 
 
      public static final RegistryObject<EntityType<MasqueradeEntity>> MASQUERADE = MOBLIST.register("masquerade",

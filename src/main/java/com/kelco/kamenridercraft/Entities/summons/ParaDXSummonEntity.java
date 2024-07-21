@@ -40,7 +40,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class ParaDXSummonEntity extends BaseSummonEntity {
 
-	public ParaDXSummonEntity(EntityType<? extends BaseSummonEntity> type, Level level) {
+	public ParaDXSummonEntity(EntityType<? extends ParaDXSummonEntity> type, Level level) {
 		super(type, level);
 		NAME="paradx_summon";
 		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Ex_Aid_Rider_Items.EX_AIDHELMET.get()));

@@ -1,33 +1,23 @@
-package com.kelco.kamenridercraft.Entities;
+package com.kelco.kamenridercraft.Entities.allies;
 
 
-import javax.annotation.Nullable;
-
-import com.kelco.kamenridercraft.Entities.bosses.AnkhCompleteEntity;
-import com.kelco.kamenridercraft.Entities.footSoldiers.BaseHenchmenEntity;
-import com.kelco.kamenridercraft.Entities.footSoldiers.YummyEntity;
-import com.kelco.kamenridercraft.Items.Modded_item_core;
-import com.kelco.kamenridercraft.Items.OOO_Rider_Items;
+import com.kelco.kamenridercraft.Entities.footSoldiers.NewMoleImaginSandEntity;
+import com.kelco.kamenridercraft.Items.Den_O_Rider_Items;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.BreedGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.FollowOwnerGoal;
-import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.PanicGoal;
@@ -38,29 +28,22 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.animal.Wolf;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
-import software.bernie.geckolib.animatable.GeoEntity;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.core.animation.*;
-import software.bernie.geckolib.util.GeckoLibUtil;
 
 
-public class AnkhEntity extends Wolf implements GeoEntity {
+public class KintarosEntity extends BaseAllyEntity {
 	
-	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-	
-	public AnkhEntity(EntityType<? extends Wolf> entityType, Level level) {
+	public KintarosEntity(EntityType<? extends KintarosEntity> entityType, Level level) {
 		super(entityType, level);
+		NAME = "kintaros";
 		
 		}
 
@@ -73,32 +56,36 @@ public class AnkhEntity extends Wolf implements GeoEntity {
 		this.goalSelector.addGoal(1, new FloatGoal(this));
 		this.goalSelector.addGoal(1, new PanicGoal(this, 1.4D));
 		this.goalSelector.addGoal(2, new SitWhenOrderedToGoal(this));
-		this.goalSelector.addGoal(4, new LeapAtTargetGoal(this, 0.4F));
-		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.0D, true));
-		this.goalSelector.addGoal(6, new FollowOwnerGoal(this, 1.0D, 10.0F, 2.0F, false));
-		this.goalSelector.addGoal(7, new BreedGoal(this, 1.0D));
-		this.goalSelector.addGoal(8, new WaterAvoidingRandomStrollGoal(this, 1.0D));
-		this.goalSelector.addGoal(10, new LookAtPlayerGoal(this, Player.class, 8.0F));
-		this.goalSelector.addGoal(10, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.0D, true));
+		this.goalSelector.addGoal(4, new FollowOwnerGoal(this, 1.0D, 10.0F, 2.0F, false));
+		this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0D));
+		this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 8.0F));
+		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
 		this.targetSelector.addGoal(1, new OwnerHurtByTargetGoal(this));
 		this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, 5, false, false, (p_28879_) -> {
 			if (isTame()) {
-				return p_28879_ instanceof Enemy && !(p_28879_ instanceof Creeper)&& !(p_28879_ instanceof AnkhCompleteEntity);
+				return p_28879_ instanceof Enemy && !(p_28879_ instanceof Creeper);
 			}else return false;
 		}));
-		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal<>(this, YummyEntity.class, false));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal<>(this, NewMoleImaginSandEntity.class, false));
 
 	}
 
-
+	@Override
+	public void setTame(boolean p_30443_) {
+		super.setTame(p_30443_);
+        if (p_30443_) {
+            this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(40.0D);
+            this.setHealth(40.0F);
+            this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Den_O_Rider_Items.KINTAROS_AX.get()));
+        }
+	}
 	
 	public InteractionResult mobInteract(Level p_30411_, Player p_30412_, InteractionHand p_30413_) {
 	      ItemStack itemstack = p_30412_.getItemInHand(p_30413_);
-	      Item item = itemstack.getItem();
 	      if (p_30411_.isClientSide) {
-	         boolean flag = this.isOwnedBy(p_30412_) || this.isTame() || itemstack.is(OOO_Rider_Items.GREEED_BLET_ANKH_LOST.get())|| itemstack.is(Modded_item_core.ICE_POP.get()) && !this.isTame()
-	        		 || itemstack.is(Modded_item_core.ICE_POP2.get()) && !this.isTame()|| itemstack.is(Modded_item_core.ICE_POP3.get()) && !this.isTame()&& !this.isAngry();
+	         boolean flag = this.isOwnedBy(p_30412_) || this.isTame() || itemstack.is(Items.PUMPKIN_PIE) && !this.isTame() && !this.isAngry();
 	         return flag ? InteractionResult.CONSUME : InteractionResult.PASS;
 	      } else if (this.isTame()) {
 	         if (this.isFood(itemstack) && this.getHealth() < this.getMaxHealth()) {
@@ -110,17 +97,6 @@ public class AnkhEntity extends Wolf implements GeoEntity {
 	            this.gameEvent(GameEvent.EAT, this);
 	            return InteractionResult.SUCCESS;
 	         } else {
-	            if (item == OOO_Rider_Items.GREEED_BLET_ANKH_LOST.get()) {
-	            	
-	            	//p_30412_.sendSystemMessage(Component.translatable("TEST NOT FINISHED").withStyle(ChatFormatting.YELLOW));
-	            	BaseHenchmenEntity boss = MobsCore.ANKHCOMPLETE.get().create(this.level());
-	    			if (boss != null) {
-	    				boss.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), this.getXRot());
-	    				this.level().addFreshEntity(boss);
-	    			}
-	            	this.discard();
-	                   }
-
 	            InteractionResult interactionresult = super.mobInteract(p_30412_, p_30413_);
 	            if ((!interactionresult.consumesAction() || this.isBaby()) && this.isOwnedBy(p_30412_)) {
 	               this.setOrderedToSit(!this.isOrderedToSit());
@@ -132,9 +108,7 @@ public class AnkhEntity extends Wolf implements GeoEntity {
 	               return interactionresult;
 	            }
 	         }
-	      } else if (itemstack.is(Modded_item_core.ICE_POP.get()) && !this.isAngry()
-	    		  ||itemstack.is(Modded_item_core.ICE_POP2.get()) && !this.isAngry()
-	    		  ||itemstack.is(Modded_item_core.ICE_POP3.get()) && !this.isAngry()) {
+	      } else if (itemstack.is(Items.PUMPKIN_PIE) && !this.isAngry()) {
 	         if (!p_30412_.getAbilities().instabuild) {
 	            itemstack.shrink(1);
 	         }
@@ -178,40 +152,10 @@ public class AnkhEntity extends Wolf implements GeoEntity {
 	public boolean canMate(Animal p_30392_) {
 	            return false;
 	   }
-
-	   @Nullable
-	   public Wolf getBreedOffspring(ServerLevel p_149088_, AgeableMob p_149089_) {
-	
-	      return null;
-	   }
-
-	   
-	   public static boolean checkAnkhSpawnRules(EntityType<AnkhEntity> p_218256_, LevelAccessor p_218257_, MobSpawnType p_218258_, BlockPos p_218259_, RandomSource p_218260_) {
-		      return p_218257_.getBlockState(p_218259_.below()).is(Blocks.SAND) && isBrightEnoughToSpawn(p_218257_, p_218259_);
-		   }
 	   
 	   public boolean isFood(ItemStack p_30440_) {
 		      Item item = p_30440_.getItem();
 
-		    	  
-		      
-		      return item ==Modded_item_core.ICE_POP.get()||item ==Modded_item_core.ICE_POP2.get()||item ==Modded_item_core.ICE_POP3.get();
+		      return item ==Items.PUMPKIN_PIE;
 		   }
-
-
-		@Override
-		public AnimatableInstanceCache getAnimatableInstanceCache() {
-			return this.cache;
-		}
-		
-		// Add our generic idle animation controller
-		@Override
-		public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-			
-			RawAnimation IDLE = RawAnimation.begin().thenLoop("animation.ankh.idle");
-			RawAnimation WALK = RawAnimation.begin().thenLoop("animation.ankh.walk");
-			RawAnimation SIT = RawAnimation.begin().thenPlay("animation.ankh.sit");
-			
-			controllers.add(new AnimationController<AnkhEntity>(this, "Walk/Idle", 0, state -> state.setAndContinue(!isInSittingPose()? state.isMoving() ? WALK : IDLE :SIT)));
-		}
 }

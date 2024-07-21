@@ -38,7 +38,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class DecadeIllusionEntity extends BaseSummonEntity {
 
-	public DecadeIllusionEntity(EntityType<? extends BaseSummonEntity> type, Level level) {
+	public DecadeIllusionEntity(EntityType<? extends DecadeIllusionEntity> type, Level level) {
 		super(type, level);
 		NAME="decade_illusion";
 		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Decade_Rider_Items.DECADEHELMET.get()));

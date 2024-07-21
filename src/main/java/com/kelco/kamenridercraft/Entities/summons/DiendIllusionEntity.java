@@ -56,7 +56,7 @@ public class DiendIllusionEntity extends BaseSummonEntity implements RangedAttac
       }
    };
 
-	public DiendIllusionEntity(EntityType<? extends BaseSummonEntity> type, Level level) {
+	public DiendIllusionEntity(EntityType<? extends DiendIllusionEntity> type, Level level) {
 		super(type, level);
 		NAME="diend_illusion";
 		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Decade_Rider_Items.DECADEHELMET.get()));

@@ -433,6 +433,10 @@ public class RiderTabs {
 			event.accept(MobsCore.NEW_MOLE_IMAGIN_SPAWN_EGG);
 			event.accept(MobsCore.NEW_MOLE_IMAGIN_SAND_SPAWN_EGG);
 			event.accept(MobsCore.GAOH_SPAWN_EGG);
+			event.accept(MobsCore.MOMOTAROS_SPAWN_EGG);
+			event.accept(MobsCore.URATAROS_SPAWN_EGG);
+			event.accept(MobsCore.KINTAROS_SPAWN_EGG);
+			event.accept(MobsCore.RYUTAROS_SPAWN_EGG);
 			
 			event.accept(MobsCore.MASQUERADE_SPAWN_EGG);
 			event.accept(MobsCore.CLAYDOLL_DOPANT_SPAWN_EGG);

@@ -6,6 +6,7 @@ import com.kelco.kamenridercraft.Items.Ryuki_Rider_Items;
 import com.kelco.kamenridercraft.Items.Geats_Rider_Items;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseSwordItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
+import com.kelco.kamenridercraft.client.renderer.AllyEntityRenderer;
 import com.kelco.kamenridercraft.client.renderer.AnkhRenderer;
 import com.kelco.kamenridercraft.client.renderer.BasicEntityRenderer;
 import com.kelco.kamenridercraft.client.renderer.BikeRenderer;
@@ -192,6 +193,10 @@ public class ModClientEvents {
 		event.registerEntityRenderer(MobsCore.NEW_MOLE_IMAGIN.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.NEW_MOLE_IMAGIN_SAND.get(), NewMoleImaginSandRenderer::new);
 		event.registerEntityRenderer(MobsCore.GAOH.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.MOMOTAROS.get(), AllyEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.URATAROS.get(), AllyEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.KINTAROS.get(), AllyEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.RYUTAROS.get(), AllyEntityRenderer::new);
 
 		event.registerEntityRenderer(MobsCore.MASQUERADE.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.WEATHER_DOPANT.get(), BasicEntityRenderer::new);

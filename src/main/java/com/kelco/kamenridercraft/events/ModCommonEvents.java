@@ -3,10 +3,14 @@ package com.kelco.kamenridercraft.events;
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
 import com.kelco.kamenridercraft.Blocks.Rider_Blocks;
 import com.kelco.kamenridercraft.Effect.Effect_core;
-import com.kelco.kamenridercraft.Entities.AnkhEntity;
 import com.kelco.kamenridercraft.Entities.MobsCore;
 import com.kelco.kamenridercraft.Entities.Bikes.baseBikeEntity;
 import com.kelco.kamenridercraft.Entities.Villager.RiderVillagers;
+import com.kelco.kamenridercraft.Entities.allies.AnkhEntity;
+import com.kelco.kamenridercraft.Entities.allies.MomotarosEntity;
+import com.kelco.kamenridercraft.Entities.allies.UratarosEntity;
+import com.kelco.kamenridercraft.Entities.allies.KintarosEntity;
+import com.kelco.kamenridercraft.Entities.allies.RyutarosEntity;
 import com.kelco.kamenridercraft.Entities.bosses.AncientOOOEntity;
 import com.kelco.kamenridercraft.Entities.bosses.AnkhCompleteEntity;
 import com.kelco.kamenridercraft.Entities.bosses.AnkhLostEntity;
@@ -500,6 +504,10 @@ public class ModCommonEvents {
 		event.put(MobsCore.NEW_MOLE_IMAGIN.get(), NewMoleImaginEntity.setAttributes());
 		event.put(MobsCore.NEW_MOLE_IMAGIN_SAND.get(), NewMoleImaginSandEntity.setAttributes());
 		event.put(MobsCore.GAOH.get(), GaohEntity.setAttributes());
+		event.put(MobsCore.MOMOTAROS.get(), MomotarosEntity.setAttributes());
+		event.put(MobsCore.URATAROS.get(), UratarosEntity.setAttributes());
+		event.put(MobsCore.KINTAROS.get(), KintarosEntity.setAttributes());
+		event.put(MobsCore.RYUTAROS.get(), RyutarosEntity.setAttributes());
 
 		event.put(MobsCore.MASQUERADE.get(), MasqueradeEntity.setAttributes());
 		event.put(MobsCore.CLAYDOLL_DOPANT.get(), ClayDollDopantEntity.setAttributes());        

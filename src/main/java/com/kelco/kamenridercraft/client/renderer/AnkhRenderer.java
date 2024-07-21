@@ -1,7 +1,7 @@
 package com.kelco.kamenridercraft.client.renderer;
 
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
-import com.kelco.kamenridercraft.Entities.AnkhEntity;
+import com.kelco.kamenridercraft.Entities.allies.AnkhEntity;
 import com.kelco.kamenridercraft.client.models.AnkhModel;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.MultiBufferSource;
