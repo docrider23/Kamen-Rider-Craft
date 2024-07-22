@@ -6,6 +6,7 @@ import java.util.UUID;
 import javax.annotation.Nullable;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -66,6 +67,11 @@ public class BaseSummonEntity extends TamableAnimal implements NeutralMob {
 		return Mob.createMobAttributes().add(Attributes.MOVEMENT_SPEED, (double)0.3F).add(Attributes.MAX_HEALTH, 40.0D).add(Attributes.ATTACK_DAMAGE, 2.0D).build();
 	}
 
+	protected void defineSynchedData() {
+	   super.defineSynchedData();
+	   this.entityData.define(DATA_REMAINING_ANGER_TIME, 0);
+	}
+
 	
 
 	protected void registerGoals() {
@@ -92,6 +98,16 @@ public class BaseSummonEntity extends TamableAnimal implements NeutralMob {
       super.die(p_21809_);
  
 	}
+
+   public void addAdditionalSaveData(CompoundTag p_30418_) {
+      super.addAdditionalSaveData(p_30418_);
+      this.addPersistentAngerSaveData(p_30418_);
+   }
+
+   public void readAdditionalSaveData(CompoundTag p_30402_) {
+      super.readAdditionalSaveData(p_30402_);
+      this.readPersistentAngerSaveData(this.level(), p_30402_);
+   }
 
 	
 	   

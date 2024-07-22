@@ -1,5 +1,6 @@
 package com.kelco.kamenridercraft.Entities.summons;
 
+import com.kelco.kamenridercraft.Entities.allies.BaseAllyEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ShockerCombatmanEntity;
 import com.kelco.kamenridercraft.Items.Decade_Rider_Items;
 
@@ -21,6 +22,7 @@ import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
@@ -77,9 +79,9 @@ public class DecadeIllusionEntity extends BaseSummonEntity {
 
 		if ( this.getOwner() instanceof Player owner) {
 			if(owner.getItemBySlot(EquipmentSlot.FEET).getItem()!=Decade_Rider_Items.DECADRIVER.get()&&owner.getItemBySlot(EquipmentSlot.FEET).getItem()!=Decade_Rider_Items.DARK_DECADRIVER.get()) this.setHealth(0);
-			if(owner.getItemBySlot(EquipmentSlot.HEAD).getItem()!=Decade_Rider_Items.DECADEHELMET.get()) this.setHealth(0);
-			if(owner.getItemBySlot(EquipmentSlot.CHEST).getItem()!=Decade_Rider_Items.DECADECHESTPLATE.get()) this.setHealth(0);
-			if(owner.getItemBySlot(EquipmentSlot.LEGS).getItem()!=Decade_Rider_Items.DECADELEGGINGS.get()) this.setHealth(0);
+			if(owner.getItemBySlot(EquipmentSlot.HEAD).getItem()!=Decade_Rider_Items.DECADEHELMET.get()
+			||owner.getItemBySlot(EquipmentSlot.CHEST).getItem()!=Decade_Rider_Items.DECADECHESTPLATE.get()
+			||owner.getItemBySlot(EquipmentSlot.LEGS).getItem()!=Decade_Rider_Items.DECADELEGGINGS.get()) this.setHealth(0);
 		}    	
 		else this.setHealth(0);
 
@@ -112,8 +114,11 @@ public class DecadeIllusionEntity extends BaseSummonEntity {
 
 	public boolean wantsToAttack(LivingEntity p_30389_, LivingEntity p_30390_) {
 		if (!(p_30389_ instanceof Creeper)&&!(p_30389_ instanceof Ghast)) {
-			if (p_30389_ instanceof DecadeIllusionEntity) {
-				DecadeIllusionEntity illusion = (DecadeIllusionEntity)p_30389_;
+        	if (p_30389_ instanceof BaseAllyEntity) {
+        	    BaseAllyEntity illusion = (BaseAllyEntity)p_30389_;
+        	    return !illusion.isTame() || illusion.getOwner() != p_30390_;
+			} else if (p_30389_ instanceof BaseSummonEntity) {
+				BaseSummonEntity illusion = (BaseSummonEntity)p_30389_;
 				return !illusion.isTame() || illusion.getOwner() != p_30390_;
 			} else if (p_30389_ instanceof Player && p_30390_ instanceof Player && !((Player)p_30390_).canHarmPlayer((Player)p_30389_)) {
 				return false;

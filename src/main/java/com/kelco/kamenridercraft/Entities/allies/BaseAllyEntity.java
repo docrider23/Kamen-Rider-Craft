@@ -5,6 +5,8 @@ import java.util.UUID;
 
 import javax.annotation.Nullable;
 
+import com.kelco.kamenridercraft.Entities.summons.BaseSummonEntity;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -15,17 +17,15 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.TimeUtil;
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.NeutralMob;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.BreedGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.FollowOwnerGoal;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
@@ -37,6 +37,7 @@ import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
+import net.minecraft.world.entity.animal.horse.AbstractHorse;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
@@ -156,4 +157,20 @@ public class BaseAllyEntity extends TamableAnimal implements NeutralMob {
    public void setPersistentAngerTarget(@Nullable UUID p_30400_) {
       this.persistentAngerTarget = p_30400_;
    }
+
+	public boolean wantsToAttack(LivingEntity p_30389_, LivingEntity p_30390_) {
+        if (p_30389_ instanceof BaseAllyEntity) {
+            BaseAllyEntity illusion = (BaseAllyEntity)p_30389_;
+            return !illusion.isTame() || illusion.getOwner() != p_30390_;
+		} else if (p_30389_ instanceof BaseSummonEntity) {
+			BaseSummonEntity illusion = (BaseSummonEntity)p_30389_;
+			return !illusion.isTame() || illusion.getOwner() != p_30390_;
+		} else if (p_30389_ instanceof Player && p_30390_ instanceof Player && !((Player)p_30390_).canHarmPlayer((Player)p_30389_)) {
+			return false;
+		} else if (p_30389_ instanceof AbstractHorse && ((AbstractHorse)p_30389_).isTamed()) {
+			return false;
+		} else {
+			return !(p_30389_ instanceof TamableAnimal) || !((TamableAnimal)p_30389_).isTame();
+		}
+	}
 }

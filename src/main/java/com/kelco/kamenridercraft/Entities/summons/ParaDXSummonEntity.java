@@ -1,5 +1,6 @@
 package com.kelco.kamenridercraft.Entities.summons;
 
+import com.kelco.kamenridercraft.Entities.allies.BaseAllyEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.BugsterVirusEntity;
 import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
 import com.kelco.kamenridercraft.Items.Modded_item_core;
@@ -23,6 +24,7 @@ import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
@@ -140,9 +142,12 @@ public class ParaDXSummonEntity extends BaseSummonEntity {
 
 	public boolean wantsToAttack(LivingEntity p_30389_, LivingEntity p_30390_) {
 		if (!(p_30389_ instanceof Creeper)&&!(p_30389_ instanceof Ghast)) {
-			if (p_30389_ instanceof ParaDXSummonEntity) {
-				ParaDXSummonEntity paradx = (ParaDXSummonEntity)p_30389_;
-				return !paradx.isTame() || paradx.getOwner() != p_30390_;
+        	if (p_30389_ instanceof BaseAllyEntity) {
+        	    BaseAllyEntity illusion = (BaseAllyEntity)p_30389_;
+        	    return !illusion.isTame() || illusion.getOwner() != p_30390_;
+			} else if (p_30389_ instanceof BaseSummonEntity) {
+				BaseSummonEntity illusion = (BaseSummonEntity)p_30389_;
+				return !illusion.isTame() || illusion.getOwner() != p_30390_;
 			} else if (p_30389_ instanceof Player && p_30390_ instanceof Player && !((Player)p_30390_).canHarmPlayer((Player)p_30389_)) {
 				return false;
 			} else if (p_30389_ instanceof AbstractHorse && ((AbstractHorse)p_30389_).isTamed()) {

@@ -5,8 +5,10 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.NewMoleImaginSandEntity;
 import com.kelco.kamenridercraft.Items.Den_O_Rider_Items;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.Difficulty;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
@@ -22,6 +24,7 @@ import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.RangedBowAttackGoal;
 import net.minecraft.world.entity.ai.goal.SitWhenOrderedToGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
@@ -30,20 +33,39 @@ import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Enemy;
+import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.projectile.ProjectileUtil;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ProjectileWeaponItem;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 
 
-public class RyutarosEntity extends BaseAllyEntity {
+public class RyutarosEntity extends BaseAllyEntity implements RangedAttackMob {
+   private final RangedBowAttackGoal<RyutarosEntity> bowGoal = new RangedBowAttackGoal<>(this, 1.0D, 20, 15.0F);
+   private final MeleeAttackGoal meleeGoal = new MeleeAttackGoal(this, 1.2D, false) {
+      public void stop() {
+         super.stop();
+         RyutarosEntity.this.stopBeingAngry();
+         RyutarosEntity.this.startPersistentAngerTimer();
+		 RyutarosEntity.this.setAggressive(false);
+      }
+
+      public void start() {
+         super.start();
+		 RyutarosEntity.this.setAggressive(true);
+      }
+   };
 	
 	public RyutarosEntity(EntityType<? extends RyutarosEntity> entityType, Level level) {
 		super(entityType, level);
 		NAME = "ryutaros";
+        this.reassessWeaponGoal();
         
 		}
 
@@ -56,7 +78,6 @@ public class RyutarosEntity extends BaseAllyEntity {
 		this.goalSelector.addGoal(1, new FloatGoal(this));
 		this.goalSelector.addGoal(1, new PanicGoal(this, 1.4D));
 		this.goalSelector.addGoal(2, new SitWhenOrderedToGoal(this));
-		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.0D, true));
 		this.goalSelector.addGoal(4, new FollowOwnerGoal(this, 1.0D, 10.0F, 2.0F, false));
 		this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0D));
 		this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 8.0F));
@@ -65,7 +86,7 @@ public class RyutarosEntity extends BaseAllyEntity {
 		this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, 5, false, false, (p_28879_) -> {
 			if (isTame()) {
-				return p_28879_ instanceof Enemy && !(p_28879_ instanceof Creeper);
+				return p_28879_ instanceof Enemy;
 			}else return false;
 		}));
 		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal<>(this, NewMoleImaginSandEntity.class, false));
@@ -79,6 +100,7 @@ public class RyutarosEntity extends BaseAllyEntity {
             this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(40.0D);
             this.setHealth(40.0F);
             this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Den_O_Rider_Items.RYUVOLVER.get()));
+            this.reassessWeaponGoal();
         }
 	}
 	
@@ -145,6 +167,60 @@ public class RyutarosEntity extends BaseAllyEntity {
 	protected SoundEvent getDeathSound() {
 		return SoundEvents.VILLAGER_HURT;
 	}
+
+    public void reassessWeaponGoal() {
+       if (this.level() != null && !this.level().isClientSide) {
+          this.goalSelector.removeGoal(this.meleeGoal);
+          this.goalSelector.removeGoal(this.bowGoal);
+          ItemStack itemstack = this.getItemInHand(ProjectileUtil.getWeaponHoldingHand(this, item -> item instanceof net.minecraft.world.item.BowItem));
+          if (itemstack.is(Den_O_Rider_Items.RYUVOLVER.get())) {
+             int i = 20;
+             if (this.level().getDifficulty() != Difficulty.HARD) {
+                i = 40;
+             }
+
+             this.bowGoal.setMinAttackInterval(i);
+             this.goalSelector.addGoal(3, this.bowGoal);
+          } else {
+             this.goalSelector.addGoal(3, this.meleeGoal);
+          }
+
+       }
+    }
+
+    public void readAdditionalSaveData(CompoundTag p_32152_) {
+       super.readAdditionalSaveData(p_32152_);
+       this.reassessWeaponGoal();
+    }
+	
+    public void setItemSlot(Level p_32137_, EquipmentSlot p_32138_, ItemStack p_32139_) {
+       super.setItemSlot(p_32138_, p_32139_);
+       if (!p_32137_.isClientSide) {
+          this.reassessWeaponGoal();
+       }
+    }
+
+    public void performRangedAttack(LivingEntity p_32141_, float p_32142_) {
+        ItemStack itemstack = this.getProjectile(this.getItemInHand(ProjectileUtil.getWeaponHoldingHand(this, item -> item instanceof net.minecraft.world.item.BowItem)));
+        AbstractArrow abstractarrow = this.getArrow(itemstack, p_32142_);
+        if (this.getMainHandItem().getItem() instanceof net.minecraft.world.item.BowItem)
+            abstractarrow = ((net.minecraft.world.item.BowItem)this.getMainHandItem().getItem()).customArrow(abstractarrow);
+        double d0 = p_32141_.getX() - this.getX();
+        double d1 = p_32141_.getY(0.3333333333333333D) - abstractarrow.getY();
+        double d2 = p_32141_.getZ() - this.getZ();
+        double d3 = Math.sqrt(d0 * d0 + d2 * d2);
+        abstractarrow.shoot(d0, d1 + d3 * (double)0.2F, d2, 1.6F, (float)(14 - this.level().getDifficulty().getId() * 4));
+        this.playSound(SoundEvents.BLAZE_SHOOT, 1.0F, 1.0F / (this.getRandom().nextFloat() * 0.4F + 0.8F));
+        this.level().addFreshEntity(abstractarrow);
+    }
+
+   protected AbstractArrow getArrow(ItemStack p_32156_, float p_32157_) {
+      return ProjectileUtil.getMobArrow(this, p_32156_, p_32157_);
+   }
+
+   public boolean canFireProjectileWeapon(ProjectileWeaponItem p_32144_) {
+      return p_32144_ == Den_O_Rider_Items.RYUVOLVER.get();
+   }
 
 	   public boolean isBaby() {
 		      return false;

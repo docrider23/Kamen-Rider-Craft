@@ -1,5 +1,6 @@
 package com.kelco.kamenridercraft.Entities.summons;
 
+import com.kelco.kamenridercraft.Entities.allies.BaseAllyEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ShockerCombatmanEntity;
 import com.kelco.kamenridercraft.Items.Decade_Rider_Items;
 
@@ -23,6 +24,7 @@ import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.RangedBowAttackGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
@@ -32,6 +34,7 @@ import net.minecraft.world.entity.animal.horse.AbstractHorse;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.RangedAttackMob;
+import net.minecraft.world.entity.monster.ZombifiedPiglin;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
@@ -41,7 +44,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class DiendIllusionEntity extends BaseSummonEntity implements RangedAttackMob {
-   private final RangedBowAttackGoal<DiendIllusionEntity> rangedGoal = new RangedBowAttackGoal<>(this, 1.0D, 20, 15.0F);
+   private final RangedBowAttackGoal<DiendIllusionEntity> bowGoal = new RangedBowAttackGoal<>(this, 1.0D, 20, 15.0F);
    private final MeleeAttackGoal meleeGoal = new MeleeAttackGoal(this, 1.2D, false) {
       public void stop() {
          super.stop();
@@ -93,10 +96,10 @@ public class DiendIllusionEntity extends BaseSummonEntity implements RangedAttac
 	public void aiStep() {
 
 		if ( this.getOwner() instanceof Player owner) {
-			if(owner.getItemBySlot(EquipmentSlot.FEET).getItem()!=Decade_Rider_Items.DIEND_BELT.get()) this.setHealth(0);
-			if(owner.getItemBySlot(EquipmentSlot.HEAD).getItem()!=Decade_Rider_Items.DECADEHELMET.get()) this.setHealth(0);
-			if(owner.getItemBySlot(EquipmentSlot.CHEST).getItem()!=Decade_Rider_Items.DECADECHESTPLATE.get()) this.setHealth(0);
-			if(owner.getItemBySlot(EquipmentSlot.LEGS).getItem()!=Decade_Rider_Items.DECADELEGGINGS.get()) this.setHealth(0);
+			if(owner.getItemBySlot(EquipmentSlot.FEET).getItem()!=Decade_Rider_Items.DIEND_BELT.get()
+			||owner.getItemBySlot(EquipmentSlot.HEAD).getItem()!=Decade_Rider_Items.DECADEHELMET.get()
+			||owner.getItemBySlot(EquipmentSlot.CHEST).getItem()!=Decade_Rider_Items.DECADECHESTPLATE.get()
+			||owner.getItemBySlot(EquipmentSlot.LEGS).getItem()!=Decade_Rider_Items.DECADELEGGINGS.get()) this.setHealth(0);
 		}    	
 		else this.setHealth(0);
 
@@ -130,7 +133,7 @@ public class DiendIllusionEntity extends BaseSummonEntity implements RangedAttac
     public void reassessWeaponGoal() {
        if (this.level() != null && !this.level().isClientSide) {
           this.goalSelector.removeGoal(this.meleeGoal);
-          this.goalSelector.removeGoal(this.rangedGoal);
+          this.goalSelector.removeGoal(this.bowGoal);
           ItemStack itemstack = this.getItemInHand(ProjectileUtil.getWeaponHoldingHand(this, item -> item instanceof net.minecraft.world.item.BowItem));
           if (itemstack.is(Decade_Rider_Items.DIENDRIVER.get())) {
              int i = 20;
@@ -138,8 +141,8 @@ public class DiendIllusionEntity extends BaseSummonEntity implements RangedAttac
                 i = 40;
              }
 
-             this.rangedGoal.setMinAttackInterval(i);
-             this.goalSelector.addGoal(2, this.rangedGoal);
+             this.bowGoal.setMinAttackInterval(i);
+             this.goalSelector.addGoal(2, this.bowGoal);
           } else {
              this.goalSelector.addGoal(2, this.meleeGoal);
           }
@@ -182,9 +185,12 @@ public class DiendIllusionEntity extends BaseSummonEntity implements RangedAttac
    }
 
 	public boolean wantsToAttack(LivingEntity p_30389_, LivingEntity p_30390_) {
-        if (p_30389_ instanceof DiendIllusionEntity) {
-            DiendIllusionEntity illusion = (DiendIllusionEntity)p_30389_;
+        if (p_30389_ instanceof BaseAllyEntity) {
+            BaseAllyEntity illusion = (BaseAllyEntity)p_30389_;
             return !illusion.isTame() || illusion.getOwner() != p_30390_;
+		} else if (p_30389_ instanceof BaseSummonEntity) {
+			BaseSummonEntity illusion = (BaseSummonEntity)p_30389_;
+			return !illusion.isTame() || illusion.getOwner() != p_30390_;
 		} else if (p_30389_ instanceof Player && p_30390_ instanceof Player && !((Player)p_30390_).canHarmPlayer((Player)p_30389_)) {
 			return false;
 		} else if (p_30389_ instanceof AbstractHorse && ((AbstractHorse)p_30389_).isTamed()) {
