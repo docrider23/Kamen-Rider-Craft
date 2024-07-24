@@ -34,11 +34,14 @@ import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.SitWhenOrderedToGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.ResetUniversalAngerTargetGoal;
 import net.minecraft.world.entity.animal.horse.AbstractHorse;
 import net.minecraft.world.entity.monster.Enemy;
+import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -81,6 +84,7 @@ public class BaseAllyEntity extends TamableAnimal implements NeutralMob {
 		this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0D));
 		this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 8.0F));
 		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
+		this.targetSelector.addGoal(1, (new HurtByTargetGoal(this, BaseAllyEntity.class, BaseSummonEntity.class)).setAlertOthers());
 		this.targetSelector.addGoal(1, new OwnerHurtByTargetGoal(this));
 		this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, 5, false, false, (p_28879_) -> {
@@ -88,6 +92,8 @@ public class BaseAllyEntity extends TamableAnimal implements NeutralMob {
 				return p_28879_ instanceof Enemy;
 			}else return false;
 		}));
+		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, this::isAngryAt));
+      	this.targetSelector.addGoal(5, new ResetUniversalAngerTargetGoal<>(this, true));
 
 	}
 	   
@@ -100,13 +106,13 @@ public class BaseAllyEntity extends TamableAnimal implements NeutralMob {
 	}
 
 	public void aiStep() {
-	   super.aiStep();
+		super.aiStep();
+	   if (!(this instanceof RangedAttackMob) || !(this.getMainHandItem().getItem() instanceof net.minecraft.world.item.BowItem)) this.updateSwingTime();
 	   Level level = this.level();
 	   
 	   if (!level.isClientSide) {
 		  this.updatePersistentAnger((ServerLevel)this.level(), true);
 	   }
- 
 	}
 
    public void addAdditionalSaveData(CompoundTag p_30418_) {
@@ -173,4 +179,14 @@ public class BaseAllyEntity extends TamableAnimal implements NeutralMob {
 			return !(p_30389_ instanceof TamableAnimal) || !((TamableAnimal)p_30389_).isTame();
 		}
 	}
+
+   class AllyPanicGoal extends PanicGoal {
+      public AllyPanicGoal(double p_203124_) {
+         super(BaseAllyEntity.this, p_203124_);
+      }
+
+      protected boolean shouldPanic() {
+         return this.mob.isFreezing() || this.mob.isOnFire();
+      }
+   }
 }

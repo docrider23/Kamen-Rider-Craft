@@ -915,7 +915,7 @@ public class Geats_Rider_Items {
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2F, new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM)
 			.ChangeRepairItem(BLANK_CORE_ID.get()));
 	public static final RegistryObject<SwordItem> NINJA_DUELER = ITEMS.register("ninja_dueler",
-			() -> new BaseSwordItem(Tiers.DIAMOND, 9, -2F, new Item.Properties().craftRemainder(NINJA_DUELER_TWIN_BLADE_MODE.get())).AddToTabList(RiderTabs.GEATS_TAB_ITEM)
+			() -> new BaseSwordItem(Tiers.DIAMOND, 9, -2F, new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM)
 			.ChangeRepairItem(BLANK_CORE_ID.get()));
 
 	public static final RegistryObject<SwordItem> RAISING_SWORD = ITEMS.register("raising_sword",

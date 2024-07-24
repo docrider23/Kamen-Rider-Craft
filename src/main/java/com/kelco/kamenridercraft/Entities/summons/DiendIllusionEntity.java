@@ -38,6 +38,7 @@ import net.minecraft.world.entity.monster.ZombifiedPiglin;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
+import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ProjectileWeaponItem;
 import net.minecraft.world.level.Level;
@@ -81,6 +82,7 @@ public class DiendIllusionEntity extends BaseSummonEntity implements RangedAttac
 		this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
 		this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 8.0F));
 		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+        this.targetSelector.addGoal(1, (new HurtByTargetGoal(this, BaseAllyEntity.class, BaseSummonEntity.class)).setAlertOthers());
 		this.targetSelector.addGoal(1, new OwnerHurtByTargetGoal(this));
 		this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Monster.class, 5, false, false, (p_28879_) -> {
@@ -135,7 +137,7 @@ public class DiendIllusionEntity extends BaseSummonEntity implements RangedAttac
           this.goalSelector.removeGoal(this.meleeGoal);
           this.goalSelector.removeGoal(this.bowGoal);
           ItemStack itemstack = this.getItemInHand(ProjectileUtil.getWeaponHoldingHand(this, item -> item instanceof net.minecraft.world.item.BowItem));
-          if (itemstack.is(Decade_Rider_Items.DIENDRIVER.get())) {
+          if (itemstack.getItem() instanceof BowItem) {
              int i = 20;
              if (this.level().getDifficulty() != Difficulty.HARD) {
                 i = 40;
@@ -157,9 +159,7 @@ public class DiendIllusionEntity extends BaseSummonEntity implements RangedAttac
 	
     public void setItemSlot(Level p_32137_, EquipmentSlot p_32138_, ItemStack p_32139_) {
        super.setItemSlot(p_32138_, p_32139_);
-       if (!p_32137_.isClientSide) {
-          this.reassessWeaponGoal();
-       }
+       if (!p_32137_.isClientSide) this.reassessWeaponGoal();
     }
 
     public void performRangedAttack(LivingEntity p_32141_, float p_32142_) {
@@ -181,7 +181,7 @@ public class DiendIllusionEntity extends BaseSummonEntity implements RangedAttac
    }
 
    public boolean canFireProjectileWeapon(ProjectileWeaponItem p_32144_) {
-      return p_32144_ == Decade_Rider_Items.DIENDRIVER.get();
+      return p_32144_ instanceof BowItem;
    }
 
 	public boolean wantsToAttack(LivingEntity p_30389_, LivingEntity p_30390_) {

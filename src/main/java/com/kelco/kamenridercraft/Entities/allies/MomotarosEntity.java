@@ -2,6 +2,7 @@ package com.kelco.kamenridercraft.Entities.allies;
 
 
 import com.kelco.kamenridercraft.Entities.footSoldiers.NewMoleImaginSandEntity;
+import com.kelco.kamenridercraft.Entities.summons.BaseSummonEntity;
 import com.kelco.kamenridercraft.Items.Den_O_Rider_Items;
 
 import net.minecraft.core.BlockPos;
@@ -20,13 +21,14 @@ import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.FollowOwnerGoal;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.SitWhenOrderedToGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.ResetUniversalAngerTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Enemy;
@@ -54,13 +56,14 @@ public class MomotarosEntity extends BaseAllyEntity {
 
 	protected void registerGoals() {
 		this.goalSelector.addGoal(1, new FloatGoal(this));
-		this.goalSelector.addGoal(1, new PanicGoal(this, 1.4D));
+		this.goalSelector.addGoal(1, new AllyPanicGoal(1.4D));
 		this.goalSelector.addGoal(2, new SitWhenOrderedToGoal(this));
 		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.0D, true));
 		this.goalSelector.addGoal(4, new FollowOwnerGoal(this, 1.0D, 10.0F, 2.0F, false));
 		this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0D));
 		this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 8.0F));
 		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
+		this.targetSelector.addGoal(1, (new HurtByTargetGoal(this, BaseAllyEntity.class, BaseSummonEntity.class)).setAlertOthers());
 		this.targetSelector.addGoal(1, new OwnerHurtByTargetGoal(this));
 		this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, 5, false, false, (p_28879_) -> {
@@ -68,7 +71,9 @@ public class MomotarosEntity extends BaseAllyEntity {
 				return p_28879_ instanceof Enemy && !(p_28879_ instanceof Creeper);
 			}else return false;
 		}));
+		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, this::isAngryAt));
 		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal<>(this, NewMoleImaginSandEntity.class, false));
+		this.targetSelector.addGoal(8, new ResetUniversalAngerTargetGoal<>(this, true));
 
 	}
 

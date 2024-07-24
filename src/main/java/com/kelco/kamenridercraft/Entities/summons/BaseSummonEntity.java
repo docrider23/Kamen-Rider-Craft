@@ -5,6 +5,8 @@ import java.util.UUID;
 
 import javax.annotation.Nullable;
 
+import com.kelco.kamenridercraft.Entities.allies.BaseAllyEntity;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -31,12 +33,16 @@ import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.ResetUniversalAngerTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Enemy;
+import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BowItem;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -82,6 +88,7 @@ public class BaseSummonEntity extends TamableAnimal implements NeutralMob {
 		this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
 		this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 8.0F));
 		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+		this.targetSelector.addGoal(1, (new HurtByTargetGoal(this, BaseAllyEntity.class, BaseSummonEntity.class)).setAlertOthers());
 		this.targetSelector.addGoal(1, new OwnerHurtByTargetGoal(this));
 		this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, 5, false, false, (p_28879_) -> {
@@ -89,7 +96,19 @@ public class BaseSummonEntity extends TamableAnimal implements NeutralMob {
 				return p_28879_ instanceof Enemy;
 			}else return false;
 		}));
+		this.targetSelector.addGoal(4, new ResetUniversalAngerTargetGoal<>(this, true));
 
+	}
+
+	public void aiStep() {
+		if (!(this instanceof RangedAttackMob) || !(this.getMainHandItem().getItem() instanceof BowItem)) this.updateSwingTime();
+		Level level = this.level();
+		
+		if (!level.isClientSide) {
+		   this.updatePersistentAnger((ServerLevel)this.level(), true);
+		}
+
+		super.aiStep();
 	}
 
 	@Override

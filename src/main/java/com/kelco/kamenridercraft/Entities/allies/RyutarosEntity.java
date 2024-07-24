@@ -2,6 +2,7 @@ package com.kelco.kamenridercraft.Entities.allies;
 
 
 import com.kelco.kamenridercraft.Entities.footSoldiers.NewMoleImaginSandEntity;
+import com.kelco.kamenridercraft.Entities.summons.BaseSummonEntity;
 import com.kelco.kamenridercraft.Items.Den_O_Rider_Items;
 
 import net.minecraft.core.BlockPos;
@@ -22,21 +23,22 @@ import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.FollowOwnerGoal;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.RangedBowAttackGoal;
 import net.minecraft.world.entity.ai.goal.SitWhenOrderedToGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.ResetUniversalAngerTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
+import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -76,7 +78,7 @@ public class RyutarosEntity extends BaseAllyEntity implements RangedAttackMob {
 
 	protected void registerGoals() {
 		this.goalSelector.addGoal(1, new FloatGoal(this));
-		this.goalSelector.addGoal(1, new PanicGoal(this, 1.4D));
+		this.goalSelector.addGoal(1, new AllyPanicGoal(1.4D));
 		this.goalSelector.addGoal(2, new SitWhenOrderedToGoal(this));
 		this.goalSelector.addGoal(4, new FollowOwnerGoal(this, 1.0D, 10.0F, 2.0F, false));
 		this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0D));
@@ -84,12 +86,15 @@ public class RyutarosEntity extends BaseAllyEntity implements RangedAttackMob {
 		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
 		this.targetSelector.addGoal(1, new OwnerHurtByTargetGoal(this));
 		this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
-		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, 5, false, false, (p_28879_) -> {
+		this.targetSelector.addGoal(3, (new HurtByTargetGoal(this, BaseAllyEntity.class, BaseSummonEntity.class)).setAlertOthers());
+		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Mob.class, 5, false, false, (p_28879_) -> {
 			if (isTame()) {
 				return p_28879_ instanceof Enemy;
 			}else return false;
 		}));
+		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, this::isAngryAt));
 		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal<>(this, NewMoleImaginSandEntity.class, false));
+		this.targetSelector.addGoal(8, new ResetUniversalAngerTargetGoal<>(this, true));
 
 	}
 
@@ -173,7 +178,7 @@ public class RyutarosEntity extends BaseAllyEntity implements RangedAttackMob {
           this.goalSelector.removeGoal(this.meleeGoal);
           this.goalSelector.removeGoal(this.bowGoal);
           ItemStack itemstack = this.getItemInHand(ProjectileUtil.getWeaponHoldingHand(this, item -> item instanceof net.minecraft.world.item.BowItem));
-          if (itemstack.is(Den_O_Rider_Items.RYUVOLVER.get())) {
+          if (itemstack.getItem() instanceof BowItem) {
              int i = 20;
              if (this.level().getDifficulty() != Difficulty.HARD) {
                 i = 40;
@@ -195,9 +200,7 @@ public class RyutarosEntity extends BaseAllyEntity implements RangedAttackMob {
 	
     public void setItemSlot(Level p_32137_, EquipmentSlot p_32138_, ItemStack p_32139_) {
        super.setItemSlot(p_32138_, p_32139_);
-       if (!p_32137_.isClientSide) {
-          this.reassessWeaponGoal();
-       }
+       if (!p_32137_.isClientSide) this.reassessWeaponGoal();
     }
 
     public void performRangedAttack(LivingEntity p_32141_, float p_32142_) {
@@ -219,7 +222,7 @@ public class RyutarosEntity extends BaseAllyEntity implements RangedAttackMob {
    }
 
    public boolean canFireProjectileWeapon(ProjectileWeaponItem p_32144_) {
-      return p_32144_ == Den_O_Rider_Items.RYUVOLVER.get();
+      return p_32144_ instanceof BowItem;
    }
 
 	   public boolean isBaby() {

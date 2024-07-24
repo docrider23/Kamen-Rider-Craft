@@ -5,6 +5,7 @@ import com.kelco.kamenridercraft.Entities.MobsCore;
 import com.kelco.kamenridercraft.Entities.bosses.AnkhCompleteEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.BaseHenchmenEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.YummyEntity;
+import com.kelco.kamenridercraft.Entities.summons.BaseSummonEntity;
 import com.kelco.kamenridercraft.Items.Modded_item_core;
 import com.kelco.kamenridercraft.Items.OOO_Rider_Items;
 
@@ -27,13 +28,14 @@ import net.minecraft.world.entity.ai.goal.FollowOwnerGoal;
 import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.SitWhenOrderedToGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.ResetUniversalAngerTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Enemy;
@@ -67,7 +69,7 @@ public class AnkhEntity extends BaseAllyEntity implements GeoEntity {
 
 	protected void registerGoals() {
 		this.goalSelector.addGoal(1, new FloatGoal(this));
-		this.goalSelector.addGoal(1, new PanicGoal(this, 1.4D));
+		this.goalSelector.addGoal(1, new AllyPanicGoal(1.4D));
 		this.goalSelector.addGoal(2, new SitWhenOrderedToGoal(this));
 		this.goalSelector.addGoal(4, new LeapAtTargetGoal(this, 0.4F));
 		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.0D, true));
@@ -76,6 +78,7 @@ public class AnkhEntity extends BaseAllyEntity implements GeoEntity {
 		this.goalSelector.addGoal(8, new WaterAvoidingRandomStrollGoal(this, 1.0D));
 		this.goalSelector.addGoal(10, new LookAtPlayerGoal(this, Player.class, 8.0F));
 		this.goalSelector.addGoal(10, new RandomLookAroundGoal(this));
+		this.targetSelector.addGoal(1, (new HurtByTargetGoal(this, BaseAllyEntity.class, BaseSummonEntity.class)).setAlertOthers());
 		this.targetSelector.addGoal(1, new OwnerHurtByTargetGoal(this));
 		this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, 5, false, false, (p_28879_) -> {
@@ -83,7 +86,9 @@ public class AnkhEntity extends BaseAllyEntity implements GeoEntity {
 				return p_28879_ instanceof Enemy && !(p_28879_ instanceof Creeper)&& !(p_28879_ instanceof AnkhCompleteEntity);
 			}else return false;
 		}));
+		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, this::isAngryAt));
 		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal<>(this, YummyEntity.class, false));
+		this.targetSelector.addGoal(8, new ResetUniversalAngerTargetGoal<>(this, true));
 
 	}
 
