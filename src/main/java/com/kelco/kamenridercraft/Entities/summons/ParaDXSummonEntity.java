@@ -14,6 +14,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.NeutralMob;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -71,7 +72,7 @@ public class ParaDXSummonEntity extends BaseSummonEntity {
 		this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Monster.class, 5, false, false, (p_28879_) -> {
 			if (isTame()) {
-				return p_28879_ instanceof Enemy;
+				return p_28879_ instanceof Enemy && !(p_28879_ instanceof NeutralMob && !((NeutralMob) p_28879_).isAngry());
 			}else return false;
 		}));
 		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, BugsterVirusEntity.class, false));
