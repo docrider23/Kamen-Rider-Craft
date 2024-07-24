@@ -25,7 +25,8 @@
 	  "kamenridercraft:zo/zotroso",
 	  "kamenridercraft:zo/zolegs",
 	  "kamenridercraft:zo/zo_core",
-	  "kamenridercraft:zo/zo_logo"
+	  "kamenridercraft:zo/zo_logo",
+	  "kamenridercraft:decade/zo_card"
 	]
   },
   "sends_telemetry_event": false

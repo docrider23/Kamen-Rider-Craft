@@ -23,7 +23,8 @@
 	"recipes": [
 	  "kamenridercraft:kiva/arcdriver",
 	  "kamenridercraft:kiva/reydriver",
-	  "kamenridercraft:kiva/arc_trident"
+	  "kamenridercraft:kiva/arc_trident",
+	  "kamenridercraft:decade/arc_card"
 	]
   },
   "sends_telemetry_event": false

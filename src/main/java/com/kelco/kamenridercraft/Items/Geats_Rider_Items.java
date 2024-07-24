@@ -941,6 +941,10 @@ public class Geats_Rider_Items {
 			() -> new BaseSwordItem(Tiers.DIAMOND, 7, -2F, new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM)
 			.ChangeRepairItem(BLANK_CORE_ID.get()));
 
+	public static final RegistryObject<BaseShieldItem> PLOSION_RAGE_SHIELD = ITEMS.register("plosion_rage_shield",
+			() -> new BaseShieldItem(new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM)
+			.ChangeRepairItem(BLANK_CORE_ID.get()));
+
 	public static final RegistryObject<SwordItem> GIGANT_SWORD = ITEMS.register("gigant_sword",
 			() -> new BaseSwordItem(Tiers.DIAMOND, 5, -2F, new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM)
 			.ChangeRepairItem(BLANK_CORE_ID.get()));

@@ -25,7 +25,8 @@
 	  "kamenridercraft:amazon/amazontroso",
 	  "kamenridercraft:amazon/amazonlegs",
 	  "kamenridercraft:amazon/condorer",
-	  "kamenridercraft:amazon/amazon_logo"
+	  "kamenridercraft:amazon/amazon_logo",
+	  "kamenridercraft:decade/amazon_card"
 	]
   },
   "sends_telemetry_event": false

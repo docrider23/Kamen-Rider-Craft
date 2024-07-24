@@ -22,7 +22,8 @@
   "rewards": {
 	"recipes": [
 	  "kamenridercraft:blade/glaive_buckle",
-	  "kamenridercraft:blade/glaiverouzer"
+	  "kamenridercraft:blade/glaiverouzer",
+	  "kamenridercraft:decade/glaive_card"
 	]
   },
   "sends_telemetry_event": false

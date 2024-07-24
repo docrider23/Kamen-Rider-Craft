@@ -22,7 +22,9 @@
   "rewards": {
 	"recipes": [
 	  "kamenridercraft:gotchard/gotchardriver",
-	  "kamenridercraft:gotchard/gotchard_logo"
+	  "kamenridercraft:gotchard/gotchard_logo",
+	  "kamenridercraft:gotchard/gotcharge_gun",
+	  "kamenridercraft:gotchard/chemy_riser"
 	]
   },
   "sends_telemetry_event": false

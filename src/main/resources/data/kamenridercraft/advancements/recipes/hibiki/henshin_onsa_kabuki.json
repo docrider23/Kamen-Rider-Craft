@@ -23,7 +23,8 @@
 	"recipes": [
 	  "kamenridercraft:hibiki/kabukidriver",
 	  "kamenridercraft:hibiki/ongekibo_ressui",
-	  "kamenridercraft:hibiki/echo_sword_onsaken"
+	  "kamenridercraft:hibiki/echo_sword_onsaken",
+	  "kamenridercraft:decade/kabuki_card"
 	]
   },
   "sends_telemetry_event": false

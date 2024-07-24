@@ -22,7 +22,8 @@
   "rewards": {
 	"recipes": [
 	  "kamenridercraft:ryuki/v_buckle_ryuga",
-	  "kamenridercraft:ryuki/black_drag_visor"
+	  "kamenridercraft:ryuki/black_drag_visor",
+	  "kamenridercraft:decade/ryuga_card"
 	]
   },
   "sends_telemetry_event": false

@@ -22,7 +22,8 @@
   "rewards": {
 	"recipes": [
 	  "kamenridercraft:ichigo/typhoon_ichigo",
-	  "kamenridercraft:ichigo/ichigo_logo"
+	  "kamenridercraft:ichigo/ichigo_logo",
+	  "kamenridercraft:decade/ichigo_card"
 	]
   },
   "sends_telemetry_event": false

@@ -26,7 +26,8 @@
 	  "kamenridercraft:x/xlegs",
 	  "kamenridercraft:x/ridol",
 	  "kamenridercraft:x/ridol_stick",
-	  "kamenridercraft:x/x_logo"
+	  "kamenridercraft:x/x_logo",
+	  "kamenridercraft:decade/x_card"
 	]
   },
   "sends_telemetry_event": false

@@ -25,7 +25,8 @@
 	  "kamenridercraft:stronger/strongertroso",
 	  "kamenridercraft:stronger/strongerlegs",
 	  "kamenridercraft:stronger/electrer",
-	  "kamenridercraft:stronger/stronger_logo"
+	  "kamenridercraft:stronger/stronger_logo",
+	  "kamenridercraft:decade/stronger_card"
 	]
   },
   "sends_telemetry_event": false

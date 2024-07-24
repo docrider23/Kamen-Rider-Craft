@@ -25,7 +25,8 @@
 	  "kamenridercraft:black/blacktroso",
 	  "kamenridercraft:black/blacklegs",
 	  "kamenridercraft:black/vital_charger",
-	  "kamenridercraft:black/black_logo"
+	  "kamenridercraft:black/black_logo",
+	  "kamenridercraft:decade/black_card"
 	]
   },
   "sends_telemetry_event": false

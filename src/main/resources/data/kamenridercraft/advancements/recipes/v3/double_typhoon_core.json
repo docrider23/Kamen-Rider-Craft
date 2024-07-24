@@ -25,7 +25,8 @@
 	  "kamenridercraft:v3/v3troso",
 	  "kamenridercraft:v3/v3legs",
 	  "kamenridercraft:v3/double_typhoon",
-	  "kamenridercraft:v3/v3_logo"
+	  "kamenridercraft:v3/v3_logo",
+	  "kamenridercraft:decade/v3_card"
 	]
   },
   "sends_telemetry_event": false

@@ -21,7 +21,8 @@
   ],
   "rewards": {
 	"recipes": [
-	  "kamenridercraft:faiz/orga_stlanzer"
+	  "kamenridercraft:faiz/orga_stlanzer",
+	  "kamenridercraft:decade/orga_card"
 	]
   },
   "sends_telemetry_event": false

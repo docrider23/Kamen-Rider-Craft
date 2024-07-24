@@ -21,7 +21,8 @@
   ],
   "rewards": {
 	"recipes": [
-	  "kamenridercraft:ichigo/typhoon_nigo"
+	  "kamenridercraft:ichigo/typhoon_nigo",
+	  "kamenridercraft:decade/nigo_card"
 	]
   },
   "sends_telemetry_event": false

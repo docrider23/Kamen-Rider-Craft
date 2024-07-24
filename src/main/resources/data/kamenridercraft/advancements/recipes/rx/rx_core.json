@@ -22,7 +22,8 @@
   "rewards": {
 	"recipes": [
 	  "kamenridercraft:rx/black_rx_logo",
-	  "kamenridercraft:rx/revolcane"
+	  "kamenridercraft:rx/revolcane",
+	  "kamenridercraft:decade/black_rx_card"
 	]
   },
   "sends_telemetry_event": false

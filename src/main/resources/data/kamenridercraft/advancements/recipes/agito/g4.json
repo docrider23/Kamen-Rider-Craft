@@ -23,7 +23,8 @@
 	"recipes": [
 	  "kamenridercraft:agito/g4_belt",
 	  "kamenridercraft:agito/g4_gigant",
-	  "kamenridercraft:agito/g4x"
+	  "kamenridercraft:agito/g4x",
+	  "kamenridercraft:decade/g4_card"
 	]
   },
   "sends_telemetry_event": false
