@@ -77,15 +77,12 @@ public class KintarosEntity extends BaseAllyEntity {
 
 	}
 
-	@Override
-	public void setTame(boolean p_30443_) {
-		super.setTame(p_30443_);
-        if (p_30443_) {
-            this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(40.0D);
-            this.setHealth(40.0F);
-            this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Den_O_Rider_Items.KINTAROS_AX.get()));
-        }
-	}
+    public void tame(Player p_21829_) {
+	   super.tame(p_21829_);
+	   this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(40.0D);
+	   this.setHealth(40.0F);
+	   this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Den_O_Rider_Items.KINTAROS_AX.get()));
+    }
 	
 	public InteractionResult mobInteract(Player p_30412_, InteractionHand p_30413_) {
 	      ItemStack itemstack = p_30412_.getItemInHand(p_30413_);
