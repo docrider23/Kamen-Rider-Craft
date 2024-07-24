@@ -43,6 +43,7 @@ import net.minecraft.world.entity.animal.horse.AbstractHorse;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BowItem;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -107,7 +108,7 @@ public class BaseAllyEntity extends TamableAnimal implements NeutralMob {
 
 	public void aiStep() {
 		super.aiStep();
-	   if (!(this instanceof RangedAttackMob) || !(this.getMainHandItem().getItem() instanceof net.minecraft.world.item.BowItem)) this.updateSwingTime();
+	   if (!(this.getMainHandItem().getItem() instanceof BowItem) || !this.isUsingItem()) this.updateSwingTime();
 	   Level level = this.level();
 	   
 	   if (!level.isClientSide) {

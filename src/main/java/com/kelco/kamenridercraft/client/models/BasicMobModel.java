@@ -13,7 +13,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.TamableAnimal;
-import net.minecraft.world.entity.monster.RangedAttackMob;
+import net.minecraft.world.entity.ai.goal.RangedBowAttackGoal;
 import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TieredItem;
@@ -36,7 +36,7 @@ public class BasicMobModel<T extends Mob> extends PlayerModel<T> {
       this.rightArmPose = HumanoidModel.ArmPose.EMPTY;
       this.leftArmPose = HumanoidModel.ArmPose.EMPTY;
       ItemStack itemstack = p_103793_.getItemInHand(InteractionHand.MAIN_HAND);
-      if (itemstack.getItem() instanceof BowItem && p_103793_.isAggressive() && p_103793_ instanceof RangedAttackMob) {
+      if (itemstack.getItem() instanceof BowItem && p_103793_.isAggressive() && p_103793_.isUsingItem()) {
          if (p_103793_.getMainArm() == HumanoidArm.RIGHT) {
             this.rightArmPose = HumanoidModel.ArmPose.BOW_AND_ARROW;
          } else {

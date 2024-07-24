@@ -138,12 +138,7 @@ public class DiendIllusionEntity extends BaseSummonEntity implements RangedAttac
           this.goalSelector.removeGoal(this.bowGoal);
           ItemStack itemstack = this.getItemInHand(ProjectileUtil.getWeaponHoldingHand(this, item -> item instanceof net.minecraft.world.item.BowItem));
           if (itemstack.getItem() instanceof BowItem) {
-             int i = 20;
-             if (this.level().getDifficulty() != Difficulty.HARD) {
-                i = 40;
-             }
-
-             this.bowGoal.setMinAttackInterval(i);
+             this.bowGoal.setMinAttackInterval(20);
              this.goalSelector.addGoal(2, this.bowGoal);
           } else {
              this.goalSelector.addGoal(2, this.meleeGoal);

@@ -2,6 +2,8 @@ package com.kelco.kamenridercraft.Items.decade;
 
 import java.util.List;
 
+import org.apache.commons.lang3.ArrayUtils;
+
 import com.google.common.collect.Lists;
 import com.kelco.kamenridercraft.Effect.Effect_core;
 import com.kelco.kamenridercraft.Entities.MobsCore;
@@ -26,7 +28,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.OwnableEntity;
-import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BowItem;
@@ -81,16 +82,9 @@ public class AttackRideCardItem extends BaseItem {
 			if (p_41129_.getItemBySlot(EquipmentSlot.CHEST).getItem() == Decade_Rider_Items.DECADECHESTPLATE.get()){
 				if (p_41129_.getItemBySlot(EquipmentSlot.HEAD).getItem() == Decade_Rider_Items.DECADEHELMET.get()){
 					if (p_41129_.getItemBySlot(EquipmentSlot.FEET).getItem() == Decade_Rider_Items.DECADRIVER.get() || p_41129_.getItemBySlot(EquipmentSlot.FEET).getItem() == Decade_Rider_Items.DIEND_BELT.get() || p_41129_.getItemBySlot(EquipmentSlot.FEET).getItem() == Decade_Rider_Items.DARK_DECADRIVER.get()){
-						boolean matchFound = false;
 						ItemStack belt = p_41129_.getItemBySlot(EquipmentSlot.FEET);
-						for (int i = 0; i < FORMS.length; i++) {
-							if (((RiderDriverItem) belt.getItem()).GET_TEXT(belt, null, p_41129_, ((RiderDriverItem) belt.getItem()).Rider).equals(FORMS[i])){
-								matchFound = !matchFound;
-								break;
-							}
-						}
 
-						if (matchFound && !p_41128_.isClientSide()) {
+						if (ArrayUtils.contains(FORMS, ((RiderDriverItem) belt.getItem()).GET_TEXT(belt, null, p_41129_, ((RiderDriverItem) belt.getItem()).Rider)) && !p_41128_.isClientSide()) {
 							if (EFFECTS != null) {
 								for (int i = 0; i < EFFECTS.size(); i++)
 								{
