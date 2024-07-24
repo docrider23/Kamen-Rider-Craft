@@ -101,7 +101,7 @@ public class BaseSummonEntity extends TamableAnimal implements NeutralMob {
 	}
 
 	public void aiStep() {
-		if (!(this.getMainHandItem().getItem() instanceof BowItem) || !this.isUsingItem()) this.updateSwingTime();
+		if (!(this.getMainHandItem().getItem() instanceof BowItem) || !this.isUsingItem() && this.getTarget() != null) this.updateSwingTime();
 		Level level = this.level();
 		
 		if (!level.isClientSide) {
