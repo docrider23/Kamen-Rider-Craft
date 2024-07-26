@@ -13,14 +13,10 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.TamableAnimal;
-import net.minecraft.world.entity.ai.goal.RangedBowAttackGoal;
 import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TieredItem;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BasicMobModel<T extends Mob> extends PlayerModel<T> {
 	
 	  private final PartPose bodyDefault = this.body.storePose();

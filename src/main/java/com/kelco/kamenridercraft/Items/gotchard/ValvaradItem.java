@@ -1,37 +1,19 @@
 package com.kelco.kamenridercraft.Items.gotchard;
 
-import java.util.function.Consumer;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.jetbrains.annotations.NotNull;
-
 import com.google.common.collect.Lists;
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
-import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
 import com.kelco.kamenridercraft.Items.Gotchard_Rider_Items;
 import com.kelco.kamenridercraft.Items.Modded_item_core;
-import com.kelco.kamenridercraft.Items.OOO_Rider_Items;
-import com.kelco.kamenridercraft.Items.client.RiderArmorRenderer;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderArmorItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderFormChangeItem;
 
-import net.minecraft.client.model.HumanoidModel;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item.Properties;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.biome.Biomes;
-import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ValvaradItem extends RiderDriverItem{

@@ -77,15 +77,11 @@ import com.kelco.kamenridercraft.Items.Ichigo_Rider_Items;
 import com.kelco.kamenridercraft.Items.Kuuga_Rider_Items;
 import com.kelco.kamenridercraft.Items.Miscellaneous_Rider_Items;
 import com.kelco.kamenridercraft.Items.Modded_item_core;
-import com.kelco.kamenridercraft.Items.OOO_Rider_Items;
-import com.kelco.kamenridercraft.Items.rider_armor_base.RiderArmorItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 
 import java.util.List;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
-import net.minecraft.client.model.EntityModel;
 import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.SpawnPlacements;
@@ -99,6 +95,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RenderLivingEvent;
 import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.common.ForgeMod;
@@ -107,8 +104,6 @@ import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.event.entity.SpawnPlacementRegisterEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent.ItemPickupEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -122,8 +117,8 @@ public class ModCommonEvents {
 
 
 
-	@Mod.EventBusSubscriber(modid = KamenRiderCraftCore.MODID)
-	public static class ForgeEvents {
+	@Mod.EventBusSubscriber(Dist.CLIENT)
+	public static class ForgeClientEvents {
 
 		@SubscribeEvent
 		public static void addInvisibleCheck(RenderLivingEvent.Pre event) {
@@ -141,33 +136,6 @@ public class ModCommonEvents {
 			}
 			
 		}
-		
-		@SubscribeEvent
-		public static void EquipmentChange(LivingEquipmentChangeEvent event) {
-			event.getEntity().setInvisible(false);
-		}
-
-		@SubscribeEvent
-		public static void addChangeSize(EntityEvent.Size event) {
-
-			if (event.getEntity() instanceof Player entity) {
-
-				if (entity.isAddedToWorld()) { 
-					float size = 1;
-					if (entity.hasEffect(Effect_core.BIG.get())&!entity.hasEffect(Effect_core.SMALL.get())) { 
-						size= size*((entity.getEffect(Effect_core.BIG.get()).getAmplifier())+1);
-					}else  if (!entity.hasEffect(Effect_core.BIG.get())&entity.hasEffect(Effect_core.SMALL.get())) {
-						size=(float) (size/2);
-					}
-					event.setNewSize(entity.getDimensions(entity.getPose()).scale(size),true);
-					event.setNewEyeHeight(((float)entity.getEyeHeight(entity.getPose())*size));
-
-				}
-			}
-		}
-
-
-		// /effect give @e kamenridercraft:big infinite 3
 
 		@SubscribeEvent
 		public static void addRenderLivingEvent(RenderLivingEvent.Pre event) {
@@ -203,6 +171,39 @@ public class ModCommonEvents {
 
 
 			event.getPoseStack().scale(size3,size,size2);
+		}
+
+		@SubscribeEvent
+		public static void addRenderPlayerEvent(RenderPlayerEvent.Pre event) {
+
+
+		}
+	}
+	@Mod.EventBusSubscriber(modid = KamenRiderCraftCore.MODID)
+	public static class ForgeCommonEvents {
+		
+		@SubscribeEvent
+		public static void EquipmentChange(LivingEquipmentChangeEvent event) {
+			event.getEntity().setInvisible(false);
+		}
+
+		@SubscribeEvent
+		public static void addChangeSize(EntityEvent.Size event) {
+
+			if (event.getEntity() instanceof Player entity) {
+
+				if (entity.isAddedToWorld()) { 
+					float size = 1;
+					if (entity.hasEffect(Effect_core.BIG.get())&!entity.hasEffect(Effect_core.SMALL.get())) { 
+						size= size*((entity.getEffect(Effect_core.BIG.get()).getAmplifier())+1);
+					}else  if (!entity.hasEffect(Effect_core.BIG.get())&entity.hasEffect(Effect_core.SMALL.get())) {
+						size=(float) (size/2);
+					}
+					event.setNewSize(entity.getDimensions(entity.getPose()).scale(size),true);
+					event.setNewEyeHeight(((float)entity.getEyeHeight(entity.getPose())*size));
+
+				}
+			}
 		}
 
 
@@ -252,12 +253,6 @@ public class ModCommonEvents {
 
 			
 			//event.getEntity().hasEffect(Effect_core.BIG.get())||event.getEntity().hasEffect(Effect_core.STRETCH.get());
-
-		}
-
-		@SubscribeEvent
-		public static void addRenderPlayerEvent(RenderPlayerEvent.Pre event) {
-
 
 		}
 		

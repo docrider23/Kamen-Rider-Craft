@@ -1,7 +1,6 @@
 package com.kelco.kamenridercraft.Items;
 
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
-import com.kelco.kamenridercraft.Blocks.MachineBlocks.GameCreator;
 import com.kelco.kamenridercraft.Blocks.MachineBlocks.ProgrisekeyPrinter;
 import com.kelco.kamenridercraft.Effect.Effect_core;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseBlasterItem;
@@ -10,9 +9,6 @@ import com.kelco.kamenridercraft.Items.rider_armor_base.BaseSwordItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderArmorItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderFormChangeItem;
-import com.kelco.kamenridercraft.events.ModClientEvents;
-
-import net.minecraft.client.gui.font.glyphs.BakedGlyph.Effect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.ArmorItem;
