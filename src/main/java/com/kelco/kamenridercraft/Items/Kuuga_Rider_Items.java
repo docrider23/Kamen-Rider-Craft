@@ -98,7 +98,7 @@ public class Kuuga_Rider_Items {
 
     public static final RegistryObject<Item> KUUGA_ULTIMATE = ITEMS.register("kuuga_ultimate",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_ultimate","kuuga","arcle_belt_u",
-            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
@@ -107,7 +107,7 @@ public class Kuuga_Rider_Items {
 
     public static final RegistryObject<Item> KUUGA_RISING_ULTIMATE = ITEMS.register("kuuga_rising_ultimate",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_rising_ultimate","kuuga","arcle_belt_ru",
-            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 6,true,false),
+            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 5,true,false),
@@ -117,7 +117,7 @@ public class Kuuga_Rider_Items {
 
     public static final RegistryObject<Item> KUUGA_SUPER_RISING_ULTIMATE = ITEMS.register("kuuga_super_rising_ultimate",
     		() -> new RiderFormChangeItem(new Item.Properties(),0,"_super_rising_ultimate","kuuga","arcle_belt_ru",
-            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 8,true,false),
+            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 5,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 6,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 7,true,false),

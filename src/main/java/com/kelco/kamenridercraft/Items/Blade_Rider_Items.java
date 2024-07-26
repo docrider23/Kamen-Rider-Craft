@@ -109,7 +109,7 @@ public class Blade_Rider_Items {
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_wild","chalice","chalice_rouzer_belt",
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 0,true,false),
-            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false))
             .IsGlowing().AddToTabList(RiderTabs.BLADE_TAB_ITEM));
     

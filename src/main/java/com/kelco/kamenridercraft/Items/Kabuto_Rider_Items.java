@@ -106,7 +106,7 @@ public class Kabuto_Rider_Items {
                 new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
                 new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 7,true,false),
                 new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
-                new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+                new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
                 new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
                 new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
         .IsGlowing());
@@ -146,7 +146,7 @@ public class Kabuto_Rider_Items {
                         new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
                         new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 7,true,false),
                         new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
-                        new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+                        new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
                         new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
                         new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
                 .IsGlowing().addAlternative(GATACK_HYPER_ZECTER.get()));
@@ -162,7 +162,7 @@ public class Kabuto_Rider_Items {
                         new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
                         new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 7,true,false),
                         new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
-                        new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+                        new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
                         new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
                         new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
                 .IsGlowing().addSwitchForm(CAUCASUS_ZECTER_MASK.get()).AddToTabList(RiderTabs.KABUTO_TAB_ITEM));
@@ -204,7 +204,7 @@ public class Kabuto_Rider_Items {
                         new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
                         new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 7,true,false),
                         new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
-                        new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+                        new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
                         new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
                         new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
                 .IsGlowing().addAlternative(DARK_HYPER_ZECTER.get()).AddToTabList(RiderTabs.KABUTO_TAB_ITEM));

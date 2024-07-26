@@ -131,14 +131,14 @@ public class Den_O_Rider_Items {
     public static final RegistryObject<Item> RIDER_TICKET_YUUKI_HIJACK = ITEMS.register("rider_ticket_yuuki_hijack",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_hijack","yuuki","yuuki_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.REGENERATION, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)));
     public static final RegistryObject<Item> RIDER_TICKET_YUUKI = ITEMS.register("rider_ticket_yuuki",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_skull","yuuki","yuuki_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.REGENERATION, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false)).addSwitchForm(RIDER_TICKET_YUUKI_HIJACK.get()).AddToTabList(RiderTabs.DEN_O_TAB_ITEM));

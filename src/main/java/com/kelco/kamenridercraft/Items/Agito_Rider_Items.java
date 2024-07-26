@@ -112,7 +112,7 @@ public class Agito_Rider_Items {
             		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false))
+            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false))
             .IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM));
 
     
@@ -128,7 +128,7 @@ public class Agito_Rider_Items {
             		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 5,true,false),
-            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false))
+            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false))
             .IsGlowing().AddToTabList(RiderTabs.AGITO_TAB_ITEM));
 
     

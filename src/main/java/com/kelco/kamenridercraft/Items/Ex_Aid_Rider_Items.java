@@ -442,7 +442,7 @@ public class Ex_Aid_Rider_Items {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 5,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false))
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false))
 			.IsGlowing().SetFormToArmor().ChangeSlot(2));
 
 	public static final RegistryObject<Item> TADDLE_LEGACY_GASHAT = ITEMS.register("taddle_legacy_gashat",
@@ -450,7 +450,7 @@ public class Ex_Aid_Rider_Items {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 5,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).SetFormToArmor().ChangeSlot(2).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 2));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false)).SetFormToArmor().ChangeSlot(2).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_GASHAT, 2));
 
 	public static final RegistryObject<Item> HURRICANE_NINJA_GASHAT = ITEMS.register("hurricane_ninja_gashat",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","fuma","gamer_driver_hurricane_ninja",
@@ -591,7 +591,7 @@ public class Ex_Aid_Rider_Items {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 5,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 6,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
 					new MobEffectInstance(MobEffects.SATURATION, 40, 2,true,false),
@@ -615,7 +615,7 @@ public class Ex_Aid_Rider_Items {
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_lv99","ex_aid","gamer_driver_maximum_mighty_x",
 					new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false)).addSwitchForm(MAXIMUM_MIGHTY_X_GASHAT_lv2.get())
 			.IsGlowing().ChangeModel("geo/lv_max.geo.json").ChangeBeltModel("geo/lv_1_belt.geo.json").alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.EX_AID_TAB_ITEM).AddToTabList(GameCreator.BLANK_MAXIMUM_GASHAT, 20));
 
@@ -637,7 +637,7 @@ public class Ex_Aid_Rider_Items {
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_lv_billion","genm","gamer_driver_god_maximum_mighty_x",
 					new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 6,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false),
@@ -658,7 +658,7 @@ public class Ex_Aid_Rider_Items {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 6,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
 					new MobEffectInstance(MobEffects.SATURATION, 40, 2,true,false),
@@ -671,7 +671,7 @@ public class Ex_Aid_Rider_Items {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 6,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
 					new MobEffectInstance(MobEffects.SATURATION, 40, 2,true,false),
@@ -686,7 +686,7 @@ public class Ex_Aid_Rider_Items {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 6,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
 					new MobEffectInstance(MobEffects.SATURATION, 40, 2,true,false),

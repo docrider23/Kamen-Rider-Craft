@@ -95,7 +95,7 @@ public class Faiz_Rider_Items {
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","orga","orga_driver_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.REGENERATION, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)).IsGlowing().AddToTabList(RiderTabs.FAIZ_TAB_ITEM));
 	        

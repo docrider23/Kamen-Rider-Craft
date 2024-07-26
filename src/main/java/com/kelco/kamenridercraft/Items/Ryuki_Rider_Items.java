@@ -82,7 +82,7 @@ public class Ryuki_Rider_Items {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 5,true,false),
-					new MobEffectInstance (MobEffects.DAMAGE_RESISTANCE, 40, 4,true,false)).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+					new MobEffectInstance (MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false)).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 	  
 	public static final RegistryObject<Item> DESTWILDER_ADVENT = ITEMS.register("destwilder_advent",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","tiger","v_buckle_belt_tiger",
