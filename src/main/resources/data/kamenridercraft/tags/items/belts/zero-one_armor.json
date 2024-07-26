@@ -1,5 +1,31 @@
 {
   "values": [
-	"kamenridercraft:hiden_zero_one_driver"
+	  "kamenridercraft:hiden_zero_one_driver",
+    "kamenridercraft:shotriser_vulcan",
+    "kamenridercraft:shotriser_valkyrie",
+    "kamenridercraft:forceriser_horobi",
+    "kamenridercraft:forceriser_naki",
+    "kamenridercraft:forceriser_jin",
+    "kamenridercraft:forceriser_ikazuchi",
+    "kamenridercraft:forceriser_001",
+    "kamenridercraft:zaia_slashriser",
+    "kamenridercraft:zetsumetsu_driver",
+    "kamenridercraft:metsuboujinrai_driver",
+    "kamenridercraft:zaia_thousandriver",
+    "kamenridercraft:zaia_thousandriver_zaia",
+    "kamenridercraft:ark_driver_zero",
+    "kamenridercraft:hiden_zero_one_driver_azu",
+    "kamenridercraft:ark_driver_zero_thousand_ark",
+    "kamenridercraft:cycloneriser",
+    "kamenridercraft:eden_driver",
+    "kamenridercraft:eden_driver_lucifer",
+    "kamenridercraft:shotabaddoriser",
+    "kamenridercraft:slashabaddoriser",
+    "kamenridercraft:shotabaddoriser_commander",
+    "kamenridercraft:slashabaddoriser_commander",
+    "kamenridercraft:hiden_zero_one_driver_vulcan",
+    "kamenridercraft:zein_driver",  
+    "kamenridercraft:zetsumeriser",
+    "kamenridercraft:raidriser"
   ]
 }

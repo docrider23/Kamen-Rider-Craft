@@ -7,6 +7,7 @@ import java.util.List;
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
 import com.kelco.kamenridercraft.Blocks.Rider_Blocks;
 import com.kelco.kamenridercraft.Entities.MobsCore;
+import com.kelco.kamenridercraft.client.renderer.BasicEntityRenderer;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -489,6 +490,24 @@ public class RiderTabs {
 			event.accept(MobsCore.POPPY_RED_SPAWN_EGG);
 			event.accept(MobsCore.PARADX_SPAWN_EGG);
 			event.accept(MobsCore.CRONUS_SPAWN_EGG);
+		
+			event.accept(MobsCore.TRILOBITE_MAGIA_SPAWN_EGG);
+			event.accept(MobsCore.DODO_MAGIA_CHICK_SPAWN_EGG);
+			event.accept(MobsCore.BATTLE_RAIDER_SPAWN_EGG);
+			event.accept(MobsCore.ABADDON_SPAWN_EGG);
+			event.accept(MobsCore.MAGIA_SPAWN_EGG);
+			event.accept(MobsCore.HOROBI_SPAWN_EGG);
+			event.accept(MobsCore.JIN_SPAWN_EGG);
+			event.accept(MobsCore.IKAZUCHI_SPAWN_EGG);
+			event.accept(MobsCore.NAKI_SPAWN_EGG);
+			event.accept(MobsCore.DODO_MAGIA_SPAWN_EGG);
+			event.accept(MobsCore.RAIDER_SPAWN_EGG);
+			event.accept(MobsCore.ARK_ONE_SPAWN_EGG);
+			event.accept(MobsCore.ABADDON_COMMANDER_SPAWN_EGG);
+			event.accept(MobsCore.EDEN_SPAWN_EGG);
+			event.accept(MobsCore.ZAIA_SPAWN_EGG);
+			event.accept(MobsCore.DIRE_WOLF_SOLD_MAGIA_SPAWN_EGG);
+			event.accept(MobsCore.SERVAL_TIGER_SOLD_MAGIA_SPAWN_EGG);
 			
 			event.accept(MobsCore.PAWN_JYAMATO_SPAWN_EGG);
 			event.accept(MobsCore.JYAMATO_RIDER_SPAWN_EGG);

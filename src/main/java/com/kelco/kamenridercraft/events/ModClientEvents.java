@@ -247,6 +247,24 @@ public class ModClientEvents {
 		event.registerEntityRenderer(MobsCore.PARADX.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.CRONUS.get(), BasicEntityRenderer::new);
 		
+		event.registerEntityRenderer(MobsCore.TRILOBITE_MAGIA.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.DODO_MAGIA_CHICK.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.BATTLE_RAIDER.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.ABADDON.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.MAGIA.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.HOROBI.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.JIN.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.IKAZUCHI.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.NAKI.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.DODO_MAGIA.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.RAIDER.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.ARK_ONE.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.ABADDON_COMMANDER.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.EDEN.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.ZAIA.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.DIRE_WOLF_SOLD_MAGIA.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.SERVAL_TIGER_SOLD_MAGIA.get(), BasicEntityRenderer::new);
+
 		event.registerEntityRenderer(MobsCore.PAWN_JYAMATO.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.JYAMATO_RIDER.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.GM_RIDER.get(), BasicEntityRenderer::new);
