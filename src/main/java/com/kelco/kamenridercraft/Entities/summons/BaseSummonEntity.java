@@ -38,6 +38,7 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.ResetUniversalAngerTargetGoal;
+import net.minecraft.world.entity.ai.navigation.GroundPathNavigation;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
@@ -65,8 +66,7 @@ public class BaseSummonEntity extends TamableAnimal implements NeutralMob {
 		this.setDropChance(EquipmentSlot.LEGS, 0.0f);
 		this.setDropChance(EquipmentSlot.FEET, 0.0f);
 		this.setDropChance(EquipmentSlot.MAINHAND, 0.0f);
-		
-		}
+	}
 
 	public static AttributeSupplier setAttributes() {
 		return Mob.createMobAttributes().add(Attributes.MOVEMENT_SPEED, (double)0.3F).add(Attributes.MAX_HEALTH, 40.0D).add(Attributes.ATTACK_DAMAGE, 2.0D).build();

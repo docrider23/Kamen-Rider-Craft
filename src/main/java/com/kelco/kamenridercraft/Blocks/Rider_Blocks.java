@@ -13,6 +13,7 @@ import com.kelco.kamenridercraft.Blocks.MachineBlocks.GaiaMemoryRefinerBlock;
 import com.kelco.kamenridercraft.Blocks.MachineBlocks.GameCreator;
 import com.kelco.kamenridercraft.Blocks.MachineBlocks.GanbarizingMachine;
 import com.kelco.kamenridercraft.Blocks.MachineBlocks.KaijinStoneGenerator;
+import com.kelco.kamenridercraft.Blocks.MachineBlocks.ProgrisekeyPrinter;
 import com.kelco.kamenridercraft.Entities.MobsCore;
 import com.kelco.kamenridercraft.Items.Modded_item_core;
 import com.kelco.kamenridercraft.Items.RiderTabs;
@@ -171,6 +172,13 @@ public class Rider_Blocks {
 	public static final RegistryObject<Block> GINGA_METEOR = registerBlock("ginga_meteor",
 			() -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN)
 					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
+
+	public static final RegistryObject<Block> HIDEN_3D_PRINTER = registerBlock("hiden_3d_printer",
+			() -> new ProgrisekeyPrinter(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+					.strength(5.0F, 6.0F).sound(SoundType.METAL)).AddToTabList(RiderTabs.RIDER_BLOCK));
+	public static final RegistryObject<Block> ZAIA_3D_PRINTER = registerBlock("zaia_3d_printer",
+			() -> new ProgrisekeyPrinter(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+					.strength(5.0F, 6.0F).sound(SoundType.METAL)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	
 	
 	public static final RegistryObject<Block> KAMEN_CAFE_COUNTER = registerBlock("kamen_cafe_counter",

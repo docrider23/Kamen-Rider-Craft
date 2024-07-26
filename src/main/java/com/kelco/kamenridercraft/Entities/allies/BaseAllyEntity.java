@@ -39,6 +39,7 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.ResetUniversalAngerTargetGoal;
+import net.minecraft.world.entity.ai.navigation.GroundPathNavigation;
 import net.minecraft.world.entity.animal.horse.AbstractHorse;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
@@ -50,7 +51,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class BaseAllyEntity extends TamableAnimal implements NeutralMob {
    private static final EntityDataAccessor<Integer> DATA_REMAINING_ANGER_TIME = SynchedEntityData.defineId(BaseAllyEntity.class, EntityDataSerializers.INT);
    private static final UniformInt PERSISTENT_ANGER_TIME = TimeUtil.rangeOfSeconds(20, 39);
-
+   
    @Nullable
    private UUID persistentAngerTarget;
 	
@@ -61,8 +62,7 @@ public class BaseAllyEntity extends TamableAnimal implements NeutralMob {
 	public BaseAllyEntity(EntityType<? extends BaseAllyEntity> entityType, Level level) {
 		super(entityType, level);
 		this.setTame(false);
-		
-		}
+	}
 
 	public static AttributeSupplier setAttributes() {
 		return Mob.createMobAttributes().add(Attributes.MOVEMENT_SPEED, (double)0.3F).add(Attributes.MAX_HEALTH, 40.0D).add(Attributes.ATTACK_DAMAGE, 2.0D).build();

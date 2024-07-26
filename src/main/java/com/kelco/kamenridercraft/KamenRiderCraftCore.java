@@ -25,6 +25,7 @@ import com.kelco.kamenridercraft.Items.Reboot_Rider_Items;
 import com.kelco.kamenridercraft.Items.RiderTabs;
 import com.kelco.kamenridercraft.Items.Ryuki_Rider_Items;
 import com.kelco.kamenridercraft.Items.W_Rider_Items;
+import com.kelco.kamenridercraft.Items.Zero_One_Rider_Items;
 import com.kelco.kamenridercraft.Items.painting.ModPaintings;
 import com.kelco.kamenridercraft.Potion.Potion_core;
 import com.kelco.kamenridercraft.loot.ModLootModifiers;
@@ -65,6 +66,7 @@ public class KamenRiderCraftCore {
 		W_Rider_Items.register(modEventBus);
 		OOO_Rider_Items.register(modEventBus);
 		Ex_Aid_Rider_Items.register(modEventBus);
+		Zero_One_Rider_Items.register(modEventBus);
 		Geats_Rider_Items.register(modEventBus);
 		Gotchard_Rider_Items.register(modEventBus);
 		Reboot_Rider_Items.register(modEventBus);

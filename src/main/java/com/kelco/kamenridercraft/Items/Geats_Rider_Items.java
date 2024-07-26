@@ -58,7 +58,7 @@ public class Geats_Rider_Items {
 	public static final RegistryObject<Item> GEATS_CORE_ID = ITEMS.register("geats_rider_core_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","geats","desire_driver_belt_geats",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false))
-			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(MissionBoxItem.CORE_ID).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(MissionBoxItem.CORE_ID, 10).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> GEATS_ONENESS_CORE_ID = ITEMS.register("geats_oneness_rider_core_id",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
@@ -67,17 +67,17 @@ public class Geats_Rider_Items {
 	public static final RegistryObject<Item> TYCOON_CORE_ID = ITEMS.register("tycoon_rider_core_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","tycoon","desire_driver_belt_tycoon",
 					new MobEffectInstance(MobEffects.LUCK, 40, 0,true,false))
-			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(MissionBoxItem.CORE_ID).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(MissionBoxItem.CORE_ID, 5).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> NA_GO_CORE_ID = ITEMS.register("na_go_rider_core_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","na_go","desire_driver_belt_na_go",
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false))
-			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(MissionBoxItem.CORE_ID).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(MissionBoxItem.CORE_ID, 5).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> BUFFA_CORE_ID = ITEMS.register("buffa_rider_core_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","buffa","desire_driver_belt_buffa",
 					new MobEffectInstance(Effect_core.ANTIPOISON.get(), 40, 0,true,false))
-			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(MissionBoxItem.CORE_ID).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(MissionBoxItem.CORE_ID, 5).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> BUFFA_CORE_ID_CRACKED = ITEMS.register("buffa_rider_core_id_cracked",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_jyamato","buffa","desire_driver_belt_buffa",
@@ -95,7 +95,7 @@ public class Geats_Rider_Items {
 	public static final RegistryObject<Item> NUGE_SPARROW_CORE_ID = ITEMS.register("nudge_sparrow_rider_core_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","nudge_sparrow","desire_driver_belt_nadge_sparrow",
 					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
-			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(MissionBoxItem.CORE_ID).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(MissionBoxItem.CORE_ID, 3).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> SHIROWE_CORE_ID = ITEMS.register("shirowe_rider_core_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","shirowe","desire_driver_belt_shirowe",
@@ -110,7 +110,7 @@ public class Geats_Rider_Items {
 	public static final RegistryObject<Item> MARY_CORE_ID = ITEMS.register("mary_rider_core_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","mary","desire_driver_belt_mary",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false))
-			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(MissionBoxItem.CORE_ID).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(MissionBoxItem.CORE_ID, 3).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> DA_PAAN_CORE_ID = ITEMS.register("da_paan_rider_core_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","da_paan","desire_driver_belt_da_paan",
@@ -120,7 +120,7 @@ public class Geats_Rider_Items {
 	public static final RegistryObject<Item> KEIROU_CORE_ID = ITEMS.register("keirou_rider_core_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","keirou","desire_driver_belt_keilow",
 					new MobEffectInstance(MobEffects.SLOW_FALLING, 40, 0,true,false))
-			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(MissionBoxItem.CORE_ID).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(MissionBoxItem.CORE_ID, 2).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> LETTER_CORE_ID = ITEMS.register("letter_rider_core_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","letter","desire_driver_belt_letter",
@@ -131,7 +131,7 @@ public class Geats_Rider_Items {
 	public static final RegistryObject<Item> LOPO_CORE_ID = ITEMS.register("lopo_rider_core_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","lopo","desire_driver_belt_lopo",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
-			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(MissionBoxItem.CORE_ID).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(MissionBoxItem.CORE_ID, 3).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> GROOVY_CORE_ID = ITEMS.register("groovy_rider_core_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","groovy","desire_driver_belt_groovy",
@@ -161,7 +161,7 @@ public class Geats_Rider_Items {
 	public static final RegistryObject<Item> SEEKER_CORE_ID = ITEMS.register("seeker_rider_core_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","seeker","desire_driver_belt_seeker",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false))
-			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(MissionBoxItem.CORE_ID).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(MissionBoxItem.CORE_ID, 3).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> BUTCHI_CORE_ID = ITEMS.register("butchi_rider_core_id",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","butchi","desire_driver_belt_da_paan",
@@ -233,38 +233,38 @@ public class Geats_Rider_Items {
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_magnum","geats","desire_driver_belt_geats",
 					new MobEffectInstance(Effect_core.FIRE_SHOT.get(), 40, 0,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false))
-			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE, 5).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> BOOST_RAISE_BUCKLE = ITEMS.register("boost_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_boost","geats","desire_driver_belt_geats",
 					new MobEffectInstance(Effect_core.BOOST.get(), 40, 0,true,false))
-			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE, 5).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> ZOMBIE_RAISE_BUCKLE = ITEMS.register("zombie_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_zombie","geats","desire_driver_belt_geats",
 					new MobEffectInstance(Effect_core.ANTIPOISON.get(), 40, 0,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false))
-			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE, 4).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> NINJA_RAISE_BUCKLE = ITEMS.register("ninja_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_ninja","geats","desire_driver_belt_geats",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false))
-			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE, 4).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> MONSTER_RAISE_BUCKLE = ITEMS.register("monster_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_monster","geats","desire_driver_belt_geats",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false),
 					new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false))
-			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE, 3).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> BEAT_RAISE_BUCKLE = ITEMS.register("beat_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_beat","geats","desire_driver_belt_geats",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false))
-			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE, 3).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 
 	public static final RegistryObject<Item> POWERED_BUILDER_RAISE_BUCKLE_GEATS = ITEMS.register("powered_builder_raise_buckle_geats",
@@ -479,44 +479,44 @@ public class Geats_Rider_Items {
 	public static final RegistryObject<Item> ARROW_RAISE_BUCKLE = ITEMS.register("arrow_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_arrow","geats","desire_driver_belt_geats",
 					new MobEffectInstance(Effect_core.EXPLOSION_SHOT.get(), 40, 0,true,false))
-			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE, 10).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> WATER_RAISE_BUCKLE = ITEMS.register("water_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_water","geats","desire_driver_belt_geats",
 					new MobEffectInstance(MobEffects.WATER_BREATHING, 40, 0,true,false))
-			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE, 10).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> HAMMER_RAISE_BUCKLE = ITEMS.register("hammer_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_hammer","geats","desire_driver_belt_geats",
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false))
-			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE, 10).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> SHIELD_RAISE_BUCKLE = ITEMS.register("shield_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_shield","geats","desire_driver_belt_geats",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false))
-			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE, 10).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> CHAIN_ARRAY_RAISE_BUCKLE = ITEMS.register("chain_array_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_chain_array","geats","desire_driver_belt_geats",
 					new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 40, 0,true,false),
 			new MobEffectInstance(Effect_core.SLASH.get(), 40, 1,true,false))
-			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE, 8).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> CLAW_RAISE_BUCKLE = ITEMS.register("claw_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_claw","geats","desire_driver_belt_geats",
 					new MobEffectInstance(Effect_core.SLASH.get(), 40, 0,true,false))
-			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE, 8).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> DRILL_RAISE_BUCKLE = ITEMS.register("drill_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_drill","geats","desire_driver_belt_geats",
 					new MobEffectInstance(Effect_core.PUNCH.get(), 40, 2,true,false))
-			.ChangeSlot(2).SetOffhandSlot(3).ChangeModel("geats_rider_drill.geo.json").AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.ChangeSlot(2).SetOffhandSlot(3).ChangeModel("geats_rider_drill.geo.json").AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE, 5).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> PROPELLER_RAISE_BUCKLE = ITEMS.register("propeller_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_propeller","geats","desire_driver_belt_geats",
 					new MobEffectInstance(MobEffects.JUMP, 40, 6,true,false),
 					new MobEffectInstance(MobEffects.SLOW_FALLING, 40, 6,true,false))
-			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.ChangeSlot(2).SetOffhandSlot(3).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(MissionBoxItem.RAISE_BUCKLE, 5).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> GIGANT_CONTAINER_BUCKLE = ITEMS.register("gigant_container_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_gigant_container","geats","desire_driver_belt_geats",

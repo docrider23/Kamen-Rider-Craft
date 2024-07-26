@@ -113,6 +113,10 @@ public class RiderTabs {
    	CreativeModeTab.builder().icon(() -> new ItemStack(Ex_Aid_Rider_Items.EX_AIDHELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_ex_aid_items.png"))
    	.title(Component.literal("Ex-Aid Rider Items")).build());
 
+    public static RegistryObject<CreativeModeTab> Zero_OneTab = CREATIVE_MODE_TABS.register("krc_410_zero_one_tab", () -> 
+   	CreativeModeTab.builder().icon(() -> new ItemStack(Zero_One_Rider_Items.ZERO_ONE_HELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_zero_one_items.png"))
+   	.title(Component.literal("Zero-One Rider Items")).build());
+
     public static RegistryObject<CreativeModeTab> GeatsTab = CREATIVE_MODE_TABS.register("krc_440_geats_tab", () -> 
    	CreativeModeTab.builder().icon(() -> new ItemStack(Geats_Rider_Items.GEATS_HELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_geats_items.png"))
    	.title(Component.literal("Geats Rider Items")).build());
@@ -173,6 +177,7 @@ public class RiderTabs {
     
     public static List<Item> EX_AID_TAB_ITEM= new ArrayList<Item>();
 
+    public static List<Item> ZERO_ONE_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> GEATS_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> GOTCHARD_TAB_ITEM= new ArrayList<Item>();
     public static List<Item> GAVV_TAB_ITEM= new ArrayList<Item>();
@@ -343,16 +348,22 @@ public class RiderTabs {
 				event.accept( RiderTabs.EX_AID_TAB_ITEM.get(i));
 			}
 
-		}else if(event.getTab() == RiderTabs.GotchardTab.get()) {
-			for (int i = 0; i < RiderTabs.GOTCHARD_TAB_ITEM.size(); i++)
+		}else if(event.getTab() == RiderTabs.Zero_OneTab.get()) {
+			for (int i = 0; i < RiderTabs.ZERO_ONE_TAB_ITEM.size(); i++)
 			{
-				event.accept( RiderTabs.GOTCHARD_TAB_ITEM.get(i));
+				event.accept( RiderTabs.ZERO_ONE_TAB_ITEM.get(i));
 			}
 
 		}else if(event.getTab() == RiderTabs.GeatsTab.get()) {
 			for (int i = 0; i < RiderTabs.GEATS_TAB_ITEM.size(); i++)
 			{
 				event.accept( RiderTabs.GEATS_TAB_ITEM.get(i));
+			}
+
+		}else if(event.getTab() == RiderTabs.GotchardTab.get()) {
+			for (int i = 0; i < RiderTabs.GOTCHARD_TAB_ITEM.size(); i++)
+			{
+				event.accept( RiderTabs.GOTCHARD_TAB_ITEM.get(i));
 			}
 
 		}else if(event.getTab() == RiderTabs.GavvTab.get()) {

@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Random;
 
 import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
+import com.kelco.kamenridercraft.Items.Zero_One_Rider_Items;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.core.BlockPos;
@@ -76,6 +77,7 @@ public class GameCreator extends MachineBlock {
 			else if (pPlayer.getItemInHand(pHand).getItem() == Ex_Aid_Rider_Items.BLANK_GASHAT.get()) process(pPlayer, pLevel, pPos, pHand, getgashatDrop(1));
 			else if (pPlayer.getItemInHand(pHand).getItem() == Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_UNFINISHED_GASHAT.get()) process(pPlayer, pLevel, pPos, pHand, getgashatDrop(2));
 			else if (pPlayer.getItemInHand(pHand).getItem() == Ex_Aid_Rider_Items.UNFINISHED_HYPER_MUTEKI_GASHAT.get()) process(pPlayer, pLevel, pPos, pHand, getgashatDrop(3));
+			else if (pPlayer.getItemInHand(pHand).getItem() == Zero_One_Rider_Items.PRESIDENT_DAN_KUROTO_PROGRISEKEY.get()) process(pPlayer, pLevel, pPos, pHand, Ex_Aid_Rider_Items.GENM_MUSOU_GASHAT.get());
             return  InteractionResult.sidedSuccess(true);
         }
         return InteractionResult.sidedSuccess(false);
