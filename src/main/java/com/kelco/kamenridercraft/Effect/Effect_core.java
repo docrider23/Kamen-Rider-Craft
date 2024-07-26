@@ -90,7 +90,7 @@ public class Effect_core {
 			() -> new 	ResetEffect(MobEffectCategory.HARMFUL, 0x4eff00));
 
 	public static final RegistryObject<MobEffect> MUTEKI= EFFECT.register("muteki",
-			() -> new 	SaveEffect(MobEffectCategory.HARMFUL, 0xffce00));
+			() -> new 	SaveEffect(MobEffectCategory.BENEFICIAL, 0xffce00));
 
 	public static final RegistryObject<MobEffect> PAUSE= EFFECT.register("pause",
 			() -> new 	PauseEffect(MobEffectCategory.HARMFUL, 0x4eff00)
