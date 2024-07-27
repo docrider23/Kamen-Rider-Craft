@@ -1407,7 +1407,7 @@
 "item.kamenridercraft.forceriser_naki": "MetsubouJinrai Forceriser (Naki)",
 "item.kamenridercraft.forceriser_jin": "MetsubouJinrai Forceriser (Jin)",
 "item.kamenridercraft.forceriser_ikazuchi": "MetsubouJinrai Forceriser (Ikazuchi)",
-"item.kamenridercraft.forceriser_001": "MetsubouJinrai Forceriser (001)",
+"item.kamenridercraft.forceriser_001": "MetsubouJinrai Forceriser (ZeroZero-One)",
 
 "item.kamenridercraft.zaia_slashriser": "ZAIA Slashriser (Jin)",
 
@@ -1415,7 +1415,7 @@
 "item.kamenridercraft.metsuboujinrai_driver": "MetsubouJinrai Driver",
 
 "item.kamenridercraft.zaia_thousandriver": "ZAIA Thousandriver (Thouser)",
-"item.kamenridercraft.zaia_thousandriver_zaia": "ZAIA Thousandriver (ZAIA)",
+"item.kamenridercraft.zaia_thousandriver_zaia": "ZAIA Thousandriver (Zaia)",
 
 "item.kamenridercraft.ark_driver_zero": "Ark Driver-Zero (Ark-Zero)",
 "item.kamenridercraft.hiden_zero_one_driver_azu": "Hiden Zero-One Driver (Ark Zero-One)",
@@ -1437,8 +1437,28 @@
 
 "item.kamenridercraft.ragnarok_driver": "Ragnarok Driver",
 
-"item.kamenridercraft.zetsumeriser": "Zetsumeriser",
-"item.kamenridercraft.raidriser": "Raidriser",
+"item.kamenridercraft.zetsumeriser_berotha": "Zetsumeriser (Berotha Magia)",
+"item.kamenridercraft.zetsumeriser_kuehne": "Zetsumeriser (Kuehne Magia)",
+"item.kamenridercraft.zetsumeriser_ekal": "Zetsumeriser (Ekal Magia)",
+"item.kamenridercraft.zetsumeriser_dodo": "Zetsumeriser (Dodo Magia)",
+"item.kamenridercraft.zetsumeriser_neohi": "Zetsumeriser (Neohi Magia)",
+"item.kamenridercraft.zetsumeriser_onycho": "Zetsumeriser (Onycho Magia)",
+"item.kamenridercraft.zetsumeriser_vicarya": "Zetsumeriser (Vicarya Magia)",
+"item.kamenridercraft.zetsumeriser_gaeru": "Zetsumeriser (Gaeru Magia)",
+"item.kamenridercraft.zetsumeriser_mammoth": "Zetsumeriser (Mammoth Magia)",
+
+"item.kamenridercraft.zetsumeriser_dodo_custom": "Zetsumeriser (Dodo Magia Custom)",
+"item.kamenridercraft.zetsumeriser_dodo_custom_2": "Zetsumeriser (Dodo Magia Custom Two)",
+
+"item.kamenridercraft.zetsumeriser_arsino": "Zetsumeriser (Arsino Magia)",
+
+"item.kamenridercraft.raidriser_battle": "Raidriser (Battle Raider)",
+"item.kamenridercraft.raidriser_buffalo": "Raidriser (Crushing Buffalo Raider)",
+"item.kamenridercraft.raidriser_whale": "Raidriser (Splashing Whale Raider)",
+"item.kamenridercraft.raidriser_lion": "Raidriser (Dynamaiting Lion Raider)",
+"item.kamenridercraft.raidriser_penguin": "Raidriser (Storming Penguin Raider)",
+"item.kamenridercraft.raidriser_panda": "Raidriser (Scouting Panda Raider)",
+"item.kamenridercraft.raidriser_jackal": "Raidriser (Fighting Jackal Raider)",
 
 "item.kamenridercraft.attache_calibur": "Attache Calibur",
 "item.kamenridercraft.attache_shotgun": "Attache Shotgun",

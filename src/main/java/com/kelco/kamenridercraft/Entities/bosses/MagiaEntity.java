@@ -23,32 +23,32 @@ public class MagiaEntity extends BaseHenchmenEntity {
         this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_HELMET.get()));
         this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_CHESTPLATE.get()));
         this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_LEGGINGS.get()));
-        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER.get()));
+        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_BEROTHA.get()));
 		
 		switch (this.getRandom().nextInt(9)) {
 		  case 0:
-			  RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Zero_One_Rider_Items.KUEHNE_ZETSUMERISEKEY.get(), 1);
+			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_KUEHNE.get()));
 			  break;
 		  case 1:
-			  RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Zero_One_Rider_Items.EKAL_ZETSUMERISEKEY.get(), 1);
+			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_EKAL.get()));
 			  break;
 		  case 2:
-			  RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Zero_One_Rider_Items.NEOHI_ZETSUMERISEKEY.get(), 1);
+			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_NEOHI.get()));
 			  break;
 		  case 3:
-			  RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Zero_One_Rider_Items.ONYCHO_ZETSUMERISEKEY.get(), 1);
+			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_ONYCHO.get()));
 			  break;
 		  case 4:
-			  RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Zero_One_Rider_Items.VICARYA_ZETSUMERISEKEY.get(), 1);
+			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_VICARYA.get()));
 			  break;
 		  case 5:
-			  RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Zero_One_Rider_Items.GAERU_ZETSUMERISEKEY.get(), 1);
+			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_GAERU.get()));
 			  break;
 		  case 6:
-			  RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Zero_One_Rider_Items.MAMMOTH_ZETSUMERISEKEY.get(), 1);
+			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_MAMMOTH.get()));
 			  break;
 		  case 7:
-			  RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Zero_One_Rider_Items.ARSINO_ZETSUMERISEKEY.get(), 1);
+			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_ARSINO.get()));
 			  break;
 		  default:
 			  break;

@@ -23,25 +23,25 @@ public class RaiderEntity extends BaseHenchmenEntity {
         this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_HELMET.get()));
         this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_CHESTPLATE.get()));
         this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_LEGGINGS.get()));
-        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.RAIDRISER.get()));
+        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.RAIDRISER_BATTLE.get()));
 		switch (this.getRandom().nextInt(7)) {
 			case 0:
-				RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Zero_One_Rider_Items.CRUSHING_BUFFALO_PROGRISEKEY.get(), 1);
+				this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.RAIDRISER_BUFFALO.get()));
 				break;
 			case 1:
-				RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Zero_One_Rider_Items.SPLASHING_WHALE_PROGRISEKEY.get(), 1);
+				this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.RAIDRISER_WHALE.get()));
 				break;
 			case 2:
-				RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Zero_One_Rider_Items.DYNAMAITING_LION_PROGRISEKEY.get(), 1);
+				this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.RAIDRISER_LION.get()));
 				break;
 			case 3:
-				RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Zero_One_Rider_Items.STORMING_PENGUIN_PROGRISEKEY.get(), 1);
+				this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.RAIDRISER_PENGUIN.get()));
 				break;
 			case 4:
-				RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Zero_One_Rider_Items.SCOUTING_PANDA_PROGRISEKEY.get(), 1);
+				this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.RAIDRISER_PANDA.get()));
 				break;
 			case 5:
-				RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Zero_One_Rider_Items.FIGHTING_JACKAL_PROGRISEKEY.get(), 1);
+				this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.RAIDRISER_JACKAL.get()));
 				break;
 			default:
 				break;

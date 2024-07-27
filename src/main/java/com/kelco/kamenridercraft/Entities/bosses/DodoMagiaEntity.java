@@ -23,14 +23,13 @@ public class DodoMagiaEntity extends BaseHenchmenEntity {
         this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_HELMET.get()));
         this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_CHESTPLATE.get()));
         this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_LEGGINGS.get()));
-        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER.get()));
-		RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Zero_One_Rider_Items.DODO_ZETSUMERISEKEY_MAGIA.get(), 1);
+        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_DODO.get()));
 		switch (this.getRandom().nextInt(3)) {
 		  case 0:
-			  RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Zero_One_Rider_Items.DODO_CUSTOM_ZETSUMERISEKEY.get(), 1);
+			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_DODO_CUSTOM.get()));
 			  break;
 		  case 1:
-			  RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Zero_One_Rider_Items.DODO_CUSTOM_2_ZETSUMERISEKEY.get(), 1);
+			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_DODO_CUSTOM_2.get()));
 			  break;
 		  default:
 			  break;
