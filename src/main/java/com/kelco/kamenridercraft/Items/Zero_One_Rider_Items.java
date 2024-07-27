@@ -299,12 +299,17 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false),
             		new MobEffectInstance(Effect_core.FLYING.get(), 40, 0,true,false))
 			.addAlternative(LIGHTNING_HORNET_PROGRISEKEY_ZERO_ONE.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).AddToTabList(ProgrisekeyPrinter.ZAIA_PROGRISEKEY, 5));
+	public static final RegistryObject<Item> FIGHTING_JACKAL_PROGRISEKEY_ZERO_ONE = ITEMS.register("fighting_jackal_progrisekey_zero_one",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"_jackal","zero_one","zero_one_driver_belt",
+            		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
+            		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false)));
 	public static final RegistryObject<Item> FIGHTING_JACKAL_PROGRISEKEY = ITEMS.register("fighting_jackal_progrisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","jackal_raider","raidriser_belt_j",
             		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
-			.AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
+			.addAlternative(FIGHTING_JACKAL_PROGRISEKEY_ZERO_ONE.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 	public static final RegistryObject<Item> SERVAL_TIGER_ZETSUMERISEKEY = ITEMS.register("serval_tiger_zetsumerisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_serval","valkyrie","shotriser_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false))
@@ -341,8 +346,7 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
-            		new MobEffectInstance(Effect_core.FLYING.get(), 40, 0,true,false))
-			.AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
+            		new MobEffectInstance(Effect_core.FLYING.get(), 40, 0,true,false)));
 	public static final RegistryObject<Item> BURNING_FALCON_PROGRISEKEY = ITEMS.register("burning_falcon_progrisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","jin_burning","slashriser_belt",
             		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
