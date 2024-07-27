@@ -2,15 +2,17 @@ package com.kelco.kamenridercraft.Entities.footSoldiers;
 
 import javax.annotation.Nullable;
 
+import com.kelco.kamenridercraft.KamenRiderCraftCore;
 import com.kelco.kamenridercraft.Entities.MobsCore;
 import com.kelco.kamenridercraft.Entities.summons.BaseSummonEntity;
 import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
-import com.kelco.kamenridercraft.events.ModClientEvents;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.DifficultyInstance;
@@ -45,6 +47,7 @@ import net.minecraft.world.entity.projectile.ProjectileUtil;
 import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ProjectileWeaponItem;
+import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 
@@ -94,7 +97,7 @@ public class RideplayerEntity extends BaseHenchmenEntity implements RangedAttack
 
 	public void aiStep() {
 		ItemStack itemstack = this.getItemInHand(ProjectileUtil.getWeaponHoldingHand(this, item -> item instanceof BowItem));
-		if (this.getTarget() != null && ModClientEvents.SWORD_GUN_ITEM.contains(itemstack.getItem())) this.reassessSwordgunGoal();
+		if (this.getTarget() != null && (itemstack.getItem() instanceof BowItem && itemstack.getItem() instanceof SwordItem || itemstack.is(ItemTags.create(new ResourceLocation(KamenRiderCraftCore.MODID, "arsenal/all_swordguns"))))) this.reassessSwordgunGoal();
 
 		super.aiStep();
 	}

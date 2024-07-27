@@ -4,6 +4,7 @@ package com.kelco.kamenridercraft.client.models;
 // Paste this class into your mod and generate all required imports
 
 import com.google.common.collect.ImmutableList;
+import com.kelco.kamenridercraft.KamenRiderCraftCore;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import java.util.List;
@@ -27,7 +28,7 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class NewMoleImaginSandModel<T extends LivingEntity> extends HumanoidModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("kamenridercraft", "imagin_model"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(KamenRiderCraftCore.MODID, "imagin_model"), "main");
 	private final List<ModelPart> parts;
 	public final ModelPart leftPants;
 	public final ModelPart rightPants;

@@ -99,7 +99,7 @@ public class AttackRideCardItem extends BaseItem {
 									}
 
 									ItemEntity entity = new ItemEntity(p_41128_, p_41129_.getX(), p_41129_.getY(), p_41129_.getZ(), item, 0, 0, 0);
-									entity.setPickUpDelay(3);
+									entity.setPickUpDelay(0);
 									p_41128_.addFreshEntity(entity);
 								}
 							} else {

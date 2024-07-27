@@ -7,7 +7,7 @@
 		"items": [
 		  {
 			"items": [
-			  "kamenridercraft:shining_assault_hopper_progrisekey"
+			  "kamenridercraft:sting_scorpion_progrisekey"
 			]
 		  }
 		]
@@ -21,7 +21,8 @@
   ],
   "rewards": {
 	"recipes": [
-	  "kamenridercraft:zero_one/metalcluster_hopper_progrisekey"
+	  "kamenridercraft:zero_one/forceriser_horobi",
+	  "kamenridercraft:zero_one/attache_arrow"
 	]
   },
   "sends_telemetry_event": false

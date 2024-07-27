@@ -21,6 +21,7 @@
   ],
   "rewards": {
 	"recipes": [
+	  "kamenridercraft:zero_one/shotriser_valkyrie",
 	  "kamenridercraft:zero_one/shot_riser_gun"
 	]
   },

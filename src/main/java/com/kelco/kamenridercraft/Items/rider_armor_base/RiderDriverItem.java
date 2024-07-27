@@ -268,7 +268,7 @@ public class RiderDriverItem extends RiderArmorItem{
 
 	public static RiderFormChangeItem get_Form_Item(ItemStack itemstack,int SLOT)
 	{
-		ResourceLocation Used_Form_Item = new ResourceLocation("kamenridercraft", itemstack.getTag().getString("slot_tex"+SLOT));
+		ResourceLocation Used_Form_Item = new ResourceLocation(KamenRiderCraftCore.MODID, itemstack.getTag().getString("slot_tex"+SLOT));
 		RiderDriverItem belt = (RiderDriverItem)itemstack.getItem();
 		RiderFormChangeItem Base_Form_Item = belt.Base_Form_Item;
 
