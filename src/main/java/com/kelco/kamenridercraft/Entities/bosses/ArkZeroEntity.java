@@ -31,7 +31,7 @@ public class ArkZeroEntity extends BaseHenchmenEntity {
 
     public void aiStep() {
     	if (RiderDriverItem.get_Form_Item(this.getItemBySlot(EquipmentSlot.FEET),1)!=Zero_One_Rider_Items.ARK_ONE_PROGRISEKEY_ONE.get()) {
-    		if (this.getHealth()<50) {
+    		if (this.getHealth()<100) {
     			if(this.getLastAttacker() instanceof Player) {
     				Player playerIn = (Player) this.getLastAttacker();
 					playerIn.sendSystemMessage(Component.translatable("Singurize!").withStyle(ChatFormatting.DARK_RED));
