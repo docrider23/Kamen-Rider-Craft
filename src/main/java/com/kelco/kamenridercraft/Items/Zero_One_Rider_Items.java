@@ -335,6 +335,14 @@ public class Zero_One_Rider_Items {
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","jin","forceriser_belt_jin",
             		new MobEffectInstance(Effect_core.FLYING.get(), 40, 0,true,false))
 			.addAlternative(FLYING_FALCON_PROGRISEKEY_ZERO_ONE.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).AddToTabList(ProgrisekeyPrinter.HIDEN_PROGRISEKEY, 5));
+	public static final RegistryObject<Item> BURNING_FALCON_PROGRISEKEY_ZERO_ONE = ITEMS.register("burning_falcon_progrisekey_zero_one",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"_burning","zero_one","zero_one_driver_belt",
+            		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
+            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
+            		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+            		new MobEffectInstance(Effect_core.FLYING.get(), 40, 0,true,false))
+			.AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 	public static final RegistryObject<Item> BURNING_FALCON_PROGRISEKEY = ITEMS.register("burning_falcon_progrisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","jin_burning","slashriser_belt",
             		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
@@ -342,7 +350,7 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
             		new MobEffectInstance(Effect_core.FLYING.get(), 40, 0,true,false))
-			.AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
+			.addAlternative(BURNING_FALCON_PROGRISEKEY_ZERO_ONE.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 
 	public static final RegistryObject<Item> AMAZING_CAUCASUS_PROGRISEKEY_ZERO_ONE = ITEMS.register("amazing_caucasus_progrisekey_zero_one",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_caucasus","zero_one","zero_one_driver_belt",
