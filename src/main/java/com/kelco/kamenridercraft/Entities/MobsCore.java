@@ -17,7 +17,7 @@ import com.kelco.kamenridercraft.Entities.bosses.AnkhCompleteEntity;
 import com.kelco.kamenridercraft.Entities.bosses.AnkhLostEntity;
 import com.kelco.kamenridercraft.Entities.bosses.AnotherAgitoEntity;
 import com.kelco.kamenridercraft.Entities.bosses.AranburaBugsterEntity;
-import com.kelco.kamenridercraft.Entities.bosses.ArkOneEntity;
+import com.kelco.kamenridercraft.Entities.bosses.ArkZeroEntity;
 import com.kelco.kamenridercraft.Entities.bosses.CaucasusEntity;
 import com.kelco.kamenridercraft.Entities.bosses.CharlieBugsterEntity;
 import com.kelco.kamenridercraft.Entities.bosses.ClayDollDopantEntity;
@@ -708,11 +708,11 @@ public class MobsCore {
           public static final RegistryObject<ForgeSpawnEggItem> IKAZUCHI_SPAWN_EGG = ITEMS.register("ikazuchi_spawn_egg",
                   () -> new ForgeSpawnEggItem(IKAZUCHI, 0x7d0b0a, 0x242424, new Item.Properties()));
 
-          public static final RegistryObject<EntityType<ArkOneEntity>> ARK_ONE = MOBLIST.register("ark_one",
-                  () -> EntityType.Builder.of(ArkOneEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":ark_one"));
+          public static final RegistryObject<EntityType<ArkZeroEntity>> ARK_ZERO = MOBLIST.register("ark_zero",
+                  () -> EntityType.Builder.of(ArkZeroEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":ark_zero"));
  
-          public static final RegistryObject<ForgeSpawnEggItem> ARK_ONE_SPAWN_EGG = ITEMS.register("ark_one_spawn_egg",
-                  () -> new ForgeSpawnEggItem(ARK_ONE, 0x161616, 0xC40000, new Item.Properties()));
+          public static final RegistryObject<ForgeSpawnEggItem> ARK_ZERO_SPAWN_EGG = ITEMS.register("ark_zero_spawn_egg",
+                  () -> new ForgeSpawnEggItem(ARK_ZERO, 0x161616, 0xC40000, new Item.Properties()));
 
 
           public static final RegistryObject<EntityType<PawnJyamatoEntity>> PAWN_JYAMATO = MOBLIST.register("pawnjyamato_mob",

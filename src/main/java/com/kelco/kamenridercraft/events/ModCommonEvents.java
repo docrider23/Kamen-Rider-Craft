@@ -16,7 +16,7 @@ import com.kelco.kamenridercraft.Entities.bosses.AncientOOOEntity;
 import com.kelco.kamenridercraft.Entities.bosses.AnkhCompleteEntity;
 import com.kelco.kamenridercraft.Entities.bosses.AnkhLostEntity;
 import com.kelco.kamenridercraft.Entities.bosses.AnotherAgitoEntity;
-import com.kelco.kamenridercraft.Entities.bosses.ArkOneEntity;
+import com.kelco.kamenridercraft.Entities.bosses.ArkZeroEntity;
 import com.kelco.kamenridercraft.Entities.bosses.CaucasusEntity;
 import com.kelco.kamenridercraft.Entities.bosses.ClayDollDopantEntity;
 import com.kelco.kamenridercraft.Entities.bosses.CommanderDopantEntity;
@@ -587,7 +587,7 @@ public class ModCommonEvents {
 		event.put(MobsCore.NAKI.get(), NakiEntity.setAttributes());
 		event.put(MobsCore.DODO_MAGIA.get(), DodoMagiaEntity.setAttributes());
 		event.put(MobsCore.RAIDER.get(), RaiderEntity.setAttributes());
-		event.put(MobsCore.ARK_ONE.get(), ArkOneEntity.setAttributes());
+		event.put(MobsCore.ARK_ZERO.get(), ArkZeroEntity.setAttributes());
 		event.put(MobsCore.ABADDON_COMMANDER.get(), AbaddonCommanderEntity.setAttributes());
 		event.put(MobsCore.EDEN.get(), EdenEntity.setAttributes());
 		event.put(MobsCore.ZAIA.get(), ZaiaEntity.setAttributes());

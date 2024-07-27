@@ -510,7 +510,7 @@ public class Rider_Blocks {
 
 	public static final RegistryObject<Block> ARK_ONE_BOSS_BLOCK = registerBlock("ark_one_boss_block",
 			() -> new BossBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(2f)
-					,MobsCore.ARK_ONE
+					,MobsCore.ARK_ZERO
 					,Component.translatable("Arkrise! All zero.").withStyle(ChatFormatting.DARK_RED)).AddToTabList(RiderTabs.RIDER_BLOCK));
 
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

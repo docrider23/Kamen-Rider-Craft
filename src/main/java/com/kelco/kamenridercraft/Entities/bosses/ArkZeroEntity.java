@@ -16,13 +16,13 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-public class ArkOneEntity extends BaseHenchmenEntity {
+public class ArkZeroEntity extends BaseHenchmenEntity {
 	
 
 	
-    public ArkOneEntity(EntityType<? extends Zombie> type, Level level) {
+    public ArkZeroEntity(EntityType<? extends Zombie> type, Level level) {
         super(type, level);
-        NAME="ark_one";
+        NAME="ark_zero";
         this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_HELMET.get()));
         this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_CHESTPLATE.get()));
         this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_LEGGINGS.get()));

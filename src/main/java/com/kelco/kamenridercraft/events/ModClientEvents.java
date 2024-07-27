@@ -258,7 +258,7 @@ public class ModClientEvents {
 		event.registerEntityRenderer(MobsCore.NAKI.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.DODO_MAGIA.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.RAIDER.get(), BasicEntityRenderer::new);
-		event.registerEntityRenderer(MobsCore.ARK_ONE.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.ARK_ZERO.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.ABADDON_COMMANDER.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.EDEN.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.ZAIA.get(), BasicEntityRenderer::new);

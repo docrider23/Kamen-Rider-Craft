@@ -502,7 +502,7 @@ public class RiderTabs {
 			event.accept(MobsCore.NAKI_SPAWN_EGG);
 			event.accept(MobsCore.DODO_MAGIA_SPAWN_EGG);
 			event.accept(MobsCore.RAIDER_SPAWN_EGG);
-			event.accept(MobsCore.ARK_ONE_SPAWN_EGG);
+			event.accept(MobsCore.ARK_ZERO_SPAWN_EGG);
 			event.accept(MobsCore.ABADDON_COMMANDER_SPAWN_EGG);
 			event.accept(MobsCore.EDEN_SPAWN_EGG);
 			event.accept(MobsCore.ZAIA_SPAWN_EGG);
