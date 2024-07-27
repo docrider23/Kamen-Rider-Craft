@@ -72,7 +72,7 @@ public class ThousandriverItem extends RiderDriverItem{
 			
 		}
 	
-		else if (rider.hasEffect(Effect_core.BUGSTER.get()))return riderName+ "_ark_caucasus";
+		else if (rider.hasEffect(Effect_core.BUGSTER.get()))return "zaia";
 		else return riderName+ get_Form_Item(itemstack,1).getFormName(fly);
 
 	}

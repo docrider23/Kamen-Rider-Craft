@@ -38,6 +38,9 @@ public class Zero_One_Rider_Items {
 	public static final RegistryObject<Item> HUMAGEAR_PROGRISEKEY = ITEMS.register("humagear_progrisekey",
     		() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 
+	public static final RegistryObject<Item> RISING_HOPPER_PROGRISEKEY_ZERO_ZERO_ONE = ITEMS.register("rising_hopper_progrisekey_zerozero_one",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"","zero_zero_one","forceriser_belt",
+            		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false)));
 	public static final RegistryObject<Item> RISING_HOPPER_PROGRISEKEY_VULCAN = ITEMS.register("rising_hopper_progrisekey_vulcan",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_hopper","vulcan","shotriser_belt",
             		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false)));
@@ -325,7 +328,7 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(Effect_core.ANTIPOISON.get(), 40, 0,true,false))
 			.addAlternative(STING_SCORPION_PROGRISEKEY_ZERO_ONE.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).AddToTabList(ProgrisekeyPrinter.ZAIA_PROGRISEKEY, 10));
 	public static final RegistryObject<Item> ARK_SCORPION_PROGRISEKEY = ITEMS.register("ark_scorpion_progrisekey",
-            () -> new RiderFormChangeItem(new Item.Properties(),0,"","horobi_ark","zetsumetsu_driver_belt",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"","horobi_ark_scorpion","zetsumetsu_driver_belt",
             		new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
@@ -380,7 +383,7 @@ public class Zero_One_Rider_Items {
 			.AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 
 	public static final RegistryObject<Item> ARK_ONE_PROGRISEKEY_ONE = ITEMS.register("ark_one_progrisekey_one",
-            () -> new RiderFormChangeItem(new Item.Properties(),0,"_ark_one","ark_zero","ark_driver_one_belt",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"_one_hopper","ark_zero","ark_driver_one_belt",
 					new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
@@ -637,13 +640,13 @@ public class Zero_One_Rider_Items {
     public static final RegistryObject<Item> FORCERISER_IKAZUCHI = ITEMS.register("forceriser_ikazuchi",
     		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"ikazuchi",DODO_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
     public static final RegistryObject<Item> FORCERISER_001 = ITEMS.register("forceriser_001",
-    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"zero_zero_one",RISING_HOPPER_PROGRISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"zero_zero_one",RISING_HOPPER_PROGRISEKEY_ZERO_ZERO_ONE ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 
 	public static final RegistryObject<Item> ZAIA_SLASHRISER = ITEMS.register("zaia_slashriser",
     		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"jin_burning",BURNING_FALCON_PROGRISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 
 	public static final RegistryObject<Item> ZETSUMETSU_DRIVER = ITEMS.register("zetsumetsu_driver",
-    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"horobi_ark",ARK_SCORPION_PROGRISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"horobi_ark_scorpion",ARK_SCORPION_PROGRISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 	public static final RegistryObject<Item> METSUBOUJINRAI_DRIVER = ITEMS.register("metsuboujinrai_driver",
     		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"metsuboujinrai",MASSBRAIN_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 
