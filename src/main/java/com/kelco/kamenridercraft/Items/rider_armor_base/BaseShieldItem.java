@@ -16,7 +16,7 @@ public class BaseShieldItem extends ShieldItem {
 	private Item RepairItem = Modded_item_core.RIDER_CIRCUIT.get();
 	
 	public BaseShieldItem(Properties prop) {
-		super(prop);
+		super(prop.defaultDurability(336));
 		ModClientEvents.SHIELD_ITEM.add(this);
 
 	}
