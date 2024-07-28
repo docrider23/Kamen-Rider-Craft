@@ -367,6 +367,18 @@ public class Rider_Blocks {
 	public static final RegistryObject<Block> GAOH_LINER_WINDOW = registerBlock("gaoh_liner_windo",
 			() -> new GlassBaseFacingBlock(BlockBehaviour.Properties.copy(Blocks.GLASS)
 					.strength(2f),DyeColor.LIME).AddToTabList(RiderTabs.RIDER_BLOCK));
+	public static final RegistryObject<Block> GAOHLINER_LOGO_TOP = registerBlock("gaohliner_logo_top",
+			() -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
+	public static final RegistryObject<Block> GAOHLINER_LOGO_BOTTOM = registerBlock("gaohliner_logo_bottom",
+			() -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
+	public static final RegistryObject<Block> GAOHLINER_LOGO_SIDE = registerBlock("gaohliner_logo_side",
+			() -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
+	public static final RegistryObject<Block> GAOHLINER_LOGO_SIDER = registerBlock("gaohliner_logo_sider",
+			() -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
 					
 	public static final RegistryObject<Block> ZERO_LINER_GREEN = registerBlock("zero_liner_green",
 			() -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
