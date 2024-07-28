@@ -484,21 +484,41 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false))
     		.AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 
-//	public static final RegistryObject<Item> RAGNAROK_PROGRISEKEY_BLACK = ITEMS.register("ragnarok_progrisekey_black",
-//            () -> new RiderFormChangeItem(new Item.Properties(),0,"_black","ragnarok","ragnarok_driver_belt",
-//					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false)));
-//	public static final RegistryObject<Item> RAGNAROK_PROGRISEKEY = ITEMS.register("ragnarok_progrisekey",
-//            () -> new RiderFormChangeItem(new Item.Properties(),0,"","ragnarok","ragnarok_driver_belt",
-//					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false))
-//			.addSwitchForm(RAGNAROK_PROGRISEKEY_BLACK.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
-//	public static final RegistryObject<Item> RAGNAROK_FLAMING_TIGER_PROGRISEKEY = ITEMS.register("ragnarok_flaming_tiger_progrisekey",
-//            () -> new RiderFormChangeItem(new Item.Properties(),0,"_tiger","ragnarok","ragnarok_driver_belt",
-//					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false))
-//			.AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
-//	public static final RegistryObject<Item> THOUSAND_KEY = ITEMS.register("thousand_key",
-//            () -> new RiderFormChangeItem(new Item.Properties(),0,"_supreme","ragnarok","ragnarok_driver_belt",
-//					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false))
-//			.AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
+	public static final RegistryObject<Item> RAGNAROK_BASE = ITEMS.register("ragnarok_base",
+	          () -> new RiderFormChangeItem(new Item.Properties(),0,"","ragnarok","ragnarok_driver_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.REGENERATION, 40, 1,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false)));
+	public static final RegistryObject<Item> RAGNAROK_FLAMING_TIGER_PROGRISEKEY = ITEMS.register("ragnarok_flaming_tiger_progrisekey",
+	          () -> new RiderFormChangeItem(new Item.Properties(),0,"_tiger","ragnarok","ragnarok_driver_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.REGENERATION, 40, 1,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false))
+			  .addSwitchForm(RAGNAROK_BASE.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
+	public static final RegistryObject<Item> RAGNAROK_SUPREME = ITEMS.register("ragnarok_supreme",
+	          () -> new RiderFormChangeItem(new Item.Properties(),0,"_supreme","ragnarok","ragnarok_driver_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.REGENERATION, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false)));
+	public static final RegistryObject<Item> THOUSAND_KEY = ITEMS.register("thousand_key",
+	          () -> new RiderFormChangeItem(new Item.Properties(),0,"_apocalypse_reboot","ragnarok","ragnarok_driver_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.REGENERATION, 40, 1,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false))
+			  .addSwitchForm(RAGNAROK_SUPREME.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 
 	public static final RegistryObject<Item> BEROTHA_ZETSUMERISEKEY = ITEMS.register("berotha_zetsumerisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","berotha_magia","zetsumeriser_belt")
@@ -680,8 +700,8 @@ public class Zero_One_Rider_Items {
 	public static final RegistryObject<Item> ZEIN_DRIVER = ITEMS.register("zein_driver",
 			() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"zein",ZEIN_PROGRISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 
-//	public static final RegistryObject<Item> RAGNAROK_DRIVER = ITEMS.register("ragnarok_driver",
-//    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"ragnarok",RAGNAROK_PROGRISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+	public static final RegistryObject<Item> RAGNAROK_DRIVER = ITEMS.register("ragnarok_driver",
+	  		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"ragnarok",RAGNAROK_BASE ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 
 	public static final RegistryObject<Item> ZETSUMERISER_BEROTHA = ITEMS.register("zetsumeriser_berotha",
     		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"berotha_magia",BEROTHA_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));

@@ -62,6 +62,9 @@ public class DesireDriverItem  extends RiderDriverItem{
 		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,2)==Modded_item_core.BLANK_FORM.get()&&get_Form_Item(itemstack,3).getFormName(fly)=="_jyamato") return "geats_rider_jyamato_no_belt";
 		
 		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,2)==Geats_Rider_Items.MAGNUM_RAISE_BUCKLE.get()&&get_Form_Item(itemstack,1)==Geats_Rider_Items.GEATS_CORE_ID_OSAKA.get()) return "geats_rider_magnum_osaka";
+		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,2)==Geats_Rider_Items.MAGNUM_RAISE_BUCKLE.get()&&get_Form_Item(itemstack,1)==Geats_Rider_Items.GEATS_CORE_ID_FUKUOKA.get()) return "geats_rider_magnum_fukuoka";
+		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,2)==Geats_Rider_Items.MAGNUM_RAISE_BUCKLE.get()&&get_Form_Item(itemstack,1)==Geats_Rider_Items.GEATS_CORE_ID_NAGOYA.get()) return "geats_rider_magnum_nagoya";
+		else if (equipmentSlot == EquipmentSlot.CHEST&get_Form_Item(itemstack,2)==Geats_Rider_Items.MAGNUM_RAISE_BUCKLE.get()&&get_Form_Item(itemstack,1)==Geats_Rider_Items.GEATS_CORE_ID_TOKYO.get()) return "geats_rider_magnum_tokyo";
 		
 		
 		else if (equipmentSlot == EquipmentSlot.HEAD&get_Form_Item(itemstack,3)==Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get()&&get_Form_Item(itemstack,2)==Geats_Rider_Items.BOOST_MKIII_RAISE_BUCKLE.get()) return riderName+"_ix_base_over";
