@@ -23,7 +23,8 @@
 	"recipes": [
 	  "kamenridercraft:kuuga/kuugahead",
 	  "kamenridercraft:kuuga/kuugatroso",
-	  "kamenridercraft:kuuga/kuugalegs"
+	  "kamenridercraft:kuuga/kuugalegs",
+	  "kamenridercraft:decade/decade_camera"
 	]
   },
   "sends_telemetry_event": false

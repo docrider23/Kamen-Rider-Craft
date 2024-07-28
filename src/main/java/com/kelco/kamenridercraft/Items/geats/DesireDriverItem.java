@@ -31,7 +31,7 @@ public class DesireDriverItem  extends RiderDriverItem{
 	@Override
 	public String GET_TEXT(ItemStack itemstack, EquipmentSlot equipmentSlot, LivingEntity rider,String riderName)
 	{
-		boolean fly = rider instanceof Player && ((Player) rider).getAbilities().flying;
+		boolean fly = rider instanceof Player player && player.getAbilities().flying;
 		
 		Boolean isBujin= false;
 		if (get_Form_Item(itemstack,2)==Geats_Rider_Items.BOOST_RAISE_BUCKLE.get())  isBujin = true;

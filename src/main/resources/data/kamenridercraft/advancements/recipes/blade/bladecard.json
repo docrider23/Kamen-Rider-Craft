@@ -23,7 +23,8 @@
 	"recipes": [
 	  "kamenridercraft:blade/bladehead",
 	  "kamenridercraft:blade/bladetroso",
-	  "kamenridercraft:blade/bladelegs"
+	  "kamenridercraft:blade/bladelegs",
+	  "kamenridercraft:decade/decade_camera"
 	]
   },
   "sends_telemetry_event": false

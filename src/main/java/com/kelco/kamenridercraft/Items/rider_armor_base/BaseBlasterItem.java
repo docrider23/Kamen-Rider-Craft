@@ -45,6 +45,8 @@ public class BaseBlasterItem extends BowItem {
 	private final Multimap<Attribute, AttributeModifier> defaultModifiers;
 
 	private Item RepairItem = Modded_item_core.RIDER_CIRCUIT.get();
+	private Item HenshinBeltItem;
+	private Boolean Henshin_item = false;
 
 	private Boolean LFB = false;
 	private int LFBB = 1;
@@ -82,6 +84,10 @@ public class BaseBlasterItem extends BowItem {
 			if (!((double)f < 0.1D)) {
 
 				if (!p_40668_.isClientSide) {
+					if (Henshin_item && p_40669_.getItemBySlot(EquipmentSlot.FEET)==ItemStack.EMPTY) {
+						p_40669_.setItemSlot(EquipmentSlot.FEET, new ItemStack(HenshinBeltItem));
+						if (p_40669_.getItemBySlot(EquipmentSlot.OFFHAND).getItem() instanceof RiderFormChangeItem) p_40669_.getItemBySlot(EquipmentSlot.OFFHAND).getItem().use(p_40668_, (Player) p_40669_, InteractionHand.OFF_HAND);
+					}
 					Vec3 look = player.getLookAngle();
 					if (LFB) {
 						
@@ -213,6 +219,12 @@ public class BaseBlasterItem extends BowItem {
 
 	public boolean isValidRepairItem(ItemStack p_40392_, ItemStack p_40393_) {
 		return p_40393_.getItem()== RepairItem;
+	}
+
+	public BaseBlasterItem IsHenshinItem(Item item) {
+		Henshin_item=true;
+		HenshinBeltItem=item;
+		return this;
 	}
 
 	public BaseBlasterItem IsSwordGun() {

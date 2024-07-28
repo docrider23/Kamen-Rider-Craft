@@ -26,7 +26,7 @@ public class OOODriverItem extends RiderDriverItem{
 	@Override
 	public String GET_TEXT(ItemStack itemstack, EquipmentSlot equipmentSlot, LivingEntity rider,String riderName)
 	{
-		boolean fly = rider instanceof Player && ((Player) rider).getAbilities().flying;
+		boolean fly = rider instanceof Player player && player.getAbilities().flying;
 		if (equipmentSlot == EquipmentSlot.FEET) {
 			
 			

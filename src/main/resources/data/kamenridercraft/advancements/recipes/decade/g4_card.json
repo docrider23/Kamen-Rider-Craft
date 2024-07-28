@@ -21,7 +21,8 @@
   ],
   "rewards": {
 	"recipes": [
-	  "kamenridercraft:decade/k_touch_diend"
+	  "kamenridercraft:decade/k_touch_diend",
+	  "kamenridercraft:decade/g4_gigant_card"
 	]
   },
   "sends_telemetry_event": false

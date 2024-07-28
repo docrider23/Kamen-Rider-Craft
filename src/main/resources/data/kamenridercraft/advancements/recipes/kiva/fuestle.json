@@ -24,7 +24,8 @@
 	  "kamenridercraft:kiva/kivahead",
 	  "kamenridercraft:kiva/kivatroso",
 	  "kamenridercraft:kiva/kivalegs",
-	  "kamenridercraft:kiva/fangire_glass"
+	  "kamenridercraft:kiva/fangire_glass",
+	  "kamenridercraft:decade/decade_camera"
 	]
   },
   "sends_telemetry_event": false

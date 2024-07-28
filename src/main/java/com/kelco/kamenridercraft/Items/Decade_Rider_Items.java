@@ -3,6 +3,7 @@ package com.kelco.kamenridercraft.Items;
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
 import com.kelco.kamenridercraft.Effect.Effect_core;
 import com.kelco.kamenridercraft.Items.decade.AttackRideCardItem;
+import com.kelco.kamenridercraft.Items.decade.BlankCardItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseBlasterItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseSwordItem;
@@ -30,8 +31,11 @@ public class Decade_Rider_Items {
 	public static final RegistryObject<Item> DECADE_LOGO = ITEMS.register("decade_logo",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
 
+	public static final RegistryObject<Item> DECADE_CAMERA = ITEMS.register("decade_camera",
+			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.DECADE_TAB_ITEM).KeepItem());
+
 	public static final RegistryObject<Item> BLANK_CRAD = ITEMS.register("blank_card",
-			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+			() -> new BlankCardItem(new Item.Properties()).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
 
     public static final RegistryObject<Item> DECADE_CYAN_CRAD = ITEMS.register("decade_cyan_card",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_cyan","decade","decadriver_belt",
@@ -48,7 +52,7 @@ public class Decade_Rider_Items {
     public static final RegistryObject<Item> DECADE_CRAD = ITEMS.register("decade_card",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","decade","decadriver_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false),
-					new MobEffectInstance(MobEffects.DIG_SPEED, 400, 2,true,false)).addAlternative(DIEND_GREEN_CRAD.get()).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+					new MobEffectInstance(MobEffects.DIG_SPEED, 400, 2,true,false)).addAlternative(DIEND_GREEN_CRAD.get()).AddToTabList(RiderTabs.DECADE_TAB_ITEM).AddToTabList(BlankCardItem.RIDER_CARD, 10));
 
     public static final RegistryObject<Item> K_TOUCH = ITEMS.register("k_touch",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_complete","decade","decadriver_belt_k_touch",
@@ -74,7 +78,7 @@ public class Decade_Rider_Items {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false)).addAlternative(DECADE_CYAN_CRAD.get()).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false)).addAlternative(DECADE_CYAN_CRAD.get()).AddToTabList(RiderTabs.DECADE_TAB_ITEM).AddToTabList(BlankCardItem.RIDER_CARD, 5));
 
     public static final RegistryObject<Item> K_TOUCH_DIEND = ITEMS.register("k_touch_diend",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_complete","diend","diend_belt_k_touch",
@@ -87,7 +91,7 @@ public class Decade_Rider_Items {
     public static final RegistryObject<Item> DARK_DECADE_CRAD = ITEMS.register("dark_decade_card",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","dark_decade","dark_decadriver_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false),
-					new MobEffectInstance(MobEffects.DIG_SPEED, 400, 2,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+					new MobEffectInstance(MobEffects.DIG_SPEED, 400, 2,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM).AddToTabList(BlankCardItem.RIDER_CARD));
 
 	public static String[] BaseDecadeUsers = new String[] {"decade","dark_decade"};
 
@@ -549,7 +553,7 @@ public class Decade_Rider_Items {
 			() -> new BaseBlasterItem(Tiers.DIAMOND, 6, -2.4F, new Item.Properties()).IsSwordGun().AddToTabList(RiderTabs.DECADE_TAB_ITEM)
 			.ChangeRepairItem(BLANK_CRAD.get()));
     public static final RegistryObject<BaseBlasterItem> DIENDRIVER = ITEMS.register("diendriver",
-            () -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.DECADE_TAB_ITEM).ChangeRepairItem(BLANK_CRAD.get()));
+            () -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).IsHenshinItem(DIEND_BELT.get()).AddToTabList(RiderTabs.DECADE_TAB_ITEM).ChangeRepairItem(BLANK_CRAD.get()));
     public static final RegistryObject<SwordItem> ONGEKIBO_REKKA_DECADE = ITEMS.register("ongekibo_rekka_decade",
             () -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.DECADE_TAB_ITEM).ChangeRepairItem(BLANK_CRAD.get()));
     public static final RegistryObject<SwordItem> ONGEKIBO_REKKA_DIEND = ITEMS.register("ongekibo_rekka_diend",
@@ -602,7 +606,9 @@ public class Decade_Rider_Items {
     public static final RegistryObject<Item> DEN_O_TSUPPARI_CARD = ITEMS.register("den_o_tsuppari_card",
 			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"den_o_axe","decade_violent_emotion"}, new MobEffectInstance(Effect_core.PUNCH.get(), 300,1,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
     public static final RegistryObject<Item> DEN_O_UTCHARI_CARD = ITEMS.register("den_o_utchari_card",
-			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"den_o_axe","decade_violent_emotion"}, new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300,3,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"den_o_axe","decade_violent_emotion"},
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300,2,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 300,3,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
     public static final RegistryObject<Item> AMAZON_GAGA_NO_UDEWA_CARD = ITEMS.register("amazon_gaga_no_udewa_card",
 			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"amazon","decade_violent_emotion"}, Ichigo_Rider_Items.GAGA_ARMLET.get(), 0).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
 

@@ -92,7 +92,7 @@ public class BaseSummonEntity extends TamableAnimal implements NeutralMob {
 		this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, 5, false, false, (p_28879_) -> {
 			if (isTame()) {
-				return p_28879_ instanceof Enemy && !(p_28879_ instanceof NeutralMob && !((NeutralMob) p_28879_).isAngry());
+				return p_28879_ instanceof Enemy && !(p_28879_ instanceof NeutralMob neutral && !neutral.isAngry());
 			}else return false;
 		}));
 		this.targetSelector.addGoal(4, new ResetUniversalAngerTargetGoal<>(this, true));

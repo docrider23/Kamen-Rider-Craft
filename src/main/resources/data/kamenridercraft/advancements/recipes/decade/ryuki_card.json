@@ -22,7 +22,9 @@
   "rewards": {
 	"recipes": [
 	  "kamenridercraft:decade/ryuki_blank_card",
-	  "kamenridercraft:decade/ryuki_survive_card"
+	  "kamenridercraft:decade/ryuki_survive_card",
+	  "kamenridercraft:decade/ryuki_strike_vent_card",
+	  "kamenridercraft:decade/decade_violent_emotion_card"
 	]
   },
   "sends_telemetry_event": false

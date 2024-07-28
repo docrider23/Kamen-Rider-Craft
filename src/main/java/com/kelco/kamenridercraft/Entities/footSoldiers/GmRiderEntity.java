@@ -134,7 +134,7 @@ public class GmRiderEntity extends BaseHenchmenEntity implements RangedAttackMob
 
     public void reassessSwordgunGoal() {
        if (this.level() != null && !this.level().isClientSide) {
-          if (this.getTarget() instanceof Player && ((Player) this.getTarget()).getAbilities().flying && this.getTarget().distanceToSqr(this) > 10.0D
+          if (this.getTarget() instanceof Player player && player.getAbilities().flying && player.distanceToSqr(this) > 10.0D
           || this.getTarget() instanceof FlyingMob && this.getTarget().distanceToSqr(this) > 20.0D
           || this.getTarget().distanceToSqr(this) > 80.0D) {
             int i = 20;

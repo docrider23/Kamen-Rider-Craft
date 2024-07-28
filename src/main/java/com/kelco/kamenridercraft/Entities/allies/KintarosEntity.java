@@ -69,7 +69,7 @@ public class KintarosEntity extends BaseAllyEntity {
 		this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, 5, false, false, (p_28879_) -> {
 			if (isTame()) {
-				return p_28879_ instanceof Enemy && !(p_28879_ instanceof Creeper) && !(p_28879_ instanceof NeutralMob && !((NeutralMob) p_28879_).isAngry());
+				return p_28879_ instanceof Enemy && !(p_28879_ instanceof Creeper) && !(p_28879_ instanceof NeutralMob neutral && !neutral.isAngry());
 			}else return false;
 		}));
 		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, this::isAngryAt));

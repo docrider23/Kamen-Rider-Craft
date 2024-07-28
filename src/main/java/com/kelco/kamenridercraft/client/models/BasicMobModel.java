@@ -54,7 +54,7 @@ public class BasicMobModel<T extends Mob> extends PlayerModel<T> {
 	            this.holdWeaponHigh(p_103366_);
 	         }
 
-		  if (p_103366_ instanceof TamableAnimal && ((TamableAnimal) p_103366_).isInSittingPose()) {
+		  if (p_103366_ instanceof TamableAnimal sittingMob && sittingMob.isInSittingPose()) {
 		  	this.rightArm.xRot += (-(float)Math.PI / 5F);
 		  	this.leftArm.xRot += (-(float)Math.PI / 5F);
 		  	this.rightLeg.xRot = -1.4137167F;

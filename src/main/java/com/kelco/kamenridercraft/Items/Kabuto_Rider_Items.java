@@ -285,10 +285,10 @@ public class Kabuto_Rider_Items {
                 .ChangeRepairItem(MINI_ZECTER.get()));
         public static final RegistryObject<BaseBlasterItem> DRAKE_GLIP = ITEMS.register("drake_grip",
                 () -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.KABUTO_TAB_ITEM)
-                .ChangeRepairItem(MINI_ZECTER.get()));
+                .IsHenshinItem(DRAKE_RIDER_BELT.get()).ChangeRepairItem(MINI_ZECTER.get()));
         public static final RegistryObject<SwordItem> SASWORD_YAIVER = ITEMS.register("sasword_yaiver",
                 () -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.KABUTO_TAB_ITEM)
-                .ChangeRepairItem(MINI_ZECTER.get()));
+                .IsHenshinItem(SASWORD_RIDER_BELT.get()).ChangeRepairItem(MINI_ZECTER.get()));
         public static final RegistryObject<SwordItem> GATACK_DOUBLE_CALIBUR = ITEMS.register("gatack_double_calibur",
                 () -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.KABUTO_TAB_ITEM)
                 .ChangeRepairItem(MINI_ZECTER.get()));

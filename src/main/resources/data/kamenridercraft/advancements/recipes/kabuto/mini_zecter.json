@@ -25,7 +25,8 @@
 	  "kamenridercraft:kabuto/kabutotroso",
 	  "kamenridercraft:kabuto/kabutolegs",
 	  "kamenridercraft:kabuto/zect_mizer",
-	  "kamenridercraft:kabuto/clock_up_pad"
+	  "kamenridercraft:kabuto/clock_up_pad",
+	  "kamenridercraft:decade/decade_camera"
 	]
   },
   "sends_telemetry_event": false

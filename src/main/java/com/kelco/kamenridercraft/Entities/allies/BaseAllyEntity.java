@@ -89,7 +89,7 @@ public class BaseAllyEntity extends TamableAnimal implements NeutralMob {
 		this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, 5, false, false, (p_28879_) -> {
 			if (isTame()) {
-				return p_28879_ instanceof Enemy && !(p_28879_ instanceof NeutralMob && !((NeutralMob) p_28879_).isAngry());
+				return p_28879_ instanceof Enemy && !(p_28879_ instanceof NeutralMob neutral && !neutral.isAngry());
 			}else return false;
 		}));
 		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, this::isAngryAt));
@@ -171,9 +171,9 @@ public class BaseAllyEntity extends TamableAnimal implements NeutralMob {
 		} else if (p_30389_ instanceof BaseSummonEntity) {
 			BaseSummonEntity illusion = (BaseSummonEntity)p_30389_;
 			return !illusion.isTame() || illusion.getOwner() != p_30390_;
-		} else if (p_30389_ instanceof Player && p_30390_ instanceof Player && !((Player)p_30390_).canHarmPlayer((Player)p_30389_)) {
+		} else if (p_30389_ instanceof Player player2 && p_30390_ instanceof Player player1 && !player1.canHarmPlayer(player2)) {
 			return false;
-		} else if (p_30389_ instanceof AbstractHorse && ((AbstractHorse)p_30389_).isTamed()) {
+		} else if (p_30389_ instanceof AbstractHorse horse && horse.isTamed()) {
 			return false;
 		} else {
 			return !(p_30389_ instanceof TamableAnimal) || !((TamableAnimal)p_30389_).isTame();

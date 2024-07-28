@@ -8,6 +8,7 @@ import com.kelco.kamenridercraft.Effect.Effect_core;
 import com.kelco.kamenridercraft.Items.geats.MissionBoxItem;
 import com.kelco.kamenridercraft.Items.geats.DesireDriverItem;
 import com.kelco.kamenridercraft.Items.geats.FeverSlotItem;
+import com.kelco.kamenridercraft.Items.geats.LaserRaiseRiserItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseBlasterItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseShieldItem;
@@ -978,7 +979,7 @@ public class Geats_Rider_Items {
 			.ChangeRepairItem(BLANK_CORE_ID.get()));
 
 	public static final RegistryObject<BaseBlasterItem> LASER_RAISE_RISER = ITEMS.register("laser_raise_riser",
-			() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM)
+			() -> new LaserRaiseRiserItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.GEATS_TAB_ITEM)
 			.AddToTabList(ModClientEvents.RAISE_RISER_ITEM).ChangeRepairItem(BLANK_CORE_ID.get()));
 
 
