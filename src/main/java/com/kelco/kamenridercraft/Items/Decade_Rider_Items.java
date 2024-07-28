@@ -578,7 +578,7 @@ public class Decade_Rider_Items {
     public static final RegistryObject<Item> DIEND_ILLUSION_CARD = ITEMS.register("diend_illusion_card",
 			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"diend","diend_green"}, "diend_illusion").AddToTabList(RiderTabs.DECADE_TAB_ITEM));
     public static final RegistryObject<Item> REKKA_DAIZANTOU_CARD = ITEMS.register("rekka_daizantou_card",
-			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"decade","decade_violent_emotion","decade_cyan"}, ForgeRegistries.ITEMS.getValue(new ResourceLocation("supersentaicraft:rekka_daizantou")), 1531).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"decade","decade_complete","decade_violent_emotion","decade_cyan"}, ForgeRegistries.ITEMS.getValue(new ResourceLocation("supersentaicraft:rekka_daizantou")), 1531).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
     public static final RegistryObject<Item> G4_GIGANT_CARD = ITEMS.register("g4_gigant_card",
 			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"decade_violent_emotion"}, Agito_Rider_Items.G4_GIGANT.get(), 1531).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
     public static final RegistryObject<Item> RYUKI_STRIKE_VENT_CARD = ITEMS.register("ryuki_strike_vent_card",
@@ -610,7 +610,7 @@ public class Decade_Rider_Items {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300,2,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 300,3,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
     public static final RegistryObject<Item> AMAZON_GAGA_NO_UDEWA_CARD = ITEMS.register("amazon_gaga_no_udewa_card",
-			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"amazon","decade_violent_emotion"}, Ichigo_Rider_Items.GAGA_ARMLET.get(), 0).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"amazon","decade_complete","decade_violent_emotion"}, Ichigo_Rider_Items.GAGA_ARMLET.get(), 0).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
 
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
