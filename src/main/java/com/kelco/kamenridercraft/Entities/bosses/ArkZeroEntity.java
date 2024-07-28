@@ -30,7 +30,7 @@ public class ArkZeroEntity extends BaseHenchmenEntity {
     }
 
     public void aiStep() {
-    	if (RiderDriverItem.get_Form_Item(this.getItemBySlot(EquipmentSlot.FEET),1)!=Zero_One_Rider_Items.ARK_ONE_PROGRISEKEY_ONE.get()) {
+    	if (RiderDriverItem.get_Form_Item(this.getItemBySlot(EquipmentSlot.FEET),1)!=Zero_One_Rider_Items.ARK_ONE_PROGRISEKEY.get()) {
     		if (this.getHealth()<100) {
     			if(this.getLastAttacker() instanceof Player) {
     				Player playerIn = (Player) this.getLastAttacker();
@@ -40,7 +40,7 @@ public class ArkZeroEntity extends BaseHenchmenEntity {
     				this.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(10.0D);
     				this.getAttribute(Attributes.FOLLOW_RANGE).setBaseValue(128.0D);
     			}
-    	        RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Zero_One_Rider_Items.ARK_ONE_PROGRISEKEY_ONE.get(), 1);
+    	        RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Zero_One_Rider_Items.ARK_ONE_PROGRISEKEY.get(), 1);
     		}
     	}
        super.aiStep();
