@@ -48,6 +48,20 @@
         "max": 3.0,
         "min": 2.0
       }
-    }
+    },
+    {"bonus_rolls": 0.0,
+      "entries": [
+    {
+          "type": "minecraft:item",
+          "name": "kamenridercraft:den_o_liner_form",
+          "weight": 6
+        }
+        ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 1.0,
+        "min": 1.0
+      }
+      }
   ]
 }
