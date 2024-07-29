@@ -29,7 +29,7 @@ public class DodoMagiaEntity extends BaseHenchmenEntity {
 			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_DODO_CUSTOM.get()));
 			  break;
 		  case 1:
-			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_DODO_CUSTOM_2.get()));
+			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_DODO_CUSTOM_TWO.get()));
 			  break;
 		  default:
 			  break;

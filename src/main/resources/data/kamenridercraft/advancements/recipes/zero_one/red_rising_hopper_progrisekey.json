@@ -7,7 +7,7 @@
 		"items": [
 		  {
 			"items": [
-			  "kamenridercraft:matsurida_z_progrisekey"
+			  "kamenridercraft:red_rising_hopper_progrisekey"
 			]
 		  }
 		]
@@ -21,9 +21,7 @@
   ],
   "rewards": {
 	"recipes": [
-	  "kamenridercraft:zero_one/zetsumeriser_dodo",
-	  "kamenridercraft:zero_one/zetsumeriser_dodo_custom",
-	  "kamenridercraft:zero_one/zetsumeriser_dodo_custom_two"
+	  "kamenridercraft:zero_one/ragnarok_driver"
 	]
   },
   "sends_telemetry_event": false

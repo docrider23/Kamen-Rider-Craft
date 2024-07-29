@@ -86,11 +86,19 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 8,true,false),
             		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false))
             .ChangeRiderName("zero_two").AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
+
+	public static final RegistryObject<Item> RAGNAROK_PROGRISEKEY = ITEMS.register("ragnarok_progrisekey",
+	          () -> new RiderFormChangeItem(new Item.Properties(),0,"","ragnarok","ragnarok_driver_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.REGENERATION, 40, 1,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false)));
 	
 	public static final RegistryObject<Item> RED_RISING_HOPPER_PROGRISEKEY = ITEMS.register("red_rising_hopper_progrisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_red","zero_one","hiden_zero_one_driver_belt_r",
             		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false))
-            .AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).AddToTabList(ProgrisekeyPrinter.HIDEN_PROGRISEKEY));
+            .addAlternative(RAGNAROK_PROGRISEKEY.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).AddToTabList(ProgrisekeyPrinter.HIDEN_PROGRISEKEY));
 	
 	public static final RegistryObject<Item> REALIZE_RISING_HOPPER_PROGRISEKEY = ITEMS.register("realize_rising_hopper_progrisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_realizing_hopper","zero_one","hiden_zero_one_driver_belt",
@@ -135,12 +143,22 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(MobEffects.WATER_BREATHING, 40, 0,true,false))
             .AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).AddToTabList(ProgrisekeyPrinter.HIDEN_PROGRISEKEY, 5));
 	
+	public static final RegistryObject<Item> RAGNAROK_FLAMING_TIGER_PROGRISEKEY = ITEMS.register("ragnarok_flaming_tiger_progrisekey",
+	          () -> new RiderFormChangeItem(new Item.Properties(),0,"_tiger","ragnarok","ragnarok_driver_belt",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.REGENERATION, 40, 1,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false)));
+	
 	public static final RegistryObject<Item> FLAMING_TIGER_PROGRISEKEY = ITEMS.register("flaming_tiger_progrisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_tiger","zero_one","hiden_zero_one_driver_belt",
             		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false))
-            .AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).AddToTabList(ProgrisekeyPrinter.HIDEN_PROGRISEKEY, 5));
+            .addAlternative(RAGNAROK_FLAMING_TIGER_PROGRISEKEY.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).AddToTabList(ProgrisekeyPrinter.HIDEN_PROGRISEKEY, 5));
 	
 	public static final RegistryObject<Item> FREEZING_BEAR_PROGRISEKEY = ITEMS.register("freezing_bear_progrisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_bear","zero_one","hiden_zero_one_driver_belt",
@@ -174,7 +192,7 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false)));
 	
 	public static final RegistryObject<Item> CRUSHING_BUFFALO_PROGRISEKEY = ITEMS.register("crushing_buffalo_progrisekey",
-            () -> new RiderFormChangeItem(new Item.Properties(),0,"","buffalo_raider","raid_riser_belt_buffalo",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"","raider_buffalo","raid_riser_belt_buffalo",
             		new MobEffectInstance(Effect_core.BOOST.get(), 40, 1,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false))
             .addAlternative(CRUSHING_BUFFALO_PROGRISEKEY_ZERO_ONE.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
@@ -203,7 +221,7 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false)));
 	
 	public static final RegistryObject<Item> STORMING_PENGUIN_PROGRISEKEY = ITEMS.register("storming_penguin_progrisekey",
-            () -> new RiderFormChangeItem(new Item.Properties(),0,"","penguin_raider","raid_riser_belt_penguin",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"","raider_penguin","raid_riser_belt_penguin",
             		new MobEffectInstance(MobEffects.WATER_BREATHING, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false))
@@ -223,7 +241,7 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false)));
 	
 	public static final RegistryObject<Item> SPLASHING_WHALE_PROGRISEKEY = ITEMS.register("splashing_whale_progrisekey",
-            () -> new RiderFormChangeItem(new Item.Properties(),0,"","whale_raider","raid_riser_belt_whale",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"","raider_whale","raid_riser_belt_whale",
             		new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 40, 1,true,false),
             		new MobEffectInstance(MobEffects.WATER_BREATHING, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false),
@@ -237,7 +255,7 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false)));
 	
 	public static final RegistryObject<Item> DYNAMAITING_LION_PROGRISEKEY = ITEMS.register("dynamaiting_lion_progrisekey",
-            () -> new RiderFormChangeItem(new Item.Properties(),0,"","lion_raider","raid_riser_belt_lion",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"","raider_lion","raid_riser_belt_lion",
             		new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
@@ -249,7 +267,7 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false)));
 	
 	public static final RegistryObject<Item> SCOUTING_PANDA_PROGRISEKEY = ITEMS.register("scouting_panda_progrisekey",
-            () -> new RiderFormChangeItem(new Item.Properties(),0,"","panda_raider","raid_riser_belt_panda",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"","raider_panda","raid_riser_belt_panda",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
             .addAlternative(SCOUTING_PANDA_PROGRISEKEY_ZERO_ONE.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
@@ -260,7 +278,7 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false)));
 	
 	public static final RegistryObject<Item> INVADING_HORSESHOE_CRAB_PROGRISEKEY = ITEMS.register("invading_horseshoe_crab_progrisekey",
-            () -> new RiderFormChangeItem(new Item.Properties(),0,"","battle_raider","raid_riser_belt_battle",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"","raider_horseshoe_crab","raid_riser_belt_battle",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false))
             .addAlternative(INVADING_HORSESHOE_CRAB_PROGRISEKEY_ZERO_ONE.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
@@ -346,7 +364,7 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false)));
 	
 	public static final RegistryObject<Item> FIGHTING_JACKAL_PROGRISEKEY = ITEMS.register("fighting_jackal_progrisekey",
-            () -> new RiderFormChangeItem(new Item.Properties(),0,"","jackal_raider","raid_riser_belt_jackal",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"","raider_jackal","raid_riser_belt_jackal",
             		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
@@ -518,26 +536,6 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false))
     		.AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
-
-
-	public static final RegistryObject<Item> RAGNAROK_BASE = ITEMS.register("ragnarok_base",
-	          () -> new RiderFormChangeItem(new Item.Properties(),0,"","ragnarok","ragnarok_driver_belt",
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.REGENERATION, 40, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
-					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false)));
-	
-	public static final RegistryObject<Item> RAGNAROK_FLAMING_TIGER_PROGRISEKEY = ITEMS.register("ragnarok_flaming_tiger_progrisekey",
-	          () -> new RiderFormChangeItem(new Item.Properties(),0,"_tiger","ragnarok","ragnarok_driver_belt",
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.REGENERATION, 40, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
-					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
-					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false))
-			  .addSwitchForm(RAGNAROK_BASE.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 	
 	public static final RegistryObject<Item> RAGNAROK_SUPREME = ITEMS.register("ragnarok_supreme",
 	          () -> new RiderFormChangeItem(new Item.Properties(),0,"_supreme","ragnarok","ragnarok_driver_belt",
@@ -596,8 +594,8 @@ public class Zero_One_Rider_Items {
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","dodo_magia","zetsume_riser_belt_dodo"));
 	public static final RegistryObject<Item> DODO_CUSTOM_ZETSUMERISEKEY = ITEMS.register("dodo_custom_zetsumerisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","dodo_magia_custom","zetsume_riser_belt_dodo"));
-	public static final RegistryObject<Item> DODO_CUSTOM_2_ZETSUMERISEKEY = ITEMS.register("dodo_custom_2_zetsumerisekey",
-            () -> new RiderFormChangeItem(new Item.Properties(),0,"","dodo_magia_custom_2","zetsume_riser_belt_dodo"));
+	public static final RegistryObject<Item> DODO_CUSTOM_TWO_ZETSUMERISEKEY = ITEMS.register("dodo_custom_two_zetsumerisekey",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"","dodo_magia_custom_two","zetsume_riser_belt_dodo"));
 	public static final RegistryObject<Item> DODO_ZETSUMERISEKEY = ITEMS.register("dodo_zetsumerisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","ikazuchi","metsuboujinrai_force_riser_belt_ikazuchi",
 					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
@@ -758,34 +756,34 @@ public class Zero_One_Rider_Items {
 
 
 	public static final RegistryObject<Item> RAGNAROK_DRIVER = ITEMS.register("ragnarok_driver",
-	  		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"ragnarok",RAGNAROK_BASE ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+	  		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"ragnarok",RAGNAROK_PROGRISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 	
 	public static final RegistryObject<Item> ZETSUMERISER_BEROTHA = ITEMS.register("zetsumeriser_berotha",
-    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"magia_berotha",BEROTHA_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"berotha_magia",BEROTHA_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 	public static final RegistryObject<Item> ZETSUMERISER_KUEHNE = ITEMS.register("zetsumeriser_kuehne",
-    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"magia_kuehne",KUEHNE_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"kuehne_magia",KUEHNE_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 	public static final RegistryObject<Item> ZETSUMERISER_EKAL = ITEMS.register("zetsumeriser_ekal",
-    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"magia_ekal",EKAL_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"ekal_magia",EKAL_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 	public static final RegistryObject<Item> ZETSUMERISER_NEOHI = ITEMS.register("zetsumeriser_neohi",
-    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"magia_neohi",NEOHI_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"neohi_magia",NEOHI_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 	public static final RegistryObject<Item> ZETSUMERISER_ONYCHO = ITEMS.register("zetsumeriser_onycho",
-    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"magia_onycho",ONYCHO_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"onycho_magia",ONYCHO_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 	public static final RegistryObject<Item> ZETSUMERISER_VICARYA = ITEMS.register("zetsumeriser_vicarya",
-    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"magia_vicarya",VICARYA_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"vicarya_magia",VICARYA_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 	public static final RegistryObject<Item> ZETSUMERISER_GAERU = ITEMS.register("zetsumeriser_gaeru",
-    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"magia_gaeru",GAERU_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"gaeru_magia",GAERU_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 	public static final RegistryObject<Item> ZETSUMERISER_MAMMOTH = ITEMS.register("zetsumeriser_mammoth",
-    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND, "magia_mammoth",MAMMOTH_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND, "mammoth_magia",MAMMOTH_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 	public static final RegistryObject<Item> ZETSUMERISER_DODO = ITEMS.register("zetsumeriser_dodo",
-    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"magia_dodo",DODO_ZETSUMERISEKEY_MAGIA ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"dodo_magia",DODO_ZETSUMERISEKEY_MAGIA ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 	public static final RegistryObject<Item> ZETSUMERISER_DODO_CUSTOM = ITEMS.register("zetsumeriser_dodo_custom",
-    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"magia_dodo_custom",DODO_CUSTOM_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
-	public static final RegistryObject<Item> ZETSUMERISER_DODO_CUSTOM_2 = ITEMS.register("zetsumeriser_dodo_custom_2",
-    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"magia_dodo_custom_2",DODO_CUSTOM_2_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"dodo_magia_custom",DODO_CUSTOM_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+	public static final RegistryObject<Item> ZETSUMERISER_DODO_CUSTOM_TWO = ITEMS.register("zetsumeriser_dodo_custom_two",
+    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"dodo_magia_custom_two",DODO_CUSTOM_TWO_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 	public static final RegistryObject<Item> ZETSUMERISER_ARSINO = ITEMS.register("zetsumeriser_arsino",
-    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"magia_arsino",ARSINO_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"arsino_magia",ARSINO_ZETSUMERISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 	public static final RegistryObject<Item> RAIDRISER_BATTLE = ITEMS.register("raidriser_battle",
-    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"raider_battle",INVADING_HORSESHOE_CRAB_PROGRISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"raider_horseshoe_crab",INVADING_HORSESHOE_CRAB_PROGRISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 	public static final RegistryObject<Item> RAIDRISER_BUFFALO = ITEMS.register("raidriser_buffalo",
     		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"raider_buffalo",CRUSHING_BUFFALO_PROGRISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 	public static final RegistryObject<Item> RAIDRISER_WHALE = ITEMS.register("raidriser_whale",

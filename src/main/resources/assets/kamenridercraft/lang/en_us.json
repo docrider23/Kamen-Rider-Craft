@@ -1451,7 +1451,7 @@
 "item.kamenridercraft.zetsumeriser_mammoth": "Zetsumeriser (Mammoth Magia)",
 
 "item.kamenridercraft.zetsumeriser_dodo_custom": "Zetsumeriser (Dodo Magia Custom)",
-"item.kamenridercraft.zetsumeriser_dodo_custom_2": "Zetsumeriser (Dodo Magia Custom Two)",
+"item.kamenridercraft.zetsumeriser_dodo_custom_two": "Zetsumeriser (Dodo Magia Custom Two)",
 
 "item.kamenridercraft.zetsumeriser_arsino": "Zetsumeriser (Arsino Magia)",
 
@@ -1538,8 +1538,6 @@
 
 "item.kamenridercraft.zein_progrisekey": "Zein Progrisekey",
 
-"item.kamenridercraft.ragnarok_progrisekey": "Ragnarok Progrisekey",
-"item.kamenridercraft.ragnarok_flaming_tiger_progrisekey": "Flaming Tiger Progrisekey (Ragnarok)",
 "item.kamenridercraft.thousand_key": "Thousand Key",
 
 "item.kamenridercraft.berotha_zetsumerisekey": "Berotha Zetsumerisekey",
