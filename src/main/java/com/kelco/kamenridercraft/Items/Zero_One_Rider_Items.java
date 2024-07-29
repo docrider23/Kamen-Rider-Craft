@@ -89,11 +89,9 @@ public class Zero_One_Rider_Items {
 
 	public static final RegistryObject<Item> RAGNAROK_PROGRISEKEY = ITEMS.register("ragnarok_progrisekey",
 	          () -> new RiderFormChangeItem(new Item.Properties(),0,"","ragnarok","ragnarok_driver_belt",
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.REGENERATION, 40, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
-					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false)));
+					new MobEffectInstance(MobEffects.REGENERATION, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false)));
 	
 	public static final RegistryObject<Item> RED_RISING_HOPPER_PROGRISEKEY = ITEMS.register("red_rising_hopper_progrisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_red","zero_one","hiden_zero_one_driver_belt_r",
@@ -145,13 +143,11 @@ public class Zero_One_Rider_Items {
 	
 	public static final RegistryObject<Item> RAGNAROK_FLAMING_TIGER_PROGRISEKEY = ITEMS.register("ragnarok_flaming_tiger_progrisekey",
 	          () -> new RiderFormChangeItem(new Item.Properties(),0,"_tiger","ragnarok","ragnarok_driver_belt",
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.REGENERATION, 40, 1,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
-					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
-					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false)));
+			 		new MobEffectInstance(MobEffects.REGENERATION, 40, 0,true,false),
+			 		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
+			 		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
+			 		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
+			 		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false)));
 	
 	public static final RegistryObject<Item> FLAMING_TIGER_PROGRISEKEY = ITEMS.register("flaming_tiger_progrisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_tiger","zero_one","hiden_zero_one_driver_belt",
@@ -541,19 +537,19 @@ public class Zero_One_Rider_Items {
 	          () -> new RiderFormChangeItem(new Item.Properties(),0,"_supreme","ragnarok","ragnarok_driver_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.REGENERATION, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false)));
-	
+					
 	public static final RegistryObject<Item> THOUSAND_KEY = ITEMS.register("thousand_key",
 	          () -> new RiderFormChangeItem(new Item.Properties(),0,"_apocalypse_reboot","ragnarok","ragnarok_driver_belt",
-					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.REGENERATION, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
-					new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false))
 			  .addSwitchForm(RAGNAROK_SUPREME.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 
