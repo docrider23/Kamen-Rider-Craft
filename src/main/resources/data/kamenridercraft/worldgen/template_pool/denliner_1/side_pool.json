@@ -1,7 +1,6 @@
 {
-  
-
   "name": "kamenridercraft:denliner_1/side_pool",
+  
   "fallback": "minecraft:empty",
   "elements": [
     {
@@ -14,41 +13,13 @@
       }
     },
     {
-      "weight": 6,
+      "weight": 4,
       "element": {
         "location": "kamenridercraft:denliner_rail_end",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
-    },
-    {
-      "weight": 6,
-      "element": {
-        "location": "kamenridercraft:denliner_2",
-        "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
-    },
-    {
-      "weight": 6,
-      "element": {
-        "location": "kamenridercraft:denliner_3",
-        "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
-    },
-    {
-      "weight": 6,
-      "element": {
-        "location": "kamenridercraft:denliner_4",
-        "processors": "minecraft:empty",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
     }
-    
   ]
 }
