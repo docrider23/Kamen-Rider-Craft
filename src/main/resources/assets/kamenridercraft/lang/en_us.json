@@ -1427,10 +1427,12 @@
 "item.kamenridercraft.eden_driver": "Eden Driver (Eden)",
 "item.kamenridercraft.eden_driver_lucifer": "Eden Driver (Lucifer)",
 
-"item.kamenridercraft.shotabaddoriser": "ShotAbaddoriser (Abaddon)",
-"item.kamenridercraft.slashabaddoriser": "SlashAbaddoriser (Abaddon)",
-"item.kamenridercraft.shotabaddoriser_commander": "ShotAbaddoriser (Abaddon Commander's Type)",
-"item.kamenridercraft.slashabaddoriser_commander": "SlashAbaddoriser (Abaddon Commander's Type)",
+"item.kamenridercraft.shot_abaddo_riser": "ShotAbaddoriser (Abaddon)",
+"item.kamenridercraft.slash_abaddo_riser": "SlashAbaddoriser (Abaddon)",
+"item.kamenridercraft.slash_abaddo_riser_r": "SlashAbaddoriser (Red)",
+"item.kamenridercraft.shot_abaddo_riser_g": "ShotAbaddoriser (Grey)",
+"item.kamenridercraft.shot_abaddo_riser_b": "ShotAbaddoriser (Blue)",
+"item.kamenridercraft.slash_abaddo_riser_o": "SlashAbaddoriser (Orange)",
 
 "item.kamenridercraft.hiden_zero_one_driver_vulcan": "Hiden Zero-One Driver (Vulcan)",
 

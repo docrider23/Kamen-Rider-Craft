@@ -12,10 +12,10 @@
     }, "C": {
       "item": "kamenridercraft:crowding_hopper_progrisekey"
     }, "D": {
-      "item": "minecraft:gray_dye"
+      "item": "minecraft:blue_dye"
     }
   },
   "result": {
-    "item": "kamenridercraft:shotabaddoriser_commander"
+    "item": "kamenridercraft:shot_abaddo_riser_b"
   }
 }

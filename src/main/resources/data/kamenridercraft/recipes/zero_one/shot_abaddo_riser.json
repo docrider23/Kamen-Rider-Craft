@@ -2,20 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "group": "abaddon",
   "pattern": [
+    "XCX",
     "XXX",
-    "XDX",
-    "XCX"
+    "XXX"
   ],
   "key": {
     "X": {
       "item": "kamenridercraft:hiden_metal"
     }, "C": {
       "item": "kamenridercraft:crowding_hopper_progrisekey"
-    }, "D": {
-      "item": "minecraft:orange_dye"
     }
   },
   "result": {
-    "item": "kamenridercraft:slashabaddoriser_commander"
+    "item": "kamenridercraft:shot_abaddo_riser"
   }
 }
