@@ -94,8 +94,8 @@ import com.kelco.kamenridercraft.Items.Ichigo_Rider_Items;
 import com.kelco.kamenridercraft.Items.Kuuga_Rider_Items;
 import com.kelco.kamenridercraft.Items.Miscellaneous_Rider_Items;
 import com.kelco.kamenridercraft.Items.Modded_item_core;
+import com.kelco.kamenridercraft.Items.Zero_One_Rider_Items;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
-import com.kelco.kamenridercraft.client.renderer.BasicEntityRenderer;
 
 import java.util.List;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
@@ -399,6 +399,43 @@ public class ModCommonEvents {
 
 				trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
 						new ItemStack(Items.EMERALD, 4),
+						stack,10,8,0.02F));
+			}
+			
+			if(event.getType() == RiderVillagers.HUMAGEAR_VILLAGER.get()) {
+				Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+				ItemStack stack = new ItemStack(Zero_One_Rider_Items.BLANK_PROGRISEKEY.get(), 3);
+				int villagerLevel = 1;
+
+				trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+						new ItemStack(Items.EMERALD, 1),
+						stack,10,8,0.02F));
+			}
+			if(event.getType() == RiderVillagers.HUMAGEAR_VILLAGER.get()) {
+				Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+				ItemStack stack = new ItemStack(Items.EMERALD, 1);
+				int villagerLevel = 1;
+
+				trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+						new ItemStack(Zero_One_Rider_Items.HIDEN_METAL.get(), 3),
+						stack,10,8,0.02F));
+			}
+			if(event.getType() == RiderVillagers.HUMAGEAR_VILLAGER.get()) {
+				Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+				ItemStack stack = new ItemStack(Zero_One_Rider_Items.HUMAGEAR_PROGRISEKEY.get(), 3);
+				int villagerLevel = 2;
+
+				trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+						new ItemStack(Items.EMERALD, 2),
+						stack,10,8,0.02F));
+			}
+			if(event.getType() == RiderVillagers.HUMAGEAR_VILLAGER.get()) {
+				Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+				ItemStack stack = new ItemStack(Zero_One_Rider_Items.THOUSAND_KEY.get(), 1);
+				int villagerLevel = 3;
+
+				trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+						new ItemStack(Items.EMERALD, 6),
 						stack,10,8,0.02F));
 			}
 			

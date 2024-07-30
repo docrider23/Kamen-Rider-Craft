@@ -32,6 +32,15 @@ public class RiderVillagers {
                     x -> x.get() == SHOCKER_MONITOR_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
                     SoundEvents.VILLAGER_WORK_ARMORER));
 
+    public static final RegistryObject<PoiType> HIDEN_3D_PRINTER_POI = POI_TYPES.register("hiden_3d_printer_poi",
+            () -> new PoiType(ImmutableSet.copyOf(Rider_Blocks.HIDEN_3D_PRINTER.get().getStateDefinition().getPossibleStates()),
+                    1, 1));
+
+    public static final RegistryObject<VillagerProfession> HUMAGEAR_VILLAGER = VILLAGER_PROFESSIONS.register("humagear_villager",
+            () -> new VillagerProfession("humagear_villager", x -> x.get() == HIDEN_3D_PRINTER_POI.get(),
+                    x -> x.get() == HIDEN_3D_PRINTER_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
+                    SoundEvents.VILLAGER_WORK_ARMORER));
+
     public static final RegistryObject<PoiType> KAMEN_CAFE_COUNTER_POI = POI_TYPES.register("kamen_cafe_counter_poi",
             () -> new PoiType(ImmutableSet.copyOf(Rider_Blocks.KAMEN_CAFE_COUNTER.get().getStateDefinition().getPossibleStates()),
                     1, 1));
@@ -48,6 +57,8 @@ public class RiderVillagers {
         try {
             ObfuscationReflectionHelper.findMethod(PoiType.class,
                     "registerBlockStates", PoiType.class).invoke(null, SHOCKER_MONITOR_POI.get());
+            ObfuscationReflectionHelper.findMethod(PoiType.class,
+                    "registerBlockStates", PoiType.class).invoke(null, HIDEN_3D_PRINTER_POI.get());
             ObfuscationReflectionHelper.findMethod(PoiType.class,
                     "registerBlockStates", PoiType.class).invoke(null, KAMEN_CAFE_COUNTER_POI.get());
         } catch (InvocationTargetException | IllegalAccessException exception) {
