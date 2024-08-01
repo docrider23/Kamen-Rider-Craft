@@ -1,6 +1,7 @@
 package com.kelco.kamenridercraft.Items.ooo;
 
 import com.kelco.kamenridercraft.KamenRiderCraftCore;
+import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
 import com.kelco.kamenridercraft.Items.OOO_Rider_Items;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderArmorItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
@@ -50,6 +51,10 @@ public class OOODriverItem extends RiderDriverItem{
 
 	}
 
+	public ResourceLocation getBeltModelResource(ItemStack itemstack,RiderArmorItem animatable, EquipmentSlot slot, LivingEntity rider) {
+		return new ResourceLocation(KamenRiderCraftCore.MODID, "geo/ooo_belt.geo.json");	
+	}
+
 	public  boolean getGlowForSlot(ItemStack itemstack,EquipmentSlot currentSlot, LivingEntity livingEntity) {
 
 		if (currentSlot== EquipmentSlot.FEET) {
@@ -86,7 +91,7 @@ public class OOODriverItem extends RiderDriverItem{
 		if (get_Form_Item(itemstack, num).HasWingsIfFlying() && rider instanceof Player player && player.getAbilities().flying == true){
 			return new ResourceLocation(KamenRiderCraftCore.MODID, get_Form_Item(itemstack, num).get_FlyingModel());
 	 }else if (get_Form_Item(itemstack, num).get_Model()=="geo/ichigo.geo.json") {
-			return new ResourceLocation(KamenRiderCraftCore.MODID, "geo/rider_plusbelt.geo.json");
+			return new ResourceLocation(KamenRiderCraftCore.MODID, "geo/ooo.geo.json");
 		 }else   
 			 return new ResourceLocation(KamenRiderCraftCore.MODID, get_Form_Item(itemstack, num).get_Model());
 

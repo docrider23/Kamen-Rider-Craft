@@ -206,7 +206,7 @@ public class Zero_One_Rider_Items {
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","raider_buffalo","raid_riser_belt_buffalo",
             		new MobEffectInstance(Effect_core.BOOST.get(), 40, 1,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false))
-            .addAlternative(CRUSHING_BUFFALO_PROGRISEKEY_ZERO_ONE.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
+            .addAlternative(CRUSHING_BUFFALO_PROGRISEKEY_ZERO_ONE.get()).ChangeBeltModel("geo/raider_belt.geo.json").AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 	
 	public static final RegistryObject<Item> EXCITING_STAG_PROGRISEKEY = ITEMS.register("exciting_stag_progrisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_stag","zero_one","hiden_zero_one_driver_belt",
@@ -236,7 +236,7 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(MobEffects.WATER_BREATHING, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false))
-            .addAlternative(STORMING_PENGUIN_PROGRISEKEY_ZERO_ONE.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
+            .addAlternative(STORMING_PENGUIN_PROGRISEKEY_ZERO_ONE.get()).ChangeBeltModel("geo/raider_belt.geo.json").AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 	
 	public static final RegistryObject<Item> HOPPING_KANGAROO_PROGRISEKEY = ITEMS.register("hopping_kangaroo_progrisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_kangaroo","zero_one","hiden_zero_one_driver_belt",
@@ -257,7 +257,7 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(MobEffects.WATER_BREATHING, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false))
-            .addAlternative(SPLASHING_WHALE_PROGRISEKEY_ZERO_ONE.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
+            .addAlternative(SPLASHING_WHALE_PROGRISEKEY_ZERO_ONE.get()).ChangeBeltModel("geo/raider_belt.geo.json").AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 	
 	public static final RegistryObject<Item> DYNAMAITING_LION_PROGRISEKEY_ZERO_ONE = ITEMS.register("dynamaiting_lion_progrisekey_zero_one",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_lion","zero_one","hiden_zero_one_driver_belt",
@@ -270,7 +270,7 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
-            .addAlternative(DYNAMAITING_LION_PROGRISEKEY_ZERO_ONE.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
+            .addAlternative(DYNAMAITING_LION_PROGRISEKEY_ZERO_ONE.get()).ChangeBeltModel("geo/raider_belt.geo.json").AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 	
 	public static final RegistryObject<Item> SCOUTING_PANDA_PROGRISEKEY_ZERO_ONE = ITEMS.register("scouting_panda_progrisekey_zero_one",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_panda","zero_one","hiden_zero_one_driver_belt",
@@ -281,7 +281,7 @@ public class Zero_One_Rider_Items {
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","raider_panda","raid_riser_belt_panda",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false))
-            .addAlternative(SCOUTING_PANDA_PROGRISEKEY_ZERO_ONE.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
+            .addAlternative(SCOUTING_PANDA_PROGRISEKEY_ZERO_ONE.get()).ChangeBeltModel("geo/raider_belt.geo.json").AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 	
 	public static final RegistryObject<Item> INVADING_HORSESHOE_CRAB_PROGRISEKEY_ZERO_ONE = ITEMS.register("invading_horseshoe_crab_progrisekey_zero_one",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_horseshoe_crab","zero_one","hiden_zero_one_driver_belt",
@@ -292,7 +292,7 @@ public class Zero_One_Rider_Items {
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","raider_horseshoe_crab","raid_riser_belt_battle",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false))
-            .addAlternative(INVADING_HORSESHOE_CRAB_PROGRISEKEY_ZERO_ONE.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
+            .addAlternative(INVADING_HORSESHOE_CRAB_PROGRISEKEY_ZERO_ONE.get()).ChangeBeltModel("geo/raider_belt.geo.json").AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 
 	public static final RegistryObject<Item> SHOOTING_WOLF_PROGRISEKEY_ZERO_ONE = ITEMS.register("shooting_wolf_progrisekey_zero_one",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_wolf","zero_one","hiden_zero_one_driver_belt",
@@ -379,7 +379,7 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false))
-			.addAlternative(FIGHTING_JACKAL_PROGRISEKEY_ZERO_ONE.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
+			.addAlternative(FIGHTING_JACKAL_PROGRISEKEY_ZERO_ONE.get()).ChangeBeltModel("geo/raider_belt.geo.json").AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 	
 	public static final RegistryObject<Item> SERVAL_TIGER_ZETSUMERISEKEY = ITEMS.register("serval_tiger_zetsumerisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_serval","valkyrie","aims_shot_riser_belt",
