@@ -460,7 +460,7 @@ public class Geats_Rider_Items {
 			.ChangeSlot(3).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> PLOSION_RAGE_RAISE_BUCKLE = ITEMS.register("plosion_rage_raise_buckle",
-			() -> new RiderFormChangeItem(new Item.Properties(),0,"_plosion_rage","buffa","desire_driver_belt_geats",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_plosion_rage_2","buffa","desire_driver_belt_geats",
 					new MobEffectInstance(Effect_core.BOOST.get(), 40, 4,true,false))
 			.ChangeSlot(3).alsoChange1stSlot(BUFFA_CORE_ID.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
@@ -998,11 +998,12 @@ public class Geats_Rider_Items {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.SATURATION, 40, 0,true,false))
 			.addNeedForm(MAGNUM_RAISE_BUCKLE.get(), 2).AddToTabList(MissionBoxItem.CORE_ID).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+	
 	public static final RegistryObject<Item> GEATS_CORE_ID_TOKYO = ITEMS.register("geats_rider_core_id_tokyo",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_tokyo","geats","desire_driver_belt_geats",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.SATURATION, 40, 0,true,false))
-			.addNeedForm(MAGNUM_RAISE_BUCKLE.get(), 2).AddToTabList(MissionBoxItem.CORE_ID).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+			.addNeedForm(MAGNUM_RAISE_BUCKLE.get(), 2).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> JYAMASHIN_WISH_CARD = ITEMS.register("jyamashin_wish_card",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_jyamashin","buffa","desire_driver_belt_geats",

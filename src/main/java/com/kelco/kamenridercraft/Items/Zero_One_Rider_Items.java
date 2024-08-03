@@ -81,7 +81,7 @@ public class Zero_One_Rider_Items {
             .AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 	
 	public static final RegistryObject<Item> ZERO_TWO_PROGRISEKEY = ITEMS.register("zero_two_progrisekey",
-            () -> new RiderFormChangeItem(new Item.Properties(),0,"","zero_one","hiden_zero_two_driver_belt",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"","zero_two","hiden_zero_two_driver_belt",
             		new MobEffectInstance(MobEffects.JUMP, 40, 6,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
@@ -90,7 +90,7 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
             		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 8,true,false),
             		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false))
-            .ChangeRiderName("zero_two").AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
+            .AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 
 	public static final RegistryObject<Item> RAGNAROK_PROGRISEKEY = ITEMS.register("ragnarok_progrisekey",
 	          () -> new RiderFormChangeItem(new Item.Properties(),0,"","ragnarok","ragnarok_driver_belt",
@@ -107,6 +107,7 @@ public class Zero_One_Rider_Items {
 					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
 					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false))
 			.addAlternative(RAGNAROK_PROGRISEKEY.get()).addShiftForm(RAGNAROK_PROGRISEKEY.get()).AddNeedItemList(NEED_ITEM_RAGNAROK));
+
 	
 	public static final RegistryObject<Item> RED_RISING_HOPPER_PROGRISEKEY = ITEMS.register("red_rising_hopper_progrisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_red","zero_one","hiden_zero_one_driver_belt_r",
@@ -139,7 +140,7 @@ public class Zero_One_Rider_Items {
             .AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 	
 	public static final RegistryObject<Item> ZERO_THREE_PROGRISEKEY = ITEMS.register("zero_three_progrisekey",
-            () -> new RiderFormChangeItem(new Item.Properties(),0,"","zero_one","hiden_zero_three_driver_belt",
+            () -> new RiderFormChangeItem(new Item.Properties(),0,"","zero_three","hiden_zero_three_driver_belt",
             		new MobEffectInstance(MobEffects.JUMP, 40, 6,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 5,true,false),
@@ -148,7 +149,7 @@ public class Zero_One_Rider_Items {
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
             		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 8,true,false),
             		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false))
-            .ChangeRiderName("zero_three").AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
+            .AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 
 	public static final RegistryObject<Item> BITING_SHARK_PROGRISEKEY = ITEMS.register("biting_shark_progrisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_shark","zero_one","hiden_zero_one_driver_belt",
@@ -693,6 +694,13 @@ public class Zero_One_Rider_Items {
     
     public static final RegistryObject<Item> HIDEN_ZERO_ONE_DRIVER = ITEMS.register("hiden_zero_one_driver",
     		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"zero_one",RISING_HOPPER_PROGRISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+   
+    public static final RegistryObject<Item> HIDEN_ZERO_TWO_DRIVER = ITEMS.register("hiden_zero_two_driver",
+    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"zero_two",ZERO_TWO_PROGRISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+ 
+    public static final RegistryObject<Item> HIDEN_ZERO_THREE_DRIVER = ITEMS.register("hiden_zero_three_driver",
+    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"zero_three",ZERO_THREE_PROGRISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+ 
     public static final RegistryObject<Item> SHOTRISER_VULCAN = ITEMS.register("shotriser_vulcan",
     		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"vulcan",SHOOTING_WOLF_PROGRISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
     public static final RegistryObject<Item> SHOTRISER_VALKYRIE = ITEMS.register("shotriser_valkyrie",
