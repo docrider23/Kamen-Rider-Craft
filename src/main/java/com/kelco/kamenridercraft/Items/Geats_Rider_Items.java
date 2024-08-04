@@ -988,11 +988,13 @@ public class Geats_Rider_Items {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.SATURATION, 40, 0,true,false))
 			.addNeedForm(MAGNUM_RAISE_BUCKLE.get(), 2).AddToTabList(MissionBoxItem.CORE_ID).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+	
 	public static final RegistryObject<Item> GEATS_CORE_ID_FUKUOKA = ITEMS.register("geats_rider_core_id_fukuoka",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_fukuoka","geats","desire_driver_belt_geats",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.SATURATION, 40, 0,true,false))
 			.addNeedForm(MAGNUM_RAISE_BUCKLE.get(), 2).AddToTabList(MissionBoxItem.CORE_ID).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+	
 	public static final RegistryObject<Item> GEATS_CORE_ID_NAGOYA = ITEMS.register("geats_rider_core_id_nagoya",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_nagoya","geats","desire_driver_belt_geats",
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
