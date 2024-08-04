@@ -20,6 +20,7 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -115,7 +116,7 @@ public class Zero_One_Rider_Items {
             .addAlternative(RAGNAROK_APOCALYPSE_REBOOT.get()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).AddToTabList(ProgrisekeyPrinter.HIDEN_PROGRISEKEY));
 	
 	public static final RegistryObject<Item> REALIZE_RISING_HOPPER_PROGRISEKEY = ITEMS.register("realize_rising_hopper_progrisekey",
-            () -> new RiderFormChangeItem(new Item.Properties(),0,"_realizing_hopper","zero_one","hiden_zero_one_driver_belt",
+            () -> new RiderFormChangeItem(new Item.Properties().rarity(Rarity.EPIC),0,"_realizing_hopper","zero_one","hiden_zero_one_driver_belt",
             		new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
