@@ -808,7 +808,10 @@ public class Zero_One_Rider_Items {
 	public static final RegistryObject<Item> RAIDRISER_JACKAL = ITEMS.register("raidriser_jackal",
     		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"raider_jackal",FIGHTING_JACKAL_PROGRISEKEY ,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 
-    
+	public static final RegistryObject<Item> GIGER_BELT = ITEMS.register("giger_belt",
+    		() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"giger",BREAKING_MAMMOTH_PROGRISEKEY,ZERO_ONE_HELMET, ZERO_ONE_CHESTPLATE,ZERO_ONE_LEGGINGS , new Item.Properties())
+    		.Override_belt_text("giger_belt_belt").AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
+	 
     public static final RegistryObject<SwordItem> ATTACHE_CALIBUR = ITEMS.register("attache_calibur",
             () -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM).ChangeRepairItem(HIDEN_METAL.get()));
 	public static final RegistryObject<BaseBlasterItem> ATTACHE_SHOTGUN = ITEMS.register("attache_shotgun",
