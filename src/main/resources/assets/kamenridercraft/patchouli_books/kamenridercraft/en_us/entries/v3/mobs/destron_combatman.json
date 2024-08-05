@@ -7,7 +7,7 @@
         {
             "type": "patchouli:entity",
             "entity": "kamenridercraft:destron_combatman",
-            "text": "Spawn locations: Desert, Extreme Hills, Forest, Swampland, Frozen Ocean, Birch Forest Hills, Cold Taiga, Cold Taiga Hills, Mega Taiga, Mega Taiga Hills, Extreme Hills+, Mesa Plateau"
+            "text": "Spawn locations: Desert, Windswept Hills, Forest, Swamp, Frozen Ocean, Birch Forest, Snowy Taiga, Old Growth Pine Taiga, Windswept Forest, Badlands"
         },
         {
             "type": "patchouli:text",
