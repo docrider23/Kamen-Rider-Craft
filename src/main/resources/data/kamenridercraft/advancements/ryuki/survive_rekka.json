@@ -4,7 +4,7 @@
 	  "item": "kamenridercraft:survive_rekka"
 	},
 	"title": "revolution",
-	"description": "Use the Survive Rekka card to access Ryuki or Ryuga's Survive form",
+	"description": "Transform into Ryuki or Ryuga Survive",
 	"frame": "goal",
 	"show_toast": true,
 	"announce_to_chat": true,

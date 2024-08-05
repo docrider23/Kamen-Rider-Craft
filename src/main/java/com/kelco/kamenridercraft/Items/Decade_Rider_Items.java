@@ -560,13 +560,13 @@ public class Decade_Rider_Items {
             () -> new BaseSwordItem(Tiers.DIAMOND, 4, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.DECADE_TAB_ITEM).ChangeRepairItem(BLANK_CRAD.get()));
 
     public static final RegistryObject<Item> DECADE_BLAST_CARD = ITEMS.register("decade_blast_card",
-			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"decade","decade_violent_emotion","decade_cyan","dark_decade"}, new MobEffectInstance(Effect_core.SHOT_BOOST.get(), 300,2,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"decade","decade_complete","decade_violent_emotion","decade_cyan","dark_decade"}, new MobEffectInstance(Effect_core.SHOT_BOOST.get(), 300,2,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
     public static final RegistryObject<Item> DECADE_SLASH_CARD = ITEMS.register("decade_slash_card",
-			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"decade","decade_violent_emotion","decade_cyan","dark_decade"}, new MobEffectInstance(Effect_core.SLASH.get(), 300,2,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"decade","decade_complete","decade_violent_emotion","decade_cyan","dark_decade"}, new MobEffectInstance(Effect_core.SLASH.get(), 300,2,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
     public static final RegistryObject<Item> DECADE_ILLUSION_CARD = ITEMS.register("decade_illusion_card",
-			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"decade","decade_violent_emotion","decade_cyan","dark_decade"}, "illusion").AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"decade","decade_complete","decade_violent_emotion","decade_cyan","dark_decade"}, "illusion").AddToTabList(RiderTabs.DECADE_TAB_ITEM));
     public static final RegistryObject<Item> DECADE_INVISIBLE_CARD = ITEMS.register("decade_invisible_card",
-			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"decade","decade_violent_emotion","decade_cyan","dark_decade"}, new MobEffectInstance(MobEffects.INVISIBILITY, 300,0,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
+			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"decade","decade_complete","decade_violent_emotion","decade_cyan","dark_decade"}, new MobEffectInstance(MobEffects.INVISIBILITY, 300,0,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
     public static final RegistryObject<Item> DIEND_BLAST_CARD = ITEMS.register("diend_blast_card",
 			() -> new AttackRideCardItem(new Item.Properties(), new String[]{"diend","diend_green"}, new MobEffectInstance(Effect_core.SHOT_BOOST.get(), 300,2,true,false)).AddToTabList(RiderTabs.DECADE_TAB_ITEM));
     public static final RegistryObject<Item> DIEND_INVISIBLE_CARD = ITEMS.register("diend_invisible_card",

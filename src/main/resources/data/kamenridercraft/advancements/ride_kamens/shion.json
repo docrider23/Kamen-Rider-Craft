@@ -3,7 +3,7 @@
 	"icon": {
 	  "item": "kamenridercraft:chaos_driver_shion"
 	},
-	"title": "I can feel it. Your heart.",
+	"title": "I can feel your heart...",
 	"description": "Transform into Kamen Rider Shion",
 	"frame": "task",
 	"show_toast": true,
