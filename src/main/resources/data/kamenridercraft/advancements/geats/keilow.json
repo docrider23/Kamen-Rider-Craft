@@ -10,7 +10,7 @@
 	"announce_to_chat": true,
 	"hidden": false
   },
-  "parent": "kamenridercraft:geats/punkjack",
+  "parent": "kamenridercraft:geats/da-paan",
   "criteria": {
 	"requirement": {
 	  "trigger": "minecraft:inventory_changed",

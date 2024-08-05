@@ -1,16 +1,16 @@
 {
 	"display": {
 	  "icon": {
-		"item": "kamenridercraft:desire_driver_x_geats"
+		"item": "kamenridercraft:zillion_driver_gazer_zero"
 	  },
-	  "title": "Honk Honk",
-	  "description": "Transform into Kamen Rider XGeats",
+	  "title": "Control with Absolute Power.",
+	  "description": "Transform into Kamen Rider Gazer Zero",
 	  "frame": "task",
 	  "show_toast": true,
 	  "announce_to_chat": true,
 	  "hidden": false
 	},
-	"parent": "kamenridercraft:geats/butchi",
+	"parent": "kamenridercraft:geats/dooms_geats",
 	"criteria": {
 	  "requirement": {
 		"trigger": "minecraft:inventory_changed",
@@ -34,7 +34,7 @@
 			  },
 			  "feet": {
 				"items": [
-				  "kamenridercraft:desire_driver_x_geats"
+				  "kamenridercraft:zillion_driver_gazer_zero"
 				]
 			  }
 			}

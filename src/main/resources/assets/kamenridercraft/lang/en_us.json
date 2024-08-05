@@ -1465,6 +1465,8 @@
 "item.kamenridercraft.raidriser_panda": "Raidriser (Scouting Panda Raider)",
 "item.kamenridercraft.raidriser_jackal": "Raidriser (Fighting Jackal Raider)",
 
+"item.kamenridercraft.giger_belt": "Giger Belt",
+
 "item.kamenridercraft.attache_calibur": "Attache Calibur",
 "item.kamenridercraft.attache_shotgun": "Attache Shotgun",
 "item.kamenridercraft.attache_arrow": "Attache Arrow",
@@ -2137,6 +2139,7 @@
 "entity.kamenridercraft.battle_raider": "Battle Raider",
 "entity.kamenridercraft.abaddon": "Kamen Rider Abaddon",
 "entity.kamenridercraft.magia": "Magia",
+"entity.kamenridercraft.giger": "Giger",
 "entity.kamenridercraft.horobi": "Kamen Rider Horobi",
 "entity.kamenridercraft.jin": "Kamen Rider Jin",
 "entity.kamenridercraft.ikazuchi": "Kamen Rider Ikazuchi",
@@ -2241,6 +2244,7 @@
 "item.kamenridercraft.battle_raider_spawn_egg": "Battle Raider Spawn Egg",
 "item.kamenridercraft.abaddon_spawn_egg": "Kamen Rider Abaddon Spawn Egg",
 "item.kamenridercraft.magia_spawn_egg": "Magia Spawn Egg",
+"item.kamenridercraft.giger_spawn_egg": "Giger Spawn Egg",
 "item.kamenridercraft.horobi_spawn_egg": "Kamen Rider Horobi Spawn Egg",
 "item.kamenridercraft.jin_spawn_egg": "Kamen Rider Jin Spawn Egg",
 "item.kamenridercraft.ikazuchi_spawn_egg": "Kamen Rider Ikazuchi Spawn Egg",
@@ -2253,7 +2257,6 @@
 "item.kamenridercraft.zaia_spawn_egg": "Kamen Rider Zaia Spawn Egg",
 "item.kamenridercraft.dire_wolf_sold_magia_spawn_egg": "Dire Wolf Sold Magia Spawn Egg",
 "item.kamenridercraft.serval_tiger_sold_magia_spawn_egg": "Serval Tiger Sold Magia Spawn Egg",
-"item.kamenridercraft.giger_spawn_egg": "Giger Spawn Egg",
 "item.kamenridercraft.is_spawn_egg": "Is Spawn Egg",
 
 "item.kamenridercraft.pawnjyamato_spawn_egg": "Pawn Jyamato Spawn Egg",

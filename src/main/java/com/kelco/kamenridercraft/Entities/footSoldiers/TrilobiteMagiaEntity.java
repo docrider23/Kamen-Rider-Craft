@@ -45,14 +45,12 @@ public class TrilobiteMagiaEntity extends BaseHenchmenEntity {
 						playerIn.sendSystemMessage(Component.translatable("Forcerise! Flying Falcon! Break down.").withStyle(ChatFormatting.LIGHT_PURPLE));
 					}
 				}
-			// }else if (this.random.nextInt(8) == 1) {
-			// 	BaseHenchmenEntity boss = MobsCore.GIGER.get().create(this.level());
-			// 	if (boss != null) {
-			// 		boss.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
-			// 		this.level().addFreshEntity(boss);
-
-			// 		
-			// 	}
+			} else if (this.random.nextInt(8) == 1) {
+			 	BaseHenchmenEntity boss = MobsCore.GIGER.get().create(this.level());
+			 	if (boss != null) {
+			 		boss.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), 0.0F);
+			 		this.level().addFreshEntity(boss);
+			 	}
 			}
 		}
 		super.remove(p_149847_);

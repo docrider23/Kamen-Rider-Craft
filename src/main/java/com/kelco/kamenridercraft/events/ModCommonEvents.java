@@ -30,6 +30,7 @@ import com.kelco.kamenridercraft.Entities.bosses.EternalEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GamelEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GaohEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GenmEntity;
+import com.kelco.kamenridercraft.Entities.bosses.GigerEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GodaEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GraphiteBugsterEntity;
 import com.kelco.kamenridercraft.Entities.bosses.HorobiEntity;
@@ -618,6 +619,7 @@ public class ModCommonEvents {
 		event.put(MobsCore.BATTLE_RAIDER.get(), BattleRaiderEntity.setAttributes());
 		event.put(MobsCore.ABADDON.get(), AbaddonEntity.setAttributes());
 		event.put(MobsCore.MAGIA.get(), MagiaEntity.setAttributes());
+		event.put(MobsCore.GIGER.get(), GigerEntity.setAttributes());
 		event.put(MobsCore.HOROBI.get(), HorobiEntity.setAttributes());
 		event.put(MobsCore.JIN.get(), JinEntity.setAttributes());
 		event.put(MobsCore.IKAZUCHI.get(), IkazuchiEntity.setAttributes());

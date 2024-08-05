@@ -1,0 +1,43 @@
+package com.kelco.kamenridercraft.Entities.bosses;
+
+import com.kelco.kamenridercraft.Effect.Effect_core;
+import com.kelco.kamenridercraft.Entities.footSoldiers.BaseHenchmenEntity;
+import com.kelco.kamenridercraft.Items.Zero_One_Rider_Items;
+import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
+
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.Zombie;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+
+public class GigerEntity extends BaseHenchmenEntity {
+	
+
+	
+    public GigerEntity(EntityType<? extends Zombie> type, Level level) {
+        super(type, level);
+        NAME="giger";
+        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_HELMET.get()));
+        this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_CHESTPLATE.get()));
+        this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_LEGGINGS.get()));
+        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.GIGER_BELT.get()));
+    }
+    
+
+    public static AttributeSupplier setAttributes() {
+
+        return Monster.createMonsterAttributes()
+        		.add(Attributes.FOLLOW_RANGE, 135.0D)
+        		.add(Attributes.MOVEMENT_SPEED,(double)0.3F)
+        		.add(Attributes.ATTACK_DAMAGE, 17.0D)
+        		.add(Attributes.ARMOR, 3.0D)
+        		.add(Attributes.MAX_HEALTH, 60.0D)
+        		.add(Attributes.SPAWN_REINFORCEMENTS_CHANCE)
+        		.build();
+     }   
+
+}

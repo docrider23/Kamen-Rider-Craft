@@ -496,6 +496,7 @@ public class RiderTabs {
 			event.accept(MobsCore.BATTLE_RAIDER_SPAWN_EGG);
 			event.accept(MobsCore.ABADDON_SPAWN_EGG);
 			event.accept(MobsCore.MAGIA_SPAWN_EGG);
+			event.accept(MobsCore.GIGER_SPAWN_EGG);
 			event.accept(MobsCore.HOROBI_SPAWN_EGG);
 			event.accept(MobsCore.JIN_SPAWN_EGG);
 			event.accept(MobsCore.IKAZUCHI_SPAWN_EGG);
