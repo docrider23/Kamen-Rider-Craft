@@ -252,6 +252,7 @@ public class ModClientEvents {
 		event.registerEntityRenderer(MobsCore.BATTLE_RAIDER.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.ABADDON.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.MAGIA.get(), BasicEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.GIGER.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.HOROBI.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.JIN.get(), BasicEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.IKAZUCHI.get(), BasicEntityRenderer::new);

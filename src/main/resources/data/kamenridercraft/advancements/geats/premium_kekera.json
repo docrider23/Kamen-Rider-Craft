@@ -1,16 +1,16 @@
 {
 	"display": {
 	  "icon": {
-		"item": "kamenridercraft:desire_driver_x_geats"
+		"item": "kamenridercraft:kekera_black_raise_riser_card"
 	  },
-	  "title": "Honk Honk",
-	  "description": "Transform into Kamen Rider XGeats",
-	  "frame": "task",
+	  "title": "kek, lmao even",
+	  "description": "Transform into Premium Kekera",
+	  "frame": "goal",
 	  "show_toast": true,
 	  "announce_to_chat": true,
 	  "hidden": false
 	},
-	"parent": "kamenridercraft:geats/butchi",
+	"parent": "kamenridercraft:geats/kekera",
 	"criteria": {
 	  "requirement": {
 		"trigger": "minecraft:inventory_changed",
@@ -34,8 +34,9 @@
 			  },
 			  "feet": {
 				"items": [
-				  "kamenridercraft:desire_driver_x_geats"
-				]
+				  "kamenridercraft:raise_riser_belt_kekera"
+				],
+  		  		"nbt": "{slot_tex1:\"kekera_black_raise_riser_card\"}"
 			  }
 			}
 		  }

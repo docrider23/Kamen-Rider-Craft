@@ -1,16 +1,16 @@
 {
   "display": {
 	"icon": {
-	  "item": "kamenridercraft:desire_driver_turbon"
+	  "item": "kamenridercraft:desire_driver_butchi"
 	},
-	"title": "Dead Meat",
-	"description": "Transform into Kamen Rider Turbon",
+	"title": "One for the Pound",
+	"description": "Transform into Kamen Rider Butchi",
 	"frame": "task",
 	"show_toast": true,
 	"announce_to_chat": true,
 	"hidden": false
   },
-  "parent": "kamenridercraft:geats/hakubi",
+  "parent": "kamenridercraft:geats/revice_dgp",
   "criteria": {
 	"requirement": {
 	  "trigger": "minecraft:inventory_changed",
@@ -34,7 +34,7 @@
 			},
 			"feet": {
 			  "items": [
-				"kamenridercraft:desire_driver_turbon"
+				"kamenridercraft:desire_driver_butchi"
 			  ]
 			}
 		  }

@@ -1,16 +1,16 @@
 {
 	"display": {
 	  "icon": {
-		"item": "kamenridercraft:desire_driver_x_geats"
+		"item": "kamenridercraft:vision_driver_gazer"
 	  },
-	  "title": "Honk Honk",
-	  "description": "Transform into Kamen Rider XGeats",
+	  "title": "Innovation and Control.",
+	  "description": "Transform into Kamen Rider Gazer",
 	  "frame": "task",
 	  "show_toast": true,
 	  "announce_to_chat": true,
 	  "hidden": false
 	},
-	"parent": "kamenridercraft:geats/butchi",
+	"parent": "kamenridercraft:geats/glare",
 	"criteria": {
 	  "requirement": {
 		"trigger": "minecraft:inventory_changed",
@@ -34,7 +34,7 @@
 			  },
 			  "feet": {
 				"items": [
-				  "kamenridercraft:desire_driver_x_geats"
+				  "kamenridercraft:vision_driver_gazer"
 				]
 			  }
 			}

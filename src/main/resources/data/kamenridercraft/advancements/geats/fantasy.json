@@ -1,16 +1,16 @@
 {
   "display": {
     "icon": {
-  	  "item": "kamenridercraft:oneness_raise_buckle"
+  	  "item": "kamenridercraft:fantasy_raise_buckle"
     },
-    "title": "All as One!",
-    "description": "Transform into Kamen Rider Geats Oneness",
+    "title": "Kurama Foundation Inheritance",
+    "description": "Transform into Na-Go Fantasy Form",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "kamenridercraft:geats/geatsix",
+  "parent": "kamenridercraft:geats/na-go",
   "criteria": {
     "requirement": {
   	"trigger": "minecraft:inventory_changed",
@@ -34,9 +34,9 @@
   		  },
   		  "feet": {
   			"items": [
-  			  "kamenridercraft:desire_driver_geats"
+  			  "kamenridercraft:desire_driver_na_go"
   			],
-  		  "nbt": "{slot_tex2:\"oneness_raise_buckle\",slot_tex3:\"boost_mkiii_raise_buckle\"}"
+  		  	"nbt": "{slot_tex2:\"fantasy_raise_buckle\"}"
   		  }
   		}
   	  }

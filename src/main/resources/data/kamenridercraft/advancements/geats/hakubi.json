@@ -1,16 +1,16 @@
 {
   "display": {
 	"icon": {
-	  "item": "kamenridercraft:desire_driver_turbon"
+	  "item": "kamenridercraft:desire_driver_hakubi"
 	},
-	"title": "Dead Meat",
-	"description": "Transform into Kamen Rider Turbon",
+	"title": "My Little Sister's a Rider?!",
+	"description": "Transform into Kamen Rider Hakubi",
 	"frame": "task",
 	"show_toast": true,
 	"announce_to_chat": true,
 	"hidden": false
   },
-  "parent": "kamenridercraft:geats/hakubi",
+  "parent": "kamenridercraft:geats/groovy",
   "criteria": {
 	"requirement": {
 	  "trigger": "minecraft:inventory_changed",
@@ -34,7 +34,7 @@
 			},
 			"feet": {
 			  "items": [
-				"kamenridercraft:desire_driver_turbon"
+				"kamenridercraft:desire_driver_hakubi"
 			  ]
 			}
 		  }

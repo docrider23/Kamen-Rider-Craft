@@ -33,6 +33,7 @@ import com.kelco.kamenridercraft.Entities.bosses.GamelEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GaohEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GattonBugsterEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GenmEntity;
+import com.kelco.kamenridercraft.Entities.bosses.GigerEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GodaEntity;
 import com.kelco.kamenridercraft.Entities.bosses.GraphiteBugsterEntity;
 import com.kelco.kamenridercraft.Entities.bosses.HorobiEntity;
@@ -641,6 +642,12 @@ public class MobsCore {
  
           public static final RegistryObject<ForgeSpawnEggItem> MAGIA_SPAWN_EGG = ITEMS.register("magia_spawn_egg",
                   () -> new ForgeSpawnEggItem(MAGIA, 0x060606, 0xa2a2a2, new Item.Properties()));
+
+          public static final RegistryObject<EntityType<GigerEntity>> GIGER = MOBLIST.register("giger",
+                  () -> EntityType.Builder.of(GigerEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":giger"));
+ 
+          public static final RegistryObject<ForgeSpawnEggItem> GIGER_SPAWN_EGG = ITEMS.register("giger_spawn_egg",
+                  () -> new ForgeSpawnEggItem(GIGER, 0x9c00b2, 0x1f1f1f, new Item.Properties()));
 
           public static final RegistryObject<EntityType<JinEntity>> JIN = MOBLIST.register("jin",
                   () -> EntityType.Builder.of(JinEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":jin"));
