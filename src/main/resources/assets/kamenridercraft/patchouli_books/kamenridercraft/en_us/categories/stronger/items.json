@@ -1,7 +1,7 @@
 {
 	"parent": "kamenridercraft:stronger/main",
     "name": "Stronger Rider Items",
-    "description": "All non-armor items relating to by the Stronger Riders.",
+    "description": "All non-armor items relating to the Stronger Riders.",
     "icon": "kamenridercraft:electrer_core",
     "sortnum": 2
 }

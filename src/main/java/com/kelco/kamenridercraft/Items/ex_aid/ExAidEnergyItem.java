@@ -7,6 +7,7 @@ import com.kelco.kamenridercraft.Effect.Effect_core;
 import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseItem;
 
+import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -28,24 +29,23 @@ public class ExAidEnergyItem extends BaseItem{
 
 
 	public void  useEnergyItem (ItemStack itemstack, Level world,Player playerIn) {
-		for (int i = 0; i < potionEffectList.size(); i++)
-		{
-			playerIn.addEffect(new MobEffectInstance(potionEffectList.get(i).getEffect(),potionEffectList.get(i).getDuration(),potionEffectList.get(i).getAmplifier(),true,false));
+		if (!world.isClientSide()) {
+			for (int i = 0; i < potionEffectList.size(); i++)
+			{
+				playerIn.addEffect(new MobEffectInstance(potionEffectList.get(i).getEffect(),potionEffectList.get(i).getDuration(),potionEffectList.get(i).getAmplifier(),true,false));
+			}
+			itemstack.shrink(1);	
+			playerIn.awardStat(Stats.ITEM_USED.get(this));
 		}
-		itemstack.shrink(1);	
 	}
 
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int num, boolean flag) {
-		if (entity instanceof Player ) {
-			Player playerIn = ((Player)entity);
-			//&playerIn.getInventory().countItem(Ex_Aid_Rider_Items.ENERGY_ITEM_HOLDER.get())!=0
-			if (!playerIn.hasEffect(Effect_core.BUGSTER.get())&playerIn.getInventory().countItem(Ex_Aid_Rider_Items.ENERGY_ITEM_HOLDER.get())==0) {
-				this.useEnergyItem(itemstack,world, playerIn);
-				itemstack.shrink(1);	
-			}
-			}
-		}
+		//&playerIn.getInventory().countItem(Ex_Aid_Rider_Items.ENERGY_ITEM_HOLDER.get())!=0
+		if (entity instanceof Player playerIn
+		&& !playerIn.hasEffect(Effect_core.BUGSTER.get())
+		&& playerIn.getInventory().countItem(Ex_Aid_Rider_Items.ENERGY_ITEM_HOLDER.get())==0) this.useEnergyItem(itemstack,world, playerIn);
+	}
 
 	@Override
 		public InteractionResultHolder<ItemStack> use(Level world, Player playerIn, InteractionHand p_41434_) {

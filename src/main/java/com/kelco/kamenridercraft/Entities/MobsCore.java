@@ -97,7 +97,9 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.ZectrooperEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ZuGumunBaEntity;
 import com.kelco.kamenridercraft.Entities.summons.DecadeIllusionEntity;
 import com.kelco.kamenridercraft.Entities.summons.DiendIllusionEntity;
+import com.kelco.kamenridercraft.Entities.summons.KnightTrickVentEntity;
 import com.kelco.kamenridercraft.Entities.summons.ParaDXSummonEntity;
+import com.kelco.kamenridercraft.Entities.summons.RyukiTrickVentEntity;
 
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -759,6 +761,18 @@ public class MobsCore {
           public static final RegistryObject<ForgeSpawnEggItem> SKULLBOILER_SPAWN_EGG = ITEMS.register("skullboilder_spawn_egg",
                   () -> new ForgeSpawnEggItem(SKULLBOILER, 0xffffff, 0x151515, new Item.Properties()));
       
+                  
+          public static final RegistryObject<EntityType<RyukiTrickVentEntity>> RYUKI_TRICK_VENT = MOBLIST.register("ryuki_trick_vent",
+                  () -> EntityType.Builder.of(RyukiTrickVentEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":ryuki_trick_vent"));
+
+          public static final RegistryObject<ForgeSpawnEggItem> RYUKI_TRICK_VENT_SPAWN_EGG = ITEMS.register("ryuki_trick_vent_spawn_egg",
+                  () -> new ForgeSpawnEggItem(RYUKI_TRICK_VENT, 0xF40000, 0xDBBB4B, new Item.Properties()));
+                  
+          public static final RegistryObject<EntityType<KnightTrickVentEntity>> KNIGHT_TRICK_VENT = MOBLIST.register("knight_trick_vent",
+                  () -> EntityType.Builder.of(KnightTrickVentEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":knight_trick_vent"));
+
+          public static final RegistryObject<ForgeSpawnEggItem> KNIGHT_TRICK_VENT_SPAWN_EGG = ITEMS.register("knight_trick_vent_spawn_egg",
+                  () -> new ForgeSpawnEggItem(KNIGHT_TRICK_VENT, 0x002DF1, 0xDBBB4B, new Item.Properties()));
                   
           public static final RegistryObject<EntityType<DecadeIllusionEntity>> DECADE_ILLUSION = MOBLIST.register("decade_illusion",
                   () -> EntityType.Builder.of(DecadeIllusionEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":decade_illusion"));

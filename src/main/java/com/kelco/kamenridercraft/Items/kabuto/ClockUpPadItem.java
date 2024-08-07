@@ -4,6 +4,7 @@ import com.kelco.kamenridercraft.Items.Kabuto_Rider_Items;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 
+import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -36,6 +37,7 @@ public class ClockUpPadItem extends BaseItem {
                                 if (!p_41128_.isClientSide()) {
                                     p_41129_.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 250, 20,true,false));
                                     p_41129_.getCooldowns().addCooldown(this, 500);
+									p_41129_.awardStat(Stats.ITEM_USED.get(this));
                                 }
                             }
                         }

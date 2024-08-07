@@ -415,16 +415,16 @@ public class Ryuki_Rider_Items {
             () -> new BaseSwordItem(Tiers.DIAMOND, 7, -3F, new Item.Properties()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM).ChangeRepairItem(ADVENT_CARD.get()));
 	
     public static final RegistryObject<Item> RIDE_SABER_VENT = ITEMS.register("ride_saber_vent",
-			() -> new AdventCardItem(new Item.Properties(), "ryuki", RIDE_SABER.get(), RIDE_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "ryuki", RIDE_VISOR.get(), RIDE_SABER.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> DRAG_SABER_VENT = ITEMS.register("drag_saber_vent",
-			() -> new AdventCardItem(new Item.Properties(), "ryuki", DRAG_SABER.get(), DRAG_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "ryuki", DRAG_VISOR.get(), DRAG_SABER.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> DRAG_CLAW_VENT = ITEMS.register("drag_claw_vent",
-			() -> new AdventCardItem(new Item.Properties(), "ryuki", DRAG_CLAW.get(), DRAG_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "ryuki", DRAG_VISOR.get(), DRAG_CLAW.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> DRAG_SHIELD_VENT = ITEMS.register("drag_shield_vent",
-			() -> new AdventCardItem(new Item.Properties(), "ryuki", DRAG_SHIELD.get(), DRAG_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "ryuki", DRAG_VISOR.get(), DRAG_SHIELD.get(), DRAG_SHIELD.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> DRAG_SHIELD_VENT_FORM = ITEMS.register("drag_shield_vent_form",
     		() -> new RiderFormChangeItem(new Item.Properties(),0,"_drag_shield","ryuki","v_buckle_belt_ryuki",
@@ -435,13 +435,16 @@ public class Ryuki_Rider_Items {
     		.ChangeModel("geo/ryuki_drag_shield.geo.json").IsGlowing().AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 	  
     public static final RegistryObject<Item> DRAG_VISOR_ZWEI_VENT = ITEMS.register("drag_visor_zwei_vent",
-			() -> new AdventCardItem(new Item.Properties(), "ryuki", DRAG_VISOR_ZWEI.get(), DRAG_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "ryuki", DRAG_VISOR.get(), DRAG_VISOR_ZWEI.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> DRAG_BLADE_VENT = ITEMS.register("drag_blade_vent",
-			() -> new AdventCardItem(new Item.Properties(), "ryuki", DRAG_BLADE.get(), DRAG_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "ryuki", DRAG_VISOR.get(), DRAG_BLADE.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+
+    public static final RegistryObject<Item> RYUKI_TRICK_VENT = ITEMS.register("ryuki_trick_vent",
+			() -> new AdventCardItem(new Item.Properties(), "ryuki", DRAG_VISOR.get(), "trick_vent").AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> WING_LANCER_VENT = ITEMS.register("wing_lancer_vent",
-			() -> new AdventCardItem(new Item.Properties(), "knight", WING_LANCER.get(), DARK_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "knight", DARK_VISOR.get(), WING_LANCER.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> WING_WALL_VENT = ITEMS.register("wing_wall_vent",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_wing_wall","knight","v_buckle_belt_knight",
@@ -450,27 +453,30 @@ public class Ryuki_Rider_Items {
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false))
 			.ChangeModel("geo/knight_wing_wall.geo.json").AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+
+    public static final RegistryObject<Item> KNIGHT_TRICK_VENT = ITEMS.register("knight_trick_vent",
+			() -> new AdventCardItem(new Item.Properties(), "knight", DARK_VISOR.get(), "trick_vent_knight").AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 	  
     public static final RegistryObject<Item> DARK_BLADE_VENT = ITEMS.register("dark_blade_vent",
-			() -> new AdventCardItem(new Item.Properties(), "knight", DARK_BLADE.get(), DARK_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "knight", DARK_VISOR.get(), DARK_BLADE.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> DARK_VISOR_ZWEI_VENT = ITEMS.register("dark_visor_zwei_vent",
-			() -> new AdventCardItem(new Item.Properties(), "knight", DARK_SHIELD.get(), DARK_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "knight", DARK_VISOR.get(), DARK_SHIELD.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> DARK_ARROW_VENT = ITEMS.register("dark_arrow_vent",
-			() -> new AdventCardItem(new Item.Properties(), "knight", DARK_ARROW.get(), DARK_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "knight", DARK_VISOR.get(), DARK_ARROW.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> SCISSORS_PINCH_VENT = ITEMS.register("scissors_pinch_vent",
-			() -> new AdventCardItem(new Item.Properties(), "scissors", SCISSORS_PINCH.get(), SCISSORS_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "scissors", SCISSORS_VISOR.get(), SCISSORS_PINCH.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> SHELL_DEFENSE_VENT = ITEMS.register("shell_defense_vent",
-			() -> new AdventCardItem(new Item.Properties(), "scissors", SHELL_DEFENSE.get(), SCISSORS_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "scissors", SCISSORS_VISOR.get(), SHELL_DEFENSE.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> GIGA_HORN_VENT = ITEMS.register("giga_horn_vent",
-			() -> new AdventCardItem(new Item.Properties(), "zolda", GIGA_HORN.get(), MAGNA_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "zolda", MAGNA_VISOR.get(), GIGA_HORN.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> GIGA_LAUNCHER_VENT = ITEMS.register("giga_launcher_vent",
-			() -> new AdventCardItem(new Item.Properties(), "zolda", GIGA_LAUNCHER.get(), MAGNA_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "zolda", MAGNA_VISOR.get(), GIGA_LAUNCHER.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> GIGA_CANNON_VENT = ITEMS.register("giga_cannon_vent",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_giga_cannon","zolda","v_buckle_belt_zolda",
@@ -480,7 +486,7 @@ public class Ryuki_Rider_Items {
 			.ChangeModel("geo/zolda_giga_cannon.geo.json").AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> GIGA_ARMOR_VENT = ITEMS.register("giga_armor_vent",
-			() -> new AdventCardItem(new Item.Properties(), "zolda", GIGA_ARMOR.get(), MAGNA_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "zolda", MAGNA_VISOR.get(), GIGA_ARMOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 	  
 	public static final RegistryObject<Item> GIGA_TECTOR_VENT = ITEMS.register("giga_tector_vent",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_giga_tector","zolda","v_buckle_belt_zolda",
@@ -490,46 +496,46 @@ public class Ryuki_Rider_Items {
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false)).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> EVIL_WHIP_VENT = ITEMS.register("evil_whip_vent",
-			() -> new AdventCardItem(new Item.Properties(), "raia", EVIL_WHIP.get(), EVIL_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "raia", EVIL_VISOR.get(), EVIL_WHIP.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> EVIL_VISOR_ZWEI_VENT = ITEMS.register("evil_visor_zwei_vent",
-			() -> new AdventCardItem(new Item.Properties(), "raia", EVIL_VISOR_ZWEI.get(), EVIL_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "raia", EVIL_VISOR.get(), EVIL_VISOR_ZWEI.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> METAL_HORN_VENT = ITEMS.register("metal_horn_vent",
-			() -> new AdventCardItem(new Item.Properties(), "gai", METAL_HORN.get(), METAL_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "gai", METAL_VISOR.get(), METAL_HORN.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> VENO_SABER_VENT = ITEMS.register("veno_saber_vent",
-			() -> new AdventCardItem(new Item.Properties(), "ouja", VENO_SABER.get(), VENO_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "ouja", VENO_VISOR.get(), VENO_SABER.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> VENO_VISOR_ZWEI_VENT = ITEMS.register("veno_visor_zwei_vent",
-			() -> new AdventCardItem(new Item.Properties(), "ouja", VENO_VISOR_ZWEI.get(), VENO_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "ouja", VENO_VISOR.get(), VENO_VISOR_ZWEI.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> GOLD_SABER_VENT = ITEMS.register("gold_saber_vent",
-			() -> new AdventCardItem(new Item.Properties(), "odin", GOLD_SABER.get(), GOLD_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "odin", GOLD_VISOR.get(), GOLD_SABER.get(), GOLD_SABER.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> GOLD_SHIELD_VENT = ITEMS.register("gold_shield_vent",
-			() -> new AdventCardItem(new Item.Properties(), "odin", GOLD_SHIELD.get(), GOLD_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "odin", GOLD_VISOR.get(), GOLD_SHIELD.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> DEST_CLAW_VENT = ITEMS.register("dest_claw_vent",
-			() -> new AdventCardItem(new Item.Properties(), "tiger", DEST_CLAW.get(), DEST_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "tiger", DEST_VISOR.get(), DEST_CLAW.get(), DEST_CLAW1.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> GAZELLE_STAB_VENT = ITEMS.register("gazelle_stab_vent",
-			() -> new AdventCardItem(new Item.Properties(), "imperer", GAZELLE_STAB.get(), GAZELLE_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "imperer", GAZELLE_VISOR.get(), GAZELLE_STAB.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> WING_SLASHER_VENT = ITEMS.register("wing_slasher_vent",
-			() -> new AdventCardItem(new Item.Properties(), "femme", WING_SLASHER.get(), BLANC_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "femme", BLANC_VISOR.get(), WING_SLASHER.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> WING_SHIELD_VENT = ITEMS.register("wing_shield_vent",
-			() -> new AdventCardItem(new Item.Properties(), "femme", WING_SHIELD.get(), BLANC_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "femme", BLANC_VISOR.get(), WING_SHIELD.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> DRAG_SABER_VENT_RYUGA = ITEMS.register("drag_saber_vent_ryuga",
-			() -> new AdventCardItem(new Item.Properties(), "ryuga", DRAG_SABER_RYUGA.get(), BLACK_DRAG_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "ryuga", BLACK_DRAG_VISOR.get(), DRAG_SABER_RYUGA.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> DRAG_CLAW_VENT_RYUGA = ITEMS.register("drag_claw_vent_ryuga",
-			() -> new AdventCardItem(new Item.Properties(), "ryuga", DRAG_CLAW_RYUGA.get(), BLACK_DRAG_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "ryuga", BLACK_DRAG_VISOR.get(), DRAG_CLAW_RYUGA.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> DRAG_SHIELD_VENT_RYUGA = ITEMS.register("drag_shield_vent_ryuga",
-			() -> new AdventCardItem(new Item.Properties(), "ryuga", DRAG_SHIELD_RYUGA.get(), BLACK_DRAG_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "ryuga", BLACK_DRAG_VISOR.get(), DRAG_SHIELD_RYUGA.get(), DRAG_SHIELD_RYUGA.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 	   
 	public static final RegistryObject<Item> DRAG_SHIELD_VENT_FORM_RYUGA = ITEMS.register("drag_shield_vent_form_ryuga",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_drag_shield","ryuga","v_buckle_belt_ryuga",
@@ -540,19 +546,19 @@ public class Ryuki_Rider_Items {
 			.ChangeModel("geo/ryuki_drag_shield.geo.json").IsGlowing().AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> BLACK_DRAG_VISOR_ZWEI_VENT = ITEMS.register("black_drag_visor_zwei_vent",
-			() -> new AdventCardItem(new Item.Properties(), "ryuga", BLACK_DRAG_VISOR_ZWEI.get(), BLACK_DRAG_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "ryuga", BLACK_DRAG_VISOR.get(), BLACK_DRAG_VISOR_ZWEI.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> BIO_WINDER_VENT = ITEMS.register("bio_winder_vent",
-			() -> new AdventCardItem(new Item.Properties(), "verde", BIO_WINDER.get(), BIO_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "verde", BIO_VISOR.get(), BIO_WINDER.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> SLASH_DAGGER_VENT = ITEMS.register("slash_dagger_vent",
-			() -> new AdventCardItem(new Item.Properties(), "alternative", SLASH_DAGGER.get(), SLASH_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "alternative", SLASH_VISOR.get(), SLASH_DAGGER.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> ABYSS_SABER_VENT = ITEMS.register("abyss_saber_vent",
-			() -> new AdventCardItem(new Item.Properties(), "abyss", ABYSS_SABER.get(), ABYSS_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "abyss", ABYSS_VISOR.get(), ABYSS_SABER.get(), ABYSS_SABER.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> ABYSS_CLAW_VENT = ITEMS.register("abyss_claw_vent",
-			() -> new AdventCardItem(new Item.Properties(), "abyss", ABYSS_CLAW.get(), ABYSS_VISOR.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			() -> new AdventCardItem(new Item.Properties(), "abyss", ABYSS_VISOR.get(), ABYSS_CLAW.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 	
 	
      /**
