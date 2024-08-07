@@ -21,6 +21,7 @@ public class GigerEntity extends BaseHenchmenEntity {
     public GigerEntity(EntityType<? extends Zombie> type, Level level) {
         super(type, level);
         NAME="giger";
+        this.Scale=3;
         this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_HELMET.get()));
         this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_CHESTPLATE.get()));
         this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_LEGGINGS.get()));
