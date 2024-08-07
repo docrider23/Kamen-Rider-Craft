@@ -63,11 +63,16 @@ public class GmRiderEntity extends BaseHenchmenEntity implements RangedAttackMob
 
 	public GmRiderEntity(EntityType<? extends Zombie> type, Level level) {
 		super(type, level);
-		NAME="gmrider";
 	    this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Geats_Rider_Items.GEATS_HELMET.get()));
 	    this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Geats_Rider_Items.GEATS_CHESTPLATE.get()));
 	    this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Geats_Rider_Items.GEATS_LEGGINGS.get()));
-	    this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Geats_Rider_Items.DESIRE_DRIVER_GM.get()));
+		if (this.random.nextInt(2)==0) {
+			NAME="gm_rider";
+			this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Geats_Rider_Items.DESIRE_DRIVER_GM.get()));
+		} else {
+			NAME="gm_rider_chirami";
+			this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Geats_Rider_Items.DESIRE_DRIVER_GM_CHIRAMI.get()));
+		}
         this.reassessWeaponGoal();
     }
     

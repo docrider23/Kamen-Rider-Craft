@@ -436,43 +436,89 @@ public class Geats_Rider_Items {
 
 	public static final RegistryObject<Item> BOOST_MKIII_RAISE_BUCKLE = ITEMS.register("boost_mkiii_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_boost_mkiii","geats","desire_driver_belt_geats",
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 5,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 6,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 5,true,false),
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(Effect_core.FIRE_PUNCH.get(), 40, 4,true,false),
 					new MobEffectInstance(Effect_core.BOOST.get(), 40, 4,true,false))
 			.ChangeSlot(2).SetOffhandSlot(3).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 	
 	public static final RegistryObject<Item> ONENESS_RAISE_BUCKLE = ITEMS.register("oneness_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_oneness","geats","desire_driver_belt_geats",
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 6,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 7,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 5,true,false),
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.LUCK, 40, 1,true,false),
+					new MobEffectInstance(MobEffects.SLOW_FALLING, 40, 0,true,false),
+					new MobEffectInstance(Effect_core.ANTIPOISON.get(), 40, 0,true,false),
+					new MobEffectInstance(Effect_core.FIRE_PUNCH.get(), 40, 4,true,false),
 					new MobEffectInstance(Effect_core.BOOST.get(), 40, 4,true,false))
 			.ChangeSlot(2).addNeedItem(GEATS_ONENESS_CORE_ID.get()).addNeedForm(BOOST_MKIII_RAISE_BUCKLE.get(), 3).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> XGEATS_RAISE_BUCKLE = ITEMS.register("x_geats_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_x_geats","x_geats","desire_driver_belt_geats",
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 5,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 6,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 5,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.LUCK, 40, 0,true,false),
+					new MobEffectInstance(Effect_core.SLASH.get(), 40, 4,true,false),
 					new MobEffectInstance(Effect_core.BOOST.get(), 40, 4,true,false))
 			.ChangeSlot(2).SetOffhandSlot(3).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> DOOMS_GEATS_RAISE_BUCKLE = ITEMS.register("dooms_geats_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_dooms_geats","dooms_geats","desire_driver_belt_geats",
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 5,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 6,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 5,true,false),
+					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(Effect_core.FIRE_PUNCH.get(), 40, 4,true,false),
 					new MobEffectInstance(Effect_core.BOOST.get(), 40, 4,true,false))
 			.ChangeSlot(2).SetOffhandSlot(3).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> BUJIN_SWORD_RAISE_BUCKLE = ITEMS.register("bujin_sword_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_bujin_sword","tycoon","desire_driver_belt_geats",
-					new MobEffectInstance(Effect_core.BOOST.get(), 40, 4,true,false))
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
+					new MobEffectInstance(Effect_core.SLASH.get(), 40, 4,true,false))
 			.ChangeSlot(3).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> PLOSION_RAGE_RAISE_BUCKLE = ITEMS.register("plosion_rage_raise_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_plosion_rage_2","buffa","desire_driver_belt_geats",
-					new MobEffectInstance(Effect_core.BOOST.get(), 40, 4,true,false))
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 5,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
+					new MobEffectInstance(Effect_core.ANTIPOISON.get(), 40, 0,true,false))
 			.ChangeSlot(3).alsoChange1stSlot(BUFFA_CORE_ID.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
 	public static final RegistryObject<Item> JYAMATO_BUCKLE_BUFFA = ITEMS.register("jyamato_buckle_buffa",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_jyamato","buffa","desire_driver_belt_geats",
-					new MobEffectInstance(Effect_core.BOOST.get(), 40, 1,true,false))
+					new MobEffectInstance(MobEffects.WITHER, 40, 0,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false))
 			.addNeedForm(BUFFA_CORE_ID_CRACKED.get(),1).ChangeSlot(2).SetOffhandSlot(3));
 
 
 	public static final RegistryObject<Item> JYAMATO_BUCKLE = ITEMS.register("jyamato_buckle",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_jyamato","jyamato","desire_driver_belt_geats",
-					new MobEffectInstance(Effect_core.BOOST.get(), 40, 1,true,false))
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false))
 			.ChangeSlot(2).SetOffhandSlot(3).addAlternative(JYAMATO_BUCKLE_BUFFA.get()).AddCompatibilityList(new String[] {"gm_chirami"}
 					).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
@@ -1009,8 +1055,10 @@ public class Geats_Rider_Items {
 
 	public static final RegistryObject<Item> JYAMASHIN_WISH_CARD = ITEMS.register("jyamashin_wish_card",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_jyamashin","buffa","desire_driver_belt_geats",
-					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
-					new MobEffectInstance(MobEffects.JUMP, 40, 0,true,false))
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(Effect_core.ANTIPOISON.get(), 40, 0,true,false))
 			.alsoChange3rdSlot(Modded_item_core.BLANK_FORM.get()).alsoChange2ndSlot(Modded_item_core.BLANK_FORM.get()).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 	
 

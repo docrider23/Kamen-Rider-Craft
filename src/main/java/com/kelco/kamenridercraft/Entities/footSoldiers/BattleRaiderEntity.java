@@ -35,7 +35,7 @@ public class BattleRaiderEntity extends BaseHenchmenEntity {
 	
     public BattleRaiderEntity(EntityType<? extends Zombie> type, Level level) {
         super(type, level);
-        NAME="battle_raider";
+        NAME="raider_horseshoe_crab";
         this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_HELMET.get()));
         this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_CHESTPLATE.get()));
         this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_LEGGINGS.get()));

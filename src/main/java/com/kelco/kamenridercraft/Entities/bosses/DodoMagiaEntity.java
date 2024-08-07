@@ -26,9 +26,11 @@ public class DodoMagiaEntity extends BaseHenchmenEntity {
         this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_DODO.get()));
 		switch (this.getRandom().nextInt(3)) {
 		  case 0:
+		  	  NAME="dodo_magia_custom";
 			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_DODO_CUSTOM.get()));
 			  break;
 		  case 1:
+		  	  NAME="dodo_magia_custom_two";
 			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_DODO_CUSTOM_TWO.get()));
 			  break;
 		  default:

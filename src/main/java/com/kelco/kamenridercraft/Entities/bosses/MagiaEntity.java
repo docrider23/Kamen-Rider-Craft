@@ -19,7 +19,7 @@ public class MagiaEntity extends BaseHenchmenEntity {
 	
     public MagiaEntity(EntityType<? extends Zombie> type, Level level) {
         super(type, level);
-        NAME="magia";
+        NAME="berotha_magia";
         this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_HELMET.get()));
         this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_CHESTPLATE.get()));
         this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Zero_One_Rider_Items.ZERO_ONE_LEGGINGS.get()));
@@ -27,27 +27,35 @@ public class MagiaEntity extends BaseHenchmenEntity {
 		
 		switch (this.getRandom().nextInt(9)) {
 		  case 0:
+		  	  NAME="kuehne_magia";
 			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_KUEHNE.get()));
 			  break;
 		  case 1:
+		  	  NAME="ekal_magia";
 			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_EKAL.get()));
 			  break;
 		  case 2:
+		  	  NAME="neohi_magia";
 			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_NEOHI.get()));
 			  break;
 		  case 3:
+		  	  NAME="onycho_magia";
 			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_ONYCHO.get()));
 			  break;
 		  case 4:
+		  	  NAME="vicarya_magia";
 			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_VICARYA.get()));
 			  break;
 		  case 5:
+		  	  NAME="gaeru_magia";
 			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_GAERU.get()));
 			  break;
 		  case 6:
+		  	  NAME="mammoth_magia";
 			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_MAMMOTH.get()));
 			  break;
 		  case 7:
+		  	  NAME="arsino_magia";
 			  this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Zero_One_Rider_Items.ZETSUMERISER_ARSINO.get()));
 			  break;
 		  default:
