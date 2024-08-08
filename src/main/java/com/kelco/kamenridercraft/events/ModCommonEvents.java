@@ -284,6 +284,10 @@ public class ModCommonEvents {
 			trades.add((trader, rand) -> new MerchantOffer(
 					new ItemStack(Items.EMERALD, 2),
 					stack,10,8,0.02F));
+			
+			trades.add((trader, rand) -> new MerchantOffer(
+					new ItemStack(Items.EMERALD, 2),
+					new ItemStack(Miscellaneous_Rider_Items.KUUGA_AMAZING_MIGHTY_ARTIST.get(), 1),10,8,0.02F));
 		}
 		
 

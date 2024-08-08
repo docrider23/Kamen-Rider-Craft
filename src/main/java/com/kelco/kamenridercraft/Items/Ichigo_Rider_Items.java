@@ -193,6 +193,7 @@ public class Ichigo_Rider_Items {
 	            		,new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false))
 	            .IsGlowing().AddToTabList(RiderTabs.V3_TAB_ITEM));
 
+
 	    public static final RegistryObject<Item> RIDERMAN_BELT_CORE = ITEMS.register("riderman_belt_core",
 	            () -> new RiderFormChangeItem(new Item.Properties(),0,"","riderman","riderman_belt",
 	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.REGENERATION,200, 0,true,false)
@@ -312,6 +313,7 @@ public class Ichigo_Rider_Items {
 	            		,new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false))
 	            .IsGlowing().AddToTabList(RiderTabs.STRONGER_TAB_ITEM));
 	 
+
 	    
 	    public static final RegistryObject<Item> STRONGERHELMET = ITEMS.register("strongerhead",
 	            () -> new RiderArmorItem(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET, new Item.Properties()).AddToTabList(RiderTabs.STRONGER_TAB_ITEM));

@@ -128,7 +128,7 @@ public class Kuuga_Rider_Items {
     public static final RegistryObject<Item> KUUGA_MANGA = ITEMS.register("kuuga_manga",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","kuuga_manga","arcle_belt_manga",
             		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 2,true,false)
-            		,new MobEffectInstance(Effect_core.FLAT.get(), 40, 2,true,false)).AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
+            		,new MobEffectInstance(Effect_core.FLAT.get(), 40, 0,true,false)).AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
 
     
     public static final RegistryObject<Item> KUUGAHELMET = ITEMS.register("kuugahead",

@@ -53,6 +53,8 @@ public class Modded_item_core {
 	public static final RegistryObject<Item> SINISTER_PACHINKO_BALL = ITEMS.register("sinister_pachinko_ball",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.Misc_TAB_ITEM));
 
+	
+	
 	public static final RegistryObject<Item> CARD_WARRIOR_KAMEN_RIDER_MANGA = ITEMS.register("card_warrior_kamen_rider_manga",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.Misc_TAB_ITEM).KeepItem());
 

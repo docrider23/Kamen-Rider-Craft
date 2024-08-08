@@ -105,6 +105,38 @@ public class Miscellaneous_Rider_Items {
 				() -> new RiderDriverItem(ArmorMaterials.DIAMOND,"mido_rider",MIDORIDER_CARD ,AKARIDERHELMET,AKARIDERCHESTPLATE,AKARIDERLEGGINGS , new Item.Properties()).AddToTabList(RiderTabs.GORIDER_TAB_ITEM));
 			 
 		
+		//SIC artist
+		
+	    public static final RegistryObject<Item> DOUBLE_TYPHOON_CORE_ARTIST = ITEMS.register("double_typhoon_core_artist",
+	            () -> new RiderFormChangeItem(new Item.Properties(),0,"_artist","v3","double_typhoon_belt_artist",
+	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
+	            		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false)
+	            		,new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false)
+	            		,new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false)));
+	    
+	    public static final RegistryObject<Item> ELECTRER_CORE_ARTIST = ITEMS.register("electrer_core_artist",
+	            () -> new RiderFormChangeItem(new Item.Properties(),0,"_artist","stronger","electrer_belt",
+	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false)
+	            		,new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 1,true,false)
+	            		,new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false)
+	            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false)).addAlternative(DOUBLE_TYPHOON_CORE_ARTIST.get()));
+	 
+	    public static final RegistryObject<Item> TACKLE_CORE_ARTIST = ITEMS.register("tackle_core_artist",
+	            () -> new RiderFormChangeItem(new Item.Properties(),0,"_artist","tackle","tackle_belt",
+	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false)
+	            		,new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 1,true,false)
+	            		,new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false)
+	            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false)).addAlternative(ELECTRER_CORE_ARTIST.get()));
+	 
+	    public static final RegistryObject<Item> KUUGA_AMAZING_MIGHTY_ARTIST = ITEMS.register("kuuga_amazing_mighty_artist",
+	            () -> new RiderFormChangeItem(new Item.Properties(),0,"_artist","kuuga","arcle_belt_r",
+	            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+	            		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
+	            		new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
+	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
+	            		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false))
+	            .IsGlowing().addNeedForm(Kuuga_Rider_Items.KUUGA_AMAZING_MIGHTY.get(),1).addAlternative(TACKLE_CORE_ARTIST.get()).AddToTabList(RiderTabs.Misc_TAB_ITEM));
+		
 		//Ride Kamens
 		
 		public static final RegistryObject<Item> CONTRACT_CHAOSTONE = ITEMS.register("contract_chaostone",
