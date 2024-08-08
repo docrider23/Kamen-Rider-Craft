@@ -18,7 +18,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "kamenridercraft:rider_ticket_new_den_o",
+          "name": "kamenridercraft:rider_ticket",
           "weight": 10
         },
         {
@@ -41,11 +41,6 @@
           "type": "minecraft:item",
           "name": "kamenridercraft:rider_ticket_strike",
           "weight": 6
-        },
-        {
-          "type": "minecraft:item",
-          "name": "kamenridercraft:new_den_o_vega_card",
-          "weight": 1
         }
       ],
       "rolls": {
