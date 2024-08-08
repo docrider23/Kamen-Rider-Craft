@@ -22,7 +22,11 @@
   "rewards": {
 	"recipes": [
 	  "kamenridercraft:den_o/nega_den_o_belt",
-	  "kamenridercraft:den_o/nega_den_gasher"
+	  "kamenridercraft:den_o/nega_den_gasher",
+	  "kamenridercraft:den_o/nega_momotarosword",
+	  "kamenridercraft:den_o/nega_uratarod",
+	  "kamenridercraft:den_o/nega_kintaros_ax",
+	  "kamenridercraft:den_o/nega_ryuvolver"
 	]
   },
   "sends_telemetry_event": false

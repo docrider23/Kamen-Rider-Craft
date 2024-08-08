@@ -262,6 +262,14 @@ public class Den_O_Rider_Items {
             () -> new BaseSwordItem(Tiers.DIAMOND, 7, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.DEN_O_TAB_ITEM).ChangeRepairItem(IMAGIN_SAND.get()));
     public static final RegistryObject<BaseBlasterItem> RYUVOLVER = ITEMS.register("ryuvolver",
     		() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.DEN_O_TAB_ITEM).ChangeRepairItem(IMAGIN_SAND.get()));
+    public static final RegistryObject<SwordItem> NEGA_MOMOTAROSWORD = ITEMS.register("nega_momotarosword",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 6, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.DEN_O_TAB_ITEM).ChangeRepairItem(IMAGIN_SAND.get()));
+    public static final RegistryObject<SwordItem> NEGA_URATAROD = ITEMS.register("nega_uratarod",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.DEN_O_TAB_ITEM).ChangeRepairItem(IMAGIN_SAND.get()));
+    public static final RegistryObject<SwordItem> NEGA_KINTAROS_AX = ITEMS.register("nega_kintaros_ax",
+            () -> new BaseSwordItem(Tiers.DIAMOND, 7, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.DEN_O_TAB_ITEM).ChangeRepairItem(IMAGIN_SAND.get()));
+    public static final RegistryObject<BaseBlasterItem> NEGA_RYUVOLVER = ITEMS.register("nega_ryuvolver",
+    		() -> new BaseBlasterItem(Tiers.DIAMOND, 3, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.DEN_O_TAB_ITEM).ChangeRepairItem(IMAGIN_SAND.get()));
 	
     public static final RegistryObject<SwordItem> ZEROGASHER = ITEMS.register("zerogasher",
             () -> new BaseSwordItem(Tiers.DIAMOND, 5, -2.4F, new Item.Properties()).AddToTabList(RiderTabs.DEN_O_TAB_ITEM).ChangeRepairItem(IMAGIN_SAND.get()));
