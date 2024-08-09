@@ -40,9 +40,9 @@ public class GamerDriverItem extends RiderDriverItem{
 		Num_Base_Form_Item=2;
 	}
 
-    public static boolean paradxSummoned(Player player) {
-		for (ParaDXSummonEntity entity : player.getCommandSenderWorld().getEntitiesOfClass(ParaDXSummonEntity.class,
-						player.getBoundingBox().inflate(30), entity -> ((OwnableEntity) entity).getOwner() == player)) {
+    public static boolean paradxSummoned(Player player, Level level) {
+		for (ParaDXSummonEntity entity : level.getEntitiesOfClass(ParaDXSummonEntity.class,
+						player.getBoundingBox().inflate(30), entity -> entity.getOwner() == player)) {
 			if (entity != null) return true;
 		}
         return false;
@@ -53,19 +53,20 @@ public class GamerDriverItem extends RiderDriverItem{
 
 		Level level = player.level();
 
-		if (!paradxSummoned(player) && itemstack.getItem() == Ex_Aid_Rider_Items.GAMER_DRIVER_EX_AID.get()) {
-			if (RiderDriverItem.get_Form_Item(itemstack, 1)==Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_R.get() || RiderDriverItem.get_Form_Item(itemstack, 1)==Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get()) {
-				BaseSummonEntity paradx = MobsCore.PARADX_SUMMON.get().create(level);
-				if (paradx != null) {
-					paradx.moveTo(player.getX(), player.getY()+1, player.getZ(), player.getYRot(), player.getXRot());
-					paradx.setTame(true);
-					paradx.setOwnerUUID(player.getUUID());
-					if (RiderDriverItem.get_Form_Item(itemstack, 1)==Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get()) {
-						paradx.setItemSlot(EquipmentSlot.FEET, new ItemStack(Ex_Aid_Rider_Items.GAMER_DRIVER_PARA_DX.get()));
-						RiderDriverItem.set_Form_Item(paradx.getItemBySlot(EquipmentSlot.FEET), Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get(), 1);
-					}
-					level.addFreshEntity(paradx);
+		if (!paradxSummoned(player, level)
+		&& itemstack.getItem() == Ex_Aid_Rider_Items.GAMER_DRIVER_EX_AID.get()
+		&& (RiderDriverItem.get_Form_Item(itemstack, 1)==Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_R.get()
+		|| RiderDriverItem.get_Form_Item(itemstack, 1)==Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get())) {
+			BaseSummonEntity paradx = MobsCore.PARADX_SUMMON.get().create(level);
+			if (paradx != null) {
+				paradx.moveTo(player.getX(), player.getY()+1, player.getZ(), player.getYRot(), player.getXRot());
+				paradx.setTame(true);
+				paradx.setOwnerUUID(player.getUUID());
+				if (RiderDriverItem.get_Form_Item(itemstack, 1)==Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get()) {
+					paradx.setItemSlot(EquipmentSlot.FEET, new ItemStack(Ex_Aid_Rider_Items.GAMER_DRIVER_PARA_DX.get()));
+					RiderDriverItem.set_Form_Item(paradx.getItemBySlot(EquipmentSlot.FEET), Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get(), 1);
 				}
+				level.addFreshEntity(paradx);
 			}
 		}
 	}
