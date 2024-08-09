@@ -6,7 +6,7 @@
     "pages": [
         {
             "type": "patchouli:text",
-            "text": "Appears in:$(li)D-Video Special: Kamen Rider 4 (2015, web series)"
+            "text": "Appears in:$(li)D-Video Special: Kamen Rider 4 (2015, web series)$(br2)Used to craft Yongo's $(l:ichigo/devices/typhoon_yongo)Typhoon$(/l)"
         },
         {
             "type": "patchouli:spotlight",

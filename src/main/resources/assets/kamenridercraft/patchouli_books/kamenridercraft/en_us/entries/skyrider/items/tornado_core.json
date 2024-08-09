@@ -6,7 +6,7 @@
     "pages": [
         {
             "type": "patchouli:text",
-            "text": "Appears in:$(li)The New Kamen Rider (1979, TV show)"
+            "text": "Appears in:$(li)The New Kamen Rider (1979, TV show)$(br2)Used to craft Skyrider's $(l:skyrider/devices/tornado)Tornado$(/l)"
         },
         {
             "type": "patchouli:spotlight",

@@ -1,7 +1,7 @@
 {
 	"parent": "kamenridercraft:skyrider/main",
-    "name": "Skyrider Mobs",
-    "description": "Every mob from or relating to the show, The New Kamen Rider. (Skyrider)",
+    "name": "Ari Commando",
+    "description": "",
     "icon": "kamenridercraft:skyrider_logo",
     "sortnum": 3
 }

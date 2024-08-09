@@ -1,0 +1,7 @@
+{
+	"parent": "kamenridercraft:black/main",
+    "name": "Black Rider Items",
+    "description": "All non-armor items relating to the Black Riders.",
+    "icon": "kamenridercraft:red_king_stone",
+    "sortnum": 2
+}

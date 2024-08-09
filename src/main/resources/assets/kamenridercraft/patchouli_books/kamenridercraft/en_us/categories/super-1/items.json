@@ -1,0 +1,7 @@
+{
+	"parent": "kamenridercraft:super-1/main",
+    "name": "Super-1 Rider Items",
+    "description": "All non-armor items relating to Super-1.",
+    "icon": "kamenridercraft:cyclode_core",
+    "sortnum": 2
+}

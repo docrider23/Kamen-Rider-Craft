@@ -1,7 +1,7 @@
 {
 	"parent": "kamenridercraft:x/main",
-    "name": "X Arsenal",
-    "description": "Every weapon used by the X Riders.",
+    "name": "Ridol Stick",
+    "description": "",
     "icon": "kamenridercraft:ridol_stick",
     "sortnum": 3
 }

@@ -1,0 +1,7 @@
+{
+	"parent": "kamenridercraft:black_sun/main",
+    "name": "Black Sun Rider Items",
+    "description": "All non-armor items relating to the Black Sun Riders.",
+    "icon": "kamenridercraft:king_stone_sun",
+    "sortnum": 2
+}

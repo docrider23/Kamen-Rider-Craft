@@ -1,7 +1,7 @@
 {
 	"parent": "kamenridercraft:v3/main",
-    "name": "V3 Arsenal",
-    "description": "Every weapon used by the V3 Riders.",
+    "name": "Flaresalamander Sword",
+    "description": "",
     "icon": "kamenridercraft:flaresalamander_sword",
     "sortnum": 3
 }

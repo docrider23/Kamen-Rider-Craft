@@ -1,7 +1,7 @@
 {
 	"parent": "kamenridercraft:v3/main",
-    "name": "V3 Mobs",
-    "description": "Every mob from or relating to the show, Kamen Rider V3.",
+    "name": "Destron Combatman",
+    "description": "",
     "icon": "kamenridercraft:v3_logo",
     "sortnum": 4
 }

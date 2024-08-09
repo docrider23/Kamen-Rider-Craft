@@ -1,0 +1,7 @@
+{
+	"parent": "kamenridercraft:j/main",
+    "name": "J Rider Items",
+    "description": "All non-armor items relating to J.",
+    "icon": "kamenridercraft:j_stone",
+    "sortnum": 2
+}
