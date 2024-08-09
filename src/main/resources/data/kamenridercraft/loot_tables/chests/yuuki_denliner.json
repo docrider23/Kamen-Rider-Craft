@@ -39,7 +39,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "kamenridercraft:rider_ticket_yuuki_hijack",
+          "name": "kamenridercraft:rider_ticket_yuuki",
           "weight": 6
         }
       ],

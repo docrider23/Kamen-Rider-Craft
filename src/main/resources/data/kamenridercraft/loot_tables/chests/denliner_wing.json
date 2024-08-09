@@ -41,11 +41,6 @@
           "type": "minecraft:item",
           "name": "kamenridercraft:rider_ticket_wing",
           "weight": 6
-        },
-        {
-          "type": "minecraft:item",
-          "name": "kamenridercraft:rider_ticket_pretty_den_o",
-          "weight": 1
         }
       ],
       "rolls": {
