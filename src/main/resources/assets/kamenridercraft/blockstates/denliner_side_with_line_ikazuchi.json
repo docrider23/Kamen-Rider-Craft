@@ -1,5 +1,10 @@
-{
-    "variants":{
-    "": {"model":"kamenridercraft:block/denliner_side_with_line_ikazuchi"}
-  }
- }
+
+ {
+    "variants": {
+        "facing=north": { "model": "kamenridercraft:block/denliner_side_with_line_ikazuchi" },
+        "facing=south": { "model": "kamenridercraft:block/denliner_side_with_line_ikazuchi", "y": 180 },
+        "facing=west":  { "model": "kamenridercraft:block/denliner_side_with_line_ikazuchi", "y": 270 },
+        "facing=east":  { "model": "kamenridercraft:block/denliner_side_with_line_ikazuchi", "y": 90 }
+    }
+}
+ 

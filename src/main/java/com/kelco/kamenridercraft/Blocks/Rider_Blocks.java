@@ -243,19 +243,19 @@ public class Rider_Blocks {
 			() -> new GlassBaseFacingBlock(BlockBehaviour.Properties.copy(Blocks.GLASS)
 					.strength(2f),DyeColor.BLUE).AddToTabList(RiderTabs.RIDER_BLOCK));
 	public static final RegistryObject<Block> DENLINER_SIDE_WITH_LINE = registerBlock("denliner_side_with_line",
-			() -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+			() -> new BaseFacingBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
 					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	public static final RegistryObject<Block> DENLINER_SIDE_WITH_START_LINE = registerBlock("denliner_side_with_start_line",
 			() -> new BaseFacingBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
 					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	public static final RegistryObject<Block> DENLINER_SIDE_WITH_LINE_IKAZUCHI = registerBlock("denliner_side_with_line_ikazuchi",
-			() -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+			() -> new BaseFacingBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
 					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	public static final RegistryObject<Block> DENLINER_SIDE_WITH_LINE_REKKOU = registerBlock("denliner_side_with_line_rekkou",
-			() -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+			() -> new BaseFacingBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
 					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	public static final RegistryObject<Block> DENLINER_ROOF = registerBlock("denliner_roof",
-			() -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+			() -> new BaseFacingBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
 					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
 					
 	public static final RegistryObject<Block> DENLINER_LOGO_TOP = registerBlock("denliner_logo_top",
@@ -317,7 +317,7 @@ public class Rider_Blocks {
 			() -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
 					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	public static final RegistryObject<Block> NEW_DENLINER_SIDE_WITH_LINE = registerBlock("new_denliner_side_with_line",
-			() -> new BaseBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+			() -> new BaseFacingBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
 					.strength(2f)).AddToTabList(RiderTabs.RIDER_BLOCK));
 	public static final RegistryObject<Block> NEW_DENLINER_SIDE_WITH_START_LINE = registerBlock("new_denliner_side_with_start_line",
 			() -> new BaseFacingBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
