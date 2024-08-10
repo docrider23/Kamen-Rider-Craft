@@ -342,8 +342,12 @@ public class Zero_One_Rider_Items {
 	
 	public static final RegistryObject<Item> DIRE_WOLF_ZETSUMERISEKEY = ITEMS.register("dire_wolf_zetsumerisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","vulcan_lone","hiden_zero_one_driver_belt",
-            		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
-            		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false))
+					new MobEffectInstance(MobEffects.JUMP, 40, 6,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 4,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false))
 			.AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 
 	public static final RegistryObject<Item> RUSHING_CHEETAH_PROGRISEKEY_ZERO_ONE = ITEMS.register("rushing_cheetah_progrisekey_zero_one",
@@ -385,7 +389,12 @@ public class Zero_One_Rider_Items {
 	
 	public static final RegistryObject<Item> SERVAL_TIGER_ZETSUMERISEKEY = ITEMS.register("serval_tiger_zetsumerisekey",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_serval","valkyrie","aims_shot_riser_belt",
-            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false))
+					new MobEffectInstance(MobEffects.JUMP, 40, 6,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
+					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),
+					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 5,true,false),
+					new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
+					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 3,true,false))
 			.AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 
 	public static final RegistryObject<Item> STING_SCORPION_PROGRISEKEY_ZERO_ONE = ITEMS.register("sting_scorpion_progrisekey_zero_one",
