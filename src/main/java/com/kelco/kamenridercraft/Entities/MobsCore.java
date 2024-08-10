@@ -95,10 +95,8 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.TrilobiteMagiaEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.YummyEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ZectrooperEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ZuGumunBaEntity;
-import com.kelco.kamenridercraft.Entities.summons.KnightTrickVentEntity;
 import com.kelco.kamenridercraft.Entities.summons.ParaDXSummonEntity;
 import com.kelco.kamenridercraft.Entities.summons.RiderSummonEntity;
-import com.kelco.kamenridercraft.Entities.summons.RyukiTrickVentEntity;
 
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
