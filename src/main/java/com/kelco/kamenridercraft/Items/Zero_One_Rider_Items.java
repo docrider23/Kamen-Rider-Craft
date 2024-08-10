@@ -551,7 +551,7 @@ public class Zero_One_Rider_Items {
     		.AddToTabList(RiderTabs.ZERO_ONE_TAB_ITEM));
 	
 	public static final RegistryObject<Item> THOUSAND_KEY = ITEMS.register("thousand_key",
-	          () -> new RiderFormChangeItem(new Item.Properties(),0,"_s upreme","ragnarok","ragnarok_driver_belt",
+	          () -> new RiderFormChangeItem(new Item.Properties(),0,"_supreme","ragnarok","ragnarok_driver_belt",
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
 					new MobEffectInstance(MobEffects.REGENERATION, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 3,true,false),

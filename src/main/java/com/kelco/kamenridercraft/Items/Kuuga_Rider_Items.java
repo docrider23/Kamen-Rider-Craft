@@ -32,45 +32,45 @@ public class Kuuga_Rider_Items {
 	public static final RegistryObject<Item> KUUGA_GROWING = ITEMS.register("kuuga_growing",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_growing","kuuga","arcle_belt",
             		new MobEffectInstance(MobEffects.WEAKNESS, 40, 2,true,false))
-            .IsGlowing().AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
+            .AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
 	
     public static final RegistryObject<Item> KUUGA_MIGHTY = ITEMS.register("kuuga_mighty",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","kuuga","arcle_belt",
             		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 2,true,false))
-            .IsGlowing().AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
+            .AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
 
     public static final RegistryObject<Item> KUUGA_DRAGON = ITEMS.register("kuuga_dragon",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_dragon","kuuga","arcle_belt_d",
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false))
-            .IsGlowing().AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
+            .AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
 
     public static final RegistryObject<Item> KUUGA_PEGASUS = ITEMS.register("kuuga_pegasus",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_pegasus","kuuga","arcle_belt_p",
             		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false))
-            .IsGlowing().AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
+            .AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
 
     public static final RegistryObject<Item> KUUGA_TITAN = ITEMS.register("kuuga_titan",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_titan","kuuga","arcle_belt_t",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false))
-            .IsGlowing().AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
+            .AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
 
     public static final RegistryObject<Item> KUUGA_RISING_MIGHTY = ITEMS.register("kuuga_rising_mighty",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_rising_mighty","kuuga","arcle_belt_r",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
             		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 3,true,false))
-            .IsGlowing().AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
+            .AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
 
     public static final RegistryObject<Item> KUUGA_RISING_DRAGON = ITEMS.register("kuuga_rising_dragon",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_rising_dragon","kuuga","arcle_belt_r",
             		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false))
-            .IsGlowing().AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
+            .AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
 
     public static final RegistryObject<Item> KUUGA_RISING_PEGASUS = ITEMS.register("kuuga_rising_pegasus",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_rising_pegasus","kuuga","arcle_belt_r",
@@ -78,14 +78,14 @@ public class Kuuga_Rider_Items {
             		new MobEffectInstance(MobEffects.JUMP, 40, 4,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0,true,false))
-            .IsGlowing().AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
+            .AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
 
     public static final RegistryObject<Item> KUUGA_RISING_TITAN = ITEMS.register("kuuga_rising_titan",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_rising_titan","kuuga","arcle_belt_r",
             		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 0,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false))
-            .IsGlowing().AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
+            .AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
 
     public static final RegistryObject<Item> KUUGA_AMAZING_MIGHTY = ITEMS.register("kuuga_amazing_mighty",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_amazing_mighty","kuuga","arcle_belt_r",
@@ -94,7 +94,7 @@ public class Kuuga_Rider_Items {
             		new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
             		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false))
-            .IsGlowing().AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
+            .AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
 
     public static final RegistryObject<Item> KUUGA_ULTIMATE = ITEMS.register("kuuga_ultimate",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_ultimate","kuuga","arcle_belt_u",
@@ -103,7 +103,7 @@ public class Kuuga_Rider_Items {
             		new MobEffectInstance(MobEffects.JUMP, 40, 3,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
             		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 5,true,false))
-            .IsGlowing().AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
+            .AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
 
     public static final RegistryObject<Item> KUUGA_RISING_ULTIMATE = ITEMS.register("kuuga_rising_ultimate",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_rising_ultimate","kuuga","arcle_belt_ru",
@@ -113,7 +113,7 @@ public class Kuuga_Rider_Items {
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 5,true,false),
             		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
             		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 5,true,false))
-            .IsGlowing().AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
+            .AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
 
     public static final RegistryObject<Item> KUUGA_SUPER_RISING_ULTIMATE = ITEMS.register("kuuga_super_rising_ultimate",
     		() -> new RiderFormChangeItem(new Item.Properties(),0,"_super_rising_ultimate","kuuga","arcle_belt_ru",
@@ -123,7 +123,7 @@ public class Kuuga_Rider_Items {
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 7,true,false),
             		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0,true,false),
             		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 6,true,false))
-    		.IsGlowing().AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
+    		.AddToTabList(RiderTabs.KUUGA_TAB_ITEM));
     
     public static final RegistryObject<Item> KUUGA_MANGA = ITEMS.register("kuuga_manga",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","kuuga_manga","arcle_belt_manga",

@@ -298,6 +298,12 @@ public class Geats_Rider_Items {
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false))
 			.ChangeSlot(2).SetOffhandSlot(3).addAlternative(FANTASY_RAISE_BUCKLE_GYA_GO.get()).AddToTabList(MissionBoxItem.RAISE_BUCKLE).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
 
+	public static final RegistryObject<Item> SHARK_RAISE_BUCKLE = ITEMS.register("shark_raise_buckle",
+			() -> new RiderFormChangeItem(new Item.Properties(),0,"_shark","geats","desire_driver_belt_geats",
+					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1,true,false),
+					new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false))
+			.ChangeSlot(2).AddCompatibilityList(BaseDesireDriverUsers).AddToTabList(RiderTabs.GEATS_TAB_ITEM));
+
 	
 	public static final RegistryObject<Item> MAGNUM_RAISE_BUCKLE_FEVER = ITEMS.register("magnum_raise_buckle_fever",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_magnum_slot","geats","desire_driver_belt_geats",

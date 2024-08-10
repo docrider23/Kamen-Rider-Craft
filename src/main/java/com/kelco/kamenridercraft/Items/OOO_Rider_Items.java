@@ -217,7 +217,7 @@ public class OOO_Rider_Items {
 	public static final RegistryObject<Item> SAME_MEDAL = ITEMS.register("same_medal",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_same","ooo","ooodriver_belt",
 					new MobEffectInstance(MobEffects.WATER_BREATHING, 400, 0,true,false))
-			.IsGlowing().ChangeSlot(1).AddToTabList(RiderTabs.OOO_TAB_ITEM));
+			.ChangeSlot(1).AddToTabList(RiderTabs.OOO_TAB_ITEM));
 
 	public static final RegistryObject<Item> KUJIRA_MEDAL = ITEMS.register("kujira_medal",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_kujira","ooo","ooodriver_belt",
@@ -637,7 +637,7 @@ public class OOO_Rider_Items {
 					() -> new RiderFormChangeItem(new Item.Properties(),0,"","aqua","aqua_driver_belt",
 							new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false)
 							,new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),new MobEffectInstance(MobEffects.WATER_BREATHING, 40, 2,true,false))
-					.IsGlowing().AddToTabList(RiderTabs.OOO_TAB_ITEM));
+					.AddToTabList(RiderTabs.OOO_TAB_ITEM));
 
 
 

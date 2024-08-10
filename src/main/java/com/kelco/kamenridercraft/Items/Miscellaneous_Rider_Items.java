@@ -31,7 +31,7 @@ public class Miscellaneous_Rider_Items {
 	            () -> new RiderFormChangeItem(new Item.Properties(),0,"","kamen_rider_g","g_belt",
 	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),new MobEffectInstance(MobEffects.DIG_SPEED,40, 0,true,false)
 	            		,new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),new MobEffectInstance(Effect_core.PUNCH.get(), 40, 1,true,false))
-	            .IsGlowing().AddToTabList(RiderTabs.G_TAB_ITEM).KeepItem());
+	            .AddToTabList(RiderTabs.G_TAB_ITEM).KeepItem());
 
 	    
 	    public static final RegistryObject<Item> GHELMET = ITEMS.register("ghead",
@@ -51,7 +51,7 @@ public class Miscellaneous_Rider_Items {
 						new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40, 1,true,false),
 						new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
 						new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false))
-	            .IsGlowing().AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
+	            .AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
 		
 		public static final RegistryObject<Item> AORIDER_CARD = ITEMS.register("aorider_card",
 	            () -> new RiderFormChangeItem(new Item.Properties(),0,"","ao_rider","typhoon_belt_aorider",
@@ -59,7 +59,7 @@ public class Miscellaneous_Rider_Items {
 						new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40, 1,true,false),
 						new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
 						new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false))
-	            .IsGlowing().AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
+	            .AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
 		
 		public static final RegistryObject<Item> KIRIDER_CARD = ITEMS.register("kirider_card",
 	            () -> new RiderFormChangeItem(new Item.Properties(),0,"","ki_rider","typhoon_belt_kirider",
@@ -67,7 +67,7 @@ public class Miscellaneous_Rider_Items {
 						new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40, 1,true,false),
 						new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
 						new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false))
-	            .IsGlowing().AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
+	            .AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
 		
 		public static final RegistryObject<Item> MOMORIDER_CARD = ITEMS.register("momorider_card",
 	            () -> new RiderFormChangeItem(new Item.Properties(),0,"","momo_rider","typhoon_belt_momorider",
@@ -75,7 +75,7 @@ public class Miscellaneous_Rider_Items {
 						new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40, 1,true,false),
 						new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
 						new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false))
-	            .IsGlowing().AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
+	            .AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
 		
 		public static final RegistryObject<Item> MIDORIDER_CARD = ITEMS.register("midorider_card",
 	            () -> new RiderFormChangeItem(new Item.Properties(),0,"","mido_rider","typhoon_belt_midorider",
@@ -83,7 +83,7 @@ public class Miscellaneous_Rider_Items {
 						new MobEffectInstance(MobEffects.MOVEMENT_SPEED,40, 1,true,false),
 						new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
 						new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false))
-	            .IsGlowing().AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
+	            .AddToTabList(RiderTabs.GORIDER_TAB_ITEM).KeepItem());
 
 
 		public static final RegistryObject<Item> AKARIDERHELMET = ITEMS.register("akariderhead",
@@ -135,7 +135,7 @@ public class Miscellaneous_Rider_Items {
 	            		new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false),
 	            		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
 	            		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false))
-	            .IsGlowing().addNeedForm(Kuuga_Rider_Items.KUUGA_AMAZING_MIGHTY.get(),1).addAlternative(TACKLE_CORE_ARTIST.get()).AddToTabList(RiderTabs.Misc_TAB_ITEM));
+	            .addNeedForm(Kuuga_Rider_Items.KUUGA_AMAZING_MIGHTY.get(),1).addAlternative(TACKLE_CORE_ARTIST.get()).AddToTabList(RiderTabs.Misc_TAB_ITEM));
 		
 		//Ride Kamens
 		

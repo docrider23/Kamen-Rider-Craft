@@ -65,7 +65,7 @@ public class OOODriverItem extends RiderDriverItem{
 				if (livingEntity.getItemBySlot(EquipmentSlot.HEAD).getItem() == HEAD){
 					switch (currentSlot) {
 					case HEAD ->{ 
-						return true;
+						return false;
 					}
 					case CHEST -> {
 						return get_Form_Item(itemstack, 2).get_Is_Glowing();

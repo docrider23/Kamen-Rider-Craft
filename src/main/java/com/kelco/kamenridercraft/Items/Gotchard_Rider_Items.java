@@ -49,7 +49,7 @@ public class Gotchard_Rider_Items {
             () -> new RiderFormChangeItem(new Item.Properties(),0,"","gotchard","gotchardriver_belt",
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 1,true,false),
-            		new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false)).IsGlowing().AddNeedItemList(NEED_ITEM_SteamHopper)
+            		new MobEffectInstance(MobEffects.JUMP, 40, 1,true,false)).AddNeedItemList(NEED_ITEM_SteamHopper)
             .AddToTabList(NEED_ITEM_SteamHopper).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     /* pikahotaru
      * gengenchoucho
@@ -59,7 +59,7 @@ public class Gotchard_Rider_Items {
     public static final RegistryObject<Item> ANTROOPER_RIDE_CHEMY_CARD = ITEMS.register("antrooper_ride_chemy_card",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_ant_wrestler","gotchard","gotchardriver_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
-            		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 2,true,false)).IsGlowing()
+            		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 2,true,false))
             .AddNeedItemList(NEED_ITEM_AntWrestler).AddToTabList(NEED_ITEM_AntWrestler).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
     /* greatonbo
@@ -74,7 +74,7 @@ public class Gotchard_Rider_Items {
     public static final RegistryObject<Item> DOKKIRIMAJIN_RIDE_CHEMY_CARD = ITEMS.register("dokkirimajin_ride_chemy_card",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_dokkiri_shovel","gotchard","gotchardriver_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 2,true,false),
-            		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false)).IsGlowing()
+            		new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false))
             .AddNeedItemList(NEED_ITEM_DokkiriShovel).AddToTabList(NEED_ITEM_DokkiriShovel).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
      /* doctorkozo
@@ -93,7 +93,7 @@ public class Gotchard_Rider_Items {
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_appare_skebow","gotchard","gotchardriver_belt",
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 2,true,false),
             		new MobEffectInstance(MobEffects.JUMP, 40, 2,true,false),
-            		new MobEffectInstance(Effect_core.SLASH.get(), 40, 2,true,false)).IsGlowing()
+            		new MobEffectInstance(Effect_core.SLASH.get(), 40, 2,true,false))
             .ChangeModel("geo/gotchard_appare_skebow.geo.json")
             .AddNeedItemList(NEED_ITEM_AppareSkebow).AddToTabList(NEED_ITEM_AppareSkebow).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
@@ -110,7 +110,7 @@ public class Gotchard_Rider_Items {
     public static final RegistryObject<Item> HIIKESCUE_RIDE_CHEMY_CARD = ITEMS.register("hiikescue_ride_chemy_card",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_hiikesu_rose","gotchard","gotchardriver_belt",
             		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 1,true,false),
-            		new MobEffectInstance(Effect_core.REFLECT.get(), 40, 1,true,false)).IsGlowing()
+            		new MobEffectInstance(Effect_core.REFLECT.get(), 40, 1,true,false))
             .AddNeedItemList(NEED_ITEM_HiikesuRose).AddToTabList(NEED_ITEM_HiikesuRose).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
     public static final RegistryObject<Item> GEKIOCOPTER_RIDE_CHEMY_CARD = ITEMS.register("gekiocopter_ride_chemy_card",
@@ -122,7 +122,7 @@ public class Gotchard_Rider_Items {
     public static final RegistryObject<Item> DEEPMARINER_RIDE_CHEMY_CARD = ITEMS.register("deepmariner_ride_chemy_card",
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_venom_mariner","gotchard","gotchardriver_belt",
             		new MobEffectInstance(MobEffects.WATER_BREATHING, 40, 1,true,false),
-            		new MobEffectInstance(Effect_core.ANTIPOISON.get(), 40, 1,true,false)).IsGlowing()
+            		new MobEffectInstance(Effect_core.ANTIPOISON.get(), 40, 1,true,false))
             .AddNeedItemList(NEED_ITEM_VenomMariner).AddToTabList(NEED_ITEM_VenomMariner).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
     public static final RegistryObject<Item> MADWHEEL_RIDE_CHEMY_CARD = ITEMS.register("madwheel_ride_chemy_card",
@@ -134,7 +134,7 @@ public class Gotchard_Rider_Items {
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_gold_mechanichor","gotchard","gotchardriver_belt_big",
             		new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 1,true,false),
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
-            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false)).IsGlowing()
+            		new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 3,true,false))
             .ChangeModel("geo/gotchard_gold_mechanichor.geo.json").ChangeBeltModel("geo/lv_1_belt.geo.json")
             .AddNeedItemList(NEED_ITEM_GoldMechanichor).AddToTabList(NEED_ITEM_GoldMechanichor).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
@@ -165,7 +165,7 @@ public class Gotchard_Rider_Items {
     public static final RegistryObject<Item> HAWKSTAR_RIDE_CHEMY_CARD = ITEMS.register("hawkstar_ride_chemy_card",
          () -> new RiderFormChangeItem(new Item.Properties(),0,"_needle_hawk","gotchard","gotchardriver_belt",
          		new MobEffectInstance(Effect_core.FLYING.get(), 40, 1,true,false),
-         		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false)).IsGlowing()
+         		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false))
          .ifFlyingModelResource("geo/gotchard_needle_hawk.geo.json").AddNeedItemList(NEED_ITEM_NeedleHawk)
          .AddToTabList(NEED_ITEM_NeedleHawk).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
  
@@ -176,7 +176,7 @@ public class Gotchard_Rider_Items {
             () -> new RiderFormChangeItem(new Item.Properties(),0,"_burning_gorilla","gotchard","gotchardriver_belt",
             		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
             		new MobEffectInstance(Effect_core.PUNCH.get(), 40, 4,true,false),
-            		new MobEffectInstance(Effect_core.FIRE_PUNCH.get(), 40, 4,true,false)).IsGlowing()
+            		new MobEffectInstance(Effect_core.FIRE_PUNCH.get(), 40, 4,true,false))
             .AddNeedItemList(NEED_ITEM_BurningGorilla).AddToTabList(NEED_ITEM_BurningGorilla).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
     /* ganvhale
@@ -186,7 +186,7 @@ public class Gotchard_Rider_Items {
    public static final RegistryObject<Item> RAIDENJI_RIDE_CHEMY_CARD = ITEMS.register("raidenji_ride_chemy_card",
            () -> new RiderFormChangeItem(new Item.Properties(),0,"_lightning_jungle","gotchard","gotchardriver_belt_big",
            		new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1,true,false))
-           .ChangeModel("geo/gotchard_lightning_jungle.geo.json").IsGlowing().ChangeBeltModel("geo/lv_1_belt.geo.json")
+           .ChangeModel("geo/gotchard_lightning_jungle.geo.json").ChangeBeltModel("geo/lv_1_belt.geo.json")
            .AddNeedItemList(NEED_ITEM_LightningJungle).AddToTabList(NEED_ITEM_LightningJungle).AddToTabList(RiderTabs.GOTCHARD_TAB_ITEM));
     
      /* kesuzo

@@ -40,7 +40,7 @@ public class Ryuki_Rider_Items {
 					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false))
-			.IsGlowing().AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			.AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 	  
 	public static final RegistryObject<Item> DARKWING_ADVENT = ITEMS.register("darkwing_advent",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","knight","v_buckle_belt_knight",
@@ -108,7 +108,7 @@ public class Ryuki_Rider_Items {
 					new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false))
-			.IsGlowing().AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			.AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 	  
 	public static final RegistryObject<Item> BIOGREEZA_ADVENT = ITEMS.register("biogreeza_advent",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","verde","v_buckle_belt_verde",
@@ -135,7 +135,7 @@ public class Ryuki_Rider_Items {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false))
-			.IsGlowing());
+			);
 
 	public static final RegistryObject<Item> SURVIVE_REKKA = ITEMS.register("survive_rekka",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"_survive","ryuki","v_buckle_belt_ryuki_s",
@@ -144,7 +144,7 @@ public class Ryuki_Rider_Items {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false)).addAlternative(SURVIVE_REKKA_RYUGA.get())
-			.IsGlowing().AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			.AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 
 
 	public static final RegistryObject<Item> SURVIVE_SHIPPU_RAIA = ITEMS.register("survive_shippu_raia",
@@ -186,7 +186,7 @@ public class Ryuki_Rider_Items {
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 1,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 4,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 2,true,false))
-			.IsGlowing().AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			.AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 
 	  
 	public static final RegistryObject<Item> RYUKIHELMET = ITEMS.register("ryukihead",
@@ -432,7 +432,7 @@ public class Ryuki_Rider_Items {
     				new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
     				new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false),
     				new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false))
-    		.ChangeModel("geo/ryuki_drag_shield.geo.json").IsGlowing().AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+    		.ChangeModel("geo/ryuki_drag_shield.geo.json").AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
 	  
     public static final RegistryObject<Item> DRAG_VISOR_ZWEI_VENT = ITEMS.register("drag_visor_zwei_vent",
 			() -> new AdventCardItem(new Item.Properties(), "ryuki", DRAG_VISOR.get(), DRAG_VISOR_ZWEI.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
@@ -543,7 +543,7 @@ public class Ryuki_Rider_Items {
 					new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0,true,false),
 					new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0,true,false))
-			.ChangeModel("geo/ryuki_drag_shield.geo.json").IsGlowing().AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
+			.ChangeModel("geo/ryuki_drag_shield.geo.json").AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
     
     public static final RegistryObject<Item> BLACK_DRAG_VISOR_ZWEI_VENT = ITEMS.register("black_drag_visor_zwei_vent",
 			() -> new AdventCardItem(new Item.Properties(), "ryuga", BLACK_DRAG_VISOR.get(), BLACK_DRAG_VISOR_ZWEI.get()).AddToTabList(RiderTabs.RYUKI_TAB_ITEM));
