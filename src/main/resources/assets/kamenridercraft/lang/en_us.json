@@ -2179,10 +2179,7 @@
 "entity.kamenridercraft.hardboilder": "Hardboilder",
 "entity.kamenridercraft.skullboilder": "Skullboilder",
 
-"entity.kamenridercraft.ryuki_trick_vent": "Ryuki Trick Vent",
-"entity.kamenridercraft.knight_trick_vent": "Knight Trick Vent",
-"entity.kamenridercraft.decade_illusion": "Decade Illusion",
-"entity.kamenridercraft.diend_illusion": "Diend Illusion",
+"entity.kamenridercraft.rider_summon": "Rider Summon",
 "entity.kamenridercraft.paradx_summon": "Para-DX Summon",
 
 "item.kamenridercraft.shocker_combatman_spawn_egg": "Shocker Combatman Spawn Egg",
@@ -2292,10 +2289,7 @@
 "item.kamenridercraft.hardboilder_spawn_egg": "Hardboilder Spawn Egg",
 "item.kamenridercraft.skullboilder_spawn_egg": "Skullboilder Spawn Egg",
 
-"entity.kamenridercraft.ryuki_trick_vent_spawn_egg": "Ryuki Trick Vent Spawn Egg",
-"entity.kamenridercraft.knight_trick_vent_spawn_egg": "Knight Trick Vent Spawn Egg",
-"entity.kamenridercraft.decade_illusion_spawn_egg": "Decade Illusion Spawn Egg",
-"entity.kamenridercraft.diend_illusion_spawn_egg": "Diend Illusion Spawn Egg",
+"entity.kamenridercraft.rider_summon_spawn_egg": "Rider Summon Spawn Egg",
 "entity.kamenridercraft.paradx_summon_spawn_egg": "Para-DX Summon Spawn Egg",
 
 "block.kamenridercraft.monitor": "Monitor",

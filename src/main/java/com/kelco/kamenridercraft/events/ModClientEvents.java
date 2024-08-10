@@ -143,7 +143,7 @@ public class ModClientEvents {
 						return 0.0F;
 					}
 					else if (p_174637_.getItemBySlot(EquipmentSlot.FEET)!= null){
-						if (p_174637_.getItemBySlot(EquipmentSlot.MAINHAND).getItem() == Ryuki_Rider_Items.DARK_BLADE.get()){
+						if (p_174637_.getMainHandItem().getItem() == Ryuki_Rider_Items.DARK_BLADE.get()){
 							return 1;
 						}else {
 							return 0;
@@ -274,10 +274,7 @@ public class ModClientEvents {
 		event.registerEntityRenderer(MobsCore.HARDBOILER.get(), BikeRenderer::new);
 		event.registerEntityRenderer(MobsCore.SKULLBOILER.get(), BikeRenderer::new);
 
-		event.registerEntityRenderer(MobsCore.RYUKI_TRICK_VENT.get(), SummonedEntityRenderer::new);
-		event.registerEntityRenderer(MobsCore.KNIGHT_TRICK_VENT.get(), SummonedEntityRenderer::new);
-		event.registerEntityRenderer(MobsCore.DECADE_ILLUSION.get(), SummonedEntityRenderer::new);
-		event.registerEntityRenderer(MobsCore.DIEND_ILLUSION.get(), SummonedEntityRenderer::new);
+		event.registerEntityRenderer(MobsCore.RIDER_SUMMON.get(), SummonedEntityRenderer::new);
 		event.registerEntityRenderer(MobsCore.PARADX_SUMMON.get(), SummonedEntityRenderer::new);
 	}
 

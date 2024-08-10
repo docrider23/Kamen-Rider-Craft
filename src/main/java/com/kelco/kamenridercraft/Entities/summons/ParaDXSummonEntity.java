@@ -81,41 +81,26 @@ public class ParaDXSummonEntity extends BaseSummonEntity {
 	}
 
 	public void aiStep() {
-
-		if ( this.getOwner() instanceof Player owner) {
-			if(owner.getItemBySlot(EquipmentSlot.HEAD).getItem()!=Ex_Aid_Rider_Items.EX_AIDHELMET.get()
-			|| owner.getItemBySlot(EquipmentSlot.CHEST).getItem()!=Ex_Aid_Rider_Items.EX_AIDCHESTPLATE.get()
-			|| owner.getItemBySlot(EquipmentSlot.LEGS).getItem()!=Ex_Aid_Rider_Items.EX_AIDLEGGINGS.get()) {
-				this.setHealth(0);
-			}
-			
-			if (owner.getItemBySlot(EquipmentSlot.FEET).getItem()==Ex_Aid_Rider_Items.GAMER_DRIVER_EX_AID.get()) {
-				if (RiderDriverItem.get_Form_Item(owner.getItemBySlot(EquipmentSlot.FEET), 1)==Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get()) {
-					if (RiderDriverItem.get_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), 1)!=Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get()) {
-						this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Ex_Aid_Rider_Items.GAMER_DRIVER_PARA_DX.get()));
-						RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get(), 1);
-					}
-				} else if(RiderDriverItem.get_Form_Item(owner.getItemBySlot(EquipmentSlot.FEET), 1)==Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_L.get()) {
-					if (RiderDriverItem.get_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), 1)!=Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_R.get()) {
-						this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Ex_Aid_Rider_Items.GAMER_DRIVER_EX_AID.get()));
-						RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_R.get(), 1);
-					}
-				} else if(RiderDriverItem.get_Form_Item(owner.getItemBySlot(EquipmentSlot.FEET), 1)==Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_R.get()) {
-					if (RiderDriverItem.get_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), 1)!=Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_L.get()) {
-						this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Ex_Aid_Rider_Items.GAMER_DRIVER_EX_AID.get()));
-						RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_L.get(), 1);
-					}
-				} else {
-					this.setHealth(0);
-				}
-			} else {
-				this.setHealth(0);
-			}
-		} else {
-			this.setHealth(0);
-		}
-
 		super.aiStep();
+
+		if ( this.getOwner() instanceof Player owner && owner.getItemBySlot(EquipmentSlot.FEET).getItem()==Ex_Aid_Rider_Items.GAMER_DRIVER_EX_AID.get()) {			
+			if (RiderDriverItem.get_Form_Item(owner.getItemBySlot(EquipmentSlot.FEET), 1)==Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get()) {
+				if (RiderDriverItem.get_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), 1)!=Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get()) {
+					this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Ex_Aid_Rider_Items.GAMER_DRIVER_PARA_DX.get()));
+					RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get(), 1);
+				}
+			} else if(RiderDriverItem.get_Form_Item(owner.getItemBySlot(EquipmentSlot.FEET), 1)==Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_L.get()) {
+				if (RiderDriverItem.get_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), 1)!=Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_R.get()) {
+					this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Ex_Aid_Rider_Items.GAMER_DRIVER_EX_AID.get()));
+					RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_R.get(), 1);
+				}
+			} else if(RiderDriverItem.get_Form_Item(owner.getItemBySlot(EquipmentSlot.FEET), 1)==Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_R.get()) {
+				if (RiderDriverItem.get_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), 1)!=Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_L.get()) {
+					this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Ex_Aid_Rider_Items.GAMER_DRIVER_EX_AID.get()));
+					RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Ex_Aid_Rider_Items.MIGHTY_BROTHERS_XX_GASHAT_L.get(), 1);
+				}
+			} else this.setHealth(0);
+		}
 	}
 
 

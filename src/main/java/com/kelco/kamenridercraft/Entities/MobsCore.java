@@ -95,10 +95,9 @@ import com.kelco.kamenridercraft.Entities.footSoldiers.TrilobiteMagiaEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.YummyEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ZectrooperEntity;
 import com.kelco.kamenridercraft.Entities.footSoldiers.ZuGumunBaEntity;
-import com.kelco.kamenridercraft.Entities.summons.DecadeIllusionEntity;
-import com.kelco.kamenridercraft.Entities.summons.DiendIllusionEntity;
 import com.kelco.kamenridercraft.Entities.summons.KnightTrickVentEntity;
 import com.kelco.kamenridercraft.Entities.summons.ParaDXSummonEntity;
+import com.kelco.kamenridercraft.Entities.summons.RiderSummonEntity;
 import com.kelco.kamenridercraft.Entities.summons.RyukiTrickVentEntity;
 
 import net.minecraft.world.entity.EntityType;
@@ -762,30 +761,12 @@ public class MobsCore {
                   () -> new ForgeSpawnEggItem(SKULLBOILER, 0xffffff, 0x151515, new Item.Properties()));
       
                   
-          public static final RegistryObject<EntityType<RyukiTrickVentEntity>> RYUKI_TRICK_VENT = MOBLIST.register("ryuki_trick_vent",
-                  () -> EntityType.Builder.of(RyukiTrickVentEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":ryuki_trick_vent"));
+          public static final RegistryObject<EntityType<RiderSummonEntity>> RIDER_SUMMON = MOBLIST.register("rider_summon",
+                  () -> EntityType.Builder.of(RiderSummonEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":rider_summon"));
 
-          public static final RegistryObject<ForgeSpawnEggItem> RYUKI_TRICK_VENT_SPAWN_EGG = ITEMS.register("ryuki_trick_vent_spawn_egg",
-                  () -> new ForgeSpawnEggItem(RYUKI_TRICK_VENT, 0xF40000, 0xDBBB4B, new Item.Properties()));
-                  
-          public static final RegistryObject<EntityType<KnightTrickVentEntity>> KNIGHT_TRICK_VENT = MOBLIST.register("knight_trick_vent",
-                  () -> EntityType.Builder.of(KnightTrickVentEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":knight_trick_vent"));
-
-          public static final RegistryObject<ForgeSpawnEggItem> KNIGHT_TRICK_VENT_SPAWN_EGG = ITEMS.register("knight_trick_vent_spawn_egg",
-                  () -> new ForgeSpawnEggItem(KNIGHT_TRICK_VENT, 0x002DF1, 0xDBBB4B, new Item.Properties()));
-                  
-          public static final RegistryObject<EntityType<DecadeIllusionEntity>> DECADE_ILLUSION = MOBLIST.register("decade_illusion",
-                  () -> EntityType.Builder.of(DecadeIllusionEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":decade_illusion"));
-
-          public static final RegistryObject<ForgeSpawnEggItem> DECADE_ILLUSION_SPAWN_EGG = ITEMS.register("decade_illusion_spawn_egg",
-                  () -> new ForgeSpawnEggItem(DECADE_ILLUSION, 0xEC008C, 0x222222, new Item.Properties()));
+          public static final RegistryObject<ForgeSpawnEggItem> RIDER_SUMMON_SPAWN_EGG = ITEMS.register("rider_summon_spawn_egg",
+                  () -> new ForgeSpawnEggItem(RIDER_SUMMON, 0xEC008C, 0x222222, new Item.Properties()));
           
-          public static final RegistryObject<EntityType<DiendIllusionEntity>> DIEND_ILLUSION = MOBLIST.register("diend_illusion",
-                  () -> EntityType.Builder.of(DiendIllusionEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":diend_illusion"));
-
-          public static final RegistryObject<ForgeSpawnEggItem> DIEND_ILLUSION_SPAWN_EGG = ITEMS.register("diend_illusion_spawn_egg",
-                  () -> new ForgeSpawnEggItem(DIEND_ILLUSION, 0x0168b9, 0x1d1d1d, new Item.Properties()));
-      
           public static final RegistryObject<EntityType<ParaDXSummonEntity>> PARADX_SUMMON = MOBLIST.register("paradx_summon",
                   () -> EntityType.Builder.of(ParaDXSummonEntity::new, MobCategory.MONSTER).sized(0.6F, 1.95F).clientTrackingRange(8).build( KamenRiderCraftCore.MODID + ":paradx_summon"));
 

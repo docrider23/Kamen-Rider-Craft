@@ -1,5 +1,7 @@
 package com.kelco.kamenridercraft.Items.kabuto;
 
+import org.apache.commons.lang3.ArrayUtils;
+
 import com.kelco.kamenridercraft.Items.Kabuto_Rider_Items;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
@@ -32,14 +34,10 @@ public class ClockUpPadItem extends BaseItem {
 			if (p_41129_.getItemBySlot(EquipmentSlot.CHEST).getItem() == Kabuto_Rider_Items.KABUTOCHESTPLATE.get()){
 				if (p_41129_.getItemBySlot(EquipmentSlot.HEAD).getItem() == Kabuto_Rider_Items.KABUTOHELMET.get()){
 					if (p_41129_.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof RiderDriverItem && RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),1).getFormName(false)!="_masked"){
-                        for (int i = 0; i < ClockUpUsers.length; i++) {
-                            if (ClockUpUsers[i]==((RiderDriverItem)p_41129_.getItemBySlot(EquipmentSlot.FEET).getItem()).Rider){
-                                if (!p_41128_.isClientSide()) {
-                                    p_41129_.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 250, 20,true,false));
-                                    p_41129_.getCooldowns().addCooldown(this, 500);
-									p_41129_.awardStat(Stats.ITEM_USED.get(this));
-                                }
-                            }
+                        if (ArrayUtils.contains(ClockUpUsers, ((RiderDriverItem)p_41129_.getItemBySlot(EquipmentSlot.FEET).getItem()).Rider) && !p_41128_.isClientSide()) {
+                        	p_41129_.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 250, 20,true,false));
+                        	p_41129_.getCooldowns().addCooldown(this, 500);
+							p_41129_.awardStat(Stats.ITEM_USED.get(this));
                         }
 					}
 				}

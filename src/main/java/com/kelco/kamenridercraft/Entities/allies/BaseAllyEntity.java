@@ -107,7 +107,7 @@ public class BaseAllyEntity extends TamableAnimal implements NeutralMob {
 
 	public void aiStep() {
 		super.aiStep();
-	   if (!(this.getMainHandItem().getItem() instanceof BowItem) || !this.isUsingItem() && this.getTarget() != null) this.updateSwingTime();
+	   if (this.swinging) this.updateSwingTime();
 	   Level level = this.level();
 	   
 	   if (!level.isClientSide) {

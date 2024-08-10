@@ -62,6 +62,7 @@ public class GamerDriverItem extends RiderDriverItem{
 				paradx.moveTo(player.getX(), player.getY()+1, player.getZ(), player.getYRot(), player.getXRot());
 				paradx.setTame(true);
 				paradx.setOwnerUUID(player.getUUID());
+				paradx.setRequiredArmor();
 				if (RiderDriverItem.get_Form_Item(itemstack, 1)==Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get()) {
 					paradx.setItemSlot(EquipmentSlot.FEET, new ItemStack(Ex_Aid_Rider_Items.GAMER_DRIVER_PARA_DX.get()));
 					RiderDriverItem.set_Form_Item(paradx.getItemBySlot(EquipmentSlot.FEET), Ex_Aid_Rider_Items.KNOCK_OUT_FIGHTER_2_GASHAT.get(), 1);

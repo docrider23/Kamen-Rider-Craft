@@ -7,7 +7,7 @@ import org.apache.commons.lang3.ArrayUtils;
 import com.google.common.collect.Lists;
 import com.kelco.kamenridercraft.Effect.Effect_core;
 import com.kelco.kamenridercraft.Entities.MobsCore;
-import com.kelco.kamenridercraft.Entities.summons.BaseSummonEntity;
+import com.kelco.kamenridercraft.Entities.summons.RiderSummonEntity;
 import com.kelco.kamenridercraft.Items.Decade_Rider_Items;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseItem;
 import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
@@ -107,27 +107,40 @@ public class AttackRideCardItem extends BaseItem {
 						switch (SPECIAL) {
 							case "illusion":
 								for (int i = 0; i < 2; i++) {
-									BaseSummonEntity illusion = MobsCore.DECADE_ILLUSION.get().create(p_41128_);
+									RiderSummonEntity illusion = MobsCore.RIDER_SUMMON.get().create(p_41128_);
 									if (illusion != null) {
 										illusion.moveTo(p_41129_.getX(), p_41129_.getY()+1, p_41129_.getZ(), p_41129_.getYRot(), p_41129_.getXRot());
-										illusion.setTame(true);
-										illusion.setOwnerUUID(p_41129_.getUUID());
+										illusion.bindToPlayer(p_41129_);
+										illusion.setMeleeOnly(true);
+										illusion.NAME = "decade_illusion";
+										illusion.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Decade_Rider_Items.DECADEHELMET.get()));
+										illusion.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Decade_Rider_Items.DECADECHESTPLATE.get()));
+										illusion.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Decade_Rider_Items.DECADELEGGINGS.get()));
+										illusion.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Decade_Rider_Items.RIDE_BOOKER.get()));
+
 										if (p_41129_.getItemBySlot(EquipmentSlot.FEET).getItem()==Decade_Rider_Items.DARK_DECADRIVER.get()) {
 											illusion.setItemSlot(EquipmentSlot.FEET, new ItemStack(Decade_Rider_Items.DARK_DECADRIVER.get()));
 										} else {
+											illusion.setItemSlot(EquipmentSlot.FEET, new ItemStack(Decade_Rider_Items.DECADRIVER.get()));
 											RiderDriverItem.set_Form_Item(illusion.getItemBySlot(EquipmentSlot.FEET), RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),1), 1);
 										}
+										
 										p_41128_.addFreshEntity(illusion);
 									}
 								}
 								break;
 							case "diend_illusion":
 								for (int i = 0; i < 2; i++)	{
-									BaseSummonEntity illusion = MobsCore.DIEND_ILLUSION.get().create(p_41128_);
+									RiderSummonEntity illusion = MobsCore.RIDER_SUMMON.get().create(p_41128_);
 									if (illusion != null) {
 										illusion.moveTo(p_41129_.getX(), p_41129_.getY()+1, p_41129_.getZ(), p_41129_.getYRot(), p_41129_.getXRot());
-										illusion.setTame(true);
-										illusion.setOwnerUUID(p_41129_.getUUID());
+										illusion.bindToPlayer(p_41129_);
+										illusion.NAME = "diend_illusion";
+										illusion.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Decade_Rider_Items.DECADEHELMET.get()));
+										illusion.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Decade_Rider_Items.DECADECHESTPLATE.get()));
+										illusion.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Decade_Rider_Items.DECADELEGGINGS.get()));
+										illusion.setItemSlot(EquipmentSlot.FEET, new ItemStack(Decade_Rider_Items.DIEND_BELT.get()));
+										illusion.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Decade_Rider_Items.DIENDRIVER.get()));
 										RiderDriverItem.set_Form_Item(illusion.getItemBySlot(EquipmentSlot.FEET), RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),1), 1);
 										p_41128_.addFreshEntity(illusion);
 									}
@@ -138,7 +151,7 @@ public class AttackRideCardItem extends BaseItem {
 																				(entity instanceof Player && entity != p_41129_)
 																				|| (entity instanceof OwnableEntity owned && owned.getOwner() == p_41129_));
 								for (LivingEntity ally : nearbyAllies) {
-									if (ally.getItemBySlot(EquipmentSlot.MAINHAND).getItem() instanceof BowItem) {
+									if (ally.getMainHandItem().getItem() instanceof BowItem) {
 										ally.addEffect(new MobEffectInstance(Effect_core.SHOT_BOOST.get(), 250, 3,true,true));
 									} else {
 										ally.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 250, 3,true,true));

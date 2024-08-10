@@ -6,9 +6,12 @@ import java.util.UUID;
 import javax.annotation.Nullable;
 
 import com.kelco.kamenridercraft.Entities.allies.BaseAllyEntity;
+import com.kelco.kamenridercraft.Items.Decade_Rider_Items;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -32,6 +35,7 @@ import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.RangedBowAttackGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
@@ -43,6 +47,7 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BowItem;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -50,6 +55,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class BaseSummonEntity extends TamableAnimal implements NeutralMob {
    private static final EntityDataAccessor<Integer> DATA_REMAINING_ANGER_TIME = SynchedEntityData.defineId(BaseSummonEntity.class, EntityDataSerializers.INT);
    private static final UniformInt PERSISTENT_ANGER_TIME = TimeUtil.rangeOfSeconds(20, 39);
+   private final NonNullList<ItemStack> REQUIRED_ARMOR = NonNullList.withSize(4, ItemStack.EMPTY);
 
    @Nullable
    private UUID persistentAngerTarget;
@@ -60,7 +66,6 @@ public class BaseSummonEntity extends TamableAnimal implements NeutralMob {
 
 	public BaseSummonEntity(EntityType<? extends BaseSummonEntity> entityType, Level level) {
 		super(entityType, level);
-		this.setTame(false);
 		this.setDropChance(EquipmentSlot.HEAD, 0.0f);
 		this.setDropChance(EquipmentSlot.CHEST, 0.0f);
 		this.setDropChance(EquipmentSlot.LEGS, 0.0f);
@@ -69,7 +74,7 @@ public class BaseSummonEntity extends TamableAnimal implements NeutralMob {
 	}
 
 	public static AttributeSupplier setAttributes() {
-		return Mob.createMobAttributes().add(Attributes.MOVEMENT_SPEED, (double)0.3F).add(Attributes.MAX_HEALTH, 40.0D).add(Attributes.ATTACK_DAMAGE, 2.0D).build();
+		return Mob.createMobAttributes().add(Attributes.MOVEMENT_SPEED, (double)0.3F).add(Attributes.MAX_HEALTH, 20.0D).add(Attributes.ATTACK_DAMAGE, 2.0D).build();
 	}
 
 	protected void defineSynchedData() {
@@ -100,12 +105,18 @@ public class BaseSummonEntity extends TamableAnimal implements NeutralMob {
 	}
 
 	public void aiStep() {
-		if (!(this.getMainHandItem().getItem() instanceof BowItem) || !this.isUsingItem() && this.getTarget() != null) this.updateSwingTime();
 		Level level = this.level();
 		
 		if (!level.isClientSide) {
 		   this.updatePersistentAnger((ServerLevel)this.level(), true);
+			if ( this.getOwner() instanceof Player owner) {		
+				if(owner.getItemBySlot(EquipmentSlot.HEAD).getItem()!=this.getRequiredArmor(EquipmentSlot.HEAD).getItem()
+				||owner.getItemBySlot(EquipmentSlot.CHEST).getItem()!=this.getRequiredArmor(EquipmentSlot.CHEST).getItem()
+				||owner.getItemBySlot(EquipmentSlot.LEGS).getItem()!=this.getRequiredArmor(EquipmentSlot.LEGS).getItem()
+				||owner.getItemBySlot(EquipmentSlot.FEET).getItem()!=this.getRequiredArmor(EquipmentSlot.FEET).getItem()) this.setHealth(0);
+			}
 		}
+		if (this.swinging) this.updateSwingTime();
 
 		super.aiStep();
 	}
@@ -120,15 +131,51 @@ public class BaseSummonEntity extends TamableAnimal implements NeutralMob {
    public void addAdditionalSaveData(CompoundTag p_30418_) {
       super.addAdditionalSaveData(p_30418_);
       this.addPersistentAngerSaveData(p_30418_);
+      ListTag listtag = new ListTag();
+
+      for(ItemStack itemstack : this.REQUIRED_ARMOR) {
+         CompoundTag compoundtag = new CompoundTag();
+         if (!itemstack.isEmpty()) {
+            itemstack.save(compoundtag);
+         }
+
+         listtag.add(compoundtag);
+      }
+
+      p_30418_.put("RequiredArmorItems", listtag);
    }
 
    public void readAdditionalSaveData(CompoundTag p_30402_) {
       super.readAdditionalSaveData(p_30402_);
       this.readPersistentAngerSaveData(this.level(), p_30402_);
+      if (p_30402_.contains("RequiredArmorItems", 9)) {
+         ListTag listtag = p_30402_.getList("RequiredArmorItems", 10);
+
+         for(int i = 0; i < this.REQUIRED_ARMOR.size(); ++i) {
+            this.REQUIRED_ARMOR.set(i, ItemStack.of(listtag.getCompound(i)));
+         }
+      }
    }
 
-	
-	   
+   public void setRequiredArmor() {
+	  if ( this.getOwner() instanceof Player owner) {	
+        this.REQUIRED_ARMOR.set(EquipmentSlot.HEAD.getIndex(), owner.getItemBySlot(EquipmentSlot.HEAD));
+        this.REQUIRED_ARMOR.set(EquipmentSlot.CHEST.getIndex(), owner.getItemBySlot(EquipmentSlot.CHEST));
+        this.REQUIRED_ARMOR.set(EquipmentSlot.LEGS.getIndex(), owner.getItemBySlot(EquipmentSlot.LEGS));
+        this.REQUIRED_ARMOR.set(EquipmentSlot.FEET.getIndex(), owner.getItemBySlot(EquipmentSlot.FEET));
+	  }
+   }
+
+   public ItemStack getRequiredArmor(EquipmentSlot p_21467_) {
+      return this.REQUIRED_ARMOR.get(p_21467_.getIndex());
+   }
+
+   public void bindToPlayer(Player player) {
+	  this.setTame(true);
+	  this.setOwnerUUID(player.getUUID());
+	  this.setRequiredArmor();
+   }
+
 	   protected SoundEvent getAmbientSound() {
 		         return SoundEvents.VILLAGER_AMBIENT;
 		   }

@@ -76,7 +76,7 @@ public class BaseHenchmenEntity extends Zombie {
 
 	public void aiStep() {
 		super.aiStep();
-	   if (!(this.getMainHandItem().getItem() instanceof BowItem) || !this.isUsingItem() && this.getTarget() != null) this.updateSwingTime();
+	   if (this.swinging) this.updateSwingTime();
 	}
 
 

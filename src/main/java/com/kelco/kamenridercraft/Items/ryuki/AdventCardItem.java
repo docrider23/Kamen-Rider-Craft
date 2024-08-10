@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import com.google.common.collect.Lists;
 import com.kelco.kamenridercraft.Entities.MobsCore;
-import com.kelco.kamenridercraft.Entities.summons.BaseSummonEntity;
+import com.kelco.kamenridercraft.Entities.summons.RiderSummonEntity;
 import com.kelco.kamenridercraft.Items.Modded_item_core;
 import com.kelco.kamenridercraft.Items.Ryuki_Rider_Items;
 import com.kelco.kamenridercraft.Items.rider_armor_base.BaseItem;
@@ -14,6 +14,7 @@ import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -70,11 +71,18 @@ public class AdventCardItem extends BaseItem {
 									 	switch (SPECIAL) {
 									 		case "trick_vent":
 												for (int i = 0; i < 4; i++) {
-													BaseSummonEntity trick = MobsCore.RYUKI_TRICK_VENT.get().create(p_41128_);
+													RiderSummonEntity trick = MobsCore.RIDER_SUMMON.get().create(p_41128_);
 													if (trick != null) {
 														trick.moveTo(p_41129_.getX(), p_41129_.getY()+1, p_41129_.getZ(), p_41129_.getYRot(), p_41129_.getXRot());
-														trick.setTame(true);
-														trick.setOwnerUUID(p_41129_.getUUID());
+														trick.bindToPlayer(p_41129_);
+														trick.getAttribute(Attributes.MAX_HEALTH).setBaseValue(10.0D);
+														trick.setHealth(10.0F);
+														trick.NAME = "ryuki_trick_vent";
+														trick.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Ryuki_Rider_Items.RYUKIHELMET.get()));
+														trick.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Ryuki_Rider_Items.RYUKICHESTPLATE.get()));
+														trick.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Ryuki_Rider_Items.RYUKILEGGINGS.get()));
+														trick.setItemSlot(EquipmentSlot.FEET, new ItemStack(Ryuki_Rider_Items.RYUKIDRIVER.get()));
+
 														RiderDriverItem.set_Form_Item(trick.getItemBySlot(EquipmentSlot.FEET), RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),1), 1);
 														if (RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),1) == Ryuki_Rider_Items.ADVENT_CARD.get()) {
 															trick.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Ryuki_Rider_Items.RIDE_SABER.get()));
@@ -84,18 +92,29 @@ public class AdventCardItem extends BaseItem {
 															||RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),1) == Ryuki_Rider_Items.SURVIVE_BLACK.get()
 															||RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),1) == Modded_item_core.DRAGRANZER.get()) {
 															trick.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Ryuki_Rider_Items.DRAG_BLADE.get()));
-														} else trick.setItemSlot(EquipmentSlot.OFFHAND, new ItemStack(Ryuki_Rider_Items.DRAG_VISOR.get()));
+														} else {
+															trick.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Ryuki_Rider_Items.DRAG_SABER.get()));
+															trick.setItemSlot(EquipmentSlot.OFFHAND, new ItemStack(Ryuki_Rider_Items.DRAG_VISOR.get()));
+														}
+
 														p_41128_.addFreshEntity(trick);
 													}
 												}
 									 			break;
 									 		case "trick_vent_knight":
 												for (int i = 0; i < 4; i++) {
-													BaseSummonEntity trick = MobsCore.KNIGHT_TRICK_VENT.get().create(p_41128_);
+													RiderSummonEntity trick = MobsCore.RIDER_SUMMON.get().create(p_41128_);
 													if (trick != null) {
 														trick.moveTo(p_41129_.getX(), p_41129_.getY()+1, p_41129_.getZ(), p_41129_.getYRot(), p_41129_.getXRot());
-														trick.setTame(true);
-														trick.setOwnerUUID(p_41129_.getUUID());
+														trick.bindToPlayer(p_41129_);
+														trick.getAttribute(Attributes.MAX_HEALTH).setBaseValue(10.0D);
+														trick.setHealth(10.0F);
+														trick.NAME = "knight_trick_vent";
+														trick.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Ryuki_Rider_Items.RYUKIHELMET.get()));
+														trick.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Ryuki_Rider_Items.RYUKICHESTPLATE.get()));
+														trick.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Ryuki_Rider_Items.RYUKILEGGINGS.get()));
+														trick.setItemSlot(EquipmentSlot.FEET, new ItemStack(Ryuki_Rider_Items.KNIGHTDRIVER.get()));
+
 														RiderDriverItem.set_Form_Item(trick.getItemBySlot(EquipmentSlot.FEET), RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),1), 1);
 														if (RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),1) == Ryuki_Rider_Items.ADVENT_CARD.get()) {
 															trick.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Ryuki_Rider_Items.RIDE_SABER.get()));
@@ -104,7 +123,8 @@ public class AdventCardItem extends BaseItem {
 														else if (RiderDriverItem.get_Form_Item(p_41129_.getItemBySlot(EquipmentSlot.FEET),1) == Ryuki_Rider_Items.SURVIVE_SHIPPU.get()) {
 															trick.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Ryuki_Rider_Items.DARK_BLADE.get()));
 															trick.setItemSlot(EquipmentSlot.OFFHAND, new ItemStack(Ryuki_Rider_Items.DARK_SHIELD.get()));
-														}
+														} else trick.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Ryuki_Rider_Items.DARK_VISOR.get()));
+
 														p_41128_.addFreshEntity(trick);
 													}
 												}
