@@ -156,8 +156,7 @@ public class DesireDriverItem  extends RiderDriverItem{
 		else if (get_Form_Item(belt,2)==Modded_item_core.BLANK_FORM.get())  isBujin = false;
 				
 		if (get_Form_Item(belt,3)==Geats_Rider_Items.BUJIN_SWORD_RAISE_BUCKLE.get()&isBujin)set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 3);
-		//if (get_Form_Item(belt,3)==Geats_Rider_Items.BUJIN_SWORD_RAISE_BUCKLE.get()&get_Form_Item(belt,2)!=Modded_item_core.BLANK_FORM.get())set_Form_Item(belt, Modded_item_core.BLANK_FORM.get(), 3);
-		
+	
 		belt.getTag().putBoolean("Update_form", false);
 	}
 	
