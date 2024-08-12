@@ -11,6 +11,7 @@ import com.kelco.kamenridercraft.Items.Decade_Rider_Items;
 import com.kelco.kamenridercraft.Items.Den_O_Rider_Items;
 import com.kelco.kamenridercraft.Items.Ex_Aid_Rider_Items;
 import com.kelco.kamenridercraft.Items.Faiz_Rider_Items;
+import com.kelco.kamenridercraft.Items.Gavv_Rider_Items;
 import com.kelco.kamenridercraft.Items.Geats_Rider_Items;
 import com.kelco.kamenridercraft.Items.Gotchard_Rider_Items;
 import com.kelco.kamenridercraft.Items.Hibiki_Rider_Items;
@@ -69,6 +70,7 @@ public class KamenRiderCraftCore {
 		Zero_One_Rider_Items.register(modEventBus);
 		Geats_Rider_Items.register(modEventBus);
 		Gotchard_Rider_Items.register(modEventBus);
+		Gavv_Rider_Items.register(modEventBus);
 		Reboot_Rider_Items.register(modEventBus);
 		Miscellaneous_Rider_Items.register(modEventBus);
 		MobsCore.register(modEventBus);

@@ -21,9 +21,6 @@ public class Modded_item_core {
 	public static final RegistryObject<Item> BLANK_FORM = ITEMS.register("blank_form",
 			() -> new RiderFormChangeItem(new Item.Properties(),0,"","",""));
 
-	public static final RegistryObject<Item> GAVV_HEAD = ITEMS.register("gavv_head",
-			() -> new BaseItem(new Item.Properties().food(Foods.BEEF)).AddToTabList(RiderTabs.GAVV_TAB_ITEM));
-
 
 	public static final RegistryObject<Item> RIDER_CIRCUIT = ITEMS.register("rider_circuit",
 			() -> new BaseItem(new Item.Properties()).AddToTabList(RiderTabs.Misc_TAB_ITEM));

@@ -127,8 +127,8 @@ public class RiderTabs {
    	.title(Component.literal("Gotchard Rider Items")).build());
 
     public static RegistryObject<CreativeModeTab> GavvTab = CREATIVE_MODE_TABS.register("krc_460_gavv_tab", () -> 
-   	CreativeModeTab.builder().icon(() -> new ItemStack(Modded_item_core.GAVV_HEAD.get()))
-   	.title(Component.literal("Not Coming Soon")).build());
+   	CreativeModeTab.builder().icon(() -> new ItemStack(Gavv_Rider_Items.GAVV_HELMET.get())).withBackgroundLocation(new ResourceLocation(KamenRiderCraftCore.MODID+":textures/gui/tab_gavv_items.png"))
+   	.title(Component.literal("Gavv Rider Items")).build());
 
     
     public static RegistryObject<CreativeModeTab> GTab = CREATIVE_MODE_TABS.register("krc_800_g_tab", () -> 
