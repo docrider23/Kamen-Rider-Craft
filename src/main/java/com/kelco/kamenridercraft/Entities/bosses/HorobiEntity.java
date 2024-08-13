@@ -153,9 +153,10 @@ public class HorobiEntity extends BaseHenchmenEntity implements RangedAttackMob 
        this.reassessWeaponGoal();
     }
 	
-    public void setItemSlot(Level p_32137_, EquipmentSlot p_32138_, ItemStack p_32139_) {
+    public void setItemSlot(EquipmentSlot p_32138_, ItemStack p_32139_) {
        super.setItemSlot(p_32138_, p_32139_);
-       if (!p_32137_.isClientSide) this.reassessWeaponGoal();
+	   Level level = this.level();
+       if (!level.isClientSide) this.reassessWeaponGoal();
     }
 
     public void performRangedAttack(LivingEntity p_32141_, float p_32142_) {
