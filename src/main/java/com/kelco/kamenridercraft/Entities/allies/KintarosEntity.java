@@ -4,8 +4,11 @@ package com.kelco.kamenridercraft.Entities.allies;
 import com.kelco.kamenridercraft.Entities.footSoldiers.NewMoleImaginSandEntity;
 import com.kelco.kamenridercraft.Entities.summons.BaseSummonEntity;
 import com.kelco.kamenridercraft.Items.Den_O_Rider_Items;
+import com.kelco.kamenridercraft.Items.rider_armor_base.RiderDriverItem;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
@@ -31,6 +34,7 @@ import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.ResetUniversalAngerTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
@@ -101,6 +105,26 @@ public class KintarosEntity extends BaseAllyEntity {
 	            this.gameEvent(GameEvent.EAT, this);
 	            return InteractionResult.SUCCESS;
 	         } else {
+	            if (itemstack.is(Den_O_Rider_Items.RIDER_PASS.get())) {
+	            	p_30412_.sendSystemMessage(Component.translatable("<Kintaros> Henshin!").withStyle(ChatFormatting.YELLOW));
+	            	p_30412_.sendSystemMessage(Component.translatable("Ax Form!").withStyle(ChatFormatting.YELLOW));
+	            	p_30412_.sendSystemMessage(Component.translatable("<Kintaros> My strength has made you cry!").withStyle(ChatFormatting.YELLOW));
+	            	this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Den_O_Rider_Items.DEN_OHELMET.get()));
+	            	this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Den_O_Rider_Items.DEN_OCHESTPLATE.get()));
+	            	this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Den_O_Rider_Items.DEN_OLEGGINGS.get()));
+	            	this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Den_O_Rider_Items.DEN_O_BELT.get()));
+	            	this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Den_O_Rider_Items.DEN_GASHER_AX.get()));
+					RiderDriverItem.set_Form_Item(this.getItemBySlot(EquipmentSlot.FEET), Den_O_Rider_Items.RIDER_TICKET_AX.get(), 1);
+					if (!p_30412_.getAbilities().instabuild) {
+					   itemstack.shrink(1);
+					}
+					for (int i = 0; i < 10; i++) {
+						ItemEntity tissue = new ItemEntity(p_30412_.level(), this.getRandomX(7.0), this.getY()+8, this.getRandomZ(7.0), new ItemStack(Items.PAPER), 0, 0, 0);
+						tissue.setPickUpDelay(40);
+						p_30412_.level().addFreshEntity(tissue);
+					}
+					return InteractionResult.SUCCESS;
+	            }
 	            InteractionResult interactionresult = super.mobInteract(p_30412_, p_30413_);
 	            if ((!interactionresult.consumesAction() || this.isBaby()) && this.isOwnedBy(p_30412_)) {
 	               this.setOrderedToSit(!this.isOrderedToSit());
