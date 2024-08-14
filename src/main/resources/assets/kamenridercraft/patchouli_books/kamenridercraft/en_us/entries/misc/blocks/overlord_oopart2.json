@@ -8,7 +8,7 @@
             "type": "patchouli:spotlight",
             "link_recipe": true,
             "item": "kamenridercraft:overlord_oopart2",
-            "text": "Found inside an $(l:agito/structures/overlord_oopart)Overlord OOPArt$(/l)"
+            "text": "Found inside an $(l:agito/structures/overlord_oopart)Overlord's Out-of-place Artifact$(/l)"
         }
     ]
 }
